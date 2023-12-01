@@ -1,259 +1,257 @@
 FramesPointers:
 	table_width 2, FramesPointers
-	dw BulbasaurFrames
-	dw IvysaurFrames
-	dw VenusaurFrames
-	dw CharmanderFrames
-	dw CharmeleonFrames
-	dw CharizardFrames
-	dw SquirtleFrames
-	dw WartortleFrames
-	dw BlastoiseFrames
-	dw CaterpieFrames
-	dw MetapodFrames
+	dw CyndaquilFrames
+	dw QuilavaFrames
+	dw TyphlosionFrames
+	dw HtyphlosionFrames
+	dw RowletFrames
+	dw DartrixFrames
+	dw DecidueyeFrames
+	dw HdecidueyeFrames
+	dw OshawottFrames
+	dw DewottFrames
+	dw SamurottFrames
+	dw HsamurottFrames
 	dw ButterfreeFrames
-	dw WeedleFrames
-	dw KakunaFrames
 	dw BeedrillFrames
 	dw PidgeyFrames
 	dw PidgeottoFrames
 	dw PidgeotFrames
-	dw RattataPlainFrames
-	dw RaticatePlainFrames
-	dw MarillFrames
-	dw AzumarillFrames
 	dw EkansFrames
-	dw ArbokJohtoFrames
-	dw PikachuPlainFrames
-	dw RaichuPlainFrames
-	dw SandshrewPlainFrames
-	dw SandslashPlainFrames
-	dw NidoranFFrames
+	dw ArbokFrames
+	dw PikachuFrames
+	dw RaichuFrames
 	dw NidorinaFrames
 	dw NidoqueenFrames
-	dw NidoranMFrames
 	dw NidorinoFrames
 	dw NidokingFrames
 	dw ClefairyFrames
 	dw ClefableFrames
-	dw VulpixPlainFrames
-	dw NinetalesPlainFrames
+	dw VulpixFrames
+	dw NinetalesFrames
 	dw JigglypuffFrames
 	dw WigglytuffFrames
 	dw ZubatFrames
 	dw GolbatFrames
-	dw OddishFrames
+	dw CrobatFrames
 	dw GloomFrames
 	dw VileplumeFrames
+	dw BellossomFrames
 	dw ParasFrames
 	dw ParasectFrames
 	dw VenonatFrames
 	dw VenomothFrames
-	dw DiglettPlainFrames
-	dw DugtrioPlainFrames
-	dw MeowthPlainFrames
-	dw PersianPlainFrames
-	dw PsyduckFrames
-	dw GolduckFrames
+	dw DiglettFrames
+	dw DugtrioFrames
+	dw MeowthFrames
+	dw PersianFrames
 	dw MankeyFrames
 	dw PrimeapeFrames
 	dw GrowlitheFrames
 	dw ArcanineFrames
+	dw HarcanineFrames
 	dw PoliwagFrames
 	dw PoliwhirlFrames
 	dw PoliwrathFrames
+	dw PolitoedFrames
 	dw AbraFrames
 	dw KadabraFrames
 	dw AlakazamFrames
 	dw MachopFrames
 	dw MachokeFrames
 	dw MachampFrames
-	dw BellsproutFrames
 	dw WeepinbellFrames
 	dw VictreebelFrames
-	dw TentacoolFrames
 	dw TentacruelFrames
-	dw GeodudePlainFrames
-	dw GravelerPlainFrames
-	dw GolemPlainFrames
-	dw PonytaPlainFrames
-	dw RapidashPlainFrames
-	dw SlowpokePlainFrames
-	dw SlowbroPlainFrames
+	dw GeodudeFrames
+	dw GravelerFrames
+	dw GolemFrames
+	dw PonytaFrames
+	dw RapidashFrames
+	dw SlowpokeFrames
+	dw SlowbroFrames
+	dw SlowkingFrames
 	dw MagnemiteFrames
 	dw MagnetonFrames
-	dw FarfetchDFrames
-	dw DoduoFrames
-	dw DodrioFrames
-	dw SeelFrames
-	dw DewgongFrames
-	dw GrimerPlainFrames
-	dw MukPlainFrames
-	dw ShellderFrames
+	dw MagnezoneFrames
+	dw Farfetch_DFrames
+	dw GrimerFrames
+	dw MukFrames
 	dw CloysterFrames
 	dw GastlyFrames
 	dw HaunterFrames
 	dw GengarFrames
 	dw OnixFrames
-	dw DrowzeeFrames
-	dw HypnoFrames
-	dw KrabbyFrames
-	dw KinglerFrames
+	dw SteelixFrames
 	dw VoltorbFrames
 	dw ElectrodeFrames
+	dw HelectrodeFrames
 	dw ExeggcuteFrames
-	dw ExeggutorPlainFrames
-	dw CuboneFrames
-	dw MarowakPlainFrames
+	dw ExeggutorFrames
 	dw HitmonleeFrames
 	dw HitmonchanFrames
-	dw KoffingFrames
-	dw WeezingPlainFrames
+	dw HitmontopFrames
+	dw WeezingFrames
+	dw MrmimeFrames
 	dw RhyhornFrames
 	dw RhydonFrames
+	dw RhyperiorFrames
 	dw ChanseyFrames
+	dw BlisseyFrames
 	dw TangelaFrames
+	dw TangrowthFrames
 	dw KangaskhanFrames
-	dw HorseaFrames
 	dw SeadraFrames
-	dw TogepiFrames
-	dw TogeticFrames
-	dw TogekissFrames
+	dw KingdraFrames
 	dw StaryuFrames
 	dw StarmieFrames
-	dw MrMimeFrames
 	dw ScytherFrames
+	dw ScizorFrames
+	dw KleavorFrames
 	dw JynxFrames
 	dw ElectabuzzFrames
+	dw ElectivireFrames
 	dw MagmarFrames
+	dw MagmortarFrames
 	dw PinsirFrames
 	dw TaurosFrames
-	dw MagikarpPlainFrames
-	dw GyaradosPlainFrames
+	dw MagikarpFrames
+	dw GyaradosFrames
 	dw LaprasFrames
-	dw DittoFrames
 	dw EeveeFrames
 	dw VaporeonFrames
 	dw JolteonFrames
 	dw FlareonFrames
+	dw EspeonFrames
+	dw UmbreonFrames
+	dw LeafeonFrames
+	dw GlaceonFrames
+	dw SylveonFrames
 	dw PorygonFrames
-	dw OmanyteFrames
-	dw OmastarFrames
-	dw KabutoFrames
-	dw KabutopsFrames
-	dw AerodactylFrames
+	dw Porygon2Frames
+	dw Porygon_ZFrames
 	dw SnorlaxFrames
-	dw ArticunoPlainFrames
-	dw ZapdosPlainFrames
-	dw MoltresPlainFrames
-	dw DratiniFrames
-	dw DragonairFrames
-	dw DragoniteFrames
-	dw MewtwoPlainFrames
-	dw MewFrames
 	dw ChikoritaFrames
 	dw BayleefFrames
 	dw MeganiumFrames
-	dw CyndaquilFrames
-	dw QuilavaFrames
-	dw TyphlosionFrames
 	dw TotodileFrames
 	dw CroconawFrames
 	dw FeraligatrFrames
-	dw SentretFrames
 	dw FurretFrames
-	dw HoothootFrames
-	dw NoctowlFrames
-	dw LedybaFrames
 	dw LedianFrames
-	dw SpinarakFrames
 	dw AriadosFrames
-	dw CrobatFrames
 	dw ChinchouFrames
 	dw LanturnFrames
-	dw PichuPlainFrames
-	dw MunchlaxFrames
-	dw MagnezoneFrames
-	dw RhyperiorFrames
-	dw TangrowthFrames
+	dw TogeticFrames
+	dw TogekissFrames
 	dw NatuFrames
 	dw XatuFrames
 	dw MareepFrames
 	dw FlaaffyFrames
 	dw AmpharosFrames
-	dw BellossomFrames
+	dw MarillFrames
+	dw AzumarillFrames
 	dw SudowoodoFrames
-	dw PolitoedFrames
-	dw SunkernFrames
+	dw SkiploomFrames
+	dw JumpluffFrames
 	dw SunfloraFrames
-	dw YanmaFrames
-	dw YanmegaFrames
 	dw WooperFrames
 	dw QuagsireFrames
-	dw EspeonFrames
-	dw UmbreonFrames
 	dw MurkrowFrames
 	dw HonchkrowFrames
-	dw SlowkingPlainFrames
 	dw MisdreavusFrames
 	dw MismagiusFrames
-	dw UnownAFrames
-	dw WobbuffetFrames
+	dw YanmaFrames
+	dw YanmegaFrames
+	dw UnownFrames
 	dw GirafarigFrames
 	dw PinecoFrames
 	dw ForretressFrames
 	dw DunsparceFrames
 	dw GligarFrames
 	dw GliscorFrames
-	dw SteelixFrames
 	dw SnubbullFrames
 	dw GranbullFrames
 	dw QwilfishFrames
-	dw ScizorFrames
+	dw OverqwilFrames
 	dw ShuckleFrames
 	dw HeracrossFrames
 	dw SneaselFrames
 	dw WeavileFrames
+	dw SneaslerFrames
 	dw TeddiursaFrames
 	dw UrsaringFrames
-	dw SlugmaFrames
+	dw UrsalunaFrames
 	dw MagcargoFrames
-	dw SwinubFrames
 	dw PiloswineFrames
 	dw MamoswineFrames
 	dw CorsolaFrames
-	dw RemoraidFrames
 	dw OctilleryFrames
 	dw MantineFrames
 	dw SkarmoryFrames
 	dw HoundourFrames
 	dw HoundoomFrames
-	dw KingdraFrames
-	dw PhanpyFrames
 	dw DonphanFrames
-	dw Porygon2Frames
-	dw PorygonZFrames
-	dw SmeargleFrames
-	dw TyrogueFrames
-	dw HitmontopFrames
-	dw ElekidFrames
-	dw ElectivireFrames
-	dw MagbyFrames
-	dw MagmortarFrames
+	dw StantlerFrames
+	dw WyrdeerFrames
 	dw MiltankFrames
-	dw BlisseyFrames
-	dw RaikouFrames
-	dw EnteiFrames
-	dw SuicuneFrames
+	dw GrotleFrames
+	dw TorterraFrames
+	dw MonfernoFrames
+	dw InfernapeFrames
+	dw PrinplupFrames
+	dw EmpoleonFrames
+	dw StaraviaFrames
+	dw StaraptorFrames
+	dw LuxioFrames
+	dw LuxrayFrames
+	dw RoseliaFrames
+	dw RoseradeFrames
+	dw RampardosFrames
+	dw BastiodonFrames
+	dw VespiquenFrames
+	dw AmbipomFrames
+	dw DrifblimFrames
+	dw LopunnyFrames
+	dw SkuntankFrames
+	dw BronzorFrames
+	dw BronzongFrames
+	dw SpiritombFrames
+	dw GabiteFrames
+	dw GarchompFrames
+	dw LucarioFrames
+	dw HippowdonFrames
+	dw DrapionFrames
+	dw ToxicroakFrames
+	dw SnoverFrames
+	dw AbomasnowFrames
+	dw DusclopsFrames
+	dw DusknoirFrames
+	dw FroslassFrames
+	dw RotomFrames
+	dw HavaluggFrames
+	dw BasculegionFrames
+	dw HbraviaryFrames
+	dw KirliaFrames
+	dw GardevoirFrames
+	dw GalladeFrames
+	dw HsliggooFrames
+	dw HgoodraFrames
+	dw HzoroarkFrames
+	dw DratiniFrames
+	dw DragonairFrames
+	dw DragoniteFrames
 	dw LarvitarFrames
 	dw PupitarFrames
 	dw TyranitarFrames
+	dw RaikouFrames
+	dw EnteiFrames
+	dw SuicuneFrames
+	dw HeatranFrames
 	dw LugiaFrames
-	dw HoOhFrames
+	dw Ho_OhFrames
 	dw CelebiFrames
-	dw LeafeonFrames
-	dw GlaceonFrames
-	dw SylveonFrames
+
 	assert_table_length NUM_POKEMON
 
 	dw EggFrames
@@ -285,64 +283,5 @@ FramesPointers:
 	dw UnownZFrames
 	dw UnownExclamationFrames
 	dw UnownQuestionFrames
-
-	dw ArbokKantoFrames
-	dw ArbokKogaFrames
-	dw ArbokAgathaFrames
-	dw ArbokArianaFrames
-
-	dw PikachuFlyFrames
-	dw PikachuSurfFrames
-	dw PikachuPikaFrames
-	dw PikachuChuchuFrames
-	dw PikachuSparkFrames
-
-	dw PichuSpikyFrames
-
-	dw MagikarpSkellyFrames
-	dw MagikarpCalico1Frames
-	dw MagikarpCalico2Frames
-	dw MagikarpCalico3Frames
-	dw MagikarpTwoToneFrames
-	dw MagikarpOrcaFrames
-	dw MagikarpDapplesFrames
-	dw MagikarpTigerFrames
-	dw MagikarpZebraFrames
-	dw MagikarpStripeFrames
-	dw MagikarpBubblesFrames
-	dw MagikarpForeheadFrames
-	dw MagikarpMaskFrames
-	dw MagikarpSaucyFrames
-	dw MagikarpRaindropFrames
-
-	dw GyaradosRedFrames
-	dw MewtwoArmoredFrames
-	dw RattataAlolanFrames
-	dw RaticateAlolanFrames
-	dw SandshrewAlolanFrames
-	dw SandslashAlolanFrames
-	dw VulpixAlolanFrames
-	dw NinetalesAlolanFrames
-	dw DiglettAlolanFrames
-	dw DugtrioAlolanFrames
-	dw MeowthAlolanFrames
-	dw PersianAlolanFrames
-	dw GeodudeAlolanFrames
-	dw GravelerAlolanFrames
-	dw GolemAlolanFrames
-	dw GrimerAlolanFrames
-	dw MukAlolanFrames
-	dw RaichuAlolanFrames
-	dw ExeggutorAlolanFrames
-	dw MarowakAlolanFrames
-	dw PonytaGalarianFrames
-	dw RapidashGalarianFrames
-	dw SlowpokeGalarianFrames
-	dw SlowbroGalarianFrames
-	dw SlowkingGalarianFrames
-	dw WeezingGalarianFrames
-	dw ArticunoGalarianFrames
-	dw ZapdosGalarianFrames
-	dw MoltresGalarianFrames
 
 	assert_table_length NUM_UNIQUE_POKEMON

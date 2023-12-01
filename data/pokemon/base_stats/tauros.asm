@@ -8,7 +8,7 @@
 	db NO_ITEM ; item 2
 	dn GENDER_F0, 3 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/tauros/front.dimensions"
-	abilities_for TAUROS, INTIMIDATE, ANGER_POINT, SHEER_FORCE
+	abilities_for TAUROS, INTIMIDATE, INTIMIDATE, SHEER_FORCE
 	db GROWTH_SLOW ; growth rate
 	dn EGG_GROUND, EGG_GROUND ; egg groups
 

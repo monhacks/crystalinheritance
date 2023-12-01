@@ -1,22 +1,14 @@
 	db 100, 100, 100, 100, 100, 100 ; 600 BST
 	;   hp  atk  def  spd  sat  sdf
 
-if DEF(FAITHFUL)
 	db PSYCHIC, GRASS ; type
-else
-	db GRASS, FAIRY ; type
-endc
 	db 45 ; catch rate
 	db 64 ; base exp
 	db ALWAYS_ITEM_2 ; item 1
 	db LUM_BERRY ; item 2
 	dn GENDER_UNKNOWN, 15 ; gender ratio, step cycles to hatch
 	dn 5 , 5 ; frontpic dimensions
-if DEF(FAITHFUL)
 	abilities_for CELEBI, NATURAL_CURE, NATURAL_CURE, NATURAL_CURE
-else
-	abilities_for CELEBI, NATURAL_CURE, NATURAL_CURE, MAGIC_GUARD
-endc
 	db GROWTH_MEDIUM_SLOW ; growth rate
 	dn EGG_NONE, EGG_NONE ; egg groups
 

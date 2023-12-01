@@ -1,18 +1,9 @@
-if DEF(FAITHFUL)
 	db 100,  50,  80,  50,  60,  80 ; 420 BST
 	;   hp  atk  def  spd  sat  sdf
-else
-	db 100,  50,  80,  50,  90,  80 ; 450 BST
-	;   hp  atk  def  spd  sat  sdf
-endc
 
 	db WATER, FAIRY ; type
 	db 75 ; catch rate
-if DEF(FAITHFUL)
 	db 153 ; base exp
-else
-	db 183 ; base exp
-endc
 	db NO_ITEM ; item 1
 	db NO_ITEM ; item 2
 	dn GENDER_F50, 3 ; gender ratio, step cycles to hatch

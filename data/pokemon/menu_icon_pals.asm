@@ -2,40 +2,31 @@ iconpal: MACRO
 	dn PAL_OW_\1, PAL_OW_\2
 ENDM
 
-MenuMonIconColors::
+MenuMonIconColors:: ;TEAL, GREEN, RED, PINK, GRAY, BLUE, GREEN, BROWN, PURPLE, 
 	table_width 1, MenuMonIconColors
-	iconpal TEAL, GREEN ; BULBASAUR
-	iconpal TEAL, GREEN ; IVYSAUR
-	iconpal TEAL, GREEN ; VENUSAUR
-	iconpal RED, PINK ; CHARMANDER
-	iconpal RED, PINK ; CHARMELEON
-	iconpal RED, GRAY ; CHARIZARD
-	iconpal BLUE, TEAL ; SQUIRTLE
-	iconpal BLUE, TEAL ; WARTORTLE
-	iconpal BLUE, TEAL ; BLASTOISE
-	iconpal GREEN, PINK ; CATERPIE
-	iconpal GREEN, RED ; METAPOD
+	iconpal RED, PINK ; CYNDAQUIL
+	iconpal RED, PINK ; QUILAVA
+	iconpal RED, PINK ; TYPHLOSION
+	iconpal RED, PURPLE ; HTYPHLOSION
+	iconpal GREEN, BROWN	;ROWLET	      ; 05
+	iconpal GREEN, BROWN	;DARTRIX         ; 06
+	iconpal GREEN, BROWN	;DECIDUEYE       ; 07
+	iconpal RED, BROWN		;H__DECIDUEYE    ; 08
+	iconpal BLUE, TEAL		;OSHAWOTT  ; 09
+	iconpal BLUE, TEAL		;DEWOTT   ; 0a
+	iconpal BLUE, TEAL		;SAMUROTT    ; 0b
+	iconpal BLUE, RED		;H__SAMUROTT ; 0c
 	iconpal BLUE, RED ; BUTTERFREE
-	iconpal BROWN, PINK ; WEEDLE
-	iconpal BROWN, GREEN ; KAKUNA
 	iconpal BROWN, TEAL ; BEEDRILL
 	iconpal BROWN, RED ; PIDGEY
 	iconpal BROWN, RED ; PIDGEOTTO
 	iconpal BROWN, RED ; PIDGEOT
-	iconpal PURPLE, GRAY ; RATTATA
-	iconpal BROWN, RED ; RATICATE
-	iconpal BLUE, GREEN ; MARILL
-	iconpal BLUE, BROWN ; AZUMARILL
 	iconpal PURPLE, BROWN ; EKANS
 	iconpal PURPLE, BROWN ; ARBOK
 	iconpal RED, BLUE ; PIKACHU
 	iconpal RED, BLUE ; RAICHU
-	iconpal BROWN, TEAL ; SANDSHREW
-	iconpal BROWN, RED ; SANDSLASH
-	iconpal TEAL, PURPLE ; NIDORAN_F
 	iconpal TEAL, PURPLE ; NIDORINA
 	iconpal TEAL, PURPLE ; NIDOQUEEN
-	iconpal PURPLE, TEAL ; NIDORAN_M
 	iconpal PURPLE, TEAL ; NIDORINO
 	iconpal PURPLE, TEAL ; NIDOKING
 	iconpal PINK, RED ; CLEFAIRY
@@ -46,9 +37,10 @@ MenuMonIconColors::
 	iconpal PINK, RED ; WIGGLYTUFF
 	iconpal BLUE, GREEN ; ZUBAT
 	iconpal BLUE, GREEN ; GOLBAT
-	iconpal GREEN, TEAL ; ODDISH
+	iconpal PURPLE, RED ; CROBAT
 	iconpal RED, PINK ; GLOOM
 	iconpal RED, GREEN ; VILEPLUME
+	iconpal GREEN, RED ; BELLOSSOM
 	iconpal RED, PINK ; PARAS
 	iconpal RED, GRAY ; PARASECT
 	iconpal PURPLE, BLUE ; VENONAT
@@ -56,26 +48,24 @@ MenuMonIconColors::
 	iconpal BROWN, GRAY ; DIGLETT
 	iconpal BROWN, GRAY ; DUGTRIO
 	iconpal BROWN, RED ; MEOWTH
-	iconpal BROWN, RED ; PERSIAN
-	iconpal BROWN, BLUE ; PSYDUCK
-	iconpal BLUE, BLUE ; GOLDUCK
+	iconpal BROWN, RED ; PERSIAN	
 	iconpal BROWN, GREEN ; MANKEY
 	iconpal BROWN, GREEN ; PRIMEAPE
 	iconpal RED, BLUE ; GROWLITHE
 	iconpal RED, BLUE ; ARCANINE
+	iconpal RED, BROWN ; H__ARCANINE
 	iconpal BLUE, BLUE ; POLIWAG
 	iconpal BLUE, BLUE ; POLIWHIRL
 	iconpal BLUE, TEAL ; POLIWRATH
+	iconpal GREEN, TEAL ; POLITOED
 	iconpal BROWN, RED ; ABRA
 	iconpal BROWN, RED ; KADABRA
 	iconpal BROWN, RED ; ALAKAZAM
 	iconpal GRAY, GREEN ; MACHOP
 	iconpal GRAY, GREEN ; MACHOKE
 	iconpal GRAY, GREEN ; MACHAMP
-	iconpal GREEN, BROWN ; BELLSPROUT
 	iconpal GREEN, BROWN ; WEEPINBELL
 	iconpal GREEN, BROWN ; VICTREEBEL
-	iconpal BLUE, BLUE ; TENTACOOL
 	iconpal BLUE, BLUE ; TENTACRUEL
 	iconpal BROWN, RED ; GEODUDE
 	iconpal BROWN, RED ; GRAVELER
@@ -83,181 +73,188 @@ MenuMonIconColors::
 	iconpal RED, BLUE ; PONYTA
 	iconpal RED, BLUE ; RAPIDASH
 	iconpal PINK, PURPLE ; SLOWPOKE
-	iconpal PINK, PURPLE ; SLOWBRO
+	iconpal PINK, PURPLE ; SLOWBRO	
+	iconpal PINK, PURPLE ; SLOWKING
 	iconpal GRAY, BROWN ; MAGNEMITE
 	iconpal GRAY, BROWN ; MAGNETON
+	iconpal GRAY, BROWN ; MAGNEZONE
 	iconpal BROWN, GREEN ; FARFETCH_D
-	iconpal BROWN, RED ; DODUO
-	iconpal BROWN, RED ; DODRIO
-	iconpal BLUE, PINK ; SEEL
-	iconpal BLUE, PINK ; DEWGONG
 	iconpal PURPLE, GREEN ; GRIMER
 	iconpal PURPLE, GREEN ; MUK
-	iconpal PURPLE, RED ; SHELLDER
 	iconpal PURPLE, BLUE ; CLOYSTER
 	iconpal PURPLE, BLUE ; GASTLY
 	iconpal PURPLE, BLUE ; HAUNTER
 	iconpal PURPLE, BLUE ; GENGAR
 	iconpal GRAY, BLUE ; ONIX
-	iconpal BROWN, PURPLE ; DROWZEE
-	iconpal BROWN, PURPLE ; HYPNO
-	iconpal RED, BLUE ; KRABBY
-	iconpal RED, BLUE ; KINGLER
+	iconpal GRAY, BROWN ; STEELIX
 	iconpal RED, BLUE ; VOLTORB
 	iconpal RED, BLUE ; ELECTRODE
+	iconpal RED, GREEN ; H__ELECTRODE
 	iconpal PINK, TEAL ; EXEGGCUTE
 	iconpal BROWN, TEAL ; EXEGGUTOR
-	iconpal BROWN, TEAL ; CUBONE
-	iconpal BROWN, TEAL ; MAROWAK
 	iconpal BROWN, GREEN ; HITMONLEE
 	iconpal BROWN, BLUE ; HITMONCHAN
-	iconpal PURPLE, BLUE ; KOFFING
+	iconpal BROWN, BLUE ; HITMONTOP
 	iconpal PURPLE, BLUE ; WEEZING
+	iconpal PINK, GREEN ; MR__MIME
 	iconpal GRAY, RED ; RHYHORN
 	iconpal GRAY, RED ; RHYDON
+	iconpal GRAY, RED ; RHYPERIOR
 	iconpal PINK, GREEN ; CHANSEY
+	iconpal PINK, RED ; BLISSEY
 	iconpal BLUE, GREEN ; TANGELA
+	iconpal BLUE, GREEN ; TANGROWTH
 	iconpal BROWN, GRAY ; KANGASKHAN
-	iconpal BLUE, RED ; HORSEA
 	iconpal BLUE, PURPLE ; SEADRA
-	iconpal RED, BLUE ; TOGEPI
-	iconpal RED, BLUE ; TOGETIC
-	iconpal RED, BLUE ; TOGEKISS
+	iconpal BLUE, PURPLE ; KINGDRA
 	iconpal BROWN, BLUE ; STARYU
 	iconpal PURPLE, BLUE ; STARMIE
-	iconpal PINK, GREEN ; MR__MIME
 	iconpal GREEN, RED ; SCYTHER
+	iconpal RED, GRAY ; SCIZOR
+	iconpal BROWN, RED ; KLEAVOR
 	iconpal PURPLE, RED ; JYNX
 	iconpal BROWN, RED ; ELECTABUZZ
+	iconpal BROWN, RED ; ELECTIVIRE
 	iconpal RED, BROWN ; MAGMAR
+	iconpal RED, BROWN ; MAGMORTAR
 	iconpal BROWN, BLUE ; PINSIR
 	iconpal BROWN, RED ; TAUROS
 	iconpal RED, BROWN ; MAGIKARP
 	iconpal BLUE, BROWN ; GYARADOS
 	iconpal BLUE, RED ; LAPRAS
-	iconpal PURPLE, BLUE ; DITTO
 	iconpal BROWN, GRAY ; EEVEE
 	iconpal BLUE, PURPLE ; VAPOREON
 	iconpal BROWN, GREEN ; JOLTEON
 	iconpal RED, BLUE ; FLAREON
+	iconpal PURPLE, GREEN ; ESPEON
+	iconpal PURPLE, GREEN ; UMBREON
+	iconpal GREEN, BROWN ; LEAFEON
+	iconpal BLUE, BLUE ; GLACEON
+	iconpal PINK, BLUE ; SYLVEON
 	iconpal BLUE, PURPLE ; PORYGON
-	iconpal BLUE, GRAY ; OMANYTE
-	iconpal BLUE, GRAY ; OMASTAR
-	iconpal BROWN, GRAY ; KABUTO
-	iconpal BROWN, GRAY ; KABUTOPS
-	iconpal BROWN, GRAY ; AERODACTYL
+	iconpal BLUE, PURPLE ; PORYGON2
+	iconpal BLUE, PURPLE ; PORYGON_Z
 	iconpal RED, BLUE ; SNORLAX
-	iconpal BLUE, BLUE ; ARTICUNO
-	iconpal BROWN, RED ; ZAPDOS
-	iconpal RED, RED ; MOLTRES
-	iconpal BLUE, PINK ; DRATINI
-	iconpal BLUE, RED ; DRAGONAIR
-	iconpal RED, BLUE ; DRAGONITE
-	iconpal PURPLE, GREEN ; MEWTWO
-	iconpal PINK, BLUE ; MEW
 	iconpal GREEN, RED ; CHIKORITA
 	iconpal GREEN, RED ; BAYLEEF
 	iconpal GREEN, RED ; MEGANIUM
-	iconpal RED, PINK ; CYNDAQUIL
-	iconpal RED, PINK ; QUILAVA
-	iconpal RED, PINK ; TYPHLOSION
 	iconpal BLUE, TEAL ; TOTODILE
 	iconpal BLUE, TEAL ; CROCONAW
 	iconpal BLUE, TEAL ; FERALIGATR
-	iconpal BROWN, PURPLE ; SENTRET
 	iconpal BROWN, RED ; FURRET
-	iconpal BROWN, RED ; HOOTHOOT
-	iconpal BROWN, GREEN ; NOCTOWL
-	iconpal RED, PINK ; LEDYBA
 	iconpal RED, PINK ; LEDIAN
-	iconpal GREEN, PURPLE ; SPINARAK
 	iconpal PURPLE, BLUE ; ARIADOS
-	iconpal PURPLE, RED ; CROBAT
 	iconpal BLUE, TEAL ; CHINCHOU
 	iconpal BLUE, TEAL ; LANTURN
-	iconpal RED, BLUE ; PICHU
-	iconpal RED, BLUE ; MUNCHLAX
-	iconpal GRAY, BROWN ; MAGNEZONE
-	iconpal GRAY, RED ; RHYPERIOR
-	iconpal BLUE, GREEN ; TANGROWTH
+	iconpal RED, BLUE ; TOGETIC
+	iconpal RED, BLUE ; TOGEKISS	
 	iconpal GREEN, RED ; NATU
 	iconpal GREEN, RED ; XATU
 	iconpal BLUE, PURPLE ; MAREEP
 	iconpal PINK, RED ; FLAAFFY
 	iconpal BROWN, RED ; AMPHAROS
-	iconpal GREEN, RED ; BELLOSSOM
+	iconpal BLUE, GREEN ; MARILL
+	iconpal BLUE, BROWN ; AZUMARILL
 	iconpal GREEN, RED ; SUDOWOODO
-	iconpal GREEN, TEAL ; POLITOED
-	iconpal GREEN, BROWN ; SUNKERN
+	iconpal GREEN, BROWN ; SKIPLOOM
+	iconpal BLUE, BROWN ; JUMPLUFF
 	iconpal GREEN, BROWN ; SUNFLORA
-	iconpal RED, BLUE ; YANMA
-	iconpal RED, BLUE ; YANMEGA
 	iconpal BLUE, RED ; WOOPER
 	iconpal BLUE, RED ; QUAGSIRE
-	iconpal PURPLE, GREEN ; ESPEON
-	iconpal PURPLE, GREEN ; UMBREON
 	iconpal BLUE, PURPLE ; MURKROW
 	iconpal BLUE, PURPLE ; HONCHKROW
-	iconpal PINK, PURPLE ; SLOWKING
 	iconpal PURPLE, BROWN ; MISDREAVUS
-	iconpal PURPLE, BROWN ; MISMAGIUS
+	iconpal PURPLE, BROWN ; MISMAGIUS	
+	iconpal RED, BLUE ; YANMA
+	iconpal RED, BLUE ; YANMEGA
 	iconpal GRAY, BLUE ; UNOWN
-	iconpal BLUE, PURPLE ; WOBBUFFET
 	iconpal BROWN, BLUE ; GIRAFARIG
 	iconpal GRAY, RED ; PINECO
 	iconpal PURPLE, BROWN ; FORRETRESS
 	iconpal BLUE, RED ; DUNSPARCE
 	iconpal PURPLE, GRAY ; GLIGAR
 	iconpal PURPLE, GRAY ; GLISCOR
-	iconpal GRAY, BROWN ; STEELIX
 	iconpal PINK, BLUE ; SNUBBULL
 	iconpal PURPLE, GRAY ; GRANBULL
 	iconpal BLUE, PURPLE ; QWILFISH
-	iconpal RED, GRAY ; SCIZOR
+	iconpal PURPLE, PINK ; OVERQWIL
 	iconpal RED, BLUE ; SHUCKLE
 	iconpal BLUE, PURPLE ; HERACROSS
 	iconpal BLUE, RED ; SNEASEL
 	iconpal BLUE, RED ; WEAVILE
+	iconpal BLUE, PURPLE ; SNEASLER
 	iconpal BROWN, GREEN ; TEDDIURSA
 	iconpal BROWN, GREEN ; URSARING
-	iconpal RED, GRAY ; SLUGMA
+	iconpal BROWN, RED ; URSARING
 	iconpal RED, BLUE ; MAGCARGO
-	iconpal BROWN, BLUE ; SWINUB
 	iconpal BROWN, GREEN ; PILOSWINE
 	iconpal BROWN, GREEN ; MAMOSWINE
 	iconpal PINK, BLUE ; CORSOLA
-	iconpal BLUE, GRAY ; REMORAID
 	iconpal RED, TEAL ; OCTILLERY
 	iconpal BLUE, BLUE ; MANTINE
 	iconpal GRAY, GREEN ; SKARMORY
 	iconpal RED, GRAY ; HOUNDOUR
 	iconpal RED, GRAY ; HOUNDOOM
-	iconpal BLUE, PURPLE ; KINGDRA
-	iconpal BLUE, GRAY ; PHANPY
 	iconpal GRAY, RED ; DONPHAN
-	iconpal BLUE, PURPLE ; PORYGON2
-	iconpal BLUE, PURPLE ; PORYGON_Z
-	iconpal BROWN, GREEN ; SMEARGLE
-	iconpal BROWN, BLUE ; TYROGUE
-	iconpal BROWN, BLUE ; HITMONTOP
-	iconpal BROWN, RED ; ELEKID
-	iconpal BROWN, RED ; ELECTIVIRE
-	iconpal RED, BROWN ; MAGBY
-	iconpal RED, BROWN ; MAGMORTAR
+	iconpal BROWN, TEAL ; STANTLER
+	iconpal TEAL, BROWN ; WYRDEER
 	iconpal PINK, BLUE ; MILTANK
-	iconpal PINK, RED ; BLISSEY
-	iconpal BROWN, RED ; RAIKOU
-	iconpal RED, BROWN ; ENTEI
-	iconpal BLUE, BLUE ; SUICUNE
+	iconpal GREEN, BROWN ; GROTLE
+	iconpal GREEN, BROWN ; TORTERRA
+	iconpal RED, BROWN ; MONFERNO
+	iconpal RED, BROWN ; INFERNAPE
+	iconpal BLUE, TEAL ; PRINPLUP
+	iconpal BLUE, TEAL ; EMPOLEON
+	iconpal GRAY, BROWN ; STARAVIA
+	iconpal GRAY, RED ; STARAPTOR
+	iconpal BLUE, BROWN ; LUXIO
+	iconpal BLUE, BROWN ; LUXRAY
+	iconpal RED, GREEN ; ROSELIA
+	iconpal RED, GREEN ; ROSERADE	
+	iconpal BROWN, RED ; RAMPARDOS
+	iconpal BROWN, RED ; BASTIODON
+	iconpal BROWN, RED ; VESPIQUEN
+	iconpal PURPLE, RED	;AMBIPOM    ; d3
+	iconpal PURPLE, BROWN	; DRIFBLIM  ; d4
+	iconpal BROWN, RED	;LOPUNNY    ; d5
+	iconpal PURPLE, GRAY	; SKUNTANK    ; d6
+	iconpal TEAL, BROWN	; BRONZOR  ; d7
+	iconpal TEAL, RED ;BRONZONG   ; d8
+	iconpal PURPLE, GREEN ;SPIRITOMB     ; d9
+	iconpal PURPLE, RED ;GABITE   ; da
+	iconpal PURPLE, RED ;GARCHOMP     ; db
+	iconpal TEAL, GRAY	; LUCARIO  ; dc
+	iconpal BROWN, RED ;HIPPOWDON  ; dd
+	iconpal PURPLE, PINK ;DRAPION    ; de
+	iconpal BLUE, RED ;TOXICROAK   ; df
+	iconpal GREEN, BROWN ; SNOVER  ; e0
+	iconpal GREEN, RED ; ABOMASNOW    ; e1
+	iconpal GRAY, RED ; DUSCLOPS   ; e2
+	iconpal GRAY, BROWN ; DUSKNOIR   ; e3
+	iconpal TEAL, PURPLE ; FROSLASS   ; e4
+	iconpal BROWN, TEAL ; ROTOM    ; e5
+	iconpal TEAL, GRAY ; H__AVALUGG     ; e6
+	iconpal RED, BLUE ; BASCULEGION    ; e7
+	iconpal GRAY, PURPLE; H__BRAVIARY   ; e8
+	iconpal GREEN, RED ; KIRLIA  ; e9
+	iconpal GREEN, RED ; GARDEVOIR   ; ea
+	iconpal GREEN, RED ;GALLADE    ; eb
+	iconpal PINK, GRAY ; H__SLIGGOO  ; ec
+	iconpal PINK, GRAY ; H__GOODRA     ; ed
+	iconpal PINK, GRAY ; H__ZOROARK ; ee
+	iconpal BLUE, PINK ; DRATINI
+	iconpal BLUE, RED ; DRAGONAIR
+	iconpal RED, BLUE ; DRAGONITE
 	iconpal GREEN, GREEN ; LARVITAR
 	iconpal GRAY, PURPLE ; PUPITAR
 	iconpal GREEN, GRAY ; TYRANITAR
+	iconpal BROWN, RED ; RAIKOU
+	iconpal RED, BROWN ; ENTEI
+	iconpal BLUE, BLUE ; SUICUNE
+	iconpal RED, GRAY	;HEATRAN  ; f8
 	iconpal BLUE, RED ; LUGIA
 	iconpal RED, GREEN ; HO_OH
 	iconpal GREEN, RED ; CELEBI
-	iconpal GREEN, BROWN ; LEAFEON
-	iconpal BLUE, BLUE ; GLACEON
-	iconpal PINK, BLUE ; SYLVEON
 	assert_table_length NUM_POKEMON
 
 	iconpal RED, BLUE ; EGG
@@ -265,49 +262,3 @@ MenuMonIconColors::
 rept NUM_UNOWN - 1
 	iconpal GRAY, BLUE
 endr
-
-rept 4
-	iconpal PURPLE, BROWN ; ARBOK
-endr
-
-rept 5
-	iconpal RED, BLUE ; PIKACHU
-endr
-
-	iconpal RED, BLUE ; PICHU
-
-rept NUM_MAGIKARP - 1
-	iconpal RED, BROWN ; MAGIKARP
-endr
-
-	iconpal RED, RED ; GYARADOS, GYARADOS_RED_FORM
-	iconpal GRAY, GRAY ; MEWTWO, MEWTWO_ARMORED_FORM
-	iconpal GRAY, RED ; RATTATA, ALOLAN_FORM
-	iconpal GRAY, RED ; RATICATE, ALOLAN_FORM
-	iconpal BLUE, GREEN ; SANDSHREW, ALOLAN_FORM
-	iconpal BLUE, GREEN ; SANDSLASH, ALOLAN_FORM
-	iconpal BLUE, RED ; VULPIX, ALOLAN_FORM
-	iconpal BLUE, RED ; NINETALES, ALOLAN_FORM
-	iconpal BROWN, RED ; DIGLETT, ALOLAN_FORM
-	iconpal BROWN, RED ; DUGTRIO, ALOLAN_FORM
-	iconpal GRAY, BLUE ; MEOWTH, ALOLAN_FORM
-	iconpal GRAY, BLUE ; PERSIAN, ALOLAN_FORM
-	iconpal GRAY, BROWN ; GEODUDE, ALOLAN_FORM
-	iconpal GRAY, BROWN ; GRAVELER, ALOLAN_FORM
-	iconpal GRAY, BROWN ; GOLEM, ALOLAN_FORM
-	iconpal GREEN, PURPLE ; GRIMER, ALOLAN_FORM
-	iconpal GREEN, PURPLE ; MUK, ALOLAN_FORM
-	iconpal RED, BROWN ; RAICHU, ALOLAN_FORM
-	iconpal GREEN, RED ; EXEGGUTOR, ALOLAN_FORM
-	iconpal BROWN, PURPLE ; MAROWAK, ALOLAN_FORM
-	iconpal BLUE, PURPLE ; PONYTA, GALARIAN_FORM
-	iconpal BLUE, PURPLE ; RAPIDASH, GALARIAN_FORM
-	iconpal PURPLE, BROWN ; SLOWPOKE, GALARIAN_FORM
-	iconpal PURPLE, BROWN ; SLOWBRO, GALARIAN_FORM
-	iconpal PURPLE, BROWN ; SLOWKING, GALARIAN_FORM
-	iconpal GRAY, BROWN ; WEEZING, GALARIAN_FORM
-	iconpal PURPLE, BLUE ; ARTICUNO, GALARIAN_FORM
-	iconpal RED, BROWN ; ZAPDOS, GALARIAN_FORM
-	iconpal RED, RED ; MOLTRES, GALARIAN_FORM
-
-	assert_table_length NUM_UNIQUE_POKEMON

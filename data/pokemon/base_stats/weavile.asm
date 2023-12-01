@@ -8,11 +8,7 @@
 	db QUICK_CLAW ; item 2
 	dn GENDER_F50, 3 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/weavile/front.dimensions"
-if DEF(FAITHFUL)
 	abilities_for WEAVILE, PRESSURE, PRESSURE, PICKPOCKET
-else
-	abilities_for WEAVILE, PRESSURE, TECHNICIAN, PICKPOCKET
-endc
 	db GROWTH_MEDIUM_SLOW ; growth rate
 	dn EGG_GROUND, EGG_GROUND ; egg groups
 

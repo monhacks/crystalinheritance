@@ -1,18 +1,9 @@
-if DEF(FAITHFUL)
 	db  35,  45, 160,  70,  30,  45 ; 385 BST
 	;   hp  atk  def  spd  sat  sdf
-else
-	db  35,  80, 160,  70,  30,  45 ; 420 BST
-	;   hp  atk  def  spd  sat  sdf
-endc
 
 	db ROCK, GROUND ; type
 	db 45 ; catch rate
-if DEF(FAITHFUL)
 	db 108 ; base exp
-else
-	db 128 ; base exp
-endc
 	db LAGGING_TAIL ; item 1
 	db HARD_STONE ; item 2
 	dn GENDER_F50, 4 ; gender ratio, step cycles to hatch

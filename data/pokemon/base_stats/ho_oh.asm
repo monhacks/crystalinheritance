@@ -8,11 +8,7 @@
 	db SACRED_ASH ; item 2
 	dn GENDER_UNKNOWN, 15 ; gender ratio, step cycles to hatch
 	dn 7 , 7 ; frontpic dimensions
-if DEF(FAITHFUL)
 	abilities_for HO_OH, PRESSURE, PRESSURE, REGENERATOR
-else
-	abilities_for HO_OH, PRESSURE, CLOUD_NINE, REGENERATOR
-endc
 	db GROWTH_SLOW ; growth rate
 	dn EGG_NONE, EGG_NONE ; egg groups
 

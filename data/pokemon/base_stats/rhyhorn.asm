@@ -8,11 +8,7 @@
 	db PROTECTOR ; item 2
 	dn GENDER_F50, 3 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/rhyhorn/front.dimensions"
-if DEF(FAITHFUL)
-	abilities_for RHYHORN, LIGHTNING_ROD, ROCK_HEAD, RECKLESS
-else
-	abilities_for RHYHORN, ROCK_HEAD, SOLID_ROCK, RECKLESS
-endc
+	abilities_for RHYHORN, ROCK_HEAD, ROCK_HEAD, RECKLESS
 	db GROWTH_SLOW ; growth rate
 	dn EGG_MONSTER, EGG_GROUND ; egg groups
 

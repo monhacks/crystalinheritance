@@ -1,9 +1,9 @@
-	db "Water Fish@" ; species name
-	dw 407, 1650 ; height, width
+	db "Royal@" ; species name
+	dw 607, 1753 ; height, width
 
-	db   "Its body is always"
-	next "slimy. It often"
-	next "bangs its head on"
-	page "the river bottom"
-	next "as it swims but"
-	next "seems not to care.@"
+	db   "A SLOWPOKE"
+	next "whose intellect"
+	next "was augmented"
+	page "by the toxins"
+	next "from the parasite"
+	next "on its head.@"

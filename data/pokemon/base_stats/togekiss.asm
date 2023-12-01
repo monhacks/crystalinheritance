@@ -8,7 +8,7 @@
 	db NO_ITEM ; item 2
 	dn GENDER_F12_5, 1 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/togekiss/front.dimensions"
-	abilities_for TOGEKISS, HUSTLE, SERENE_GRACE, SUPER_LUCK
+	abilities_for TOGEKISS, SERENE_GRACE, SERENE_GRACE, SUPER_LUCK
 	db GROWTH_FAST ; growth rate
 	dn EGG_FLYING, EGG_FAIRY ; egg groups
 

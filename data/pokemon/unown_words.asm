@@ -32,7 +32,7 @@ UnownWords:
 	dw UnownWord28
 	assert_table_length NUM_UNOWN + 1
 
-UnownWord1:  db "ANGER@"
+UnownWord1:  db "ADAPT@"
 UnownWord2:  db "BEAR@"
 UnownWord3:  db "CHASE@"
 UnownWord4:  db "DIRECT@"
@@ -55,7 +55,7 @@ UnownWord20: db "TELL@"
 UnownWord21: db "UNDO@"
 UnownWord22: db "VANISH@"
 UnownWord23: db "WANT@"
-UnownWord24: db "XXXXX@"
+UnownWord24: db "XANADU@"
 UnownWord25: db "YIELD@"
 UnownWord26: db "ZOOM@"
 UnownWord27: db "!!!!!@"

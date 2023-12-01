@@ -8,11 +8,7 @@
 	db CHARCOAL ; item 2
 	dn GENDER_UNKNOWN, 15 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/entei/front.dimensions"
-if DEF(FAITHFUL)
 	abilities_for ENTEI, PRESSURE, PRESSURE, INNER_FOCUS
-else
-	abilities_for ENTEI, PRESSURE, INNER_FOCUS, FLASH_FIRE
-endc
 	db GROWTH_SLOW ; growth rate
 	dn EGG_NONE, EGG_NONE ; egg groups
 

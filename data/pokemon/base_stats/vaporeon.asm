@@ -8,11 +8,7 @@
 	db NO_ITEM ; item 2
 	dn GENDER_F12_5, 6 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/vaporeon/front.dimensions"
-if DEF(FAITHFUL)
 	abilities_for VAPOREON, WATER_ABSORB, WATER_ABSORB, HYDRATION
-else
-	abilities_for VAPOREON, WATER_ABSORB, DRIZZLE, HYDRATION
-endc
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_GROUND, EGG_GROUND ; egg groups
 

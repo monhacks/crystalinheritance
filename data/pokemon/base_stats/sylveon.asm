@@ -8,11 +8,7 @@
 	db PINK_BOW ; item 2
 	dn GENDER_F12_5, 6 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/sylveon/front.dimensions"
-if DEF(FAITHFUL)
 	abilities_for SYLVEON, CUTE_CHARM, CUTE_CHARM, PIXILATE
-else
-	abilities_for SYLVEON, CUTE_CHARM, SERENE_GRACE, PIXILATE
-endc
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_GROUND, EGG_GROUND ; egg groups
 

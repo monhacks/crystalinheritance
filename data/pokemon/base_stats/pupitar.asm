@@ -8,11 +8,7 @@
 	db NO_ITEM ; item 2
 	dn GENDER_F50, 7 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/pupitar/front.dimensions"
-if DEF(FAITHFUL)
 	abilities_for PUPITAR, SHED_SKIN, SHED_SKIN, SHED_SKIN
-else
-	abilities_for PUPITAR, SHED_SKIN, SHED_SKIN, BATTLE_ARMOR
-endc
 	db GROWTH_SLOW ; growth rate
 	dn EGG_MONSTER, EGG_MONSTER ; egg groups
 

@@ -1,18 +1,9 @@
-if DEF(FAITHFUL)
 	db  83,  80,  75, 101,  70,  70 ; 479 BST
 	;   hp  atk  def  spd  sat  sdf
-else
-	db  93,  81,  75, 101,  90,  70 ; 510 BST
-	;   hp  atk  def  spd  sat  sdf
-endc
 
 	db NORMAL, FLYING ; type
 	db 45 ; catch rate
-if DEF(FAITHFUL)
 	db 172 ; base exp
-else
-	db 194 ; base exp
-endc
 	db NO_ITEM ; item 1
 	db NO_ITEM ; item 2
 	dn GENDER_F50, 2 ; gender ratio, step cycles to hatch

@@ -6,13 +6,9 @@
 	db 65 ; base exp
 	db NO_ITEM ; item 1
 	db NO_ITEM ; item 2
-	dn GENDER_F12_5, 3 ; gender ratio, step cycles to hatch
+	dn GENDER_F50, 3 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/cyndaquil/front.dimensions"
-if DEF(FAITHFUL)
 	abilities_for CYNDAQUIL, BLAZE, BLAZE, FLASH_FIRE
-else
-	abilities_for CYNDAQUIL, BLAZE, FLAME_BODY, FLASH_FIRE
-endc
 	db GROWTH_MEDIUM_SLOW ; growth rate
 	dn EGG_GROUND, EGG_GROUND ; egg groups
 

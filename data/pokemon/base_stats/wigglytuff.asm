@@ -1,27 +1,14 @@
-if DEF(FAITHFUL)
 	db 140,  70,  45,  45,  85,  50 ; 435 BST
 	;   hp  atk  def  spd  sat  sdf
-else
-	db 148,  70,  55,  45,  85,  65 ; 468 BST
-	;   hp  atk  def  spd  sat  sdf
-endc
 
 	db NORMAL, FAIRY ; type
 	db 50 ; catch rate
-if DEF(FAITHFUL)
 	db 109 ; base exp
-else
-	db 129 ; base exp
-endc
 	db ORAN_BERRY ; item 1
 	db ORAN_BERRY ; item 2
 	dn GENDER_F75, 1 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/wigglytuff/front.dimensions"
-if DEF(FAITHFUL)
 	abilities_for WIGGLYTUFF, CUTE_CHARM, COMPETITIVE, FRISK
-else
-	abilities_for WIGGLYTUFF, CUTE_CHARM, COMPETITIVE, SOUNDPROOF
-endc
 	db GROWTH_FAST ; growth rate
 	dn EGG_FAIRY, EGG_FAIRY ; egg groups
 

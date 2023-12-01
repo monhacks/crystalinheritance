@@ -8,11 +8,7 @@
 	db NO_ITEM ; item 2
 	dn GENDER_F12_5, 6 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/umbreon/front.dimensions"
-if DEF(FAITHFUL)
 	abilities_for UMBREON, SYNCHRONIZE, SYNCHRONIZE, INNER_FOCUS
-else
-	abilities_for UMBREON, SYNCHRONIZE, MAGIC_GUARD, INNER_FOCUS
-endc
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_GROUND, EGG_GROUND ; egg groups
 

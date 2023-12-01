@@ -1,31 +1,14 @@
-if DEF(FAITHFUL)
-	db  75,  75,  55,  30, 105,  85 ; 425 BST
-	;   hp  atk  def  spd  sat  sdf
-else
 	db  75,  55,  75,  85, 105,  85 ; 480 BST
 	;   hp  atk  def  spd  sat  sdf
-endc
 
-if DEF(FAITHFUL)
-	db GRASS, GRASS ; type
-else
 	db GRASS, FIRE ; type
-endc
-if DEF(FAITHFUL)
-	db 120 ; catch rate
-else
 	db 110 ; catch rate
-endc
-if DEF(FAITHFUL)
 	db 146 ; base exp
-else
-	db 156 ; base exp
-endc
 	db NO_ITEM ; item 1
 	db NO_ITEM ; item 2
 	dn GENDER_F50, 3 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/sunflora/front.dimensions"
-	abilities_for SUNFLORA, CHLOROPHYLL, SOLAR_POWER, EARLY_BIRD
+	abilities_for SUNFLORA, CHLOROPHYLL, CHLOROPHYLL, EARLY_BIRD
 	db GROWTH_MEDIUM_SLOW ; growth rate
 	dn EGG_PLANT, EGG_PLANT ; egg groups
 
