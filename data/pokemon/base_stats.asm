@@ -38,15 +38,15 @@ BaseData::
 INCLUDE "data/pokemon/base_stats/cyndaquil.asm"
 INCLUDE "data/pokemon/base_stats/quilava.asm"
 INCLUDE "data/pokemon/base_stats/typhlosion.asm"
-INCLUDE "data/pokemon/base_stats/h__typhlosion.asm";;
+INCLUDE "data/pokemon/base_stats/htyphlosion.asm";;
 INCLUDE "data/pokemon/base_stats/rowlet.asm";;
 INCLUDE "data/pokemon/base_stats/dartrix.asm";;
 INCLUDE "data/pokemon/base_stats/decidueye.asm";;
-INCLUDE "data/pokemon/base_stats/h__decidueye.asm";;
+INCLUDE "data/pokemon/base_stats/hdecidueye.asm";;
 INCLUDE "data/pokemon/base_stats/oshawott.asm";;
 INCLUDE "data/pokemon/base_stats/dewott.asm";;
 INCLUDE "data/pokemon/base_stats/samurott.asm";;
-INCLUDE "data/pokemon/base_stats/h__samurott.asm";;
+INCLUDE "data/pokemon/base_stats/hsamurott.asm";;
 INCLUDE "data/pokemon/base_stats/butterfree.asm"
 INCLUDE "data/pokemon/base_stats/beedrill.asm"
 INCLUDE "data/pokemon/base_stats/pidgey.asm"
@@ -84,7 +84,7 @@ INCLUDE "data/pokemon/base_stats/mankey.asm"
 INCLUDE "data/pokemon/base_stats/primeape.asm"
 INCLUDE "data/pokemon/base_stats/growlithe.asm"
 INCLUDE "data/pokemon/base_stats/arcanine.asm"
-INCLUDE "data/pokemon/base_stats/h__arcanine.asm"
+INCLUDE "data/pokemon/base_stats/harcanine.asm"
 INCLUDE "data/pokemon/base_stats/poliwag.asm"
 INCLUDE "data/pokemon/base_stats/poliwhirl.asm"
 INCLUDE "data/pokemon/base_stats/poliwrath.asm"
@@ -120,14 +120,14 @@ INCLUDE "data/pokemon/base_stats/onix.asm"
 INCLUDE "data/pokemon/base_stats/steelix.asm"
 INCLUDE "data/pokemon/base_stats/voltorb.asm"
 INCLUDE "data/pokemon/base_stats/electrode.asm"
-INCLUDE "data/pokemon/base_stats/h__electrode.asm"
+INCLUDE "data/pokemon/base_stats/helectrode.asm"
 INCLUDE "data/pokemon/base_stats/exeggcute.asm"
 INCLUDE "data/pokemon/base_stats/exeggutor.asm"
 INCLUDE "data/pokemon/base_stats/hitmonlee.asm"
 INCLUDE "data/pokemon/base_stats/hitmonchan.asm"
 INCLUDE "data/pokemon/base_stats/hitmontop.asm"
 INCLUDE "data/pokemon/base_stats/weezing.asm"
-INCLUDE "data/pokemon/base_stats/mr__mime.asm"
+INCLUDE "data/pokemon/base_stats/mrmime.asm"
 INCLUDE "data/pokemon/base_stats/rhyhorn.asm"
 INCLUDE "data/pokemon/base_stats/rhydon.asm"
 INCLUDE "data/pokemon/base_stats/rhyperior.asm"
@@ -264,15 +264,15 @@ INCLUDE "data/pokemon/base_stats/dusclops.asm";;
 INCLUDE "data/pokemon/base_stats/dusknoir.asm";;
 INCLUDE "data/pokemon/base_stats/froslass.asm";;
 INCLUDE "data/pokemon/base_stats/rotom.asm";;
-INCLUDE "data/pokemon/base_stats/h__avalugg.asm";;
+INCLUDE "data/pokemon/base_stats/havalugg.asm";;
 INCLUDE "data/pokemon/base_stats/basculegion.asm";;
-INCLUDE "data/pokemon/base_stats/h__braviary.asm";;
+INCLUDE "data/pokemon/base_stats/hbraviary.asm";;
 INCLUDE "data/pokemon/base_stats/kirlia.asm";;
 INCLUDE "data/pokemon/base_stats/gardevoir.asm";;
 INCLUDE "data/pokemon/base_stats/gallade.asm";;
-INCLUDE "data/pokemon/base_stats/h__sliggoo.asm";;
-INCLUDE "data/pokemon/base_stats/h__goodra.asm";;
-INCLUDE "data/pokemon/base_stats/h__zoroark.asm";;
+INCLUDE "data/pokemon/base_stats/hsliggoo.asm";;
+INCLUDE "data/pokemon/base_stats/hgoodra.asm";;
+INCLUDE "data/pokemon/base_stats/hzoroark.asm";;
 INCLUDE "data/pokemon/base_stats/dratini.asm"
 INCLUDE "data/pokemon/base_stats/dragonair.asm"
 INCLUDE "data/pokemon/base_stats/dragonite.asm"
@@ -286,9 +286,5 @@ INCLUDE "data/pokemon/base_stats/heatran.asm";;
 INCLUDE "data/pokemon/base_stats/lugia.asm"
 INCLUDE "data/pokemon/base_stats/ho_oh.asm"
 INCLUDE "data/pokemon/base_stats/celebi.asm"
-	assert_table_length NUM_POKEMON
+	assert_table_length NUM_POKEMON ;one of the entries is not 35 bits. Removing an entry (celebi) from the list above and removing one of the lines of code from a base stat (heatran EV yield) does not change the error message.
 INCLUDE "data/pokemon/base_stats/egg.asm"
-
-
-INCLUDE "data/pokemon/base_stats/gyarados.asm" ; red
-	assert_table_length NUM_EXT_POKEMON

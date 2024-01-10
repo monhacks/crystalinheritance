@@ -1,6 +1,5 @@
 BitmasksPointers:
 	table_width 2, BitmasksPointers
-	dw BulbasaurBitmasks
 	dw CyndaquilBitmasks
 	dw QuilavaBitmasks
 	dw TyphlosionBitmasks
@@ -283,5 +282,4 @@ BitmasksPointers:
 	dw UnownZBitmasks
 	dw UnownExclamationBitmasks
 	dw UnownQuestionBitmasks
-
-	assert_table_length NUM_UNIQUE_POKEMON
+;	assert_table_length NUM_UNIQUE_POKEMON

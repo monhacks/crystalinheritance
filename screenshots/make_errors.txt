@@ -1,0 +1,1214 @@
+rgbasm -E -Weverything -Wnumeric-string=2 -Wtruncation=1 -L -o main.o main.asm
+warning: main.asm(1) -> constants.asm(5) -> charmap.asm(303): [-Wobsolete]
+    `rawchar: MACRO` is deprecated; use `MACRO rawchar`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(1) -> macros/asserts.asm(3): [-Wobsolete]
+    `table_width: MACRO` is deprecated; use `MACRO table_width`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(1) -> macros/asserts.asm(13): [-Wobsolete]
+    `assert_table_length: MACRO` is deprecated; use `MACRO assert_table_length`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(1) -> macros/asserts.asm(19): [-Wobsolete]
+    `list_start: MACRO` is deprecated; use `MACRO list_start`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(1) -> macros/asserts.asm(29): [-Wobsolete]
+    `li: MACRO` is deprecated; use `MACRO li`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(1) -> macros/asserts.asm(35): [-Wobsolete]
+    `assert_list_length: MACRO` is deprecated; use `MACRO assert_list_length`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(1) -> macros/asserts.asm(41): [-Wobsolete]
+    `def_grass_wildmons: MACRO` is deprecated; use `MACRO def_grass_wildmons`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(1) -> macros/asserts.asm(49): [-Wobsolete]
+    `end_grass_wildmons: MACRO` is deprecated; use `MACRO end_grass_wildmons`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(1) -> macros/asserts.asm(54): [-Wobsolete]
+    `def_water_wildmons: MACRO` is deprecated; use `MACRO def_water_wildmons`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(1) -> macros/asserts.asm(62): [-Wobsolete]
+    `end_water_wildmons: MACRO` is deprecated; use `MACRO end_water_wildmons`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(1) -> macros/asserts.asm(67): [-Wobsolete]
+    `wildmon: MACRO` is deprecated; use `MACRO wildmon`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(1) -> macros/asserts.asm(77): [-Wobsolete]
+    `jmp: MACRO` is deprecated; use `MACRO jmp`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(2) -> macros/const.asm(3): [-Wobsolete]
+    `const_def: MACRO` is deprecated; use `MACRO const_def`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(2) -> macros/const.asm(16): [-Wobsolete]
+    `const: MACRO` is deprecated; use `MACRO const`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(2) -> macros/const.asm(21): [-Wobsolete]
+    `shift_const: MACRO` is deprecated; use `MACRO shift_const`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(2) -> macros/const.asm(26): [-Wobsolete]
+    `const_skip: MACRO` is deprecated; use `MACRO const_skip`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(2) -> macros/const.asm(34): [-Wobsolete]
+    `const_next: MACRO` is deprecated; use `MACRO const_next`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(2) -> macros/const.asm(42): [-Wobsolete]
+    `rb_skip: MACRO` is deprecated; use `MACRO rb_skip`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(3) -> macros/predef.asm(1): [-Wobsolete]
+    `add_predef: MACRO` is deprecated; use `MACRO add_predef`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(3) -> macros/predef.asm(6): [-Wobsolete]
+    `predef: MACRO` is deprecated; use `MACRO predef`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(3) -> macros/predef.asm(11): [-Wobsolete]
+    `predef_jump: MACRO` is deprecated; use `MACRO predef_jump`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(4) -> macros/rst.asm(1): [-Wobsolete]
+    `anonbankpush: MACRO` is deprecated; use `MACRO anonbankpush`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(4) -> macros/rst.asm(6): [-Wobsolete]
+    `farcall: MACRO` is deprecated; use `MACRO farcall`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(4) -> macros/rst.asm(11): [-Wobsolete]
+    `farjp: MACRO` is deprecated; use `MACRO farjp`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(4) -> macros/rst.asm(16): [-Wobsolete]
+    `homecall: MACRO` is deprecated; use `MACRO homecall`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(5) -> macros/data.asm(8): [-Wobsolete]
+    `dwb: MACRO` is deprecated; use `MACRO dwb`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(5) -> macros/data.asm(13): [-Wobsolete]
+    `dbw: MACRO` is deprecated; use `MACRO dbw`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(5) -> macros/data.asm(18): [-Wobsolete]
+    `dn: MACRO` is deprecated; use `MACRO dn`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(5) -> macros/data.asm(25): [-Wobsolete]
+    `dc: MACRO` is deprecated; use `MACRO dc`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(5) -> macros/data.asm(32): [-Wobsolete]
+    `dx: MACRO` is deprecated; use `MACRO dx`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(5) -> macros/data.asm(38): [-Wobsolete]
+    `dt: MACRO` is deprecated; use `MACRO dt`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(5) -> macros/data.asm(42): [-Wobsolete]
+    `dd: MACRO` is deprecated; use `MACRO dd`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(5) -> macros/data.asm(46): [-Wobsolete]
+    `bigdw: MACRO` is deprecated; use `MACRO bigdw`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(5) -> macros/data.asm(50): [-Wobsolete]
+    `dba: MACRO` is deprecated; use `MACRO dba`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(5) -> macros/data.asm(56): [-Wobsolete]
+    `dab: MACRO` is deprecated; use `MACRO dab`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(5) -> macros/data.asm(62): [-Wobsolete]
+    `dbpixel: MACRO` is deprecated; use `MACRO dbpixel`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(5) -> macros/data.asm(70): [-Wobsolete]
+    `dsprite: MACRO` is deprecated; use `MACRO dsprite`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(5) -> macros/data.asm(74): [-Wobsolete]
+    `bcd: MACRO` is deprecated; use `MACRO bcd`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(5) -> macros/data.asm(80): [-Wobsolete]
+    `dp: MACRO` is deprecated; use `MACRO dp`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(5) -> macros/data.asm(88): [-Wobsolete]
+    `genders: MACRO` is deprecated; use `MACRO genders`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(6) -> macros/code.asm(3): [-Wobsolete]
+    `lb: MACRO` is deprecated; use `MACRO lb`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(6) -> macros/code.asm(7): [-Wobsolete]
+    `ln: MACRO` is deprecated; use `MACRO ln`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(6) -> macros/code.asm(15): [-Wobsolete]
+    `maskbits: MACRO` is deprecated; use `MACRO maskbits`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(6) -> macros/code.asm(39): [-Wobsolete]
+    `ldpixel: MACRO` is deprecated; use `MACRO ldpixel`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(6) -> macros/code.asm(57): [-Wobsolete]
+    `flagset: MACRO` is deprecated; use `MACRO flagset`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(6) -> macros/code.asm(62): [-Wobsolete]
+    `flagreset: MACRO` is deprecated; use `MACRO flagreset`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(6) -> macros/code.asm(67): [-Wobsolete]
+    `flagcheck: MACRO` is deprecated; use `MACRO flagcheck`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(6) -> macros/code.asm(72): [-Wobsolete]
+    `changebridgeblock: MACRO` is deprecated; use `MACRO changebridgeblock`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(7) -> macros/gfx.asm(1): [-Wobsolete]
+    `RGB: MACRO` is deprecated; use `MACRO RGB`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(8) -> macros/coords.asm(5): [-Wobsolete]
+    `coord: MACRO` is deprecated; use `MACRO coord`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(8) -> macros/coords.asm(18): [-Wobsolete]
+    `bgcoord: MACRO` is deprecated; use `MACRO bgcoord`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(8) -> macros/coords.asm(27): [-Wobsolete]
+    `dwcoord: MACRO` is deprecated; use `MACRO dwcoord`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(8) -> macros/coords.asm(35): [-Wobsolete]
+    `ldcoord_a: MACRO` is deprecated; use `MACRO ldcoord_a`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(8) -> macros/coords.asm(44): [-Wobsolete]
+    `lda_coord: MACRO` is deprecated; use `MACRO lda_coord`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(8) -> macros/coords.asm(53): [-Wobsolete]
+    `menu_coords: MACRO` is deprecated; use `MACRO menu_coords`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(10) -> macros/scripts/audio.asm(1): [-Wobsolete]
+    `musicheader: MACRO` is deprecated; use `MACRO musicheader`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(10) -> macros/scripts/audio.asm(6): [-Wobsolete]
+    `note: MACRO` is deprecated; use `MACRO note`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(10) -> macros/scripts/audio.asm(10): [-Wobsolete]
+    `sound: MACRO` is deprecated; use `MACRO sound`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(10) -> macros/scripts/audio.asm(16): [-Wobsolete]
+    `noise: MACRO` is deprecated; use `MACRO noise`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(10) -> macros/scripts/audio.asm(26): [-Wobsolete]
+    `octave: MACRO` is deprecated; use `MACRO octave`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(10) -> macros/scripts/audio.asm(34): [-Wobsolete]
+    `notetype: MACRO` is deprecated; use `MACRO notetype`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(10) -> macros/scripts/audio.asm(43): [-Wobsolete]
+    `pitchoffset: MACRO` is deprecated; use `MACRO pitchoffset`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(10) -> macros/scripts/audio.asm(49): [-Wobsolete]
+    `tempo: MACRO` is deprecated; use `MACRO tempo`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(10) -> macros/scripts/audio.asm(55): [-Wobsolete]
+    `dutycycle: MACRO` is deprecated; use `MACRO dutycycle`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(10) -> macros/scripts/audio.asm(61): [-Wobsolete]
+    `intensity: MACRO` is deprecated; use `MACRO intensity`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(10) -> macros/scripts/audio.asm(67): [-Wobsolete]
+    `soundinput: MACRO` is deprecated; use `MACRO soundinput`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(10) -> macros/scripts/audio.asm(73): [-Wobsolete]
+    `sound_duty: MACRO` is deprecated; use `MACRO sound_duty`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(10) -> macros/scripts/audio.asm(83): [-Wobsolete]
+    `togglesfx: MACRO` is deprecated; use `MACRO togglesfx`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(10) -> macros/scripts/audio.asm(88): [-Wobsolete]
+    `slidepitchto: MACRO` is deprecated; use `MACRO slidepitchto`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(10) -> macros/scripts/audio.asm(95): [-Wobsolete]
+    `vibrato: MACRO` is deprecated; use `MACRO vibrato`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(10) -> macros/scripts/audio.asm(102): [-Wobsolete]
+    `unknownmusic0xe2: MACRO` is deprecated; use `MACRO unknownmusic0xe2`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(10) -> macros/scripts/audio.asm(108): [-Wobsolete]
+    `togglenoise: MACRO` is deprecated; use `MACRO togglenoise`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(10) -> macros/scripts/audio.asm(114): [-Wobsolete]
+    `panning: MACRO` is deprecated; use `MACRO panning`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(10) -> macros/scripts/audio.asm(120): [-Wobsolete]
+    `volume: MACRO` is deprecated; use `MACRO volume`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(10) -> macros/scripts/audio.asm(126): [-Wobsolete]
+    `tone: MACRO` is deprecated; use `MACRO tone`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(10) -> macros/scripts/audio.asm(132): [-Wobsolete]
+    `unknownmusic0xe7: MACRO` is deprecated; use `MACRO unknownmusic0xe7`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(10) -> macros/scripts/audio.asm(138): [-Wobsolete]
+    `unknownmusic0xe8: MACRO` is deprecated; use `MACRO unknownmusic0xe8`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(10) -> macros/scripts/audio.asm(144): [-Wobsolete]
+    `tempo_relative: MACRO` is deprecated; use `MACRO tempo_relative`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(10) -> macros/scripts/audio.asm(150): [-Wobsolete]
+    `restartchannel: MACRO` is deprecated; use `MACRO restartchannel`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(10) -> macros/scripts/audio.asm(156): [-Wobsolete]
+    `newsong: MACRO` is deprecated; use `MACRO newsong`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(10) -> macros/scripts/audio.asm(162): [-Wobsolete]
+    `sfxpriorityon: MACRO` is deprecated; use `MACRO sfxpriorityon`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(10) -> macros/scripts/audio.asm(167): [-Wobsolete]
+    `sfxpriorityoff: MACRO` is deprecated; use `MACRO sfxpriorityoff`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(10) -> macros/scripts/audio.asm(172): [-Wobsolete]
+    `unknownmusic0xee: MACRO` is deprecated; use `MACRO unknownmusic0xee`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(10) -> macros/scripts/audio.asm(178): [-Wobsolete]
+    `stereopanning: MACRO` is deprecated; use `MACRO stereopanning`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(10) -> macros/scripts/audio.asm(184): [-Wobsolete]
+    `sfxtogglenoise: MACRO` is deprecated; use `MACRO sfxtogglenoise`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(10) -> macros/scripts/audio.asm(190): [-Wobsolete]
+    `music0xf1: MACRO` is deprecated; use `MACRO music0xf1`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(10) -> macros/scripts/audio.asm(195): [-Wobsolete]
+    `music0xf2: MACRO` is deprecated; use `MACRO music0xf2`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(10) -> macros/scripts/audio.asm(200): [-Wobsolete]
+    `music0xf3: MACRO` is deprecated; use `MACRO music0xf3`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(10) -> macros/scripts/audio.asm(205): [-Wobsolete]
+    `music0xf4: MACRO` is deprecated; use `MACRO music0xf4`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(10) -> macros/scripts/audio.asm(210): [-Wobsolete]
+    `music0xf5: MACRO` is deprecated; use `MACRO music0xf5`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(10) -> macros/scripts/audio.asm(215): [-Wobsolete]
+    `music0xf6: MACRO` is deprecated; use `MACRO music0xf6`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(10) -> macros/scripts/audio.asm(220): [-Wobsolete]
+    `music0xf7: MACRO` is deprecated; use `MACRO music0xf7`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(10) -> macros/scripts/audio.asm(225): [-Wobsolete]
+    `music0xf8: MACRO` is deprecated; use `MACRO music0xf8`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(10) -> macros/scripts/audio.asm(230): [-Wobsolete]
+    `noisesampleset: MACRO` is deprecated; use `MACRO noisesampleset`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(10) -> macros/scripts/audio.asm(236): [-Wobsolete]
+    `setcondition: MACRO` is deprecated; use `MACRO setcondition`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(10) -> macros/scripts/audio.asm(242): [-Wobsolete]
+    `jumpif: MACRO` is deprecated; use `MACRO jumpif`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(10) -> macros/scripts/audio.asm(249): [-Wobsolete]
+    `jumpchannel: MACRO` is deprecated; use `MACRO jumpchannel`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(10) -> macros/scripts/audio.asm(255): [-Wobsolete]
+    `loopchannel: MACRO` is deprecated; use `MACRO loopchannel`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(10) -> macros/scripts/audio.asm(262): [-Wobsolete]
+    `callchannel: MACRO` is deprecated; use `MACRO callchannel`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(10) -> macros/scripts/audio.asm(268): [-Wobsolete]
+    `endchannel: MACRO` is deprecated; use `MACRO endchannel`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(11) -> macros/scripts/maps.asm(1): [-Wobsolete]
+    `map_id: MACRO` is deprecated; use `MACRO map_id`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(11) -> macros/scripts/maps.asm(7): [-Wobsolete]
+    `def_scene_scripts: MACRO` is deprecated; use `MACRO def_scene_scripts`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(11) -> macros/scripts/maps.asm(13): [-Wobsolete]
+    `scene_script: MACRO` is deprecated; use `MACRO scene_script`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(11) -> macros/scripts/maps.asm(18): [-Wobsolete]
+    `def_callbacks: MACRO` is deprecated; use `MACRO def_callbacks`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(11) -> macros/scripts/maps.asm(24): [-Wobsolete]
+    `callback: MACRO` is deprecated; use `MACRO callback`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(11) -> macros/scripts/maps.asm(30): [-Wobsolete]
+    `def_warp_events: MACRO` is deprecated; use `MACRO def_warp_events`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(11) -> macros/scripts/maps.asm(36): [-Wobsolete]
+    `warp_event: MACRO` is deprecated; use `MACRO warp_event`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(11) -> macros/scripts/maps.asm(44): [-Wobsolete]
+    `def_coord_events: MACRO` is deprecated; use `MACRO def_coord_events`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(11) -> macros/scripts/maps.asm(50): [-Wobsolete]
+    `coord_event: MACRO` is deprecated; use `MACRO coord_event`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(11) -> macros/scripts/maps.asm(58): [-Wobsolete]
+    `def_bg_events: MACRO` is deprecated; use `MACRO def_bg_events`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(11) -> macros/scripts/maps.asm(64): [-Wobsolete]
+    `bg_event: MACRO` is deprecated; use `MACRO bg_event`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(11) -> macros/scripts/maps.asm(80): [-Wobsolete]
+    `def_object_events: MACRO` is deprecated; use `MACRO def_object_events`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(11) -> macros/scripts/maps.asm(88): [-Wobsolete]
+    `object_event: MACRO` is deprecated; use `MACRO object_event`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(11) -> macros/scripts/maps.asm(113): [-Wobsolete]
+    `itemball_event: MACRO` is deprecated; use `MACRO itemball_event`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(11) -> macros/scripts/maps.asm(117): [-Wobsolete]
+    `keyitemball_event: MACRO` is deprecated; use `MACRO keyitemball_event`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(11) -> macros/scripts/maps.asm(121): [-Wobsolete]
+    `tmhmball_event: MACRO` is deprecated; use `MACRO tmhmball_event`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(11) -> macros/scripts/maps.asm(125): [-Wobsolete]
+    `cuttree_event: MACRO` is deprecated; use `MACRO cuttree_event`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(11) -> macros/scripts/maps.asm(129): [-Wobsolete]
+    `fruittree_event: MACRO` is deprecated; use `MACRO fruittree_event`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(11) -> macros/scripts/maps.asm(137): [-Wobsolete]
+    `strengthboulder_event: MACRO` is deprecated; use `MACRO strengthboulder_event`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(11) -> macros/scripts/maps.asm(145): [-Wobsolete]
+    `smashrock_event: MACRO` is deprecated; use `MACRO smashrock_event`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(11) -> macros/scripts/maps.asm(153): [-Wobsolete]
+    `pokemon_event: MACRO` is deprecated; use `MACRO pokemon_event`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(11) -> macros/scripts/maps.asm(157): [-Wobsolete]
+    `pc_nurse_event: MACRO` is deprecated; use `MACRO pc_nurse_event`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(11) -> macros/scripts/maps.asm(161): [-Wobsolete]
+    `mart_clerk_event: MACRO` is deprecated; use `MACRO mart_clerk_event`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(11) -> macros/scripts/maps.asm(166): [-Wobsolete]
+    `trainer: MACRO` is deprecated; use `MACRO trainer`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(11) -> macros/scripts/maps.asm(173): [-Wobsolete]
+    `generictrainer: MACRO` is deprecated; use `MACRO generictrainer`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(11) -> macros/scripts/maps.asm(181): [-Wobsolete]
+    `elevfloor: MACRO` is deprecated; use `MACRO elevfloor`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(11) -> macros/scripts/maps.asm(186): [-Wobsolete]
+    `stonetable: MACRO` is deprecated; use `MACRO stonetable`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(5): [-Wobsolete]
+    `scall: MACRO` is deprecated; use `MACRO scall`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(11): [-Wobsolete]
+    `farscall: MACRO` is deprecated; use `MACRO farscall`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(17): [-Wobsolete]
+    `memcall: MACRO` is deprecated; use `MACRO memcall`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(23): [-Wobsolete]
+    `sjump: MACRO` is deprecated; use `MACRO sjump`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(29): [-Wobsolete]
+    `farsjump: MACRO` is deprecated; use `MACRO farsjump`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(35): [-Wobsolete]
+    `memjump: MACRO` is deprecated; use `MACRO memjump`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(41): [-Wobsolete]
+    `ifequal: MACRO` is deprecated; use `MACRO ifequal`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(48): [-Wobsolete]
+    `ifnotequal: MACRO` is deprecated; use `MACRO ifnotequal`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(55): [-Wobsolete]
+    `iffalse: MACRO` is deprecated; use `MACRO iffalse`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(61): [-Wobsolete]
+    `iftrue: MACRO` is deprecated; use `MACRO iftrue`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(67): [-Wobsolete]
+    `ifgreater: MACRO` is deprecated; use `MACRO ifgreater`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(74): [-Wobsolete]
+    `ifless: MACRO` is deprecated; use `MACRO ifless`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(81): [-Wobsolete]
+    `jumpstd: MACRO` is deprecated; use `MACRO jumpstd`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(87): [-Wobsolete]
+    `callstd: MACRO` is deprecated; use `MACRO callstd`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(93): [-Wobsolete]
+    `callasm: MACRO` is deprecated; use `MACRO callasm`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(99): [-Wobsolete]
+    `special: MACRO` is deprecated; use `MACRO special`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(105): [-Wobsolete]
+    `memcallasm: MACRO` is deprecated; use `MACRO memcallasm`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(111): [-Wobsolete]
+    `checkmapscene: MACRO` is deprecated; use `MACRO checkmapscene`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(117): [-Wobsolete]
+    `setmapscene: MACRO` is deprecated; use `MACRO setmapscene`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(124): [-Wobsolete]
+    `checkscene: MACRO` is deprecated; use `MACRO checkscene`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(129): [-Wobsolete]
+    `setscene: MACRO` is deprecated; use `MACRO setscene`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(135): [-Wobsolete]
+    `setval: MACRO` is deprecated; use `MACRO setval`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(141): [-Wobsolete]
+    `addval: MACRO` is deprecated; use `MACRO addval`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(147): [-Wobsolete]
+    `random: MACRO` is deprecated; use `MACRO random`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(153): [-Wobsolete]
+    `readmem: MACRO` is deprecated; use `MACRO readmem`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(159): [-Wobsolete]
+    `writemem: MACRO` is deprecated; use `MACRO writemem`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(165): [-Wobsolete]
+    `loadmem: MACRO` is deprecated; use `MACRO loadmem`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(172): [-Wobsolete]
+    `readvar: MACRO` is deprecated; use `MACRO readvar`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(178): [-Wobsolete]
+    `writevar: MACRO` is deprecated; use `MACRO writevar`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(184): [-Wobsolete]
+    `loadvar: MACRO` is deprecated; use `MACRO loadvar`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(191): [-Wobsolete]
+    `giveitem: MACRO` is deprecated; use `MACRO giveitem`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(202): [-Wobsolete]
+    `takeitem: MACRO` is deprecated; use `MACRO takeitem`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(213): [-Wobsolete]
+    `checkitem: MACRO` is deprecated; use `MACRO checkitem`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(219): [-Wobsolete]
+    `givemoney: MACRO` is deprecated; use `MACRO givemoney`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(226): [-Wobsolete]
+    `takemoney: MACRO` is deprecated; use `MACRO takemoney`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(233): [-Wobsolete]
+    `checkmoney: MACRO` is deprecated; use `MACRO checkmoney`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(240): [-Wobsolete]
+    `givecoins: MACRO` is deprecated; use `MACRO givecoins`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(246): [-Wobsolete]
+    `takecoins: MACRO` is deprecated; use `MACRO takecoins`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(252): [-Wobsolete]
+    `checkcoins: MACRO` is deprecated; use `MACRO checkcoins`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(258): [-Wobsolete]
+    `addcellnum: MACRO` is deprecated; use `MACRO addcellnum`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(264): [-Wobsolete]
+    `delcellnum: MACRO` is deprecated; use `MACRO delcellnum`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(270): [-Wobsolete]
+    `checkcellnum: MACRO` is deprecated; use `MACRO checkcellnum`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(276): [-Wobsolete]
+    `checktime: MACRO` is deprecated; use `MACRO checktime`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(282): [-Wobsolete]
+    `checkpoke: MACRO` is deprecated; use `MACRO checkpoke`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(288): [-Wobsolete]
+    `givepoke: MACRO` is deprecated; use `MACRO givepoke`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(325): [-Wobsolete]
+    `giveegg: MACRO` is deprecated; use `MACRO giveegg`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(335): [-Wobsolete]
+    `givepokemail: MACRO` is deprecated; use `MACRO givepokemail`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(341): [-Wobsolete]
+    `checkpokemail: MACRO` is deprecated; use `MACRO checkpokemail`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(347): [-Wobsolete]
+    `checkevent: MACRO` is deprecated; use `MACRO checkevent`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(353): [-Wobsolete]
+    `clearevent: MACRO` is deprecated; use `MACRO clearevent`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(359): [-Wobsolete]
+    `setevent: MACRO` is deprecated; use `MACRO setevent`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(365): [-Wobsolete]
+    `checkflag: MACRO` is deprecated; use `MACRO checkflag`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(371): [-Wobsolete]
+    `clearflag: MACRO` is deprecated; use `MACRO clearflag`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(377): [-Wobsolete]
+    `setflag: MACRO` is deprecated; use `MACRO setflag`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(383): [-Wobsolete]
+    `wildon: MACRO` is deprecated; use `MACRO wildon`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(388): [-Wobsolete]
+    `wildoff: MACRO` is deprecated; use `MACRO wildoff`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(393): [-Wobsolete]
+    `warpmod: MACRO` is deprecated; use `MACRO warpmod`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(400): [-Wobsolete]
+    `blackoutmod: MACRO` is deprecated; use `MACRO blackoutmod`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(406): [-Wobsolete]
+    `warp: MACRO` is deprecated; use `MACRO warp`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(414): [-Wobsolete]
+    `getmoney: MACRO` is deprecated; use `MACRO getmoney`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(421): [-Wobsolete]
+    `getcoins: MACRO` is deprecated; use `MACRO getcoins`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(427): [-Wobsolete]
+    `getnum: MACRO` is deprecated; use `MACRO getnum`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(433): [-Wobsolete]
+    `getmonname: MACRO` is deprecated; use `MACRO getmonname`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(440): [-Wobsolete]
+    `getitemname: MACRO` is deprecated; use `MACRO getitemname`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(447): [-Wobsolete]
+    `getcurlandmarkname: MACRO` is deprecated; use `MACRO getcurlandmarkname`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(453): [-Wobsolete]
+    `gettrainername: MACRO` is deprecated; use `MACRO gettrainername`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(461): [-Wobsolete]
+    `getstring: MACRO` is deprecated; use `MACRO getstring`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(468): [-Wobsolete]
+    `itemnotify: MACRO` is deprecated; use `MACRO itemnotify`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(473): [-Wobsolete]
+    `pocketisfull: MACRO` is deprecated; use `MACRO pocketisfull`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(478): [-Wobsolete]
+    `opentext: MACRO` is deprecated; use `MACRO opentext`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(483): [-Wobsolete]
+    `refreshscreen: MACRO` is deprecated; use `MACRO refreshscreen`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(488): [-Wobsolete]
+    `closetext: MACRO` is deprecated; use `MACRO closetext`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(493): [-Wobsolete]
+    `farwritetext: MACRO` is deprecated; use `MACRO farwritetext`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(499): [-Wobsolete]
+    `writetext: MACRO` is deprecated; use `MACRO writetext`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(505): [-Wobsolete]
+    `repeattext: MACRO` is deprecated; use `MACRO repeattext`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(512): [-Wobsolete]
+    `yesorno: MACRO` is deprecated; use `MACRO yesorno`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(517): [-Wobsolete]
+    `loadmenu: MACRO` is deprecated; use `MACRO loadmenu`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(523): [-Wobsolete]
+    `closewindow: MACRO` is deprecated; use `MACRO closewindow`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(528): [-Wobsolete]
+    `jumptextfaceplayer: MACRO` is deprecated; use `MACRO jumptextfaceplayer`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(534): [-Wobsolete]
+    `farjumptext: MACRO` is deprecated; use `MACRO farjumptext`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(540): [-Wobsolete]
+    `jumptext: MACRO` is deprecated; use `MACRO jumptext`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(546): [-Wobsolete]
+    `waitbutton: MACRO` is deprecated; use `MACRO waitbutton`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(551): [-Wobsolete]
+    `promptbutton: MACRO` is deprecated; use `MACRO promptbutton`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(556): [-Wobsolete]
+    `pokepic: MACRO` is deprecated; use `MACRO pokepic`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(569): [-Wobsolete]
+    `closepokepic: MACRO` is deprecated; use `MACRO closepokepic`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(574): [-Wobsolete]
+    `_2dmenu: MACRO` is deprecated; use `MACRO _2dmenu`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(579): [-Wobsolete]
+    `verticalmenu: MACRO` is deprecated; use `MACRO verticalmenu`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(584): [-Wobsolete]
+    `randomwildmon: MACRO` is deprecated; use `MACRO randomwildmon`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(589): [-Wobsolete]
+    `loadtemptrainer: MACRO` is deprecated; use `MACRO loadtemptrainer`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(594): [-Wobsolete]
+    `loadwildmon: MACRO` is deprecated; use `MACRO loadwildmon`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(607): [-Wobsolete]
+    `loadtrainer: MACRO` is deprecated; use `MACRO loadtrainer`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(614): [-Wobsolete]
+    `startbattle: MACRO` is deprecated; use `MACRO startbattle`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(619): [-Wobsolete]
+    `reloadmapafterbattle: MACRO` is deprecated; use `MACRO reloadmapafterbattle`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(624): [-Wobsolete]
+    `catchtutorial: MACRO` is deprecated; use `MACRO catchtutorial`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(630): [-Wobsolete]
+    `trainertext: MACRO` is deprecated; use `MACRO trainertext`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(636): [-Wobsolete]
+    `trainerflagaction: MACRO` is deprecated; use `MACRO trainerflagaction`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(642): [-Wobsolete]
+    `winlosstext: MACRO` is deprecated; use `MACRO winlosstext`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(649): [-Wobsolete]
+    `scripttalkafter: MACRO` is deprecated; use `MACRO scripttalkafter`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(654): [-Wobsolete]
+    `endifjustbattled: MACRO` is deprecated; use `MACRO endifjustbattled`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(659): [-Wobsolete]
+    `checkjustbattled: MACRO` is deprecated; use `MACRO checkjustbattled`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(664): [-Wobsolete]
+    `setlasttalked: MACRO` is deprecated; use `MACRO setlasttalked`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(670): [-Wobsolete]
+    `applymovement: MACRO` is deprecated; use `MACRO applymovement`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(677): [-Wobsolete]
+    `applymovementlasttalked: MACRO` is deprecated; use `MACRO applymovementlasttalked`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(683): [-Wobsolete]
+    `faceplayer: MACRO` is deprecated; use `MACRO faceplayer`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(688): [-Wobsolete]
+    `faceobject: MACRO` is deprecated; use `MACRO faceobject`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(695): [-Wobsolete]
+    `variablesprite: MACRO` is deprecated; use `MACRO variablesprite`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(702): [-Wobsolete]
+    `disappear: MACRO` is deprecated; use `MACRO disappear`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(708): [-Wobsolete]
+    `appear: MACRO` is deprecated; use `MACRO appear`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(714): [-Wobsolete]
+    `follow: MACRO` is deprecated; use `MACRO follow`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(721): [-Wobsolete]
+    `stopfollow: MACRO` is deprecated; use `MACRO stopfollow`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(726): [-Wobsolete]
+    `moveobject: MACRO` is deprecated; use `MACRO moveobject`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(734): [-Wobsolete]
+    `writeobjectxy: MACRO` is deprecated; use `MACRO writeobjectxy`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(740): [-Wobsolete]
+    `loademote: MACRO` is deprecated; use `MACRO loademote`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(746): [-Wobsolete]
+    `showemote: MACRO` is deprecated; use `MACRO showemote`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(754): [-Wobsolete]
+    `turnobject: MACRO` is deprecated; use `MACRO turnobject`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(761): [-Wobsolete]
+    `follownotexact: MACRO` is deprecated; use `MACRO follownotexact`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(768): [-Wobsolete]
+    `earthquake: MACRO` is deprecated; use `MACRO earthquake`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(774): [-Wobsolete]
+    `changemapblocks: MACRO` is deprecated; use `MACRO changemapblocks`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(780): [-Wobsolete]
+    `changeblock: MACRO` is deprecated; use `MACRO changeblock`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(788): [-Wobsolete]
+    `reloadmap: MACRO` is deprecated; use `MACRO reloadmap`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(793): [-Wobsolete]
+    `reloadmappart: MACRO` is deprecated; use `MACRO reloadmappart`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(798): [-Wobsolete]
+    `usestonetable: MACRO` is deprecated; use `MACRO usestonetable`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(804): [-Wobsolete]
+    `playmusic: MACRO` is deprecated; use `MACRO playmusic`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(810): [-Wobsolete]
+    `encountermusic: MACRO` is deprecated; use `MACRO encountermusic`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(815): [-Wobsolete]
+    `musicfadeout: MACRO` is deprecated; use `MACRO musicfadeout`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(822): [-Wobsolete]
+    `playmapmusic: MACRO` is deprecated; use `MACRO playmapmusic`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(827): [-Wobsolete]
+    `dontrestartmapmusic: MACRO` is deprecated; use `MACRO dontrestartmapmusic`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(832): [-Wobsolete]
+    `cry: MACRO` is deprecated; use `MACRO cry`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(838): [-Wobsolete]
+    `playsound: MACRO` is deprecated; use `MACRO playsound`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(844): [-Wobsolete]
+    `waitsfx: MACRO` is deprecated; use `MACRO waitsfx`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(849): [-Wobsolete]
+    `warpsound: MACRO` is deprecated; use `MACRO warpsound`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(854): [-Wobsolete]
+    `specialsound: MACRO` is deprecated; use `MACRO specialsound`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(859): [-Wobsolete]
+    `autoinput: MACRO` is deprecated; use `MACRO autoinput`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(865): [-Wobsolete]
+    `newloadmap: MACRO` is deprecated; use `MACRO newloadmap`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(871): [-Wobsolete]
+    `pause: MACRO` is deprecated; use `MACRO pause`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(877): [-Wobsolete]
+    `deactivatefacing: MACRO` is deprecated; use `MACRO deactivatefacing`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(883): [-Wobsolete]
+    `sdefer: MACRO` is deprecated; use `MACRO sdefer`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(889): [-Wobsolete]
+    `warpcheck: MACRO` is deprecated; use `MACRO warpcheck`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(894): [-Wobsolete]
+    `stopandsjump: MACRO` is deprecated; use `MACRO stopandsjump`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(900): [-Wobsolete]
+    `endcallback: MACRO` is deprecated; use `MACRO endcallback`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(905): [-Wobsolete]
+    `end: MACRO` is deprecated; use `MACRO end`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(910): [-Wobsolete]
+    `reloadend: MACRO` is deprecated; use `MACRO reloadend`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(916): [-Wobsolete]
+    `endall: MACRO` is deprecated; use `MACRO endall`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(921): [-Wobsolete]
+    `pokemart: MACRO` is deprecated; use `MACRO pokemart`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(928): [-Wobsolete]
+    `elevator: MACRO` is deprecated; use `MACRO elevator`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(934): [-Wobsolete]
+    `trade: MACRO` is deprecated; use `MACRO trade`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(940): [-Wobsolete]
+    `askforphonenumber: MACRO` is deprecated; use `MACRO askforphonenumber`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(946): [-Wobsolete]
+    `hangup: MACRO` is deprecated; use `MACRO hangup`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(951): [-Wobsolete]
+    `describedecoration: MACRO` is deprecated; use `MACRO describedecoration`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(957): [-Wobsolete]
+    `fruittree: MACRO` is deprecated; use `MACRO fruittree`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(964): [-Wobsolete]
+    `specialphonecall: MACRO` is deprecated; use `MACRO specialphonecall`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(970): [-Wobsolete]
+    `checkphonecall: MACRO` is deprecated; use `MACRO checkphonecall`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(975): [-Wobsolete]
+    `verbosegiveitem: MACRO` is deprecated; use `MACRO verbosegiveitem`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(986): [-Wobsolete]
+    `verbosegiveitemvar: MACRO` is deprecated; use `MACRO verbosegiveitemvar`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(993): [-Wobsolete]
+    `swarm: MACRO` is deprecated; use `MACRO swarm`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(1000): [-Wobsolete]
+    `halloffame: MACRO` is deprecated; use `MACRO halloffame`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(1005): [-Wobsolete]
+    `credits: MACRO` is deprecated; use `MACRO credits`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(1010): [-Wobsolete]
+    `warpfacing: MACRO` is deprecated; use `MACRO warpfacing`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(1019): [-Wobsolete]
+    `battletowertext: MACRO` is deprecated; use `MACRO battletowertext`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(1025): [-Wobsolete]
+    `getlandmarkname: MACRO` is deprecated; use `MACRO getlandmarkname`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(1032): [-Wobsolete]
+    `gettrainerclassname: MACRO` is deprecated; use `MACRO gettrainerclassname`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(1039): [-Wobsolete]
+    `getname: MACRO` is deprecated; use `MACRO getname`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(1047): [-Wobsolete]
+    `wait: MACRO` is deprecated; use `MACRO wait`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(1053): [-Wobsolete]
+    `checksave: MACRO` is deprecated; use `MACRO checksave`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(1058): [-Wobsolete]
+    `countseencaught: MACRO` is deprecated; use `MACRO countseencaught`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(1063): [-Wobsolete]
+    `trainerpic: MACRO` is deprecated; use `MACRO trainerpic`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(1069): [-Wobsolete]
+    `givetmhm: MACRO` is deprecated; use `MACRO givetmhm`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(1075): [-Wobsolete]
+    `checktmhm: MACRO` is deprecated; use `MACRO checktmhm`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(1081): [-Wobsolete]
+    `verbosegivetmhm: MACRO` is deprecated; use `MACRO verbosegivetmhm`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(1087): [-Wobsolete]
+    `tmhmnotify: MACRO` is deprecated; use `MACRO tmhmnotify`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(1092): [-Wobsolete]
+    `gettmhmname: MACRO` is deprecated; use `MACRO gettmhmname`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(1099): [-Wobsolete]
+    `checkdarkness: MACRO` is deprecated; use `MACRO checkdarkness`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(1104): [-Wobsolete]
+    `checkunits: MACRO` is deprecated; use `MACRO checkunits`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(1109): [-Wobsolete]
+    `unowntypeface: MACRO` is deprecated; use `MACRO unowntypeface`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(1114): [-Wobsolete]
+    `restoretypeface: MACRO` is deprecated; use `MACRO restoretypeface`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(1119): [-Wobsolete]
+    `jumpstashedtext: MACRO` is deprecated; use `MACRO jumpstashedtext`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(1124): [-Wobsolete]
+    `jumpopenedtext: MACRO` is deprecated; use `MACRO jumpopenedtext`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(1130): [-Wobsolete]
+    `iftrue_jumptext: MACRO` is deprecated; use `MACRO iftrue_jumptext`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(1136): [-Wobsolete]
+    `iffalse_jumptext: MACRO` is deprecated; use `MACRO iffalse_jumptext`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(1142): [-Wobsolete]
+    `iftrue_jumptextfaceplayer: MACRO` is deprecated; use `MACRO iftrue_jumptextfaceplayer`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(1148): [-Wobsolete]
+    `iffalse_jumptextfaceplayer: MACRO` is deprecated; use `MACRO iffalse_jumptextfaceplayer`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(1154): [-Wobsolete]
+    `iftrue_jumpopenedtext: MACRO` is deprecated; use `MACRO iftrue_jumpopenedtext`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(1160): [-Wobsolete]
+    `iffalse_jumpopenedtext: MACRO` is deprecated; use `MACRO iffalse_jumpopenedtext`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(1166): [-Wobsolete]
+    `writethistext: MACRO` is deprecated; use `MACRO writethistext`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(1171): [-Wobsolete]
+    `jumpthistext: MACRO` is deprecated; use `MACRO jumpthistext`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(1176): [-Wobsolete]
+    `jumpthistextfaceplayer: MACRO` is deprecated; use `MACRO jumpthistextfaceplayer`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(1181): [-Wobsolete]
+    `jumpthisopenedtext: MACRO` is deprecated; use `MACRO jumpthisopenedtext`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(1186): [-Wobsolete]
+    `showtext: MACRO` is deprecated; use `MACRO showtext`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(1192): [-Wobsolete]
+    `showtextfaceplayer: MACRO` is deprecated; use `MACRO showtextfaceplayer`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(1198): [-Wobsolete]
+    `applyonemovement: MACRO` is deprecated; use `MACRO applyonemovement`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(1206): [-Wobsolete]
+    `showcrytext: MACRO` is deprecated; use `MACRO showcrytext`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(1213): [-Wobsolete]
+    `endtext: MACRO` is deprecated; use `MACRO endtext`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(1218): [-Wobsolete]
+    `waitendtext: MACRO` is deprecated; use `MACRO waitendtext`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(1223): [-Wobsolete]
+    `iftrue_endtext: MACRO` is deprecated; use `MACRO iftrue_endtext`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(1228): [-Wobsolete]
+    `iffalse_endtext: MACRO` is deprecated; use `MACRO iffalse_endtext`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(1233): [-Wobsolete]
+    `loadgrottomon: MACRO` is deprecated; use `MACRO loadgrottomon`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(1238): [-Wobsolete]
+    `giveapricorn: MACRO` is deprecated; use `MACRO giveapricorn`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(1249): [-Wobsolete]
+    `paintingpic: MACRO` is deprecated; use `MACRO paintingpic`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(1255): [-Wobsolete]
+    `checkegg: MACRO` is deprecated; use `MACRO checkegg`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(1259): [-Wobsolete]
+    `callthisasm: MACRO` is deprecated; use `MACRO callthisasm`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(1269): [-Wobsolete]
+    `givekeyitem: MACRO` is deprecated; use `MACRO givekeyitem`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(1275): [-Wobsolete]
+    `checkkeyitem: MACRO` is deprecated; use `MACRO checkkeyitem`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(1281): [-Wobsolete]
+    `takekeyitem: MACRO` is deprecated; use `MACRO takekeyitem`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(1287): [-Wobsolete]
+    `verbosegivekeyitem: MACRO` is deprecated; use `MACRO verbosegivekeyitem`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(1293): [-Wobsolete]
+    `keyitemnotify: MACRO` is deprecated; use `MACRO keyitemnotify`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(1298): [-Wobsolete]
+    `givebp: MACRO` is deprecated; use `MACRO givebp`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(1304): [-Wobsolete]
+    `takebp: MACRO` is deprecated; use `MACRO takebp`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(12) -> macros/scripts/events.asm(1310): [-Wobsolete]
+    `checkbp: MACRO` is deprecated; use `MACRO checkbp`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(13) -> macros/scripts/text.asm(12): [-Wobsolete]
+    `text_ram: MACRO` is deprecated; use `MACRO text_ram`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(13) -> macros/scripts/text.asm(17): [-Wobsolete]
+    `text_promptbutton: MACRO` is deprecated; use `MACRO text_promptbutton`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(13) -> macros/scripts/text.asm(21): [-Wobsolete]
+    `text_asm: MACRO` is deprecated; use `MACRO text_asm`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(13) -> macros/scripts/text.asm(25): [-Wobsolete]
+    `text_decimal: MACRO` is deprecated; use `MACRO text_decimal`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(13) -> macros/scripts/text.asm(31): [-Wobsolete]
+    `text_pause: MACRO` is deprecated; use `MACRO text_pause`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(13) -> macros/scripts/text.asm(35): [-Wobsolete]
+    `text_sound: MACRO` is deprecated; use `MACRO text_sound`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(13) -> macros/scripts/text.asm(40): [-Wobsolete]
+    `text_today: MACRO` is deprecated; use `MACRO text_today`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(13) -> macros/scripts/text.asm(44): [-Wobsolete]
+    `text_far: MACRO` is deprecated; use `MACRO text_far`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(13) -> macros/scripts/text.asm(50): [-Wobsolete]
+    `text_end: MACRO` is deprecated; use `MACRO text_end`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(4): [-Wobsolete]
+    `turn_head_down: MACRO` is deprecated; use `MACRO turn_head_down`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(9): [-Wobsolete]
+    `turn_head_up: MACRO` is deprecated; use `MACRO turn_head_up`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(14): [-Wobsolete]
+    `turn_head_left: MACRO` is deprecated; use `MACRO turn_head_left`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(19): [-Wobsolete]
+    `turn_head_right: MACRO` is deprecated; use `MACRO turn_head_right`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(24): [-Wobsolete]
+    `turn_step_down: MACRO` is deprecated; use `MACRO turn_step_down`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(29): [-Wobsolete]
+    `turn_step_up: MACRO` is deprecated; use `MACRO turn_step_up`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(34): [-Wobsolete]
+    `turn_step_left: MACRO` is deprecated; use `MACRO turn_step_left`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(39): [-Wobsolete]
+    `turn_step_right: MACRO` is deprecated; use `MACRO turn_step_right`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(44): [-Wobsolete]
+    `slow_step_down: MACRO` is deprecated; use `MACRO slow_step_down`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(49): [-Wobsolete]
+    `slow_step_up: MACRO` is deprecated; use `MACRO slow_step_up`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(54): [-Wobsolete]
+    `slow_step_left: MACRO` is deprecated; use `MACRO slow_step_left`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(59): [-Wobsolete]
+    `slow_step_right: MACRO` is deprecated; use `MACRO slow_step_right`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(64): [-Wobsolete]
+    `step_down: MACRO` is deprecated; use `MACRO step_down`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(69): [-Wobsolete]
+    `step_up: MACRO` is deprecated; use `MACRO step_up`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(74): [-Wobsolete]
+    `step_left: MACRO` is deprecated; use `MACRO step_left`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(79): [-Wobsolete]
+    `step_right: MACRO` is deprecated; use `MACRO step_right`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(84): [-Wobsolete]
+    `big_step_down: MACRO` is deprecated; use `MACRO big_step_down`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(89): [-Wobsolete]
+    `big_step_up: MACRO` is deprecated; use `MACRO big_step_up`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(94): [-Wobsolete]
+    `big_step_left: MACRO` is deprecated; use `MACRO big_step_left`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(99): [-Wobsolete]
+    `big_step_right: MACRO` is deprecated; use `MACRO big_step_right`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(104): [-Wobsolete]
+    `slow_slide_step_down: MACRO` is deprecated; use `MACRO slow_slide_step_down`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(109): [-Wobsolete]
+    `slow_slide_step_up: MACRO` is deprecated; use `MACRO slow_slide_step_up`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(114): [-Wobsolete]
+    `slow_slide_step_left: MACRO` is deprecated; use `MACRO slow_slide_step_left`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(119): [-Wobsolete]
+    `slow_slide_step_right: MACRO` is deprecated; use `MACRO slow_slide_step_right`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(124): [-Wobsolete]
+    `slide_step_down: MACRO` is deprecated; use `MACRO slide_step_down`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(129): [-Wobsolete]
+    `slide_step_up: MACRO` is deprecated; use `MACRO slide_step_up`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(134): [-Wobsolete]
+    `slide_step_left: MACRO` is deprecated; use `MACRO slide_step_left`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(139): [-Wobsolete]
+    `slide_step_right: MACRO` is deprecated; use `MACRO slide_step_right`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(144): [-Wobsolete]
+    `fast_slide_step_down: MACRO` is deprecated; use `MACRO fast_slide_step_down`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(149): [-Wobsolete]
+    `fast_slide_step_up: MACRO` is deprecated; use `MACRO fast_slide_step_up`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(154): [-Wobsolete]
+    `fast_slide_step_left: MACRO` is deprecated; use `MACRO fast_slide_step_left`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(159): [-Wobsolete]
+    `fast_slide_step_right: MACRO` is deprecated; use `MACRO fast_slide_step_right`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(164): [-Wobsolete]
+    `turn_away_down: MACRO` is deprecated; use `MACRO turn_away_down`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(169): [-Wobsolete]
+    `turn_away_up: MACRO` is deprecated; use `MACRO turn_away_up`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(174): [-Wobsolete]
+    `turn_away_left: MACRO` is deprecated; use `MACRO turn_away_left`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(179): [-Wobsolete]
+    `turn_away_right: MACRO` is deprecated; use `MACRO turn_away_right`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(184): [-Wobsolete]
+    `turn_in_down: MACRO` is deprecated; use `MACRO turn_in_down`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(189): [-Wobsolete]
+    `turn_in_up: MACRO` is deprecated; use `MACRO turn_in_up`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(194): [-Wobsolete]
+    `turn_in_left: MACRO` is deprecated; use `MACRO turn_in_left`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(199): [-Wobsolete]
+    `turn_in_right: MACRO` is deprecated; use `MACRO turn_in_right`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(204): [-Wobsolete]
+    `turn_waterfall_down: MACRO` is deprecated; use `MACRO turn_waterfall_down`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(209): [-Wobsolete]
+    `turn_waterfall_up: MACRO` is deprecated; use `MACRO turn_waterfall_up`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(214): [-Wobsolete]
+    `turn_waterfall_left: MACRO` is deprecated; use `MACRO turn_waterfall_left`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(219): [-Wobsolete]
+    `turn_waterfall_right: MACRO` is deprecated; use `MACRO turn_waterfall_right`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(224): [-Wobsolete]
+    `slow_jump_step_down: MACRO` is deprecated; use `MACRO slow_jump_step_down`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(229): [-Wobsolete]
+    `slow_jump_step_up: MACRO` is deprecated; use `MACRO slow_jump_step_up`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(234): [-Wobsolete]
+    `slow_jump_step_left: MACRO` is deprecated; use `MACRO slow_jump_step_left`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(239): [-Wobsolete]
+    `slow_jump_step_right: MACRO` is deprecated; use `MACRO slow_jump_step_right`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(244): [-Wobsolete]
+    `jump_step_down: MACRO` is deprecated; use `MACRO jump_step_down`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(249): [-Wobsolete]
+    `jump_step_up: MACRO` is deprecated; use `MACRO jump_step_up`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(254): [-Wobsolete]
+    `jump_step_left: MACRO` is deprecated; use `MACRO jump_step_left`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(259): [-Wobsolete]
+    `jump_step_right: MACRO` is deprecated; use `MACRO jump_step_right`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(264): [-Wobsolete]
+    `fast_jump_step_down: MACRO` is deprecated; use `MACRO fast_jump_step_down`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(269): [-Wobsolete]
+    `fast_jump_step_up: MACRO` is deprecated; use `MACRO fast_jump_step_up`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(274): [-Wobsolete]
+    `fast_jump_step_left: MACRO` is deprecated; use `MACRO fast_jump_step_left`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(279): [-Wobsolete]
+    `fast_jump_step_right: MACRO` is deprecated; use `MACRO fast_jump_step_right`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(284): [-Wobsolete]
+    `remove_sliding: MACRO` is deprecated; use `MACRO remove_sliding`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(289): [-Wobsolete]
+    `set_sliding: MACRO` is deprecated; use `MACRO set_sliding`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(294): [-Wobsolete]
+    `remove_fixed_facing: MACRO` is deprecated; use `MACRO remove_fixed_facing`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(299): [-Wobsolete]
+    `fix_facing: MACRO` is deprecated; use `MACRO fix_facing`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(304): [-Wobsolete]
+    `show_object: MACRO` is deprecated; use `MACRO show_object`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(309): [-Wobsolete]
+    `hide_object: MACRO` is deprecated; use `MACRO hide_object`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(314): [-Wobsolete]
+    `step_sleep_1: MACRO` is deprecated; use `MACRO step_sleep_1`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(319): [-Wobsolete]
+    `step_sleep_2: MACRO` is deprecated; use `MACRO step_sleep_2`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(324): [-Wobsolete]
+    `step_sleep_3: MACRO` is deprecated; use `MACRO step_sleep_3`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(329): [-Wobsolete]
+    `step_sleep_4: MACRO` is deprecated; use `MACRO step_sleep_4`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(334): [-Wobsolete]
+    `step_sleep_5: MACRO` is deprecated; use `MACRO step_sleep_5`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(339): [-Wobsolete]
+    `step_sleep_6: MACRO` is deprecated; use `MACRO step_sleep_6`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(344): [-Wobsolete]
+    `step_sleep_7: MACRO` is deprecated; use `MACRO step_sleep_7`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(349): [-Wobsolete]
+    `step_sleep_8: MACRO` is deprecated; use `MACRO step_sleep_8`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(354): [-Wobsolete]
+    `step_sleep: MACRO` is deprecated; use `MACRO step_sleep`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(360): [-Wobsolete]
+    `step_end: MACRO` is deprecated; use `MACRO step_end`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(365): [-Wobsolete]
+    `step_resume: MACRO` is deprecated; use `MACRO step_resume`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(370): [-Wobsolete]
+    `remove_object: MACRO` is deprecated; use `MACRO remove_object`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(375): [-Wobsolete]
+    `step_loop: MACRO` is deprecated; use `MACRO step_loop`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(380): [-Wobsolete]
+    `step_4b: MACRO` is deprecated; use `MACRO step_4b`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(385): [-Wobsolete]
+    `teleport_from: MACRO` is deprecated; use `MACRO teleport_from`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(390): [-Wobsolete]
+    `teleport_to: MACRO` is deprecated; use `MACRO teleport_to`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(395): [-Wobsolete]
+    `skyfall: MACRO` is deprecated; use `MACRO skyfall`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(400): [-Wobsolete]
+    `step_dig: MACRO` is deprecated; use `MACRO step_dig`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(406): [-Wobsolete]
+    `step_bump: MACRO` is deprecated; use `MACRO step_bump`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(411): [-Wobsolete]
+    `fish_got_bite: MACRO` is deprecated; use `MACRO fish_got_bite`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(416): [-Wobsolete]
+    `fish_cast_rod: MACRO` is deprecated; use `MACRO fish_cast_rod`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(421): [-Wobsolete]
+    `hide_emote: MACRO` is deprecated; use `MACRO hide_emote`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(426): [-Wobsolete]
+    `show_emote: MACRO` is deprecated; use `MACRO show_emote`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(431): [-Wobsolete]
+    `step_shake: MACRO` is deprecated; use `MACRO step_shake`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(437): [-Wobsolete]
+    `tree_shake: MACRO` is deprecated; use `MACRO tree_shake`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(442): [-Wobsolete]
+    `rock_smash: MACRO` is deprecated; use `MACRO rock_smash`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(448): [-Wobsolete]
+    `return_dig: MACRO` is deprecated; use `MACRO return_dig`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(454): [-Wobsolete]
+    `skyfall_top: MACRO` is deprecated; use `MACRO skyfall_top`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(459): [-Wobsolete]
+    `run_step_down: MACRO` is deprecated; use `MACRO run_step_down`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(464): [-Wobsolete]
+    `run_step_up: MACRO` is deprecated; use `MACRO run_step_up`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(469): [-Wobsolete]
+    `run_step_left: MACRO` is deprecated; use `MACRO run_step_left`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(474): [-Wobsolete]
+    `run_step_right: MACRO` is deprecated; use `MACRO run_step_right`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(479): [-Wobsolete]
+    `fast_step_down: MACRO` is deprecated; use `MACRO fast_step_down`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(484): [-Wobsolete]
+    `fast_step_up: MACRO` is deprecated; use `MACRO fast_step_up`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(489): [-Wobsolete]
+    `fast_step_left: MACRO` is deprecated; use `MACRO fast_step_left`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(494): [-Wobsolete]
+    `fast_step_right: MACRO` is deprecated; use `MACRO fast_step_right`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(499): [-Wobsolete]
+    `stairs_step_down: MACRO` is deprecated; use `MACRO stairs_step_down`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(504): [-Wobsolete]
+    `stairs_step_up: MACRO` is deprecated; use `MACRO stairs_step_up`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(509): [-Wobsolete]
+    `stairs_step_left: MACRO` is deprecated; use `MACRO stairs_step_left`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(14) -> macros/scripts/movement.asm(514): [-Wobsolete]
+    `stairs_step_right: MACRO` is deprecated; use `MACRO stairs_step_right`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(15) -> macros/scripts/battle_anims.asm(5): [-Wobsolete]
+    `anim_wait: MACRO` is deprecated; use `MACRO anim_wait`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(15) -> macros/scripts/battle_anims.asm(11): [-Wobsolete]
+    `anim_statloop: MACRO` is deprecated; use `MACRO anim_statloop`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(15) -> macros/scripts/battle_anims.asm(17): [-Wobsolete]
+    `anim_obj: MACRO` is deprecated; use `MACRO anim_obj`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(15) -> macros/scripts/battle_anims.asm(32): [-Wobsolete]
+    `anim_1gfx: MACRO` is deprecated; use `MACRO anim_1gfx`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(15) -> macros/scripts/battle_anims.asm(38): [-Wobsolete]
+    `anim_2gfx: MACRO` is deprecated; use `MACRO anim_2gfx`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(15) -> macros/scripts/battle_anims.asm(45): [-Wobsolete]
+    `anim_3gfx: MACRO` is deprecated; use `MACRO anim_3gfx`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(15) -> macros/scripts/battle_anims.asm(53): [-Wobsolete]
+    `anim_4gfx: MACRO` is deprecated; use `MACRO anim_4gfx`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(15) -> macros/scripts/battle_anims.asm(62): [-Wobsolete]
+    `anim_5gfx: MACRO` is deprecated; use `MACRO anim_5gfx`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(15) -> macros/scripts/battle_anims.asm(72): [-Wobsolete]
+    `anim_incobj: MACRO` is deprecated; use `MACRO anim_incobj`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(15) -> macros/scripts/battle_anims.asm(78): [-Wobsolete]
+    `anim_setobj: MACRO` is deprecated; use `MACRO anim_setobj`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(15) -> macros/scripts/battle_anims.asm(85): [-Wobsolete]
+    `anim_incbgeffect: MACRO` is deprecated; use `MACRO anim_incbgeffect`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(15) -> macros/scripts/battle_anims.asm(91): [-Wobsolete]
+    `anim_enemyfeetobj: MACRO` is deprecated; use `MACRO anim_enemyfeetobj`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(15) -> macros/scripts/battle_anims.asm(96): [-Wobsolete]
+    `anim_playerheadobj: MACRO` is deprecated; use `MACRO anim_playerheadobj`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(15) -> macros/scripts/battle_anims.asm(101): [-Wobsolete]
+    `anim_checkpokeball: MACRO` is deprecated; use `MACRO anim_checkpokeball`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(15) -> macros/scripts/battle_anims.asm(106): [-Wobsolete]
+    `anim_transform: MACRO` is deprecated; use `MACRO anim_transform`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(15) -> macros/scripts/battle_anims.asm(111): [-Wobsolete]
+    `anim_raisesub: MACRO` is deprecated; use `MACRO anim_raisesub`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(15) -> macros/scripts/battle_anims.asm(116): [-Wobsolete]
+    `anim_dropsub: MACRO` is deprecated; use `MACRO anim_dropsub`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(15) -> macros/scripts/battle_anims.asm(121): [-Wobsolete]
+    `anim_resetobp0: MACRO` is deprecated; use `MACRO anim_resetobp0`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(15) -> macros/scripts/battle_anims.asm(126): [-Wobsolete]
+    `anim_sound: MACRO` is deprecated; use `MACRO anim_sound`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(15) -> macros/scripts/battle_anims.asm(133): [-Wobsolete]
+    `anim_cry: MACRO` is deprecated; use `MACRO anim_cry`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(15) -> macros/scripts/battle_anims.asm(139): [-Wobsolete]
+    `anim_minimizeopp: MACRO` is deprecated; use `MACRO anim_minimizeopp`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(15) -> macros/scripts/battle_anims.asm(144): [-Wobsolete]
+    `anim_oamon: MACRO` is deprecated; use `MACRO anim_oamon`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(15) -> macros/scripts/battle_anims.asm(149): [-Wobsolete]
+    `anim_oamoff: MACRO` is deprecated; use `MACRO anim_oamoff`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(15) -> macros/scripts/battle_anims.asm(154): [-Wobsolete]
+    `anim_clearobjs: MACRO` is deprecated; use `MACRO anim_clearobjs`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(15) -> macros/scripts/battle_anims.asm(159): [-Wobsolete]
+    `anim_beatup: MACRO` is deprecated; use `MACRO anim_beatup`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(15) -> macros/scripts/battle_anims.asm(164): [-Wobsolete]
+    `anim_0xe7: MACRO` is deprecated; use `MACRO anim_0xe7`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(15) -> macros/scripts/battle_anims.asm(169): [-Wobsolete]
+    `anim_updateactorpic: MACRO` is deprecated; use `MACRO anim_updateactorpic`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(15) -> macros/scripts/battle_anims.asm(174): [-Wobsolete]
+    `anim_minimize: MACRO` is deprecated; use `MACRO anim_minimize`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(15) -> macros/scripts/battle_anims.asm(179): [-Wobsolete]
+    `anim_0xea: MACRO` is deprecated; use `MACRO anim_0xea`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(15) -> macros/scripts/battle_anims.asm(184): [-Wobsolete]
+    `anim_0xeb: MACRO` is deprecated; use `MACRO anim_0xeb`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(15) -> macros/scripts/battle_anims.asm(189): [-Wobsolete]
+    `anim_0xec: MACRO` is deprecated; use `MACRO anim_0xec`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(15) -> macros/scripts/battle_anims.asm(194): [-Wobsolete]
+    `anim_0xed: MACRO` is deprecated; use `MACRO anim_0xed`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(15) -> macros/scripts/battle_anims.asm(199): [-Wobsolete]
+    `anim_jumpand: MACRO` is deprecated; use `MACRO anim_jumpand`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(15) -> macros/scripts/battle_anims.asm(206): [-Wobsolete]
+    `anim_jumpuntil: MACRO` is deprecated; use `MACRO anim_jumpuntil`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(15) -> macros/scripts/battle_anims.asm(212): [-Wobsolete]
+    `anim_bgeffect: MACRO` is deprecated; use `MACRO anim_bgeffect`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(15) -> macros/scripts/battle_anims.asm(221): [-Wobsolete]
+    `anim_bgp: MACRO` is deprecated; use `MACRO anim_bgp`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(15) -> macros/scripts/battle_anims.asm(227): [-Wobsolete]
+    `anim_obp0: MACRO` is deprecated; use `MACRO anim_obp0`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(15) -> macros/scripts/battle_anims.asm(233): [-Wobsolete]
+    `anim_obp1: MACRO` is deprecated; use `MACRO anim_obp1`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(15) -> macros/scripts/battle_anims.asm(239): [-Wobsolete]
+    `anim_clearsprites: MACRO` is deprecated; use `MACRO anim_clearsprites`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(15) -> macros/scripts/battle_anims.asm(244): [-Wobsolete]
+    `anim_0xf5: MACRO` is deprecated; use `MACRO anim_0xf5`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(15) -> macros/scripts/battle_anims.asm(249): [-Wobsolete]
+    `anim_0xf6: MACRO` is deprecated; use `MACRO anim_0xf6`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(15) -> macros/scripts/battle_anims.asm(254): [-Wobsolete]
+    `anim_0xf7: MACRO` is deprecated; use `MACRO anim_0xf7`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(15) -> macros/scripts/battle_anims.asm(259): [-Wobsolete]
+    `anim_jumpif: MACRO` is deprecated; use `MACRO anim_jumpif`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(15) -> macros/scripts/battle_anims.asm(266): [-Wobsolete]
+    `anim_setvar: MACRO` is deprecated; use `MACRO anim_setvar`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(15) -> macros/scripts/battle_anims.asm(272): [-Wobsolete]
+    `anim_incvar: MACRO` is deprecated; use `MACRO anim_incvar`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(15) -> macros/scripts/battle_anims.asm(277): [-Wobsolete]
+    `anim_jumpvar: MACRO` is deprecated; use `MACRO anim_jumpvar`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(15) -> macros/scripts/battle_anims.asm(284): [-Wobsolete]
+    `anim_jump: MACRO` is deprecated; use `MACRO anim_jump`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(15) -> macros/scripts/battle_anims.asm(290): [-Wobsolete]
+    `anim_loop: MACRO` is deprecated; use `MACRO anim_loop`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(15) -> macros/scripts/battle_anims.asm(297): [-Wobsolete]
+    `anim_call: MACRO` is deprecated; use `MACRO anim_call`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(15) -> macros/scripts/battle_anims.asm(303): [-Wobsolete]
+    `anim_ret: MACRO` is deprecated; use `MACRO anim_ret`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(16) -> macros/scripts/trade_anims.asm(4): [-Wobsolete]
+    `tradeanim_next: MACRO` is deprecated; use `MACRO tradeanim_next`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(16) -> macros/scripts/trade_anims.asm(9): [-Wobsolete]
+    `tradeanim_show_givemon_data: MACRO` is deprecated; use `MACRO tradeanim_show_givemon_data`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(16) -> macros/scripts/trade_anims.asm(14): [-Wobsolete]
+    `tradeanim_show_getmon_data: MACRO` is deprecated; use `MACRO tradeanim_show_getmon_data`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(16) -> macros/scripts/trade_anims.asm(19): [-Wobsolete]
+    `tradeanim_enter_link_tube: MACRO` is deprecated; use `MACRO tradeanim_enter_link_tube`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(16) -> macros/scripts/trade_anims.asm(26): [-Wobsolete]
+    `tradeanim_exit_link_tube: MACRO` is deprecated; use `MACRO tradeanim_exit_link_tube`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(16) -> macros/scripts/trade_anims.asm(31): [-Wobsolete]
+    `tradeanim_tube_to_ot: MACRO` is deprecated; use `MACRO tradeanim_tube_to_ot`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(16) -> macros/scripts/trade_anims.asm(38): [-Wobsolete]
+    `tradeanim_tube_to_player: MACRO` is deprecated; use `MACRO tradeanim_tube_to_player`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(16) -> macros/scripts/trade_anims.asm(45): [-Wobsolete]
+    `tradeanim_sent_to_ot_text: MACRO` is deprecated; use `MACRO tradeanim_sent_to_ot_text`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(16) -> macros/scripts/trade_anims.asm(50): [-Wobsolete]
+    `tradeanim_ot_bids_farewell: MACRO` is deprecated; use `MACRO tradeanim_ot_bids_farewell`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(16) -> macros/scripts/trade_anims.asm(55): [-Wobsolete]
+    `tradeanim_take_care_of_text: MACRO` is deprecated; use `MACRO tradeanim_take_care_of_text`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(16) -> macros/scripts/trade_anims.asm(60): [-Wobsolete]
+    `tradeanim_ot_sends_text_1: MACRO` is deprecated; use `MACRO tradeanim_ot_sends_text_1`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(16) -> macros/scripts/trade_anims.asm(65): [-Wobsolete]
+    `tradeanim_ot_sends_text_2: MACRO` is deprecated; use `MACRO tradeanim_ot_sends_text_2`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(16) -> macros/scripts/trade_anims.asm(70): [-Wobsolete]
+    `tradeanim_setup_givemon_scroll: MACRO` is deprecated; use `MACRO tradeanim_setup_givemon_scroll`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(16) -> macros/scripts/trade_anims.asm(75): [-Wobsolete]
+    `tradeanim_do_givemon_scroll: MACRO` is deprecated; use `MACRO tradeanim_do_givemon_scroll`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(16) -> macros/scripts/trade_anims.asm(80): [-Wobsolete]
+    `tradeanim_frontpic_scroll: MACRO` is deprecated; use `MACRO tradeanim_frontpic_scroll`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(16) -> macros/scripts/trade_anims.asm(85): [-Wobsolete]
+    `tradeanim_textbox_scroll: MACRO` is deprecated; use `MACRO tradeanim_textbox_scroll`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(16) -> macros/scripts/trade_anims.asm(90): [-Wobsolete]
+    `tradeanim_scroll_out_right: MACRO` is deprecated; use `MACRO tradeanim_scroll_out_right`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(16) -> macros/scripts/trade_anims.asm(97): [-Wobsolete]
+    `tradeanim_wait_80: MACRO` is deprecated; use `MACRO tradeanim_wait_80`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(16) -> macros/scripts/trade_anims.asm(102): [-Wobsolete]
+    `tradeanim_wait_40: MACRO` is deprecated; use `MACRO tradeanim_wait_40`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(16) -> macros/scripts/trade_anims.asm(107): [-Wobsolete]
+    `tradeanim_rocking_ball: MACRO` is deprecated; use `MACRO tradeanim_rocking_ball`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(16) -> macros/scripts/trade_anims.asm(112): [-Wobsolete]
+    `tradeanim_drop_ball: MACRO` is deprecated; use `MACRO tradeanim_drop_ball`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(16) -> macros/scripts/trade_anims.asm(117): [-Wobsolete]
+    `tradeanim_wait_anim: MACRO` is deprecated; use `MACRO tradeanim_wait_anim`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(16) -> macros/scripts/trade_anims.asm(124): [-Wobsolete]
+    `tradeanim_poof: MACRO` is deprecated; use `MACRO tradeanim_poof`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(16) -> macros/scripts/trade_anims.asm(129): [-Wobsolete]
+    `tradeanim_bulge_through_tube: MACRO` is deprecated; use `MACRO tradeanim_bulge_through_tube`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(16) -> macros/scripts/trade_anims.asm(134): [-Wobsolete]
+    `tradeanim_give_trademon_sfx: MACRO` is deprecated; use `MACRO tradeanim_give_trademon_sfx`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(16) -> macros/scripts/trade_anims.asm(139): [-Wobsolete]
+    `tradeanim_get_trademon_sfx: MACRO` is deprecated; use `MACRO tradeanim_get_trademon_sfx`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(16) -> macros/scripts/trade_anims.asm(144): [-Wobsolete]
+    `tradeanim_end: MACRO` is deprecated; use `MACRO tradeanim_end`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(16) -> macros/scripts/trade_anims.asm(149): [-Wobsolete]
+    `tradeanim_animate_frontpic: MACRO` is deprecated; use `MACRO tradeanim_animate_frontpic`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(16) -> macros/scripts/trade_anims.asm(154): [-Wobsolete]
+    `tradeanim_wait_96: MACRO` is deprecated; use `MACRO tradeanim_wait_96`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(16) -> macros/scripts/trade_anims.asm(159): [-Wobsolete]
+    `tradeanim_wait_80_if_ot_egg: MACRO` is deprecated; use `MACRO tradeanim_wait_80_if_ot_egg`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(16) -> macros/scripts/trade_anims.asm(164): [-Wobsolete]
+    `tradeanim_wait_180_if_ot_egg: MACRO` is deprecated; use `MACRO tradeanim_wait_180_if_ot_egg`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(17) -> macros/scripts/gfx_anims.asm(3): [-Wobsolete]
+    `frame: MACRO` is deprecated; use `MACRO frame`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(17) -> macros/scripts/gfx_anims.asm(15): [-Wobsolete]
+    `delanim: MACRO` is deprecated; use `MACRO delanim`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(17) -> macros/scripts/gfx_anims.asm(20): [-Wobsolete]
+    `dorepeat: MACRO` is deprecated; use `MACRO dorepeat`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(17) -> macros/scripts/gfx_anims.asm(26): [-Wobsolete]
+    `setrepeat: MACRO` is deprecated; use `MACRO setrepeat`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(17) -> macros/scripts/gfx_anims.asm(32): [-Wobsolete]
+    `endanim: MACRO` is deprecated; use `MACRO endanim`
+warning: main.asm(1) -> constants.asm(7) -> macros.asm(17) -> macros/scripts/gfx_anims.asm(39): [-Wobsolete]
+    `dorestart: MACRO` is deprecated; use `MACRO dorestart`
+warning: main.asm(1) -> constants.asm(23) -> constants/deco_constants.asm(71): [-Wobsolete]
+    `deco: MACRO` is deprecated; use `MACRO deco`
+warning: main.asm(1) -> constants.asm(28) -> constants/tmhm_constants.asm(8): [-Wobsolete]
+    `add_tmnum: MACRO` is deprecated; use `MACRO add_tmnum`
+warning: main.asm(1) -> constants.asm(28) -> constants/tmhm_constants.asm(13): [-Wobsolete]
+    `add_tm: MACRO` is deprecated; use `MACRO add_tm`
+warning: main.asm(1) -> constants.asm(28) -> constants/tmhm_constants.asm(102): [-Wobsolete]
+    `add_hm: MACRO` is deprecated; use `MACRO add_hm`
+warning: main.asm(1) -> constants.asm(28) -> constants/tmhm_constants.asm(118): [-Wobsolete]
+    `add_mt: MACRO` is deprecated; use `MACRO add_mt`
+warning: main.asm(1) -> constants.asm(30) -> constants/map_constants.asm(1): [-Wobsolete]
+    `newgroup: MACRO` is deprecated; use `MACRO newgroup`
+warning: main.asm(1) -> constants.asm(30) -> constants/map_constants.asm(6): [-Wobsolete]
+    `map_const: MACRO` is deprecated; use `MACRO map_const`
+warning: main.asm(1) -> constants.asm(44) -> constants/pokemon_constants.asm(285): [-Wobsolete]
+    `ext_const_def: MACRO` is deprecated; use `MACRO ext_const_def`
+warning: main.asm(1) -> constants.asm(44) -> constants/pokemon_constants.asm(297): [-Wobsolete]
+    `ext_const: MACRO` is deprecated; use `MACRO ext_const`
+warning: main.asm(1) -> constants.asm(55) -> constants/trainer_constants.asm(3): [-Wobsolete]
+    `trainerclass: MACRO` is deprecated; use `MACRO trainerclass`
+warning: main.asm(13) -> data/items/attributes.asm(1): [-Wobsolete]
+    `item_attribute: MACRO` is deprecated; use `MACRO item_attribute`
+warning: main.asm(13) -> data/items/attributes.asm(520): [-Wobsolete]
+    `key_item_attribute: MACRO` is deprecated; use `MACRO key_item_attribute`
+warning: main.asm(25) -> engine/overworld/player_object.asm(1) -> data/sprites/map_objects.asm(1): [-Wobsolete]
+    `sprite_movement_data: MACRO` is deprecated; use `MACRO sprite_movement_data`
+warning: main.asm(34) -> engine/events/specials.asm(15) -> data/events/special_pointers.asm(1): [-Wobsolete]
+    `add_special: MACRO` is deprecated; use `MACRO add_special`
+warning: main.asm(66) -> engine/overworld/load_map_part.asm(1): [-Wobsolete]
+    `loadmapblock: MACRO` is deprecated; use `MACRO loadmapblock`
+warning: main.asm(66) -> engine/overworld/load_map_part.asm(10): [-Wobsolete]
+    `addmapwidthoffset: MACRO` is deprecated; use `MACRO addmapwidthoffset`
+warning: main.asm(66) -> engine/overworld/load_map_part.asm(20): [-Wobsolete]
+    `subtractfromhl: MACRO` is deprecated; use `MACRO subtractfromhl`
+warning: main.asm(66) -> engine/overworld/load_map_part.asm(65): [-Wobsolete]
+    `loadmappart_function_macro: MACRO` is deprecated; use `MACRO loadmappart_function_macro`
+warning: main.asm(99) -> engine/overworld/overworld.asm(428) -> data/sprites/sprites.asm(1): [-Wobsolete]
+    `overworld_sprite: MACRO` is deprecated; use `MACRO overworld_sprite`
+warning: main.asm(101) -> engine/menus/save.asm(698): [-Wobsolete]
+    `nop` after `halt` will stop being the default; pass `-H` to opt into it
+warning: main.asm(102) -> engine/overworld/spawn_points.asm(1) -> data/maps/spawn_points.asm(1): [-Wobsolete]
+    `spawn: MACRO` is deprecated; use `MACRO spawn`
+warning: main.asm(103) -> engine/overworld/map_setup.asm(15) -> data/maps/setup_scripts.asm(19): [-Wobsolete]
+    `mapsetup: MACRO` is deprecated; use `MACRO mapsetup`
+warning: main.asm(103) -> engine/overworld/map_setup.asm(60) -> data/maps/setup_script_pointers.asm(1): [-Wobsolete]
+    `add_mapsetup: MACRO` is deprecated; use `MACRO add_mapsetup`
+warning: main.asm(121) -> data/battle/effect_command_pointers.asm(1): [-Wobsolete]
+    `command: MACRO` is deprecated; use `MACRO command`
+warning: main.asm(121) -> data/battle/effect_command_pointers.asm(7): [-Wobsolete]
+    `commandx: MACRO` is deprecated; use `MACRO commandx`
+warning: main.asm(121) -> data/battle/effect_command_pointers.asm(13): [-Wobsolete]
+    `commandonly: MACRO` is deprecated; use `MACRO commandonly`
+warning: main.asm(136) -> engine/events/prof_oaks_pc.asm(95): [-Wobsolete]
+    `oakrating: MACRO` is deprecated; use `MACRO oakrating`
+warning: main.asm(137) -> engine/overworld/decorations.asm(509) -> data/decorations/attributes.asm(1): [-Wobsolete]
+    `decoration: MACRO` is deprecated; use `MACRO decoration`
+warning: main.asm(152) -> engine/overworld/wildmons.asm(984) -> data/wild/roammon_maps.asm(4): [-Wobsolete]
+    `roam_map: MACRO` is deprecated; use `MACRO roam_map`
+warning: main.asm(171) -> engine/battle/effect_commands.asm(5045): [-Wobsolete]
+    `status_problem: MACRO` is deprecated; use `MACRO status_problem`
+warning: main.asm(188) -> engine/battle/core.asm(5886): [-Wobsolete]
+    `random_wild_form: MACRO` is deprecated; use `MACRO random_wild_form`
+warning: main.asm(188) -> engine/battle/core.asm(6028) -> data/wild/unlocked_unowns.asm(1): [-Wobsolete]
+    `unown_set: MACRO` is deprecated; use `MACRO unown_set`
+warning: main.asm(203) -> data/moves/moves.asm(1): [-Wobsolete]
+    `move: MACRO` is deprecated; use `MACRO move`
+warning: main.asm(222) -> engine/tilesets/tileset_palettes.asm(226) -> data/maps/palettes.asm(1): [-Wobsolete]
+    `special_pal_for: MACRO` is deprecated; use `MACRO special_pal_for`
+warning: main.asm(222) -> engine/tilesets/tileset_palettes.asm(226) -> data/maps/palettes.asm(19): [-Wobsolete]
+    `special_bg_pal: MACRO` is deprecated; use `MACRO special_bg_pal`
+warning: main.asm(222) -> engine/tilesets/tileset_palettes.asm(226) -> data/maps/palettes.asm(97): [-Wobsolete]
+    `special_ob_pal: MACRO` is deprecated; use `MACRO special_ob_pal`
+warning: main.asm(237) -> data/maps/scenes.asm(1): [-Wobsolete]
+    `scene_var: MACRO` is deprecated; use `MACRO scene_var`
+warning: main.asm(252) -> engine/events/judge_machine.asm(1041): [-Wobsolete]
+    `atk_y_coords: MACRO` is deprecated; use `MACRO atk_y_coords`
+warning: main.asm(252) -> engine/events/judge_machine.asm(1046): [-Wobsolete]
+    `def_y_coords: MACRO` is deprecated; use `MACRO def_y_coords`
+warning: main.asm(252) -> engine/events/judge_machine.asm(1051): [-Wobsolete]
+    `spcl_atk_y_coords: MACRO` is deprecated; use `MACRO spcl_atk_y_coords`
+warning: main.asm(252) -> engine/events/judge_machine.asm(1056): [-Wobsolete]
+    `spcl_def_y_coords: MACRO` is deprecated; use `MACRO spcl_def_y_coords`
+warning: main.asm(262) -> engine/pokemon/party_menu.asm(1130) -> data/party_menu_qualities.asm(13): [-Wobsolete]
+    `partymenuqualities: MACRO` is deprecated; use `MACRO partymenuqualities`
+warning: main.asm(266) -> engine/pokemon/experience.asm(177) -> data/growth_rates.asm(1): [-Wobsolete]
+    `growth_rate: MACRO` is deprecated; use `MACRO growth_rate`
+warning: main.asm(275) -> data/pokemon/base_stats.asm(1): [-Wobsolete]
+    `ev_yield: MACRO` is deprecated; use `MACRO ev_yield`
+warning: main.asm(275) -> data/pokemon/base_stats.asm(7): [-Wobsolete]
+    `abilities_for: MACRO` is deprecated; use `MACRO abilities_for`
+warning: main.asm(275) -> data/pokemon/base_stats.asm(15): [-Wobsolete]
+    `tmhm: MACRO` is deprecated; use `MACRO tmhm`
+error: main.asm(275) -> data/pokemon/base_stats.asm(289) -> macros/asserts.asm::assert_table_length(16):
+    Assertion failed: BaseData: expected 251 entries, each 35 bytes
+warning: main.asm(287) -> engine/events/engine_flags.asm(56) -> data/events/engine_flags.asm(1): [-Wobsolete]
+    `engine_flag: MACRO` is deprecated; use `MACRO engine_flag`
+warning: main.asm(315) -> engine/tilesets/timeofday_pals.asm(158): [-Wobsolete]
+    `brightlevel: MACRO` is deprecated; use `MACRO brightlevel`
+warning: main.asm(316) -> engine/battle/battle_transition.asm(286): [-Wobsolete]
+    `spintable_entry: MACRO` is deprecated; use `MACRO spintable_entry`
+warning: main.asm(316) -> engine/battle/battle_transition.asm(853): [-Wobsolete]
+    `zoombox: MACRO` is deprecated; use `MACRO zoombox`
+warning: main.asm(320) -> engine/gfx/mon_icons.asm(1) -> data/pokemon/menu_icon_pals.asm(1): [-Wobsolete]
+    `iconpal: MACRO` is deprecated; use `MACRO iconpal`
+warning: main.asm(326) -> engine/phone/phone.asm(638) -> data/phone/phone_contacts.asm(1): [-Wobsolete]
+    `phone: MACRO` is deprecated; use `MACRO phone`
+warning: main.asm(326) -> engine/phone/phone.asm(640) -> data/phone/special_calls.asm(1): [-Wobsolete]
+    `specialcall: MACRO` is deprecated; use `MACRO specialcall`
+warning: main.asm(328) -> engine/pokegear/pokegear.asm(2627): [-Wobsolete]
+    `townmappals: MACRO` is deprecated; use `MACRO townmappals`
+warning: main.asm(329) -> engine/events/fish.asm(144) -> data/wild/fish.asm(1): [-Wobsolete]
+    `fishgroup: MACRO` is deprecated; use `MACRO fishgroup`
+warning: main.asm(365) -> engine/events/treemons.asm(141) -> data/wild/treemon_maps.asm(1): [-Wobsolete]
+    `treemon_map: MACRO` is deprecated; use `MACRO treemon_map`
+warning: main.asm(380) -> engine/battle_anims/bg_effects.asm(781): [-Wobsolete]
+    `bgsquare: MACRO` is deprecated; use `MACRO bgsquare`
+warning: main.asm(392) -> data/battle_anims/objects.asm(4): [-Wobsolete]
+    `battleanimobj: MACRO` is deprecated; use `MACRO battleanimobj`
+warning: main.asm(396) -> data/battle_anims/oam.asm(1): [-Wobsolete]
+    `battleanimoam: MACRO` is deprecated; use `MACRO battleanimoam`
+warning: main.asm(397) -> data/battle_anims/object_gfx.asm(1): [-Wobsolete]
+    `anim_obj_gfx: MACRO` is deprecated; use `MACRO anim_obj_gfx`
+warning: main.asm(402) -> engine/gfx/pic_animation.asm(3): [-Wobsolete]
+    `POKEANIM: MACRO` is deprecated; use `MACRO POKEANIM`
+warning: main.asm(402) -> engine/gfx/pic_animation.asm(129): [-Wobsolete]
+    `setup_command: MACRO` is deprecated; use `MACRO setup_command`
+warning: main.asm(402) -> engine/gfx/pic_animation.asm(608): [-Wobsolete]
+    `poke_anim_box: MACRO` is deprecated; use `MACRO poke_anim_box`
+warning: main.asm(428) -> engine/games/card_flip.asm(1260): [-Wobsolete]
+    `cardflip_cursor: MACRO` is deprecated; use `MACRO cardflip_cursor`
+warning: main.asm(429) -> engine/games/unown_puzzle.asm(113): [-Wobsolete]
+    `initpuzcoord: MACRO` is deprecated; use `MACRO initpuzcoord`
+warning: main.asm(429) -> engine/games/unown_puzzle.asm(542): [-Wobsolete]
+    `puzzle_coords: MACRO` is deprecated; use `MACRO puzzle_coords`
+warning: main.asm(460) -> engine/events/mom_phone.asm(198) -> data/items/mom_phone.asm(1): [-Wobsolete]
+    `momitem: MACRO` is deprecated; use `MACRO momitem`
+warning: main.asm(541) -> engine/overworld/landmarks.asm(43) -> data/maps/landmarks.asm(1): [-Wobsolete]
+    `landmark: MACRO` is deprecated; use `MACRO landmark`
+warning: main.asm(547) -> engine/events/odd_egg.asm(120) -> data/events/odd_eggs.asm(4): [-Wobsolete]
+    `prob: MACRO` is deprecated; use `MACRO prob`
+warning: main.asm(552) -> engine/items/type_chart.asm(178): [-Wobsolete]
+    `oamdata: MACRO` is deprecated; use `MACRO oamdata`
+error: Assembly aborted (1 error)!
+make: *** [Makefile:107: main.o] Error 1
+
+the error is "error: main.asm(275) -> data/pokemon/base_stats.asm(289) -> macros/asserts.asm::assert_table_length(16):
+    Assertion failed: BaseData: expected 251 entries, each 35 bytes". Get this error if one of the entries to base_stats is removed (tried comment out celebi) and also if one of the lines in pokemon/base_stats/<>.asm (tried remove ev yield heatran)

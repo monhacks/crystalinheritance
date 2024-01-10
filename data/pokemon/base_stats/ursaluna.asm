@@ -3,7 +3,7 @@
 
 	db GROUND, NORMAL ; type
 	db 20 ; catch rate
-	db 275 ; base exp
+	db 209 ; base exp
 	db ALWAYS_ITEM_2 ; item 1
 	db SITRUS_BERRY ; item 2
 	dn GENDER_F50, 3 ; gender ratio, step cycles to hatch

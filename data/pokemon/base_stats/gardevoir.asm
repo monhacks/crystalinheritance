@@ -3,7 +3,7 @@
 
 	db PSYCHIC, FAIRY ; type
 	db 45 ; catch rate
-	db 259 ; base exp
+	db 201 ; base exp
 	db NO_ITEM ; item 1
 	db NO_ITEM ; item 2
 	dn GENDER_F100, 3 ; gender ratio, step cycles to hatch

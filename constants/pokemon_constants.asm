@@ -19,7 +19,7 @@
 ; - AnimationPointers (see gfx/pokemon/anim_pointers.asm)->done, gfx/pokemon/extra_pointers.asm->done, gfx/pokemon/extras.asm
 ; - AnimationIdlePointers (see gfx/pokemon/idle_pointers.asm) did not find
 ; - BitmasksPointers (see gfx/pokemon/bitmask_pointers.asm)->done, gfx/pokemon/bitmasks.asm->done, unown_words.asm->done
-; - FramesPointers (see gfx/pokemon/frame_pointers.asm)->done, pic_animations.asm->done, kanto_frames.asm and johto_frames.asm->done
+; - FramesPointers (see gfx/pokemon/frame_pointers.asm)->done, pic_animations.asm->done, kanto_frames.asm and johto_frames.asm->done ; gfx/pics.asm-->t.d.
 	const_def 1
 	const CYNDAQUIL		  ; 01
 	const QUILAVA  		  ; 02

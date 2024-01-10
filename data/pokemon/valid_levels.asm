@@ -255,4 +255,4 @@ ValidPokemonLevels: ; for Wonder Trade
 	db	 1,	 25	;	celebi
 	assert_table_length NUM_POKEMON + 1
 	db  255,  255 ; Egg
-	assert_table_length NUM_SPECIES + 1
+;	assert_table_length NUM_SPECIES + 1

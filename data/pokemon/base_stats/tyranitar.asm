@@ -9,6 +9,7 @@
 	dn GENDER_F50, 7 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/tyranitar/front.dimensions"
 	abilities_for TYRANITAR, SAND_STREAM, SAND_STREAM, UNNERVE
+	db GROWTH_SLOW ; growth rate
 	dn EGG_MONSTER, EGG_MONSTER ; egg groups
 
 	ev_yield   0,   3,   0,   0,   0,   0

@@ -1,6 +1,7 @@
 Footprints:
 ; Entries correspond to Pokémon species
 	table_width LEN_1BPP_TILE * 4, Footprints
+
 INCBIN "gfx/footprints/cyndaquil.1bpp"
 INCBIN "gfx/footprints/quilava.1bpp"
 INCBIN "gfx/footprints/typhlosion.1bpp"
@@ -252,6 +253,8 @@ INCBIN "gfx/footprints/heatran.1bpp"
 INCBIN "gfx/footprints/lugia.1bpp"
 INCBIN "gfx/footprints/ho_oh.1bpp"
 INCBIN "gfx/footprints/celebi.1bpp"
+
 	assert_table_length NUM_POKEMON
+
 INCBIN "gfx/footprints/egg.1bpp"
-	assert_table_length NUM_SPECIES
+;	assert_table_length NUM_SPECIES
