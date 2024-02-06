@@ -10,7 +10,7 @@ MoveDescriptions::
 	dw FirePunchDescription
 	dw IcePunchDescription
 	dw ThunderpunchDescription
-	dw ScratchDescription
+	dw MagmaStormDescription
 	dw XScissorDescription
 	dw NightSlashDescription
 	dw AirSlashDescription
@@ -746,9 +746,9 @@ ExtremespeedDescription:
 	db   "A powerful first-"
 	next "strike attack.@"
 
-ScratchDescription:
-	db   "Scratches with"
-	next "sharp claws.@"
+MagmaStormDescription:
+	db   "Magma surrounds"
+	next "for 2-5 turns.@"
 
 PeckDescription:
 	db   "Jabs the foe with"

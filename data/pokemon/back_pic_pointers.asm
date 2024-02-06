@@ -74,7 +74,7 @@ BackPicPointers::
 	dba	MagnemiteBackpic
 	dba	MagnetonBackpic
 	dba	MagnezoneBackpic
-	dba	FarfetchdBackpic
+	dba	Farfetch_DBackpic
 	dba	GrimerBackpic
 	dba	MukBackpic
 	dba	CloysterBackpic
@@ -129,7 +129,7 @@ BackPicPointers::
 	dba	SylveonBackpic
 	dba	PorygonBackpic
 	dba	Porygon2Backpic
-	dba	PorygonZBackpic
+	dba	PorygonzBackpic
 	dba	SnorlaxBackpic
 	dba	ChikoritaBackpic
 	dba	BayleefBackpic
@@ -198,9 +198,9 @@ BackPicPointers::
 	dba	GrotleBackpic
 	dba	TorterraBackpic
 	dba	MonfernoBackpic
-	dba	InfernapBackpic
+	dba	InfernapeBackpic
 	dba	PrinplupBackpic
-	dba	EmploeonBackpic
+	dba	EmpoleonBackpic
 	dba	StaraviaBackpic
 	dba	StaraptorBackpic
 	dba	LuxioBackpic
@@ -216,9 +216,9 @@ BackPicPointers::
 	dba	SkuntankBackpic
 	dba	BronzorBackpic
 	dba	BronzongBackpic
-	dba	SpiritombIcom
+	dba	SpiritombBackpic
 	dba	GabiteBackpic
-	dba	GarchompIcom
+	dba	GarchompBackpic
 	dba	LucarioBackpic
 	dba	HippowdonBackpic
 	dba	DrapionBackpic
@@ -249,11 +249,11 @@ BackPicPointers::
 	dba	SuicuneBackpic
 	dba	HeatranBackpic
 	dba	LugiaBackpic
-	dba	HoOhBackpic
+	dba	Ho_OhBackpic
 	dba	CelebiBackpic
 	assert_table_length	NUM_POKEMON
 	
-	dba	EggBackpic
+	dba	EggPic
 	
 	dba	UnownBBackpic
 	dba	UnownCBackpic

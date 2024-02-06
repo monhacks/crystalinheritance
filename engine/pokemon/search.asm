@@ -23,22 +23,22 @@ SpecialBeastsCheck:
 	ldh [hScriptVar], a
 	ret
 
-SpecialBirdsCheck:
+SpecialBirdsCheck: ; USED TO BE MOLTRES, ETC
 ; Check if the player owns all three legendary birds.
 ; They must exist in either party or PC, and have the player's OT and ID.
 ; Return the result in hScriptVar.
 
-	ld a, ARTICUNO
+	ld a, LUGIA
 	ldh [hScriptVar], a
 	call CheckOwnMonAnywhere
 	jr nc, SpecialMonCheckFailed
 
-	ld a, ZAPDOS
+	ld a, HO_OH
 	ldh [hScriptVar], a
 	call CheckOwnMonAnywhere
 	jr nc, SpecialMonCheckFailed
 
-	ld a, MOLTRES
+	ld a, CELEBI
 	ldh [hScriptVar], a
 	call CheckOwnMonAnywhere
 	jr nc, SpecialMonCheckFailed

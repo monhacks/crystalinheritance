@@ -119,7 +119,7 @@ EvolutionMoves::
 	db AQUA_TAIL	;GYARADOS     ; 75
 	db NO_MOVE		;LAPRAS    ; 76
 	db NO_MOVE		;EEVEE   ; 77
-	db BUBBLEBEAM	;VAPOREON     ; 78
+	db WATER_PULSE	;VAPOREON     ; 78
 	db SPARK		;JOLTEON    ; 79
 	db FLAME_CHARGE	;FLAREON   ; 7a
 	db PSYBEAM		;ESPEON    ; 7b

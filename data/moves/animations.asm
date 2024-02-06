@@ -11,7 +11,7 @@ BattleAnimations::
 	dw BattleAnim_FirePunch
 	dw BattleAnim_IcePunch
 	dw BattleAnim_Thunderpunch
-	dw BattleAnim_Scratch
+	dw BattleAnim_MagmaStorm
 	dw BattleAnim_XScissor
 	dw BattleAnim_NightSlash
 	dw BattleAnim_AirSlash
@@ -1632,13 +1632,53 @@ BattleAnim_XScissor:
 	anim_bgp $e4
 	anim_ret
 
-BattleAnim_Scratch:
-	anim_1gfx ANIM_GFX_CUT
-	anim_sound 0, 1, SFX_SCRATCH
-	anim_obj ANIM_OBJ_CUT_DOWN_LEFT, -14, 0,   6, 0, $0
-	anim_obj ANIM_OBJ_CUT_DOWN_LEFT, -15, 4,   5, 4, $0
-	anim_obj ANIM_OBJ_CUT_DOWN_LEFT, -15, 0,   5, 0, $0
+BattleAnim_MagmaStorm:
+	anim_1gfx ANIM_GFX_FIRE
+.loop1
+	anim_sound 6, 2, SFX_EMBER
+	anim_obj ANIM_OBJ_FIRE_BLAST,   8, 0,  11, 4, $7
+	anim_wait 6
+	anim_loop 10, .loop1
+.loop2
+	anim_sound 0, 1, SFX_EMBER
+	anim_wait 8
+	anim_loop 10, .loop2
+	anim_incobj 1
+	anim_incobj 2
+	anim_incobj 3
+	anim_incobj 4
+	anim_incobj 5
+	anim_incobj 6
+	anim_incobj 7
+	anim_incobj 8
+	anim_incobj 9
+	anim_incobj 10
+	anim_wait 2
+.loop3
+	anim_sound 0, 1, SFX_EMBER
+	anim_obj ANIM_OBJ_FIRE_BLAST, -15, 0,   7, 0, $1
+	anim_obj ANIM_OBJ_FIRE_BLAST, -15, 0,   7, 0, $2
+	anim_obj ANIM_OBJ_FIRE_BLAST, -15, 0,   7, 0, $3
+	anim_obj ANIM_OBJ_FIRE_BLAST, -15, 0,   7, 0, $4
+	anim_obj ANIM_OBJ_FIRE_BLAST, -15, 0,   7, 0, $5
+	anim_wait 16
+	anim_loop 2, .loop3
 	anim_wait 32
+.loop ; LINES FORM HERE TO ANIM_RET ARE FROM FIRE SPIN
+	anim_sound 6, 2, SFX_EMBER
+	anim_obj ANIM_OBJ_FIRE_SPIN,   8, 0,  11, 0, $4
+	anim_wait 2
+	anim_sound 6, 2, SFX_EMBER
+	anim_obj ANIM_OBJ_FIRE_SPIN,   8, 0,  12, 0, $3
+	anim_wait 2
+	anim_sound 6, 2, SFX_EMBER
+	anim_obj ANIM_OBJ_FIRE_SPIN,   8, 0,  11, 0, $3
+	anim_wait 2
+	anim_sound 6, 2, SFX_EMBER
+	anim_obj ANIM_OBJ_FIRE_SPIN,   8, 0,  12, 0, $4
+	anim_wait 2
+	anim_loop 2, .loop
+	anim_wait 96
 	anim_ret
 
 BattleAnim_FuryStrikes:

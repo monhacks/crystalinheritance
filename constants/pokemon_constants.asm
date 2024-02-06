@@ -342,9 +342,9 @@ FIRST_VARIANT_FORM_MON EQU const_value ; 134
 
 NUM_VARIANT_FORMS EQU const_value - FIRST_VARIANT_FORM_MON ; 1d
 
-;FIRST_EXT_MON EQU const_value ; 151
+FIRST_EXT_MON EQU const_value ; 151
 
-;NUM_EXT_SPECIES EQU const_value - FIRST_EXT_MON ; 0
+NUM_EXT_SPECIES EQU const_value - FIRST_EXT_MON ; 0
 
 ; these constants include EGG as a species
 ;NUM_UNIQUE_POKEMON EQU const_value - 1 ; 150

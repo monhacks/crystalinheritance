@@ -76,7 +76,7 @@ IconPointers:
 	dba MagnemiteIcon ;MAGNEMITE  ; 48
 	dba MagnetonIcon ;MAGNETON ; 49
 	dba MagnezoneIcon ;MAGNEZONE    ; 4a
-	dba FarfetchdIcon ;FARFETCH_D    ; 4b
+	dba Farfetch_DIcon ;FARFETCH_D    ; 4b
 	dba GrimerIcon ;GRIMER      ; 4c
 	dba MukIcon ;MUK     ; 4d
 	dba CloysterIcon ;CLOYSTER   ; 4e
@@ -131,7 +131,7 @@ IconPointers:
 	dba SylveonIcon ;SYLVEON     ; 7f
 	dba PorygonIcon ;PORYGON     ; 80
 	dba Porygon2Icon ;PORYGON2   ; 81
-	dba PorygonZIcon ;PORYGON_Z   ; 82
+	dba PorygonzIcon ;PORYGON_Z   ; 82
 	dba SnorlaxIcon ;SNORLAX     ; 83
 	dba ChikoritaIcon ;CHIKORITA      ; 84
 	dba BayleefIcon ;BAYLEEF      ; 85
@@ -200,9 +200,9 @@ IconPointers:
 	dba GrotleIcon ;GROTLE ; c4
 	dba TorterraIcon ;TORTERRA  ; c5
 	dba MonfernoIcon ;MONFERNO      ; c6
-	dba InfernapIcon ;INFERNAPE  ; c7
+	dba InfernapeIcon ;INFERNAPE  ; c7
 	dba PrinplupIcon ;PRINPLUP  ; c8
-	dba EmploeonIcon ;EMPOLEON     ; c9
+	dba EmpoleonIcon ;EMPOLEON     ; c9
 	dba StaraviaIcon ;STARAVIA ; ca
 	dba StaraptorIcon ;STARAPTOR  ; cb
 	dba LuxioIcon ;LUXIO     ; cc
@@ -218,9 +218,9 @@ IconPointers:
 	dba SkuntankIcon ;SKUNTANK    ; d6
 	dba BronzorIcon ;BRONZOR  ; d7
 	dba BronzongIcon ;BRONZONG   ; d8
-	dba SpiritombIcom ;SPIRITOMB     ; d9
+	dba SpiritombIcon ;SPIRITOMB     ; d9
 	dba GabiteIcon ;GABITE   ; da
-	dba GarchompIcom ;GARCHOMP     ; db
+	dba GarchompIcon ;GARCHOMP     ; db
 	dba LucarioIcon ;LUCARIO  ; dc
 	dba HippowdonIcon ;HIPPOWDON  ; dd
 	dba DrapionIcon ;DRAPION    ; de
@@ -239,7 +239,7 @@ IconPointers:
 	dba GalladeIcon ;GALLADE    ; eb
 	dba HsliggooIcon ;H__SLIGGOO  ; ec
 	dba HgoodraIcon ;H__GOODRA     ; ed
-	dba HaoroarkIcon ;H__ZOROARK ; ee
+	dba HzoroarkIcon ;H__ZOROARK ; ee
 	dba DratiniIcon ;DRATINI      ; ef
 	dba DragonairIcon ;DRAGONAIR  ; f0
 	dba DragoniteIcon ;DRAGONITE    ; f1
@@ -251,7 +251,7 @@ IconPointers:
 	dba SuicuneIcon ;SUICUNE    ; f7
 	dba HeatranIcon ;HEATRAN  ; f8
 	dba LugiaIcon ;LUGIA      ; f9
-	dba HoOhIcon ;HO_OH      ; fa
+	dba Ho_OhIcon ;HO_OH      ; fa
 	dba CelebiIcon ;CELEBI     ; fb
 	assert_table_length NUM_POKEMON + 1
 

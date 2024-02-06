@@ -379,6 +379,7 @@ TogekissBackpic: INCBIN "gfx/pokemon/togekiss/back.2bpp.lz"
 
 SECTION "Pokemon Pics 19", ROMX
 
+NatuFrontpic: INCBIN "gfx/pokemon/natu/front.2bpp.lz"
 NatuBackpic: INCBIN "gfx/pokemon/natu/back.2bpp.lz"
 XatuFrontpic: INCBIN "gfx/pokemon/xatu/front.animated.2bpp.lz"
 XatuBackpic: INCBIN "gfx/pokemon/xatu/back.2bpp.lz"

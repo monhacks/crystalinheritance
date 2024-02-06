@@ -11,7 +11,7 @@ FrontPicPointers::
 	dba	OshawottFrontpic
 	dba	DewottFrontpic
 	dba	SamurottFrontpic
-	dba	HSamurottFrontpic
+	dba	HsamurottFrontpic
 	dba	ButterfreeFrontpic
 	dba	BeedrillFrontpic
 	dba	PidgeyFrontpic
@@ -49,7 +49,7 @@ FrontPicPointers::
 	dba	PrimeapeFrontpic
 	dba	GrowlitheFrontpic
 	dba	ArcanineFrontpic
-	dba	HArcanineFrontpic
+	dba	HarcanineFrontpic
 	dba	PoliwagFrontpic
 	dba	PoliwhirlFrontpic
 	dba	PoliwrathFrontpic
@@ -74,7 +74,7 @@ FrontPicPointers::
 	dba	MagnemiteFrontpic
 	dba	MagnetonFrontpic
 	dba	MagnezoneFrontpic
-	dba	FarfetchdFrontpic
+	dba	Farfetch_DFrontpic
 	dba	GrimerFrontpic
 	dba	MukFrontpic
 	dba	CloysterFrontpic
@@ -129,7 +129,7 @@ FrontPicPointers::
 	dba	SylveonFrontpic
 	dba	PorygonFrontpic
 	dba	Porygon2Frontpic
-	dba	PorygonZFrontpic
+	dba	PorygonzFrontpic
 	dba	SnorlaxFrontpic
 	dba	ChikoritaFrontpic
 	dba	BayleefFrontpic
@@ -198,9 +198,9 @@ FrontPicPointers::
 	dba	GrotleFrontpic
 	dba	TorterraFrontpic
 	dba	MonfernoFrontpic
-	dba	InfernapFrontpic
+	dba	InfernapeFrontpic
 	dba	PrinplupFrontpic
-	dba	EmploeonFrontpic
+	dba	EmpoleonFrontpic
 	dba	StaraviaFrontpic
 	dba	StaraptorFrontpic
 	dba	LuxioFrontpic
@@ -216,9 +216,9 @@ FrontPicPointers::
 	dba	SkuntankFrontpic
 	dba	BronzorFrontpic
 	dba	BronzongFrontpic
-	dba	SpiritombIcom
+	dba	SpiritombFrontpic
 	dba	GabiteFrontpic
-	dba	GarchompIcom
+	dba	GarchompFrontpic
 	dba	LucarioFrontpic
 	dba	HippowdonFrontpic
 	dba	DrapionFrontpic
@@ -249,11 +249,11 @@ FrontPicPointers::
 	dba	SuicuneFrontpic
 	dba	HeatranFrontpic
 	dba	LugiaFrontpic
-	dba	HoOhFrontpic
+	dba	Ho_OhFrontpic
 	dba	CelebiFrontpic
 	assert_table_length	NUM_POKEMON
 	
-	dba	EggFrontpic
+	dba	EggPic
 	
 	dba	UnownBFrontpic
 	dba	UnownCFrontpic

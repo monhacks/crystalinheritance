@@ -10,18 +10,18 @@ move: MACRO
 ENDM
 
 Moves::
-; entries correspond to move ids (see constants/move_constants.asm). consider adding: magma storm , shadow sneak
+; entries correspond to move ids (see constants/move_constants.asm). 
 	table_width MOVE_LENGTH, Moves
 	move ACROBATICS,   EFFECT_CONDITIONAL_BOOST,  55, FLYING,    100, 15,   0, PHYSICAL
 	move KARATE_CHOP,  EFFECT_NORMAL_HIT,         50, FIGHTING,  100, 25,   0, PHYSICAL
 	move DOUBLE_SLAP,  EFFECT_MULTI_HIT,          15, NORMAL,     85, 10,   0, PHYSICAL
 	move AERIAL_ACE,   EFFECT_ALWAYS_HIT,         60, FLYING,    100, 20,   0, PHYSICAL
 	move DRAGON_CLAW,  EFFECT_NORMAL_HIT,         80, DRAGON,    100, 15,   0, PHYSICAL
-	move PAY_DAY,      EFFECT_PAY_DAY,            40, NORMAL,    100, 20,   0, PHYSICAL; remove? 
+	move PAY_DAY,      EFFECT_PAY_DAY,            40, NORMAL,    100, 20,   0, PHYSICAL 
 	move FIRE_PUNCH,   EFFECT_BURN_HIT,           75, FIRE,      100, 15,  10, PHYSICAL
 	move ICE_PUNCH,    EFFECT_FREEZE_HIT,         75, ICE,       100, 15,  10, PHYSICAL
 	move THUNDERPUNCH, EFFECT_PARALYZE_HIT,       75, ELECTRIC,  100, 15,  10, PHYSICAL
-	move SCRATCH,      EFFECT_NORMAL_HIT,         40, NORMAL,    100, 35,   0, PHYSICAL ; remove? 
+	move MAGMA_STORM,  EFFECT_TRAP,        		 100, FIRE,    	  75,  5,   0, SPECIAL ; replaces scratch
 	move X_SCISSOR,    EFFECT_NORMAL_HIT,         80, BUG,       100, 15,   0, PHYSICAL
 	move NIGHT_SLASH,  EFFECT_NORMAL_HIT,         70, DARK,      100, 15,   0, PHYSICAL
 	move AIR_SLASH,    EFFECT_FLINCH_HIT,         75, FLYING,     95, 15,  30, SPECIAL
@@ -130,7 +130,7 @@ Moves::
 	move FOCUS_ENERGY, EFFECT_FOCUS_ENERGY,        0, NORMAL,    100, 30,   0, STATUS
 	move FLASH_CANNON, EFFECT_SP_DEF_DOWN_HIT,    80, STEEL,     100, 10,  10, SPECIAL
 	move METRONOME,    EFFECT_METRONOME,           0, NORMAL,    100, 10,   0, STATUS
-	move SCALD,        EFFECT_BURN_HIT,           80, WATER,     100, 15,  30, SPECIAL; replace with lava plume
+	move SCALD,        EFFECT_BURN_HIT,           80, WATER,     100, 15,  30, SPECIAL
 	move TRICK_ROOM,   EFFECT_TRICK_ROOM,          0, PSYCHIC,   100,  5,   0, STATUS
 	move SKILL_SWAP,   EFFECT_SKILL_SWAP,          0, PSYCHIC,   100, 10,   0, STATUS
 	move LICK,         EFFECT_PARALYZE_HIT,       30, GHOST,     100, 30,  30, PHYSICAL
@@ -155,7 +155,7 @@ Moves::
 	move LEECH_LIFE,   EFFECT_LEECH_HIT,          80, BUG,       100, 10,   0, PHYSICAL
 	move DRAIN_KISS,   EFFECT_LEECH_HIT,          50, FAIRY,     100, 10,   0, SPECIAL
 	move BRAVE_BIRD,   EFFECT_RECOIL_HIT,        120, FLYING,    100, 15,   0, PHYSICAL
-	move TRANSFORM,    EFFECT_TRANSFORM,           0, NORMAL,    100, 10,   0, STATUS ;; remove? 
+	move TRANSFORM,    EFFECT_TRANSFORM,           0, NORMAL,    100, 10,   0, STATUS 
 	move WATER_PULSE,  EFFECT_CONFUSE_HIT,        60, WATER,     100, 20,  20, SPECIAL
 	move DIZZY_PUNCH,  EFFECT_CONFUSE_HIT,        70, NORMAL,    100, 10,  20, PHYSICAL
 	move SPORE,        EFFECT_SLEEP,               0, GRASS,     100, 15,   0, STATUS

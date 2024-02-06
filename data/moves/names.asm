@@ -10,7 +10,7 @@ MoveNames::
 	li "Fire Punch"
 	li "Ice Punch"
 	li "ThunderPunch"
-	li "Scratch"
+	li "Magma Storm"
 	li "X-Scissor"
 	li "Night Slash"
 	li "Air Slash"

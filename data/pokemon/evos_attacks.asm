@@ -88,6 +88,7 @@ RowletEvosAttacks:
 	db EVOLVE_LEVEL, 17, DARTRIX
 	db 0 ; no more evolutions
 	db 1, TACKLE
+	db 1, MUD_SLAP
 	db 1, LEER
 	db 6, NIGHT_SHADE
 	db 10, RAZOR_LEAF
@@ -163,6 +164,7 @@ OshawottEvosAttacks:
 	db EVOLVE_LEVEL, 17, DEWOTT
 	db 0 ; no more evolutions
 	db 1, TACKLE
+	db 1, LOW_KICK
 	db 1, LEER
 	db 6, AQUA_JET
 	db 10, FOCUS_ENERGY
@@ -410,7 +412,7 @@ NidorinaEvosAttacks:
 	db EVOLVE_ITEM, MOON_STONE, NIDOQUEEN
 	db 0 ; no more evolutions
 	db 1, GROWL
-	db 1, SCRATCH
+	db 1, TACKLE
 	db 7, LEER ; Tail Whip → similar move
 	db 9, DOUBLE_KICK
 	db 13, POISON_STING
@@ -427,7 +429,7 @@ NidorinaEvosAttacks:
 NidoqueenEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, CLOSE_COMBAT ; Superpower → similar move
-	db 1, SCRATCH
+	db 1, TACKLE
 	db 1, LEER ; Tail Whip → similar move
 	db 1, DOUBLE_KICK
 	db 1, POISON_STING
@@ -540,7 +542,7 @@ VulpixEvosAttacks:
 	db 53, HEALINGLIGHT ; new move
 	db 0 ; no more level-up moves
 
-NinetalesPlainEvosAttacks:
+NinetalesEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, NASTY_PLOT ; evolution move
 	db 1, FLAMETHROWER
@@ -709,7 +711,7 @@ BellossomEvosAttacks:
 ParasEvosAttacks:
 	db EVOLVE_LEVEL, 24, PARASECT
 	db 0 ; no more evolutions
-	db 1, SCRATCH
+	db 1, TACKLE
 	db 2, SLEEP_POWDER ; Let's Go move
 	db 4, STUN_SPORE
 	db 6, POISONPOWDER
@@ -727,7 +729,7 @@ ParasEvosAttacks:
 ParasectEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, SHADOW_CLAW ; evolution move
-	db 1, SCRATCH
+	db 1, TACKLE
 	db 2, SLEEP_POWDER ; Let's Go move
 	db 4, STUN_SPORE
 	db 6, POISONPOWDER
@@ -786,7 +788,7 @@ DiglettEvosAttacks:
 	db EVOLVE_LEVEL, 26, DUGTRIO
 	db 0 ; no more evolutions
 	db 1, MUD_SLAP ; Sand Attack → Mud-Slap
-	db 1, SCRATCH
+	db 1, TACKLE
 	db 1, CHARM ; XD move
 	db 4, GROWL
 	db 7, ASTONISH
@@ -807,7 +809,7 @@ DugtrioEvosAttacks:
 	db 1, TRI_ATTACK ; Sand Tomb → Tri Attack ; evolution move
 	db 1, NIGHT_SLASH
 	db 1, MUD_SLAP ; Sand Attack → Mud-Slap
-	db 1, SCRATCH
+	db 1, TACKLE
 	db 1, CHARM ; XD move
 	db 4, GROWL
 	db 7, ASTONISH
@@ -826,7 +828,7 @@ DugtrioEvosAttacks:
 MeowthEvosAttacks:
 	db EVOLVE_LEVEL, 28, PERSIAN
 	db 0 ; no more evolutions
-	db 1, SCRATCH
+	db 1, TACKLE
 	db 1, GROWL
 	db 6, BITE
 	db 9, ASTONISH ; Fake Out → new move
@@ -847,7 +849,7 @@ PersianEvosAttacks:
 	db 1, BUBBLE_BEAM ; RBY TM move
 	db 1, PLAY_ROUGH
 	db 1, SWIFT ; evolution move
-	db 1, SCRATCH
+	db 1, TACKLE
 	db 1, GROWL
 	db 6, BITE
 	db 9, ASTONISH ; Fake Out → new move
@@ -866,7 +868,7 @@ PersianEvosAttacks:
 MankeyEvosAttacks:
 	db EVOLVE_LEVEL, 28, PRIMEAPE
 	db 0 ; no more evolutions
-	db 1, SCRATCH
+	db 1, TACKLE
 	db 1, LOW_KICK
 	db 1, LEER
 	db 1, FOCUS_ENERGY
@@ -888,7 +890,7 @@ MankeyEvosAttacks:
 PrimeapeEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, RAGE
-	db 1, SCRATCH
+	db 1, TACKLE
 	db 1, LOW_KICK
 	db 1, LEER
 	db 1, FOCUS_ENERGY
@@ -1253,7 +1255,7 @@ GolemEvosAttacks:
 	db 60, GYRO_BALL ; Heavy Slam → similar move
 	db 0 ; no more level-up moves
 	
-PonytaPlainEvosAttacks:
+PonytaEvosAttacks:
 	db EVOLVE_LEVEL, 40, RAPIDASH
 	db 0 ; no more evolutions
 	db 1, GROWL
@@ -1293,7 +1295,7 @@ RapidashEvosAttacks:
 	db 49, FLARE_BLITZ
 	db 0 ; no more level-up moves
 	
-SlowpokePlainEvosAttacks:
+SlowpokeEvosAttacks:
 	db EVOLVE_HOLDING, KINGS_ROCK, SLOWKING
 	db EVOLVE_LEVEL, 37, SLOWBRO
 	db 0 ; no more evolutions
@@ -1314,7 +1316,7 @@ SlowpokePlainEvosAttacks:
 	db 58, RECOVER ; Heal Pulse → similar move
 	db 0 ; no more level-up moves
 
-SlowbroPlainEvosAttacks:
+SlowbroEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, DEFENSE_CURL ; Withdraw → similar move ; evolution move
 	db 1, CURSE
@@ -1334,7 +1336,7 @@ SlowbroPlainEvosAttacks:
 	db 68, RECOVER ; Heal Pulse → similar move
 	db 0 ; no more level-up moves
 	
-SlowkingPlainEvosAttacks:
+SlowkingEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, POWER_GEM
 	db 1, HIDDEN_POWER
@@ -1704,7 +1706,7 @@ ExeggcuteEvosAttacks:
 	db 50, PSYCHIC_M ; Bestow → TM move
 	db 0 ; no more level-up moves
 
-ExeggutorPlainEvosAttacks:
+ExeggutorEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE ; Barrage → new move
 	db 1, HYPNOSIS
@@ -1778,7 +1780,7 @@ HitmontopEvosAttacks:
 	db 60, REVERSAL ; Endeavor → new move
 	db 0 ; no more level-up moves
 	
-WeezingPlainEvosAttacks:
+WeezingEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 4, ACID ; Smog → new move
@@ -2647,7 +2649,7 @@ MeganiumEvosAttacks:
 TotodileEvosAttacks:
 	db EVOLVE_LEVEL, 18, CROCONAW
 	db 0 ; no more evolutions
-	db 1, SCRATCH
+	db 1, TACKLE
 	db 1, LEER
 	db 6, WATER_GUN
 	db 8, RAGE
@@ -2669,7 +2671,7 @@ TotodileEvosAttacks:
 CroconawEvosAttacks:
 	db EVOLVE_LEVEL, 30, FERALIGATR
 	db 0 ; no more evolutions
-	db 1, SCRATCH
+	db 1, TACKLE
 	db 1, LEER
 	db 6, WATER_GUN
 	db 8, RAGE
@@ -2691,7 +2693,7 @@ CroconawEvosAttacks:
 FeraligatrEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, NIGHT_SLASH ; evolution move
-	db 1, SCRATCH
+	db 1, TACKLE
 	db 1, LEER
 	db 6, WATER_GUN
 	db 8, RAGE
@@ -3476,7 +3478,7 @@ SneaselEvosAttacks:
 	db EVOLVE_HOLDING, RAZOR_CLAW, WEAVILE
 	db EVOLVE_HOLDING, POISON_BARB, SNEASLER
 	db 0 ; no more evolutions
-	db 1, SCRATCH
+	db 1, TACKLE
 	db 1, LEER
 	db 1, BITE ; Taunt → egg move
 	db 8, QUICK_ATTACK
@@ -3496,7 +3498,7 @@ SneaselEvosAttacks:
 
 WeavileEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, SCRATCH
+	db 1, TACKLE
 	db 1, LEER
 	db 1, BITE ; Taunt → egg move
 	db 8, QUICK_ATTACK
@@ -3516,7 +3518,7 @@ WeavileEvosAttacks:
 
 SneaslerEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, SCRATCH
+	db 1, TACKLE
 	db 1, LEER
 	db 1, BITE ; Taunt → egg move
 	db 8, QUICK_ATTACK
@@ -3536,7 +3538,7 @@ TeddiursaEvosAttacks:
 	db EVOLVE_LEVEL, 30, URSARING
 	db 0 ; no more evolutions
 	db 1, THIEF ; Covet → TM move
-	db 1, SCRATCH
+	db 1, TACKLE
 	db 1, GROWL ; Baby-Doll Eyes → similar move
 	db 1, LICK
 	db 1, FOCUS_ENERGY ; Fake Tears → egg move
@@ -3557,7 +3559,7 @@ UrsaringEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, GUNK_SHOT ; HGSS tutor move
 	db 1, THIEF ; Covet → TM move
-	db 1, SCRATCH
+	db 1, TACKLE
 	db 1, LEER
 	db 1, LICK
 	db 1, FOCUS_ENERGY ; Fake Tears → egg move
@@ -3578,7 +3580,7 @@ UrsalunaEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, GUNK_SHOT ; HGSS tutor move
 	db 1, THIEF ; Covet → TM move
-	db 1, SCRATCH
+	db 1, TACKLE
 	db 1, LEER
 	db 1, LICK
 	db 1, FOCUS_ENERGY ; Fake Tears → egg move
@@ -4432,8 +4434,8 @@ HzoroarkEvosAttacks:
 	db 0 ; no more Evolutions
 	db 1, SHADOW_CLAW
 	db 1, SLASH
-	db 1, CONFUSE_RAY
 	db 1, SUBSTITUTE
+	db 1, TRANSFORM
 	db 45, SHADOW_BALL
 	db 50, NASTY_PLOT
 	db 55, EXTRASENSORY

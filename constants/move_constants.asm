@@ -15,7 +15,7 @@
 	const FIRE_PUNCH   ; $07
 	const ICE_PUNCH    ; $08
 	const THUNDERPUNCH ; $09
-	const SCRATCH      ; $0a
+	const MAGMA_STORM  ; $0a
 	const X_SCISSOR    ; $0b
 	const NIGHT_SLASH  ; $0c
 	const AIR_SLASH    ; $0d
