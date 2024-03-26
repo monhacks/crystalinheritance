@@ -1,0 +1,7 @@
+The only way to drop down is by navigating a maze in the middle two rooms. 
+
+Those two left rooms are in pitch black with holes that will drop you down below if you step in them. 
+
+The layout of the rooms is visible from the left/right rooms beside. You can light a candle in the cabins that illuminates the entire cabin, but the candle is only availabe on the outside rooms. 
+
+HT e

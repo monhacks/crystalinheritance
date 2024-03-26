@@ -131,7 +131,7 @@
 	tilecoll WALL, WALL, WATER, WALL ; 82
 	tilecoll WATER, WALL, WATER, WATER ; 83
 	tilecoll WALL, WATER, WALL, WATER ; 84
-	tilecoll TOP_WALL, TOP_WALL, BOTTOM_WALL, BOTTOM_WALL ; 85
+	tilecoll WALL, WALL, WALL, WALL ; 85
 	tilecoll WATER, WALL, WATER, WALL ; 86
 	tilecoll WALL, WATER, WATER, WATER ; 87
 	tilecoll WATER, WALL, WATER, WALL ; 88
@@ -144,11 +144,11 @@
 	tilecoll FLOOR, TOP_WALL, FLOOR, FLOOR ; 8f
 	tilecoll FLOOR, WALL, FLOOR, WALL ; 90
 	tilecoll WALL, FLOOR, WALL, FLOOR ; 91
-	tilecoll TOP_WALL, FLOOR, TALL_GRASS, TALL_GRASS ; 92
+	tilecoll TOP_WALL, TOP_WALL, TALL_GRASS, TALL_GRASS ; 92
 	tilecoll FLOOR, TOP_WALL, TALL_GRASS, TALL_GRASS ; 93
 	tilecoll WALL, WALL, WALL, WALL ; 94
 	tilecoll WALL, WALL, WALL, WALL ; 95
-	tilecoll LEFT_WALL, RIGHT_WALL, LEFT_WALL, RIGHT_WALL ; 96
+	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 96
 	tilecoll TALL_GRASS, TALL_GRASS, FLOOR, FLOOR ; 97
 	tilecoll WALL, WALL, WALL, WALL ; 98
 	tilecoll WALL, WALL, WALL, WALL ; 99
@@ -214,9 +214,9 @@
 	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; d5
 	tilecoll FLOOR, WALL, FLOOR, WALL ; d6
 	tilecoll FLOOR, FLOOR, WALL, WALL ; d7
-	tilecoll WALL, WALL, WALL, WALL ; d8
-	tilecoll WALL, WALL, WALL, WALL ; d9
-	tilecoll WALL, WALL, WALL, WALL ; da
+	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; d8
+	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; d9
+	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; da
 	tilecoll FLOOR, FLOOR, WALL, FLOOR ; db
 	tilecoll WALL, WALL, WALL, WALL ; dc
 	tilecoll WALL, WALL, WALL, CAVE ; dd
@@ -228,9 +228,9 @@
 	tilecoll WALL, FLOOR, FLOOR, WALL ; e3
 	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; e4
 	tilecoll FLOOR, WALL, FLOOR, FLOOR ; e5
-	tilecoll TOP_WALL, TOP_WALL, BOTTOM_WALL, BOTTOM_WALL ; e6
+	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; e6
 	tilecoll WATER, WATER, WATER, WATER ; e7
-	tilecoll WATERFALL, WATERFALL, WATERFALL, WATERFALL ; e8
+	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; e8
 	tilecoll FLOOR, RIGHT_WALL, FLOOR, RIGHT_WALL ; e9
 	tilecoll LEFT_WALL, FLOOR, LEFT_WALL, FLOOR ; ea
 	tilecoll LEFT_WALL, FLOOR, LEFT_WALL, FLOOR ; eb
