@@ -52,17 +52,17 @@ INCLUDE "maps/HiddenTreeGrotto.asm"
 INCLUDE "maps/HiddenCaveGrotto.asm" ; shares text with HiddenTreeGrotto.asm
 
 
-SECTION "Battle Tower Scripts", ROMX
-
-INCLUDE "maps/BattleTower1F.asm"
-INCLUDE "maps/BattleTower2F.asm"
-INCLUDE "maps/BattleTowerBattleRoom.asm"
-INCLUDE "maps/BattleTowerElevator.asm"
-INCLUDE "maps/BattleTowerHallway.asm"
-INCLUDE "maps/BattleTowerOutside.asm"
-INCLUDE "maps/BattleFactory1F.asm"
-INCLUDE "maps/BattleFactoryHallway.asm"
-INCLUDE "maps/BattleFactoryBattleRoom.asm"
+;SECTION "Battle Tower Scripts", ROMX
+;
+;INCLUDE "maps/BattleTower1F.asm"
+;INCLUDE "maps/BattleTower2F.asm"
+;INCLUDE "maps/BattleTowerBattleRoom.asm"
+;INCLUDE "maps/BattleTowerElevator.asm"
+;INCLUDE "maps/BattleTowerHallway.asm"
+;INCLUDE "maps/BattleTowerOutside.asm"
+;INCLUDE "maps/BattleFactory1F.asm"
+;INCLUDE "maps/BattleFactoryHallway.asm"
+;INCLUDE "maps/BattleFactoryBattleRoom.asm"
 
 
 SECTION "New Bark Scripts", ROMX
@@ -1032,7 +1032,7 @@ INCLUDE "maps/Route39.asm"
 INCLUDE "maps/Route39Barn.asm"
 INCLUDE "maps/Route39Farmhouse.asm"
 INCLUDE "maps/Route40.asm"
-INCLUDE "maps/Route40BattleTowerGate.asm"
+;INCLUDE "maps/Route40BattleTowerGate.asm"
 INCLUDE "maps/Route41.asm"
 
 

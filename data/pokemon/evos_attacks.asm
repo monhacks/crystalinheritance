@@ -4639,8 +4639,8 @@ HeatranEvosAttacks: ;encounter at lv 50
 	db 0 ; no more Evolutions
 	db 1, CRUNCH
 	db 1, METAL_CLAW
-	db 1, IRON_HEAD
-	db 1, FLAMETHROWER
+	db 1, FLASH_CANNON
+	db 1, MAGMA_STORM
 	db 1, ANCIENTPOWER
 	db 1, EARTH_POWER
 	db 55, FIRE_BLAST

@@ -718,9 +718,9 @@ ENDM
 	map_attributes Route11Gate2F, ROUTE_11_GATE_2F, $0, 0
 	map_attributes VermilionPollutionSpeechHouse, VERMILION_POLLUTION_SPEECH_HOUSE, $0, 0
 	map_attributes VermilionSSAnneSpeechHouse, VERMILION_S_S_ANNE_SPEECH_HOUSE, $0, 0
-	map_attributes BattleFactory1F, BATTLE_FACTORY_1F, $0, 0
-	map_attributes BattleFactoryHallway, BATTLE_FACTORY_HALLWAY, $0, 0
-	map_attributes BattleFactoryBattleRoom, BATTLE_FACTORY_BATTLE_ROOM, $0, 0
+;	map_attributes BattleFactory1F, BATTLE_FACTORY_1F, $0, 0
+;	map_attributes BattleFactoryHallway, BATTLE_FACTORY_HALLWAY, $0, 0
+;	map_attributes BattleFactoryBattleRoom, BATTLE_FACTORY_BATTLE_ROOM, $0, 0
 	map_attributes RedsHouse1F, REDS_HOUSE_1F, $0, 0
 	map_attributes RedsHouse2F, REDS_HOUSE_2F, $0, 0
 	map_attributes BluesHouse1F, BLUES_HOUSE_1F, $0, 0
@@ -848,13 +848,13 @@ ENDM
 	map_attributes CianwoodCityPhotoStudio, CIANWOOD_CITY_PHOTO_STUDIO, $0, 0
 	map_attributes CianwoodLugiaSpeechHouse, CIANWOOD_LUGIA_SPEECH_HOUSE, $0, 0
 	map_attributes MoveManiacsHouse, MOVE_MANIACS_HOUSE, $0, 0
-	map_attributes BattleTower1F, BATTLE_TOWER_1F, $0, 0
-	map_attributes BattleTower2F, BATTLE_TOWER_2F, $0, 0
-	map_attributes BattleTowerBattleRoom, BATTLE_TOWER_BATTLE_ROOM, $0, 0
-	map_attributes BattleTowerElevator, BATTLE_TOWER_ELEVATOR, $0, 0
-	map_attributes BattleTowerHallway, BATTLE_TOWER_HALLWAY, $0, 0
-	map_attributes Route40BattleTowerGate, ROUTE_40_BATTLE_TOWER_GATE, $0, 0
-	map_attributes BattleTowerOutside, BATTLE_TOWER_OUTSIDE, $5, 0
+;	map_attributes BattleTower1F, BATTLE_TOWER_1F, $0, 0
+;	map_attributes BattleTower2F, BATTLE_TOWER_2F, $0, 0
+;	map_attributes BattleTowerBattleRoom, BATTLE_TOWER_BATTLE_ROOM, $0, 0
+;	map_attributes BattleTowerElevator, BATTLE_TOWER_ELEVATOR, $0, 0
+;	map_attributes BattleTowerHallway, BATTLE_TOWER_HALLWAY, $0, 0
+;	map_attributes Route40BattleTowerGate, ROUTE_40_BATTLE_TOWER_GATE, $0, 0
+;	map_attributes BattleTowerOutside, BATTLE_TOWER_OUTSIDE, $5, 0
 	map_attributes CliffEdgeGate, CLIFF_EDGE_GATE, $9, 0
 	map_attributes CliffCave, CLIFF_CAVE, $9, 0
 	map_attributes ViridianGym, VIRIDIAN_GYM, $0, 0

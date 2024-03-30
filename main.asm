@@ -305,8 +305,8 @@ INCLUDE "engine/events/kurt.asm"
 INCLUDE "engine/gfx/player_gfx.asm"
 INCLUDE "engine/events/unown_walls.asm"
 INCLUDE "engine/events/buena.asm"
-INCLUDE "engine/events/battle_tower/battle_tower.asm"
-INCLUDE "engine/events/battle_tower/trainer_text.asm"
+;INCLUDE "engine/events/battle_tower/battle_tower.asm"
+;INCLUDE "engine/events/battle_tower/trainer_text.asm"
 INCLUDE "engine/events/item_maniacs.asm"
 
 
@@ -512,11 +512,11 @@ SECTION "Diploma", ROMX
 INCLUDE "engine/events/diploma.asm"
 
 
-SECTION "Battle Tower Text", ROMX
-
-INCLUDE "data/battle_tower/trainer_text.asm"
-
-
+;SECTION "Battle Tower Text", ROMX
+;
+;INCLUDE "data/battle_tower/trainer_text.asm"
+;
+;
 SECTION "Unique Wild Moves", ROMX
 
 INCLUDE "engine/battle/unique_wild_moves.asm"
@@ -543,7 +543,7 @@ INCLUDE "engine/overworld/landmarks.asm"
 
 SECTION "Crystal Events", ROMX
 
-INCLUDE "engine/events/battle_tower/load_trainer.asm"
+;INCLUDE "engine/events/battle_tower/load_trainer.asm"
 INCLUDE "engine/events/odd_egg.asm"
 
 

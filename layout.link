@@ -153,12 +153,12 @@ ROMX $2E
 ROMX $2F
 	"Phone Scripts 2"
 
-ROMX $30
-	"Battle Tower Scripts"
-
-ROMX $31
-	"Battle Tower Text"
-
+;ROMX $30
+;	"Battle Tower Scripts"
+;
+;ROMX $31
+;	"Battle Tower Text"
+;
 ROMX $32
 	"bank32"
 

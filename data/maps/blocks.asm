@@ -52,7 +52,7 @@ Route2946Gate_BlockData:
 Route34IlexForestGate_BlockData:
 Route35GoldenrodGate_BlockData:
 Route36RuinsOfAlphGate_BlockData:
-Route40BattleTowerGate_BlockData:
+;Route40BattleTowerGate_BlockData:
 YellowForestGate_BlockData:
 Route43Gate_BlockData:
 Route43MahoganyGate_BlockData:
@@ -681,30 +681,30 @@ SECTION "OlivineLighthouseRoof_BlockData", ROMX
 OlivineLighthouseRoof_BlockData:
 	INCBIN "maps/OlivineLighthouseRoof.ablk.lz"
 
-SECTION "BattleTower1F_BlockData", ROMX
-BattleTower1F_BlockData:
-	INCBIN "maps/BattleTower1F.ablk.lz"
-
-SECTION "BattleTower2F_BlockData", ROMX
-BattleTower2F_BlockData:
-	INCBIN "maps/BattleTower2F.ablk.lz"
-
-SECTION "BattleTowerBattleRoom_BlockData", ROMX
-BattleTowerBattleRoom_BlockData:
-	INCBIN "maps/BattleTowerBattleRoom.ablk.lz"
-
-SECTION "BattleTowerElevator_BlockData", ROMX
-BattleTowerElevator_BlockData:
-	INCBIN "maps/BattleTowerElevator.ablk.lz"
-
-SECTION "BattleTowerHallway_BlockData", ROMX
-BattleTowerHallway_BlockData:
-	INCBIN "maps/BattleTowerHallway.ablk.lz"
-
-SECTION "BattleTowerOutside_BlockData", ROMX
-BattleTowerOutside_BlockData:
-	INCBIN "maps/BattleTowerOutside.ablk.lz"
-
+;SECTION "BattleTower1F_BlockData", ROMX
+;BattleTower1F_BlockData:
+;	INCBIN "maps/BattleTower1F.ablk.lz"
+;
+;SECTION "BattleTower2F_BlockData", ROMX
+;BattleTower2F_BlockData:
+;	INCBIN "maps/BattleTower2F.ablk.lz"
+;
+;SECTION "BattleTowerBattleRoom_BlockData", ROMX
+;BattleTowerBattleRoom_BlockData:
+;	INCBIN "maps/BattleTowerBattleRoom.ablk.lz"
+;
+;SECTION "BattleTowerElevator_BlockData", ROMX
+;BattleTowerElevator_BlockData:
+;	INCBIN "maps/BattleTowerElevator.ablk.lz"
+;
+;SECTION "BattleTowerHallway_BlockData", ROMX
+;BattleTowerHallway_BlockData:
+;	INCBIN "maps/BattleTowerHallway.ablk.lz"
+;
+;SECTION "BattleTowerOutside_BlockData", ROMX
+;BattleTowerOutside_BlockData:
+;	INCBIN "maps/BattleTowerOutside.ablk.lz"
+;
 SECTION "WhirlIslandNE_BlockData", ROMX
 WhirlIslandNE_BlockData:
 	INCBIN "maps/WhirlIslandNE.ablk.lz"
@@ -1869,15 +1869,15 @@ Route48_BlockData:
 SECTION "Route49_BlockData", ROMX
 Route49_BlockData:
 	INCBIN "maps/Route49.ablk.lz"
-
-SECTION "BattleFactory1F_BlockData", ROMX
-BattleFactory1F_BlockData:
-	INCBIN "maps/BattleFactory1F.ablk.lz"
-
-SECTION "BattleFactoryHallway_BlockData", ROMX
-BattleFactoryHallway_BlockData:
-	INCBIN "maps/BattleFactoryHallway.ablk.lz"
-
-SECTION "BattleFactoryBattleRoom_BlockData", ROMX
-BattleFactoryBattleRoom_BlockData:
-	INCBIN "maps/BattleFactoryBattleRoom.ablk.lz"
+;
+;SECTION "BattleFactory1F_BlockData", ROMX
+;BattleFactory1F_BlockData:
+;	INCBIN "maps/BattleFactory1F.ablk.lz"
+;
+;SECTION "BattleFactoryHallway_BlockData", ROMX
+;BattleFactoryHallway_BlockData:
+;	INCBIN "maps/BattleFactoryHallway.ablk.lz"
+;
+;SECTION "BattleFactoryBattleRoom_BlockData", ROMX
+;BattleFactoryBattleRoom_BlockData:
+;	INCBIN "maps/BattleFactoryBattleRoom.ablk.lz"

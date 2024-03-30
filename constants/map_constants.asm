@@ -24,6 +24,7 @@ ENDM
 ; - attributes (see data/maps/attributes.asm)
 ; - blocks (see data/maps/blocks.asm)
 ; - scripts and events (see data/maps/scripts.asm)
+
 	const_def
 
 	newgroup                                                     ;  1
@@ -304,9 +305,9 @@ ENDM
 	map_const ROUTE_11_GATE_2F,                            4,  4 ; 14
 	map_const VERMILION_POLLUTION_SPEECH_HOUSE,            4,  4 ; 15
 	map_const VERMILION_S_S_ANNE_SPEECH_HOUSE,             4,  4 ; 16
-	map_const BATTLE_FACTORY_1F,                          13,  6 ; 17
-	map_const BATTLE_FACTORY_HALLWAY,                      5,  7 ; 18
-	map_const BATTLE_FACTORY_BATTLE_ROOM,                  5,  6 ; 19
+;	map_const BATTLE_FACTORY_1F,                          13,  6 ; 17
+;	map_const BATTLE_FACTORY_HALLWAY,                      5,  7 ; 18
+;	map_const BATTLE_FACTORY_BATTLE_ROOM,                  5,  6 ; 19
 
 	newgroup                                                     ; 13
 	map_const ROUTE_1,                                    12, 18 ;  1
@@ -504,13 +505,13 @@ ENDM
 	map_const CIANWOOD_CITY_PHOTO_STUDIO,                  4,  4 ;  8
 	map_const CIANWOOD_LUGIA_SPEECH_HOUSE,                 4,  4 ;  9
 	map_const MOVE_MANIACS_HOUSE,                          4,  4 ; 10
-	map_const BATTLE_TOWER_1F,                            11,  8 ; 11
-	map_const BATTLE_TOWER_2F,                            11,  5 ; 12
-	map_const BATTLE_TOWER_BATTLE_ROOM,                    4,  4 ; 13
-	map_const BATTLE_TOWER_ELEVATOR,                       2,  2 ; 14
-	map_const BATTLE_TOWER_HALLWAY,                       11,  2 ; 15
-	map_const ROUTE_40_BATTLE_TOWER_GATE,                  5,  4 ; 16
-	map_const BATTLE_TOWER_OUTSIDE,                       10, 13 ; 17
+;	map_const BATTLE_TOWER_1F,                            11,  8 ; 11
+;	map_const BATTLE_TOWER_2F,                            11,  5 ; 12
+;	map_const BATTLE_TOWER_BATTLE_ROOM,                    4,  4 ; 13
+;	map_const BATTLE_TOWER_ELEVATOR,                       2,  2 ; 14
+;	map_const BATTLE_TOWER_HALLWAY,                       11,  2 ; 15
+;	map_const ROUTE_40_BATTLE_TOWER_GATE,                  5,  4 ; 16
+;	map_const BATTLE_TOWER_OUTSIDE,                       10, 13 ; 17
 
 	newgroup                                                     ; 23
 	map_const ROUTE_2_SOUTH,                              10, 18 ;  1

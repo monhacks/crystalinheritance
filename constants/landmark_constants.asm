@@ -41,7 +41,7 @@
 	const OLIVINE_CITY       ; 25
 	const LIGHTHOUSE         ; 26
 	const ROUTE_40           ; 27
-	const BATTLE_TOWER       ; 28
+;	const BATTLE_TOWER       ; 28
 	const WHIRL_ISLANDS      ; 29
 	const ROUTE_41           ; 2a
 	const CIANWOOD_CITY      ; 2b

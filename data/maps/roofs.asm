@@ -14,7 +14,7 @@ MapGroupRoofs:
 	db  2 ; group 9 (Lake of Rage)
 	db  1 ; group 10 (Violet City)
 	db -1 ; group 11 (Goldenrod City)
-	db -1 ; group 12
+	db -1 ; group 12 ; 03-29-24 removed battle factory 1f from this group. 
 	db -1 ; group 13
 	db -1 ; group 14
 	db -1 ; group 15

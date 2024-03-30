@@ -45,7 +45,7 @@ Landmarks:
 	landmark  44,  76, OlivineCityName
 	landmark  46,  78, LighthouseName
 	landmark  36,  80, Route40Name
-	landmark  36,  68, BattleTowerName
+;	landmark  36,  68, BattleTowerName
 	landmark  36, 108, WhirlIslandsName
 	landmark  36, 116, Route41Name
 	landmark  28, 116, CianwoodCityName
