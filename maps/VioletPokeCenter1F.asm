@@ -6,7 +6,6 @@ VioletPokeCenter1F_MapScriptHeader:
 	def_warp_events
 	warp_event  5,  7, VIOLET_CITY, 5
 	warp_event  6,  7, VIOLET_CITY, 5
-	warp_event  0,  7, POKECENTER_2F, 1
 
 	def_coord_events
 
@@ -53,7 +52,7 @@ VioletPokeCenter1FElmsAideScript:
 	yesorno
 	iffalse .RefusedEgg
 	readvar VAR_PARTYCOUNT
-	giveegg TOGEPI
+	giveegg TOGETIC
 	iffalse_jumpopenedtext .PartyAndBoxFull
 	setevent EVENT_GOT_TOGEPI_EGG_FROM_ELMS_AIDE
 	clearevent EVENT_ELMS_AIDE_IN_LAB

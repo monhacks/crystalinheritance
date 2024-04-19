@@ -277,10 +277,10 @@ _GetSpritePalette::
 
 .is_pokemon
 	ld a, [wMapGroup]
-	cp GROUP_PLAYERS_HOUSE_2F
+	cp GROUP_ROUTE_34; CHANGED FROM PLAYERS HOUSE
 	jr nz, .not_doll
 	ld a, [wMapNumber]
-	cp MAP_PLAYERS_HOUSE_2F
+	cp MAP_ROUTE_34 ; CHANGED FROM PLAYERS HOUSE
 	jr nz, .not_doll
 	farjp GetOverworldMonIconPalette
 

@@ -24,7 +24,7 @@ MapSetupScript_Teleport:
 	mapsetup ResetPlayerObjectAction
 MapSetupScript_Fly:
 	mapsetup FadeOutPalettes
-	mapsetup JumpRoamMons
+;	mapsetup JumpRoamMons
 MapSetupScript_Warp:
 	mapsetup DisableLCD
 	mapsetup InitSound
@@ -93,7 +93,7 @@ MapSetupScript_Connection:
 	mapsetup InitMapNameSign
 	mapsetup ApplyMapPalettes
 	mapsetup LoadWildMonData
-	mapsetup UpdateRoamMons
+;	mapsetup UpdateRoamMons
 	mapsetup ActivateMapAnims
 	db -1 ; end
 
@@ -122,7 +122,7 @@ MapSetupScript_Train:
 	mapsetup FadeInPalettes
 	mapsetup ActivateMapAnims
 	mapsetup LoadWildMonData
-	mapsetup UpdateRoamMons
+;	mapsetup UpdateRoamMons
 	db -1 ; end
 
 MapSetupScript_ReloadMap:

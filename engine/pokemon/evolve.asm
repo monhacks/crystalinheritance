@@ -122,7 +122,7 @@ EvolveAfterBattle_MasterLoop:
 
 	; Spiky-eared Pichu cannot evolve
 	ld a, [wTempMonSpecies]
-	cp PICHU
+	cp PIKACHU
 	jr nz, .not_spiky_eared_pichu
 	ld a, [wTempMonForm]
 	and SPECIESFORM_MASK
@@ -394,12 +394,12 @@ endr
 	call nz, RestartMapMusic
 	ret
 
-ChangeFormOnLevelEvolution:
+ChangeFormOnLevelEvolution: ;TRIED COMMENTING THIS OUT BUT CAUSES MORE PROBLEMS
 ; These Pokémon evolve into plain forms by level.
 	ld a, [wTempMonSpecies]
-	cp CUBONE
+	cp EKANS
 	jr z, _PlainFormOnEvolution
-	cp KOFFING
+	cp EKANS
 	ret nz
 
 _PlainFormOnEvolution:
@@ -419,13 +419,13 @@ ChangeFormOnItemEvolution:
 	jr z, .ok
 	cp EXEGGCUTE
 	jr z, .ok
-	cp CUBONE
+	cp PONYTA
 	ret nz
 
 .ok
 	ld a, [wCurItem]
-	cp ODD_SOUVENIR
-	ld a, ALOLAN_FORM
+	cp ODD_SOUVENIR ; HOPEFULLY THIS ITEM IS JUST NOT AVAILABLE?
+	ld a, PLAIN_FORM
 	jr z, _ChangeFormOnEvolution
 	jr _PlainFormOnEvolution
 

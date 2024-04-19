@@ -26,17 +26,17 @@ NPCTrades:
 	dw 15616
 	rawchar "Chris@@@", $00
 ; NPC_TRADE_KIM in Route 14
-	rawchar 3, WOBBUFFET,  CHANSEY,    "Chance@@@@@"
+	rawchar 3, CHANSEY,  CHANSEY,    "Chance@@@@@"
 	db $EE, $EE, $EE, HIDDEN_ABILITY | NAT_SDEF_UP_ATK_DOWN,  FEMALE, HEAL_BALL,    LUCKY_EGG
 	dw 26491
 	rawchar "Kim@@@@@", $00
 ; NPC_TRADE_JACQUES in Goldenrod Harbor
-	rawchar 1, TENTACOOL,  GRIMER,     "Gail@@@@@@@"
+	rawchar 1, GRIMER,  GRIMER,     "Gail@@@@@@@"
 	db $EE, $EE, $EE, HIDDEN_ABILITY | NAT_SDEF_UP_SATK_DOWN, FEMALE, LURE_BALL,    EVIOLITE
 	dw 50082
 	rawchar "Jacques@", $00
 ; NPC_TRADE_HARI in Ecruteak City
-	rawchar 0, FARFETCH_D, DODUO,      "Clarence@@@"
+	rawchar 0, FARFETCH_D, PIDGEY,      "Clarence@@@"
 	db $EE, $EE, $EE, HIDDEN_ABILITY | NAT_SPD_UP_DEF_DOWN,   MALE,   FAST_BALL,    GOLD_LEAF
 	dw 43972
 	rawchar "Hari@@@@", $00

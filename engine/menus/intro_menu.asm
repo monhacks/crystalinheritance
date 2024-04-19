@@ -63,7 +63,7 @@ _NewGame_FinishSetup:
 	ld a, 1
 	ld [wPrevLandmark], a
 
-	ld a, SPAWN_HOME
+	ld a, SPAWN_KURTS_HOUSE
 	ld [wDefaultSpawnpoint], a
 
 	ld a, MAPSETUP_WARP
@@ -322,7 +322,7 @@ Continue:
 	call ClearTileMap
 	ld c, 20
 	call DelayFrames
-	farcall JumpRoamMons
+;	farcall JumpRoamMons ; NO ROAMING MONS
 	farcall ClockContinue ; time-related
 	ld a, [wSpawnAfterChampion]
 	cp SPAWN_LANCE
@@ -332,13 +332,13 @@ Continue:
 	jr FinishContinueFunction
 
 .SpawnAfterE4:
-	ld a, SPAWN_NEW_BARK
+	ld a, SPAWN_KURTS_HOUSE
 	ld [wDefaultSpawnpoint], a
 	call PostCreditsSpawn
 	jr FinishContinueFunction
 
 SpawnAfterLeaf:
-	ld a, SPAWN_HOME
+	ld a, SPAWN_KURTS_HOUSE
 	ld [wDefaultSpawnpoint], a
 	; fallthrough
 
@@ -566,7 +566,7 @@ ProfElmSpeech:
 
 	xor a
 	ld [wCurPartySpecies], a
-	ld a, PROF_ELM
+	ld a, IMAKUNI ; Kurt's sprite replaces Imakuni. todo replace the sprite imakuni with kurt's since it will be easier to work with
 	ld [wTrainerClass], a
 	call Intro_PrepTrainerPic
 
@@ -575,7 +575,7 @@ ProfElmSpeech:
 	call InitIntroGradient
 	call Intro_RotatePalettesLeftFrontpic
 
-	ld hl, ElmText1
+	ld hl, ElmText1 ; ?
 	call PrintText
 if !DEF(DEBUG)
 	ld c, 15

@@ -30,22 +30,22 @@ CheckUniqueWildMove:
 	jr z, .TeachMove ; assume this is for Explosion in TeamRocketBaseB1F
 	cp UNION_CAVE
 	jr z, .TeachMove ; assume this is a Lapras in UnionCaveB2F
-	cp YELLOW_FOREST
-	jr nz, .ChanceToTeach
+;	cp YELLOW_FOREST
+;	jr nz, .ChanceToTeach
 	; assume this is a Pikachu in YellowForest; Surf (always teach) or Fly?
-	ld a, [wPlayerState]
-	cp PLAYER_SURF
-	jr z, .SurfingPikachu
-	cp PLAYER_SURF_PIKA
-	jr nz, .ChanceToTeach
-.SurfingPikachu
-	ld a, SURF
-	ld b, a
-	jr .TeachMove
-.ChanceToTeach
-	call Random
-	cp 50 percent + 1
-	ret nc
+;	ld a, [wPlayerState]
+;	cp PLAYER_SURF
+;	jr z, .SurfingPikachu
+;	cp PLAYER_SURF_PIKA
+;	jr nz, .ChanceToTeach
+;.SurfingPikachu
+;	ld a, SURF
+;	ld b, a
+;	jr .TeachMove
+;.ChanceToTeach
+;	call Random
+;	cp 50 percent + 1
+;	ret nc
 .TeachMove
 	ld hl, wOTPartyMon1Moves + 1 ; second move
 	ld a, [hl]

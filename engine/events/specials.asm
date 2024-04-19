@@ -360,32 +360,32 @@ RespawnOneOffs:
 	eventflagreset EVENT_ROUTE_36_SUDOWOODO
 .CaughtSudowoodo
 
-	ld a, ARTICUNO - 1
+	ld a, SUICUNE - 1 ; CHANGED
 	call CheckCaughtMon
 	jr nz, .CaughtArticuno
 	eventflagreset EVENT_SEAFOAM_ISLANDS_ARTICUNO
 .CaughtArticuno
 
-	ld a, ZAPDOS - 1
+	ld a, RAIKOU - 1; CHANGED
 	call CheckCaughtMon
 	jr nz, .CaughtZapdos
 	eventflagreset EVENT_ROUTE_10_ZAPDOS
 	eventflagreset EVENT_ZAPDOS_GONE
 .CaughtZapdos
 
-	ld a, MOLTRES - 1
+	ld a, ENTEI - 1; CHANGED
 	call CheckCaughtMon
 	jr nz, .CaughtMoltres
 	eventflagreset EVENT_CINNABAR_VOLCANO_MOLTRES
 .CaughtMoltres
 
-	ld a, MEWTWO - 1
+	ld a, CELEBI - 1; CHANGED
 	call CheckCaughtMon
 	jr nz, .CaughtMewtwo
 	eventflagreset EVENT_CERULEAN_CAVE_MEWTWO
 .CaughtMewtwo
 
-	ld a, MEW - 1
+	ld a, CELEBI - 1; CHANGED
 	call CheckCaughtMon
 	jr nz, .CaughtMew
 	eventflagreset EVENT_FARAWAY_JUNGLE_MEW

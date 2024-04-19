@@ -11,8 +11,8 @@ MomPhoneScript:
 	iftrue MomPhoneLectureScript
 	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
 	iftrue MomPhoneNoGymQuestScript
-	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
-	iftrue MomPhoneNoPokedexScript
+;	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
+;	iftrue MomPhoneNoPokedexScript
 	sjump MomPhoneNoPokemonScript
 
 .bcec5
@@ -33,8 +33,8 @@ MomPhoneLandmark:
 
 MomPhoneInTown:
 	readvar VAR_MAPGROUP
-	ifequal GROUP_NEW_BARK_TOWN, .newbark
-	ifequal GROUP_CHERRYGROVE_CITY, .cherrygrove
+	ifequal GROUP_TINDER_GARDEN, .newbark
+	ifequal GROUP_ILEX_FOREST, .cherrygrove
 	ifequal GROUP_VIOLET_CITY, .violet
 	ifequal GROUP_AZALEA_TOWN, .azalea
 	ifequal GROUP_GOLDENROD_CITY, .goldenrod
@@ -187,8 +187,8 @@ BillPhoneScript1:
 	sjump BillPhoneScriptCheckForBoxes
 
 BillPhoneScript2:
-	readvar VAR_SPECIALPHONECALL
-	ifequal SPECIALCALL_SECONDBADGE, BillPhoneScriptSecondBadge
+;	readvar VAR_SPECIALPHONECALL
+;	ifequal SPECIALCALL_SECONDBADGE, BillPhoneScriptSecondBadge
 	farwritetext BillPhoneNewlyFullText
 BillPhoneScriptCheckForBoxes:
 	special BillBoxSwitchCheck
@@ -280,12 +280,12 @@ ElmPhoneScript1:
 	end
 
 ElmPhoneScript2:
-	readvar VAR_SPECIALPHONECALL
-	ifequal SPECIALCALL_ROBBED, .disaster
-	ifequal SPECIALCALL_ASSISTANT, .assistant
-	ifequal SPECIALCALL_WEIRDBROADCAST, .rocket
-	ifequal SPECIALCALL_SSTICKET, .gift
-	ifequal SPECIALCALL_MASTERBALL, .gift
+;	readvar VAR_SPECIALPHONECALL
+;	ifequal SPECIALCALL_ROBBED, .disaster
+;	ifequal SPECIALCALL_ASSISTANT, .assistant
+;	ifequal SPECIALCALL_WEIRDBROADCAST, .rocket
+;	ifequal SPECIALCALL_SSTICKET, .gift
+;	ifequal SPECIALCALL_MASTERBALL, .gift
 	farwritetext ElmPhonePokerusText
 	specialphonecall SPECIALCALL_NONE
 	end
@@ -357,10 +357,10 @@ LyraPhoneScript:
 	end
 
 LyraPhoneScript2:
-	readvar VAR_SPECIALPHONECALL
-	ifequal SPECIALCALL_YELLOWFOREST, .yellowforest
-	ifequal SPECIALCALL_FIRSTBADGE, .firstbadge
-	ifequal SPECIALCALL_LYRASEGG, .lyrasegg
+;	readvar VAR_SPECIALPHONECALL
+;	ifequal SPECIALCALL_YELLOWFOREST, .yellowforest
+;	ifequal SPECIALCALL_FIRSTBADGE, .firstbadge
+;	ifequal SPECIALCALL_LYRASEGG, .lyrasegg
 	specialphonecall SPECIALCALL_NONE
 	sjump LyraPhoneScript
 
@@ -540,7 +540,7 @@ UnknownScript_0xbd1f9:
 	farsjump GavenHangUpNotThursdayScript
 
 UnknownScript_0xbd1fd:
-	getlandmarkname ROUTE_26, $2
+	getlandmarkname ROUTE_32, $2
 	farsjump GavenReminderScript
 
 GavenPhoneScript2:
@@ -562,7 +562,7 @@ GavenThursdayMorningScript:
 	setflag ENGINE_GAVEN_THURSDAY_MORNING
 
 GavenWantsRematch:
-	getlandmarkname ROUTE_26, $2
+	getlandmarkname ROUTE_32, $2
 	setflag ENGINE_GAVEN_READY_FOR_REMATCH
 	farsjump PhoneScript_WantsToBattle_Male
 
@@ -587,7 +587,7 @@ UnknownScript_0xbd25c:
 	farsjump BethHangUpScript
 
 UnknownScript_0xbd260:
-	getlandmarkname ROUTE_26, $2
+	getlandmarkname ROUTE_32, $2
 	farsjump BethBattleReminderScript
 
 BethPhoneScript2:
@@ -607,7 +607,7 @@ BethFridayAfternoon:
 	setflag ENGINE_BETH_FRIDAY_AFTERNOON
 
 BethWantsBattle:
-	getlandmarkname ROUTE_26, $2
+	getlandmarkname ROUTE_32, $2
 	setflag ENGINE_BETH_READY_FOR_REMATCH
 	farsjump PhoneScript_WantsToBattle_Female
 
@@ -631,11 +631,11 @@ UnknownScript_0xbd2b9:
 	farsjump JoseHangUpScript
 
 UnknownScript_0xbd2bd:
-	getlandmarkname ROUTE_27, $2
+	getlandmarkname ROUTE_32, $2
 	farsjump JoseReminderScript
 
 UnknownScript_0xbd2c4:
-	getlandmarkname ROUTE_27, $2
+	getlandmarkname ROUTE_32, $2
 	farsjump JoseReminderScript
 
 JosePhoneScript2:
@@ -661,7 +661,7 @@ JoseSaturdayNight:
 	setflag ENGINE_JOSE_SATURDAY_NIGHT
 
 JoseWantsBattle:
-	getlandmarkname ROUTE_27, $2
+	getlandmarkname ROUTE_32, $2
 	setflag ENGINE_JOSE_READY_FOR_REMATCH
 	farsjump PhoneScript_WantsToBattle_Male
 
@@ -670,7 +670,7 @@ JoseFoundRare:
 
 JoseHasStarPiece:
 	setflag ENGINE_JOSE_HAS_STAR_PIECE
-	getlandmarkname ROUTE_27, $2
+	getlandmarkname ROUTE_32, $2
 	farsjump PhoneScript_FoundItem_Male
 
 ; Reena
@@ -691,7 +691,7 @@ UnknownScript_0xbd33b:
 	farsjump ReenaForwardScript
 
 UnknownScript_0xbd33f:
-	getlandmarkname ROUTE_27, $2
+	getlandmarkname ROUTE_32, $2
 	farsjump ReenaHurryScript
 
 ReenaPhoneScript2:
@@ -711,7 +711,7 @@ ReenaSundayMorning:
 	setflag ENGINE_REENA_SUNDAY_MORNING
 
 ReenaWantsBattle:
-	getlandmarkname ROUTE_27, $2
+	getlandmarkname ROUTE_32, $2
 	setflag ENGINE_REENA_READY_FOR_REMATCH
 	farsjump PhoneScript_WantsToBattle_Female
 
@@ -736,7 +736,7 @@ UnknownScript_0xbd392:
 	farsjump PhoneScript_HangupText_Male
 
 UnknownScript_0xbd399:
-	getlandmarkname ROUTE_30, $2
+	getlandmarkname ROUTE_32, $2
 	farsjump JoeyReminderScript
 
 JoeyPhoneScript2:
@@ -757,7 +757,7 @@ JoeyMondayAfternoon:
 	setflag ENGINE_JOEY_MONDAY_AFTERNOON
 
 JoeyWantsBattle:
-	getlandmarkname ROUTE_30, $2
+	getlandmarkname ROUTE_32, $2
 	setflag ENGINE_JOEY_READY_FOR_REMATCH
 	farsjump PhoneScript_WantsToBattle_Male
 
@@ -794,11 +794,11 @@ UnknownScript_0xbd416:
 	farsjump PhoneScript_BugCatchingContest
 
 UnknownScript_0xbd41a:
-	getlandmarkname ROUTE_31, $2
+	getlandmarkname ROUTE_32, $2
 	farsjump WadeQuickBattleScript
 
 UnknownScript_0xbd421:
-	getlandmarkname ROUTE_31, $2
+	getlandmarkname ROUTE_32, $2
 	farsjump WadeComeQuickScript
 
 WadePhoneScript2:
@@ -839,7 +839,7 @@ WadeTuesdayNight:
 	setflag ENGINE_WADE_TUESDAY_NIGHT
 
 WadeWantsBattle2:
-	getlandmarkname ROUTE_31, $2
+	getlandmarkname ROUTE_32, $2
 	setflag ENGINE_WADE_READY_FOR_REMATCH
 	farsjump PhoneScript_WantsToBattle_Male
 
@@ -848,7 +848,7 @@ WadeFoundRare:
 
 WadeHasItem2:
 	setflag ENGINE_WADE_HAS_ITEM
-	getlandmarkname ROUTE_31, $2
+	getlandmarkname ROUTE_32, $2
 	clearevent EVENT_WADE_HAS_ORAN_BERRY
 	clearevent EVENT_WADE_HAS_PECHA_BERRY
 	clearevent EVENT_WADE_HAS_CHERI_BERRY
@@ -1099,10 +1099,10 @@ AnthonyWantsBattle:
 AnthonyTriesDunsparceSwarm:
 	checkflag ENGINE_DUNSPARCE_SWARM
 	iftrue UnknownScript_0xbd6bd
-	setflag ENGINE_DUNSPARCE_SWARM
-	getmonname DUNSPARCE, $1
-	swarm SWARM_DUNSPARCE, DARK_CAVE_VIOLET_ENTRANCE
-	getlandmarkname DARK_CAVE, $2
+;	setflag ENGINE_DUNSPARCE_SWARM
+;	getmonname DUNSPARCE, $1
+;	swarm SWARM_DUNSPARCE, DARK_CAVE_VIOLET_ENTRANCE
+;	getlandmarkname DARK_CAVE, $2
 	farsjump AnthonySwarmScript
 
 UnknownScript_0xbd6bd:
@@ -1789,7 +1789,7 @@ UnknownScript_0xbdc92:
 	farsjump VanceLookingForwardScript
 
 UnknownScript_0xbdc96:
-	getlandmarkname ROUTE_44, $2
+	getlandmarkname ROUTE_43, $2
 	farsjump VanceHurryHurryScript
 
 VancePhoneScript2:
@@ -1810,7 +1810,7 @@ VanceWednesdayNight:
 	setflag ENGINE_VANCE_WEDNESDAY_NIGHT
 
 VanceWantsRematch:
-	getlandmarkname ROUTE_44, $2
+	getlandmarkname ROUTE_43, $2
 	setflag ENGINE_VANCE_READY_FOR_REMATCH
 	farsjump PhoneScript_WantsToBattle_Male
 
@@ -1832,11 +1832,11 @@ UnknownScript_0xbdcf3:
 	farsjump WiltonHaventFoundAnythingScript
 
 UnknownScript_0xbdcf7:
-	getlandmarkname ROUTE_44, $2
+	getlandmarkname ROUTE_43, $2
 	farsjump WiltonNotBitingScript
 
 UnknownScript_0xbdcfe:
-	getlandmarkname ROUTE_44, $2
+	getlandmarkname ROUTE_43, $2
 	farsjump WiltonWantThisScript
 
 WiltonPhoneScript2:
@@ -1860,13 +1860,13 @@ WiltonThursdayMorning:
 	setflag ENGINE_WILTON_THRUSDAY_MORNING
 
 WiltonWantsBattle:
-	getlandmarkname ROUTE_44, $2
+	getlandmarkname ROUTE_43, $2
 	setflag ENGINE_WILTON_READY_FOR_REMATCH
 	farsjump PhoneScript_WantsToBattle_Male
 
 WiltonHasItem:
 	setflag ENGINE_WILTON_HAS_ITEM
-	getlandmarkname ROUTE_44, $2
+	getlandmarkname ROUTE_43, $2
 	clearevent EVENT_WILTON_HAS_ULTRA_BALL
 	clearevent EVENT_WILTON_HAS_GREAT_BALL
 	clearevent EVENT_WILTON_HAS_POKE_BALL
@@ -1920,7 +1920,7 @@ UnknownScript_0xbdda8:
 	farsjump ParryBattleWithMeScript
 
 UnknownScript_0xbddac:
-	getlandmarkname ROUTE_45, $2
+	getlandmarkname ROUTE_43, $2
 	farsjump ParryHaventYouGottenToScript
 
 ParryPhoneScript2:
@@ -1941,7 +1941,7 @@ ParryFridayDay:
 	setflag ENGINE_PARRY_FRIDAY_AFTERNOON
 
 ParryWantsBattle:
-	getlandmarkname ROUTE_45, $2
+	getlandmarkname ROUTE_43, $2
 	setflag ENGINE_PARRY_READY_FOR_REMATCH
 	farsjump PhoneScript_WantsToBattle_Male
 
@@ -1963,7 +1963,7 @@ UnknownScript_0xbde03:
 	farsjump ErinWorkingHardScript
 
 UnknownScript_0xbde07:
-	getlandmarkname ROUTE_46, $2
+	getlandmarkname ROUTE_43, $2
 	farsjump ErinComeBattleScript
 
 ErinPhoneScript2:
@@ -1984,7 +1984,7 @@ ErinSaturdayNight:
 	setflag ENGINE_ERIN_SATURDAY_NIGHT
 
 ErinWantsBattle:
-	getlandmarkname ROUTE_46, $2
+	getlandmarkname ROUTE_43, $2
 	setflag ENGINE_ERIN_READY_FOR_REMATCH
 	farsjump PhoneScript_WantsToBattle_Female
 

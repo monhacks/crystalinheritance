@@ -8,7 +8,6 @@ GoldenrodPokecomCenter1F_MapScriptHeader:
 	warp_event  6, 15, GOLDENROD_CITY, 15
 	warp_event  7, 15, GOLDENROD_CITY, 15
 	warp_event  1,  6, GOLDENROD_POKECOM_CENTER_OFFICE, 2
-	warp_event  0, 15, POKECENTER_2F, 1
 
 	def_coord_events
 

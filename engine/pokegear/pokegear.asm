@@ -107,12 +107,12 @@ Pokegear_LoadGFX:
 	ld c, a
 	call GetWorldMapLocation
 	ld hl, FastShipGFX
-	cp FAST_SHIP
+	cp TINDER_GARDEN ; removed 
 	jr z, .load_alt_sprite
 	ld hl, SinjohRuinsArrowGFX
-	cp SINJOH_RUINS
+	cp TINDER_GARDEN
 	jr z, .load_alt_sprite
-	cp MYSTRI_STAGE
+	cp TINDER_GARDEN
 	jr z, .load_alt_sprite
 	farcall GetPlayerIcon
 	ldh a, [rSVBK]
@@ -591,9 +591,9 @@ SkipHiddenOrangeIslandsUp:
 	inc [hl]
 .not_after_faraway_island
 	ld a, [hl]
-	cp FARAWAY_ISLAND + 1
+	cp TINDER_GARDEN + 1 ; CHANGED THIS MIGHT HAVE PROBLEMS WITH MAPS
 	ret nz
-	ld [hl], SHAMOUTI_ISLAND
+	ld [hl], TINDER_GARDEN
 	ret
 
 SkipHiddenOrangeIslandsDown:
@@ -608,7 +608,7 @@ SkipHiddenOrangeIslandsDown:
 
 CheckSkipNavelRock:
 	ld a, [hl]
-	cp NAVEL_ROCK
+	cp TINDER_GARDEN ; HOPEFULLY POKEGEAR WORKS OK
 	ret nz
 	push hl
 	eventflagcheck EVENT_VISITED_NAVEL_ROCK
@@ -617,7 +617,7 @@ CheckSkipNavelRock:
 
 CheckSkipFarawayIsland:
 	ld a, [hl]
-	cp FARAWAY_ISLAND
+	cp TINDER_GARDEN
 	ret nz
 	push hl
 	eventflagcheck EVENT_VISITED_FARAWAY_ISLAND
@@ -717,19 +717,19 @@ TownMap_ConvertLineBreakCharacters:
 	ret
 
 TownMap_GetJohtoLandmarkLimits:
-	lb de, SILVER_CAVE, NEW_BARK_TOWN
+	lb de, LAKE_OF_RAGE, AZALEA_TOWN
 	ret
 
-TownMap_GetKantoLandmarkLimits:
-	lb de, ROUTE_28, ROUTE_27
+TownMap_GetKantoLandmarkLimits: ; wil need to update these for the old johto map
+	lb de, LAKE_OF_RAGE, AZALEA_TOWN
 	ld a, [wStatusFlags]
 	bit 6, a
 	ret z
-	ld e, PALLET_TOWN
+	ld e, TINDER_GARDEN ; ANARRES TOWN
 	ret
 
 TownMap_GetOrangeLandmarkLimits:
-	lb de, FARAWAY_ISLAND, SHAMOUTI_ISLAND
+	lb de, LAKE_OF_RAGE, AZALEA_TOWN ; HOPEFULLY NO PROBLEM WITH THE ORANGE MAPS
 	ret
 
 PokegearRadio_Init:
@@ -2122,7 +2122,7 @@ FlyMap:
 
 ; visited and its flypoint enabled
 	push af
-	ld c, SPAWN_INDIGO
+	ld c, LAKE_OF_RAGE ; TODO SHOULD BE HOLLYS HOLT
 	call HasVisitedSpawn
 	and a
 	jr z, .NoKanto
@@ -2482,11 +2482,11 @@ Pokedex_GetArea:
 
 .GetPlayerOrFastShipIcon:
 	ld a, [wTownMapPlayerIconLandmark]
-	cp FAST_SHIP
-	jr z, .FastShip
-	cp SINJOH_RUINS
-	jr z, .Sinjoh
-	cp MYSTRI_STAGE
+;	cp FAST_SHIP
+;	jr z, .FastShip
+;	cp SINJOH_RUINS
+;	jr z, .Sinjoh
+	cp LAKE_OF_RAGE
 	jr z, .Sinjoh
 	farjp GetPlayerIcon
 

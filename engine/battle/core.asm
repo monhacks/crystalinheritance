@@ -365,8 +365,8 @@ GetSpeed::
 	; Apply item effects
 	predef GetUserItemAfterUnnerve
 	ld a, b
-	cp HELD_QUICK_POWDER
-	jr z, .quick_powder
+;	cp HELD_QUICK_POWDER
+;	jr z, .quick_powder
 	cp HELD_IRON_BALL
 	ln a, 1, 2 ; x0.5
 	jr z, .apply_item_mod
@@ -378,17 +378,17 @@ GetSpeed::
 	jr nz, .done
 	ln a, 3, 2 ; x1.5
 	jr .apply_item_mod
-.quick_powder
-	; Double speed, but only for Ditto
-	ldh a, [hBattleTurn]
-	and a
-	ld hl, wBattleMonSpecies
-	jr z, .got_species
-	ld hl, wEnemyMonSpecies
-.got_species
-	cp DITTO
-	jr nz, .done
-	ln a, 2, 1 ; x2
+;.quick_powder
+;	; Double speed, but only for Ditto
+;	ldh a, [hBattleTurn]
+;	and a
+;	ld hl, wBattleMonSpecies
+;	jr z, .got_species
+;	ld hl, wEnemyMonSpecies
+;.got_species
+;	cp DITTO
+;	jr nz, .done
+;	ln a, 2, 1 ; x2
 .apply_item_mod
 	call MultiplyAndDivide
 .done
@@ -2141,7 +2141,7 @@ WinTrainerBattle:
 
 	call EmptyBattleTextbox
 	ld c, $3
-	farcall BattleTowerText
+;	farcall BattleTowerText ; may have problems with trainer battles due to commenting this out... 
 	call WaitPressAorB_BlinkCursor
 	ld hl, wPayDayMoney
 	ld a, [hli]
@@ -2520,7 +2520,7 @@ LostBattle:
 
 	call EmptyBattleTextbox
 	ld c, 2
-	farcall BattleTowerText
+;	farcall BattleTowerText ; may have problems with trainer battles because of delete this TODO
 	call WaitPressAorB_BlinkCursor
 	call ClearTileMap
 	jmp ClearBGPalettes
@@ -5895,7 +5895,7 @@ ENDM
 
 RandomWildSpeciesForms:
 	random_wild_form UNOWN,    .Unown
-	random_wild_form MAGIKARP, .Magikarp
+;	random_wild_form MAGIKARP, .Magikarp
 	random_wild_form EKANS,    .EkansArbok
 	random_wild_form ARBOK,    .EkansArbok
 	dbw 0,        .Default
@@ -5909,10 +5909,10 @@ RandomWildSpeciesForms:
 	jr nc, .Unown ; re-roll
 	ret
 
-.Magikarp:
-	; Random Magikarp pattern
-	ld a, NUM_MAGIKARP
-	jr .RandomForm
+;.Magikarp:
+;	; Random Magikarp pattern
+;	ld a, NUM_MAGIKARP
+;	jr .RandomForm
 
 .EkansArbok:
 	; Random Arbok form (if not already specified)
@@ -8069,7 +8069,7 @@ BattleEnd_HandleRoamMons:
 	ld a, [wEnemyMonStatus]
 	res TOX, a
 	ld [hl], a
-	jr .update_roam_mons
+;	jr .update_roam_mons
 
 .caught_or_defeated_roam_mon
 	call GetRoamMonHP
@@ -8090,8 +8090,8 @@ BattleEnd_HandleRoamMons:
 	and $f
 	ret nz
 
-.update_roam_mons
-	farjp UpdateRoamMons
+;.update_roam_mons
+;	farjp UpdateRoamMons
 
 GetRoamMonHP:
 ; output: hl = wRoamMon#HP

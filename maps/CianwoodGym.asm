@@ -55,7 +55,7 @@ CianwoodGymChuckScript:
 	playsound SFX_GET_BADGE
 	waitsfx
 	setflag ENGINE_STORMBADGE
-	specialphonecall SPECIALCALL_YELLOWFOREST
+;	specialphonecall SPECIALCALL_YELLOWFOREST
 .FightDone:
 	checkevent EVENT_GOT_TM01_DYNAMICPUNCH
 	iftrue_jumpopenedtext ChuckAfterText

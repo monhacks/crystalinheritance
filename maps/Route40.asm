@@ -5,7 +5,6 @@ Route40_MapScriptHeader:
 	callback MAPCALLBACK_OBJECTS, MonicaCallback
 
 	def_warp_events
-	warp_event  9,  5, ROUTE_40_BATTLE_TOWER_GATE, 1
 
 	def_coord_events
 

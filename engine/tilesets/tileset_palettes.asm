@@ -71,24 +71,24 @@ LoadEightBGPalettes:
 	scf
 	ret
 
-PokeCenterSpecialCase:
-	ld hl, wMapGroup
-	call .check_shamouti_pokecenter
-	jr z, LoadEightBGPalettes
-	ld hl, wBackupMapGroup
-	call .check_shamouti_pokecenter
-	jr z, LoadEightBGPalettes
-	ld hl, PokeCenterPalette
-	jr LoadEightBGPalettes
-
-.check_shamouti_pokecenter
-	ld a, [hli]
-	cp GROUP_SHAMOUTI_POKECENTER_1F
-	ret nz
-	ld a, [hl]
-	cp MAP_SHAMOUTI_POKECENTER_1F
-	ld hl, ShamoutiPokeCenterPalette
-	ret
+;PokeCenterSpecialCase:
+;	ld hl, wMapGroup
+;	call .check_shamouti_pokecenter
+;	jr z, LoadEightBGPalettes
+;	ld hl, wBackupMapGroup
+;	call .check_shamouti_pokecenter
+;	jr z, LoadEightBGPalettes
+;	ld hl, PokeCenterPalette
+;	jr LoadEightBGPalettes
+;
+;.check_shamouti_pokecenter
+;	ld a, [hli]
+;	cp GROUP_SHAMOUTI_POKECENTER_1F ; not sure how I can get rid of this 03.31.24
+;	ret nz
+;	ld a, [hl]
+;	cp MAP_SHAMOUTI_POKECENTER_1F
+;	ld hl, ShamoutiPokeCenterPalette
+;	ret
 
 MartSpecialCase:
 	ld hl, MartPalette

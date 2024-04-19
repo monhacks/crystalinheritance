@@ -456,11 +456,11 @@ UpdateMewtwoForm:
 	call GetPartyParamLocation
 _UpdateMewtwoForm:
 	ld a, [wCurPartySpecies]
-	cp MEWTWO
+	cp HEATRAN
 	ret nz
 	ld a, [de]
 	cp ARMOR_SUIT
-	ld a, MEWTWO_ARMORED_FORM
+	ld a, HEATRAN
 	jr z, .got_form
 	dec a ; PLAIN_FORM
 .got_form

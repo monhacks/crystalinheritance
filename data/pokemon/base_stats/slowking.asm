@@ -8,7 +8,7 @@
 	db KINGS_ROCK ; item 2
 	dn GENDER_F50, 3 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/slowking/front.dimensions"
-	abilities_for SLOWKING, OBLIVIOUS, OWN_TEMPO, REGENERATOR
+	abilities_for SLOWKING, OWN_TEMPO, OWN_TEMPO, REGENERATOR
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_MONSTER, EGG_WATER_1 ; egg groups
 

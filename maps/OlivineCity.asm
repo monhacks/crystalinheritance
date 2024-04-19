@@ -13,8 +13,6 @@ OlivineCity_MapScriptHeader:
 	warp_event  7, 17, OLIVINE_CAFE, 1
 	warp_event 19, 13, OLIVINE_MART, 2
 	warp_event 33, 19, OLIVINE_LIGHTHOUSE_1F, 1
-	warp_event 19, 31, OLIVINE_PORT_PASSAGE, 1
-	warp_event 20, 31, OLIVINE_PORT_PASSAGE, 2
 	warp_event 57, 30, ROUTE_35_NATIONAL_PARK_GATE, 5
 	warp_event 57, 31, ROUTE_35_NATIONAL_PARK_GATE, 6
 

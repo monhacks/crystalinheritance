@@ -129,7 +129,7 @@ FrontPicPointers::
 	dba	SylveonFrontpic
 	dba	PorygonFrontpic
 	dba	Porygon2Frontpic
-	dba	PorygonzFrontpic
+	dba	Porygon_ZFrontpic
 	dba	SnorlaxFrontpic
 	dba	ChikoritaFrontpic
 	dba	BayleefFrontpic

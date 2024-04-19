@@ -67,7 +67,6 @@ ContactMoves:
 	db REVERSAL
 	db ROCK_SMASH
 	db ROLLOUT
-	db SCRATCH
 	db SEISMIC_TOSS
 	db SHADOW_CLAW
 	db SLASH

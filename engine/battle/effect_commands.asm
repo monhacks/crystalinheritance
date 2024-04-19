@@ -3347,7 +3347,7 @@ else
 	ld a, [hl]
 	pop hl
 endc
-	cp DITTO
+	cp H__ZOROARK
 	ret nz
 
 	push bc
@@ -3592,7 +3592,7 @@ ThickClubOrLightBallBoost:
 	lb bc, PIKACHU, PIKACHU
 	ld d, LIGHT_BALL
 	jr z, .ok
-	lb bc, CUBONE, MAROWAK
+	lb bc, SNUBBULL, GRANBULL ; CHANGED FROM CUBONE AND MAROWAK
 	ld d, THICK_CLUB
 .ok
 	call SpeciesItemBoost

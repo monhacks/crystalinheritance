@@ -107,12 +107,12 @@ _AIChooseMove:
 	jr z, .not_battle_tower
 
 	; Battle Tower always use max AI strength.
-	farcall BT_InRentalMode
+;	farcall BT_InRentalMode
 	ld a, 16
 	jr nz, .got_bt_level
 
 	; Early Battle Factory runs are easier.
-	farcall BT_GetCurStreakAddr
+;	farcall BT_GetCurStreakAddr
 	ld a, [hli]
 	and a
 	ld a, 16

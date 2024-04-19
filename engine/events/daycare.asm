@@ -486,7 +486,7 @@ DayCare_GiveEgg:
 	jr nz, .not_red_magikarp
 	ld a, [wTempMonForm]
 	and SPECIESFORM_MASK
-	cp GYARADOS_RED_FORM
+	cp GYARADOS
 	jr c, .not_red_magikarp
 	ld a, [wTempMonForm]
 	and $ff - SPECIESFORM_MASK
@@ -691,11 +691,11 @@ DayCare_GenerateEgg:
 	ld a, $3
 	ld [wMonType], a
 	ld a, [wBreedMon1Species]
-	cp DITTO
+	cp H__ZOROARK
 	ld a, 1
 	jr z, .LoadWhichBreedmonIsTheMother
 	ld a, [wBreedMon2Species]
-	cp DITTO
+	cp H__ZOROARK
 	ld a, 0
 	jr z, .LoadWhichBreedmonIsTheMother
 	farcall GetGender
@@ -722,7 +722,7 @@ DayCare_GenerateEgg:
 	ld [wCurPartyLevel], a
 
 	ld a, [wCurPartySpecies]
-	cp NIDORAN_F
+	cp NIDORINA
 	jr nz, .GotEggSpecies
 
 	; random Nidoran offspring
@@ -730,8 +730,8 @@ DayCare_GenerateEgg:
 	cp 1 + 50 percent
 	; a = carry ? NIDORAN_F : NIDORAN_M
 	sbc a
-	and NIDORAN_F - NIDORAN_M
-	add NIDORAN_M
+	and NIDORINA - NIDORINO
+	add NIDORINO
 .GotEggSpecies:
 	ld [wCurPartySpecies], a
 	ld [wCurSpecies], a

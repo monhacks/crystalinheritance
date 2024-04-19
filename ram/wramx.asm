@@ -1062,7 +1062,7 @@ wHallOfFameSceneID:: db
 wIlexForestSceneID:: db
 wKarensRoomSceneID:: db
 wKogasRoomSceneID:: db
-wPlayersHouse1FSceneID:: db
+wKurtsHouseSceneID:: db ;changed from playershouse
 wLancesRoomSceneID:: db
 wLavenderTownSceneID:: db
 wMahoganyMart1FSceneID:: db

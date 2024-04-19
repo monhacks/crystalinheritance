@@ -11,22 +11,22 @@ PhoneContacts:
 ; entries correspond to PHONE_* constants
 	table_width PHONE_CONTACT_SIZE, PhoneContacts
 	phone TRAINER_NONE, PHONE_00,              N_A,                       %0000, UnusedPhoneScript,   %0000, UnusedPhoneScript
-	phone TRAINER_NONE, PHONECONTACT_MOM,      PLAYERS_HOUSE_1F,          %1111, MomPhoneScript,      %0000, UnusedPhoneScript
-	phone TRAINER_NONE, PHONECONTACT_BIKESHOP, OAKS_LAB,                  %0000, UnusedPhoneScript,   %0000, UnusedPhoneScript
+	phone TRAINER_NONE, PHONECONTACT_MOM,      N_A,        				  %1111, MomPhoneScript,      %0000, UnusedPhoneScript
+	phone TRAINER_NONE, PHONECONTACT_BIKESHOP, N_A,                		  %0000, UnusedPhoneScript,   %0000, UnusedPhoneScript
 	phone TRAINER_NONE, PHONECONTACT_BILL,     N_A,                       %1111, BillPhoneScript1,    %0000, BillPhoneScript2
-	phone TRAINER_NONE, PHONECONTACT_ELM,      ELMS_LAB,                  %1111, ElmPhoneScript1,     %0000, ElmPhoneScript2
-	phone TRAINER_NONE, PHONECONTACT_LYRA,     LYRAS_HOUSE_1F,            %1111, LyraPhoneScript,     %0000, LyraPhoneScript2
+	phone TRAINER_NONE, PHONECONTACT_ELM,      N_A,              	      %1111, ElmPhoneScript1,     %0000, ElmPhoneScript2
+	phone TRAINER_NONE, PHONECONTACT_LYRA,     N_A,           			  %1111, LyraPhoneScript,     %0000, LyraPhoneScript2
 	phone SCHOOLBOY,    JACK1,                 NATIONAL_PARK,             %1111, JackPhoneScript1,    %1111, JackPhoneScript2
 	phone POKEFANF,     BEVERLY1,              NATIONAL_PARK,             %1111, BeverlyPhoneScript1, %1111, BeverlyPhoneScript2
 	phone SAILOR,       HUEY1,                 OLIVINE_LIGHTHOUSE_2F,     %1111, HueyPhoneScript1,    %1111, HueyPhoneScript2
 	phone TRAINER_NONE, PHONE_00,              N_A,                       %0000, UnusedPhoneScript,   %0000, UnusedPhoneScript
 	phone TRAINER_NONE, PHONE_00,              N_A,                       %0000, UnusedPhoneScript,   %0000, UnusedPhoneScript
-	phone COOLTRAINERM, GAVEN1,                ROUTE_26,                  %1111, GavenPhoneScript1,   %1111, GavenPhoneScript2
-	phone COOLTRAINERF, BETH1,                 ROUTE_26,                  %1111, BethPhoneScript1,    %1111, BethPhoneScript2
-	phone BIRD_KEEPER,  JOSE1,                 ROUTE_27,                  %1111, JosePhoneScript1,    %1111, JosePhoneScript2
-	phone COOLTRAINERF, REENA1,                ROUTE_27,                  %1111, ReenaPhoneScript1,   %1111, ReenaPhoneScript2
-	phone YOUNGSTER,    JOEY1,                 ROUTE_30,                  %1111, JoeyPhoneScript1,    %1111, JoeyPhoneScript2
-	phone BUG_CATCHER,  WADE1,                 ROUTE_31,                  %1111, WadePhoneScript1,    %1111, WadePhoneScript2
+	phone COOLTRAINERM, GAVEN1,                N_A,                       %1111, GavenPhoneScript1,   %1111, GavenPhoneScript2
+	phone COOLTRAINERF, BETH1,                 N_A,                       %1111, BethPhoneScript1,    %1111, BethPhoneScript2
+	phone BIRD_KEEPER,  JOSE1,                 N_A,                       %1111, JosePhoneScript1,    %1111, JosePhoneScript2
+	phone COOLTRAINERF, REENA1,                N_A,                       %1111, ReenaPhoneScript1,   %1111, ReenaPhoneScript2
+	phone YOUNGSTER,    JOEY1,                 N_A,                       %1111, JoeyPhoneScript1,    %1111, JoeyPhoneScript2
+	phone BUG_CATCHER,  WADE1,                 N_A,                       %1111, WadePhoneScript1,    %1111, WadePhoneScript2
 	phone FISHER,       RALPH1,                ROUTE_32,                  %1111, RalphPhoneScript1,   %1111, RalphPhoneScript2
 	phone PICNICKER,    LIZ1,                  ROUTE_32,                  %1111, LizPhoneScript1,     %1111, LizPhoneScript2
 	phone HIKER,        ANTHONY1,              ROUTE_33,                  %1111, AnthonyPhoneScript1, %1111, AnthonyPhoneScript2
@@ -42,10 +42,10 @@ PhoneContacts:
 	phone FISHER,       TULLY1,                ROUTE_42,                  %1111, TullyPhoneScript1,   %1111, TullyPhoneScript2
 	phone POKEMANIAC,   BRENT1,                ROUTE_43,                  %1111, BrentPhoneScript1,   %1111, BrentPhoneScript2
 	phone PICNICKER,    TIFFANY1,              ROUTE_43,                  %1111, TiffanyPhoneScript1, %1111, TiffanyPhoneScript2
-	phone BIRD_KEEPER,  VANCE1,                ROUTE_44,                  %1111, VancePhoneScript1,   %1111, VancePhoneScript2
-	phone FISHER,       WILTON1,               ROUTE_44,                  %1111, WiltonPhoneScript1,  %1111, WiltonPhoneScript2
-	phone BLACKBELT_T,  KENJI1,                ROUTE_45,                  %1111, KenjiPhoneScript1,   %1111, KenjiPhoneScript2
-	phone HIKER,        PARRY1,                ROUTE_45,                  %1111, ParryPhoneScript1,   %1111, ParryPhoneScript2
-	phone PICNICKER,    ERIN1,                 ROUTE_46,                  %1111, ErinPhoneScript1,    %1111, ErinPhoneScript2
+	phone BIRD_KEEPER,  VANCE1,                N_A,                       %1111, VancePhoneScript1,   %1111, VancePhoneScript2
+	phone FISHER,       WILTON1,               N_A,                       %1111, WiltonPhoneScript1,  %1111, WiltonPhoneScript2
+	phone BLACKBELT_T,  KENJI1,                N_A,                       %1111, KenjiPhoneScript1,   %1111, KenjiPhoneScript2
+	phone HIKER,        PARRY1,                N_A,                       %1111, ParryPhoneScript1,   %1111, ParryPhoneScript2
+	phone PICNICKER,    ERIN1,                 N_A,                       %1111, ErinPhoneScript1,    %1111, ErinPhoneScript2
 	phone TRAINER_NONE, PHONECONTACT_BUENA,    GOLDENROD_DEPT_STORE_ROOF, %1111, BuenaPhoneScript1,   %1111, BuenaPhoneScript2
 	assert_table_length NUM_PHONE_CONTACTS + 1

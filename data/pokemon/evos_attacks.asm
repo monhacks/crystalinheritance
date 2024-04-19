@@ -1381,8 +1381,8 @@ MagnemiteEvosAttacks:
 	db 0 ; no more level-up moves
 
 MagnetonEvosAttacks:
-	db EVOLVE_LOCATION, MAGNET_TUNNEL, MAGNEZONE
-	db EVOLVE_LOCATION, ROCK_TUNNEL, MAGNEZONE
+	db EVOLVE_ITEM, THUNDERSTONE, MAGNEZONE 
+;	db EVOLVE_LOCATION, ROUTE KA_JO, MAGNEZONE ; NEED TO FIX THIS
 	db 0 ; no more evolutions
 	db 1, TRI_ATTACK ; evolution move
 	db 1, SUPERSONIC

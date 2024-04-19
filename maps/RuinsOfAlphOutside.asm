@@ -18,7 +18,6 @@ RuinsOfAlphOutside_MapScriptHeader:
 	warp_event  3,  5, ROUTE_36_RUINS_OF_ALPH_GATE, 3
 	warp_event 15, 26, ROUTE_32_RUINS_OF_ALPH_GATE, 1
 	warp_event 15, 27, ROUTE_32_RUINS_OF_ALPH_GATE, 2
-	warp_event 10,  9, RUINS_OF_ALPH_SINJOH_CHAMBER, 1
 
 	def_coord_events
 	coord_event 13, 20, 1, RuinsOfAlphOutsideScientistScene1

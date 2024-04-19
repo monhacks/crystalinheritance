@@ -1269,23 +1269,23 @@ DoBikeStep::
 	; If we've taken at least 1024 steps, have the bike
 	;  shop owner try to call us.
 	ld a, d
-	cp HIGH(1024)
+	cp HIGH(65536) ; avoiding having teh call
 	jr c, .NoCall
 
 	; If a call has already been queued, don't overwrite
 	; that call.
-	ld a, [wSpecialPhoneCallID]
-	and a
-	jr nz, .NoCall
+;	ld a, [wSpecialPhoneCallID]
+;	and a
+;	jr nz, .NoCall
 
 	; Queue the call.
-	ld a, SPECIALCALL_BIKESHOP
-	ld [wSpecialPhoneCallID], a
-	xor a
-	ld [wSpecialPhoneCallID + 1], a
-	ld hl, wStatusFlags2
-	res STATUSFLAGS2_BIKE_SHOP_CALL_F, [hl]
-	scf
+;	ld a, SPECIALCALL_BIKESHOP
+;	ld [wSpecialPhoneCallID], a
+;	xor a
+;	ld [wSpecialPhoneCallID + 1], a
+;	ld hl, wStatusFlags2
+;	res STATUSFLAGS2_BIKE_SHOP_CALL_F, [hl]
+;	scf
 	ret
 
 .NoCall:

@@ -18,18 +18,14 @@ EcruteakShrineOutside_MapScriptHeader:
 
 	def_object_events
 	object_event  8,  4, SPRITE_SCHOOLGIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakShrineOutsideTwinText, -1
-	pokemon_event  9,  4, HOOTHOOT, -1, -1, PAL_NPC_BROWN, EcruteakShrineOutsideHoothootText, -1
 	object_event  2, 10, SPRITE_SAGE, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakShrineOutsideSageText, -1
 
-EcruteakShrineOutsideTwinText:
+EcruteakShrineOutsideTwinText: ;TODO FIX THIS
 	text "My Hoothoot's"
 	line "Foresight helps"
 	cont "shoo away ghosts."
 	done
 
-EcruteakShrineOutsideHoothootText:
-	text "Hoothoot: Hoot!"
-	done
 
 EcruteakShrineOutsideSageText:
 	text "On New Year's Eve,"

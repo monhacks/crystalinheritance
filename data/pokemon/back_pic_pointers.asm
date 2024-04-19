@@ -129,7 +129,7 @@ BackPicPointers::
 	dba	SylveonBackpic
 	dba	PorygonBackpic
 	dba	Porygon2Backpic
-	dba	PorygonzBackpic
+	dba	Porygon_ZBackpic
 	dba	SnorlaxBackpic
 	dba	ChikoritaBackpic
 	dba	BayleefBackpic

@@ -2,7 +2,7 @@ Route33_MapScriptHeader:
 	def_scene_scripts
 
 	def_callbacks
-	callback MAPCALLBACK_TILES, Route33RainScript
+;	callback MAPCALLBACK_TILES, Route33RainScript
 
 	def_warp_events
 	warp_event 11,  9, UNION_CAVE_1F, 3
@@ -17,15 +17,15 @@ Route33_MapScriptHeader:
 	object_event 12, 17, SPRITE_SCHOOLGIRL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerSchoolgirlImogen, -1
 	fruittree_event 14, 16, FRUITTREE_ROUTE_33, PECHA_BERRY, PAL_NPC_RED
 
-Route33RainScript:
-	special Special_GetOvercastIndex
-	ifequal AZALEA_OVERCAST, .rain
-	changemapblocks Route33_BlockData
-	endcallback
+;Route33RainScript:
+;	special Special_GetOvercastIndex
+;	ifequal AZALEA_OVERCAST, .rain
+;	changemapblocks Route33_BlockData
+;	endcallback
 
-.rain
-	changemapblocks Route33Raining_BlockData
-	endcallback
+;.rain
+;	changemapblocks Route33Raining_BlockData
+;	endcallback
 
 TrainerHikerAnthony:
 	trainer HIKER, ANTHONY1, EVENT_BEAT_HIKER_ANTHONY, HikerAnthony1SeenText, HikerAnthony1BeatenText, 0, .Script

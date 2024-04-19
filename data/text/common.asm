@@ -3254,19 +3254,20 @@ _InitialOptionsText::
 	cont "Polished Crystal."
 	prompt
 
-SECTION "_ElmText1", ROMX
+SECTION "_ElmText1", ROMX ; being used, i think in intro_meu.asm as elmtext1?
 _ElmText1::
-	text "Hello! Sorry to"
-	line "keep you waiting!"
+	text "Hello! Are you"
+	line "excited? Today"
+	cont "is the day you"
+	cont "participate in"
+	cont "the ceremony."
 
 if !DEF(DEBUG)
-	para "Welcome to the"
-	line "world of #mon!"
-
-	para "My name is Elm."
-
-	para "People call me the"
-	line "#mon Prof."
+	para "But don't worry."
+	line "Grandpa Kurt"
+	cont "will make sure"
+	cont "everything goes"
+	cont "as it should."
 endc
 	prompt
 

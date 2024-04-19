@@ -98,7 +98,7 @@ SpecialsPointers::
 	add_special PlayCurMonCry
 	add_special ProfOaksPCBoot
 	add_special Special_CianwoodPhotograph
-	add_special InitRoamMons
+;	add_special InitRoamMons
 	add_special Special_FadeOutMusic
 	add_special Diploma
 	add_special Special_HyperTrain
@@ -126,18 +126,18 @@ SpecialsPointers::
 	add_special Special_InitialClearDSTFlag
 
 ; Battle Tower
-	add_special Special_BattleTower_Battle
-	add_special Special_BattleTower_GetBattleResult
-	add_special Special_BattleTower_CommitChallengeResult
-	add_special Special_BattleTower_GetChallengeState
-	add_special Special_BattleTower_SetChallengeState
-	add_special Special_BattleTower_GenerateNextOpponent
-	add_special Special_BattleTower_NextRentalBattle
-	add_special Special_BattleTower_SetupRentalMode
-	add_special Special_BattleTower_SelectParticipants
-	add_special Special_BattleTower_MaxVolume
-	add_special Special_BattleTower_BeginChallenge
-	add_special Special_BattleTower_LoadOpponentTrainerAndPokemonsWithOTSprite
+;	add_special Special_BattleTower_Battle
+;	add_special Special_BattleTower_GetBattleResult
+;	add_special Special_BattleTower_CommitChallengeResult
+;	add_special Special_BattleTower_GetChallengeState
+;	add_special Special_BattleTower_SetChallengeState
+;	add_special Special_BattleTower_GenerateNextOpponent
+;	add_special Special_BattleTower_NextRentalBattle
+;	add_special Special_BattleTower_SetupRentalMode
+;	add_special Special_BattleTower_SelectParticipants
+;	add_special Special_BattleTower_MaxVolume
+;	add_special Special_BattleTower_BeginChallenge
+;	add_special Special_BattleTower_LoadOpponentTrainerAndPokemonsWithOTSprite
 
 ; Polished Crystal
 	add_special SaveOptions

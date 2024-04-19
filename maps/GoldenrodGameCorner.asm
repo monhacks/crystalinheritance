@@ -192,58 +192,58 @@ GoldenrodGameCornerPrizeMonVendorScript:
 	loadmenu .MenuDataHeader
 	verticalmenu
 	closewindow
-	ifequal $1, .abra
-	ifequal $2, .cubone
-	ifequal $3, .clefairy
+	ifequal $1, .eevee
+	ifequal $2, .porygon
+	ifequal $3, .chansey
 	jumpopenedtext GoldenrodGameCornerPrizeVendorQuitText
 
-.abra
+.eevee
 	checkcoins 200
 	ifequal $2, GoldenrodGameCornerPrizeVendor_NotEnoughCoinsScript
-	getmonname ABRA, $0
+	getmonname EEVEE, $0
 	scall GoldenrodGameCornerPrizeVendor_ConfirmPurchaseScript
 	iffalse_jumpopenedtext GoldenrodGameCornerPrizeVendorQuitText
 	waitsfx
 	playsound SFX_TRANSACTION
 	writetext GoldenrodGameCornerPrizeVendorHereYouGoText
 	waitbutton
-	givepoke ABRA, 5
+	givepoke EEVEE, 5
 	iffalse_jumpopenedtext GoldenrodGameCornerPrizeVendorNoMoreRoomText
-	setval ABRA
+	setval EEVEE
 	special Special_GameCornerPrizeMonCheckDex
 	takecoins 200
 	sjump .loop
 
-.cubone
+.porygon
 	checkcoins 800
 	ifequal $2, GoldenrodGameCornerPrizeVendor_NotEnoughCoinsScript
-	getmonname CUBONE, $0
+	getmonname PORYGON, $0
 	scall GoldenrodGameCornerPrizeVendor_ConfirmPurchaseScript
 	iffalse_jumpopenedtext GoldenrodGameCornerPrizeVendorQuitText
 	waitsfx
 	playsound SFX_TRANSACTION
 	writetext GoldenrodGameCornerPrizeVendorHereYouGoText
 	waitbutton
-	givepoke CUBONE, 10
+	givepoke PORYGON, 10
 	iffalse_jumpopenedtext GoldenrodGameCornerPrizeVendorNoMoreRoomText
-	setval CUBONE
+	setval PORYGON
 	special Special_GameCornerPrizeMonCheckDex
 	takecoins 800
 	sjump .loop
 
-.clefairy
-	checkcoins 1500
+.chansey
+	checkcoins 2500
 	ifequal $2, GoldenrodGameCornerPrizeVendor_NotEnoughCoinsScript
-	getmonname CLEFAIRY, $0
+	getmonname CHANSEY, $0
 	scall GoldenrodGameCornerPrizeVendor_ConfirmPurchaseScript
 	iffalse_jumpopenedtext GoldenrodGameCornerPrizeVendorQuitText
 	waitsfx
 	playsound SFX_TRANSACTION
 	writetext GoldenrodGameCornerPrizeVendorHereYouGoText
 	waitbutton
-	givepoke CLEFAIRY, 15
+	givepoke CHANSEY, 15
 	iffalse_jumpopenedtext GoldenrodGameCornerPrizeVendorNoMoreRoomText
-	setval CLEFAIRY
+	setval CHANSEY
 	special Special_GameCornerPrizeMonCheckDex
 	takecoins 1500
 	sjump .loop
@@ -258,9 +258,9 @@ GoldenrodGameCornerPrizeMonVendorScript:
 .MenuData2:
 	db $80 ; flags
 	db 4 ; items
-	db "Abra        200@"
-	db "Cubone      800@"
-	db "Clefairy   1500@"
+	db "Eevee       200@"
+	db "Porygon     800@"
+	db "Chansey   2500@"
 	db "Cancel@"
 
 GoldenrodGameCornerPharmacistScript:

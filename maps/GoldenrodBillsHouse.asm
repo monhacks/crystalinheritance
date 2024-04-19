@@ -69,7 +69,7 @@ BillsGrandpa:
 	scall .ExcitedToSee
 	special Special_BillsGrandfather
 	iffalse_jumpopenedtext BillsGrandpaYouDontHaveItTextText
-	ifnotequal BELLSPROUT, .WrongPokemon
+	ifnotequal WEEPINBELL, .WrongPokemon
 	scall .CorrectPokemon
 	setevent EVENT_SHOWED_BELLSPROUT_TO_BILLS_GRANDPA
 	sjump .ShowedBellsprout
@@ -111,7 +111,7 @@ BillsGrandpa:
 	scall .ExcitedToSee
 	special Special_BillsGrandfather
 	iffalse_jumpopenedtext BillsGrandpaYouDontHaveItTextText
-	ifnotequal PICHU, .WrongPokemon
+	ifnotequal PIKACHU, .WrongPokemon
 	scall .CorrectPokemon
 	setevent EVENT_SHOWED_PICHU_TO_BILLS_GRANDPA
 	sjump .ShowedPichu
@@ -139,7 +139,7 @@ BillsGrandpa:
 	scall .ExcitedToSee
 	special Special_BillsGrandfather
 	iffalse_jumpopenedtext BillsGrandpaYouDontHaveItTextText
-	ifnotequal ODDISH, .WrongPokemon
+	ifnotequal GLOOM, .WrongPokemon
 	scall .CorrectPokemon
 	setevent EVENT_SHOWED_ODDISH_TO_BILLS_GRANDPA
 	sjump .ShowedOddish
@@ -167,7 +167,7 @@ BillsGrandpa:
 	scall .ExcitedToSee
 	special Special_BillsGrandfather
 	iffalse_jumpopenedtext BillsGrandpaYouDontHaveItTextText
-	ifnotequal TOGEPI, .WrongPokemon
+	ifnotequal TOGETIC, .WrongPokemon
 	scall .CorrectPokemon
 	setevent EVENT_SHOWED_TOGEPI_TO_BILLS_GRANDPA
 	sjump .ShowedTogepi

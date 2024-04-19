@@ -344,7 +344,7 @@ GetGSBallPichu:
 	ld a, 2
 	ldh [hScriptVar], a
 
-	ld a, PICHU
+	ld a, PIKACHU
 	ld [wOTTrademonSpecies], a
 
 	ld a, [wPlayerTrademonSpecies]

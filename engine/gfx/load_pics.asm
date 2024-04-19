@@ -22,7 +22,7 @@ GetVariant:
 	and a
 	jr z, .not_kanto_arbok
 .kanto_arbok
-	ld a, ARBOK_KANTO_FORM
+	ld a, ARBOK;_PLAIN_FORM
 	jr .ok
 .not_kanto_arbok
 	ld a, PLAIN_FORM ; safeguard: form 0 becomes variant 1
@@ -41,7 +41,7 @@ GetVariant:
 
 	ld a, [hl]
 	and SPECIESFORM_MASK
-	cp PIKACHU_RED_FORM
+	cp PIKACHU;_PLAIN_FORM
 	jr nc, .use_form
 
 	push bc
@@ -49,7 +49,7 @@ GetVariant:
 	add hl, bc
 	pop bc
 
-	ld a, PIKACHU_SURF_FORM
+	ld a, PIKACHU;_PLAIN_FORM
 	ld [wCurForm], a
 rept NUM_MOVES
 	ld a, [hli]
@@ -60,7 +60,7 @@ endr
 rept NUM_MOVES
 	dec hl
 endr
-	ld a, PIKACHU_FLY_FORM
+	ld a, PIKACHU;_PLAIN_FORM ; USED TO BE A VARIANT FORM OF THIS... 
 	ld [wCurForm], a
 rept NUM_MOVES
 	ld a, [hli]

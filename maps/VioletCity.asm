@@ -12,8 +12,8 @@ VioletCity_MapScriptHeader:
 	warp_event 31, 29, VIOLET_POKECENTER_1F, 1
 	warp_event 21, 33, VIOLET_ONIX_TRADE_HOUSE, 1
 	warp_event 23,  5, SPROUT_TOWER_1F, 1
-	warp_event 39, 28, ROUTE_31_VIOLET_GATE, 1
-	warp_event 39, 29, ROUTE_31_VIOLET_GATE, 2
+;	warp_event 39, 28, ROUTE_31_VIOLET_GATE, 1
+;	warp_event 39, 29, ROUTE_31_VIOLET_GATE, 2
 	warp_event  2, 12, ROUTE_36_VIOLET_GATE, 3
 	warp_event  2, 13, ROUTE_36_VIOLET_GATE, 4
 
