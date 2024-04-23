@@ -5,7 +5,7 @@ INCLUDE "maps/AzaleaPokeCenter1F.asm"
 INCLUDE "maps/EcruteakPokeCenter1F.asm"
 INCLUDE "maps/OlivinePokeCenter1F.asm"
 INCLUDE "maps/CianwoodPokeCenter1F.asm"
-
+INCLUDE "maps/MahoganyPokeCenter1F.asm"
 
 SECTION "Pokemon Center Scripts 2", ROMX
 
@@ -202,7 +202,7 @@ SECTION "Magnet Tunnel Scripts", ROMX
 SECTION "National Park Scripts", ROMX
 
 INCLUDE "maps/NationalPark.asm"
-
+INCLUDE "maps/NationalParkBugContest.asm"
 
 SECTION "Ecruteak Scripts", ROMX
 

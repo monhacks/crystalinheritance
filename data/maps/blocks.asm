@@ -26,6 +26,7 @@ Route43MahoganyGate_BlockData:
 	INCBIN "maps/NorthSouthGate.ablk.lz"
 
 
+Route43Gate_BlockData:
 Route36VioletGate_BlockData:
 Route32RuinsOfAlphGate_BlockData:
 IlexForestAzaleaGate_BlockData:
@@ -41,6 +42,10 @@ GoldenrodBillsHouse_BlockData:
 GoldenrodNetBallHouse_BlockData:
 CianwoodCityPhotoStudio_BlockData:
 	INCBIN "maps/JohtoHouse1.ablk.lz"
+
+SECTION "DimCave2F_BlockData", ROMX
+WhirlIslandNW_BlockData:
+	INCBIN "maps/DimCave2F.ablk.lz" ;only uses the bottom part of this map
 
 GoldenrodHappinessRater_BlockData:
 GoldenrodPPSpeechHouse_BlockData:
@@ -67,11 +72,8 @@ EcruteakCherishBallHouse_BlockData:
 EcruteakDestinyKnotHouse_BlockData:
 VioletNicknameSpeechHouse_BlockData:
 VioletOnixTradeHouse_BlockData:
+ValeriesHouse_BlockData:
 	INCBIN "maps/TraditionalHouse.ablk.lz"
-
-Route43Gate_BlockData:
-Route43MahoganyGate_BlockData:
-	INCBIN "maps/NorthSouthGate.ablk.lz"
 
 SECTION "HiddenTreeGrotto_BlockData", ROMX
 HiddenTreeGrotto_BlockData:
