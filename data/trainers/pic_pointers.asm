@@ -1,5 +1,5 @@
 TrainerPicPointers::
-; entries correspond to trainer classes (see constants/trainer_constants.asm)
+; entries correspond to trainer classes (see constants/trainer_constants.asm) and gfx/pics.asm (04.29.24)
 	table_width 3, TrainerPicPointers
 	dba CarriePic
 	dba CalPic
@@ -11,24 +11,24 @@ TrainerPicPointers::
 	dba JasminePic
 	dba PrycePic
 	dba ClairPic
-	dba WillPic
-	dba KogaPic
+	dba KurtPic
+	dba MejimiPic
 	dba BrunoPic
-	dba KarenPic
+	dba SandraPic
 	dba ChampionPic
 	dba BrockPic
-	dba MistyPic
+	dba SamsaraPic
 	dba LtSurgePic
 	dba ErikaPic
 	dba JaninePic
 	dba SabrinaPic
-	dba BlainePic
+	dba HollisPic
 	dba BluePic
 	dba RedPic
 	dba LeafPic
-	dba Rival0Pic
-	dba Rival1Pic
-	dba Rival2Pic
+	dba Rival0Pic ;rival0
+	dba Rival1Pic ;rival1
+	dba Rival2Pic ;rival2
 	dba Lyra1Pic
 	dba Lyra2Pic
 	dba YoungsterPic
@@ -39,7 +39,7 @@ TrainerPicPointers::
 	dba FisherPic
 	dba BirdKeeperPic
 	dba HikerPic
-	dba GruntmPic
+	dba BrigaderPic
 	dba GruntfPic
 	dba PokefanmPic
 	dba PokefanfPic
@@ -116,35 +116,35 @@ TrainerPicPointers::
 	dba ProfIvyPic
 	dba MysticalmanPic
 	dba KarateKingPic
-	dba TowerTycoonPic
+	dba OstenePic
 	dba JessieJamesPic
 	dba LoreleiPic
 	dba AgathaPic
 	dba StevenPic
 	dba CynthiaPic
-	dba InverPic
+	dba AmosPic
 	dba CherylPic
 	dba RileyPic
 	dba BuckPic
 	dba MarleyPic
 	dba MiraPic
-	dba AnabelPic
+	dba LannaPic
 	dba DarachPic
 	dba CaitlinPic
-	dba CandelaPic
-	dba BlanchePic
-	dba SparkPic
+	dba BobeshPic
+	dba AdrinnaPic
+	dba BarbeauPic
 	dba FlanneryPic
-	dba MaylenePic
+	dba KannaPic
 	dba SkylaPic
 	dba ValeriePic
 	dba KukuiPic
 	dba VictorPic
 	dba BillPic
-	dba YellowPic
-	dba WalkerPic
+	dba TammyPic
+	dba SilverPic ;Rival2Pic
 	dba ImakuniPic
-	dba LawrencePic
+	dba KenseyPic
 	dba ReiPic
 	assert_table_length NUM_TRAINER_CLASSES
 	dba OmastarFossilPic

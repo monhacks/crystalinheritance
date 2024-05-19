@@ -319,19 +319,19 @@ BUG_CONTESTANT_SIZE EQU 4
 ; UnownPuzzle setval arguments
 ; LoadUnownPuzzlePiecesGFX.LZPointers indexes (see engine/games/unown_puzzle.asm)
 	const_def
-	const UNOWNPUZZLE_KABUTO     ; 0
-	const UNOWNPUZZLE_OMANYTE    ; 1
-	const UNOWNPUZZLE_AERODACTYL ; 2
-	const UNOWNPUZZLE_HO_OH      ; 3
+	const UNOWNPUZZLE_CELEBI     ; 0 KABUTO
+	const UNOWNPUZZLE_BRONZONG    ; 1 OMANYTE
+	const UNOWNPUZZLE_LUGIA ; 2 AERODACTYL
+	const UNOWNPUZZLE_HEATRAN      ; 3 HOOH
 NUM_UNOWN_PUZZLES EQU const_value
 
 ; DisplayUnownWords setval arguments
 ; UnownWalls and MenuHeaders_UnownWalls indexes (see data/events/unown_walls.asm)
 	const_def
-	const UNOWNWORDS_ESCAPE ; 0
-	const UNOWNWORDS_LIGHT  ; 1
-	const UNOWNWORDS_WATER  ; 2
-	const UNOWNWORDS_HO_OH  ; 3
+	const UNOWNWORDS_FATED ; 0 ESCAPE
+	const UNOWNWORDS_ATUNE  ; 1 LIGHT
+	const UNOWNWORDS_STORM  ; 2 WATER
+	const UNOWNWORDS_STEEL  ; 3 HOOH
 
 ; paintingpic arguments
 ; PaintingPicPointers indexes (see data/events/paintings/pic_pointers.asm)
@@ -340,8 +340,8 @@ NUM_UNOWN_PUZZLES EQU const_value
 	const HO_OH_PAINTING
 	const LUGIA_PAINTING
 	const BELL_TOWER_PAINTING
-	const KABUTO_PUZZLE
-	const OMANYTE_PUZZLE
-	const AERODACTYL_PUZZLE
-	const HO_OH_PUZZLE
+	const CELEBI_PUZZLE
+	const BRONZONG_PUZZLE
+	const LUGIA_PUZZLE
+	const HEATRAN_PUZZLE
 NUM_PAINTINGS EQU const_value

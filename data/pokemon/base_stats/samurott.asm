@@ -1,14 +1,14 @@
 	db  70, 130, 100,  65,  55,  80 ; 500 BST
 	;   hp  atk  def  spd  sat  sdf
 
-	db BUG, STEEL ; type
+	db WATER, WATER ; type
 	db 25 ; catch rate
 	db 200 ; base exp
 	db NO_ITEM ; item 1
 	db METAL_COAT ; item 2
 	dn GENDER_F50, 4 ; gender ratio, step cycles to hatch
-	INCBIN "gfx/pokemon/scizor/front.dimensions"
-	abilities_for SCIZOR, SWARM, TECHNICIAN, LIGHT_METAL
+	INCBIN "gfx/pokemon/samurott/front.dimensions"
+	abilities_for SAMUROTT, TORRENT, TORRENT, TORRENT
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_BUG, EGG_BUG ; egg groups
 

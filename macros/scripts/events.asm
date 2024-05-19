@@ -1015,12 +1015,12 @@ warpfacing: MACRO
 	db \4 ; y
 ENDM
 
-;	const battletowertext_command
-;battletowertext: MACRO
-;	db battletowertext_command
-;	db \1 ; memory
-;ENDM
-;
+	const battletowertext_command
+battletowertext: MACRO
+	db battletowertext_command
+	db \1 ; memory
+ENDM
+
 	const getlandmarkname_command
 getlandmarkname: MACRO
 	db getlandmarkname_command

@@ -23,12 +23,12 @@ BillsGrandpa:
 	iftrue_jumptextfaceplayer BillsGrandpaShownAllThePokemonText
 	faceplayer
 	opentext
-	checkevent EVENT_MET_BILLS_GRANDPA
-	iftrue .MetGrandpa
+;	checkevent EVENT_MET_BILLS_GRANDPA
+;	iftrue .MetGrandpa
 	writetext BillsGrandpaIntroText
 	promptbutton
-	setevent EVENT_MET_BILLS_GRANDPA
-.MetGrandpa:
+;	setevent EVENT_MET_BILLS_GRANDPA
+;.MetGrandpa:
 	checkevent EVENT_SHOWED_TOGEPI_TO_BILLS_GRANDPA
 	iftrue .ShowedTogepi
 	checkevent EVENT_SHOWED_MURKROW_TO_BILLS_GRANDPA

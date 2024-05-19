@@ -1,18 +1,12 @@
-BossTrainers:
-	db CHAMPION
-	db RED
-	db LEAF
-	db STEVEN
-	db CYNTHIA
-	db TOWERTYCOON
-	db VALERIE
-	db GIOVANNI
-	db LORELEI
-	db AGATHA
-	db WILL
-	db KOGA
-	db BRUNO
-	db KAREN
+BossTrainers: ; GENERALS IN OLD JOHTO AND OTHERS
+	db KURT
+	db MEJIMI
+	db REI
+	db OSTENE
+	db KENSEY
+	db BOBESH
+	db ADRINNA
+	db SILVER
 JohtoGymLeaders:
 	db FALKNER
 	db WHITNEY
@@ -22,13 +16,11 @@ JohtoGymLeaders:
 	db JASMINE
 	db PRYCE
 	db CLAIR
-KantoGymLeaders:
-	db BROCK
-	db MISTY
-	db LT_SURGE
-	db ERIKA
-	db JANINE
-	db SABRINA
-	db BLAINE
-	db BLUE
+KantoGymLeaders: ;OLD JOHTO ELDERS
+	db HOLLIS
+	db SANDRA
+	db SAMSARA
+	db BARBEAU
+	db KANNA
+	db AMOS
 	db -1

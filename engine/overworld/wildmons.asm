@@ -45,12 +45,12 @@ FindNest:
 	call .FindGrass
 	ld hl, JohtoWaterWildMons
 	call .FindWater
-;	ld hl, wRoamMon1Species
-;	call .RoamMon
-;	ld hl, wRoamMon2Species
-;	call .RoamMon
-;	ld hl, wRoamMon3Species
-;	jmp .RoamMon
+	ld hl, wRoamMon1Species
+	call .RoamMon
+	ld hl, wRoamMon2Species
+	call .RoamMon
+	ld hl, wRoamMon3Species
+	jmp .RoamMon
 
 .kanto
 	decoord 0, 0
@@ -178,22 +178,22 @@ FindNest:
 	and a
 	ret
 
-;.RoamMon:
-;	ld a, [hli]
-;	inc hl ; skip wRoamMon#Level
-;	ld b, a
-;	ld a, [wNamedObjectIndex]
-;	cp b
-;	ret nz
-;	ld a, [hli]
-;	ld b, a
-;	ld a, [hl]
-;	ld c, a
-;	call .AppendNest
-;	ret nc
-;	ld [de], a
-;	inc de
-;	ret
+.RoamMon:
+	ld a, [hli]
+	inc hl ; skip wRoamMon#Level
+	ld b, a
+	ld a, [wNamedObjectIndex]
+	cp b
+	ret nz
+	ld a, [hli]
+	ld b, a
+	ld a, [hl]
+	ld c, a
+	call .AppendNest
+	ret nc
+	ld [de], a
+	inc de
+	ret
 
 TryWildEncounter::
 ; Try to trigger a wild encounter.
@@ -305,8 +305,8 @@ _ChooseWildEncounter:
 	pop bc
 	jmp nc, .nowildbattle
 	push bc
-;	call CheckEncounterRoamMon ;if getting weird encounter stuff then we will need to put back all of the roam stuff.
-;	pop bc
+	call CheckEncounterRoamMon ;if getting weird encounter stuff then we will need to put back all of the roam stuff.
+	pop bc
 	jmp c, .startwildbattle
 	xor a ; BATTLETYPE_NORMAL
 	ld [wBattleType], a
@@ -726,262 +726,262 @@ LookUpWildmonsForMapDE:
 	scf
 	ret
 
-;InitRoamMons: ;03.31.24 removing much of the roaming mons stuff from lines 729->
-;; initialize wRoamMon structs
-;
-;; species
-;	ld a, RAIKOU
-;	ld [wRoamMon1Species], a
-;	assert RAIKOU + 1 == ENTEI
-;	inc a
-;	ld [wRoamMon2Species], a
-;
-;; level
-;	ld a, 40
-;	ld [wRoamMon1Level], a
-;	ld [wRoamMon2Level], a
-;
-;; raikou starting map
-;	ld a, GROUP_ROUTE_42
-;	ld [wRoamMon1MapGroup], a
-;	ld a, MAP_ROUTE_42
-;	ld [wRoamMon1MapNumber], a
-;
-;; entei starting map
-;	ld a, GROUP_ROUTE_37
-;	ld [wRoamMon2MapGroup], a
-;	ld a, MAP_ROUTE_37
-;	ld [wRoamMon2MapNumber], a
-;
-;; hp
-;	xor a ; generate new stats
-;	ld [wRoamMon1HP], a
-;	ld [wRoamMon2HP], a
-;
-;	ret
-;
-;CheckEncounterRoamMon:
-;	push hl
-;; Don't trigger an encounter if we're on water.
-;	call CheckOnWater
-;	jr z, .DontEncounterRoamMon
-;; Load the current map group and number to de
-;	call CopyCurrMapDE
-;; Randomly select a beast.
-;	call Random
-;	cp 100 ; 25/64 chance
-;	jr nc, .DontEncounterRoamMon
-;	and %00000011 ; Of that, a 3/4 chance.  Running total: 75/256, or around 29.3%.
-;	jr z, .DontEncounterRoamMon
-;	dec a ; 1/3 chance that it's Entei, 1/3 chance that it's Raikou
-;; Compare its current location with yours
-;	ld hl, wRoamMon1MapGroup
-;	ld c, a
-;	ld b, 0
-;	ld a, wRoamMon1End - wRoamMon1 ; length of the RoamMon struct
-;	rst AddNTimes
-;	ld a, d
-;	cp [hl]
-;	jr nz, .DontEncounterRoamMon
-;	inc hl
-;	ld a, e
-;	cp [hl]
-;	jr nz, .DontEncounterRoamMon
-;; We've decided to take on a beast, so stage its information for battle.
-;	dec hl
-;	dec hl
-;	dec hl
-;	ld a, [hli]
-;	ld [wTempWildMonSpecies], a
-;	ld a, [hl]
-;	ld [wCurPartyLevel], a
-;	ld a, BATTLETYPE_ROAMING
-;	ld [wBattleType], a
-;
-;	pop hl
-;	scf
-;	ret
-;
-;.DontEncounterRoamMon:
-;	pop hl
-;	and a
-;	ret
-;
-;UpdateRoamMons:
-;	ld a, [wRoamMon1MapGroup]
-;	cp GROUP_N_A
-;	jr z, .SkipRaikou
-;	ld b, a
-;	ld a, [wRoamMon1MapNumber]
-;	ld c, a
-;	call .Update
-;	ld a, b
-;	ld [wRoamMon1MapGroup], a
-;	ld a, c
-;	ld [wRoamMon1MapNumber], a
-;
-;.SkipRaikou:
-;	ld a, [wRoamMon2MapGroup]
-;	cp GROUP_N_A
-;	jr z, .SkipEntei
-;	ld b, a
-;	ld a, [wRoamMon2MapNumber]
-;	ld c, a
-;	call .Update
-;	ld a, b
-;	ld [wRoamMon2MapGroup], a
-;	ld a, c
-;	ld [wRoamMon2MapNumber], a
-;
-;.SkipEntei:
-;	ld a, [wRoamMon3MapGroup]
-;	cp GROUP_N_A
-;	jr z, .SkipSuicune
-;	ld b, a
-;	ld a, [wRoamMon3MapNumber]
-;	ld c, a
-;	call .Update
-;	ld a, b
-;	ld [wRoamMon3MapGroup], a
-;	ld a, c
-;	ld [wRoamMon3MapNumber], a
-;
-;.SkipSuicune: ; no-optimize stub jump
-;	jr _BackUpMapIndices
-;
-;.Update:
-;	ld hl, RoamMaps ;03.31.24 modified roaming maps; may need to put this back in?
-;.loop
-;; Are we at the end of the table?
-;	ld a, [hl]
-;	cp -1
-;	ret z
-;; Is this the correct entry?
-;	ld a, b
-;	cp [hl]
-;	jr nz, .next
-;	inc hl
-;	ld a, c
-;	cp [hl]
-;	jr z, .yes
-;; We don't have the correct entry yet, so let's continue.  A 0 terminates each entry.
-;.next
-;	ld a, [hli]
-;	and a
-;	jr nz, .next
-;	jr .loop
-;
-;; We have the correct entry now, so let's choose a random map from it.
-;.yes
-;	inc hl
-;	ld d, h
-;	ld e, l
-;.update_loop
-;	ld h, d
-;	ld l, e
-;; Choose which map to warp to.
-;	call Random
-;	and $1f ; 1/8n chance it moves to a completely random map, where n is the number of roaming connections from the current map.
-;	jr z, JumpRoamMon
-;	and 3
-;	cp [hl]
-;	jr nc, .update_loop ; invalid index, try again
-;	inc hl
-;	ld c, a
-;	ld b, $0
-;	add hl, bc
-;	add hl, bc
-;	ld a, [wRoamMons_LastMapGroup]
-;	cp [hl]
-;	jr nz, .done
-;	inc hl
-;	ld a, [wRoamMons_LastMapNumber]
-;	cp [hl]
-;	jr z, .update_loop
-;	dec hl
-;
-;.done
-;	ld a, [hli]
-;	ld b, a
-;	ld c, [hl]
-;	ret
+InitRoamMons: ;03.31.24 removing much of the roaming mons stuff from lines 729->
+; initialize wRoamMon structs
 
-;JumpRoamMons:
-;	ld a, [wRoamMon1MapGroup]
-;	cp GROUP_N_A
-;	jr z, .SkipRaikou
-;	call JumpRoamMon
-;	ld a, b
-;	ld [wRoamMon1MapGroup], a
-;	ld a, c
-;	ld [wRoamMon1MapNumber], a
-;.SkipRaikou:
-;
-;	ld a, [wRoamMon2MapGroup]
-;	cp GROUP_N_A
-;	jr z, .SkipEntei
-;	call JumpRoamMon
-;	ld a, b
-;	ld [wRoamMon2MapGroup], a
-;	ld a, c
-;	ld [wRoamMon2MapNumber], a
-;.SkipEntei:
-;
-;	ld a, [wRoamMon3MapGroup]
-;	cp GROUP_N_A
-;	jr z, .SkipSuicune
-;	call JumpRoamMon
-;	ld a, b
-;	ld [wRoamMon3MapGroup], a
-;	ld a, c
-;	ld [wRoamMon3MapNumber], a
-;.SkipSuicune:
-;	; fallthrough
-;
-;_BackUpMapIndices:
-;	ld a, [wRoamMons_CurMapNumber]
-;	ld [wRoamMons_LastMapNumber], a
-;	ld a, [wRoamMons_CurMapGroup]
-;	ld [wRoamMons_LastMapGroup], a
-;	ld a, [wMapNumber]
-;	ld [wRoamMons_CurMapNumber], a
-;	ld a, [wMapGroup]
-;	ld [wRoamMons_CurMapGroup], a
-;	ret
-;
-;JumpRoamMon:
-;.loop
-;	ld hl, RoamMaps
-;	call Random ; Choose a random number
-;	and $f ; Take the lower nybble only.  This gives a number between 0 and 15.
-;	inc a
-;	ld b, a
-;.innerloop ; Loop to get hl to the address of the chosen roam map.
-;	dec b
-;	jr z, .ok
-;.innerloop2 ; Loop to skip the current roam map, which is terminated by a 0.
-;	ld a, [hli]
-;	and a
-;	jr nz, .innerloop2
-;	jr .innerloop
-;; Check to see if the selected map is the one the player is currently in.  If so, try again.
-;.ok
-;	ld a, [wMapGroup]
-;	cp [hl]
-;	jr nz, .done
-;	inc hl
-;	ld a, [wMapNumber]
-;	cp [hl]
-;	jr z, .loop
-;	dec hl
-;; Return the map group and number in bc.
-;.done
-;	ld a, [hli]
-;	ld b, a
-;	ld c, [hl]
-;	ret
-;
-;INCLUDE "data/wild/roammon_maps.asm"
+; species
+	ld a, RAIKOU
+	ld [wRoamMon1Species], a
+	assert RAIKOU + 1 == ENTEI
+	inc a
+	ld [wRoamMon2Species], a
+
+; level
+	ld a, 40
+	ld [wRoamMon1Level], a
+	ld [wRoamMon2Level], a
+
+; raikou starting map
+	ld a, GROUP_ROUTE_42
+	ld [wRoamMon1MapGroup], a
+	ld a, MAP_ROUTE_42
+	ld [wRoamMon1MapNumber], a
+
+; entei starting map
+	ld a, GROUP_ROUTE_37
+	ld [wRoamMon2MapGroup], a
+	ld a, MAP_ROUTE_37
+	ld [wRoamMon2MapNumber], a
+
+; hp
+	xor a ; generate new stats
+	ld [wRoamMon1HP], a
+	ld [wRoamMon2HP], a
+
+	ret
+
+CheckEncounterRoamMon:
+	push hl
+; Don't trigger an encounter if we're on water.
+	call CheckOnWater
+	jr z, .DontEncounterRoamMon
+; Load the current map group and number to de
+	call CopyCurrMapDE
+; Randomly select a beast.
+	call Random
+	cp 100 ; 25/64 chance
+	jr nc, .DontEncounterRoamMon
+	and %00000011 ; Of that, a 3/4 chance.  Running total: 75/256, or around 29.3%.
+	jr z, .DontEncounterRoamMon
+	dec a ; 1/3 chance that it's Entei, 1/3 chance that it's Raikou
+; Compare its current location with yours
+	ld hl, wRoamMon1MapGroup
+	ld c, a
+	ld b, 0
+	ld a, wRoamMon1End - wRoamMon1 ; length of the RoamMon struct
+	rst AddNTimes
+	ld a, d
+	cp [hl]
+	jr nz, .DontEncounterRoamMon
+	inc hl
+	ld a, e
+	cp [hl]
+	jr nz, .DontEncounterRoamMon
+; We've decided to take on a beast, so stage its information for battle.
+	dec hl
+	dec hl
+	dec hl
+	ld a, [hli]
+	ld [wTempWildMonSpecies], a
+	ld a, [hl]
+	ld [wCurPartyLevel], a
+	ld a, BATTLETYPE_ROAMING
+	ld [wBattleType], a
+
+	pop hl
+	scf
+	ret
+
+.DontEncounterRoamMon:
+	pop hl
+	and a
+	ret
+
+UpdateRoamMons:
+	ld a, [wRoamMon1MapGroup]
+	cp GROUP_N_A
+	jr z, .SkipRaikou
+	ld b, a
+	ld a, [wRoamMon1MapNumber]
+	ld c, a
+	call .Update
+	ld a, b
+	ld [wRoamMon1MapGroup], a
+	ld a, c
+	ld [wRoamMon1MapNumber], a
+
+.SkipRaikou:
+	ld a, [wRoamMon2MapGroup]
+	cp GROUP_N_A
+	jr z, .SkipEntei
+	ld b, a
+	ld a, [wRoamMon2MapNumber]
+	ld c, a
+	call .Update
+	ld a, b
+	ld [wRoamMon2MapGroup], a
+	ld a, c
+	ld [wRoamMon2MapNumber], a
+
+.SkipEntei:
+	ld a, [wRoamMon3MapGroup]
+	cp GROUP_N_A
+	jr z, .SkipSuicune
+	ld b, a
+	ld a, [wRoamMon3MapNumber]
+	ld c, a
+	call .Update
+	ld a, b
+	ld [wRoamMon3MapGroup], a
+	ld a, c
+	ld [wRoamMon3MapNumber], a
+
+.SkipSuicune: ; no-optimize stub jump
+	jr _BackUpMapIndices
+
+.Update:
+	ld hl, RoamMaps
+.loop
+; Are we at the end of the table?
+	ld a, [hl]
+	cp -1
+	ret z
+; Is this the correct entry?
+	ld a, b
+	cp [hl]
+	jr nz, .next
+	inc hl
+	ld a, c
+	cp [hl]
+	jr z, .yes
+; We don't have the correct entry yet, so let's continue.  A 0 terminates each entry.
+.next
+	ld a, [hli]
+	and a
+	jr nz, .next
+	jr .loop
+
+; We have the correct entry now, so let's choose a random map from it.
+.yes
+	inc hl
+	ld d, h
+	ld e, l
+.update_loop
+	ld h, d
+	ld l, e
+; Choose which map to warp to.
+	call Random
+	and $1f ; 1/8n chance it moves to a completely random map, where n is the number of roaming connections from the current map.
+	jr z, JumpRoamMon
+	and 3
+	cp [hl]
+	jr nc, .update_loop ; invalid index, try again
+	inc hl
+	ld c, a
+	ld b, $0
+	add hl, bc
+	add hl, bc
+	ld a, [wRoamMons_LastMapGroup]
+	cp [hl]
+	jr nz, .done
+	inc hl
+	ld a, [wRoamMons_LastMapNumber]
+	cp [hl]
+	jr z, .update_loop
+	dec hl
+
+.done
+	ld a, [hli]
+	ld b, a
+	ld c, [hl]
+	ret
+
+JumpRoamMons:
+	ld a, [wRoamMon1MapGroup]
+	cp GROUP_N_A
+	jr z, .SkipRaikou
+	call JumpRoamMon
+	ld a, b
+	ld [wRoamMon1MapGroup], a
+	ld a, c
+	ld [wRoamMon1MapNumber], a
+.SkipRaikou:
+
+	ld a, [wRoamMon2MapGroup]
+	cp GROUP_N_A
+	jr z, .SkipEntei
+	call JumpRoamMon
+	ld a, b
+	ld [wRoamMon2MapGroup], a
+	ld a, c
+	ld [wRoamMon2MapNumber], a
+.SkipEntei:
+
+	ld a, [wRoamMon3MapGroup]
+	cp GROUP_N_A
+	jr z, .SkipSuicune
+	call JumpRoamMon
+	ld a, b
+	ld [wRoamMon3MapGroup], a
+	ld a, c
+	ld [wRoamMon3MapNumber], a
+.SkipSuicune:
+	; fallthrough
+
+_BackUpMapIndices:
+	ld a, [wRoamMons_CurMapNumber]
+	ld [wRoamMons_LastMapNumber], a
+	ld a, [wRoamMons_CurMapGroup]
+	ld [wRoamMons_LastMapGroup], a
+	ld a, [wMapNumber]
+	ld [wRoamMons_CurMapNumber], a
+	ld a, [wMapGroup]
+	ld [wRoamMons_CurMapGroup], a
+	ret
+
+JumpRoamMon:
+.loop
+	ld hl, RoamMaps
+	call Random ; Choose a random number
+	and $f ; Take the lower nybble only.  This gives a number between 0 and 15.
+	inc a
+	ld b, a
+.innerloop ; Loop to get hl to the address of the chosen roam map.
+	dec b
+	jr z, .ok
+.innerloop2 ; Loop to skip the current roam map, which is terminated by a 0.
+	ld a, [hli]
+	and a
+	jr nz, .innerloop2
+	jr .innerloop
+; Check to see if the selected map is the one the player is currently in.  If so, try again.
+.ok
+	ld a, [wMapGroup]
+	cp [hl]
+	jr nz, .done
+	inc hl
+	ld a, [wMapNumber]
+	cp [hl]
+	jr z, .loop
+	dec hl
+; Return the map group and number in bc.
+.done
+	ld a, [hli]
+	ld b, a
+	ld c, [hl]
+	ret
+
+INCLUDE "data/wild/roammon_maps.asm"
 
 RandomPhoneRareWildMon:
 ; Related to the phone?

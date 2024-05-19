@@ -1,4 +1,4 @@
-Marts:
+Marts: 
 	table_width 2, Marts
 	dw CherrygroveMart
 	dw CherrygroveMartAfterDex
@@ -75,23 +75,23 @@ VioletMart:
 	db FLOWER_MAIL
 	db -1
 
-AzaleaMart:
+AzaleaMart: ;updated
 	db 10 ; # items
 	db CHARCOAL
 	db POKE_BALL
 	db NET_BALL
 	db POTION
-	db SUPER_POTION
+	db RARE_CANDY
 	db ESCAPE_ROPE
 	db REPEL
 	db ANTIDOTE
 	db PARALYZEHEAL
-	db FLOWER_MAIL
+	db SILVER_LEAF
 	db -1
 
 Goldenrod2FMart1:
 	db 9 ; # items
-	db POTION
+	db RARE_CANDY
 	db SUPER_POTION
 	db ANTIDOTE
 	db PARALYZEHEAL
@@ -192,7 +192,7 @@ EcruteakMart:
 	db POKE_BALL
 	db GREAT_BALL
 	db NEST_BALL
-	db POTION
+	db RARE_CANDY
 	db SUPER_POTION
 	db ANTIDOTE
 	db PARALYZEHEAL
@@ -213,7 +213,7 @@ OlivineMart:
 	db AWAKENING
 	db ICE_HEAL
 	db SUPER_REPEL
-	db SURF_MAIL
+	db RARE_CANDY
 	db -1
 
 CianwoodMart:
@@ -236,7 +236,7 @@ YellowForestMart:
 MahoganyMart1:
 	db 4 ; # items
 	db TINYMUSHROOM
-	db SLOWPOKETAIL
+	db RARE_CANDY
 	db GREAT_BALL
 	db SUPER_POTION
 	db -1
@@ -252,7 +252,7 @@ MahoganyMart2:
 	db HYPER_POTION
 	db SUPER_REPEL
 	db REVIVE
-	db FLOWER_MAIL
+	db RARE_CANDY
 	db -1
 
 BlackthornMart:

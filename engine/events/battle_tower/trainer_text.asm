@@ -4,7 +4,7 @@ BattleTowerText::
 ; 2: Player lost
 ; 3: Player won
 	ld a, [wOtherTrainerClass]
-	cp TOWERTYCOON
+	cp OSTENE
 	jr z, .tycoon
 
 	push bc

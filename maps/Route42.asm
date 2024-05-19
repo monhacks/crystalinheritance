@@ -11,12 +11,7 @@ Route42_MapScriptHeader:
 	warp_event 46,  7, MOUNT_MORTAR_1F_OUTSIDE, 3
 
 	def_coord_events
-	coord_event 12,  6, 1, Route42LyraScript1
-	coord_event 12,  7, 1, Route42LyraScript2
-	coord_event 12,  8, 1, Route42LyraScript3
-	coord_event 12,  9, 1, Route42LyraScript4
-	coord_event 10,  6, 1, Route42LyraScript5
-	coord_event 24, 14, 2, Route42SuicuneScript
+
 
 	def_bg_events
 	bg_event  4, 10, BGEVENT_JUMPTEXT, Route42Sign1Text
@@ -27,7 +22,6 @@ Route42_MapScriptHeader:
 
 	def_object_events
 	object_event 26, 16, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, SUICUNE, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_SAW_SUICUNE_ON_ROUTE_42
-	object_event 10,  5, SPRITE_LYRA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LYRA_ROUTE_42
 	object_event 40, 10, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerFisherTully1, -1
 	object_event 51,  9, SPRITE_HIKER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerHikerBenjamin, -1
 	object_event 47,  8, SPRITE_POKEMANIAC, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerPokemaniacShane, -1
@@ -41,116 +35,7 @@ Route42_MapScriptHeader:
 	itemball_event 33,  8, SUPER_POTION, 1, EVENT_ROUTE_42_SUPER_POTION
 
 	object_const_def
-	const ROUTE42_SUICUNE
-	const ROUTE42_LYRA
 
-Route42LyraScript1:
-	turnobject PLAYER, LEFT
-	showemote EMOTE_SHOCK, PLAYER, 15
-	special Special_FadeOutMusic
-	pause 15
-	playsound SFX_ENTER_DOOR
-	appear ROUTE42_LYRA
-	waitsfx
-	applymovement ROUTE42_LYRA, MovementData_Route42LyraApproach1
-	sjump Route42LyraScript
-
-Route42LyraScript2:
-	turnobject PLAYER, LEFT
-	showemote EMOTE_SHOCK, PLAYER, 15
-	special Special_FadeOutMusic
-	pause 15
-	playsound SFX_ENTER_DOOR
-	appear ROUTE42_LYRA
-	waitsfx
-	applymovement ROUTE42_LYRA, MovementData_Route42LyraApproach2
-	sjump Route42LyraScript
-
-Route42LyraScript3:
-	turnobject PLAYER, LEFT
-	showemote EMOTE_SHOCK, PLAYER, 15
-	special Special_FadeOutMusic
-	pause 15
-	playsound SFX_ENTER_DOOR
-	appear ROUTE42_LYRA
-	waitsfx
-	applymovement ROUTE42_LYRA, MovementData_Route42LyraApproach3
-	sjump Route42LyraScript
-
-Route42LyraScript4:
-	turnobject PLAYER, LEFT
-	showemote EMOTE_SHOCK, PLAYER, 15
-	playsound SFX_ENTER_DOOR
-	appear ROUTE42_LYRA
-	waitsfx
-	applymovement ROUTE42_LYRA, MovementData_Route42LyraApproach4
-	sjump Route42LyraScript
-
-Route42LyraScript5:
-	turnobject PLAYER, UP
-	showemote EMOTE_SHOCK, PLAYER, 15
-	playsound SFX_ENTER_DOOR
-	appear ROUTE42_LYRA
-	waitsfx
-	applymovement PLAYER, MovementData_Route42PlayerStepsBack
-	applyonemovement ROUTE42_LYRA, step_down
-
-Route42LyraScript:
-	playmusic MUSIC_LYRA_ENCOUNTER_HGSS
-	showtext Route42LyraGreetingText
-	setevent EVENT_LYRA_ROUTE_42
-	winlosstext Route42LyraWinText, Route42LyraLossText
-	setlasttalked ROUTE42_LYRA
-	checkevent EVENT_GOT_TOTODILE_FROM_ELM
-	iftrue .Totodile
-	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
-	iftrue .Chikorita
-	loadtrainer LYRA1, LYRA1_7
-	sjump .AfterBattle
-
-.Totodile:
-	loadtrainer LYRA1, LYRA1_8
-	sjump .AfterBattle
-
-.Chikorita:
-	loadtrainer LYRA1, LYRA1_9
-.AfterBattle
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	special DeleteSavedMusic
-	playmusic MUSIC_LYRA_DEPARTURE_HGSS
-	opentext
-	writetext Route42LyraPresentText
-	promptbutton
-	verbosegivetmhm HM_WHIRLPOOL
-	setevent EVENT_GOT_HM05_WHIRLPOOL
-	writetext Route42LyraWhirlpoolText
-	waitbutton
-	closetext
-	applymovement ROUTE42_LYRA, MovementData_Route42LyraLeave
-	disappear ROUTE42_LYRA
-	checkevent EVENT_SAW_SUICUNE_ON_ROUTE_42
-	iftrue .NoSuicune
-	setscene $2
-	sjump .Finish
-.NoSuicune
-	setscene $0
-.Finish
-	playmapmusic
-	end
-
-Route42SuicuneScript:
-	showemote EMOTE_SHOCK, PLAYER, 15
-	pause 15
-	playsound SFX_WARP_FROM
-	applymovement ROUTE42_SUICUNE, Route42SuicuneMovement
-	disappear ROUTE42_SUICUNE
-	pause 10
-	setscene $0
-	clearevent EVENT_SAW_SUICUNE_ON_ROUTE_36
-	setmapscene ROUTE_36, $1
-	end
 
 TrainerFisherTully1:
 	trainer FISHER, TULLY1, EVENT_BEAT_FISHER_TULLY, FisherTully1SeenText, FisherTully1BeatenText, 0, FisherTully1Script
@@ -292,105 +177,6 @@ GenericTrainerPokemaniacShane:
 	line "it. Please?"
 	done
 
-MovementData_Route42LyraApproach4:
-	step_down
-MovementData_Route42LyraApproach3:
-	step_down
-MovementData_Route42LyraApproach2:
-	step_down
-MovementData_Route42LyraApproach1:
-	step_down
-	step_right
-	step_end
-
-MovementData_Route42PlayerStepsBack:
-	fix_facing
-	step_down
-	remove_fixed_facing
-	step_end
-
-MovementData_Route42LyraLeave:
-	step_left
-	step_left
-	step_left
-	step_left
-	step_left
-	step_end
-
-Route42SuicuneMovement:
-	fix_facing
-	fast_jump_step_up
-	fast_jump_step_up
-	fast_jump_step_up
-	fast_jump_step_right
-	fast_jump_step_right
-	fast_jump_step_right
-	step_end
-
-Route42LyraGreetingText:
-	text "Lyra: Hi, <PLAYER>!"
-
-	para "What a coinci-"
-	line "dence. I was just"
-
-	para "studying the eff-"
-	line "ects of the recent"
-
-	para "avalanche on wild"
-	line "#mon."
-
-	para "So you're heading"
-	line "to Mahogany Town"
-
-	para "for another Gym"
-	line "badge?"
-
-	para "Then I have a"
-	line "present for you!"
-
-	para "But you'll have to"
-	line "beat me first!"
-	done
-
-Route42LyraWinText:
-	text "You've earned this"
-	line "gift!"
-	done
-
-Route42LyraLossText:
-	text "Better luck next"
-	line "time…"
-	done
-
-Route42LyraPresentText:
-	text "Lyra: Wow, you're"
-	line "getting really"
-	cont "strong, <PLAYER>!"
-
-	para "I'm sure you can"
-	line "beat the Mahogany"
-	cont "Gym Leader."
-
-	para "And then you can"
-	line "use this!"
-	done
-
-Route42LyraWhirlpoolText:
-	text "Lyra: That's"
-	line "Whirlpool."
-
-	para "Teach it to a"
-	line "#mon to get"
-	cont "across wild water."
-
-	para "I should get"
-	line "going. It was"
-
-	para "nice seeing you,"
-	line "<PLAYER>!"
-
-	para "Bye now!"
-	done
 
 FisherTully1SeenText:
 	text "Let me demonstrate"

@@ -177,12 +177,8 @@ WonderTradeReceptionistScript:
 	opentext
 	writetext WonderTradeIntroText
 	waitbutton
-	checkevent EVENT_INTRODUCED_TEALA
-	iftrue .introduced
 	writetext IntroduceTealaText
 	waitbutton
-	setevent EVENT_INTRODUCED_TEALA
-.introduced
 	writetext WonderTradeExplanationText
 	promptbutton
 	special WonderTrade

@@ -48,13 +48,13 @@ KRIS EQU __trainer_class__
 
 	trainerclass CLAIR ; a
 
-	trainerclass WILL ; b
+	trainerclass KURT ; 92
 
-	trainerclass KOGA ; c
+	trainerclass MEJIMI ; 93
 
 	trainerclass BRUNO ; d
 
-	trainerclass KAREN ; e
+	trainerclass SANDRA ; e replaces karen
 
 	trainerclass CHAMPION ; f
 	const LANCE
@@ -62,7 +62,7 @@ KRIS EQU __trainer_class__
 
 	trainerclass BROCK ; 10
 
-	trainerclass MISTY ; 11
+	trainerclass SAMSARA ; 11 replaces misty
 
 	trainerclass LT_SURGE ; 12
 
@@ -72,7 +72,7 @@ KRIS EQU __trainer_class__
 
 	trainerclass SABRINA ; 15
 
-	trainerclass BLAINE ; 16
+	trainerclass HOLLIS ; 16 replaces blaine
 
 	trainerclass BLUE ; 17
 
@@ -178,7 +178,6 @@ KRIS EQU __trainer_class__
 	const TANNER
 	const CLARK
 	const PEDRO
-	const AMOS
 
 	trainerclass PICNICKER ; 22
 	const LIZ1
@@ -337,7 +336,7 @@ KRIS EQU __trainer_class__
 	const DERRICK
 	const FLOYD
 
-	trainerclass GRUNTM ; 27
+	trainerclass BRIGADER ; 94 replaces gruntm
 
 	trainerclass GRUNTF ; 28
 
@@ -1036,7 +1035,7 @@ KRIS EQU __trainer_class__
 	trainerclass KARATE_KING ; 73
 	const KIYO
 
-	trainerclass TOWERTYCOON ; 74
+	trainerclass OSTENE ; 74
 
 	trainerclass JESSIE_JAMES ; 75
 
@@ -1048,7 +1047,7 @@ KRIS EQU __trainer_class__
 
 	trainerclass CYNTHIA ; 79
 
-	trainerclass INVER ; 7a
+	trainerclass AMOS ; 7a INVER
 
 	trainerclass CHERYL ; 7b
 
@@ -1060,21 +1059,21 @@ KRIS EQU __trainer_class__
 
 	trainerclass MIRA ; 7f
 
-	trainerclass ANABEL ; 80
+	trainerclass LANNA ; 80 anabel
 
 	trainerclass DARACH ; 81
 
 	trainerclass CAITLIN ; 82
 
-	trainerclass CANDELA ; 83
+	trainerclass BOBESH ; 83 CANDELA
 
-	trainerclass BLANCHE ; 84
+	trainerclass ADRINNA ; 84 BLANCHE
 
-	trainerclass SPARK_T ; 85
+	trainerclass BARBEAU ; 85 SPARK_T
 
 	trainerclass FLANNERY ; 86
 
-	trainerclass MAYLENE ; 87
+	trainerclass KANNA ; 87
 
 	trainerclass SKYLA ; 88
 
@@ -1086,13 +1085,13 @@ KRIS EQU __trainer_class__
 
 	trainerclass BILL_T ; 8c
 
-	trainerclass YELLOW ; 8d
+	trainerclass TAMMY ; 8d
 
-	trainerclass WALKER ; 8e
+	trainerclass SILVER ; 8e
 
 	trainerclass IMAKUNI ; 8f
 
-	trainerclass LAWRENCE ; 90
+	trainerclass KENSEY ; 90 lawrence
 
 	trainerclass REI ; 91
 

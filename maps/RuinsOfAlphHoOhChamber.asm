@@ -109,9 +109,9 @@ MapRuinsofAlphHoOhChamberSignpost4Script:
 	endtext
 
 RuinsOfAlphHoOhChamberDescriptionText:
-	text "A #mon that"
-	line "flew gracefully on"
-
-	para "rainbow-colored"
-	line "wings."
+	text "It shares its"
+	line "life force with"
+	
+	para "the volcano in"
+	line "which it resides"
 	done

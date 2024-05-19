@@ -13,34 +13,64 @@ SlowpokeWellEntrance_MapScriptHeader:
 	bg_event  6, 13, BGEVENT_ITEM + SUPER_POTION, EVENT_SLOWPOKE_WELL_ENTRANCE_HIDDEN_SUPER_POTION
 
 	def_object_events
-	object_event  8,  9, SPRITE_KURT, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, SlowpokeWellEntranceKurtText, EVENT_SLOWPOKE_WELL_KURT
+	object_event  3,  4, SPRITE_FISHING_GURU, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, SlowpokeWellFishingGuruScript, -1
 
-SlowpokeWellEntranceKurtText:
-	text "Kurt: Hey there,"
-	line "<PLAYER>!"
+SlowpokeWellFishingGuruScript:
+	checkevent EVENT_GOT_OLD_ROD
+	iftrue_jumptextfaceplayer .DoneText
+	faceplayer
+	opentext
+	writetext .IntroText
+	yesorno
+	iffalse_jumpopenedtext .NoText
+	writetext .YesText
+	promptbutton
+	verbosegivekeyitem OLD_ROD
+	writetext .AfterText
+	waitbutton
+	closetext
+	setevent EVENT_GOT_OLD_ROD
+	end
 
-	para "The guard up top"
-	line "took off when I"
-	cont "shouted at him."
+.IntroText:
+	text "I came to fish"
+	line "for magikarp,"
+	cont "but the well"
+	cont "is too dry."
+	
+	para "Looks like my"
+	line "fishing days"
+	cont "are over."
+	
+	para "Say, would you"
+	line "like this old"
+	cont "fishing rod?"
+	done
 
-	para "But then I took a"
-	line "tumble down the"
-	cont "well."
+.YesText:
+	text "Hey that's great!"
+	line "A new generation"
+	cont "of anglers."
+	done
 
-	para "I slammed down"
-	line "hard on my back,"
-	cont "so I can't move."
+.AfterText:
+	text "You're sure to"
+	line "find some water"
+	cont "if you explore."
+	
+	para "I used to fish"
+	line "for Poliwags"
+	cont "for hours. They"
+	cont "put me in a"
+	cont "trance!"
+	done
 
-	para "Rats! If I were"
-	line "fit, my #mon"
+.NoText:
+	text "Oh. That's rather"
+	line "disappointing…"
+	done
 
-	para "would've punished"
-	line "them…"
-
-	para "Ah, it can't be"
-	line "helped."
-
-	para "<PLAYER>, show them"
-	line "how gutsy you are"
-	cont "in my place!"
+.DoneText:
+	text "Catch much?"
+	line "they biting?"
 	done

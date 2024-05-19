@@ -5,12 +5,12 @@ UnusedPhoneScript:
 ; Mom
 
 MomPhoneScript:
-	checkevent EVENT_TALKED_TO_MOM_AFTER_MYSTERY_EGG_QUEST
-	iftrue .bcec5
-	checkevent EVENT_LEARNED_TO_CATCH_POKEMON
-	iftrue MomPhoneLectureScript
-	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
-	iftrue MomPhoneNoGymQuestScript
+;	checkevent EVENT_TALKED_TO_MOM_AFTER_MYSTERY_EGG_QUEST
+;	iftrue .bcec5
+;	checkevent EVENT_LEARNED_TO_CATCH_POKEMON
+;	iftrue MomPhoneLectureScript
+;	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
+;	iftrue MomPhoneNoGymQuestScript
 ;	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
 ;	iftrue MomPhoneNoPokedexScript
 	sjump MomPhoneNoPokemonScript
@@ -226,16 +226,16 @@ ElmPhoneScript1:
 	checkevent EVENT_TOGEPI_HATCHED
 	iftrue .egghatched
 .next
-	checkevent EVENT_GOT_TOGEPI_EGG_FROM_ELMS_AIDE
-	iftrue .eggunhatched
-	checkevent EVENT_ELMS_AIDE_IN_LAB
-	iftrue .assistant
-	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
-	iftrue .checkingegg
-	checkevent EVENT_ELM_CALLED_ABOUT_STOLEN_POKEMON
-	iftrue .stolen
-	checkevent EVENT_GOT_MYSTERY_EGG_FROM_MR_POKEMON
-	iftrue .sawmrpokemon
+;	checkevent EVENT_GOT_TOGEPI_EGG_FROM_ELMS_AIDE
+;	iftrue .eggunhatched
+;	checkevent EVENT_ELMS_AIDE_IN_LAB
+;	iftrue .assistant
+;	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
+;	iftrue .checkingegg
+;	checkevent EVENT_ELM_CALLED_ABOUT_STOLEN_POKEMON
+;	iftrue .stolen
+;	checkevent EVENT_GOT_MYSTERY_EGG_FROM_MR_POKEMON
+;	iftrue .sawmrpokemon
 	farwritetext ElmPhoneStartText
 	end
 
@@ -377,13 +377,8 @@ LyraPhoneScript2:
 .lyrasegg
 	farwritetext LyraPhoneLyrasEggIntroText
 	promptbutton
-	checkevent EVENT_GOT_TOTODILE_FROM_ELM
-	iftrue .lyrasegg_totodile
-	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
-	iftrue .lyrasegg_chikorita
-	farwritetext LyraPhoneLyrasEggChikoritaText
-	sjump .lyrasegg_end
-
+	end
+	
 .lyrasegg_totodile
 	farwritetext LyraPhoneLyrasEggCyndaquilText
 	sjump .lyrasegg_end
@@ -1014,7 +1009,7 @@ UnknownScript_0xbd600:
 	sjump LizGossipScript
 
 UnknownScript_0xbd606:
-	gettrainerclassname GRUNTM, $1
+	gettrainerclassname BRIGADER, $1
 	sjump LizGossipScript
 
 UnknownScript_0xbd60c:

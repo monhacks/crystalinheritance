@@ -702,7 +702,6 @@ StartTrainerBattle_LoadPokeBallGraphics:
 	ret
 
 .RocketTrainerClasses
-	db GRUNTM
 	db GRUNTF
 	db ROCKET_SCIENTIST
 	db JESSIE_JAMES

@@ -1,5 +1,6 @@
 CharcoalKiln_MapScriptHeader:
 	def_scene_scripts
+	scene_script CharcoalKilnGettingReadyTrigger
 
 	def_callbacks
 
@@ -8,99 +9,113 @@ CharcoalKiln_MapScriptHeader:
 	warp_event  4,  7, AZALEA_TOWN, 2
 
 	def_coord_events
-
+;	coord_event  3, 7, 1, CharcoalKilnGettingReadyScript	
+	
 	def_bg_events
+	bg_event  1,  3, BGEVENT_JUMPTEXT, CharcoalKilnStillText
 
 	def_object_events
-	object_event  1,  4, SPRITE_BLACK_BELT, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CharcoalKilnBoss, EVENT_CHARCOAL_KILN_BOSS
-	object_event  4,  3, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CharcoalKilnApprentice, EVENT_CHARCOAL_KILN_APPRENTICE
-	object_event  8,  6, SPRITE_FARFETCH_D, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CharcoalKilnFarfetchdScript, EVENT_CHARCOAL_KILN_FARFETCH_D
+	object_event  3,  4, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CharcoalKilnBoss, -1
+	object_event  4,  4, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_LEFT, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CharcoalKilnApprentice, EVENT_GOT_A_POKEMON ; should not appear after you get a mon
+	object_event  8,  6, SPRITE_FARFETCH_D, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CharcoalKilnFarfetchdScript, -1
 
-CharcoalKilnBoss:
-	checkevent EVENT_GOT_HM01_CUT
-	iftrue_jumptextfaceplayer .Text3
-	checkevent EVENT_CLEARED_SLOWPOKE_WELL
-	iftrue_jumptextfaceplayer .Text2
-	jumpthistextfaceplayer
+	object_const_def
+	const CHARCOAL_BLACK_BELT
+	const CHARCOAL_RIVAL
 
-	text "All the Slowpoke"
-	line "have disappeared"
-	cont "from the town."
+CharcoalKilnGettingReadyTrigger:
+	sdefer .Script
+	end
 
-	para "The forest's pro-"
-	line "tector may be"
-	cont "angry with us…"
+.Script:
+	pause 30
+	turnobject CHARCOAL_BLACK_BELT, LEFT
+	waitsfx
+	applymovement CHARCOAL_BLACK_BELT, .Movement1
+	pause 60
+	opentext
+	writetext .CharcoalKilnLookingText
+	waitbutton
+	applymovement CHARCOAL_BLACK_BELT, .Movement2
+	applymovement CHARCOAL_RIVAL, .Movement3
+	writetext .CharcoalKilnSoonText
+	closetext
+	setscene $1
+	setevent EVENT_CHARCOAL_TALKED
+	end
 
-	para "It may be a bad"
-	line "omen. We should"
-	cont "stay in."
+.Movement1:
+	turn_head_left
+	step_left
+	step_left
+	turn_head_up
+	step_end
+
+.CharcoalKilnLookingText:
+	text "You are always"
+	line "losing things!..."
+	cont "Here. Why did you"
+	cont "put it there?"
 	done
 
-.Text2:
-	text "The Slowpoke have"
-	line "returned…"
+.Movement2:
+	turn_head_right
+	step_right
+	step_right
+	turn_head_down
+	step_end
+	
+.Movement3:
+	turn_head_down
+	step_end
+	
+.CharcoalKilnSoonText:
+	text  "Ah, <PLAYER>."
+	line "We will be there"
+	cont "soon."
+	done
+	
+CharcoalKilnBoss:
+	checkevent EVENT_GOT_A_POKEMON
+	iftrue_jumptextfaceplayer .Text3
+	jumpthistextfaceplayer
 
-	para "But my Apprentice"
-	line "hasn't come back"
-	cont "from Ilex Forest."
+	text "Made any nice"
+	line "apricorns?"
 
-	para "Where in the world"
-	line "is that lazy guy?"
+	para "That's a handy"
+	line "thing to do."
+	
+	para "Sigh..."
+	
+	para "If they keep log-"
+	line "ging, I don't"
+	cont "know what we will"
+	cont "do."
 	done
 
 .Text3:
-	text "You chased off"
-	line "Team Rocket and"
-
-	para "went to Ilex"
-	line "Forest alone?"
-
-	para "That takes guts!"
-	line "I like that. Come"
-	cont "train with us."
+	text "I wonder where"
+	line "my son went..."
+	
+	para "I wonder if I"
+	line "was too harsh"
+	cont "on him."
 	done
 
 CharcoalKilnApprentice:
-	checkevent EVENT_GOT_CHARCOAL_IN_CHARCOAL_KILN
-	iftrue_jumptextfaceplayer .Text3
-	checkevent EVENT_GOT_HM01_CUT
-	iffalse_jumptextfaceplayer .Text1
 	faceplayer
 	opentext
-	writetext .Text2
+	writetext .Text1
 	promptbutton
-	verbosegiveitem CHARCOAL
-	iffalse_endtext
-	setevent EVENT_GOT_CHARCOAL_IN_CHARCOAL_KILN
 	endtext
 
 .Text1:
-	text "Where have all the"
-	line "Slowpoke gone?"
-
-	para "Are they out play-"
-	line "ing somewhere?"
-	done
-
-.Text2:
-	text "I'm sorry--I for-"
-	line "got to thank you."
-
-	para "This is Charcoal"
-	line "that I made."
-
-	para "Fire-type #mon"
-	line "would be happy to"
-	cont "hold that."
-	done
-
-.Text3:
-	text "The Slowpoke came"
-	line "back, and you even"
-	cont "found Farfetch'd."
-
-	para "You're the cool-"
-	line "est, man!"
+	text "Do you know what"
+	line "this ceremony"
+	cont "is? I hope it"
+	cont "means I can be"
+	cont "more independent."
 	done
 
 CharcoalKilnFarfetchdScript:
@@ -110,4 +125,14 @@ CharcoalKilnFarfetchdScript:
 
 .Text:
 	text "Farfetch'd: Kwaa!"
+	done
+
+CharcoalKilnStillText:
+	text "A design for"
+	line "extracting oil"
+	cont "from Apricorns."
+	
+	para "Looks like a"
+	line "lot of work"
+	cont "went into it."
 	done

@@ -15,7 +15,7 @@ CyndaquilEvosAttacks:
 	db 1, TACKLE
 	db 1, LEER
 	db 6, SMOKESCREEN
-	db 10, EMBER
+	db 8, EMBER
 	db 13, QUICK_ATTACK
 	db 19, DEFENSE_CURL ; Flame Wheel → Defense Curl
 	db 22, FLAME_CHARGE ; Defense Curl → Flame Charge
@@ -88,9 +88,9 @@ RowletEvosAttacks:
 	db EVOLVE_LEVEL, 17, DARTRIX
 	db 0 ; no more evolutions
 	db 1, TACKLE
-	db 1, MUD_SLAP
 	db 1, LEER
-	db 6, NIGHT_SHADE
+	db 6, MUD_SLAP
+	db 8, NIGHT_SHADE
 	db 10, RAZOR_LEAF
 	db 13, AERIAL_ACE
 	db 19, ROOST ; Flame Wheel → Defense Curl
@@ -164,9 +164,9 @@ OshawottEvosAttacks:
 	db EVOLVE_LEVEL, 17, DEWOTT
 	db 0 ; no more evolutions
 	db 1, TACKLE
-	db 1, LOW_KICK
 	db 1, LEER
-	db 6, AQUA_JET
+	db 6, LOW_KICK
+	db 8, AQUA_JET
 	db 10, FOCUS_ENERGY
 	db 13, BITE
 	db 19, WATER_PULSE ; Flame Wheel → Defense Curl
@@ -1325,9 +1325,10 @@ SlowbroEvosAttacks:
 	db 9, WATER_GUN
 	db 14, CONFUSION
 	db 19, DISABLE
-	db 23, HEADBUTT
-	db 28, WATER_PULSE
-	db 32, ZEN_HEADBUTT
+	db 30, AQUA_TAIL
+	db 30, HEADBUTT
+	db 30, SHELL_SMASH
+	db 30, ZEN_HEADBUTT
 	db 36, SAFEGUARD ; Slack Off → egg move
 	db 43, AMNESIA
 	db 49, PSYCHIC_M
@@ -3355,10 +3356,10 @@ GliscorEvosAttacks:
 SnubbullEvosAttacks:
 	db EVOLVE_LEVEL, 23, GRANBULL
 	db 0 ; no more evolutions
-	db 1, TACKLE
-	db 1, SCARY_FACE
-	db 1, LEER ; Tail Whip → similar move
-	db 1, CHARM
+	db 1, LICK
+	db 1, PAY_DAY ; Tail Whip → similar move
+	db 5, CHARM
+	db 6, SCARY_FACE
 	db 7, BITE
 	db 13, LICK
 	db 19, HEADBUTT

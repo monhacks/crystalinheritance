@@ -184,7 +184,7 @@ ENDM
 	map_const AZALEA_GYM,                                  5,  8 ;  5
 	map_const ROUTE_33,                                   10,  9 ;  6
 	map_const AZALEA_TOWN,                                20,  9 ;  7
-	map_const TINDER_GARDEN,                                5,  9 ;  8 ADDED
+	map_const TINDER_GARDEN,                                7,  9 ;  8 ADDED
 
 	newgroup                                                     ;  9
 	map_const LAKE_OF_RAGE_HIDDEN_POWER_HOUSE,             4,  4 ;  1

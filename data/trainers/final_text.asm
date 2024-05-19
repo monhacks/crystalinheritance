@@ -1,22 +1,22 @@
 FinalTextList_TriplePhrases:
-	dbw RIVAL0, .FinalText_Rival0
+	dbw RIVAL0, .FinalText_Rival0 ; TODO
 	dbw RIVAL1, .FinalText_Rival1
 	dbw RIVAL2, .FinalText_Rival2
 	dbw LYRA1,  .FinalText_Lyra1
 	dbw LYRA2,  .FinalText_Lyra2
 	db -1
 
-.FinalText_Rival0:
+.FinalText_Rival0: ;these are said right before the last pokemon comes out. 04-27-24
 	dw Rival1_1FinalPkmnText
 
 .FinalText_Rival1:
-	dw Rival1_2FinalPkmnText
+	dw Rival1_2FinalPkmnText ; TODO
 	dw Rival1_3FinalPkmnText
 	dw Rival1_4FinalPkmnText
 	dw Rival1_5FinalPkmnText
 
 .FinalText_Rival2:
-	dw Rival2_1FinalPkmnText
+	dw Rival2_1FinalPkmnText ; TODO
 	dw Rival2_2FinalPkmnText
 
 .FinalText_Lyra1:
@@ -43,26 +43,26 @@ FinalText_TeamRocket:
 FinalText_SinglePhrases:
 	dw CarrieFinalPkmnText
 	dw CalFinalPkmnText
-	dw FalknerFinalPkmnText
-	dw BugsyFinalPkmnText
-	dw WhitneyFinalPkmnText
-	dw MortyFinalPkmnText
-	dw ChuckFinalPkmnText
-	dw JasmineFinalPkmnText
-	dw PryceFinalPkmnText
-	dw ClairFinalPkmnText
-	dw WillFinalPkmnText
-	dw KogaFinalPkmnText
+	dw FalknerFinalPkmnText ;TODO
+	dw BugsyFinalPkmnText ;TODO
+	dw WhitneyFinalPkmnText ;TODO
+	dw MortyFinalPkmnText ;TODO
+	dw ChuckFinalPkmnText ;TODO
+	dw JasmineFinalPkmnText ;TODO
+	dw PryceFinalPkmnText ;
+	dw ClairFinalPkmnText ;
+	dw KurtFinalPkmnText
+	dw MejimiFinalPkmnText
 	dw BrunoFinalPkmnText
-	dw KarenFinalPkmnText
+	dw SandraFinalPkmnText
 	dw ChampionFinalPkmnText
 	dw BrockFinalPkmnText
-	dw MistyFinalPkmnText
+	dw SamsaraFinalPkmnText
 	dw LtSurgeFinalPkmnText
 	dw ErikaFinalPkmnText
 	dw JanineFinalPkmnText
 	dw SabrinaFinalPkmnText
-	dw BlaineFinalPkmnText
+	dw HollisFinalPkmnText ; new
 	dw BlueFinalPkmnText
 	dw RedFinalPkmnText
 	dw LeafFinalPkmnText
@@ -70,7 +70,7 @@ FinalText_SinglePhrases:
 	dw ProfOakFinalPkmnText
 	dw ProfElmFinalPkmnText
 	dw ProfIvyFinalPkmnText
-	dw MysticalManFinalPkmnText
+	dw MysticalManFinalPkmnText ;ok
 	dw KarateKingFinalPkmnText
 	dw PalmerFinalPkmnText
 	dw JessieJamesFinalPkmnText
@@ -78,27 +78,28 @@ FinalText_SinglePhrases:
 	dw AgathaFinalPkmnText
 	dw StevenFinalPkmnText
 	dw CynthiaFinalPkmnText
-	dw InverFinalPkmnText
+	dw AmosFinalPkmnText ;new
 	dw CherylFinalPkmnText
 	dw RileyFinalPkmnText
 	dw BuckFinalPkmnText
 	dw MarleyFinalPkmnText
 	dw MiraFinalPkmnText
-	dw AnabelFinalPkmnText
+	dw LannaFinalPkmnText ;new
 	dw DarachFinalPkmnText
 	dw CaitlinFinalPkmnText
-	dw CandelaFinalPkmnText
-	dw BlancheFinalPkmnText
-	dw SparkFinalPkmnText
+	dw BobeshFinalPkmnText
+	dw AdrinnaFinalPkmnText ;new
+	dw BarbeauFinalPkmnText ;new
 	dw FlanneryFinalPkmnText
-	dw MayleneFinalPkmnText
+	dw KannaFinalPkmnText ;new
 	dw SkylaFinalPkmnText
 	dw ValerieFinalPkmnText
 	dw KukuiFinalPkmnText ; Kukui
 	dw NULL ; Victor
 	dw BillFinalPkmnText
-	dw YellowFinalPkmnText
+	dw TammyFinalPkmnText ;new
 	dw WalkerFinalPkmnText
 	dw ImakuniFinalPkmnText
-	dw LawrenceFinalPkmnText
-	dw ReiFinalPkmnText
+	dw KenseyFinalPkmnText ;new
+	dw ReiFinalPkmnText ;new
+	dw OsteneFinalPkmnText ; new

@@ -12,9 +12,7 @@ Route34_MapScriptHeader:
 	warp_event 13, 15, DAYCARE, 3
 
 	def_coord_events
-	coord_event  8, 17, 1, Route34LyraTrigger1
-	coord_event  9, 17, 1, Route34LyraTrigger2
-	coord_event 10, 17, 1, Route34LyraTrigger3
+
 
 	def_bg_events
 	bg_event 12,  6, BGEVENT_JUMPTEXT, Route34SignText
@@ -26,7 +24,6 @@ Route34_MapScriptHeader:
 	def_object_events
 	object_event 11, 20, SPRITE_RICH_BOY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route34RichBoyIrvingScript, -1
 	object_event 10, 15, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DayCareManScript_Outside, EVENT_DAYCARE_MAN_ON_ROUTE_34
-	object_event  8, 12, SPRITE_LYRA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LYRA_ROUTE_34
 	object_event 13,  7, SPRITE_CAMPER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 5, TrainerCamperTodd1, -1
 	object_event 15, 32, SPRITE_BREEDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBreederJulie, -1
 	object_event 10, 26, SPRITE_PICNICKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerPicnickerGina1, -1
@@ -42,7 +39,6 @@ Route34_MapScriptHeader:
 	object_const_def
 	const ROUTE34_RICH_BOY
 	const ROUTE34_GRAMPS
-	const ROUTE34_LYRA
 
 Route34EggCheckCallback:
 	checkflag ENGINE_DAY_CARE_MAN_HAS_EGG
@@ -77,95 +73,6 @@ Route34EggCheckCallback:
 .HideMon2:
 	setevent EVENT_DAYCARE_MON_2
 	endcallback
-
-Route34LyraTrigger1:
-	applyonemovement PLAYER, step_right
-	sjump Route34LyraTrigger2
-
-Route34LyraTrigger3:
-	applyonemovement PLAYER, step_left
-Route34LyraTrigger2:
-	turnobject PLAYER, UP
-	special Special_FadeOutMusic
-	showtext Route34LyraText_Grandpa
-	playmusic MUSIC_LYRA_ENCOUNTER_HGSS
-	appear ROUTE34_LYRA
-	turnobject ROUTE34_GRAMPS, UP
-	pause 10
-	applymovement ROUTE34_LYRA, Route34MovementData_LyraComesDown
-	turnobject ROUTE34_GRAMPS, LEFT
-	showtext Route34LyraGoodWorkText
-	showemote EMOTE_SHOCK, ROUTE34_LYRA, 15
-	pause 15
-	turnobject ROUTE34_LYRA, DOWN
-	showtext Route34LyraGreetingText
-	applyonemovement PLAYER, step_up
-	pause 10
-	turnobject ROUTE34_LYRA, RIGHT
-	opentext
-	checkflag ENGINE_PLAYER_IS_FEMALE
-	iftrue .IntroduceFemale
-	writetext Route34LyraIntroductionText1
-	sjump .Continue
-.IntroduceFemale:
-	writetext Route34LyraIntroductionText2
-.Continue:
-	waitbutton
-	closetext
-	turnobject ROUTE34_LYRA, DOWN
-	pause 10
-	showtext Route34LyraChallengeText
-	setevent EVENT_LYRA_ROUTE_34
-	checkevent EVENT_GOT_TOTODILE_FROM_ELM
-	iftrue .Totodile
-	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
-	iftrue .Chikorita
-	winlosstext Route34LyraWinText, Route34LyraLossText
-	setlasttalked ROUTE34_LYRA
-	loadtrainer LYRA1, LYRA1_4
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	special DeleteSavedMusic
-	playmusic MUSIC_LYRA_DEPARTURE_HGSS
-	sjump .AfterBattle
-
-.Totodile:
-	winlosstext Route34LyraWinText, Route34LyraLossText
-	setlasttalked ROUTE34_LYRA
-	loadtrainer LYRA1, LYRA1_5
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	playmusic MUSIC_LYRA_DEPARTURE_HGSS
-	sjump .AfterBattle
-
-.Chikorita:
-	winlosstext Route34LyraWinText, Route34LyraLossText
-	setlasttalked ROUTE34_LYRA
-	loadtrainer LYRA1, LYRA1_6
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	playmusic MUSIC_LYRA_DEPARTURE_HGSS
-.AfterBattle
-	showtext Route34LyraFollowMeText
-	applyonemovement ROUTE34_GRAMPS, slow_step_right
-	playsound SFX_EXIT_BUILDING
-	disappear ROUTE34_GRAMPS
-	follow ROUTE34_LYRA, PLAYER
-	applymovement ROUTE34_LYRA, Route34MovementData_LyraEntersDayCare
-	stopfollow
-	playsound SFX_EXIT_BUILDING
-	disappear ROUTE34_LYRA
-	applyonemovement PLAYER, step_right
-	playsound SFX_EXIT_BUILDING
-	disappear PLAYER
-	setscene $0
-	special FadeOutPalettes
-	pause 15
-	warpfacing RIGHT, DAYCARE, 0, 4
-	end
 
 DayCareManScript_Outside:
 	faceplayer
@@ -613,82 +520,6 @@ Route34MovementData_DayCareManWalksBackInside_WalkAroundPlayer:
 	slow_step_up
 	slow_step_right
 	step_end
-
-Route34MovementData_LyraComesDown:
-	step_down
-	step_down
-	step_down
-	step_right
-	step_end
-
-Route34MovementData_LyraEntersDayCare:
-	step_right
-	step_right
-	step_end
-
-Route34LyraText_Grandpa:
-	text "Lyra: Grandpa!"
-	done
-
-Route34LyraGoodWorkText:
-	text "Lyra: Good work,"
-	line "Grandpa!"
-
-	para "The #mon you"
-	line "raised for me is"
-	cont "healthy as can be!"
-
-	para "You look fit,"
-	line "too!"
-	done
-
-Route34LyraGreetingText:
-	text "Lyra: Hi, <PLAYER>!"
-	done
-
-Route34LyraIntroductionText1:
-	text "This is <PLAYER>."
-	line "He's a trainer."
-
-	para "He's quite good at"
-	line "raising #mon."
-
-	para "Well, not as good"
-	line "as you, of course!"
-	done
-
-Route34LyraIntroductionText2:
-	text "This is <PLAYER>."
-	line "She's a trainer."
-
-	para "She's quite good at"
-	line "raising #mon."
-
-	para "Well, not as good"
-	line "as you, of course!"
-	done
-
-Route34LyraChallengeText:
-	text "<PLAYER>, why don't"
-	line "we show Grandpa"
-	cont "how good you are?"
-	done
-
-Route34LyraWinText:
-	text "You're even better"
-	line "than I thought!"
-	done
-
-Route34LyraLossText:
-	text "Well, you're still"
-	line "getting better…"
-	done
-
-Route34LyraFollowMeText:
-	text "Lyra: Let me"
-	line "introduce you to"
-	cont "Grandma, too!"
-	done
 
 BreederJulieSeenText:
 	text "This is where I"

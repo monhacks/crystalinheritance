@@ -188,7 +188,7 @@ endc
 	ld bc, wColorVaryDVs
 
 	ld a, [wColorVarySpecies]
-	cp PORYGON ; PORYGON CHANGES COLORS?
+	cp PORYGON ; PORYGON CHANGES COLORS? maybe it's cool... 
 	jr z, .Smeargle
 
 ;;; LiteRed ~ HPDV, aka, rrrrr ~ hhhh

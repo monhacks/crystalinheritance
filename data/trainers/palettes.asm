@@ -15,24 +15,24 @@ ChuckPalette:            INCLUDE "gfx/trainers/chuck.pal"
 JasminePalette:          INCLUDE "gfx/trainers/jasmine.pal"
 PrycePalette:            INCLUDE "gfx/trainers/pryce.pal"
 ClairPalette:            INCLUDE "gfx/trainers/clair.pal"
-WillPalette:             INCLUDE "gfx/trainers/will.pal"
-KogaPalette:             INCLUDE "gfx/trainers/koga.pal"
+KurtPalette:             INCLUDE "gfx/trainers/kurt.pal" ; match falkner, done
+MejimiPalette:           INCLUDE "gfx/trainers/mejimi.pal" ; pruple and red
 BrunoPalette:            INCLUDE "gfx/trainers/bruno.pal"
-KarenPalette:            INCLUDE "gfx/trainers/karen.pal"
+SandraPalette:           INCLUDE "gfx/trainers/sandra.pal" ; from karen; should be pink or red, check whitney palette
 ChampionPalette:         INCLUDE "gfx/trainers/champion.pal"
 BrockPalette:            INCLUDE "gfx/trainers/brock.pal"
-MistyPalette:            INCLUDE "gfx/trainers/misty.pal"
+SamsaraPalette:          INCLUDE "gfx/trainers/samsara.pal" ;dark blue
 LtSurgePalette:          INCLUDE "gfx/trainers/lt_surge.pal"
 ErikaPalette:            INCLUDE "gfx/trainers/erika.pal"
 JaninePalette:           INCLUDE "gfx/trainers/janine.pal"
 SabrinaPalette:          INCLUDE "gfx/trainers/sabrina.pal"
-BlainePalette:           INCLUDE "gfx/trainers/blaine.pal"
+HollisPalette:           INCLUDE "gfx/trainers/hollis.pal" ; match bugsy
 BluePalette:             INCLUDE "gfx/trainers/blue.pal"
 RedPalette:              INCLUDE "gfx/trainers/red.pal"
 LeafPalette:             INCLUDE "gfx/trainers/leaf.pal"
-Rival0Palette:           INCLUDE "gfx/trainers/rival1.pal"
-Rival1Palette:           INCLUDE "gfx/trainers/rival1.pal"
-Rival2Palette:           INCLUDE "gfx/trainers/rival2.pal"
+Rival0Palette:           INCLUDE "gfx/trainers/walker.pal" ;done
+Rival1Palette:           INCLUDE "gfx/trainers/walker.pal" ;done
+Rival2Palette:           INCLUDE "gfx/trainers/walker.pal" ;done
 Lyra1Palette:            INCLUDE "gfx/trainers/lyra1.pal"
 Lyra2Palette:            INCLUDE "gfx/trainers/lyra2.pal"
 YoungsterPalette:        INCLUDE "gfx/trainers/youngster.pal"
@@ -43,7 +43,7 @@ TwinsPalette:            INCLUDE "gfx/trainers/twins.pal"
 FisherPalette:           INCLUDE "gfx/trainers/fisher.pal"
 BirdKeeperPalette:       INCLUDE "gfx/trainers/bird_keeper.pal"
 HikerPalette:            INCLUDE "gfx/trainers/hiker.pal"
-GruntmPalette:           INCLUDE "gfx/trainers/grunt_m.pal"
+BrigaderPalette:         INCLUDE "gfx/trainers/brigader.pal" ; purple
 GruntfPalette:           INCLUDE "gfx/trainers/grunt_f.pal"
 PokefanmPalette:         INCLUDE "gfx/trainers/pokefan_m.pal"
 PokefanfPalette:         INCLUDE "gfx/trainers/pokefan_f.pal"
@@ -120,35 +120,35 @@ ProfElmPalette:          INCLUDE "gfx/trainers/elm.pal"
 ProfIvyPalette:          INCLUDE "gfx/trainers/ivy.pal"
 MysticalmanPalette:      INCLUDE "gfx/trainers/mysticalman.pal"
 KarateKingPalette:       INCLUDE "gfx/trainers/karate_king.pal"
-TowerTycoonPalette:      INCLUDE "gfx/trainers/towertycoon.pal"
+OstenePalette:           INCLUDE "gfx/trainers/ostene.pal" ;green?
 JessieJamesPalette:      INCLUDE "gfx/trainers/jessie_james.pal"
 LoreleiPalette:          INCLUDE "gfx/trainers/lorelei.pal"
 AgathaPalette:           INCLUDE "gfx/trainers/agatha.pal"
 StevenPalette:           INCLUDE "gfx/trainers/steven.pal"
 CynthiaPalette:          INCLUDE "gfx/trainers/cynthia.pal"
-InverPalette:            INCLUDE "gfx/trainers/inver.pal"
+AmosPalette:             INCLUDE "gfx/trainers/amos.pal" ; plum?
 CherylPalette:           INCLUDE "gfx/trainers/cheryl.pal"
 RileyPalette:            INCLUDE "gfx/trainers/riley.pal"
 BuckPalette:             INCLUDE "gfx/trainers/buck.pal"
 MarleyPalette:           INCLUDE "gfx/trainers/marley.pal"
 MiraPalette:             INCLUDE "gfx/trainers/mira.pal"
-AnabelPalette:           INCLUDE "gfx/trainers/anabel.pal"
+LannaPalette:            INCLUDE "gfx/trainers/lanna.pal" ; yellow light
 DarachPalette:           INCLUDE "gfx/trainers/darach.pal"
 CaitlinPalette:          INCLUDE "gfx/trainers/caitlin.pal"
-CandelaPalette:          INCLUDE "gfx/trainers/candela.pal"
-BlanchePalette:          INCLUDE "gfx/trainers/blanche.pal"
-SparkPalette:            INCLUDE "gfx/trainers/spark.pal"
+BobeshPalette:           INCLUDE "gfx/trainers/bobesh.pal" ; red
+AdrinnaPalette:          INCLUDE "gfx/trainers/adrinna.pal" ; yellow, dark
+BarbeauPalette:          INCLUDE "gfx/trainers/barbeau.pal" ; blue
 FlanneryPalette:         INCLUDE "gfx/trainers/flannery.pal"
-MaylenePalette:          INCLUDE "gfx/trainers/maylene.pal"
+KannaPalette:            INCLUDE "gfx/trainers/kanna.pal" ;lt blue, misty?
 SkylaPalette:            INCLUDE "gfx/trainers/skyla.pal"
 ValeriePalette:          INCLUDE "gfx/trainers/valerie.pal"
 KukuiPalette:            INCLUDE "gfx/trainers/kukui.pal"
 VictorPalette:           INCLUDE "gfx/trainers/victor.pal"
 BillPalette:             INCLUDE "gfx/trainers/bill.pal"
-YellowPalette:           INCLUDE "gfx/trainers/yellow.pal"
-WalkerPalette:           INCLUDE "gfx/trainers/walker.pal"
+TammyPalette:            INCLUDE "gfx/trainers/tammy.pal" ; slight change to yellow palette, ideally same color as the sick trees in ilex 
+SilverPalette:           INCLUDE "gfx/trainers/rival2.pal" ; done
 ImakuniPalette:          INCLUDE "gfx/trainers/imakuni.pal"
-LawrencePalette:         INCLUDE "gfx/trainers/lawrence.pal"
+KenseyPalette:           INCLUDE "gfx/trainers/kensey.pal" ; should be blue
 ReiPalette:              INCLUDE "gfx/trainers/rei.pal"
 OmastarFossilPalette:    INCLUDE "gfx/trainers/omastar_fossil.pal"
 KabutopsFossilPalette:   INCLUDE "gfx/trainers/kabutops_fossil.pal"

@@ -1,4 +1,4 @@
-	frame 0, 06
+	frame 0, 06 ;todo remove every other of these to get down to size
 	frame 1, 06
 	frame 2, 06
 	frame 3, 06
@@ -9,22 +9,5 @@
 	frame 8, 06
 	frame 9, 06
 	frame 10, 06
-	frame 11, 06
-	frame 12, 06
-	frame 13, 06
-	frame 14, 06
-	frame 15, 06
-	frame 16, 06
-	frame 17, 06
-	frame 18, 06
-	frame 19, 06
-	frame 20, 06
-	frame 21, 06
-	frame 22, 06
-	frame 23, 06
-	frame 24, 06
-	frame 25, 06
-	frame 26, 06
-	frame 27, 06
 	endanim
 	

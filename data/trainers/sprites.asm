@@ -1,5 +1,5 @@
 BTTrainerClassSprites:
-; entries correspond to trainer classes
+; entries correspond to trainer classes ? used in battle tower? I need to update the OW sprites for these guys
 	table_width 1, BTTrainerClassSprites
 	db SPRITE_KRIS          ; CARRIE
 	db SPRITE_CHRIS         ; CAL
@@ -11,18 +11,18 @@ BTTrainerClassSprites:
 	db SPRITE_JASMINE       ; JASMINE
 	db SPRITE_PRYCE         ; PRYCE
 	db SPRITE_CLAIR         ; CLAIR
-	db SPRITE_WILL          ; WILL
-	db SPRITE_KOGA          ; KOGA
+	db SPRITE_CHUCK          ; KURT
+	db SPRITE_FALKNER          ; MEJIMI
 	db SPRITE_BRUNO         ; BRUNO
-	db SPRITE_KAREN         ; KAREN
+	db SPRITE_CLAIR         ; KAREN
 	db SPRITE_LANCE         ; CHAMPION
 	db SPRITE_BROCK         ; BROCK
-	db SPRITE_MISTY         ; MISTY
+	db SPRITE_CLAIR         ; SAMSARA
 	db SPRITE_SURGE         ; LT_SURGE
 	db SPRITE_ERIKA         ; ERIKA
 	db SPRITE_JANINE        ; JANINE
 	db SPRITE_SABRINA       ; SABRINA
-	db SPRITE_BLAINE        ; BLAINE
+	db SPRITE_LANCE        ; HOLLIS
 	db SPRITE_BLUE          ; BLUE
 	db SPRITE_RED           ; RED
 	db SPRITE_LEAF          ; LEAF
@@ -39,7 +39,7 @@ BTTrainerClassSprites:
 	db SPRITE_FISHER        ; FISHER
 	db SPRITE_BIRD_KEEPER   ; BIRD_KEEPER
 	db SPRITE_HIKER         ; HIKER
-	db SPRITE_ROCKET        ; GRUNTM
+	db SPRITE_ROCKET_GIRL        ; BRIGADER
 	db SPRITE_ROCKET_GIRL   ; GRUNTF
 	db SPRITE_POKEFAN_M     ; POKEFANM
 	db SPRITE_POKEFAN_F     ; POKEFANF
@@ -107,9 +107,9 @@ BTTrainerClassSprites:
 	db SPRITE_VETERAN_M     ; VETERAN_M
 	db SPRITE_VETERAN_F     ; VETERAN_F
 	db SPRITE_PROTON        ; PROTON
-	db SPRITE_PETREL        ; PETREL
-	db SPRITE_ARCHER        ; ARCHER
-	db SPRITE_ARIANA        ; ARIANA
+	db SPRITE_AMOS        ; PETREL
+	db SPRITE_OSTENE        ; ARCHER
+	db SPRITE_REI        ; ARIANA
 	db SPRITE_GIOVANNI      ; GIOVANNI
 	db SPRITE_OAK           ; PROF_OAK
 	db SPRITE_ELM           ; PROF_ELM
@@ -117,4 +117,34 @@ BTTrainerClassSprites:
 	db SPRITE_EUSINE        ; MYSTICALMAN
 	db SPRITE_BLACK_BELT    ; KARATE_KING
 	db SPRITE_PALMER        ; TOWERTYCOON
-	assert_table_length TOWERTYCOON
+	assert_table_length OSTENE ;, new text is below this. Hopefully we have nough space?...
+;	db SPRITE_ELM           ; PROF_ELM JESJAMES
+;	db SPRITE_IVY           ; PROF_IVY LORELI
+;	db SPRITE_EUSINE        ; MYSTICALMAN AGA
+;	db SPRITE_BLACK_BELT    ; KARATE_KING STEVEN
+;	db SPRITE_PALMER        ; TOWERTYCOON CYNTHIA
+;	db SPRITE_AMOS
+;	db SPRITE_ELM           ; PROF_ELM JESJAMES
+;	db SPRITE_IVY           ; PROF_IVY LORELI
+;	db SPRITE_EUSINE        ; MYSTICALMAN AGA
+;	db SPRITE_BLACK_BELT    ; KARATE_KING STEVEN
+;	db SPRITE_PALMER        ; TOWERTYCOON CYNTHIA
+;	db SPRITE_LANNA
+;	db SPRITE_BLACK_BELT    ; KARATE_KING STEVEN
+;	db SPRITE_PALMER        ; TOWERTYCOON CYNTHIA
+;	db SPRITE_BOBESH
+;	db SPRITE_ADRINNA
+;	db SPRITE_BARBEAU
+;	db SPRITE_FLANNERY
+;	db SPRITE_KANNA
+;	db SPRITE_ELM           ; PROF_ELM JESJAMES
+;	db SPRITE_IVY           ; PROF_IVY LORELI
+;	db SPRITE_EUSINE        ; MYSTICALMAN AGA
+;	db SPRITE_BLACK_BELT    ; KARATE_KING STEVEN
+;	db SPRITE_PALMER        ; TOWERTYCOON CYNTHIA
+;	db SPRITE_TAMMY
+;	db SPRITE_SILVER 
+;	db SPRITE_IMAKUNI
+;	db SPRITE_KENSEY
+;	db SPRITE_REI
+;	assert_table_length NUM_TRAINER_CLASSES

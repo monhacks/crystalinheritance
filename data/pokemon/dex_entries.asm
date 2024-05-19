@@ -911,11 +911,11 @@ INCLUDE "data/pokemon/dex_entries/351.asm";;
 
 SECTION "FroslassPokedexEntry", ROMX
 FroslassPokedexEntry::
-INCLUDE "data/pokemon/dex_entries/352.asm"
+INCLUDE "data/pokemon/dex_entries/353.asm"
 
 SECTION "RotomPokedexEntry", ROMX
 RotomPokedexEntry::
-INCLUDE "data/pokemon/dex_entries/353.asm";;
+INCLUDE "data/pokemon/dex_entries/352.asm";;
 
 SECTION "HavaluggPokedexEntry", ROMX
 HavaluggPokedexEntry::

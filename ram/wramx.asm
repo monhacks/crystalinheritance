@@ -1033,10 +1033,10 @@ wBattleFacilitySceneID:: db
 	ds 3 ; unused
 wBattleTowerOutsideSceneID:: db
 wBellchimeTrailSceneID:: db
-wBrunosRoomSceneID:: db
+wCharcoalKilnSceneID:: db
 wBurnedTower1FSceneID:: db
 wBurnedTowerB1FSceneID:: db
-wCeruleanCapeSceneID:: db
+wTinderGardenSceneID:: db
 wCeruleanCave1FSceneID:: db
 wCeruleanGymSceneID:: db
 wCherrygroveCitySceneID:: db

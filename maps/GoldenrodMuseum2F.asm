@@ -64,52 +64,52 @@ KabutoPuzzleScript:
 	checkevent EVENT_SOLVED_KABUTO_PUZZLE
 	iffalse_jumptext UnsolvedPuzzleText
 	refreshscreen
-	paintingpic KABUTO_PUZZLE
+	paintingpic CELEBI_PUZZLE
 	waitbutton
 	closepokepic
 	jumpthistext
 
 	text "It's the completed"
-	line "Kabuto panel!"
+	line "Celebi panel!"
 	done
 
 OmanytePuzzleScript:
 	checkevent EVENT_SOLVED_OMANYTE_PUZZLE
 	iffalse_jumptext UnsolvedPuzzleText
 	refreshscreen
-	paintingpic OMANYTE_PUZZLE
+	paintingpic BRONZONG_PUZZLE
 	waitbutton
 	closepokepic
 	jumpthistext
 
 	text "It's the completed"
-	line "Omanyte panel!"
+	line "Bronzong panel!"
 	done
 
 AerodactylPuzzleScript:
 	checkevent EVENT_SOLVED_AERODACTYL_PUZZLE
 	iffalse_jumptext UnsolvedPuzzleText
 	refreshscreen
-	paintingpic AERODACTYL_PUZZLE
+	paintingpic LUGIA_PUZZLE
 	waitbutton
 	closepokepic
 	jumpthistext
 
 	text "It's the completed"
-	line "Aerodactyl panel!"
+	line "Lugia panel!"
 	done
 
 HoOhPuzzleScript:
 	checkevent EVENT_SOLVED_HO_OH_PUZZLE
 	iffalse_jumptext UnsolvedPuzzleText
 	refreshscreen
-	paintingpic HO_OH_PUZZLE
+	paintingpic HEATRAN_PUZZLE
 	waitbutton
 	closepokepic
 	jumpthistext
 
 	text "It's the completed"
-	line "Ho-Oh panel!"
+	line "Heatran panel!"
 	done
 
 UnsolvedPuzzleText:

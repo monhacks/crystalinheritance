@@ -187,9 +187,9 @@ RuinsOfAlphKabutoChamberScientistTremorText:
 	done
 
 RuinsOfAlphKabutoChamberDescriptionText:
-	text "A #mon that hid"
-	line "on the sea floor."
+	text "The forest kami"
+	line "time travels"
 
-	para "Eyes on its back"
-	line "scanned the area."
+	para "ilke a morning"
+	line "stroll."
 	done

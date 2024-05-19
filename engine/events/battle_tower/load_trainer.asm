@@ -517,7 +517,7 @@ BT_AppendOTMon:
 	ld [hli], a
 	ld a, BATTLETOWER_FORCED_LEVEL
 	ld [hli], a
-	ld a, BATTLE_TOWER
+	ld a, TINDER_GARDEN ; TODO CHANGE THIS TO STADIUM
 	ld [hli], a
 
 	; Set EVs

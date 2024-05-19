@@ -1,13 +1,13 @@
 	db  65,  80, 140,  70,  40,  70 ; 465 BST
 	;   hp  atk  def  spd  sat  sdf
 
-	db STEEL, FLYING ; type
+	db GRASS, FLYING ; type
 	db 25 ; catch rate
 	db 168 ; base exp
 	db NO_ITEM ; item 1
 	db SHARP_BEAK ; item 2
 	dn GENDER_F50, 4 ; gender ratio, step cycles to hatch
-	INCBIN "gfx/pokemon/skarmory/front.dimensions"
+	INCBIN "gfx/pokemon/skiploom/front.dimensions"
 	abilities_for SKIPLOOM, CHLOROPHYLL, CHLOROPHYLL, CHLOROPHYLL
 	db GROWTH_MEDIUM_SLOW ; growth rate
 	dn EGG_FLYING, EGG_FLYING ; egg groups

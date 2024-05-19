@@ -540,7 +540,7 @@ StatsScreen_LoadGFX:
 
 .PlaceOTInfo:
 	; for rental mons, replace the whole thing with "Rental #mon"
-;	farcall BT_InRentalMode ;TODO CHECK THAT THE OT LOOKS OK ON THE STATS SCREEN
+	farcall BT_InRentalMode ;TODO CHECK THAT THE OT LOOKS OK ON THE STATS SCREEN - it didn't 05.03.24 so putting back in the battle tower stuff
 	jr nz, .not_rental_mon
 	hlcoord 0, 15
 	ld de, .OT_ID_str;.Rental_OT USED TO BE

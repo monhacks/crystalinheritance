@@ -25,17 +25,19 @@ PokemonJournalBugsyScript:
 
 	text "#mon Journal"
 
-	para "Special Feature:"
-	line "Leader Bugsy!"
-
-	para "Bugsy is reported"
-	line "to have won the"
-
-	para "Bug-Catching Con-"
-	line "test so often that"
-
-	para "he no longer par-"
-	line "ticipates."
+	para "I studied the"
+	line "tree rings in"
+	cont "Ilex Forest."
+	
+	para "Very few are"
+	line "older than 160"
+	cont "years old. What"
+	cont "is the reason?"
+	
+	para "I've tried to"
+	line "get resources to"
+	cont "see what was"
+	cont "so damaging."
 	done
 
 AzaleaPokeCenter1FCooltrainermScript:
@@ -59,53 +61,39 @@ AzaleaPokeCenter1FCooltrainermScript:
 .NiteText:
 	text "Kurt and Prof.Oak"
 	line "are old friends."
-
-	para "They're also close"
-	line "with Agatha, a"
-
-	para "former member of"
-	line "the Elite Four."
 	done
 
 AzaleaPokeCenter1FGentlemanText:
-	text "Do your #mon"
-	line "know HM moves?"
-
-	para "Those moves can"
-	line "be used even if"
-
-	para "your #mon has"
-	line "fainted."
+	text "It has been so"
+	line "since it rained."
+	
+	para "It must have to"
+	line "do with the slow-"
+	cont "poke driven out"
+	cont "of the well."
 	done
 
 AzaleaPokeCenter1FSightseermText:
-	text "This Bill guy"
-	line "created the system"
-
-	para "for storing"
-	line "#mon in a PC."
-
-	para "Bill's PC can"
-	line "store up to 20"
-	cont "#mon per Box."
+	text "Hard to believe"
+	line "that the charcoal"
+	cont "boy is old en-"
+	cont "ough to build"
+	cont "the shrine."
+	
+	para "Seems like just"
+	line "yesterday, he"
+	cont "lost his dad's"
+	cont "Farfetchd."
 	done
 
-AzaleaPokeCenter1FPokefanfText:
-	text "Do you know about"
-	line "Apricorns?"
-
-	para "Crack one open,"
-	line "hollow it out and"
-
-	para "fit it with a"
-	line "special device."
-
-	para "Then you can catch"
-	line "#mon with it."
-
-	para "Before # Balls"
-	line "were invented,"
-
-	para "everyone used"
-	line "Apricorns."
+AzaleaPokeCenter1FPokefanfText: 
+	text "My husband likes"
+	line "to fish in Slow-"
+	cont "poke well."
+	
+	para "To be honest,"
+	line "he doesn't bring"
+	cont "home fewer fish"
+	cont "than before the"
+	cont "drought."
 	done

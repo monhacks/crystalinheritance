@@ -267,7 +267,7 @@ GRASS_WILDDATA_LENGTH EQU 2 + (1 + NUM_GRASSMON * 3) * 3
 WATER_WILDDATA_LENGTH EQU 2 + (1 + NUM_WATERMON * 3) * 1
 FISHGROUP_DATA_LENGTH EQU 2 + 2 * 3
 
-;NUM_ROAMMON_MAPS EQU 16 ; RoamMaps table size (see data/wild/roammon_maps.asm) ; removed this line 03.31.24
+;NUM_ROAMMON_MAPS EQU 16 ; RoamMaps table size (see data/wild/roammon_maps.asm) ; removed this line 03.31.24, seems to be ok 05.03.24
 
 ; treemon sets
 ; TreeMons indexes (see data/wild/treemons.asm)

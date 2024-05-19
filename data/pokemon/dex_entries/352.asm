@@ -1,9 +1,9 @@
-	db "Gripper@" ; species name
-	dw 703, 2350 ; height, width
+	db "Plasma@" ; species name
+	dw 100, 300 ; height, width
 
-	db   "Its icy hands" 
-	next "escort those with"
-	next "no life left."
-	page "Occasionally,"
-	next "takes one who has"
-	next "some life left.@"
+	db   "It appears to be" 
+	next "a will-o-wisp,"
+	next "sustained by"
+	page "ambient static."
+	next "It is smart and"
+	next "mischievous.@"

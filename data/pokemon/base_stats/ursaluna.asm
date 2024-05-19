@@ -7,7 +7,7 @@
 	db ALWAYS_ITEM_2 ; item 1
 	db SITRUS_BERRY ; item 2
 	dn GENDER_F50, 3 ; gender ratio, step cycles to hatch
-	INCBIN "gfx/pokemon/ursaring/front.dimensions"
+	INCBIN "gfx/pokemon/ursaluna/front.dimensions"
 	abilities_for URSALUNA, GUTS, QUICK_FEET, GUTS
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_GROUND, EGG_GROUND ; egg groups

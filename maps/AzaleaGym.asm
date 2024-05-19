@@ -28,6 +28,29 @@ AzaleaGymStatue:
 AzaleaGymBugsyScript:
 	checkevent EVENT_BEAT_BUGSY
 	iftrue_jumptextfaceplayer .AfterText
+	checkevent EVENT_BEAT_HOLLIS
+	iftrue .BattleBugsy
+	jumpthistextfaceplayer 
+		text "<PLAYER>."
+		line "I have an idea."
+		
+		para "Scyther's genes"
+		line "are similar to"
+		cont "Slowpoke's."
+		
+		para "Slowpoke has bra-"
+		line "nching evolution."
+		
+		para "I wonder if Scy-"
+		line "ther is the same?"
+		
+		para "No one takes my"
+		line "research serious-"
+		cont "ly, so I can't"
+		cont "get any progress."
+		done
+
+.BattleBugsy:
 	showtextfaceplayer .SeenText
 	winlosstext .BeatenText, 0
 	loadtrainer BUGSY, 1
@@ -86,21 +109,22 @@ AzaleaGymBugsyScript:
 	done
 
 .SeenText:
-	text "I'm Bugsy!"
-	line "I never lose when"
+	text "Oh? You have"
+	line "news about a"
+	cont "branched evol-"
+	cont "ution of Scyther?"
 
-	para "it comes to bug"
-	line "#mon."
-
-	para "My research is"
-	line "going to make me"
-
-	para "the authority on"
-	line "bug #mon!"
-
-	para "Let me demonstrate"
-	line "what I've learned"
-	cont "from my studies."
+	para "..."
+	
+	para "Incredible!" 
+	
+	para "I feel rejuven-"
+	line "ated by this."
+	
+	para "I'm ready to be a"
+	line "Gym Leader again!"
+	
+	para "Let's battle!"
 	done
 
 .BeatenText:

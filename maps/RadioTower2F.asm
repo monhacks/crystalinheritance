@@ -20,10 +20,6 @@ RadioTower2F_MapScriptHeader:
 	object_event 14,  5, SPRITE_BUENA, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Buena, -1
 	object_event  6,  6, SPRITE_POKEMANIAC, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, RadioTower2FSuperNerdText, EVENT_GOLDENROD_CITY_CIVILIANS
 	object_event 17,  2, SPRITE_POKEFAN_F, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, RadioTower2FTeacherScript, -1
-	object_event  1,  4, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerGruntM4, EVENT_RADIO_TOWER_ROCKET_TAKEOVER
-	object_event  7,  4, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerGruntM5, EVENT_RADIO_TOWER_ROCKET_TAKEOVER
-	object_event  4,  1, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerGruntM6, EVENT_RADIO_TOWER_ROCKET_TAKEOVER
-	object_event 10,  5, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerGruntF2, EVENT_RADIO_TOWER_ROCKET_TAKEOVER
 	object_event  0,  1, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, RadioTower2FBlackBelt1Text, EVENT_RADIO_TOWER_BLACKBELT_BLOCKS_STAIRS
 	object_event  1,  1, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, RadioTower2FBlackBelt2Text, EVENT_RADIO_TOWER_CIVILIANS_AFTER
 	pokemon_event 12,  1, JIGGLYPUFF, -1, -1, PAL_NPC_RED, RadioTowerJigglypuffText, -1
@@ -41,41 +37,6 @@ RadioTower2FTeacherScript:
 	text "Lullabies on the"
 	line "radio may make"
 	cont "#mon sleep."
-	done
-
-GenericTrainerGruntM4:
-	generictrainer GRUNTM, 4, EVENT_BEAT_ROCKET_GRUNTM_4, GruntM4SeenText, GruntM4BeatenText
-
-	text "We won't let you"
-	line "ruin our plans"
-	cont "for our comeback!"
-	done
-
-GenericTrainerGruntM5:
-	generictrainer GRUNTM, 5, EVENT_BEAT_ROCKET_GRUNTM_5, GruntM5SeenText, GruntM5BeatenText
-
-	text "We're not always"
-	line "evil. We just do"
-	cont "whatever we like."
-	done
-
-GenericTrainerGruntM6:
-	generictrainer GRUNTM, 6, EVENT_BEAT_ROCKET_GRUNTM_6, GruntM6SeenText, GruntM6BeatenText
-
-	text "Our Executives are"
-	line "trying to take"
-	cont "this place over."
-
-	para "They have some big"
-	line "plan. I wonder"
-	cont "what that is?"
-	done
-
-GenericTrainerGruntF2:
-	generictrainer GRUNTF, 2, EVENT_BEAT_ROCKET_GRUNTF_2, GruntF2SeenText, GruntF2BeatenText
-
-	text "You beat me, and"
-	line "I won't forget it!"
 	done
 
 Buena:
@@ -330,60 +291,6 @@ RadioTower2FBlackBelt2Text:
 	para "The Director is"
 	line "nice again, just"
 	cont "as he was before."
-	done
-
-GruntM4SeenText:
-	text "Three years ago,"
-	line "Team Rocket was"
-	cont "forced to disband."
-
-	para "But we're making a"
-	line "comeback here!"
-	done
-
-GruntM4BeatenText:
-	text "Gwah! Don't get"
-	line "cute!"
-	done
-
-GruntM5SeenText:
-	text "We're Team Rocket,"
-	line "the exploiters of"
-	cont "#mon!"
-
-	para "We love being"
-	line "evil! Scared?"
-	done
-
-GruntM5BeatenText:
-	text "You think you're a"
-	line "hero?"
-	done
-
-GruntM6SeenText:
-	text "Hey, hey! Keep out"
-	line "of our way!"
-	done
-
-GruntM6BeatenText:
-	text "Arggh. I give up."
-	done
-
-GruntF2SeenText:
-	text "Hahaha!"
-
-	para "How boring."
-	line "It was far too"
-
-	para "easy to take over"
-	line "this place!"
-
-	para "Come on, keep me"
-	line "amused!"
-	done
-
-GruntF2BeatenText:
-	text "Wh-who are you?"
 	done
 
 RadioTower2FBuenaShowIntroductionText:

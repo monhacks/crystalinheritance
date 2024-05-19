@@ -86,7 +86,7 @@ MapRuinsofAlphAerodactylChamberSignpost2Script:
 
 MapRuinsofAlphAerodactylChamberSignpost3Script:
 	unowntypeface
-	showtext RuinsOfAlphAerodactylChamberDescriptionText
+	showtext RuinsOfAlphAerodactylChamberDescriptionText ; lugia
 	restoretypeface
 	special MapCallbackSprites_LoadUsedSpritesGFX
 	end
@@ -122,9 +122,9 @@ RuinsOfAlphAerodactylChamberWallHoleText:
 	done
 
 RuinsOfAlphAerodactylChamberDescriptionText:
-	text "This flying #-"
-	line "mon attacked its"
-
-	para "prey with saw-like"
-	line "fangs."
+	text "Flying at night,"
+	line "its silver coat"
+	
+	para "reminded many"
+	line "of the moon."
 	done

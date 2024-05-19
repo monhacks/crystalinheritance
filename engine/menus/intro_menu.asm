@@ -566,7 +566,7 @@ ProfElmSpeech:
 
 	xor a
 	ld [wCurPartySpecies], a
-	ld a, IMAKUNI ; Kurt's sprite replaces Imakuni. todo replace the sprite imakuni with kurt's since it will be easier to work with
+	ld a, KURT ; Kurt's sprite replaces Imakuni. todo replace the sprite imakuni with kurt's since it will be easier to work with
 	ld [wTrainerClass], a
 	call Intro_PrepTrainerPic
 
@@ -582,7 +582,7 @@ if !DEF(DEBUG)
 	call FadeToWhite
 	call ClearTileMap
 
-	ld a, SYLVEON
+	ld a, CYNDAQUIL
 	ld [wCurSpecies], a
 	ld [wCurPartySpecies], a
 	call GetBaseData ; [wCurForm] doesn't matter for Sylveon
@@ -610,7 +610,7 @@ if !DEF(DEBUG)
 
 	xor a
 	ld [wCurPartySpecies], a
-	ld a, PROF_ELM
+	ld a, KURT
 	ld [wTrainerClass], a
 	call Intro_PrepTrainerPic
 
@@ -653,7 +653,7 @@ ElmText1:
 ElmText2:
 	text_far _ElmText2
 	text_asm
-	ld a, SYLVEON
+	ld a, CYNDAQUIL
 	call PlayCry
 	call WaitSFX
 	ld hl, ElmText3

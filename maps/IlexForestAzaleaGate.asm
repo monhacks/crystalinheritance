@@ -14,9 +14,13 @@ IlexForestAzaleaGate_MapScriptHeader:
 	def_bg_events
 
 	def_object_events
-	object_event  5,  2, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, IlexForestAzaleaGateOfficerText, -1
-	object_event  1,  6, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, IlexForestAzaleaGateGrannyText, -1
+	object_event  5,  2, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, jumptextfaceplayer, IlexForestAzaleaGateOfficerScript, -1 ;GIVE THIEF
+	object_event  1,  6, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, jumptextfaceplayer, IlexForestAzaleaGateGrannyScript, -1 ; GIVE false swipe
 	object_event  8,  3, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ProfOaksAide1Script, -1
+
+	object_const_def
+	const LEXFORESTGATE_OFFICER
+	const LEXFORESTGATE_GRANNY
 
 ProfOaksAide1Script:
 	faceplayer
@@ -27,7 +31,7 @@ ProfOaksAide1Script:
 	waitbutton
 	countseencaught
 	readvar VAR_DEXCAUGHT
-	ifgreater 14, .HereYouGo
+	ifgreater 6, .HereYouGo
 .UhOh
 	jumpopenedtext ProfOaksAide1UhOhText
 
@@ -47,21 +51,6 @@ ProfOaksAide1Script:
 
 .NoRoom
 	jumpopenedtext ProfOaksAide1NoRoomText
-
-IlexForestAzaleaGateOfficerText:
-	text "Ilex Forest is"
-	line "big. Be careful!"
-	cont "Don't get lost."
-	done
-
-IlexForestAzaleaGateGrannyText:
-	text "The Forest is"
-	line "watched over by"
-	cont "its protector."
-
-	para "Stay out of"
-	line "mischief!"
-	done
 
 ProfOaksAide1HiText:
 	text "Hello there! I'm"
@@ -133,3 +122,61 @@ ProfOaksAide1ExplainText:
 	para "Use them to com-"
 	line "plete the #dex!"
 	done
+
+IlexForestAzaleaGateGrannyScript: ;CF THE ROUTE34GATE TEACHER
+	checkevent EVENT_GOT_TM54_FALSE_SWIPE
+	iftrue_jumptextfaceplayer IlexForestAzaleaGateGranny_GotFalseSwipe
+	faceplayer
+	opentext
+	writetext IlexForestAzaleaGateGrannyText
+	promptbutton
+	verbosegivetmhm TM_FALSE_SWIPE
+	setevent EVENT_GOT_TM54_FALSE_SWIPE
+	jumpthisopenedtext
+
+IlexForestAzaleaGateGranny_GotFalseSwipe:
+	text "It's False Swipe."
+
+	para "Teach it to a"
+	line "special #mon."
+	done
+	
+IlexForestAzaleaGateGrannyText:
+	text "Oh, honey. You're"
+	line "making a #dex?"
+
+	para "It must be hard to"
+	line "catch all those"
+	cont "#mon."
+
+	para "Here, take this"
+	line "TM."
+	done
+	
+IlexForestAzaleaGateOfficerScript: ;CF THE ROUTE34GATE TEACHER
+	checkevent EVENT_GOT_TM46_THIEF_FROM_LANCE
+	iftrue_jumptextfaceplayer IlexForestAzaleaGateOfficer_GotThief
+	faceplayer
+	opentext
+	writetext IlexForestAzaleaGateOfficerText
+	promptbutton
+	verbosegivetmhm TM_FALSE_SWIPE
+	setevent EVENT_GOT_TM46_THIEF_FROM_LANCE
+	jumpthisopenedtext
+
+IlexForestAzaleaGateOfficer_GotThief:
+	text "Stay alert for"
+	line "troublemakers!"
+	done
+	
+IlexForestAzaleaGateOfficerText:
+	text "Watch out."
+	
+	para "There's reports of"
+	line "groups stealing"
+	cont "equipment in Ilex"
+	cont "Forest. If you see"
+	cont "them, can you"
+	cont "steal it back?"
+	done
+	

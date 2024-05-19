@@ -13,18 +13,18 @@ TrainerGroups:
 	dba JasmineGroup
 	dba PryceGroup
 	dba ClairGroup
-	dba WillGroup
-	dba KogaGroup
+	dba KurtGroup ;;
+	dba MejimiGroup ;;
 	dba BrunoGroup
-	dba KarenGroup
+	dba SandraGroup
 	dba ChampionGroup
 	dba BrockGroup
-	dba MistyGroup
+	dba SamsaraGroup
 	dba LtSurgeGroup
 	dba ErikaGroup
 	dba JanineGroup
 	dba SabrinaGroup
-	dba BlaineGroup
+	dba HollisGroup
 	dba BlueGroup
 	dba RedGroup
 	dba LeafGroup
@@ -41,7 +41,7 @@ TrainerGroups:
 	dba FisherGroup
 	dba BirdKeeperGroup
 	dba HikerGroup
-	dba GruntMGroup
+	dba BrigaderGroup
 	dba GruntFGroup
 	dba PokefanMGroup
 	dba PokefanFGroup
@@ -118,34 +118,34 @@ TrainerGroups:
 	dba ProfIvyGroup
 	dba MysticalmanGroup
 	dba KarateKingGroup
-	dba TowerTycoonGroup
+	dba OsteneGroup
 	dba JessieJamesGroup
 	dba LoreleiGroup
 	dba AgathaGroup
 	dba StevenGroup
 	dba CynthiaGroup
-	dba InverGroup
+	dba AmosGroup
 	dba CherylGroup
 	dba RileyGroup
 	dba BuckGroup
 	dba MarleyGroup
 	dba MiraGroup
-	dba AnabelGroup
+	dba LannaGroup
 	dba DarachGroup
 	dba CaitlinGroup
-	dba CandelaGroup
-	dba BlancheGroup
-	dba SparkGroup
+	dba BobeshGroup
+	dba AdrinnaGroup
+	dba BarbeauGroup
 	dba FlanneryGroup
-	dba MayleneGroup
+	dba KannaGroup
 	dba SkylaGroup
 	dba ValerieGroup
 	dba KukuiGroup
 	dba VictorGroup
 	dba BillGroup
-	dba YellowGroup
-	dba WalkerGroup
+	dba TammyGroup
+	dba SilverGroup
 	dba ImakuniGroup
-	dba LawrenceGroup
+	dba KenseyGroup
 	dba ReiGroup
 	assert_table_length NUM_TRAINER_CLASSES

@@ -1582,8 +1582,9 @@ CalFinalPkmnText:
 	prompt
 
 FalknerFinalPkmnText:
-	text "The wind is"
-	line "finally with us!"
+	text "I feel it. The"
+	line "wind is picking"
+	cont "up behind us!"
 	prompt
 
 BugsyFinalPkmnText:
@@ -1595,11 +1596,9 @@ BugsyFinalPkmnText:
 	prompt
 
 WhitneyFinalPkmnText:
-	text "H-hey! Just one"
-	line "left? But…"
-
-	para "I ain't losin',"
-	line "you hear?"
+	text "I've come back"
+	line "from much worse"
+	cont "than this!"
 	prompt
 
 MortyFinalPkmnText:
@@ -1629,18 +1628,18 @@ ClairFinalPkmnText:
 	cont "real fight begins!"
 	prompt
 
-WillFinalPkmnText:
-	text "We Psychics don't"
-	line "give up until we"
-	cont "reach zero!"
+KurtFinalPkmnText:
+	text "Down to this..."
+	line "I won't give up"
+	cont "on you, <PLAYER>!"
 	prompt
 
-KogaFinalPkmnText:
-	text "Fwahaha! I've been"
-	line "counting on this"
-
-	para "one from the very"
-	line "beginning!"
+MejimiFinalPkmnText:
+	text "A mortal has"
+	line "wounded me so?"
+	
+	para "I'll show you"
+	line "my true power!"
 	prompt
 
 BrunoFinalPkmnText:
@@ -1649,10 +1648,9 @@ BrunoFinalPkmnText:
 	cont "faint!"
 	prompt
 
-KarenFinalPkmnText:
-	text "This is far from"
-	line "being backed into"
-	cont "a corner!"
+SandraFinalPkmnText:
+	text "This is where"
+	line "trust is built!"
 	prompt
 
 ChampionFinalPkmnText:
@@ -1666,9 +1664,13 @@ BrockFinalPkmnText:
 	line "It itches!"
 	prompt
 
-MistyFinalPkmnText:
-	text "Hmm… You're"
-	line "pretty good…"
+SamsaraFinalPkmnText:
+	text "Hard times are"
+	line "part of battles."
+	
+	para "Do you have the"
+	line "loyalty to see"
+	cont "things through?"
 	prompt
 
 LtSurgeFinalPkmnText:
@@ -1694,10 +1696,11 @@ SabrinaFinalPkmnText:
 	cont "I already know."
 	prompt
 
-BlaineFinalPkmnText:
-	text "I'll show you the"
-	line "spirit of my cave"
-	cont "Gym!"
+HollisFinalPkmnText:
+	text "You know a thing"
+	line "or two? I have a"
+	cont "few more things"
+	cont "to teach you!"
 	prompt
 
 BlueFinalPkmnText:
@@ -1907,9 +1910,9 @@ CynthiaFinalPkmnText:
 	line "end yet!"
 	prompt
 
-InverFinalPkmnText:
-	text "You're getting the"
-	line "hang of this!"
+AmosFinalPkmnText:
+	text "Is this a new"
+	line "beginning?..."
 	prompt
 
 CherylFinalPkmnText:
@@ -1939,7 +1942,7 @@ MiraFinalPkmnText:
 	line "too much for me!"
 	prompt
 
-AnabelFinalPkmnText:
+LannaFinalPkmnText:
 	text "Your talent…"
 	line "It's real."
 	prompt
@@ -1960,12 +1963,12 @@ CandelaFinalPkmnText:
 	line "How exciting!"
 	prompt
 
-BlancheFinalPkmnText:
+AdrinnaFinalPkmnText:
 	text "I am certainly"
-	line "impressed so far."
+	line "impressed."
 	prompt
 
-SparkFinalPkmnText:
+BarbeauFinalPkmnText:
 	text "You're good!"
 	line "No doubt about it!"
 	prompt
@@ -1975,7 +1978,7 @@ FlanneryFinalPkmnText:
 	line "I do now?"
 	prompt
 
-MayleneFinalPkmnText:
+KannaFinalPkmnText:
 	text "This isn't the"
 	line "end, my friend!"
 	prompt
@@ -2002,7 +2005,7 @@ BillFinalPkmnText:
 	line "What a battle!"
 	prompt
 
-YellowFinalPkmnText:
+TammyFinalPkmnText:
 	text "My last #mon…"
 	line "Lend me your"
 	cont "power!"
@@ -2017,10 +2020,21 @@ ImakuniFinalPkmnText:
 	line "…I can't?"
 	prompt
 
-LawrenceFinalPkmnText:
+KenseyFinalPkmnText:
 	text "Inconceivable!"
+	prompt
+	
+BobeshFinalPkmnText:
+	text "Grr, now I won't"
+	line "hold back!"
 	prompt
 
 ReiFinalPkmnText:
-	text "I'm not done yet."
+	text "You're as strong"
+	line "as I thought."
+	prompt
+
+OsteneFinalPkmnText:
+	text "You have some"
+	line "nerve!"
 	prompt

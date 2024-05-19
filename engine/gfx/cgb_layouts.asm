@@ -828,7 +828,7 @@ _CGB_TrainerCard3:
 	call GetTrainerPalettePointer
 	call LoadPalette_White_Col1_Col2_Black
 
-	ld a, SABRINA ; BLAINE
+	ld a, HOLLIS ; BLAINE
 	call GetTrainerPalettePointer
 	call LoadPalette_White_Col1_Col2_Black
 
@@ -836,7 +836,7 @@ _CGB_TrainerCard3:
 	call GetTrainerPalettePointer
 	call LoadPalette_White_Col1_Col2_Black
 
-	ld a, MISTY
+	ld a, SAMSARA
 	call GetTrainerPalettePointer
 	call LoadPalette_White_Col1_Col2_Black
 

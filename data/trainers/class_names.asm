@@ -11,24 +11,24 @@ TrainerClassNames::
 	li "Leader"           ; JASMINE
 	li "Leader"           ; PRYCE
 	li "Leader"           ; CLAIR
-	li "Elite Four"       ; WILL
-	li "Elite Four"       ; KOGA
+	li "Grandpa"		  ; KURT 
+	li "Emperor"		  ; MEJIMI
 	li "Elite Four"       ; BRUNO
-	li "Elite Four"       ; KAREN
+	li "Elder"            ; Sandra (KAREN)
 	li "Champion"         ; CHAMPION
 	li "Leader"           ; BROCK
-	li "Leader"           ; MISTY
+	li "Edler"            ; Samsara, replace misty
 	li "Leader"           ; LT_SURGE
 	li "Leader"           ; ERIKA
 	li "Leader"           ; JANINE
 	li "Leader"           ; SABRINA
-	li "Leader"           ; BLAINE
+	li "Elder"            ; HOLLIS replaces blaine
 	li "Leader"           ; BLUE
 	li "<PK><MN> Trainer" ; RED
 	li "<PK><MN> Trainer" ; LEAF
-	li "Strange"          ; RIVAL0
-	li "Rival"            ; RIVAL1
-	li "Rival"            ; RIVAL2
+	li "Woodcutter"       ; RIVAL0
+	li "Woodcutter"       ; RIVAL1
+	li "Woodcutter"       ; RIVAL2
 	li "<PK><MN> Trainer" ; LYRA1
 	li "<PK><MN> Trainer" ; LYRA2
 	li "Youngster"        ; YOUNGSTER
@@ -39,7 +39,7 @@ TrainerClassNames::
 	li "Fisherman"        ; FISHER
 	li "Bird Keeper"      ; BIRD_KEEPER
 	li "Hiker"            ; HIKER
-	li "Rocket"           ; GRUNTM
+	li "Brigader"         ; BRIGADERS
 	li "Rocket"           ; GRUNTF
 	li "#fan"             ; POKEFANM
 	li "#fan"             ; POKEFANF
@@ -116,34 +116,34 @@ TrainerClassNames::
 	li "#mon Prof."       ; PROF_IVY
 	li "Mystery Man"      ; MYSTICALMAN
 	li "Karate King"      ; KARATE_KING
-	li "TowerTycoon"      ; TOWERTYCOON
+	li "Silph"            ; Ostene / TOWERTYCOON
 	li "Jessie"           ; JESSIE_JAMES
 	li "Ex-Elite"         ; LORELEI
 	li "Ex-Elite"         ; AGATHA
 	li "Rock Hound"       ; STEVEN
 	li "Researcher"       ; CYNTHIA
-	li "Psychic"          ; INVER
+	li "Johto"            ; Amos / INVER
 	li "<PK><MN> Trainer" ; CHERYL
 	li "<PK><MN> Trainer" ; RILEY
 	li "<PK><MN> Trainer" ; BUCK
 	li "<PK><MN> Trainer" ; MARLEY
 	li "<PK><MN> Trainer" ; MIRA
-	li "<PK><MN> Trainer" ; ANABEL
+	li "Anarres"          ; Lanna / ANABEL
 	li "Valet"            ; DARACH
 	li "Lady"             ; CAITLIN
-	li "<PK><MN> Trainer" ; CANDELA
-	li "<PK><MN> Trainer" ; BLANCHE
-	li "<PK><MN> Trainer" ; SPARK_T
+	li "General"          ; bobesh / CANDELA
+	li "General"          ; adrinna / BLANCHE
+	li "Elder"            ; barbeau / SPARK_T
 	li "Trainer"          ; FLANNERY
-	li "Fighter"          ; MAYLENE
+	li "Sinnoh"           ; MAYLENE
 	li "Pilot"            ; SKYLA
 	li "Designer"         ; VALERIE
 	li "<PK><MN> Trainer" ; KUKUI
 	li "Surfer"           ; VICTOR
 	li "#Maniac"          ; BILL_T
-	li "<PK><MN> Trainer" ; YELLOW
-	li "Ex-Leader"        ; WALKER
+	li "Anarres"          ; TAMMY (YELLOW)
+	li "<PK><MN> Trainer" ; SILVER FROM WALKER rival
 	li "Student"          ; IMAKUNI
-	li "Collector"        ; LAWRENCE
+	li "General"          ; Kensey  / LAWRENCE
 	li "Shrine"           ; REI
 	assert_list_length NUM_TRAINER_CLASSES + 1

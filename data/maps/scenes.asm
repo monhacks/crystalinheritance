@@ -16,10 +16,10 @@ MapScenes::
 ;	scene_var BATTLE_FACTORY_BATTLE_ROOM,             wAlways0SceneID
 ;	scene_var BATTLE_FACTORY_HALLWAY,                 wAlways0SceneID
 	scene_var BELLCHIME_TRAIL,                        wBellchimeTrailSceneID
-;	scene_var BRUNOS_ROOM,                            wBrunosRoomSceneID
+	scene_var CHARCOAL_KILN,                          wCharcoalKilnSceneID ; changed from brunos room
 	scene_var BURNED_TOWER_1F,                        wBurnedTower1FSceneID
 	scene_var BURNED_TOWER_B1F,                       wBurnedTowerB1FSceneID
-;	scene_var CERULEAN_CAPE,                          wCeruleanCapeSceneID
+	scene_var TINDER_GARDEN,                          wTinderGardenSceneID ; cerulean cape
 ;	scene_var CERULEAN_CAVE_1F,                       wCeruleanCave1FSceneID
 ;	scene_var CERULEAN_GYM,                           wCeruleanGymSceneID
 ;	scene_var CHERRYGROVE_CITY,                       wCherrygroveCitySceneID
@@ -46,7 +46,7 @@ MapScenes::
 ;	scene_var INDIGO_PLATEAU_POKECENTER_1F,           wAlways0SceneID
 ;	scene_var KARENS_ROOM,                            wKarensRoomSceneID
 ;	scene_var KOGAS_ROOM,                             wKogasRoomSceneID
-	scene_var KURTS_HOUSE,                         wKurtsHouseSceneID
+	scene_var KURTS_HOUSE,                            wKurtsHouseSceneID
 ;	scene_var LANCES_ROOM,                            wLancesRoomSceneID
 ;	scene_var LAVENDER_TOWN,                          wLavenderTownSceneID
 	scene_var MAHOGANY_MART_1F,                       wMahoganyMart1FSceneID

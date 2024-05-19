@@ -56,13 +56,7 @@ GoldenrodCity_MapScriptHeader:
 	object_event 25, 17, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GoldenrodCityYoungster2Script, EVENT_GOLDENROD_CITY_CIVILIANS
 	object_event 20, 10, SPRITE_LASS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodCityLassText, EVENT_GOLDENROD_CITY_CIVILIANS
 	object_event 15, 27, SPRITE_GRAMPS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodCityGrampsText, EVENT_GOLDENROD_CITY_CIVILIANS
-	object_event  8, 16, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodCityRocketScoutScript, EVENT_GOLDENROD_CITY_ROCKET_SCOUT
-	object_event 29, 16, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodCityRocket1Text, EVENT_GOLDENROD_CITY_ROCKET_TAKEOVER
-	object_event 29, 17, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodCityRocket4Text, EVENT_RADIO_TOWER_ROCKET_TAKEOVER
-	object_event 12, 15, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodCityRocket2Text, EVENT_GOLDENROD_CITY_ROCKET_TAKEOVER
-	object_event 20, 23, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodCityRocket3Text, EVENT_RADIO_TOWER_ROCKET_TAKEOVER
-	object_event 33,  7, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodCityRocket5Text, EVENT_RADIO_TOWER_ROCKET_TAKEOVER
-	object_event 35, 10, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodCityRocket6Text, EVENT_RADIO_TOWER_ROCKET_TAKEOVER
+
 
 	object_const_def
 	const GOLDENRODCITY_POKEFAN_M2
@@ -204,22 +198,6 @@ GoldenrodCityYoungster2Script:
 	iftrue_jumpopenedtext GoldenrodCityYoungster2Text
 	jumpopenedtext GoldenrodCityYoungsterDayText
 
-GoldenrodCityRocketScoutScript:
-	checkevent EVENT_RADIO_TOWER_ROCKET_TAKEOVER
-	iftrue .RocketScout
-	jumptextfaceplayer GoldenrodCityRocket4Text
-
-.RocketScout:
-	opentext
-	writetext GoldenrodCityRocketScoutText1
-	promptbutton
-	faceplayer
-	writetext GoldenrodCityRocketScoutText2
-	waitbutton
-	closetext
-	turnobject LAST_TALKED, UP
-	end
-
 GoldenrodCityPanUpMovementData:
 	step_up
 	step_up
@@ -345,57 +323,6 @@ GoldenrodCityGrampsText:
 
 	para "know where any-"
 	line "thing is."
-	done
-
-GoldenrodCityRocketScoutText1:
-	text "So this is the"
-	line "Radio Tower…"
-	done
-
-GoldenrodCityRocketScoutText2:
-	text "What do you want,"
-	line "you pest? Scram!"
-	done
-
-GoldenrodCityRocket1Text:
-	text "Stay out of the"
-	line "way! Beat it!"
-	done
-
-GoldenrodCityRocket2Text:
-	text "Take over the"
-	line "Radio Tower…"
-
-	para "What? It's none of"
-	line "your business!"
-	done
-
-GoldenrodCityRocket3Text:
-	text "#mon? They're"
-	line "nothing more than"
-
-	para "tools for making"
-	line "money!"
-	done
-
-GoldenrodCityRocket4Text:
-	text "Our dream will"
-	line "soon come true…"
-
-	para "It was such a long"
-	line "struggle…"
-	done
-
-GoldenrodCityRocket5Text:
-	text "Hey, brat! You"
-	line "don't belong here!"
-	cont "Get lost!"
-	done
-
-GoldenrodCityRocket6Text:
-	text "Come taste the"
-	line "true terror of"
-	cont "Team Rocket!"
 	done
 
 GoldenrodCityGymLassText:

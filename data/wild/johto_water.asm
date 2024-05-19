@@ -46,7 +46,7 @@
 	db 2 percent ; encounter rate
 	wildmon 15, SLOWPOKE
 	wildmon 20, SLOWPOKE
-	wildmon 20, SLOWBRO
+	wildmon 20, SLOWPOKE
 	end_water_wildmons
 
 	def_water_wildmons ILEX_FOREST

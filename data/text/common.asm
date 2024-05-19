@@ -2449,8 +2449,8 @@ _AskItemMoveText::
 
 SECTION "Text_AreYouABoyOrAreYouAGirl", ROMX
 Text_AreYouABoyOrAreYouAGirl::
-	text "Are you a boy?"
-	line "Or are you a girl?"
+	text "Go as a boy?"
+	line "Or a girl?"
 	done
 
 SECTION "Text_SoYoureABoy", ROMX
@@ -3262,54 +3262,59 @@ _ElmText1::
 	cont "participate in"
 	cont "the ceremony."
 
-if !DEF(DEBUG)
-	para "But don't worry."
-	line "Grandpa Kurt"
-	cont "will make sure"
+	para "Grandpa Kurt"
+	line "will make sure"
 	cont "everything goes"
 	cont "as it should."
-endc
 	prompt
 
 SECTION "_ElmText2", ROMX
 _ElmText2::
-	text "This world is in-"
-	line "habited by crea-"
-	cont "tures that we call"
-	cont "#mon.@"
+	text "You will get"
+	line "your very first"
+	cont "#mon."
+	
+	para "Your dad's first"
+	line "was an ornery"
+	cont "Cyndaquil!@"
 	text_end
 
 SECTION "_ElmText4", ROMX
 _ElmText4::
-	text "People and #mon"
-	line "live together by"
-
-	para "supporting each"
-	line "other."
-
-	para "Some people play"
-	line "with #mon, some"
-	cont "battle with them."
+	text "Every 20 years,"
+	line "for generations,"
+	cont "a rite of passage"
+	cont "has been the re-"
+	cont "building of the"
+	cont "Ilex Shrine."
 	prompt
 
 SECTION "_ElmText5", ROMX
 _ElmText5::
-	text "But we don't know"
-	line "everything about"
-	cont "#mon yet."
-
-	para "There are still"
-	line "many mysteries to"
-	cont "solve."
-
-	para "That's why I study"
-	line "#mon every day."
+	text "I know that the"
+	line "drought makes"
+	cont "it less festive."
+	
+	para "I can't help but"
+	line "feel the drought"
+	cont "is related to"
+	cont "the destruction"
+	cont "nearby."
+	
+	para "But that's why"
+	line "we must do the"
+    cont "ritual!"
+	
+	para "To recommit our-"
+	line "selves to live"
+	cont "in harmony with"
+	cont "#mon!"
 	prompt
 
 SECTION "_ElmText6", ROMX
 _ElmText6::
-	text "Please tell me"
-	line "your name."
+	text "What should we"
+	line "call you?"
 	prompt
 
 SECTION "_ElmText7", ROMX
