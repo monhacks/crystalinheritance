@@ -13,9 +13,9 @@ Route33_MapScriptHeader:
 	bg_event 11, 11, BGEVENT_JUMPTEXT, Route33SignText
 
 	def_object_events
-	object_event 11, 13, SPRITE_HIKER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerHikerAnthony, -1
+	object_event 11, 12, SPRITE_HIKER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerHikerAnthony, -1
 	object_event 12, 17, SPRITE_SCHOOLGIRL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerSchoolgirlImogen, -1
-	object_event 13, 18, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route33PayDayScript, -1 ;todo make this cost a silver leaf
+	object_event 13, 16, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route33PayDayScript, -1 ;todo make this cost a silver leaf
 	fruittree_event 14, 16, FRUITTREE_ROUTE_33, PECHA_BERRY, PAL_NPC_RED
 
 ;Route33RainScript:
@@ -28,7 +28,7 @@ Route33_MapScriptHeader:
 ;	changemapblocks Route33Raining_BlockData
 ;	endcallback
 
-TrainerHikerAnthony:
+TrainerHikerAnthony: ;rewrite him as a generic trainer todo
 	trainer HIKER, ANTHONY1, EVENT_BEAT_HIKER_ANTHONY, HikerAnthony1SeenText, HikerAnthony1BeatenText, 0, .Script
 
 .Script:
@@ -45,6 +45,7 @@ TrainerHikerAnthony:
 ;	iftrue .AskAgain
 	writetext HikerAnthony1AfterText
 	closetext
+	done
 ;	promptbutton
 ;	setevent EVENT_ANTHONY_ASKED_FOR_PHONE_NUMBER
 ;	callstd asknumber1m

@@ -34,6 +34,7 @@ KurtTrigger1: ; when you walk to 7, 2
 	playmusic MUSIC_PROF_OAK
 	turnobject KURTSHOUSE_KURT, UP
 	applymovement KURTSHOUSE_KURT, .kurt_walks_to_you
+	turnobject PLAYER, LEFT
 	sjump KurtEventScript
 
 .kurt_walks_to_you:
@@ -53,11 +54,11 @@ KurtEventScript:
 	setscene $1
 	setevent EVENT_KURTS_HOUSE_KURT_0 ; changed from mom
 	clearevent EVENT_PLAYERS_HOUSE_KURT_2 ; may not need this line? 
-	writetext MomPokegearText
-	promptbutton
 	writetext KurtsHouseApricornBox
 	promptbutton
 	verbosegivekeyitem APRICORN_BOX
+	promptbutton
+	writetext MomPokegearText
 	promptbutton
 	special Special_SetDayOfWeek
 .InitialSetDSTFlag:

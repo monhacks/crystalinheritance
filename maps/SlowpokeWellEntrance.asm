@@ -13,7 +13,7 @@ SlowpokeWellEntrance_MapScriptHeader:
 	bg_event  6, 13, BGEVENT_ITEM + SUPER_POTION, EVENT_SLOWPOKE_WELL_ENTRANCE_HIDDEN_SUPER_POTION
 
 	def_object_events
-	object_event  3,  4, SPRITE_FISHING_GURU, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, SlowpokeWellFishingGuruScript, -1
+	object_event  11,  10, SPRITE_FISHING_GURU, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, SlowpokeWellFishingGuruScript, -1
 
 SlowpokeWellFishingGuruScript:
 	checkevent EVENT_GOT_OLD_ROD

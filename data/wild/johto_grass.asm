@@ -479,57 +479,57 @@
 	def_grass_wildmons SLOWPOKE_WELL_ENTRANCE
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
-	wildmon 5, ZUBAT
-	wildmon 5, EKANS
-	wildmon 4, ZUBAT
+	wildmon 3, ZUBAT
 	wildmon 3, EKANS
-	wildmon 4, ZUBAT
+	wildmon 3, ZUBAT
+	wildmon 3, EKANS
+	wildmon 3, ZUBAT
 	wildmon 3, SLOWPOKE
 	wildmon 3, SLOWPOKE
 	; day
-	wildmon 5, ZUBAT
-	wildmon 6, EKANS
-	wildmon 7, ZUBAT
-	wildmon 6, EKANS
-	wildmon 8, ZUBAT
-	wildmon 8, SLOWPOKE
-	wildmon 8, SLOWPOKE
+	wildmon 3, ZUBAT
+	wildmon 3, EKANS
+	wildmon 3, ZUBAT
+	wildmon 3, EKANS
+	wildmon 3, ZUBAT
+	wildmon 3, SLOWPOKE
+	wildmon 3, SLOWPOKE
 	; nite
-	wildmon 5, ZUBAT
-	wildmon 6, EKANS
-	wildmon 7, ZUBAT
-	wildmon 6, EKANS
-	wildmon 8, ZUBAT
-	wildmon 8, SLOWPOKE
-	wildmon 8, SLOWPOKE
+	wildmon 3, ZUBAT
+	wildmon 3, EKANS
+	wildmon 3, ZUBAT
+	wildmon 3, EKANS
+	wildmon 3, ZUBAT
+	wildmon 3, SLOWPOKE
+	wildmon 3, SLOWPOKE
 	end_grass_wildmons
 
 	def_grass_wildmons SLOWPOKE_WELL_B1F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
-	wildmon 5, ZUBAT
-	wildmon 5, EKANS
 	wildmon 4, ZUBAT
-	wildmon 3, EKANS
+	wildmon 4, EKANS
 	wildmon 4, ZUBAT
-	wildmon 3, SLOWPOKE
-	wildmon 3, SLOWPOKE
+	wildmon 4, EKANS
+	wildmon 4, ZUBAT
+	wildmon 4, SLOWPOKE
+	wildmon 4, SLOWPOKE
 	; day
-	wildmon 5, ZUBAT
-	wildmon 6, EKANS
-	wildmon 7, ZUBAT
-	wildmon 6, EKANS
-	wildmon 8, ZUBAT
-	wildmon 8, SLOWPOKE
-	wildmon 8, SLOWPOKE
+	wildmon 4, ZUBAT
+	wildmon 4, EKANS
+	wildmon 4, ZUBAT
+	wildmon 4, EKANS
+	wildmon 4, ZUBAT
+	wildmon 4, SLOWPOKE
+	wildmon 4, SLOWPOKE
 	; nite
-	wildmon 5, ZUBAT
-	wildmon 6, EKANS
-	wildmon 7, ZUBAT
-	wildmon 6, EKANS
-	wildmon 8, ZUBAT
-	wildmon 8, SLOWPOKE
-	wildmon 8, SLOWPOKE
+	wildmon 4, ZUBAT
+	wildmon 4, EKANS
+	wildmon 4, ZUBAT
+	wildmon 4, EKANS
+	wildmon 4, ZUBAT
+	wildmon 4, SLOWPOKE
+	wildmon 4, SLOWPOKE
 	end_grass_wildmons
 
 	def_grass_wildmons SLOWPOKE_WELL_B2F
