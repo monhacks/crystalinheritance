@@ -1115,6 +1115,7 @@ wVioletGymSceneID:: db
 wWillsRoomSceneID:: db
 wWiseTriosRoomSceneID:: db
 wYellowForestSceneID:: db
+wAzaleaPokecenter1FSceneID:: db
 
 ; fight counts
 wJackFightCount::    db

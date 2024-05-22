@@ -425,10 +425,13 @@ IceHealDesc:
 	next "#mon.@"
 
 FullHealDesc:
-RageCandyBarDesc:
 PewterCrunchDesc:
 	db   "Eliminates all"
 	next "status problems.@"
+
+RageCandyBarDesc:
+	db   "For a fussy"
+	next "eater.@"
 
 FullRestoreDesc:
 	db   "Fully restores HP"
@@ -503,8 +506,8 @@ SodaPopDesc:
 	next "HP by 50.@"
 
 LemonadeDesc:
-	db   "Restores #mon"
-	next "HP by 70.@"
+	db   "Quenches thirst"
+	next "instantly.@"
 
 MoomooMilkDesc:
 	db   "Restores #mon"
@@ -850,8 +853,8 @@ BerserkGeneDesc:
 	next "causes confusion.@"
 
 LightBallDesc:
-	db   "An odd, electrical"
-	next "orb. (Hold)@"
+	db   "Great for"
+	next "adolescents.@"
 
 StickDesc:
 	db   "An ordinary stick."
@@ -1042,8 +1045,8 @@ MulchDesc:
 	next "for Berry trees.@"
 
 SweetHoneyDesc:
-	db   "The aroma attracts"
-	next "wild #mon.@"
+	db   "An energy boost"
+	next "to focus.@"
 
 EvioliteDesc:
 	db   "Ups Def and Spcl."
@@ -1094,8 +1097,8 @@ BigNuggetDesc:
 	next "Sell very high.@"
 
 TinyMushroomDesc:
-	db   "An ordinary mush-"
-	next "room. Sell low.@"
+	db   "Looks tasty. A"
+	next "chef's delight.@"
 
 BigMushroomDesc:
 	db   "A rare mushroom."
@@ -1107,7 +1110,7 @@ BalmMushroomDesc:
 
 PearlDesc:
 	db   "A beautiful pearl."
-	next "Sell low.@"
+	next "Fisher's dream.@"
 
 BigPearlDesc:
 	db   "A big, beautiful"
@@ -1126,20 +1129,20 @@ StarPieceDesc:
 	next "Sell very high.@"
 
 BrickPieceDesc:
-	db   "A rare chunk of"
-	next "tile.@"
+	db   "Ancient"
+	next "artifact.@"
 
 RareBoneDesc:
 	db   "A rare bone for"
 	next "archaeologists.@"
 
 SilverLeafDesc:
-	db   "A strange, silver-"
-	next "colored leaf.@"
+	db   "Move tutors"
+	next "love these.@"
 
 GoldLeafDesc:
-	db   "A strange, gold-"
-	next "colored leaf.@"
+	db   "Adds a dignif-"
+	next "ied sheen.@"
 
 SlowpokeTailDesc:
 	db   "Very tasty. Sell"
@@ -1155,20 +1158,20 @@ DomeFossilDesc:
 	next "#mon shell.@"
 
 OldAmberDesc:
-	db   "Fossilized resin"
-	next "containing DNA.@"
+	db   "Proof of"
+	next "life.@"
 
 FlowerMailDesc:
 	db   "Flower-print Mail."
 	next "(Hold)@"
 
 SurfMailDesc:
-	db   "Lapras-print Mail."
-	next "(Hold)@"
+	db   "Even smells like"
+	next "the sea.@"
 
 LiteBlueMailDesc:
-	db   "Dratini-print"
-	next "Mail. (Hold)@"
+	db   "Modest yet"
+	next "refined.@"
 
 PortraitMailDesc:
 	db   "Mail featuring the"
@@ -1259,8 +1262,8 @@ UtilUmbrellaDesc:
 	next "weather effects.@"
 
 MintLeafDesc:
-	db   "A fragrant sprig"
-	next "of mint.@"
+	db   "For someone with"
+	next "stinky breath.@"
 
 BicycleDesc:
 	db   "A collapsible bike"

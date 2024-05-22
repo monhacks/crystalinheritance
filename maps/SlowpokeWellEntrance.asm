@@ -72,5 +72,5 @@ SlowpokeWellFishingGuruScript:
 
 .DoneText:
 	text "Catch much?"
-	line "they biting?"
+	line "They biting?"
 	done

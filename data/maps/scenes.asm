@@ -4,10 +4,10 @@ scene_var: MACRO
 	map_id \1
 	dw \2
 ENDM
-;wramx.asm uses these
+;ram/wramx.asm uses these
 MapScenes::
 	scene_var AZALEA_TOWN,                            wAzaleaTownSceneID
-;	scene_var BATTLE_TOWER_1F,                        wBattleFacilitySceneID
+	scene_var AZALEA_POKECENTER_1F,                   wAzaleaPokecenter1FSceneID ;starts the trade quest
 ;	scene_var BATTLE_TOWER_BATTLE_ROOM,               wAlways0SceneID
 ;	scene_var BATTLE_TOWER_ELEVATOR,                  wAlways0SceneID
 ;	scene_var BATTLE_TOWER_HALLWAY,                   wAlways0SceneID

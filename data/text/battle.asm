@@ -1717,9 +1717,9 @@ LeafFinalPkmnText:
 	prompt
 
 Rival1_1FinalPkmnText:
-	text "…Humph!"
-	line "You're doing OK"
-	cont "for someone weak."
+	text "So this is a"
+	line "#mon battle?"
+
 	prompt
 
 Rival1_2FinalPkmnText:

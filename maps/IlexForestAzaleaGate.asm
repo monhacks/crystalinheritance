@@ -38,8 +38,7 @@ ProfOaksAide1Script:
 .HereYouGo
 	writetext ProfOaksAide1HereYouGoText
 	waitbutton
-	giveitem NEST_BALL, 5
-	waitsfx
+	verbosegiveitem EXP_SHARE
 	iffalse .NoRoom
 	writetext ProfOaksAide1NestBallText
 	playsound SFX_ITEM
@@ -56,7 +55,7 @@ ProfOaksAide1HiText:
 	text "Hello there! I'm"
 	line "Prof.Oak's aide."
 
-	para "If you caught 15"
+	para "If you caught 6"
 	line "kinds of #mon,"
 
 	para "I'm supposed to"
@@ -65,7 +64,7 @@ ProfOaksAide1HiText:
 	para "So, <PLAYER>,"
 	line "have you caught"
 
-	para "at least 15 kinds"
+	para "at least 6 kinds"
 	line "of #mon?"
 	done
 
@@ -80,7 +79,7 @@ ProfOaksAide1UhOhText:
 
 	para "Come back and see"
 	line "me when you catch"
-	cont "15 kinds."
+	cont "6 kinds."
 	done
 
 ProfOaksAide1HereYouGoText:
@@ -153,14 +152,14 @@ IlexForestAzaleaGateGrannyText:
 	line "TM."
 	done
 	
-IlexForestAzaleaGateOfficerScript: ;CF THE ROUTE34GATE TEACHER
+IlexForestAzaleaGateOfficerScript: 
 	checkevent EVENT_GOT_TM46_THIEF_FROM_LANCE
 	iftrue_jumptextfaceplayer IlexForestAzaleaGateOfficer_GotThief
 	faceplayer
 	opentext
 	writetext IlexForestAzaleaGateOfficerText
 	promptbutton
-	verbosegivetmhm TM_FALSE_SWIPE
+	verbosegivetmhm TM_THIEF
 	setevent EVENT_GOT_TM46_THIEF_FROM_LANCE
 	jumpthisopenedtext
 

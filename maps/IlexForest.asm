@@ -1,10 +1,8 @@
 IlexForest_MapScriptHeader:
 	def_scene_scripts
-	;write event for finding the GS ball
-	; add an itemball in front of the shrine
 
-	def_callbacks
-
+	def_callbacks ;todo movement around the scene is really off.
+	callback MAPCALLBACK_OBJECTS, Callback_IlexForest_Kurt2
 
 	def_warp_events
 	warp_event  3,  7, ROUTE_34_ILEX_FOREST_GATE, 3 ;ok
@@ -28,32 +26,59 @@ IlexForest_MapScriptHeader:
 ;	bg_event 18, 23, BGEVENT_JUMPSTD, treegrotto, HIDDENGROTTO_ILEX_FOREST
 
 	def_object_events ; BUG CATCHERS AND YOUNGSTERS
-	object_event  9, 26, SPRITE_KURT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IlexForestKurtScript, -1 ;todo change this event for having gone back in time the first time
-	object_event 11, 26, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EngineerCamdenScript, EVENT_LOGGERS_ILEX_FOREST 
+	object_event  8, 27, SPRITE_KURT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IlexForestKurtScript, EVENT_LOGGERS_ILEX_FOREST ;todo change this event for having gone back in time the first time
+	object_event 11, 27, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EngineerCamdenScript, EVENT_LOGGERS_ILEX_FOREST 
 	object_event 10, 26, SPRITE_BALL_CUT_FRUIT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GSBallScript, EVENT_LOGGERS_ILEX_FOREST
+	pokemon_event  9, 27, SHUCKLE, -1, -1, PAL_NPC_RED, IlexForestShuckleText, EVENT_LOGGERS_ILEX_FOREST
+	pokemon_event 10, 27, SCIZOR, -1, -1, PAL_NPC_RED, IlexForestScizorText, EVENT_LOGGERS_ILEX_FOREST
+	object_event 10, 26, SPRITE_KURT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IlexForestKurtScript, EVENT_ILEX_SHRINE_CELEBI ;kurt2 should disappear until after EVENT_LOGGERS_ILEX_FOREST and then disappear after EVENT_ILEX_SHRINE_CELEBI
 	object_event 25, 24, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IlexHealerScript, -1
 	object_event  5, 35, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerBug_catcherWade, -1 
-	object_event 13, 36, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerYoungsterJoey, -1 
+	object_event 13, 36, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerYoungsterJoey, -1 
 	object_event 19, 25, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerBug_catcherArnie, -1 
 	object_event 29, 31, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerYoungsterMikey, -1 ; -
 	object_event 25, 19, SPRITE_PICNICKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerPicnickerLiz, -1 ; 
 	object_event 29, 11, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerEngineerSmith, EVENT_LOGGERS_ILEX_FOREST
-	object_event  7,  7, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerOfficerMKeith, EVENT_LOGGERS_ILEX_FOREST 
+	object_event 15, 14, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerOfficerMKeith, EVENT_LOGGERS_ILEX_FOREST ;todo move keith
 	cuttree_event 19,  6, EVENT_ILEX_FOREST_CUT_TREE; ok
 	itemball_event 22, 34, REVIVE, 1, EVENT_ILEX_FOREST_REVIVE ;ok
 	itemball_event 13, 14, ANTIDOTE, 1, EVENT_ILEX_FOREST_ANTIDOTE ;ok
 	itemball_event 19, 16, SUPER_POTION, 1, EVENT_ILEX_FOREST_MULCH;OK
 
+
 	object_const_def
 	const ILEX_FOREST_KURT
 	const ILEX_FOREST_CAMDEN ;ENGINEER
 	const ILEX_GS_BALL
+	const ILEX_SHUCKLE
+	const ILEX_SCIZOR 
+	const ILEX_FOREST_KURT2
+
+
+
+Callback_IlexForest_Kurt2:
+	checkevent EVENT_LOGGERS_ILEX_FOREST
+	iftrue .DoesKurt2Appear
+	disappear ILEX_FOREST_KURT2
+	endcallback
+
+.Kurt2Disappears
+	disappear ILEX_FOREST_KURT2
+	endcallback
+
+.DoesKurt2Appear:
+	checkevent EVENT_ILEX_SHRINE_CELEBI
+	iftrue .Kurt2Disappears
+	appear ILEX_FOREST_KURT2
+	endcallback
+
 
 IlexForestKurtScript:
 	faceplayer
 	opentext
 	writetext RuinsOfAlphText
 	closetext
+	end
 	
 Text_IlexForestMossRock:
 	text "The rock is cover-"
@@ -235,10 +260,10 @@ IlexHealerScript:
 	
 WantToHeal:
 	text "My kids are out"
-	line "playing with their"
-	cont "#mon. I have extra"
+	line "playing with"
+	cont "#mon. I have"
 	cont "healing items, if"
-	cont "you want a heal."
+	cont "you want some."
 	done
 
 IlexHealing:
@@ -249,7 +274,11 @@ IlexHealing:
 	special RestoreMusic
 	endtext
 	
-IlexForestKurtEngineerScript:
+IlexForestKurtEngineerScript: ; disappear the shuckle and scizor, kurt and camden move to position by the GS ball. 
+	disappear ILEX_SHUCKLE
+	disappear ILEX_SCIZOR
+	applymovement ILEX_FOREST_KURT, KurtMovesAfterBattle
+	applymovement ILEX_FOREST_CAMDEN, CamdenMovesAfterBattle
 	applymovement PLAYER, PlayerMovesBelowKurtMovement 
 	showemote EMOTE_SHOCK, ILEX_FOREST_KURT, 15
 	opentext
@@ -286,6 +315,16 @@ IlexForestKurtEngineerScript:
 	waitsfx
 	playmapmusic
 	end	
+
+KurtMovesAfterBattle:
+	step_up
+	turn_head_right
+	step_end
+	
+CamdenMovesAfterBattle:
+	step_up
+	step_left
+	step_end
 
 PlayerMovesBelowKurtMovement:
 	step_right
@@ -454,3 +493,11 @@ GSBallText: ;shouldn't be able to access this
 	text "A damaged"
 	line "artifact."
 	done
+
+IlexForestShuckleText: ; shouldn't be able toaccess this
+	text "Shucka shuck!"
+	done
+	
+IlexForestScizorText:
+	text "Snip"
+	done ; shouldn't be able toaccess this

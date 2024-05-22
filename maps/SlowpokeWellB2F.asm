@@ -21,7 +21,7 @@ SlowpokeWellSlowbro:
 	faceplayer
 	cry SLOWBRO
 	pause 15
-	loadwildmon SLOWBRO, 30
+	loadwildmon SLOWBRO, 30 ;should have shell smash
 	startbattle
 	disappear SLOWPOKE_WELL_B2F_SLOWBRO
 	setevent EVENT_SLOWPOKE_WELL_SLOWBRO

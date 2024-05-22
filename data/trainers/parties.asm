@@ -1,4 +1,4 @@
-INCLUDE "data/trainers/party_pointers.asm"
+INCLUDE "data/trainers/party_pointers.asm" ;todo check that this matches party pointers. need to remove a bunch of party pointers that don't exist anymore. 
 
 ; All trainers follow a basic structure: 
 	; Name
@@ -1780,6 +1780,7 @@ BugCatcherGroup:
 
 ; ================
 
+
 	; BUG_CATCHER
 	db "Don@"
 	db TRAINERTYPE_NORMAL
@@ -2130,51 +2131,6 @@ PicnickerGroup:
 
 ; ================
 
-	; PICNICKER
-	db "Liz@"
-	db TRAINERTYPE_NORMAL
-	; party
-	db 15, WEEPINBELL
-	db 15, NIDORINA
-	db -1 ; end
-
-; ================
-
-	; PICNICKER
-	db "Liz@"
-	db TRAINERTYPE_NORMAL
-	; party
-	db 19, WEEPINBELL
-	db 19, NIDORINO
-	db 21, NIDOQUEEN
-	db -1 ; end
-
-; ================
-
-	; PICNICKER
-	db "Liz@"
-	db TRAINERTYPE_NORMAL
-	; party
-	db 24, WEEPINBELL
-	db 26, NIDORINO
-	db 26, NIDOQUEEN
-	db -1 ; end
-
-; ================
-
-	; PICNICKER
-	db "Liz@"
-	db TRAINERTYPE_MOVES
-	; party
-	db 30, WEEPINBELL
-		db SLEEP_POWDER, POISONPOWDER, STUN_SPORE, SLUDGE_BOMB
-	db 32, NIDOKING
-		db EARTHQUAKE, DOUBLE_KICK, POISON_STING, IRON_TAIL
-	db 32, NIDOQUEEN
-		db EARTHQUAKE, DOUBLE_KICK, LEER, BODY_SLAM
-	db -1 ; end
-
-; ================
 
 	; PICNICKER
 	db "Gina@"
@@ -3307,7 +3263,6 @@ HikerGroup:
 	db "Anthony@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 3, GEODUDE
 	db 3, MACHOP
 	db -1 ; end
 

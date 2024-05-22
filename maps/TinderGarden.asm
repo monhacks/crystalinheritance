@@ -25,14 +25,15 @@ TinderGarden_MapScriptHeader: ;todo something weird happens when I stand to the 
 	bg_event  5,  9, BGEVENT_JUMPTEXT, TGTreeText	
 	
 	def_object_events
-	object_event  4, 10, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TGKurtScript, -1 ;todo add kurtscript in this 
-	object_event  3, 10, SPRITE_OAK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OakScript, -1
-	object_event  2, 10, SPRITE_PRYCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PryceScript, -1
-	object_event  5, 10, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CharcoalScript, -1
-	object_event  5, 12, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RivalScript, -1
-	object_event  8, 10, SPRITE_BALL_CUT_FRUIT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CyndaquilPokeBallScript, EVENT_KURTS_HOUSE_KURT_0
-	object_event  8, 11, SPRITE_BALL_CUT_FRUIT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OshawottPokeBallScript, EVENT_KURTS_HOUSE_KURT_0
-	object_event  8, 12, SPRITE_BALL_CUT_FRUIT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, RowletPokeBallScript, EVENT_KURTS_HOUSE_KURT_0
+	object_event  4, 10, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TGKurtScript, EVENT_KURT_HEARS_LOGGERS ;todo add kurtscript in this 
+	object_event  3, 10, SPRITE_OAK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OakScript, EVENT_KURT_HEARS_LOGGERS
+	object_event  2, 10, SPRITE_PRYCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PryceScript, EVENT_KURT_HEARS_LOGGERS
+	object_event  5, 10, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CharcoalScript, EVENT_KURT_HEARS_LOGGERS
+	object_event  5, 12, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RivalScript, EVENT_KURT_HEARS_LOGGERS
+	object_event  8, 10, SPRITE_WEIRD_TREE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CyndaquilPokeBallScript, EVENT_KURTS_HOUSE_KURT_0
+	object_event  8, 11, SPRITE_WEIRD_TREE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OshawottPokeBallScript, EVENT_KURTS_HOUSE_KURT_0
+	object_event  8, 12, SPRITE_WEIRD_TREE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, RowletPokeBallScript, EVENT_KURTS_HOUSE_KURT_0
+	object_event  4,  9, SPRITE_CELEBI, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CelebiScript, EVENT_KURTS_HOUSE_KURT_0
 
 	object_const_def
 	const TINDER_GARDEN_KURT
@@ -43,6 +44,7 @@ TinderGarden_MapScriptHeader: ;todo something weird happens when I stand to the 
 	const TINDER_GARDEN_POKE_BALL1
 	const TINDER_GARDEN_POKE_BALL2
 	const TINDER_GARDEN_POKE_BALL3	
+	const TINDER_GARDEN_CELEBI
 
 
 CelebiCeremonyIntroScript:
@@ -89,32 +91,37 @@ CelebiCeremonyIntroScript:
 	applymovement TINDER_GARDEN_OAK, TGOakBeginMovement ;
 	applymovement TINDER_GARDEN_PRYCE, TGPryceBeginMovement 
 	writetext KurtLetsBegin2
-	closetext ;following ADAPTED FROM ilexforest.asm
+	closetext 
 	pause 20
+	appear TINDER_GARDEN_CELEBI
 	showemote EMOTE_SHOCK, TINDER_GARDEN_KURT, 20 ;did this even show?
 	applymovement TINDER_GARDEN_KURT, TGKurtMovesAway
-	special Special_CelebiShrineEvent ; is this just an animation? right now, looks bad. Need something to like refresh the map?...
-	special Special_FadeBlackQuickly ;c.f. mr pokemons house
+	turnobject TINDER_GARDEN_BLACK_BELT, LEFT
+	applymovement TINDER_GARDEN_CELEBI, TGCelebiMovesToYou
 	opentext
 	writetext CelebiHeroText
 	promptbutton
 	closetext
+	disappear TINDER_GARDEN_CELEBI
+	special Special_FadeBlackQuickly ;c.f. mr pokemons house
 	special Special_ReloadSpritesNoPalettes ;c.f. mr pokemons house
 	appear TINDER_GARDEN_POKE_BALL1
 	appear TINDER_GARDEN_POKE_BALL2	
 	appear TINDER_GARDEN_POKE_BALL3	
 	special Special_FadeInQuickly ;c.f. mr pokemons house
 	special RestartMapMusic	 ;c.f. mr pokemons house
-	applymovement TINDER_GARDEN_KURT, TGKurtChecksBalls ;; todo	
-	applymovement TINDER_GARDEN_OAK, TGOakChecksBalls ;; todo
-	opentext
+	applymovement TINDER_GARDEN_PRYCE, TGPryceMovesDown ;does pryce have a full movement sprite? todo
+	applymovement TINDER_GARDEN_KURT, TGKurtMovesBeforeOak
 	showemote EMOTE_SHOCK, TINDER_GARDEN_PRYCE, 10 ;did this even show?
+	opentext
 	writetext WasThatCelebiText 
+	applymovement TINDER_GARDEN_OAK, TGOakChecksBalls 
 	showemote EMOTE_SHOCK, TINDER_GARDEN_OAK, 10
-	writetext WasThatCelebiTextOak
+	writetext WasThatCelebiTextOak	
+	applymovement TINDER_GARDEN_KURT, TGKurtChecksBalls ;; todo	
+	turnobject TINDER_GARDEN_BLACK_BELT, DOWN
+	writetext WasThatCelebiTextKurt
 	closetext
-	applymovement TINDER_GARDEN_OAK, TGOakGoesBack ;; todo
-	applymovement TINDER_GARDEN_KURT, TGKurtGoesBack ;; todo
 	setscene $1
 	end
 
@@ -250,8 +257,10 @@ WasThatCelebiTextOak:
 	text "Oak: My #dex"
 	line "doesn't recognize"
 	cont "two of them."
+	done
 
-	para "Kurt: Wait, I"
+WasThatCelebiTextKurt:
+	text "Kurt: Wait, I"
 	line "know these from"
 	cont "an old book."
 	cont "These three were"
@@ -271,6 +280,10 @@ TGKurtMovesAway:
 	turn_head_left
 	step_end
 
+TGCelebiMovesToYou:
+	step_down
+	step_down
+	step_end
 
 TGOakChecksBalls:
 	step_down
@@ -280,6 +293,29 @@ TGOakChecksBalls:
 	step_right
 	step_down
 	step_right
+	step_up
+	turn_head_right
+	step_up
+	turn_head_right
+	step_down
+	step_left
+	step_left
+	step_left
+	step_left
+	step_up
+	turn_head_down	
+	step_end
+
+TGPryceMovesDown:
+	step_left
+	step_down
+	step_down
+	step_end
+	
+TGKurtMovesBeforeOak:
+	step_left
+	step_up
+	turn_head_down
 	step_end
 
 TGOakGoesBack:
@@ -293,11 +329,16 @@ TGOakGoesBack:
 	step_end
 
 TGKurtChecksBalls:
+	step_down
 	step_right
 	step_right
-	step_end
-
-TGKurtGoesBack:
+	step_right
+	step_up
+	turn_head_right
+	step_down
+	step_down
+	turn_head_right
+	step_up
 	step_left
 	step_left
 	step_left
@@ -426,6 +467,7 @@ RowletPokeBallScript:
 	turnobject TINDER_GARDEN_KURT, RIGHT
 	writetext KurtDontLoseItText
 	closetext
+	setevent EVENT_KURT_HEARS_LOGGERS
 	setscene $3
 	end
 	
@@ -621,6 +663,7 @@ TinderGardenRivalBattleScript1:
 	disappear TINDER_GARDEN_KURT
 	setscene $2 ; when this was $0 I got stuck in a loop constantly doing the scene
 	setmapscene AZALEA_TOWN, $1 ;now the people shouldn't stop you
+	setmapscene ILEX_FOREST, $1 ;ready for the fight at Ilex Forest
 	playmapmusic
 	end
 	
@@ -631,7 +674,7 @@ TGRivalBattleMove3:
 	step_end
 
 CelebiPokeBallText:
-	text "Contains a gift"
+	text "A gift"
 	line "#mon from"
 	cont "Celebi."
 	
@@ -816,4 +859,8 @@ TGTreeText:
 	cont "when it becomes"
 	cont "the shrine."
 	done
+
+CelebiScript:
+	faceplayer
+	end
 	

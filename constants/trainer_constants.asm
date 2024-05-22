@@ -116,10 +116,10 @@ KRIS EQU __trainer_class__
 
 	trainerclass YOUNGSTER ; 1f
 	const JOEY1
-	const JOEY2
-	const JOEY3
-	const JOEY4
-	const JOEY5
+;	const JOEY2
+;	const JOEY3
+;	const JOEY4
+;	const JOEY5
 	const MIKEY
 	const ALBERT
 	const GORDON
@@ -136,15 +136,15 @@ KRIS EQU __trainer_class__
 
 	trainerclass BUG_CATCHER ; 20
 	const WADE1
-	const WADE2
-	const WADE3
-	const WADE4
-	const WADE5
+;	const WADE2
+;	const WADE3
+;	const WADE4
+;	const WADE5
 	const ARNIE1
-	const ARNIE2
-	const ARNIE3
-	const ARNIE4
-	const ARNIE5
+;	const ARNIE2
+;	const ARNIE3
+;	const ARNIE4
+;	const ARNIE5
 	const DON
 	const BENNY
 	const AL
@@ -181,10 +181,10 @@ KRIS EQU __trainer_class__
 
 	trainerclass PICNICKER ; 22
 	const LIZ1
-	const LIZ2
-	const LIZ3
-	const LIZ4
-	const LIZ5
+;	const LIZ2
+;	const LIZ3
+;	const LIZ4
+;	const LIZ5
 	const GINA1
 	const GINA2
 	const GINA3
@@ -837,8 +837,8 @@ KRIS EQU __trainer_class__
 
 	trainerclass ENGINEER ; 57
 	const SMITH
-	const BERNIE
 	const CAMDEN
+	const BERNIE
 	const LANG
 	const HUGO
 	const HOWARD

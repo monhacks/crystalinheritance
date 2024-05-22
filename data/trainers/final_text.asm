@@ -9,7 +9,7 @@ FinalTextList_TriplePhrases:
 .FinalText_Rival0: ;these are said right before the last pokemon comes out. 04-27-24
 	dw Rival1_1FinalPkmnText
 
-.FinalText_Rival1:
+.FinalText_Rival1: ;todo
 	dw Rival1_2FinalPkmnText ; TODO
 	dw Rival1_3FinalPkmnText
 	dw Rival1_4FinalPkmnText
