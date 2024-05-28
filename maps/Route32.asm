@@ -39,7 +39,6 @@ Route32_MapScriptHeader:
 	object_event 13, 29, SPRITE_LYRA, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LYRA_ROUTE_32
 	object_event  8, 49, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerFisherJustin, -1
 	object_event 12, 56, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerFisherRalph1, -1
-	object_event 12, 33, SPRITE_PICNICKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerPicnickerLiz1, -1
 	object_event  6, 48, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerFisherHenry, -1
 	object_event 16, 18, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerYoungsterAlbert, -1
 	object_event  4, 63, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerYoungsterGordon, -1
@@ -90,8 +89,6 @@ Route32CooltrainerMTrigger:
 	checkevent EVENT_BEAT_FISHER_RALPH
 	iffalse_jumptext .IntroText
 	checkevent EVENT_BEAT_FISHER_HENRY
-	iffalse_jumptext .IntroText
-	checkevent EVENT_BEAT_PICNICKER_LIZ
 	iffalse_jumptext .IntroText
 	checkevent EVENT_BEAT_YOUNGSTER_ALBERT
 	iffalse_jumptext .IntroText
@@ -567,103 +564,6 @@ GenericTrainerFisherHenry:
 	line "raised ones."
 	done
 
-TrainerPicnickerLiz1:
-	trainer PICNICKER, LIZ1, EVENT_BEAT_PICNICKER_LIZ, PicnickerLiz1SeenText, PicnickerLiz1BeatenText, 0, .Script
-
-.Script:
-	loadvar VAR_CALLERID, PHONE_PICNICKER_LIZ
-	opentext
-	checkflag ENGINE_LIZ_READY_FOR_REMATCH
-	iftrue .Rematch
-	checkcellnum PHONE_PICNICKER_LIZ
-	iftrue .NumberAccepted
-	checkevent EVENT_LIZ_ASKED_FOR_PHONE_NUMBER
-	iftrue .AskAgain
-	writetext PicnickerLiz1AfterText
-	promptbutton
-	setevent EVENT_LIZ_ASKED_FOR_PHONE_NUMBER
-	callstd asknumber1f
-	sjump .AskForNumber
-
-.AskAgain:
-	callstd asknumber2f
-.AskForNumber:
-	askforphonenumber PHONE_PICNICKER_LIZ
-	ifequal $1, .PhoneFull
-	ifequal $2, .NumberDeclined
-	gettrainername PICNICKER, LIZ1, $0
-	callstd registerednumberf
-	jumpstd numberacceptedf
-
-.Rematch:
-	callstd rematchf
-	winlosstext PicnickerLiz1BeatenText, 0
-	readmem wLizFightCount
-	ifequal 4, .Fight4
-	ifequal 3, .Fight3
-	ifequal 2, .Fight2
-	ifequal 1, .Fight1
-	ifequal 0, .LoadFight0
-.Fight4:
-	checkevent EVENT_BEAT_ELITE_FOUR
-	iftrue .LoadFight4
-.Fight3:
-	checkevent EVENT_CLEARED_RADIO_TOWER
-	iftrue .LoadFight3
-.Fight2:
-	checkevent EVENT_CLEARED_ROCKET_HIDEOUT
-	iftrue .LoadFight2
-.Fight1:
-	checkflag ENGINE_FLYPOINT_ECRUTEAK
-	iftrue .LoadFight1
-.LoadFight0:
-	loadtrainer PICNICKER, LIZ1
-	startbattle
-	reloadmapafterbattle
-	loadmem wLizFightCount, 1
-	clearflag ENGINE_LIZ_READY_FOR_REMATCH
-	end
-
-.LoadFight1:
-	loadtrainer PICNICKER, LIZ2
-	startbattle
-	reloadmapafterbattle
-	loadmem wLizFightCount, 2
-	clearflag ENGINE_LIZ_READY_FOR_REMATCH
-	end
-
-.LoadFight2:
-	loadtrainer PICNICKER, LIZ3
-	startbattle
-	reloadmapafterbattle
-	loadmem wLizFightCount, 3
-	clearflag ENGINE_LIZ_READY_FOR_REMATCH
-	end
-
-.LoadFight3:
-	loadtrainer PICNICKER, LIZ4
-	startbattle
-	reloadmapafterbattle
-	loadmem wLizFightCount, 4
-	clearflag ENGINE_LIZ_READY_FOR_REMATCH
-	end
-
-.LoadFight4:
-	loadtrainer PICNICKER, LIZ5
-	startbattle
-	reloadmapafterbattle
-	clearflag ENGINE_LIZ_READY_FOR_REMATCH
-	end
-
-.NumberAccepted:
-	jumpstd numberacceptedf
-
-.NumberDeclined:
-	jumpstd numberdeclinedf
-
-.PhoneFull:
-	jumpstd phonefullf
-
 GenericTrainerYoungsterAlbert:
 	generictrainer YOUNGSTER, ALBERT, EVENT_BEAT_YOUNGSTER_ALBERT, YoungsterAlbertSeenText, YoungsterAlbertBeatenText
 
@@ -867,27 +767,6 @@ CamperRolandSeenText:
 CamperRolandBeatenText:
 	text "Hmmm. This is"
 	line "disappointing."
-	done
-
-PicnickerLiz1SeenText:
-	text "Uh-huh. Yeah, and"
-	line "you know…"
-
-	para "Pardon? Battle?"
-	line "I'm on the phone."
-
-	para "Oh, all right. But"
-	line "make it fast."
-	done
-
-PicnickerLiz1BeatenText:
-	text "Oh! I've got to"
-	line "relieve my anger!"
-	done
-
-PicnickerLiz1AfterText:
-	text "I was having a"
-	line "nice chat too."
 	done
 
 Bird_keeperPeterSeenText:

@@ -265,7 +265,7 @@ KeyItemDescriptions:
 	dw ItemfinderDesc
 	dw MysteryEggDesc
 	dw SquirtBottleDesc
-	dw SecretPotionDesc
+	dw UnownReportDesc
 	dw RedScaleDesc
 	dw CardKeyDesc
 	dw BasementKeyDesc
@@ -1297,9 +1297,9 @@ SquirtBottleDesc:
 	db   "A bottle used for"
 	next "watering plants.@"
 
-SecretPotionDesc:
-	db   "Fully heals any"
-	next "#mon.@"
+UnownReportDescDesc:
+	db   "Documents all"
+	next "Unown.@"
 
 RedScaleDesc:
 	db   "A scale from the"

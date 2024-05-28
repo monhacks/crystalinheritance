@@ -9,7 +9,7 @@ KeyItemNames::
 	li "Itemfinder"
 	li "Mystery Egg"
 	li "SquirtBottle"
-	li "SecretPotion"
+	li "Unown Report" ; replaces spotion
 	li "Red Scale"
 	li "Card Key"
 	li "Basement Key"

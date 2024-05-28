@@ -13,7 +13,7 @@ SlowpokeWellB1F_MapScriptHeader:
 	def_bg_events
 
 	def_object_events
-	object_event 13, 3, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, SlowpokeWellB1FGuardScript, SLOWPOKE_WELL_MOVED_ASIDE
+	object_event 13, 2, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, SlowpokeWellB1FGuardScript, SLOWPOKE_WELL_MOVED_ASIDE
 	strengthboulder_event  3, 2
 	itemball_event 10,  3, SUPER_POTION, 1, EVENT_SLOWPOKE_WELL_B1F_SUPER_POTION
 
@@ -27,13 +27,14 @@ SlowpokeWellB1FGuardScript:
 	iftrue .MovesAside
 	writetext SlowpokeWellImGuardingText
 	closetext
-	done ;is this how it is done?
+	end ;is this how it is done?
+	
 .MovesAside:
 	writetext SlowpokeWellMovesAsideText
 	applymovement SLOWPOKE_WELL_B1F_SCHOOLBOY, MovesAsideMovement
 	setevent SLOWPOKE_WELL_MOVED_ASIDE
 	closetext
-	done
+	end
 
 SlowpokeWellImGuardingText:
 	text "The miners in Un-"

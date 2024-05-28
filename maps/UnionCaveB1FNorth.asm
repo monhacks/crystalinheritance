@@ -4,63 +4,90 @@ UnionCaveB1FNorth_MapScriptHeader:
 	def_callbacks
 
 	def_warp_events
-	warp_event  3,  3, RUINS_OF_ALPH_OUTSIDE, 7
 	warp_event  3, 11, RUINS_OF_ALPH_OUTSIDE, 8
 	warp_event 15, 23, UNION_CAVE_1F, 1
 
 	def_coord_events
 
 	def_bg_events
-	bg_event 11, 23, BGEVENT_ITEM + X_SPEED, EVENT_UNION_CAVE_B1F_NORTH_HIDDEN_X_SPEED
-	bg_event 13,  4, BGEVENT_ITEM + REVIVE, EVENT_UNION_CAVE_B1F_NORTH_HIDDEN_REVIVE
+	bg_event 14, 10, BGEVENT_ITEM + X_SPEED, EVENT_UNION_CAVE_B1F_NORTH_HIDDEN_X_SPEED
+	bg_event  8, 22, BGEVENT_ITEM + REVIVE, EVENT_UNION_CAVE_B1F_NORTH_HIDDEN_REVIVE
 
 	def_object_events
-	object_event  9,  4, SPRITE_HIKER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerRuin_maniacLeland, -1
-	object_event 13, 10, SPRITE_HIKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerRuin_maniacPetry, -1
+	object_event  9, 22, SPRITE_HIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerHikerLeonard, -1
+	object_event 11, 14, SPRITE_FIREBREATHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerFirebreatherOtis, -1
+	object_event  4, 10, SPRITE_HIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerRuin_maniacPetry, -1
 	tmhmball_event  5, 22, TM_SWIFT, EVENT_UNION_CAVE_B1F_NORTH_TM_SWIFT
-	itemball_event 17, 21, X_DEFEND, 1, EVENT_UNION_CAVE_B1F_NORTH_X_DEFEND
-	strengthboulder_event  7, 10
+	tmhmball_event  7, 10, TM_ROCK_SMASH, EVENT_UNION_CAVE_B1F_NORTH_X_DEFEND
+	;POKEMON EVENT BASTIODON AND RAMPARDOS
 
-GenericTrainerRuin_maniacLeland:
-	generictrainer RUIN_MANIAC, LELAND, EVENT_BEAT_RUIN_MANIAC_LELAND, .SeenText, .BeatenText
 
-	text "Someday I'll dis-"
-	line "cover a new ruin"
-	cont "and become famous."
+GenericTrainerHikerLeonard:
+	generictrainer HIKER, LEONARD, EVENT_BEAT_HIKER_LEONARD, HikerLeonardSeenText, HikerLeonardBeatenText
+
+	text "The boss got"
+	line "his start with"
+	cont "the Underground"
+	cont "in Sinnoh."
 	done
 
-.SeenText:
-	text "I'm on the trail of"
-	line "an ancient ruin"
-	cont "site!"
+HikerLeonardSeenText:
+	text "A battle? I"
+	line "would oblige!"
 	done
 
-.BeatenText:
-	text "I was distracted"
-	line "by clues the"
-	cont "ancients left."
+HikerLeonardBeatenText:
+	text "Guess I can't"
+	line "work, now..."
+	done
+
+GenericTrainerFirebreatherOtis:
+	generictrainer FIREBREATHER, OTIS, EVENT_BEAT_FIREBREATHER_OTIS, FireBreatherOtisSeenText, FireBreatherOtisBeatenText
+
+	text "My greatest wish?"
+	line "See the fire-"
+	cont "steel type #-"
+	cont "mon that livs"
+	cont "in volcanos."
+	done
+
+FireBreatherOtisSeenText:
+	text "Not one more"
+	line "step!"
+	done
+
+FireBreatherOtisBeatenText:
+	text "The boss is"
+	line "ahead. He's not"
+	cont "happy that we"
+	cont "were battling."
 	done
 
 GenericTrainerRuin_maniacPetry:
-	generictrainer RUIN_MANIAC, PETRY, EVENT_BEAT_RUIN_MANIAC_PETRY, .SeenText, .BeatenText
+	generictrainer RUIN_MANIAC, PETRY, EVENT_BEAT_RUIN_MANIAC_PETRY, RuinManiacPetrySeenText, RuinManiacPetryBeatenText
 
-	text "Ancient history"
-	line "is my passion,"
-
-	para "but to investigate"
-	line "it properly we use"
-	cont "modern technology."
+	text "Some group hara-"
+	line "ssed us last"
+	cont "week. We just got"
+	cont "back online when"
+	cont "you got here."
 	done
 
-.SeenText:
-	text "I'll go anywhere"
-	line "to investigate"
-	cont "old secrets and"
-	cont "legends."
+RuinManiacPetrySeenText:
+	text "A mine is no"
+	line "place for a"
+	cont "child."
 	done
 
-.BeatenText:
-	text "What is the secret"
-	line "of your power?"
+RuinManiacPetryBeatenText:
+	text "Some group hara-"
+	line "ssed us last"
+	cont "week. We just got"
+	cont "back online when"
+	cont "you got here."
 	done
+	
+
+
+
 

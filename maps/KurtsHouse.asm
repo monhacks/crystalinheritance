@@ -55,7 +55,6 @@ KurtEventScript:
 	setscene $1
 	setevent EVENT_KURTS_HOUSE_KURT_0 ; changed from mom
 	clearevent EVENT_PLAYERS_HOUSE_KURT_2 ; may not need this line? 
-	writetext KurtsHouseApricornBox
 	promptbutton
 	verbosegivekeyitem APRICORN_BOX
 	promptbutton
@@ -112,6 +111,10 @@ MomPokegearText:
 	para "It's essential if"
 	line "you want to be a"
 	cont "good trainer."
+	
+	para "I also threw in"
+	line "a new Apricorn"
+	cont "box."
 
 	para "Oh, the day of the"
 	line "week isn't set."
@@ -213,11 +216,6 @@ KurtsHouseCelebiStatueText:
 	cont "tector."
 	done
 
-KurtsHouseApricornBox:
-	text "Oh, I finished"
-	line "fixing your Apri-"
-	cont "corn box. Here!"
-	done
 
 DebugRadio:
 	opentext
@@ -412,6 +410,7 @@ ApricornBenchScript:
 ;	faceplayer
 	opentext
 	writetext CheckForApricornsText
+	promptbutton
 ;	checkevent EVENT_KURT_GAVE_YOU_APRICORN_BOX
 ;	iftrue .GotApricornBox
 ;	checkevent EVENT_CLEARED_SLOWPOKE_WELL

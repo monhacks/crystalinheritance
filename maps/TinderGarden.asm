@@ -27,7 +27,6 @@ TinderGarden_MapScriptHeader: ;todo something weird happens when I stand to the 
 	def_object_events
 	object_event  4, 10, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TGKurtScript, EVENT_KURT_HEARS_LOGGERS ;todo add kurtscript in this 
 	object_event  3, 10, SPRITE_OAK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OakScript, EVENT_KURT_HEARS_LOGGERS
-	object_event  2, 10, SPRITE_PRYCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PryceScript, EVENT_KURT_HEARS_LOGGERS
 	object_event  5, 10, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CharcoalScript, EVENT_KURT_HEARS_LOGGERS
 	object_event  5, 12, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RivalScript, EVENT_KURT_HEARS_LOGGERS
 	object_event  8, 10, SPRITE_WEIRD_TREE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CyndaquilPokeBallScript, EVENT_KURTS_HOUSE_KURT_0
@@ -38,7 +37,6 @@ TinderGarden_MapScriptHeader: ;todo something weird happens when I stand to the 
 	object_const_def
 	const TINDER_GARDEN_KURT
 	const TINDER_GARDEN_OAK
-	const TINDER_GARDEN_PRYCE
 	const TINDER_GARDEN_BLACK_BELT
 	const TINDER_GARDEN_RIVAL
 	const TINDER_GARDEN_POKE_BALL1
@@ -63,6 +61,12 @@ CelebiCeremonyIntroScript:
 	writetext OakText_Pokedex
 	playsound SFX_ITEM
 	waitsfx
+	writetext OakText_Balls
+	getitemname POKE_BALL, $1
+	callstd receiveitem
+	giveitem POKE_BALL, 5
+	itemnotify
+	writetext CatchAll
 	setflag ENGINE_POKEDEX
 	closetext
 	applymovement TINDER_GARDEN_OAK, TGOakMovesToRivalMovement
@@ -72,24 +76,13 @@ CelebiCeremonyIntroScript:
 	waitsfx
 	closetext
 	applymovement TINDER_GARDEN_OAK, TGOakMovesBackMovement
-	applymovement TINDER_GARDEN_PRYCE, TGPryceMoves1
-	opentext
-	writetext PryceTextHero
-	promptbutton
-	getitemname POKE_BALL, $1
-	callstd receiveitem
-	giveitem POKE_BALL, 5
-	itemnotify
-	writetext PryceCatchAll
-	waitbutton
-	closetext
-	applymovement TINDER_GARDEN_PRYCE, TGPryceMoves2
 	opentext 
 	writetext KurtLetsBegin 
+	closetext
 	turnobject TINDER_GARDEN_KURT, UP
 	turnobject TINDER_GARDEN_BLACK_BELT, UP
 	applymovement TINDER_GARDEN_OAK, TGOakBeginMovement ;
-	applymovement TINDER_GARDEN_PRYCE, TGPryceBeginMovement 
+	opentext
 	writetext KurtLetsBegin2
 	closetext 
 	pause 20
@@ -110,16 +103,18 @@ CelebiCeremonyIntroScript:
 	appear TINDER_GARDEN_POKE_BALL3	
 	special Special_FadeInQuickly ;c.f. mr pokemons house
 	special RestartMapMusic	 ;c.f. mr pokemons house
-	applymovement TINDER_GARDEN_PRYCE, TGPryceMovesDown ;does pryce have a full movement sprite? todo
 	applymovement TINDER_GARDEN_KURT, TGKurtMovesBeforeOak
-	showemote EMOTE_SHOCK, TINDER_GARDEN_PRYCE, 10 ;did this even show?
 	opentext
 	writetext WasThatCelebiText 
+	closetext
 	applymovement TINDER_GARDEN_OAK, TGOakChecksBalls 
 	showemote EMOTE_SHOCK, TINDER_GARDEN_OAK, 10
+	opentext
 	writetext WasThatCelebiTextOak	
+	closetext
 	applymovement TINDER_GARDEN_KURT, TGKurtChecksBalls ;; todo	
 	turnobject TINDER_GARDEN_BLACK_BELT, DOWN
+	opentext
 	writetext WasThatCelebiTextKurt
 	closetext
 	setscene $1
@@ -146,20 +141,6 @@ TGOakMovesToRivalMovement:
 	
 TGOakMovesBackMovement:
 	step_left
-	step_up
-	step_left
-	turn_head_down
-	step_end
-
-TGPryceMoves1:
-	step_down
-	step_right
-	step_right
-	turn_head_down
-	step_end
-
-TGPryceMoves2:
-	step_left
 	step_left
 	step_up
 	turn_head_down
@@ -167,10 +148,7 @@ TGPryceMoves2:
 
 KurtText_Intro:
 	text "Kurt: Surprise!"
-	line "Pryce and Oak"
-	cont "are here. And"
-	cont "they have gifts"
-	cont "for you!"
+	line "Oak is here."
 	done
 	
 OakText_Pokedex:
@@ -190,24 +168,18 @@ OakText_Pokedex:
 	line "encyclopedia!"
 	done
 
+OakText_Balls:
+	text "And you will"
+	line "want these to"
+	cont "fill it up."
+	done
+
 OakText_PokedexRival:
 	text "I brought one"
 	line "for you as well."
 	done
 
-PryceTextHero:
-	text "You've grown up"
-	line "so much. Say, "
-	cont "you're the same"
-	cont "age as the hero"
-	cont "who united Johto"
-	cont "160 years ago!"
-	
-	para "Please, take"
-	line "these gifts."
-	done
-
-PryceCatchAll:
+CatchAll:
 	text "Best of luck!"
 	done
 	
@@ -232,12 +204,7 @@ TGOakBeginMovement:
 	step_up
 	turn_head_right
 	step_end
-	
-TGPryceBeginMovement:
-	step_up
-	step_up
-	step_right
-	step_end
+
 
 TinderGardenTryToLeaveScript:
 	showtext TGWhereYouGoing
@@ -245,7 +212,7 @@ TinderGardenTryToLeaveScript:
 	end
 
 WasThatCelebiText:
-	text "Pryce: Was that"
+	text "Kurt: Was that"
 	line "Celebi?"
 	
 	para "And there are"
@@ -304,12 +271,6 @@ TGOakChecksBalls:
 	step_left
 	step_up
 	turn_head_down	
-	step_end
-
-TGPryceMovesDown:
-	step_left
-	step_down
-	step_down
 	step_end
 	
 TGKurtMovesBeforeOak:
@@ -386,7 +347,11 @@ CyndaquilPokeBallScript:
 	applymovement TINDER_GARDEN_RIVAL, RivalAfterOshawottMovement
 	opentext
 	writetext KurtGreatJobText
+	turnobject TINDER_GARDEN_KURT, RIGHT
+	writetext KurtDontLoseItText
+	turnobject TINDER_GARDEN_KURT, DOWN
 	closetext
+	setevent EVENT_KURT_HEARS_LOGGERS
 	setscene $3
 	end
 	
@@ -425,7 +390,11 @@ OshawottPokeBallScript:
 	applymovement TINDER_GARDEN_RIVAL, RivalAfterRowletMovement
 	opentext
 	writetext KurtGreatJobText
+	turnobject TINDER_GARDEN_KURT, RIGHT
+	writetext KurtDontLoseItText
+	turnobject TINDER_GARDEN_KURT, DOWN
 	closetext
+	setevent EVENT_KURT_HEARS_LOGGERS
 	setscene $3
 	end
 	
@@ -466,6 +435,7 @@ RowletPokeBallScript:
 	writetext KurtGreatJobText
 	turnobject TINDER_GARDEN_KURT, RIGHT
 	writetext KurtDontLoseItText
+	turnobject TINDER_GARDEN_KURT, DOWN
 	closetext
 	setevent EVENT_KURT_HEARS_LOGGERS
 	setscene $3
@@ -687,19 +657,6 @@ CelebiHeroText:
 	line "you, hero!"
 	done
 
-PryceScript:
-	faceplayer
-	opentext
-	jumpopenedtext PryceShrineText
-
-PryceShrineText:
-	text "They've been"
-	line "building this"
-	cont "shrine every 20"
-	cont "years for many"
-	cont "generations."
-	done
-
 OakScript:
 	faceplayer
 	opentext
@@ -724,7 +681,13 @@ CharcoalScript:
 	jumpopenedtext CharcoalCuttingText
 
 CharcoalCuttingText:
-	text "Things are so"
+	text "They've been"
+	line "building this"
+	cont "shrine every 20"
+	cont "years for many"
+	cont "generations."
+
+	para "But now, it's"
 	line "uncertain. The"
 	cont "forest is so"
 	cont "thin, we can't"

@@ -299,16 +299,16 @@ KRIS EQU __trainer_class__
 	const TRENT
 
 	trainerclass HIKER ; 26
-	const ANTHONY1
+	const ANTHONY1;
 	const ANTHONY2
 	const ANTHONY3
 	const ANTHONY4
 	const ANTHONY5
-	const PARRY1
+	const PARRY1;
 	const PARRY2
 	const PARRY3
-	const RUSSELL
-	const PHILLIP
+	const RUSSELL;
+	const PHILLIP;
 	const LEONARD
 	const BENJAMIN
 	const ERIK

@@ -750,6 +750,7 @@ VenonatEvosAttacks:
 	db 1, TACKLE
 	db 1, DISABLE
 	db 1, FORESIGHT
+	db 1, ABSORB
 	db 5, SUPERSONIC
 	db 11, CONFUSION
 	db 13, POISONPOWDER

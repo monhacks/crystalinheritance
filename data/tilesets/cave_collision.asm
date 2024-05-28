@@ -242,7 +242,7 @@
 	tilecoll TOP_WALL, WALL, FLOOR, FLOOR ; f1
 	tilecoll FLOOR, BOTTOM_WALL, WALL, CAVE ; f2
 	tilecoll WALL, WALL, WALL, WALL ; f3
-	tilecoll WALL, WALL, WALL, WALL ; f4
-	tilecoll WALL, WALL, WALL, WALL ; f5
+	tilecoll TOP_WALL, FLOOR, FLOOR, FLOOR ; f4
+	tilecoll FLOOR, TOP_WALL, FLOOR, FLOOR ; f5
 	tilecoll WALL, WALL, WALL, CAVE ; f6
 	tilecoll WALL, WALL, WALL, WALL ; f7

@@ -1614,7 +1614,7 @@ YoungsterGroup:
 ; ================
 
 	; YOUNGSTER
-	db "Joey@" ;joey1?
+	db "Joey@" 
 	db TRAINERTYPE_ITEM | TRAINERTYPE_NICKNAME
 	; party
 	db 4, TEDDIURSA, NO_ITEM, "@"
@@ -2126,7 +2126,7 @@ PicnickerGroup:
 	db "Liz@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 8, WOOPER
+	db 6, WOOPER
 	db -1 ; end
 
 ; ================
@@ -3318,7 +3318,9 @@ HikerGroup:
 	db "Parry@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 30, ONIX
+	db 5, GEODUDE
+	db 6, GEODUDE
+	db 7, ONIX
 	db -1 ; end
 
 ; ================
@@ -3351,9 +3353,9 @@ HikerGroup:
 	db "Russell@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 4, GEODUDE
-	db 6, GEODUDE
-	db 8, GEODUDE
+	db 6, ONIX
+	db 6, RHYHORN
+	db 6, MACHOP
 	db -1 ; end
 
 ; ================
@@ -3362,9 +3364,9 @@ HikerGroup:
 	db "Phillip@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 23, GEODUDE
-	db 23, GEODUDE
-	db 25, GRAVELER
+	db 7, RHYHORN
+	db 7, MACHOP
+	db 8, WOOPER
 	db -1 ; end
 
 ; ================
@@ -3373,8 +3375,8 @@ HikerGroup:
 	db "Leonard@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 23, GEODUDE
-	db 25, MACHOP
+	db 7, RHYHORN
+	db 10, DIGLETT
 	db -1 ; end
 
 ; ================
@@ -4271,8 +4273,8 @@ OfficerMGroup:
 	db "Keith@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 7, GROWLITHE
-	db 7, HOUNDOUR
+	db 5, GROWLITHE
+	db 5, HOUNDOUR
 	db -1 ; end
 
 ; ================
@@ -5358,11 +5360,12 @@ RuinManiacGroup:
 
 	; RUIN_MANIAC
 	db "Petry@"
-	db TRAINERTYPE_NORMAL
+	db TRAINERTYPE_MOVES
 	; party
-	db 23, CORSOLA
-	db 23, CORSOLA
-	db 25, DRAGONAIR
+	db 8, RAMPARDOS
+		db ROCK_SMASH, SCARY_FACE, SCREECH, NO_MOVE
+	db 8, BASTIODON
+		db MIRROR_COAT, TACKLE, SCREECH, NO_MOVE
 	db -1 ; end
 
 ; ================
@@ -5397,9 +5400,8 @@ FirebreatherGroup:
 	db "Otis@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 59, MAGMAR
-	db 58, WEEZING
-	db 61, MAGMAR
+	db 8, MAGMAR
+	db 9, PONYTA
 	db -1 ; end
 
 ; ================
@@ -5460,7 +5462,8 @@ FirebreatherGroup:
 	db "Ray@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 9, VULPIX
+	db 7, GROWLITHE
+	db 7, VULPIX
 	db -1 ; end
 
 ; ================
@@ -7893,7 +7896,9 @@ ScientistGroup:
 	db "Lowell@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 60, ARCANINE
+	db 7, GRIMER
+	db 4, WEEPINBELL
+	db 4, GLOOM
 	db -1 ; end
 
 ; ================
@@ -7902,7 +7907,9 @@ ScientistGroup:
 	db "Dennett@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 60, NINETALES
+	db 7, MAGNEMITE
+	db 8, VOLTORB
+	db 6, CHINCHOU
 	db -1 ; end
 
 ; ================
@@ -8520,7 +8527,7 @@ EngineerGroup:
 	db "Camden@"
 	db TRAINERTYPE_MOVES
 	; party
-	db 10, SCIZOR
+	db 7, SCIZOR ;tried lv 10, way too hard
 		db CUT, LEER, AGILITY, FOCUS_ENERGY
 	db -1 ; end
 

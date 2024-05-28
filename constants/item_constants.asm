@@ -593,7 +593,7 @@ NUM_APRICORNS EQU const_value - 1
 	const ITEMFINDER   ; 05
 	const MYSTERY_EGG  ; 06
 	const SQUIRTBOTTLE ; 07
-	const SECRETPOTION ; 08
+	const UNOW_REPORT ; 08 WAS SECRETPOTION
 	const RED_SCALE    ; 09
 	const CARD_KEY     ; 0a
 	const BASEMENT_KEY ; 0b

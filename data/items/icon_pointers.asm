@@ -266,7 +266,7 @@ KeyItemIconPointers:
 	dba ItemfinderIcon
 	dba MysteryEggIcon
 	dba SquirtBottleIcon
-	dba SecretPotionIcon
+	dba UnownReportIcon ; replaces spotion icon
 	dba RedScaleIcon
 	dba CardKeyIcon
 	dba BasementKeyIcon

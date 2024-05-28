@@ -290,7 +290,7 @@ KeyItemEffects:
 	dw Itemfinder         ; ITEMFINDER
 	dw IsntTheTimeMessage ; MYSTERY_EGG
 	dw SquirtBottle       ; SQUIRTBOTTLE
-	dw IsntTheTimeMessage ; SECRETPOTION
+	dw IsntTheTimeMessage ; SECRETPOTION and UNOWN REPORT
 	dw IsntTheTimeMessage ; RED_SCALE
 	dw CardKey            ; CARD_KEY
 	dw BasementKey        ; BASEMENT_KEY
