@@ -2556,7 +2556,9 @@ FisherGroup:
 	db "Ralph@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 10, LANTURN
+	db 7, CHINCHOU
+	db 7, STARYU
+	db 6, TOTODILE
 	db -1 ; end
 
 ; ================
@@ -5904,7 +5906,7 @@ SchoolgirlGroup:
 	db TRAINERTYPE_NICKNAME
 	; party
 	db 6, TEDDIURSA, "Teddy@"
-	db 6, DONPHAN, "@"
+	db 6, TANGELA, "Spaghetti@"
 	db -1 ; end
 
 ; ================
@@ -5913,9 +5915,9 @@ SchoolgirlGroup:
 	db "Eliza@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_NICKNAME
 	; party
-	db 18, GLOOM, SILVER_LEAF, "Silver@"
-	db 16, LEDIAN, NO_ITEM, "Lady@"
-	db 17, FURRET, ORAN_BERRY, "Tret@"
+	db 8, EEVEE, SILVER_LEAF, "Silver@"
+	db 6, EXEGGCUTE, NO_ITEM, "SunnySide@"
+	db 7, CHIKORITA, ORAN_BERRY, "Chica@"
 	db -1 ; end
 
 ; ================

@@ -8,9 +8,7 @@ RuinsOfAlphKabutoChamber_MapScriptHeader:
 	def_warp_events
 	warp_event  3,  9, RUINS_OF_ALPH_OUTSIDE, 2
 	warp_event  4,  9, RUINS_OF_ALPH_OUTSIDE, 2
-	warp_event  3,  3, RUINS_OF_ALPH_INNER_CHAMBER, 4
-	warp_event  4,  3, RUINS_OF_ALPH_INNER_CHAMBER, 5
-	warp_event  4,  0, RUINS_OF_ALPH_KABUTO_ITEM_ROOM, 1
+	warp_event  4,  0, RUINS_OF_ALPH_KABUTO_WORD_ROOM, 1
 
 	def_coord_events
 
@@ -40,7 +38,15 @@ RuinsofAlphKabutoChamberHiddenDoorsCallback:
 	iftrue .WallOpen
 	changeblock 4, 0, $24 ;this should be closed unless we don't have the puzzle solved. 24 is the closed door
 .WallOpen:
+	checkevent EVENT_SOLVED_KABUTO_PUZZLE
+	iffalse .FloorClosed
 	endcallback
+
+.FloorClosed:
+	changeblock 2, 2, $1
+	changeblock 4, 2, $2
+	endcallback
+
 
 
 RuinsofAlphKabutoChamberWallOpenScript:
@@ -69,32 +75,35 @@ MapRuinsofAlphKabutoChamberSignpost2Script:
 ;	setflag ENGINE_UNLOCKED_UNOWNS_A_TO_J
 ;	setevent EVENT_RUINS_OF_ALPH_KABUTO_CHAMBER_RECEPTIONIST
 	earthquake 30
+	pause 15
 	showemote EMOTE_SHOCK, PLAYER, 15
 	changeblock 4, 0, $25 ; open the door to the item room
 	reloadmappart
+	pause 30
 	playsound SFX_STRENGTH
 	earthquake 80
+	pause 30
 	showemote EMOTE_SHOCK, RUINS_SCIENTIST, 15
 	opentext
 	writetext StepBackText
+	promptbutton
 	closetext
 	applymovement PLAYER, PlayerStepBack
 	changeblock 2, 2, $14
 	changeblock 4, 2, $15
 	reloadmappart
-	playsound SFX_STRENGTH
-	earthquake 80
 	applymovement RUINS_SCIENTIST, RuinsScientistMovesToYou
 	opentext
 	writetext Scientist_TakeThisReport ;todo need to add an unown report to the key items
 	promptbutton
-	verbosegivekeyitem UNOWN_REPORT
+	verbosegivekeyitem UNOWNREPORT
+	setmapscene ILEX_FOREST, $2 ; for the celebi event
 	writetext ScientistDescribesUnownReport
 	waitbutton
 .TryToGiveUnown
 	writetext Scientist_TakeThisUnown
 	yesorno
-	iffalse .refusetotakeunown
+	iffalse .refusetotakeunown1
 	givepoke UNOWN, 10
 	iffalse_jumpopenedtext ScientistText_PartyAndBoxFull
 	writetext ScientistText_TakeCareOfIt
@@ -116,7 +125,7 @@ MapRuinsofAlphKabutoChamberSignpost2Script:
 	setevent EVENT_GOT_UNOWN ; FROM SHUCKIE
 	end	
 
-.refusetotakeunown
+.refusetotakeunown1
 	jumpopenedtext DontBlameYou	
 
 StepBackText:
@@ -167,12 +176,7 @@ Scientist_TakeThisUnown:
 	line "of them at the"
 	cont "reseach center."
 	done
-	
-DontBlameYou:
-	text "Don't blame you"
-	line "at all. They're"
-	cont "hard to train."
-	done
+
 
 ScientistText_PartyAndBoxFull:
 	text "Oh, you don't"
@@ -204,11 +208,39 @@ RuinsOfAlphKabutoChamberScientistScript:
 	checkevent EVENT_SOLVED_KABUTO_PUZZLE
 	iffalse .PuzzleIncomplete
 	checkevent EVENT_GOT_UNOWN
-	iffalse .TryToGiveUnown
+	iffalse .TryToGiveUnown2
 	writetext RuinsOfAlphKabutoChamberScientistTremorText
 	promptbutton
+	closetext
 	end
-	
+
+.TryToGiveUnown2:
+	writetext Scientist_TakeThisUnown
+	yesorno
+	iffalse .refusetotakeunown
+	givepoke UNOWN, 10
+	iffalse_jumpopenedtext ScientistText_PartyAndBoxFull
+	writetext ScientistText_TakeCareOfIt
+	promptbutton
+	waitsfx
+	writetext ScientistText_GotUnown
+	playsound SFX_KEY_ITEM
+	waitsfx
+	ifequal 1, .unowninparty
+	special Special_CurBoxFullCheck
+	iffalse .BoxNotFull
+	farwritetext _CurBoxFullText
+.BoxNotFull
+	special GetCurBoxName
+	writetext UnownSentToPC
+	promptbutton
+.unowninparty
+	closetext
+	setevent EVENT_GOT_UNOWN ; FROM SHUCKIE
+	end	
+.refusetotakeunown
+	jumpopenedtext DontBlameYou	
+
 .PuzzleIncomplete:
 	writetext RuinsOfAlphKabutoChamberScientistCrypticText
 	waitbutton
@@ -286,10 +318,6 @@ RuinsOfAlphKabutoChamberScientistHoleText:
 RuinsOfAlphKabutoChamberScientistTremorText:
 	text "That tremor was"
 	line "pretty scary!"
-
-	para "But I'm more"
-	line "concerned about"
-	cont "this wall here…"
 	done
 
 RuinsOfAlphKabutoChamberDescriptionText:
@@ -302,4 +330,10 @@ RuinsOfAlphKabutoChamberDescriptionText:
 
 RuinsOfAlphItemRoomDescriptionText:
 	text "Timeless Trove"
+	done
+
+DontBlameYou:
+	text "Don't blame you"
+	line "at all. They're"
+	cont "hard to train."
 	done

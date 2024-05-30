@@ -4,7 +4,7 @@ UnionCaveB1FNorth_MapScriptHeader:
 	def_callbacks
 
 	def_warp_events
-	warp_event  3, 11, RUINS_OF_ALPH_OUTSIDE, 8
+	warp_event  3, 11, RUINS_OF_ALPH_OUTSIDE, 5
 	warp_event 15, 23, UNION_CAVE_1F, 1
 
 	def_coord_events
@@ -14,11 +14,13 @@ UnionCaveB1FNorth_MapScriptHeader:
 	bg_event  8, 22, BGEVENT_ITEM + REVIVE, EVENT_UNION_CAVE_B1F_NORTH_HIDDEN_REVIVE
 
 	def_object_events
-	object_event  9, 22, SPRITE_HIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerHikerLeonard, -1
+	object_event  9, 22, SPRITE_HIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerHikerLeonard, -1
 	object_event 11, 14, SPRITE_FIREBREATHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerFirebreatherOtis, -1
 	object_event  4, 10, SPRITE_HIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerRuin_maniacPetry, -1
 	tmhmball_event  5, 22, TM_SWIFT, EVENT_UNION_CAVE_B1F_NORTH_TM_SWIFT
-	tmhmball_event  7, 10, TM_ROCK_SMASH, EVENT_UNION_CAVE_B1F_NORTH_X_DEFEND
+	tmhmball_event  7, 10, TM_ROCK_SMASH, EVENT_UNION_CAVE_B1F_NORTH_X_DEFEND ;brick break
+	pokemon_event  5, 10, RAMPARDOS, -1, -1, PAL_NPC_BLUE, RampardosText, -1
+	pokemon_event  6, 10, BASTIODON, -1, -1, PAL_NPC_BLUE, BastiodonText, -1
 	;POKEMON EVENT BASTIODON AND RAMPARDOS
 
 
@@ -87,7 +89,18 @@ RuinManiacPetryBeatenText:
 	cont "you got here."
 	done
 	
-
+RampardosText:
+	text "Wraaar!"
+	done
+	
+BastiodonText:
+	text "Munch..."
+	line "Munch..."
+	
+	para "It appears to"
+	line "be eating rocks."
+	done
+	
 
 
 

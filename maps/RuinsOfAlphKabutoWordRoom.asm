@@ -4,9 +4,10 @@ RuinsOfAlphKabutoWordRoom_MapScriptHeader:
 	def_callbacks
 
 	def_warp_events
-	warp_event  9,  5, RUINS_OF_ALPH_KABUTO_ITEM_ROOM, 3
-	warp_event 10,  5, RUINS_OF_ALPH_KABUTO_ITEM_ROOM, 4
-	warp_event 17, 11, RUINS_OF_ALPH_INNER_CHAMBER, 4
+	warp_event 16, 12, RUINS_OF_ALPH_KABUTO_CHAMBER, 3
+	warp_event 17, 12, RUINS_OF_ALPH_KABUTO_CHAMBER, 3
+	warp_event 2, 0, RUINS_OF_ALPH_KABUTO_ITEM_ROOM, 1
+	warp_event 3, 0, RUINS_OF_ALPH_KABUTO_ITEM_ROOM, 2
 
 	def_coord_events
 

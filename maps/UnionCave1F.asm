@@ -1,10 +1,10 @@
-UnionCave1F_MapScriptHeader:
+UnionCave1F_MapScriptHeader: ;todo add a heal
 	def_scene_scripts
 
 	def_callbacks
 
 	def_warp_events
-	warp_event  3,  3, UNION_CAVE_B1F_NORTH, 3
+	warp_event  3,  3, UNION_CAVE_B1F_NORTH, 2
 	warp_event  3, 45, UNION_CAVE_B1F_SOUTH, 1
 	warp_event 17, 43, ROUTE_33, 1
 
@@ -17,7 +17,7 @@ UnionCave1F_MapScriptHeader:
 
 	def_object_events
 	strengthboulder_event 12, 38
-	object_event  8, 31, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 5, GenericTrainerScientistLowell, -1
+	object_event  8, 31, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 5, GenericTrainerScientistLowell, -1
 	object_event  6, 17, SPRITE_FIREBREATHER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerFirebreatherRay, -1
 	object_event  6,  5, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerScientistDennett, -1
 	itemball_event  3, 41, ESCAPE_ROPE, 1, EVENT_UNION_CAVE_1F_GREAT_BALL
@@ -63,10 +63,9 @@ FirebreatherRayBeatenText:
 GenericTrainerScientistDennett:
 	generictrainer SCIENTIST, DENNETT, EVENT_BEAT_SCIENTIST_DENNETT, ScientistDennettSeenText, ScientistDennettBeatenText
 
-	text "The first step"
-	line "in mining is"
-	cont "blasting the"
-	cont "rocks."
+	text "Electrolysis is"
+	line "used to purify"
+	cont "ores."
 	done
 
 ScientistDennettSeenText:

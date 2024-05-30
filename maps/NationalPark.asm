@@ -22,7 +22,6 @@ NationalPark_MapScriptHeader:
 	object_event 16,  4, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_COMMAND, jumptextfaceplayer, NationalParkPokefanFText, -1
 	object_event 29, 40, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NationalParkTeacher1Script, -1
 	object_event 28,  6, SPRITE_GAMEBOY_KID, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NationalParkGameboyKidScript, -1
-	object_event 13, 41, SPRITE_SCHOOLGIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerSchoolgirlEliza, -1
 	object_event 12, 41, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerSchoolboyJohnny, -1
 	object_event 19, 41, SPRITE_POKEFAN_F, SPRITEMOVEDATA_WANDER, 2, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, NationalParkTeacher2Text, -1
 	pokemon_event 28, 40, PERSIAN, -1, -1, PAL_NPC_BROWN, NationalParkPersianText, -1
@@ -79,15 +78,7 @@ GenericTrainerBugManiacLou:
 	para "but I evolved into"
 	line "a Bug Maniac!"
 	done
-
-GenericTrainerSchoolgirlEliza:
-	generictrainer SCHOOLGIRL, ELIZA, EVENT_BEAT_SCHOOLGIRL_ELIZA, SchoolgirlElizaSeenText, SchoolgirlElizaBeatenText
-
-	text "I don't care!"
-	line "I still love"
-	cont "Oddish."
-	done
-
+	
 GenericTrainerSchoolboyJohnny:
 	generictrainer SCHOOLBOY, JOHNNY, EVENT_BEAT_SCHOOLBOY_JOHNNY, SchoolboyJohnnySeenText, SchoolboyJohnnyBeatenText
 
@@ -336,17 +327,6 @@ NationalParkTeacher1Text_GotQuickClaw:
 	para "Sometimes it will"
 	line "strike first"
 	cont "during battle."
-	done
-
-SchoolgirlElizaSeenText:
-	text "Oddish is just"
-	line "the cutest!"
-
-	para "Don't you agree?"
-	done
-
-SchoolgirlElizaBeatenText:
-	text "My poor Oddish…"
 	done
 
 SchoolboyJohnnySeenText:

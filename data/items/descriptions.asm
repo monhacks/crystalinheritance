@@ -1297,7 +1297,7 @@ SquirtBottleDesc:
 	db   "A bottle used for"
 	next "watering plants.@"
 
-UnownReportDescDesc:
+UnownReportDesc:
 	db   "Documents all"
 	next "Unown.@"
 

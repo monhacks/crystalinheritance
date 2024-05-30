@@ -135,19 +135,16 @@ ENDM
 	map_const ECRUTEAK_DESTINY_KNOT_HOUSE,                 4,  4 ; 16
 
 	newgroup                                                     ;  5 anarres town and surrounding
-;	map_const HOLLYS_HOLT, 
-;	map_const ANARRES_TOWN, 
-;	map_const HOLLYS_HOLT_CALM_COAST_GATE, 
-;	map_const MISTY_BASIN_B1F, 
-;	map_const MISTY_BASIN_B2F, 
-;	map_const ANARRES_DORMS, 
-;	map_const ANARRES_STOCKROOM, 
-;	map_const ANARRES_TOWER_1F,
-;	map_const ANARRES_TOWER_2F,
-;	map_const ANARRES_TOWER_3F,
-;	map_const ANARRES_CHARCOAL_KILN, 
-;	map_const ANARRES_HOUSE,  	
-;	map_const HOLLYS_HOLT_ANARRES_TOWN_GATE, 
+	map_const HOLLYS_HOLT, 								  17, 24 ;  1 forest
+	map_const ANARRES_TOWN,                               20,  9 ;  2 johto traditional
+	map_const MISTY_BASIN,                                10,  8 ;  3 cave 
+	map_const ANARRES_DORMS,                               4,  3 ;  4 johto house
+	map_const ANARRES_STOCKROOM,                           5,  4 ;  5 traditional hosue
+	map_const ANARRES_TOWER_1F,                            6,  6 ;  6 sprout tower
+	map_const ANARRES_TOWER_2F,                            6,  6 ;  7 sprout tower
+	map_const ANARRES_TOWER_3F,                            6,  6 ;  8 sprout tower
+	map_const ANARRES_CHARCOAL_KILN,                       5,  4 ;  9 shares map with charcoal kiln
+	map_const ANARRES_HOUSE,  	                           4,  4 ;  10 traditional house
 
 
 	newgroup                                                     ;  6 ;gauldenrod and surrounding

@@ -103,23 +103,13 @@ ProfOaksAide1NoRoomText:
 
 ProfOaksAide1NestBallText:
 	text "<PLAYER> received"
-	line "5 Nest Balls."
+	line "Exp. Share."
 	done
 
 ProfOaksAide1ExplainText:
-	text "Those Nest Balls"
-	line "are like Apricorn"
-
-	para "Balls, but they're"
-	line "made by Silph Co."
-	cont "in Kanto."
-
-	para "They work best"
-	line "on low-leveled"
-	cont "#mon."
-
-	para "Use them to com-"
-	line "plete the #dex!"
+	text "Use that EXP"
+	line "share to level"
+	cont "up weak #mon."
 	done
 
 IlexForestAzaleaGateGrannyScript: ;CF THE ROUTE34GATE TEACHER

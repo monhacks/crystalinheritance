@@ -9,7 +9,7 @@ KurtsHouse_MapScriptHeader: ; todo add the ability to make apricorns here at the
 	warp_event  4,  7, AZALEA_TOWN, 4
 	
 	def_coord_events
-	coord_event 7, 2, 0, KurtTrigger1 ; you have to hit this square due to where the pokemon is
+	coord_event 7, 2, 1, KurtTrigger1 ; you have to hit this square due to where the pokemon is
 
 	def_bg_events;done
 ;	bg_event  6,  1, BGEVENT_JUMPSTD, radio2 ; this is fine for later
@@ -24,7 +24,6 @@ KurtsHouse_MapScriptHeader: ; todo add the ability to make apricorns here at the
 
 	def_object_events
 	object_event  6,  3, SPRITE_KURT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KurtScript, EVENT_KURTS_HOUSE_KURT_0 ;
-	object_event  6,  3, SPRITE_KURT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KurtScript, EVENT_KURTS_HOUSE_KURT_2 ;
 	pokemon_event  8,  1, SHUCKLE, -1, -1, PAL_NPC_RED, KurtsHouseShuckleText, -1
 ; kurt is at the celebi shrine if you visit later
 
@@ -52,7 +51,7 @@ KurtEventScript:
 	setflag ENGINE_POKEGEAR
 	setflag ENGINE_PHONE_CARD
 	addcellnum PHONE_MOM
-	setscene $1
+	setscene $0
 	setevent EVENT_KURTS_HOUSE_KURT_0 ; changed from mom
 	clearevent EVENT_PLAYERS_HOUSE_KURT_2 ; may not need this line? 
 	promptbutton
@@ -162,23 +161,10 @@ KurtOutroText:
 
 KurtScript:
 	faceplayer
-	opentext
-	checkevent EVENT_GOT_A_POKEMON
-	iftrue_jumpopenedtext KurtNeedsAlphText
 	jumpthisopenedtext
 
 	text "Where is the "
 	line "charcoal family?"
-	done
-
-KurtNeedsAlphText:
-	text "I need samples"
-	line "from the Ruins"
-	cont "of Alph."
-	
-	para "Can you get"
-	line "the UNOWN"
-	cont "Report for me?"
 	done
 	
 KurtsHouseShuckleText:

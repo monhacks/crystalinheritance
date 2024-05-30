@@ -181,8 +181,8 @@ OshawottEvosAttacks:
 	db 0 ; no more level-up moves
 	
 DewottEvosAttacks:
-	db EVOLVE_LEVEL, 34, DECIDUEYE
-	db EVOLVE_ITEM, WATER_STONE, H__DECIDUEYE
+	db EVOLVE_LEVEL, 34, SAMUROTT
+	db EVOLVE_ITEM, WATER_STONE, H__SAMUROTT
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, LEER

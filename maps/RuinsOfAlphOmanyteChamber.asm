@@ -109,9 +109,9 @@ MapRuinsofAlphOmanyteChamberSignpost4Script:
 	endtext
 
 RuinsOfAlphOmanyteChamberDescriptionText:
-	text "Its tones have"
-	line "a resonance with"
+	text "Its tones"
+	line "resonance with"
 	
-	para "with incipient"
+	para "incipient"
 	line "raindrops."
 	done

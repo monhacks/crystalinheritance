@@ -327,4 +327,14 @@ ENDM
 	map_attributes CianwoodCityPhotoStudio, CIANWOOD_CITY_PHOTO_STUDIO, $0, 0
 	map_attributes CianwoodLugiaSpeechHouse, CIANWOOD_LUGIA_SPEECH_HOUSE, $0, 0
 	map_attributes MoveManiacsHouse, MOVE_MANIACS_HOUSE, $0, 0
-
+	map_attributes HollysHolt, HOLLYS_HOLT, $35, 0 ; start of anarres group
+	map_attributes AnarresTown, ANARRES_TOWN, $5, 0 
+	map_attributes MistyBasin, MISTY_BASIN, $9, 0
+	map_attributes AnarresDorms, ANARRES_DORMS, $0, 0
+	map_attributes AnarresStockroom, ANARRES_STOCKROOM, $0, 0
+	map_attributes AnarresTower1F, ANARRES_TOWER_1F, $0, 0
+	map_attributes AnarresTower2F, ANARRES_TOWER_2F, $0, 0	
+	map_attributes AnarresTower3F, ANARRES_TOWER_3F, $0, 0
+	map_attributes AnarresCharcoalKiln, ANARRES_CHARCOAL_KILN, $0, 0
+	map_attributes AnarresHouse, ANARRES_HOUSE, $0, 0
+	

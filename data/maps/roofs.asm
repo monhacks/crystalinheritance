@@ -7,7 +7,7 @@ MapGroupRoofs:
 	db  2 ; group 2 (Mahogany Town)
 	db -1 ; group 3
 	db  1 ; group 4 (Ecruteak City)
-	db  2 ; group 5 (Blackthorn City)
+	db  2 ; group 5 Anarres (from blackthorn)
 	db -1 ; group 6
 	db -1 ; group 7
 	db  2 ; group 8 (Azalea Town)

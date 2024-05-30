@@ -33,7 +33,6 @@ Route36_MapScriptHeader:
 	object_event 57,  9, SPRITE_CUTE_GIRL, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 2, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route36LassScript, -1
 	object_event 48,  9, SPRITE_FAT_GUY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, Route36RockSmashGuyScript, -1
 	fruittree_event 25,  4, FRUITTREE_ROUTE_36, RAWST_BERRY, PAL_NPC_BLUE
-	object_event 50,  5, SPRITE_SCHOOLGIRL, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerSchoolgirlMolly, -1
 
 	object_const_def
 	const ROUTE36_WEIRD_TREE
@@ -382,14 +381,7 @@ GenericTrainerPsychicMark:
 	para "what my opponent"
 	line "was thinking."
 	done
-
-GenericTrainerSchoolgirlMolly:
-	generictrainer SCHOOLGIRL, MOLLY, EVENT_BEAT_SCHOOLGIRL_MOLLY, SchoolgirlMollySeenText, SchoolgirlMollyBeatenText
-
-	text "I still have a"
-	line "lot to learn."
-	done
-
+	
 ArthurScript:
 	faceplayer
 	opentext
@@ -590,16 +582,6 @@ PsychicMarkSeenText:
 
 PsychicMarkBeatenText:
 	text "I misread you!"
-	done
-
-SchoolgirlMollySeenText:
-	text "Mr.Earl taught me"
-	line "how to battle with"
-	cont "#mon!"
-	done
-
-SchoolgirlMollyBeatenText:
-	text "My studying…"
 	done
 
 SchoolboyAlan1SeenText:

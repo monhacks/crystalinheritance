@@ -3,10 +3,10 @@ SlowpokeWellB1F_MapScriptHeader:
 
 	def_callbacks
 
-	def_warp_events
+	def_warp_events ;todo not warping me to b1f
 	warp_event 17, 15, SLOWPOKE_WELL_ENTRANCE, 2
 	warp_event  7, 11, SLOWPOKE_WELL_B2F, 1
-	warp_event 13,  2, UNION_CAVE_B1F_SOUTH, 1
+	warp_event 13,  1, UNION_CAVE_B1F_SOUTH, 3
 
 	def_coord_events
 
@@ -23,6 +23,8 @@ SlowpokeWellB1F_MapScriptHeader:
 SlowpokeWellB1FGuardScript:
 	faceplayer
 	opentext
+	checkevent SLOWPOKE_WELL_MOVED_ASIDE
+	iftrue .MovedAside
 	checkevent EVENT_LOGGERS_ILEX_FOREST
 	iftrue .MovesAside
 	writetext SlowpokeWellImGuardingText
@@ -33,6 +35,11 @@ SlowpokeWellB1FGuardScript:
 	writetext SlowpokeWellMovesAsideText
 	applymovement SLOWPOKE_WELL_B1F_SCHOOLBOY, MovesAsideMovement
 	setevent SLOWPOKE_WELL_MOVED_ASIDE
+	closetext
+	end
+
+.MovedAside:
+	writetext SlowpokeWellMovesAsideText
 	closetext
 	end
 
@@ -57,3 +64,4 @@ SlowpokeWellMovesAsideText:
 	para "That's cool. If"
 	line "you want to pass,"
 	cont "you can."
+	done

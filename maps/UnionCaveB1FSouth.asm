@@ -16,7 +16,7 @@ UnionCaveB1FSouth_MapScriptHeader:
 	bg_event  4, 30, BGEVENT_ITEM + FULL_RESTORE, EVENT_UNION_CAVE_B1F_SOUTH_HIDDEN_FULL_RESTORE
 
 	def_object_events
-	object_event 11, 27, SPRITE_HIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerHikerParry, -1 ;TODO TEXT ON THESE
+	object_event 11, 27, SPRITE_HIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerHikerParry, -1 ;TODO TEXT ON THESE
 	object_event 12, 10, SPRITE_HIKER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerHikerRussell, -1
 	object_event 11,  4, SPRITE_HIKER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerHikerPhillip, -1
 	smashrock_event 11, 14
@@ -27,7 +27,7 @@ UnionCaveB1FSouth_MapScriptHeader:
 
 
 GenericTrainerHikerParry:
-	generictrainer HIKER, PHILLIP, EVENT_BEAT_HIKER_PARRY, HikerParrySeenText, HikerParryBeatenText
+	generictrainer HIKER, PARRY1, EVENT_BEAT_HIKER_PARRY, HikerParrySeenText, HikerParryBeatenText
 
 	text "The first step"
 	line "in mining is"
@@ -42,13 +42,13 @@ HikerParrySeenText:
 	done
 
 HikerParryBeatenText:
-	text "Dynamite!"
+	text "Shocking!"
 	done
 
 
 
 GenericTrainerHikerRussell:
-	generictrainer HIKER, PHILLIP, EVENT_BEAT_HIKER_RUSSELL, HikerRussellSeenText, HikerRussellBeatenText
+	generictrainer HIKER, RUSSELL, EVENT_BEAT_HIKER_RUSSELL, HikerRussellSeenText, HikerRussellBeatenText
 
 	text "I crush and"
 	line "grind rocks."
