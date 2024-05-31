@@ -20,7 +20,7 @@ Marts:
 	dw MahoganyMart2
 	dw BlackthornMart
 	dw IndigoPlateauMart
-	dw ViridianMart
+	dw AnarresMart
 	dw PewterMart
 	dw MtMoonMart
 	dw CeruleanMart
@@ -281,18 +281,18 @@ IndigoPlateauMart:
 	db FULL_HEAL
 	db -1
 
-ViridianMart:
+AnarresMart:
 	db 11 ; # items
-	db ULTRA_BALL
-	db NET_BALL
-	db HYPER_POTION
-	db ANTIDOTE
-	db PARALYZEHEAL
-	db AWAKENING
-	db BURN_HEAL
-	db FULL_HEAL
-	db MAX_REPEL
-	db REVIVE
+	db CHERI_BERRY
+	db CHESTO_BERRY
+	db PECHA_BERRY
+	db ENERGYPOWDER
+	db HEAL_POWDER
+	db REVIVAL_HERB
+	db ORAN_BERRY 
+	db LUMINOUSMOSS
+	db WHITE_HERB
+	db MULCH
 	db FLOWER_MAIL
 	db -1
 

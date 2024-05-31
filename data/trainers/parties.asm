@@ -1086,10 +1086,9 @@ Rival1Group:
 	db "<RIVAL>@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_EVS
 	; party
-	db 14, GASTLY, NO_ITEM, 36
-	db 16, ZUBAT, NO_ITEM, 36
-	db 15, GEODUDE, NO_ITEM, 36
-	db 18, BAYLEEF, ORAN_BERRY, 36
+	db 10, GROWLITHE, NO_ITEM, 16
+	db 12, MURKROW, NO_ITEM, 16
+	db 14, ROWLET, ORAN_BERRY, 16
 	db -1 ; end
 
 ; ================
@@ -1098,10 +1097,9 @@ Rival1Group:
 	db "<RIVAL>@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_EVS
 	; party
-	db 14, GASTLY, NO_ITEM, 36
-	db 16, ZUBAT, NO_ITEM, 36
-	db 15, GEODUDE, NO_ITEM, 36
-	db 18, QUILAVA, ORAN_BERRY, 36
+	db 10, SLOWPOKE, NO_ITEM, 16
+	db 12, YANMA, NO_ITEM, 16
+	db 14, QUILAVA, ORAN_BERRY, 16
 	db -1 ; end
 
 ; ================
@@ -1110,10 +1108,9 @@ Rival1Group:
 	db "<RIVAL>@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_EVS
 	; party
-	db 14, GASTLY, NO_ITEM, 36
-	db 16, ZUBAT, NO_ITEM, 36
-	db 15, GEODUDE, NO_ITEM, 36
-	db 18, CROCONAW, ORAN_BERRY, 36
+	db 12, TANGELA, NO_ITEM, 16
+	db  8, TOGETIC, NO_ITEM, 16
+	db 14, OSHAWOTT, ORAN_BERRY, 16
 	db -1 ; end
 
 ; ================

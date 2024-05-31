@@ -1,6 +1,4 @@
 SECTION "Special Map Blockdata", ROMX
-
-;CherrygrovePokeCenter1F_BlockData:
 VioletPokeCenter1F_BlockData:
 Route32PokeCenter1F_BlockData:
 AzaleaPokeCenter1F_BlockData:
@@ -15,7 +13,6 @@ VioletMart_BlockData:
 AzaleaMart_BlockData:
 EcruteakMart_BlockData:
 OlivineMart_BlockData:
-
 GenericMart_BlockData:: ; used by tilesets/palettes.asm:LoadSpecialMapPalette
 	INCBIN "maps/Mart.ablk.lz"
 
@@ -73,6 +70,7 @@ EcruteakDestinyKnotHouse_BlockData:
 VioletNicknameSpeechHouse_BlockData:
 VioletOnixTradeHouse_BlockData:
 ValeriesHouse_BlockData:
+AnarresHouse_BlockData:
 	INCBIN "maps/TraditionalHouse.ablk.lz"
 
 SECTION "HiddenTreeGrotto_BlockData", ROMX
@@ -196,6 +194,10 @@ AzaleaTownRaining_BlockData:
 SECTION "CharcoalKiln_BlockData", ROMX
 CharcoalKiln_BlockData:
 	INCBIN "maps/CharcoalKiln.ablk.lz"
+
+SECTION "AnarresCharcoalKiln_BlockData", ROMX
+AnarresCharcoalKiln_BlockData:
+	INCBIN "maps/AnarresCharcoalKiln.ablk.lz"
 
 SECTION "KurtsHouse_BlockData", ROMX
 KurtsHouse_BlockData:
@@ -614,3 +616,35 @@ Route43_BlockData:
 SECTION "Route43Raining_BlockData", ROMX
 Route43Raining_BlockData:
 	INCBIN "maps/Route43Raining.ablk.lz"
+
+SECTION "HollysHolt_BlockData", ROMX
+HollysHolt_BlockData:
+	INCBIN "maps/HollysHolt.ablk.lz"
+	
+SECTION "AnarresTown_BlockData", ROMX
+AnarresTown_BlockData:
+	INCBIN "maps/AnarresTown.ablk.lz"
+
+SECTION "MistyBasin_BlockData", ROMX
+MistyBasin_BlockData:
+	INCBIN "maps/MistyBasin.ablk.lz"
+
+SECTION "AnarresDorms_BlockData", ROMX
+AnarresDorms_BlockData:
+	INCBIN "maps/AnarresDorms.ablk.lz"
+
+SECTION "AnarresStockroom_BlockData", ROMX
+AnarresStockroom_BlockData:
+	INCBIN "maps/AnarresStockroom.ablk.lz"
+	
+SECTION "AnarresTower1F_BlockData", ROMX
+AnarresTower1F_BlockData:
+	INCBIN "maps/AnarresTower1F.ablk.lz"
+	
+SECTION "AnarresTower2F_BlockData", ROMX
+AnarresTower2F_BlockData:
+	INCBIN "maps/AnarresTower2F.ablk.lz"
+	
+SECTION "AnarresTower3F_BlockData", ROMX
+AnarresTower3F_BlockData:
+	INCBIN "maps/AnarresTower3F.ablk.lz"

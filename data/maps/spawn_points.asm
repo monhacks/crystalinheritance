@@ -8,9 +8,9 @@ SpawnPoints:
 ; entries correspond to SPAWN_* constants, ALSO USED IN CONSTANTS/MAP_DATA_CONSTANTS
 	table_width 4, SpawnPoints
 
-	spawn KURTS_HOUSE,                 7,  1 ; change to kurt's house, probably? And 
+	spawn KURTS_HOUSE,                 7,  1 ; 
 
-;	spawn PALLET_TOWN,                 5,  6;appear to be pokemon centers
+	spawn ANARRES_TOWN,               17, 10 ;
 ;	spawn VIRIDIAN_CITY,              23, 26
 ;	spawn PEWTER_CITY,                13, 26
 ;	spawn ROUTE_3,                    61,  4
@@ -25,7 +25,7 @@ SpawnPoints:
 ;	spawn CINNABAR_ISLAND,            11, 16
 ;	spawn INDIGO_PLATEAU,             11,  6
 
-;	spawn NEW_BARK_TOWN,              15,  6 ; these are pokemon centers
+;	spawn NEW_BARK_TOWN,              15,  6 ; these are in front of pokemon centers
 ;	spawn CHERRYGROVE_CITY,           29,  4
 	spawn VIOLET_CITY,                31, 30
 	spawn ROUTE_32,                   11, 74

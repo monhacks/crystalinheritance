@@ -32,6 +32,7 @@ IlexForest_MapScriptHeader:
 	pokemon_event  9, 27, SHUCKLE, -1, -1, PAL_NPC_RED, IlexForestShuckleText, EVENT_LOGGERS_ILEX_FOREST
 	pokemon_event 10, 27, SCIZOR, -1, -1, PAL_NPC_RED, IlexForestScizorText, EVENT_LOGGERS_ILEX_FOREST
 	object_event 10, 21, SPRITE_CELEBI, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IlexForestCelebiScript, EVENT_KURTS_HOUSE_KURT_0 ;stays disappeared
+	object_event  4, 26, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IlexForestRivalScript, EVENT_KURTS_HOUSE_KURT_0 ;stays disappeared
 	object_event 25, 24, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IlexHealerScript, -1
 	object_event  5, 35, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBug_catcherWade, -1 
 	object_event 13, 36, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerYoungsterJoey, -1 
@@ -53,7 +54,7 @@ IlexForest_MapScriptHeader:
 	const ILEX_SHUCKLE
 	const ILEX_SCIZOR 
 	const ILEX_CELEBI
-
+	const ILEX_RIVAL
 
 Callback_IlexForest_Kurt:
 	checkevent EVENT_LOGGERS_ILEX_FOREST
@@ -499,7 +500,74 @@ IlexForestCelebiEventScript:
 	promptbutton
 	turnobject ILEX_FOREST_KURT, UP
 	writetext InsertingGSBallText
+	closetext ; start to appear celebi 
+	special Special_FadeOutMusic
+	pause 15
+	playmusic MUSIC_RIVAL_ENCOUNTER
+	appear ILEX_RIVAL
+	applymovement ILEX_RIVAL, IlexRivalWalksToShrine
+	turnobject PLAYER, DOWN
+	turnobject ILEX_FOREST_KURT, DOWN
+	showemote EMOTE_QUESTION, ILEX_RIVAL, 15
+	opentext
+	writetext IlexRivalWhatDoing
 	closetext
+	applymovement ILEX_FOREST_KURT, KurtMovesRival
+	opentext
+	writetext KurtStayOutOfThis
+	closetext
+	showemote EMOTE_SHOCK, ILEX_RIVAL, 15	
+	applymovement ILEX_RIVAL, RivalWalksToYou
+	opentext
+	writetext RivalRespondsToKurt
+	closetext
+	checkevent EVENT_GOT_OSHAWOTT
+	iftrue .Oshawott
+	checkevent EVENT_GOT_ROWLET
+	iftrue .Rowlet
+	winlosstext IlexForestWinText, IlexForestLossText
+	setlasttalked ILEX_RIVAL
+	loadtrainer RIVAL1, RIVAL1_6 ; _6 OR _3?
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	sjump .AfterBattle
+
+.Oshawott:
+	winlosstext IlexForestWinText, IlexForestLossText
+	setlasttalked ILEX_RIVAL
+	loadtrainer RIVAL1, RIVAL1_4
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	sjump .AfterBattle
+
+.Rowlet:
+	winlosstext IlexForestWinText, IlexForestLossText
+	setlasttalked ILEX_RIVAL
+	loadtrainer RIVAL1, RIVAL1_5
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	sjump .AfterBattle
+
+.AfterBattle:
+	setscene $0 ; need to put it here?
+	special DeleteSavedMusic
+	playmusic MUSIC_RIVAL_AFTER
+	opentext
+	writetext RivalLeavesHumiliated
+	closetext
+	applymovement ILEX_RIVAL, IlexRivalLeavesMovement
+	disappear ILEX_RIVAL
+	waitsfx
+	playmapmusic
+	turnobject ILEX_FOREST_KURT, DOWN
+	opentext
+	writetext IlexKurtBackToIt
+	promptbutton
+	closetext
+	turnobject ILEX_FOREST_KURT, UP
 	appear ILEX_CELEBI
 	applymovement ILEX_CELEBI, IlexCelebiMovement
 	pause 50
@@ -518,7 +586,7 @@ IlexForestCelebiEventScript:
 	special FadeOutPalettes
 	waitsfx
 	warp KURTS_HOUSE, 15, 6
-	setscene $0
+
 	end
 
 IlexForestShrineScript:
@@ -601,7 +669,15 @@ IlexCelebiMovement:
 	step_down
 	step_down
 	step_end ;should end right on the shrine
-	
+
+IlexRivalWalksToShrine:
+	step_right
+	step_right
+	step_right
+	step_right
+	step_end
+
+
 WhatIsNaturalText:
 	text "Celebi: An"
 	line "unnatural inv-"
@@ -620,13 +696,90 @@ YesTimeTravelText0:
 	done
 
 IlexForestCelebiScript:
-	text "How did you"
-	line "get here?"
-	done
-	
+	end
+
+IlexForestRivalScript:
+	end
 	
 PlayerMovesToShrine2:
 	step_right
 	step_up
 	step_right
 	step_end	
+
+IlexRivalWhatDoing:
+	text "Hey, what are"
+	line "you doing?"
+	done
+
+KurtMovesRival:
+	step_down
+	turn_head_left
+	step_end
+
+KurtStayOutOfThis:
+	text "Stay out of this."
+	
+	para "We're going to"
+	line "get rid of"
+	cont "steel types. It"
+	cont "is unnatural to"
+	cont "destroy so many"
+	cont "trees!"
+	done
+	
+RivalRespondsToKurt:
+	text "Eh? Silph's tech"
+	line "is the only way"
+	cont "out of here."
+
+	para "I won't let you"
+	line "do that!"
+	done
+
+RivalWalksToYou:
+	step_up
+	turn_head_right
+	step_end
+
+IlexForestWinText:
+	text "I need better"
+	line "training..."
+	done
+
+IlexForestLossText:
+	text "Proves you just"
+	line "can't adapt."
+	done
+
+RivalLeavesHumiliated:
+	text "Hmph."
+	
+	para "You might have"
+	line "beaten me this"
+	cont "time, but I'm"
+	cont "only getting str-"
+	cont "onger. The next"
+	done
+	
+IlexRivalLeavesMovement:
+	step_down
+	step_left
+	step_left
+	step_left
+	step_left
+	step_left
+	step_left
+	step_end
+
+IlexKurtBackToIt:
+	text "Now that he is"
+	line "gone, let's go"
+	cont "back to the"
+	cont "shrine."
+	
+	para "Celebi!"
+	line "Are you there?"
+	done
+	
+

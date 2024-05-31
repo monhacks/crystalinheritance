@@ -36,9 +36,18 @@ SECTION "Battle Tower Scripts", ROMX
 
 
 
-SECTION "New Bark Scripts", ROMX
+SECTION "New Bark Scripts", ROMX ; used to be new bark scripts...?
 
-
+INCLUDE "maps/HollysHolt.asm"
+INCLUDE "maps/AnarresTown.asm"
+INCLUDE "maps/MistyBasin.asm"
+INCLUDE "maps/AnarresHouse.asm"
+INCLUDE "maps/AnarresTower1F.asm"
+INCLUDE "maps/AnarresTower2F.asm"
+INCLUDE "maps/AnarresTower3F.asm"
+INCLUDE "maps/AnarresDorms.asm"
+INCLUDE "maps/AnarresStockroom.asm"
+INCLUDE "maps/AnarresCharcoalKiln.asm"
 
 SECTION "New Bark Scripts 2", ROMX
 

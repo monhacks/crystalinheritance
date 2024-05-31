@@ -1116,6 +1116,11 @@ wWillsRoomSceneID:: db
 wWiseTriosRoomSceneID:: db
 wYellowForestSceneID:: db
 wAzaleaPokecenter1FSceneID:: db
+wHollysHoltSceneID:: db
+wMistyBasinSceneID:: db
+wAnarresHouseSceneID:: db
+
+
 
 ; fight counts
 wJackFightCount::    db

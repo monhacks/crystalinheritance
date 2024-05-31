@@ -1,15 +1,15 @@
 KurtsHouse_MapScriptHeader: ; todo add the ability to make apricorns here at the bench
 	def_scene_scripts
+	scene_script KurtsHouseIntroTrigger
 
 	def_callbacks
-
 
 	def_warp_events
 	warp_event  3,  7, AZALEA_TOWN, 4
 	warp_event  4,  7, AZALEA_TOWN, 4
 	
 	def_coord_events
-	coord_event 7, 2, 1, KurtTrigger1 ; you have to hit this square due to where the pokemon is
+;	coord_event 7, 2, 1, KurtTrigger1 ; you have to hit this square due to where the pokemon is. going to try to rewrite with a scene script instead?
 
 	def_bg_events;done
 ;	bg_event  6,  1, BGEVENT_JUMPSTD, radio2 ; this is fine for later
@@ -23,26 +23,35 @@ KurtsHouse_MapScriptHeader: ; todo add the ability to make apricorns here at the
 	bg_event  4,  1, BGEVENT_JUMPTEXT, KurtsHouseCelebiStatueText
 
 	def_object_events
-	object_event  6,  3, SPRITE_KURT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KurtScript, EVENT_KURTS_HOUSE_KURT_0 ;
+	object_event  6,  3, SPRITE_KURT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KurtHouseScript, EVENT_KURTS_HOUSE_KURT_0 ;
 	pokemon_event  8,  1, SHUCKLE, -1, -1, PAL_NPC_RED, KurtsHouseShuckleText, -1
 ; kurt is at the celebi shrine if you visit later
 
 	object_const_def
 	const KURTSHOUSE_KURT
 	
-KurtTrigger1: ; when you walk to 7, 2
+KurtsHouseIntroTrigger:
+	sdefer KurtsHouseScript1
+	end
+	
+
+KurtsHouseScript1:
 	playmusic MUSIC_PROF_OAK
-	turnobject KURTSHOUSE_KURT, UP
+	applymovement PLAYER, .kurts_house_player_moves_down
 	applymovement KURTSHOUSE_KURT, .kurt_walks_to_you
-	turnobject PLAYER, LEFT
-	sjump KurtEventScript
+	sjump KurtHouseEventScript
+
+.kurts_house_player_moves_down:
+	step_down
+	turn_head_left
+	step_end
 
 .kurt_walks_to_you:
 	step_up
 	turn_head_right
 	step_end
 
-KurtEventScript:
+KurtHouseEventScript:
 	opentext
 	writetext KurtIntroText
 	promptbutton
@@ -51,7 +60,7 @@ KurtEventScript:
 	setflag ENGINE_POKEGEAR
 	setflag ENGINE_PHONE_CARD
 	addcellnum PHONE_MOM
-	setscene $0
+	setscene $1 ; this should keep the event from playing in a loop?
 	setevent EVENT_KURTS_HOUSE_KURT_0 ; changed from mom
 	clearevent EVENT_PLAYERS_HOUSE_KURT_2 ; may not need this line? 
 	promptbutton
@@ -159,10 +168,15 @@ KurtOutroText:
 	cont "them so long?"
 	done
 
-KurtScript:
+KurtHouseScript:
 	faceplayer
-	jumpthisopenedtext
+	opentext
+	writetext WhereIsCharcoalFamily
+	promptbutton
+	closetext
+	end
 
+WhereIsCharcoalFamily:
 	text "Where is the "
 	line "charcoal family?"
 	done
@@ -264,7 +278,6 @@ endr
 	giveitem MULCH, 99
 	giveitem MINT_LEAF, 99
 	giveitem ODD_SOUVENIR, 10
-	; all decorations except Diploma
 for x, EVENT_DECO_BED_1, EVENT_DECO_BIG_LAPRAS_DOLL + 1
 	setevent x
 endr
@@ -392,47 +405,9 @@ FillPokedex:
 
 
 ApricornBenchScript:
-;Kurt1: ; this is the bench script
-;	faceplayer
 	opentext
 	writetext CheckForApricornsText
 	promptbutton
-;	checkevent EVENT_KURT_GAVE_YOU_APRICORN_BOX
-;	iftrue .GotApricornBox
-;	checkevent EVENT_CLEARED_SLOWPOKE_WELL
-;	iftrue .ClearedSlowpokeWell
-;	writetext KurtsHouseKurtMakingBallsMustWaitText
-;	waitbutton
-;	closetext
-;	special Special_FadeOutMusic
-;	setevent EVENT_AZALEA_TOWN_SLOWPOKETAIL_ROCKET
-;	readvar VAR_FACING
-;	ifequal UP, .RunAround
-;	turnobject PLAYER, DOWN
-;	playsound SFX_FLY
-;	applymovement KURTSHOUSE_KURT1, KurtsHouseKurtExitHouseMovement
-;	playsound SFX_EXIT_BUILDING
-;	disappear KURTSHOUSE_KURT1
-;	waitsfx
-;	special RestartMapMusic
-;	end
-;
-;.RunAround:
-;	turnobject PLAYER, DOWN
-;	playsound SFX_FLY
-;	applymovement KURTSHOUSE_KURT1, KurtsHouseKurtGoAroundPlayerThenExitHouseMovement
-;	playsound SFX_EXIT_BUILDING
-;	disappear KURTSHOUSE_KURT1
-;	waitsfx
-;	special RestartMapMusic
-;	end
-;
-;.ClearedSlowpokeWell:
-;	writetext KurtsHouseKurtHonoredToMakeBallsText
-;	promptbutton
-;	verbosegivekeyitem APRICORN_BOX
-;	setevent EVENT_KURT_GAVE_YOU_APRICORN_BOX
-;.GotApricornBox:
 	checkevent EVENT_GAVE_KURT_RED_APRICORN
 	iftrue .GiveLevelBall
 	checkevent EVENT_GAVE_KURT_BLU_APRICORN
@@ -447,24 +422,9 @@ ApricornBenchScript:
 	iftrue .GiveHeavyBall
 	checkevent EVENT_GAVE_KURT_PNK_APRICORN
 	iftrue .GiveLoveBall
-;	checkevent EVENT_CAN_GIVE_GS_BALL_TO_KURT
-;	iftrue .CanGiveGSBallToKurt
-;.NoGSBall:
-;	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
-;	iftrue .CheckApricorns
-;	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_3
-;	iftrue .CheckApricorns
-;	writetext KurtsHouseKurtBallsFromApricornsText
-;	waitbutton
-;.CheckApricorns:
 	callasm .CheckHaveAnyApricorns
 	iftrue .AskApricorn
 	jumpopenedtext KurtsHouseKurtThatsALetdownText
-;	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
-;	iftrue_jumpopenedtext KurtsHouseKurtTurnedOutGreatText
-;	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_3
-;	iftrue_jumpopenedtext KurtsHouseKurtBallsFromApricornsText
-;	endtext ;maybe have to keep this?
 
 .CheckHaveAnyApricorns:
 	xor a
@@ -480,7 +440,6 @@ endr
 .AskApricorn:
 	writetext KurtsHouseKurtAskYouHaveAnApricornText
 	promptbutton
-;	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_3
 	special Special_SelectApricornForKurt
 	iffalse_jumpopenedtext KurtsHouseKurtThatsALetdownText
 	ifequal BLU_APRICORN, .Blu
@@ -516,32 +475,15 @@ endr
 .Pnk:
 	setevent EVENT_GAVE_KURT_PNK_APRICORN
 .GaveKurtApricorns:
-;	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 	writetext KurtsHouseKurtGetStartedText
 	waitbutton
 	closetext
-;	follow KURTSHOUSE_KURT1, PLAYER
-;	applymovement KURTSHOUSE_KURT1, KurtsHouseFollowKurt_MovementData
-;	stopfollow
-;	pause 15
-;	turnobject KURTSHOUSE_KURT1, DOWN
-;	showtext KurtsHouseKurtItWillTakeADayText
-;	applymovement PLAYER, KurtsHouseStepAwayFromKurt_MovementData
-;	special Special_FadeBlackQuickly
-;	special Special_ReloadSpritesNoPalettes
-;	playsound SFX_ENTER_DOOR
-;	waitsfx
-;	pause 35
-;	warpfacing UP, KURTS_HOUSE, 3, 3
 	sjump ApricornBenchScript;Kurt1
 
 .ThatTurnedOutGreat:
-;	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
 	jumpopenedtext KurtsHouseKurtTurnedOutGreatText
 
 .GiveLevelBall:
-;	checkflag ENGINE_KURT_MAKING_BALLS
-;	iftrue KurtMakingBallsScript
 	writetext KurtsHouseKurtJustFinishedYourBallText
 	promptbutton
 	verbosegiveitemvar LEVEL_BALL, VAR_KURT_APRICORNS
@@ -550,8 +492,6 @@ endr
 	sjump .ThatTurnedOutGreat
 
 .GiveLureBall:
-;	checkflag ENGINE_KURT_MAKING_BALLS
-;	iftrue KurtMakingBallsScript
 	writetext KurtsHouseKurtJustFinishedYourBallText
 	promptbutton
 	verbosegiveitemvar LURE_BALL, VAR_KURT_APRICORNS
@@ -560,8 +500,6 @@ endr
 	sjump .ThatTurnedOutGreat
 
 .GiveMoonBall:
-;	checkflag ENGINE_KURT_MAKING_BALLS
-;	iftrue KurtMakingBallsScript
 	writetext KurtsHouseKurtJustFinishedYourBallText
 	promptbutton
 	verbosegiveitemvar MOON_BALL, VAR_KURT_APRICORNS
@@ -570,8 +508,6 @@ endr
 	sjump .ThatTurnedOutGreat
 
 .GiveFriendBall:
-;	checkflag ENGINE_KURT_MAKING_BALLS
-;	iftrue KurtMakingBallsScript
 	writetext KurtsHouseKurtJustFinishedYourBallText
 	promptbutton
 	verbosegiveitemvar FRIEND_BALL, VAR_KURT_APRICORNS
@@ -580,8 +516,6 @@ endr
 	sjump .ThatTurnedOutGreat
 
 .GiveFastBall:
-;	checkflag ENGINE_KURT_MAKING_BALLS
-;	iftrue KurtMakingBallsScript
 	writetext KurtsHouseKurtJustFinishedYourBallText
 	promptbutton
 	verbosegiveitemvar FAST_BALL, VAR_KURT_APRICORNS
@@ -590,8 +524,6 @@ endr
 	sjump .ThatTurnedOutGreat
 
 .GiveHeavyBall:
-;	checkflag ENGINE_KURT_MAKING_BALLS
-;	iftrue KurtMakingBallsScript
 	writetext KurtsHouseKurtJustFinishedYourBallText
 	promptbutton
 	verbosegiveitemvar HEAVY_BALL, VAR_KURT_APRICORNS
@@ -600,8 +532,6 @@ endr
 	sjump .ThatTurnedOutGreat
 
 .GiveLoveBall:
-;	checkflag ENGINE_KURT_MAKING_BALLS
-;	iftrue KurtMakingBallsScript
 	writetext KurtsHouseKurtJustFinishedYourBallText
 	promptbutton
 	verbosegiveitemvar LOVE_BALL, VAR_KURT_APRICORNS
@@ -636,124 +566,3 @@ CheckForApricornsText:
 	text "Any apricorns"
 	line "in the bag?"
 	done
-
-;.CanGiveGSBallToKurt:
-;	checkevent EVENT_GAVE_GS_BALL_TO_KURT
-;	iftrue .GaveGSBallToKurt
-;	checkkeyitem GS_BALL
-;	iffalse .NoGSBall
-;	writetext KurtsHouseKurtWhatIsThatText
-;	waitbutton
-;	closetext
-;	setevent EVENT_GAVE_GS_BALL_TO_KURT
-;	takekeyitem GS_BALL
-;	setflag ENGINE_KURT_MAKING_BALLS
-;	end
-;
-;.GaveGSBallToKurt:
-;	checkflag ENGINE_KURT_MAKING_BALLS
-;	iffalse .NotMakingBalls
-;	writetext KurtsHouseKurtImCheckingItNowText
-;	waitbutton
-;	jumpopenedtext KurtsHouseKurtAhHaISeeText
-;
-;.NotMakingBalls:
-;	writetext KurtsHouseKurtThisBallStartedToShakeText
-;	waitbutton
-;	closetext
-;	setevent EVENT_FOREST_IS_RESTLESS
-;	clearevent EVENT_CAN_GIVE_GS_BALL_TO_KURT
-;	clearevent EVENT_GAVE_GS_BALL_TO_KURT
-;	special Special_FadeOutMusic
-;	pause 20
-;	showemote EMOTE_SHOCK, KURTSHOUSE_KURT1, 30
-;	readvar VAR_FACING
-;	ifequal UP, .GSBallRunAround
-;	turnobject PLAYER, DOWN
-;	playsound SFX_FLY
-;	applymovement KURTSHOUSE_KURT1, KurtsHouseKurtExitHouseMovement
-;	sjump .KurtHasLeftTheBuilding
-;
-;.GSBallRunAround:
-;	turnobject PLAYER, DOWN
-;	playsound SFX_FLY
-;	applymovement KURTSHOUSE_KURT1, KurtsHouseKurtGoAroundPlayerThenExitHouseMovement
-;.KurtHasLeftTheBuilding:
-;	playsound SFX_EXIT_BUILDING
-;	disappear KURTSHOUSE_KURT1
-;	clearevent EVENT_AZALEA_TOWN_KURT
-;	waitsfx
-;	special RestartMapMusic
-;	setmapscene AZALEA_TOWN, $2
-;	end
-;
-;Kurt2:
-;	faceplayer
-;	opentext
-;	checkevent EVENT_GAVE_GS_BALL_TO_KURT
-;	iftrue KurtScript_ImCheckingItNow
-;KurtMakingBallsScript:
-;	checkevent EVENT_BUGGING_KURT_TOO_MUCH
-;	iffalse Script_FirstTimeBuggingKurt
-;	writetext KurtsHouseKurtDontBotherMeText
-;	waitbutton
-;	closetext
-;	turnobject LAST_TALKED, UP
-;	end
-;
-;Script_FirstTimeBuggingKurt:
-;	writetext KurtsHouseKurtGranddaughterHelpingWorkFasterText
-;	waitbutton
-;	closetext
-;	turnobject LAST_TALKED, UP
-;	setevent EVENT_BUGGING_KURT_TOO_MUCH
-;	end
-;
-;KurtScript_ImCheckingItNow:
-;	writetext KurtsHouseKurtImCheckingItNowText
-;	waitbutton
-;	turnobject LAST_TALKED, UP
-;	jumpopenedtext KurtsHouseKurtAhHaISeeText
-;
-;KurtsGranddaughter1:
-;	faceplayer
-;	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
-;	iftrue KurtsGranddaughter2Subscript
-;	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
-;	iftrue_jumptext KurtsGranddaughterFunText
-;	checkevent EVENT_FOREST_IS_RESTLESS
-;	iftrue_jumptext KurtsGranddaughterLonelyText
-;	checkevent EVENT_FAST_SHIP_FIRST_TIME
-;	iftrue_jumptext KurtsGranddaughterDadText
-;	checkevent EVENT_CLEARED_SLOWPOKE_WELL
-;	iftrue_jumptext KurtsGranddaughterSlowpokeBackText
-;	checkevent EVENT_AZALEA_TOWN_SLOWPOKETAIL_ROCKET
-;	iftrue_jumptext KurtsGranddaughterLonelyText
-;	jumptext KurtsGranddaughterSlowpokeGoneText
-;
-;KurtsGranddaughter2:
-;	faceplayer
-;KurtsGranddaughter2Subscript:
-;	opentext
-;	checkevent EVENT_GAVE_GS_BALL_TO_KURT
-;	iftrue .GSBall
-;	writetext KurtsGranddaughterHelpText
-;	waitbutton
-;	closetext
-;	turnobject LAST_TALKED, RIGHT
-;	end
-;
-;.GSBall:
-;	writetext KurtsGranddaughterGSBallText
-;	waitbutton
-;	closetext
-;	turnobject LAST_TALKED, RIGHT
-;	end
-;
-
-
-
-
-
-
-

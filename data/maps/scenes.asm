@@ -8,9 +8,6 @@ ENDM
 MapScenes::
 	scene_var AZALEA_TOWN,                            wAzaleaTownSceneID
 	scene_var AZALEA_POKECENTER_1F,                   wAzaleaPokecenter1FSceneID ;starts the trade quest
-;	scene_var BATTLE_TOWER_BATTLE_ROOM,               wAlways0SceneID
-;	scene_var BATTLE_TOWER_ELEVATOR,                  wAlways0SceneID
-;	scene_var BATTLE_TOWER_HALLWAY,                   wAlways0SceneID
 ;	scene_var BATTLE_TOWER_OUTSIDE,                   wBattleTowerOutsideSceneID
 ;	scene_var BATTLE_FACTORY_1F,                      wBattleFacilitySceneID
 ;	scene_var BATTLE_FACTORY_BATTLE_ROOM,             wAlways0SceneID
@@ -108,4 +105,7 @@ MapScenes::
 ;	scene_var WILLS_ROOM,                             wWillsRoomSceneID
 ;	scene_var WISE_TRIOS_ROOM,                        wWiseTriosRoomSceneID
 ;	scene_var YELLOW_FOREST,                          wYellowForestSceneID
+	scene_var HOLLYS_HOLT,                            wHollysHoltSceneID
+	scene_var MISTY_BASIN,                            wMistyBasinSceneID 
+	scene_var ANARRES_HOUSE,                          wAnarresHouseSceneID ; for the trade quest
 	db -1

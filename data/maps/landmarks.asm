@@ -20,7 +20,7 @@ Landmarks:
 	landmark  60, 108, GoldenrodCityName
 	landmark  58, 108, RadioTowerName
 	landmark  60,  92, Route35Name
-	landmark  76, 140, RouteKaJoName ;add
+	landmark  76, 100, RouteKaJoName ;add
 	landmark  60,  76, NationalParkName
 	landmark  72,  76, Route36Name
 	landmark  76,  68, Route37Name
@@ -110,7 +110,6 @@ Route40Name:           rawchar "Route 40@"
 Route41Name:           rawchar "Route 41@"
 Route42Name:           rawchar "Route 42@"
 Route43Name:           rawchar "Route 43@"
-Route44Name:           rawchar "Route 44@"
 RouteKaJoName:		   rawchar "Route¯Ka-Jo@"
 IlexForestName:        rawchar "Ilex¯Forest@"
 BurnedTowerName:       rawchar "Burned¯Tower@"
