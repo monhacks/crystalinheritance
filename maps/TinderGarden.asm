@@ -216,7 +216,7 @@ WasThatCelebiText:
 	line "Celebi?"
 	
 	para "And there are"
-	line "3 #balls"
+	line "3 #mon"
 	cont "over there..."
 	done
 
@@ -763,7 +763,12 @@ TGRivalGoodbyeText:
 	
 	para "I'm saying good-"
 	line "bye to this"
-	line "backwater."
+	cont "backwater."
+
+	para "Maybe there are"
+	line "some strong"
+	cont "#mon on"
+	cont "Route 33."
 	done
 
 PlayerMovesForRivalBattle:

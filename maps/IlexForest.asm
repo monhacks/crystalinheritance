@@ -41,9 +41,8 @@ IlexForest_MapScriptHeader:
 	object_event 25, 19, SPRITE_PICNICKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerPicnickerLiz, -1 ; 
 	object_event 29, 11, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerEngineerSmith, EVENT_LOGGERS_ILEX_FOREST
 	object_event 15, 14, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerOfficerMKeith, EVENT_LOGGERS_ILEX_FOREST ;todo move keith
-	cuttree_event 19,  6, EVENT_ILEX_FOREST_CUT_TREE; ok
 	itemball_event 22, 34, REVIVE, 1, EVENT_ILEX_FOREST_REVIVE ;ok
-	itemball_event 13, 14, ANTIDOTE, 1, EVENT_ILEX_FOREST_ANTIDOTE ;ok
+	tmhmball_event 13, 14, TM_SAFEGUARD, EVENT_ILEX_FOREST_ANTIDOTE
 	itemball_event 19, 16, SUPER_POTION, 1, EVENT_ILEX_FOREST_MULCH;OK
 
 
@@ -585,7 +584,7 @@ IlexForestCelebiEventScript:
 	playsound SFX_WARP_TO
 	special FadeOutPalettes
 	waitsfx
-	warp KURTS_HOUSE, 15, 6
+	warp HOLLYS_HOLT, 10, 26
 
 	end
 
@@ -602,7 +601,7 @@ IlexForestShrineScript:
 	playsound SFX_WARP_TO
 	special FadeOutPalettes
 	waitsfx
-	warp KURTS_HOUSE, 15, 6
+	warp HOLLYS_HOLT, 10, 25
 	end
 
 .BeautifulShrine:

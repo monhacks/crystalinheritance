@@ -9,7 +9,7 @@ KurtsHouse_MapScriptHeader: ; todo add the ability to make apricorns here at the
 	warp_event  4,  7, AZALEA_TOWN, 4
 	
 	def_coord_events
-;	coord_event 7, 2, 1, KurtTrigger1 ; you have to hit this square due to where the pokemon is. going to try to rewrite with a scene script instead?
+
 
 	def_bg_events;done
 ;	bg_event  6,  1, BGEVENT_JUMPSTD, radio2 ; this is fine for later
@@ -23,8 +23,8 @@ KurtsHouse_MapScriptHeader: ; todo add the ability to make apricorns here at the
 	bg_event  4,  1, BGEVENT_JUMPTEXT, KurtsHouseCelebiStatueText
 
 	def_object_events
-	object_event  6,  3, SPRITE_KURT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KurtHouseScript, EVENT_KURTS_HOUSE_KURT_0 ;
-	pokemon_event  8,  1, SHUCKLE, -1, -1, PAL_NPC_RED, KurtsHouseShuckleText, -1
+	object_event    6,  3, SPRITE_KURT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KurtHouseScript, EVENT_KURTS_HOUSE_KURT_0 ;
+	pokemon_event  14,  4, SHUCKLE, -1, -1, PAL_NPC_RED, KurtsHouseShuckleText, -1
 ; kurt is at the celebi shrine if you visit later
 
 	object_const_def
@@ -51,7 +51,7 @@ KurtsHouseScript1:
 	turn_head_right
 	step_end
 
-KurtHouseEventScript:
+KurtHouseEventScript: ;todo the apricorn box is still kinda messy
 	opentext
 	writetext KurtIntroText
 	promptbutton
@@ -63,8 +63,6 @@ KurtHouseEventScript:
 	setscene $1 ; this should keep the event from playing in a loop?
 	setevent EVENT_KURTS_HOUSE_KURT_0 ; changed from mom
 	clearevent EVENT_PLAYERS_HOUSE_KURT_2 ; may not need this line? 
-	promptbutton
-	verbosegivekeyitem APRICORN_BOX
 	promptbutton
 	writetext MomPokegearText
 	promptbutton
@@ -88,7 +86,10 @@ KurtHouseEventScript:
 	writetext MomInstructionsText
 	promptbutton
 .NoInstructions:
-	writetext MomOutroText
+	promptbutton
+	verbosegivekeyitem APRICORN_BOX
+	promptbutton
+	writetext KurtOutroText0
 	promptbutton
 	special SpecialNameRival
 	writetext KurtOutroText	
@@ -155,8 +156,12 @@ MomInstructionsText:
 	line "B Button to run."
 	done
 
-MomOutroText:
-	text "We're waiting on"
+KurtOutroText0:
+	text "You can use that"
+	line "Apricorn kit at"
+	cont "any bench."
+
+	para "We're waiting on"
 	line "the charcoal fam-"
 	cont "ily. Do you know"
 	cont "the boy's name?"
@@ -205,9 +210,9 @@ PokemonJournalProfWestwoodScript:
 	done
 
 KurtsHouseOakPhotoText:
-	text "It's Grandpa,"
-	line "Dad, and a"
-	cont "happy Snubbull."
+	text "It's Grampa, Dad,"
+	line "and a glowing"
+	cont "Cyndaquil."
 	done
 
 KurtsHouseCelebiStatueText:

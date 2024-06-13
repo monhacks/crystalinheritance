@@ -6,8 +6,14 @@ AnarresTown_MapScriptHeader: ; should be like  "BurnedTowerB1F_MapScriptHeader"
 ;	callback MAPCALLBACK_OBJECTS, SetupValerieMorningWalkCallback
 
 	def_warp_events
-;	warp_event  4,  4, WISE_TRIOS_ROOM, 1
-;	warp_event  4,  5, WISE_TRIOS_ROOM, 2
+	warp_event  2, 10, HOLLYS_HOLT, 1
+	warp_event  2, 11, HOLLYS_HOLT, 2
+	warp_event  9,  3, ANARRES_HOUSE, 1
+	warp_event 21, 15, ANARRES_CHARCOAL_KILN, 1
+	warp_event 11, 13, ANARRES_TOWER_1F, 1
+	warp_event 17, 9, ANARRES_DORMS, 1
+	warp_event 21, 5, ANARRES_STOCKROOM, 1
+	warp_event 30, 9, MISTY_BASIN, 1
 
 	def_coord_events
 ;	coord_event 21,  9, 1, BellchimeTrailPanUpTrigger
