@@ -88,7 +88,7 @@ SlowpokeWellTutorRolloutScript:
 	special Special_MoveTutor
 	ifequal $0, .TeachMove
 .TutorRefused
-	jumpopenedtext Text_TutorRefused ;; 
+	jumpopenedtext Text_RolloutTutorRefused ;; 
 
 .NoSilverLeaf
 	jumpopenedtext Text_RolloutTutorNoSilverLeaf

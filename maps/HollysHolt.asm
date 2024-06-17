@@ -27,7 +27,7 @@ HollysHolt_MapScriptHeader:
 	object_event  9, 25, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, HollysHoltKurtScript, EVENT_BEAT_HOLLIS ;todo add this 
 	object_event  8, 25, SPRITE_HOLLIS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, HollysHoltHollisScript, EVENT_TALKED_TO_HOLLIS;todo add this
 	object_event 17, 25, SPRITE_TAMMY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, HollysHoltTammyScript, -1;TOOD need to put in the tammy move tutor
-	object_event 17, 26, SPRITE_BLACKBELT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, HollysHoltNPC6Text, -1;TOOD need to put in the tammy move tutor
+	object_event 17, 26, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, HollysHoltNPC6Text, -1;TOOD need to put in the tammy move tutor
 	object_event  8, 16, SPRITE_BREEDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, HollysHoltNPC1Text, -1
 	object_event 23, 24, SPRITE_GRAMPS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, jumptextfaceplayer, HollysHoltNPC2Script, -1 ; TODO this one should give you someting
 	object_event 16, 36, SPRITE_SCHOOLGIRL, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, HollysHoltNPC3Text, -1 ; THIS ONE DISAPPEARS AFTER BEATING HOLLIS
@@ -190,7 +190,7 @@ HollysHoltNPC1Text:
 	done
 
 HollysHoltNPC2Script:
-	checkevent EVENT_GOT_MIRACLE_SEED
+	checkevent EVENT_YELLOW_FOREST_MIRACLE_SEED
 	iftrue_jumptextfaceplayer HHNPC2_GotSeed
 	faceplayer
 	opentext
@@ -198,7 +198,7 @@ HollysHoltNPC2Script:
 	promptbutton
 	verbosegiveitem MIRACLE_SEED
 	iffalse_endtext
-	setevent EVENT_GOT_MIRACLE_SEED
+	setevent EVENT_YELLOW_FOREST_MIRACLE_SEED
 	jumpthisopenedtext
 
 HHNPC2_GotSeed:
@@ -337,7 +337,7 @@ HH_Sign2Text:
 HollysHoltTammyScript:
 	faceplayer
 	opentext
-	checkevent EVENT_LISTENED_TO_HEABUTT_INTRO
+	checkevent EVENT_LISTENED_TO_HEADBUTT_INTRO
 	iftrue HHTutorHeadbuttScript
 	writetext Text_HeadbuttIntro
 	waitbutton

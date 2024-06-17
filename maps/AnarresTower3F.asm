@@ -28,10 +28,9 @@ AnarresTower3FStepRightTrigger:
 	applymovement PLAYER, PlayerStepsRightMovement
 AnarresTower3FHollisScript:
 	applymovement PLAYER, PlayerStepsDownMovement
-	setevent ANNARES_TOWER_HOLLIS_CONFRONTED
 	appear ANARRES_TOWER_TAMMY
 	applymovement ANARRES_TOWER_TAMMY, TammyMovesToHollis
-	showemote SHOCK, ANARRES_TOWER_HOLLIS, 10
+	showemote EMOTE_SHOCK, ANARRES_TOWER_HOLLIS, 10
 	turnobject ANARRES_TOWER_HOLLIS, LEFT
 	opentext
 	writetext HollisPastGuards
@@ -40,37 +39,37 @@ AnarresTower3FHollisScript:
 	applymovement ANARRES_TOWER_HOLLIS, HollisToYou
 	showtext HollisChallengesText
 	winlosstext HollisBeatenText, 0
-	loadtrainer HOLLIS, HOLLIS1 ; WILL THIS FIND?
+	loadtrainer HOLLIS, HOLLIS ; WILL THIS FIND?
 	startbattle
 	reloadmapafterbattle ; is tammy still around? 
 	opentext
-	showemote HEART, ANARRES_TOWER_TAMMY, 10
+	showemote EMOTE_HEART, ANARRES_TOWER_TAMMY, 10
 	showtext TammyText2
 	promptbutton
-	showemote QUESTION, ANARRES_TOWER_HOLLIS, 10
+	showemote EMOTE_QUESTION, ANARRES_TOWER_HOLLIS, 10
 	showtext HollisHm
 	promptbutton
 	turnobject ANARRES_TOWER_TAMMY, DOWN
 	pause 5
 	showtext TammyText3
 	promptbutton
-	showemote SHOCK, ANARRES_TOWER_HOLLIS, 10
+	showemote EMOTE_SHOCK, ANARRES_TOWER_HOLLIS, 10
 	showtext HollisAbuse
 	pause 5
 	showtext TammyText4
-	turnobject ANNARES_TOWER_HOLLIS, RIGHT
-	applyonemovement ANNARES_TOWER_HOLLIS, RIGHT
+	turnobject ANARRES_TOWER_HOLLIS, RIGHT
+	applyonemovement ANARRES_TOWER_HOLLIS, RIGHT
 	showtext HollisHM
-	showemote HAPPY, ANARRES_TOWER_TAMMY, 15
+	showemote EMOTE_HAPPY, ANARRES_TOWER_TAMMY, 15
 	showtext TammyThanks
 	closetext
 	applymovement ANARRES_TOWER_TAMMY, TammyWalksOutMovement
 	disappear ANARRES_TOWER_TAMMY
-	applyonemovement ANNARES_TOWER_HOLLIS, LEFT
+	applyonemovement ANARRES_TOWER_HOLLIS, LEFT
 	opentext
 	writetext HollisCongratulates
 	verbosegivetmhm HM_CUT
-	setevent EVENT_GOT_HM_CUT
+	setevent EVENT_GOT_HM01_CUT
 	setevent EVENT_BEAT_HOLLIS
 	jumpthisopenedtext
 
@@ -105,7 +104,15 @@ HollisPastGuards:
 	cont "Do I have to do it"
 	cont "all by myself?"
 	done
+
+HollisChallengesText:
+	text "I'm taking total"
+	line "control!"
 	
+	para "No one else has"
+	line "my experience!"
+	done
+
 TammyExplains:
 	text "TAMMY: Won't"
 	line "you just listen?"
@@ -213,4 +220,35 @@ HollisCongratulates:
 	cont "have this."
 	done
 
+AnarresTowerTammyScript:
+	faceplayer
+	jumpthisopenedtext
 
+	text "Thanks for"
+	line "your help!"
+	done
+
+AnarresTowerHollisScript:
+	faceplayer
+	opentext
+	writetext HollisAfterBattleText
+	closetext
+	end
+
+HollisAfterBattleText:
+	text "You showed me"
+	line "that my might is"
+	cont "not always"
+	cont "right. The Cut"
+	cont "HM is still too"
+	cont "powerful to be"
+	cont "used without"
+	cont "recognizing its"
+	cont "effects, but we"
+	cont "can build a"
+	cont "culture around"
+	cont "talking through"
+	cont "the tradeoffs"
+	cont "before taking"
+	cont "action."
+	done 

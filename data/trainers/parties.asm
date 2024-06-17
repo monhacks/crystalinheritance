@@ -936,7 +936,7 @@ HollisGroup:
 		db CUT, FOCUS_ENERGY, QUICK_ATTACK, LEER
 	db -1 ; end
 
-	; Hollis
+	; Hollis - MAY NOT NEED THIS? 
 	db "Hollis@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_MOVES
 	; party

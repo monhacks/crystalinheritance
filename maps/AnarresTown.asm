@@ -25,10 +25,10 @@ AnarresTown_MapScriptHeader:
 
 	def_object_events
 	object_event 5, 9, SPRITE_BLACKBELT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, jumptextfaceplayer, AnarresNPC1Text, -1 
-	object_event 17, 14, SPRITE_BLACKBELT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, jumptextfaceplayer, AnarresNPC2Text, -1 
+	object_event 17, 14, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, jumptextfaceplayer, AnarresNPC2Text, -1 
 	object_event 12,  6, SPRITE_BUG_MANIAC, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, jumptextfaceplayer, AnarresNPC3Text, -1 
 	object_event 15, 13, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, jumptextfaceplayer, AnarresNPC4Text, -1 
-	object_event 11, 14, SPRITE_BLACKBELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, jumptextfaceplayer, AnarresNPC5Text, EVENT_BEAT_TAMMY
+	object_event 11, 14, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, jumptextfaceplayer, AnarresNPC5Text, EVENT_BEAT_TAMMY
 
 	object_const_def
 
@@ -50,9 +50,15 @@ AnarresNPC2Text:
 	done
 
 AnarresNPC3Text:
-	text "Some say Celebi"
-	line "can time travel."
-	cont "I wonder how?"
+	text "The new guy from"
+	line "the coast asked"
+	cont"me for dinner."
+	
+	para "But his breath"
+	line "smells so bad!"
+	
+	para "I would not"
+	line "have an appetite."
 	done
 
 AnarresNPC4Text:

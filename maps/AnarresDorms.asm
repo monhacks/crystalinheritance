@@ -75,13 +75,6 @@ AnarresDormsBed:
 	special RestartMapMusic
 	special Special_FadeInQuickly
 	showtext BedText2
-	checkevent EVENT_FAST_SHIP_HAS_ARRIVED
-	iftrue UnknownScript_0x75ae1
-	checkevent EVENT_FAST_SHIP_FOUND_GIRL
-	iftrue UnknownScript_0x75ae2
-	checkevent EVENT_FAST_SHIP_FIRST_TIME
-	iftrue UnknownScript_0x75ae2
-UnknownScript_0x75ae1:
 	end
 
 BedText1:

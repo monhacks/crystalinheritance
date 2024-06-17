@@ -16,10 +16,10 @@ MistyBasin_MapScriptHeader: ; should be like  "BurnedTowerB1F_MapScriptHeader"
 
 
 	def_object_events
-	object_event 14, 13, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, jumptextfaceplayer, MistyBasonMatronText, -1 ;
+	object_event 14, 13, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, jumptextfaceplayer, MistyBasonMatronText, -1 ;
 	object_event  4, 13, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerSageChow, EVENT_BEAT_HOLLIS 
 	object_event  5,  4, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerSageNico, EVENT_BEAT_HOLLIS
-	object_event 13,  3, SPRITE_MEDIUM, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerMediumMartha, EVENT_BEAT_HOLLIS
+	object_event 13,  3, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerMediumMartha, EVENT_BEAT_HOLLIS
 	object_event 14,  2, SPRITE_TAMMY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TammyScript, EVENT_BEAT_HOLLIS
 
 	object_const_def
@@ -42,7 +42,7 @@ GenericTrainerSageChow:
 
 	text "The Elder hoards"
 	line "the HM Cut for"
-	cont "himself. It’s"
+	cont "himself. It's"
 	cont "not right!"
 	done
 
@@ -53,7 +53,7 @@ SageChowSeenText:
 	done
 
 SageChowBeatenText:
-	text "We’re trying to"
+	text "We're trying to"
 	line "save the forest."
 	done
 
@@ -100,7 +100,7 @@ TammyScript:
 	faceplayer
 	showtext TammySeenText
 	winlosstext TammyBeatenText, 0
-	loadtrainer TAMMY, TAMMY1 ; call the right trainer?
+	loadtrainer TAMMY, TAMMY ; call the right trainer?
 	startbattle
 	reloadmapafterbattle
 	opentext
@@ -115,28 +115,28 @@ TammyScript:
 	cont "pineco without"
 	cont "damaging the"
 	cont "tree. The elder"
-	cont "says it’s"
+	cont "says it's"
 	cont "unnatural. I"
 	cont "want to talk to"
 	cont "him, but he just"
 	cont "sits on top of"
 	cont "the tower. Since"
-	cont "you’re so"
+	cont "you're so"
 	cont "strong, can you"
 	cont "talk to him with"
 	cont "me?"
 	done
 
 TammySeenText:
-	text "You’ve found our"
+	text "You've found our"
 	line "secret meeting."
-	cont "We’ve organized"
+	cont "We've organized"
 	cont "to confront the"
 	cont "Elder. Oh?"
-	cont "You’re also"
+	cont "You're also"
 	cont "trying to get"
-	cont "the HM? Let’s"
-	cont "see if you’re"
+	cont "the HM? Let's"
+	cont "see if you're"
 	cont "strong enough."
 	done
 

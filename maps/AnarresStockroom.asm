@@ -71,7 +71,7 @@ AnarresStockroomNPC3Text:
 	line "Elder use bug"
 	cont "#mon? To"
 	cont "remind us that"
-	cont "nature isn’t"
+	cont "nature isn't"
 	cont "just cute"
 	cont "Pikachu, but"
 	cont "also scary"

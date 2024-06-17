@@ -41,10 +41,10 @@ AnarresHouseMushroomScript:
 	writetext NeedAMintLeafText
 	waitbutton
 	checkitem MINT_LEAF	
-	iffalse .NoMintLeaf
+	iffalse NoMintLeaf
 	writetext Text_Route33TutorQuestion ;;
 	yesorno
-	iffalse .MintLeafRefused
+	iffalse MintLeafRefused
 	takeitem SILVER_LEAF
 	verbosegiveitem TINYMUSHROOM
 	iffalse_endtext
@@ -87,10 +87,10 @@ GiveTinyMushroomText:
 	cont "a great dish."
 	done
 		
-.NoMintLeaf:
+NoMintLeaf:
 	jumpopenedtext Text_NoMintLeaf
 
-.MintLeafRefused:
+MintLeafRefused:
 	jumpopenedtext Text_NoMintLeaf
 
 Text_NoMintLeaf:
