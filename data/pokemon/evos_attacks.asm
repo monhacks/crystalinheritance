@@ -768,8 +768,8 @@ VenomothEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, BUG_BUZZ
 	db 1, TACKLE
-	db 1, DISABLE
-	db 1, FORESIGHT
+	db 1, POISON_STING
+	db 1, GUST
 	db 5, SUPERSONIC
 	db 11, CONFUSION
 	db 13, POISONPOWDER
@@ -4062,6 +4062,9 @@ BastiodonEvosAttacks:
 VespiquenEvosAttacks:
 	db 0 ; no more Evolutions
 	db 1, PIN_MISSILE
+	db 1, ROOST
+	db 1, GUST
+	db 1, DEFENSE_CURL
 	db 25, FRESH_SNACK
 	db 30, BUG_BUZZ
 	db 35, AIR_SLASH

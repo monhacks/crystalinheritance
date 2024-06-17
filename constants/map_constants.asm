@@ -137,7 +137,7 @@ ENDM
 	newgroup                                                     ;  5 anarres town and surrounding
 	map_const HOLLYS_HOLT, 								  17, 24 ;  1 forest
 	map_const ANARRES_TOWN,                               20,  9 ;  2 johto traditional
-	map_const MISTY_BASIN,                                10,  8 ;  3 cave 
+	map_const MISTY_BASIN,                                10,  9 ;  3 cave 
 	map_const ANARRES_DORMS,                               4,  3 ;  4 johto house
 	map_const ANARRES_STOCKROOM,                           5,  4 ;  5 traditional hosue
 	map_const ANARRES_TOWER_1F,                            6,  6 ;  6 sprout tower

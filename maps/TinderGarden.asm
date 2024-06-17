@@ -33,6 +33,7 @@ TinderGarden_MapScriptHeader: ;todo something weird happens when I stand to the 
 	object_event  8, 11, SPRITE_WEIRD_TREE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OshawottPokeBallScript, EVENT_KURTS_HOUSE_KURT_0
 	object_event  8, 12, SPRITE_WEIRD_TREE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, RowletPokeBallScript, EVENT_KURTS_HOUSE_KURT_0
 	object_event  4,  9, SPRITE_CELEBI, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CelebiScript, EVENT_KURTS_HOUSE_KURT_0
+	object_event  2, 10, SPRITE_PRYCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PryceScript, EVENT_KURT_HEARS_LOGGERS
 
 	object_const_def
 	const TINDER_GARDEN_KURT
@@ -43,7 +44,7 @@ TinderGarden_MapScriptHeader: ;todo something weird happens when I stand to the 
 	const TINDER_GARDEN_POKE_BALL2
 	const TINDER_GARDEN_POKE_BALL3	
 	const TINDER_GARDEN_CELEBI
-
+	const TINDER_GARDEN_PRYCE
 
 CelebiCeremonyIntroScript:
 	sdefer .Script
@@ -81,13 +82,14 @@ CelebiCeremonyIntroScript:
 	closetext
 	turnobject TINDER_GARDEN_KURT, UP
 	turnobject TINDER_GARDEN_BLACK_BELT, UP
-	applymovement TINDER_GARDEN_OAK, TGOakBeginMovement ;
+	applymovement TINDER_GARDEN_OAK, TGOakBeginMovement 
+	applymovement TINDER_GARDEN_PRYCE, TGPryceBeginMovement 
 	opentext
 	writetext KurtLetsBegin2
 	closetext 
 	pause 20
 	appear TINDER_GARDEN_CELEBI
-	showemote EMOTE_SHOCK, TINDER_GARDEN_KURT, 20 ;did this even show?
+	showemote EMOTE_SHOCK, TINDER_GARDEN_KURT, 20
 	applymovement TINDER_GARDEN_KURT, TGKurtMovesAway
 	turnobject TINDER_GARDEN_BLACK_BELT, LEFT
 	applymovement TINDER_GARDEN_CELEBI, TGCelebiMovesToYou
@@ -96,23 +98,24 @@ CelebiCeremonyIntroScript:
 	promptbutton
 	closetext
 	disappear TINDER_GARDEN_CELEBI
-	special Special_FadeBlackQuickly ;c.f. mr pokemons house
-	special Special_ReloadSpritesNoPalettes ;c.f. mr pokemons house
+	special Special_FadeBlackQuickly
+	special Special_ReloadSpritesNoPalettes
 	appear TINDER_GARDEN_POKE_BALL1
 	appear TINDER_GARDEN_POKE_BALL2	
 	appear TINDER_GARDEN_POKE_BALL3	
-	special Special_FadeInQuickly ;c.f. mr pokemons house
-	special RestartMapMusic	 ;c.f. mr pokemons house
+	special Special_FadeInQuickly
+	special RestartMapMusic
 	applymovement TINDER_GARDEN_KURT, TGKurtMovesBeforeOak
 	opentext
 	writetext WasThatCelebiText 
 	closetext
 	applymovement TINDER_GARDEN_OAK, TGOakChecksBalls 
 	showemote EMOTE_SHOCK, TINDER_GARDEN_OAK, 10
+	applymovement TINDER_GARDEN_PRYCE, TGPryceMovesBack
 	opentext
 	writetext WasThatCelebiTextOak	
 	closetext
-	applymovement TINDER_GARDEN_KURT, TGKurtChecksBalls ;; todo	
+	applymovement TINDER_GARDEN_KURT, TGKurtChecksBalls 
 	turnobject TINDER_GARDEN_BLACK_BELT, DOWN
 	opentext
 	writetext WasThatCelebiTextKurt
@@ -148,7 +151,8 @@ TGOakMovesBackMovement:
 
 KurtText_Intro:
 	text "Kurt: Surprise!"
-	line "Oak is here."
+	line "Oak is here,"
+	cont "as is Pryce."
 	done
 	
 OakText_Pokedex:
@@ -205,6 +209,10 @@ TGOakBeginMovement:
 	turn_head_right
 	step_end
 
+TGPryceBeginMovement:
+	step_up
+	step_right
+	step_end
 
 TinderGardenTryToLeaveScript:
 	showtext TGWhereYouGoing
@@ -273,6 +281,11 @@ TGOakChecksBalls:
 	turn_head_down	
 	step_end
 	
+TGPryceMovesBack:
+	step_left
+	step_down
+	step_end
+
 TGKurtMovesBeforeOak:
 	step_left
 	step_up
@@ -497,13 +510,6 @@ RivalReceivedStarterText:
 	text "!"
 	done
 
-LyraReceivedStarterText:
-	text "Lyra received"
-	line ""
-	text_ram wStringBuffer3
-	text "!"
-	done
-
 KurtGreatJobText:
 	text "Kurt: Wonderful."
 	line "You both have"
@@ -662,6 +668,11 @@ OakScript:
 	opentext
 	jumpopenedtext OakPokemonText
 
+PryceScript:
+	faceplayer
+	opentext
+	jumpopenedtext PrycePokemonText
+
 TGKurtScript:
 	faceplayer
 	opentext
@@ -673,6 +684,17 @@ OakPokemonText:
 	cont "haven't had a"
 	cont "rush like that"
 	cont "in years!"
+	done
+
+PrycePokemonText:
+	text "Congrats on"
+	line "getting a nice"
+	cont "partner. I hope"
+	cont "it brings you"
+	cont "joy. There's"
+	cont "been a lot of"
+	cont "cynicism in"
+	cont "Johto, lately."
 	done
 
 CharcoalScript:

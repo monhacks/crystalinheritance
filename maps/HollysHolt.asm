@@ -3,6 +3,7 @@ HollysHolt_MapScriptHeader:
 	scene_script HollysHoltTrigger
 
 	def_callbacks
+	callback MAPCALLBACK_OBJECTS, HollysHoltTammy
 
 
 	def_warp_events 
@@ -25,6 +26,8 @@ HollysHolt_MapScriptHeader:
 	def_object_events
 	object_event  9, 25, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, HollysHoltKurtScript, EVENT_BEAT_HOLLIS ;todo add this 
 	object_event  8, 25, SPRITE_HOLLIS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, HollysHoltHollisScript, EVENT_TALKED_TO_HOLLIS;todo add this
+	object_event 17, 25, SPRITE_TAMMY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, HollysHoltTammyScript, -1;TOOD need to put in the tammy move tutor
+	object_event 17, 26, SPRITE_BLACKBELT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, HollysHoltNPC6Text, -1;TOOD need to put in the tammy move tutor
 	object_event  8, 16, SPRITE_BREEDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, HollysHoltNPC1Text, -1
 	object_event 23, 24, SPRITE_GRAMPS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, jumptextfaceplayer, HollysHoltNPC2Script, -1 ; TODO this one should give you someting
 	object_event 16, 36, SPRITE_SCHOOLGIRL, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, HollysHoltNPC3Text, -1 ; THIS ONE DISAPPEARS AFTER BEATING HOLLIS
@@ -38,6 +41,18 @@ HollysHolt_MapScriptHeader:
 	object_const_def
 	const HOLLYS_HOLT_KURT
 	const HOLLYS_HOLT_HOLLIS
+	const HOLLYS_HOLT_TAMMY
+	const HOLLYS_HOLT_BLACKBELT
+
+HollysHoltTammy:
+	checkevent EVENT_BEAT_HOLLIS
+	iffalse .TammyDisappears
+	endcallback
+	
+.TammyDisappears:
+	disappear HOLLYS_HOLT_TAMMY
+	disappear HOLLYS_HOLT_BLACKBELT
+	endcallback
 
 HollysHoltTrigger:
 	sdefer HollysHoltScript1
@@ -52,7 +67,7 @@ HollysHoltScript1:
 	opentext
 	writetext HH_HollisHello
 	closetext
-	applymovement HH_HollisSpins
+	applymovement HOLLYS_HOLT_HOLLIS, HH_HollisSpins
 	opentext
 	writetext HH_KurtExplains
 	closetext
@@ -78,7 +93,7 @@ HollysHoltKurtScript:
 HollysHoltHollisScript:
 	faceplayer
 	opentext
-	writetext HH_HollisHello
+	writetext HH_HollisHello2
 	closetext
 	end
 
@@ -269,7 +284,7 @@ HollysHoltNPC5Text:
 	cont "at the ritual."
 	done
 
-HH_HollisHello:
+HH_HollisHello2:
 	text "Please, visit"
 	line "Anarres Town."
 	
@@ -312,7 +327,84 @@ HHYesTimeTravelText:
 
 HH_Sign1Text:
 	text "Holly's Holt:"
-	line "Home of 
+	line "Home of Celebi"
 	done
 
-HH_Sign2Text
+HH_Sign2Text:
+	text "Reflection Pond"
+	done
+
+HollysHoltTammyScript:
+	faceplayer
+	opentext
+	checkevent EVENT_LISTENED_TO_HEABUTT_INTRO
+	iftrue HHTutorHeadbuttScript
+	writetext Text_HeadbuttIntro
+	waitbutton
+	setevent EVENT_LISTENED_TO_HEABUTT_INTRO
+HHTutorHeadbuttScript:
+	writetext Text_HHTutorHeadbutt ;;
+	waitbutton
+	writetext Text_HHTutorQuestion ;;
+	yesorno
+	iffalse .TutorRefused
+	setval HEADBUTT
+	writetext ClearText
+	special Special_MoveTutor
+	ifequal $0, .TeachMove
+.TutorRefused
+	jumpopenedtext Text_HHTutorRefused ;; 
+
+.TeachMove
+	jumpopenedtext Text_HHTutorTaught ;;
+	
+Text_HeadbuttIntro: 
+	text "Hi, <PLAYER>."
+	line "Thanks again for"
+	cont "your help talking"
+	cont "to Hollis."
+	
+	para "Now, I can teach"
+	line "everyone how to"
+	cont "use Headbutt to"
+	cont "rattle trees!"
+
+Text_HHTutorHeadbutt:
+	text "I can teach your"
+	line "#mon to use"
+
+	para "Heabutt, if"
+	line "you want."
+	done
+
+Text_HHTutorQuestion:
+	text "Should I teach"
+	line "your #mon"
+	cont "Headbutt?"
+	done
+
+Text_HHTutorRefused:
+	text "Alright then."
+	done
+
+Text_HHTutorTaught:
+	text "There! Perfect."
+	done
+
+
+HollysHoltNPC6Text:
+	text "Tammy is showing"
+	line "me how to use"
+	cont "Headbutt."
+	
+	para "Soon, we can"
+	line "knock off the"
+	cont "Pineco to get"
+	cont "the forest back"
+	cont "to a healthy"
+	cont "equilibrium."
+	
+	para "Tending nature"
+	line "is part of pro-"
+	cont "tecting it."
+	done

@@ -926,18 +926,14 @@ HollisGroup:
 	db "Hollis@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_EVS | TRAINERTYPE_MOVES
 	; party
-	db 65, MAGCARGO, NO_ITEM, 240
-		db CURSE, WILL_O_WISP, FLAMETHROWER, ROCK_SLIDE
-	db 68, MAGMAR, EVIOLITE, 240
-		db SUNNY_DAY, THUNDERPUNCH, FLAMETHROWER, FOCUS_BLAST
-	db 66, ARCANINE, NO_ITEM, 240
-		db CRUNCH, FLAME_CHARGE, FLARE_BLITZ, TAKE_DOWN
-	db 66, NINETALES, NO_ITEM, 240
-		db CONFUSE_RAY, FIRE_SPIN, FLAMETHROWER, WILL_O_WISP
-	db 65, FLAREON, NO_ITEM, 240
-		db WILL_O_WISP, FLARE_BLITZ, QUICK_ATTACK, FIRE_BLAST
-	db 69, RAPIDASH, SITRUS_BERRY, 240
-		db QUICK_ATTACK, FIRE_SPIN, PLAY_ROUGH, FIRE_BLAST
+	db 14, SLOWPOKE, NO_ITEM, 20
+		db CURSE, WATER_GUN, RAIN_DANCE, REST
+	db 16, LEDIAN, NO_ITEM, 20
+		db AIR_SLASH, SUPERSONIC, FURY_STRIKES, BUG_BITE
+	db 16, ARIADOS, NO_ITEM, 20
+		db SCARY_FACE, POISON_STING, BUG_BITE, BATON_PASS
+	db 16, KLEAVOR, METAL_COAT, 20
+		db CUT, FOCUS_ENERGY, QUICK_ATTACK, LEER
 	db -1 ; end
 
 	; Hollis
@@ -1782,8 +1778,8 @@ BugCatcherGroup:
 	db "Don@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 3, VENONAT
-	db 3, VENONAT
+	db 10, BEEDRILL
+	db 10, BUTTERFREE
 	db -1 ; end
 
 ; ================
@@ -1792,9 +1788,9 @@ BugCatcherGroup:
 	db "Benny@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 7, PARAS
 	db 9, VENONAT
-	db 12, BEEDRILL
+	db 10, VENONAT
+	db 11, VENONAT
 	db -1 ; end
 
 ; ================
@@ -1803,8 +1799,7 @@ BugCatcherGroup:
 	db "Al@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 12, VENONAT
-	db 12, PARAS
+	db 14, VENOMOTH
 	db -1 ; end
 
 ; ================
@@ -1813,8 +1808,7 @@ BugCatcherGroup:
 	db "Josh@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 12, PARAS
-	db 12, VENONAT
+	db 16, PINSIR
 	db -1 ; end
 
 ; ================
@@ -1823,8 +1817,8 @@ BugCatcherGroup:
 	db "Ken@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 46, ARIADOS
-	db 47, PINSIR
+	db 13, PINECO
+	db 13, BEEDRILL
 	db -1 ; end
 
 ; ================
@@ -1833,8 +1827,7 @@ BugCatcherGroup:
 	db "Wayne@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 9, PARAS
-	db 10, PINECO
+	db 12, VESPIQUEN
 	db -1 ; end
 
 ; ================
@@ -6236,9 +6229,9 @@ SageGroup:
 	db "Chow@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 3, WEEPINBELL
-	db 3, WEEPINBELL
-	db 3, WEEPINBELL
+	db 8, ROWLET
+	db 8, DARTRIX
+	db 8, DUSCLOPS
 	db -1 ; end
 
 ; ================
@@ -6247,9 +6240,8 @@ SageGroup:
 	db "Nico@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 3, WEEPINBELL
-	db 3, WEEPINBELL
-	db 3, PIDGEY
+	db 10, JIGGLYPUFF
+	db 9, CLEFAIRY
 	db -1 ; end
 
 ; ================
@@ -6325,9 +6317,8 @@ MediumGroup:
 	db "Martha@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 18, GASTLY
-	db 20, HAUNTER
-	db 20, MISDREAVUS
+	db 10, MURKROW
+	db 10, MISDREAVUS
 	db -1 ; end
 
 ; ================
@@ -11266,14 +11257,14 @@ TammyGroup:
 
 	; Tammy
 	db "Tammy@"
-	db TRAINERTYPE_ITEM | TRAINERTYPE_EVS | TRAINERTYPE_PERSONALITY | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
+	db TRAINERTYPE_ITEM | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
 	; party
-	db 39, BUTTERFREE, SITRUS_BERRY, 120, ABIL_BUTTERFREE_TINTED_LENS | NAT_SATK_UP_ATK_DOWN, FEMALE, "Kitty@"
-		db BUG_BUZZ, SUPERSONIC, STUN_SPORE, PSYCHIC_M
-	db 42, PIDGEOTTO, NO_ITEM, 120, ABIL_PIDGEOTTO_TANGLED_FEET | NAT_SPD_UP_DEF_DOWN, FEMALE, "Dody@"
-		db SWORDS_DANCE, ACROBATICS, RETURN, MUD_SLAP
-	db 41, GRAVELER, EVIOLITE, 120, ABIL_GRAVELER_STURDY | NAT_ATK_UP_SATK_DOWN, FEMALE, "Gravvy@"
-		db ROLLOUT, DEFENSE_CURL, EARTHQUAKE, ROCK_BLAST
+	db 10, PINECO, ROCKY_HELMET, "Silky@"
+		db BUG_BITE, PROTECT, SPIKES, STRING_SHOT
+	db 10, HERACROSS, NO_ITEM, "Hercules@"
+		db ENDURE, REVERSAL, NO_MOVE, NO_MOVE
+	db 15, FURRET, SITRUS_BERRY, "Kitty@"
+		db HEADBUTT, MUD_SLAP, NO_MOVE, NO_MOVE
 	db -1 ; end
 
 ; ================
