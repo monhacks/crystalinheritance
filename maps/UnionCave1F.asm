@@ -18,12 +18,16 @@ UnionCave1F_MapScriptHeader: ;todo add a heal
 	def_object_events
 	strengthboulder_event 12, 38
 	object_event  8, 31, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 5, GenericTrainerScientistLowell, -1
+	object_event  8, 29, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, UnionHealerScript, -1
 	object_event  6, 17, SPRITE_FIREBREATHER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerFirebreatherRay, -1
 	object_event  6,  5, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerScientistDennett, -1
+	
 	itemball_event  3, 41, ESCAPE_ROPE, 1, EVENT_UNION_CAVE_1F_GREAT_BALL
 	itemball_event  2,  8, X_ATTACK, 1, EVENT_UNION_CAVE_1F_X_ATTACK
 	itemball_event  3, 28, SUPER_POTION, 1, EVENT_UNION_CAVE_1F_POTION
 	itemball_event 12, 45, FULL_HEAL, 1, EVENT_UNION_CAVE_1F_AWAKENING
+	fruittree_event 14, 40, FRUITTREE_UNION_CAVE, HOLLOW_ROCK, PAL_NPC_BLUE
+
 
 GenericTrainerScientistLowell:
 	generictrainer SCIENTIST, LOWELL, EVENT_BEAT_SCIENTIST_LOWELL, ScientistLowellSeenText, ScientistLowellBeatenText
@@ -77,4 +81,33 @@ ScientistDennettSeenText:
 ScientistDennettBeatenText:
 	text "Dynamite!"
 	done
+
+UnionHealerScript:
+	faceplayer
+	opentext
+	writetext .WantToHeal
+	waitbutton
+	special HealParty
+	special SaveMusic	
+	writetext .HealedPokemon
+	waitbutton
+	closetext
+	playmusic MUSIC_NONE	
+	special RestoreMusic
+	end
 	
+
+.WantToHeal:
+	text "It's tough work"
+	line "in the mines."
+	
+	para "Let me get you"
+	line "back in tip-top"
+	cont "shape!"
+	done
+
+
+.HealedPokemon:
+	text "Your #mon"
+	line "were healed!"
+	done

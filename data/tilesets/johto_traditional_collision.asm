@@ -190,7 +190,7 @@
 	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; bd
 	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; be
 	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; bf
-	tilecoll WALL, WALL, WALL, FLOOR ; c0
+	tilecoll WALL, WALL, WALL, DOOR ; c0
 	tilecoll WALL, WALL, FLOOR, FLOOR ; c1
 	tilecoll WALL, FLOOR, HEADBUTT_TREE, FLOOR ; c2
 	tilecoll FLOOR, WALL, FLOOR, HEADBUTT_TREE ; c3

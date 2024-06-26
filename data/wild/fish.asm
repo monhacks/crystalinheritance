@@ -23,9 +23,9 @@ FishGroups:
 	assert_table_length NUM_FISHGROUPS
 
 .Shore_Old:
-	db  70 percent + 1, MAGIKARP,   10
-	db  85 percent + 1, MAGIKARP,   10
-	db 100 percent,     MAGIKARP,   10
+	db  70 percent + 1, MAGIKARP,   5
+	db  85 percent + 1, MAGIKARP,   5
+	db 100 percent,     MAGIKARP,   5
 .Shore_Good:
 	db  35 percent,     MAGIKARP,   20
 	db  70 percent,     STARYU,     20
@@ -38,9 +38,9 @@ FishGroups:
 	db 100 percent,     CLOYSTER,   40
 
 .Ocean_Old:
-	db  70 percent + 1, CHINCHOU,   10
-	db  85 percent + 1, CHINCHOU,    10
-	db 100 percent,     CHINCHOU,    10
+	db  70 percent + 1, CHINCHOU,   5
+	db  85 percent + 1, CHINCHOU,   5
+	db 100 percent,     CHINCHOU,   5
 .Ocean_Good:
 	db  35 percent,     CHINCHOU,   20
 	db  70 percent,     LANTURN,    20
@@ -53,9 +53,9 @@ FishGroups:
 	db 100 percent,     LANTURN,    40
 
 .Lake_Old:
-	db  70 percent + 1, MAGIKARP,   10
-	db  85 percent + 1, MAGIKARP,   10
-	db 100 percent,     MAGIKARP,   10
+	db  70 percent + 1, MAGIKARP,   5
+	db  85 percent + 1, MAGIKARP,   5
+	db 100 percent,     MAGIKARP,   5
 .Lake_Good:
 	db  35 percent,     SLOWPOKE,   20
 	db  70 percent,     SLOWPOKE,   20
@@ -68,9 +68,9 @@ FishGroups:
 	db 100 percent,     CROCONAW,   40
 
 .Pond_Old:
-	db  70 percent + 1, MAGIKARP,   10
-	db  85 percent + 1, POLIWAG,    10
-	db 100 percent,     POLIWAG,    10
+	db  70 percent + 1, MAGIKARP,   5
+	db  85 percent + 1, POLIWAG,    5
+	db 100 percent,     POLIWAG,    5
 .Pond_Good:
 	db  35 percent,     POLIWAG,    20
 	db  70 percent,     POLIWAG,    20
@@ -83,9 +83,9 @@ FishGroups:
 	db 100 percent,     POLIWHIRL,   40
 
 .Dratini_Old: ;alpine lake on route KaJo
-	db  70 percent + 1, MAGIKARP,   10
-	db  85 percent + 1, MAGIKARP,   10
-	db 100 percent,     MAGIKARP,   10
+	db  70 percent + 1, MAGIKARP,   5
+	db  85 percent + 1, MAGIKARP,   5
+	db 100 percent,     MAGIKARP,   5
 .Dratini_Good:
 	db  35 percent,     MAGIKARP,   20
 	db  70 percent,     MAGIKARP,   20
@@ -143,24 +143,24 @@ FishGroups:
 	db 100 percent,     MAGIKARP,   40
 
 .Dratini_2_Old: ;ROUTE 38 39
-	db  70 percent + 1, MUK,        10
-	db  85 percent + 1, MUK,        10
-	db 100 percent,     MUK,        10
+	db  70 percent + 1, MUK,        5
+	db  85 percent + 1, MUK,        5
+	db 100 percent,     MUK,        5
 .Dratini_2_Good:
-	db  35 percent,     MUK,        10
-	db  70 percent,     MUK,        10
-	db  90 percent + 1, MUK,        10
+	db  35 percent,     MUK,        5
+	db  70 percent,     MUK,        5
+	db  90 percent + 1, MUK,        5
 	db 100 percent,     0, 16
 .Dratini_2_Super:
-	db  40 percent,     MUK,        10
+	db  40 percent,     MUK,        5
 	db  70 percent,     0, 17
-	db  90 percent + 1, MUK,        10
-	db 100 percent,     MUK,        10
+	db  90 percent + 1, MUK,        5
+	db 100 percent,     MUK,        50
 
 .WhirlIslands_Old:
-	db  70 percent + 1, MAGIKARP,   10
-	db  85 percent + 1, MAGIKARP,   10
-	db 100 percent,     OCTILLERY,  10
+	db  70 percent + 1, MAGIKARP,   5
+	db  85 percent + 1, MAGIKARP,   5
+	db 100 percent,     OCTILLERY,  5
 .WhirlIslands_Good:
 	db  35 percent,     SEADRA,     20
 	db  70 percent,     OCTILLERY,  20
@@ -174,9 +174,9 @@ FishGroups:
 
 .Qwilfish_NoSwarm_Old:
 .Qwilfish_Old:
-	db  70 percent + 1, MAGIKARP,   10
-	db  85 percent + 1, MAGIKARP,   10
-	db 100 percent,     SEADRA,  10
+	db  70 percent + 1, MAGIKARP,   5
+	db  85 percent + 1, MAGIKARP,   5
+	db 100 percent,     SEADRA,  5
 .Qwilfish_NoSwarm_Good:
 .Qwilfish_Good:
 	db  35 percent,     MAGIKARP,   20

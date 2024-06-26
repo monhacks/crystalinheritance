@@ -62,8 +62,6 @@ EcruteakCityLass2Script:
 	jumptextfaceplayer EcruteakCityLass2Text
 
 EcruteakCityFisherScript:
-	checkevent EVENT_JASMINE_RETURNED_TO_GYM
-	iftrue_jumptextfaceplayer EcruteakCityFisherText_JasmineReturned
 	jumptextfaceplayer EcruteakCityFisherText
 
 EcruteakCityGramps1Text:
@@ -136,13 +134,6 @@ EcruteakCityFisherText:
 	text "I heard a rumor"
 	line "about Olivine"
 	cont "Lighthouse."
-
-	para "The #mon that"
-	line "serves as the"
-
-	para "beacon fell ill."
-	line "Sounds like they"
-	cont "are in trouble."
 	done
 
 EcruteakCityFisherText_JasmineReturned:

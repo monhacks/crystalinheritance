@@ -1037,7 +1037,7 @@ wCharcoalKilnSceneID:: db
 wBurnedTower1FSceneID:: db
 wBurnedTowerB1FSceneID:: db
 wTinderGardenSceneID:: db
-wCeruleanCave1FSceneID:: db
+wAnarresTower3FSceneID:: db ;??
 wCeruleanGymSceneID:: db
 wCherrygroveCitySceneID:: db
 wCianwoodCitySceneID:: db

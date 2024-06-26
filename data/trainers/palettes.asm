@@ -145,7 +145,7 @@ ValeriePalette:          INCLUDE "gfx/trainers/valerie.pal"
 KukuiPalette:            INCLUDE "gfx/trainers/kukui.pal"
 VictorPalette:           INCLUDE "gfx/trainers/victor.pal"
 BillPalette:             INCLUDE "gfx/trainers/bill.pal"
-TammyPalette:            INCLUDE "gfx/trainers/tammy.pal" ; slight change to yellow palette, ideally same color as the sick trees in ilex 
+TammyPalette:            INCLUDE "gfx/trainers/tammy.pal" ; yellow
 SilverPalette:           INCLUDE "gfx/trainers/rival2.pal" ; done
 ImakuniPalette:          INCLUDE "gfx/trainers/imakuni.pal"
 KenseyPalette:           INCLUDE "gfx/trainers/kensey.pal" ; should be blue

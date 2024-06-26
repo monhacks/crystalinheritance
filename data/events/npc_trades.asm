@@ -2,17 +2,17 @@ NPCTrades:
 	table_width NPCTRADE_STRUCT_LENGTH, NPCTrades
 ; NPC_TRADE_MIKE in Goldenrod City
 	rawchar 0, ABRA,       MACHOP,     "Muscle@@@@@"
-	db $EE, $EE, $EE, HIDDEN_ABILITY | NAT_ATK_UP_SATK_DOWN,  FEMALE, LEVEL_BALL,   SITRUS_BERRY
+	db $EE, $EE, $EE, HIDDEN_ABILITY | NAT_ATK_UP_SATK_DOWN,  FEMALE, PREMIER_BALL,   SITRUS_BERRY
 	dw 37460
 	rawchar "Mike@@@@", $00
 ; NPC_TRADE_KYLE in Violet City
 	rawchar 0, POLIWAG,    VOLTORB,    "Mimic@@@@@@"
-	db $EE, $EE, $EE, HIDDEN_ABILITY | NAT_SPD_UP_DEF_DOWN,   MALE,   PREMIER_BALL, PERSIM_BERRY
+	db $EE, $EE, $EE, HIDDEN_ABILITY | NAT_SPD_UP_DEF_DOWN,   MALE,   DECI_BALL, PERSIM_BERRY
 	dw 48926
 	rawchar "Kyle@@@@", $00
 ; NPC_TRADE_TIM in Olivine City
 	rawchar 1, STEELIX,    KANGASKHAN, "Joey@@@@@@@"
-	db $EE, $EE, $EE, HIDDEN_ABILITY | NAT_ATK_UP_SPD_DOWN,   MALE,   HEAVY_BALL,   SILK_SCARF
+	db $EE, $EE, $EE, HIDDEN_ABILITY | NAT_ATK_UP_SPD_DOWN,   MALE,   ULTRA_BALL,   SILK_SCARF
 	dw 29189
 	rawchar "Tim@@@@@", $00
 ; NPC_TRADE_EMY in Blackthorn City
@@ -32,7 +32,7 @@ NPCTrades:
 	rawchar "Kim@@@@@", $00
 ; NPC_TRADE_JACQUES in Goldenrod Harbor
 	rawchar 1, GRIMER,  GRIMER,     "Gail@@@@@@@"
-	db $EE, $EE, $EE, HIDDEN_ABILITY | NAT_SDEF_UP_SATK_DOWN, FEMALE, LURE_BALL,    EVIOLITE
+	db $EE, $EE, $EE, HIDDEN_ABILITY | NAT_SDEF_UP_SATK_DOWN, FEMALE, BUB_BALL,    EVIOLITE
 	dw 50082
 	rawchar "Jacques@", $00
 ; NPC_TRADE_HARI in Ecruteak City

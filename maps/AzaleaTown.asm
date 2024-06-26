@@ -43,6 +43,7 @@ AzaleaTown_MapScriptHeader:
 	object_event 15, 15, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, SLOWPOKE, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AzaleaTownSlowpokeScript, -1
 	fruittree_event  8,  2, FRUITTREE_AZALEA_TOWN, WHT_APRICORN, PAL_NPC_SILVER
 
+
 	object_const_def
 	const AZALEATOWN_GRAMPS
 	const AZALEATOWN_POKEFAN_F

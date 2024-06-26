@@ -18,7 +18,7 @@ AnarresCharcoalKiln_MapScriptHeader:
 	def_object_events
 	object_event 7, 4, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, jumptextfaceplayer, AnarresKilnCharcoalScript, -1 ; gives the charcoal
 	object_event 2, 5, SPRITE_BLACK_BELT, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, AnarresKilnNPC2Text, -1 ;
-	object_event 5, 5, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, AnarresKilnNPC3Text, -1 ;
+	object_event 5, 5, SPRITE_BLACK_BELT, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, AnarresKilnNPC3Text, -1 ;
 
 	object_const_def
 	const ANARRES_KILN_BLACKBELT

@@ -14,10 +14,9 @@ OlivineGym_MapScriptHeader:
 	bg_event  6, 13, BGEVENT_READ, OlivineGymStatue
 
 	def_object_events
-	object_event  5,  3, SPRITE_JASMINE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OlivineGymJasmineScript, EVENT_OLIVINE_GYM_JASMINE
+	object_event  5,  3, SPRITE_JASMINE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OlivineGymJasmineScript, -1
 	object_event  7, 13, SPRITE_GYM_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OlivineGymGuyScript, -1
-	object_event  3, 10, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, OlivineGymGentlemanPreston, EVENT_OLIVINE_GYM_JASMINE
-	object_event  6,  7, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, OlivineGymLassConnie, EVENT_OLIVINE_GYM_JASMINE
+
 
 OlivineGymJasmineScript:
 	faceplayer
@@ -37,8 +36,6 @@ OlivineGymJasmineScript:
 	playsound SFX_GET_BADGE
 	waitsfx
 	setflag ENGINE_MINERALBADGE
-	clearevent EVENT_GOLDENROD_CITY_ROCKET_TAKEOVER
-	setmapscene ROUTE_42, $1
 .FightDone:
 	checkevent EVENT_GOT_TM23_IRON_TAIL
 	iftrue_jumpopenedtext Jasmine_GoodLuck
@@ -56,8 +53,6 @@ OlivineGymJasmineScript:
 OlivineGymGuyScript:
 	checkevent EVENT_BEAT_JASMINE
 	iftrue_jumptextfaceplayer OlivineGymGuyWinText
-	checkevent EVENT_JASMINE_RETURNED_TO_GYM
-	iffalse_jumptextfaceplayer OlivineGymGuyPreText
 	jumpthistextfaceplayer
 
 	text "Jasmine uses the"
@@ -68,86 +63,14 @@ OlivineGymGuyScript:
 	line "much about it."
 	done
 
-OlivineGymLassConnie:
-	trainer 0, 0, EVENT_SPOKE_TO_LASS_CONNIE, .SeenText, 0, 0, .Script
-
-.Script:
-	endifjustbattled
-	checkevent EVENT_BEAT_JASMINE
-	iftrue_jumptextfaceplayer .AfterText
-	jumpthistextfaceplayer
-
-.SeenText:
-	text "Giggle… I know"
-	line "how capable you"
-
-	para "are from the"
-	line "Lighthouse."
-
-	para "It's time you"
-	line "showed that to"
-	cont "Jasmine!"
-
-	para "Good luck!"
-	done
-
-.AfterText:
-	text "You are amazing…"
-	line "You should aim"
-
-	para "even higher, with"
-	line "such potential."
-
-	para "Have you been to"
-	line "Mahogany Town?"
-	done
-
-OlivineGymGentlemanPreston:
-	trainer 0, 0, EVENT_SPOKE_TO_GENTLEMAN_PRESTON, .SeenText, 0, 0, .Script
-
-.Script:
-	endifjustbattled
-	checkevent EVENT_BEAT_JASMINE
-	iftrue_jumptextfaceplayer .AfterText
-	jumpthistextfaceplayer
-
-.SeenText:
-	text "I knew you'd"
-	line "come here."
-
-	para "Thank you for"
-	line "helping the"
-	cont "Gym Leader,"
-
-	para "but battle is a"
-	line "separate matter."
-
-	para "Go for it!"
-	done
-
-.AfterText:
-	text "Impressive!"
-	line "You should earn"
-
-	para "more badges with"
-	line "that much skill."
-	done
 
 OlivineGymStatue:
 	gettrainername JASMINE, 1, $1
-	checkevent EVENT_JASMINE_RETURNED_TO_GYM
-	iftrue .Returned
-	jumpstd gymstatue0
-.Returned
 	checkflag ENGINE_MINERALBADGE
 	iftrue .Beaten
 	jumpstd gymstatue1
 .Beaten
-	readvar VAR_BADGES
-	ifgreater 13, .LyraToo
 	jumpstd gymstatue2
-.LyraToo
-	jumpstd gymstatue3
 
 Jasmine_SteelTypeIntro:
 	text "…Thank you for"

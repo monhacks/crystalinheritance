@@ -50,6 +50,8 @@ ENDM
 	special_bg_pal tileset,  TILESET_SAFARI_ZONE,         PAL_TIMEOFDAY, SafariZonePalette
 	special_bg_pal tileset,  TILESET_RUINS_OF_ALPH,       PAL_SINGLE,    RuinsPalette
 	special_bg_pal tileset,  TILESET_ALPH_WORD_ROOM,      PAL_SINGLE,    RuinsPalette
+;	special_bg_pal map, 	 HOLLYS_HOLT, 				  PAL_SINGLE,    SepiaForestPalette ; LOOKS REALLY BAD...
+	special_bg_pal landmark, ANARRES_TOWN, 				  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; looks OK.
 	special_bg_pal overcast, (unused),                    PAL_TIMEOFDAY, OvercastBGPalette
 	db 0 ; end
 
@@ -627,6 +629,19 @@ endr
 	RGB_MONOCHROME_BLACK
 endc
 
+SepiaForestPalette:
+if !DEF(MONOCHROME)
+INCLUDE "maps/SepiaForest.pal" ; made with PLC_Mild_sepia_pal.py in downloads folder
+else
+rept 7
+	MONOCHROME_RGB_FOUR
+endr
+	RGB_MONOCHROME_WHITE
+	RGB_MONOCHROME_WHITE
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_BLACK
+endc
+
 IvysLabPalette:
 if !DEF(MONOCHROME)
 INCLUDE "maps/IvysLab.pal"
@@ -949,6 +964,39 @@ endc
 VioletEcruteakPalette:
 if !DEF(MONOCHROME)
 INCLUDE "gfx/tilesets/violet_ecruteak.pal"
+else
+rept 7
+	MONOCHROME_RGB_FOUR
+endr
+	RGB_MONOCHROME_WHITE
+	RGB_MONOCHROME_WHITE
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_BLACK
+rept 7
+	MONOCHROME_RGB_FOUR
+endr
+	RGB_MONOCHROME_WHITE
+	RGB_MONOCHROME_WHITE
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_BLACK
+rept 4
+	MONOCHROME_RGB_FOUR_NIGHT
+endr
+	RGB_MONOCHROME_WHITE
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_BLACK
+	MONOCHROME_RGB_FOUR_NIGHT
+	MONOCHROME_RGB_FOUR_NIGHT
+	RGB_MONOCHROME_WHITE
+	RGB_MONOCHROME_WHITE
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_BLACK
+endc
+
+SepiaVioletEcruteakPalette:
+if !DEF(MONOCHROME)
+INCLUDE "gfx/tilesets/violet_ecruteak_mildsepia.pal"
 else
 rept 7
 	MONOCHROME_RGB_FOUR

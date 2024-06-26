@@ -87,8 +87,7 @@ KurtHouseEventScript: ;todo the apricorn box is still kinda messy
 	promptbutton
 .NoInstructions:
 	promptbutton
-	verbosegivekeyitem APRICORN_BOX
-	promptbutton
+	givekeyitem APRICORN_BOX ; used to be verbosegivekeyitem
 	writetext KurtOutroText0
 	promptbutton
 	special SpecialNameRival
@@ -96,12 +95,16 @@ KurtHouseEventScript: ;todo the apricorn box is still kinda messy
 	waitbutton
 	closetext
 	applymovement KURTSHOUSE_KURT, .kurt_walks_back
+	disappear KURTSHOUSE_KURT
 	special RestartMapMusic
 	end
 
 .kurt_walks_back:
 	step_down
-	turn_head_right
+	step_down
+	step_down
+	step_down
+	step_down
 	step_end
 
 KurtIntroText: 
@@ -124,6 +127,16 @@ MomPokegearText:
 	para "I also threw in"
 	line "a new Apricorn"
 	cont "box."
+	
+	para "You can use that"
+	line "Apricorn kit at"
+	cont "any bench."
+	
+	para "You're getting so"
+	line "good. I think you"
+	cont "could fashion a"
+	cont "ball from almost"
+	cont "anything!"
 
 	para "Oh, the day of the"
 	line "week isn't set."
@@ -157,11 +170,7 @@ MomInstructionsText:
 	done
 
 KurtOutroText0:
-	text "You can use that"
-	line "Apricorn kit at"
-	cont "any bench."
-
-	para "We're waiting on"
+	text "We're waiting on"
 	line "the charcoal fam-"
 	cont "ily. Do you know"
 	cont "the boy's name?"
@@ -171,6 +180,9 @@ KurtOutroText:
 	text "Can you go see"
 	line "what is taking"
 	cont "them so long?"
+	
+	para "I'll go outside"
+	line "and wait."
 	done
 
 KurtHouseScript:
@@ -278,14 +290,13 @@ endr
 	giveitem LEFTOVERS, 99
 	giveitem BIG_NUGGET, 99
 	giveitem SILVER_LEAF, 99
-	giveitem GOLD_LEAF, 99
-	giveitem BOTTLE_CAP, 99
-	giveitem MULCH, 99
-	giveitem MINT_LEAF, 99
-	giveitem ODD_SOUVENIR, 10
-for x, EVENT_DECO_BED_1, EVENT_DECO_BIG_LAPRAS_DOLL + 1
-	setevent x
-endr
+	verbosegiveitem RADIANT_OPAL, 5
+	verbosegiveitem SHORE_FOAM, 5
+	verbosegiveitem FIXED_CHARGE, 5
+	verbosegiveitem TOUGH_LEAVES, 5
+	verbosegiveitem HOLLOW_ROCK, 5
+	verbosegiveitem WHT_APRICORN, 5
+	verbosegiveitem PNK_APRICORN, 5
 	; max money
 	givemoney $0, 1000000
 	givemoney $0, 1000000
@@ -325,18 +336,6 @@ endr
 	setevent EVENT_BEAT_JASMINE
 	setevent EVENT_BEAT_PRYCE
 	setevent EVENT_BEAT_CLAIR
-	setevent EVENT_BEAT_HOLLIS
-	setevent EVENT_BEAT_MISTY
-	setevent EVENT_BEAT_LTSURGE
-	setevent EVENT_BEAT_ERIKA
-	setevent EVENT_BEAT_JANINE
-	setevent EVENT_BEAT_SABRINA
-	setevent EVENT_BEAT_BLAINE
-	setevent EVENT_BEAT_BLUE
-	setevent EVENT_BEAT_ELITE_FOUR
-	setevent EVENT_BEAT_ELITE_FOUR_AGAIN
-	setevent EVENT_BATTLE_TOWER_OPEN
-	clearevent EVENT_BATTLE_TOWER_CLOSED
 	; fly anywhere
 	setflag ENGINE_FLYPOINT_VIOLET
 	setflag ENGINE_FLYPOINT_UNION_CAVE
@@ -413,6 +412,8 @@ ApricornBenchScript:
 	opentext
 	writetext CheckForApricornsText
 	promptbutton
+.ApricornBenchScript2:
+	opentext
 	checkevent EVENT_GAVE_KURT_RED_APRICORN
 	iftrue .GiveLevelBall
 	checkevent EVENT_GAVE_KURT_BLU_APRICORN
@@ -447,13 +448,13 @@ endr
 	promptbutton
 	special Special_SelectApricornForKurt
 	iffalse_jumpopenedtext KurtsHouseKurtThatsALetdownText
-	ifequal BLU_APRICORN, .Blu
-	ifequal YLW_APRICORN, .Ylw
-	ifequal GRN_APRICORN, .Grn
+	ifequal SHORE_FOAM, .Blu
+	ifequal FIXED_CHARGE, .Ylw
+	ifequal TOUGH_LEAVES, .Grn
 	ifequal WHT_APRICORN, .Wht
-	ifequal BLK_APRICORN, .Blk
+	ifequal HOLLOW_ROCK, .Blk
 	ifequal PNK_APRICORN, .Pnk
-; .Red
+;.Red yes this should be commented out
 	setevent EVENT_GAVE_KURT_RED_APRICORN
 	sjump .GaveKurtApricorns
 
@@ -483,7 +484,7 @@ endr
 	writetext KurtsHouseKurtGetStartedText
 	waitbutton
 	closetext
-	sjump ApricornBenchScript;Kurt1
+	sjump .ApricornBenchScript2 ;Kurt1
 
 .ThatTurnedOutGreat:
 	jumpopenedtext KurtsHouseKurtTurnedOutGreatText
@@ -491,7 +492,7 @@ endr
 .GiveLevelBall:
 	writetext KurtsHouseKurtJustFinishedYourBallText
 	promptbutton
-	verbosegiveitemvar LEVEL_BALL, VAR_KURT_APRICORNS
+	verbosegiveitemvar JEZE_BALL, VAR_KURT_APRICORNS
 	iffalse_endtext
 	clearevent EVENT_GAVE_KURT_RED_APRICORN
 	sjump .ThatTurnedOutGreat
@@ -499,7 +500,7 @@ endr
 .GiveLureBall:
 	writetext KurtsHouseKurtJustFinishedYourBallText
 	promptbutton
-	verbosegiveitemvar LURE_BALL, VAR_KURT_APRICORNS
+	verbosegiveitemvar BUB_BALL, VAR_KURT_APRICORNS
 	iffalse_endtext
 	clearevent EVENT_GAVE_KURT_BLU_APRICORN
 	sjump .ThatTurnedOutGreat
@@ -507,7 +508,7 @@ endr
 .GiveMoonBall:
 	writetext KurtsHouseKurtJustFinishedYourBallText
 	promptbutton
-	verbosegiveitemvar MOON_BALL, VAR_KURT_APRICORNS
+	verbosegiveitemvar DECI_BALL, VAR_KURT_APRICORNS
 	iffalse_endtext
 	clearevent EVENT_GAVE_KURT_YLW_APRICORN
 	sjump .ThatTurnedOutGreat
@@ -515,7 +516,7 @@ endr
 .GiveFriendBall:
 	writetext KurtsHouseKurtJustFinishedYourBallText
 	promptbutton
-	verbosegiveitemvar FRIEND_BALL, VAR_KURT_APRICORNS
+	verbosegiveitemvar HERB_BALL, VAR_KURT_APRICORNS
 	iffalse_endtext
 	clearevent EVENT_GAVE_KURT_GRN_APRICORN
 	sjump .ThatTurnedOutGreat
@@ -531,7 +532,7 @@ endr
 .GiveHeavyBall:
 	writetext KurtsHouseKurtJustFinishedYourBallText
 	promptbutton
-	verbosegiveitemvar HEAVY_BALL, VAR_KURT_APRICORNS
+	verbosegiveitemvar GEODE, VAR_KURT_APRICORNS
 	iffalse_endtext
 	clearevent EVENT_GAVE_KURT_BLK_APRICORN
 	sjump .ThatTurnedOutGreat
@@ -546,7 +547,7 @@ endr
 
 KurtsHouseKurtGetStartedText:
 	text "Time to work on"
-	line "this apricorn."
+	line "this."
 	done
 
 KurtsHouseKurtJustFinishedYourBallText:
@@ -560,7 +561,7 @@ KurtsHouseKurtTurnedOutGreatText:
 	
 KurtsHouseKurtThatsALetdownText:
 	text "Too bad. Need"
-	line "To find some!"
+	line "to find some!"
 	done
 
 KurtsHouseKurtAskYouHaveAnApricornText:
@@ -568,6 +569,6 @@ KurtsHouseKurtAskYouHaveAnApricornText:
 	done
 
 CheckForApricornsText:
-	text "Any apricorns"
+	text "Any items"
 	line "in the bag?"
 	done

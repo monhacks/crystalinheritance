@@ -49,7 +49,7 @@ GenericTrainerFirebreatherOtis:
 	text "My greatest wish?"
 	line "See the fire-"
 	cont "steel type #-"
-	cont "mon that livs"
+	cont "mon that lives"
 	cont "in volcanos."
 	done
 

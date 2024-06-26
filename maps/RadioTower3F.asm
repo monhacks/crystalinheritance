@@ -17,33 +17,20 @@ RadioTower3F_MapScriptHeader:
 	bg_event 14,  2, BGEVENT_UP, CardKeySlotScript
 
 	def_object_events
-	object_event  7,  4, SPRITE_POKEMANIAC, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, RadioTower3FSuperNerdText, EVENT_RADIO_TOWER_CIVILIANS_AFTER
+	object_event  7,  4, SPRITE_POKEMANIAC, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, RadioTower3FSuperNerdText, -1
 	object_event  3,  4, SPRITE_SUPER_NERD, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, RadioTower3FGymGuideScript, -1
 	object_event 11,  3, SPRITE_BATTLE_GIRL, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, RadioTower3FCooltrainerFScript, -1
-	object_event  9,  6, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 5, GenericTrainerRocketScientistMarc, EVENT_RADIO_TOWER_ROCKET_TAKEOVER
+	object_event  9,  6, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 5, GenericTrainerRocketScientistMarc, -1
 
 CardKeyShutterCallback:
-	checkevent EVENT_USED_THE_CARD_KEY_IN_THE_RADIO_TOWER
-	iftrue .Change
-	endcallback
-
-.Change:
 	changeblock 14, 2, $2a
 	changeblock 14, 4, $1
 	endcallback
 
 RadioTower3FGymGuideScript:
-	checkevent EVENT_CLEARED_RADIO_TOWER
-	iftrue_jumptextfaceplayer RadioTower3FGymGuideText
 	jumptextfaceplayer RadioTower3FGymGuideText_Rockets
 
 RadioTower3FCooltrainerFScript:
-	checkevent EVENT_GOT_HEAT_ROCK_FROM_RADIO_TOWER
-	iftrue_jumptextfaceplayer RadioTower3FCooltrainerFYouWereMarvelousText
-	checkevent EVENT_CLEARED_RADIO_TOWER
-	iftrue .NoRockets
-	checkevent EVENT_USED_THE_CARD_KEY_IN_THE_RADIO_TOWER
-	iftrue_jumptextfaceplayer RadioTower3FCooltrainerFIsDirectorSafeText
 	jumpthistextfaceplayer
 
 	text "The Team Rocket"
@@ -59,20 +46,6 @@ RadioTower3FCooltrainerFScript:
 	para "Please save him!"
 	done
 
-.NoRockets:
-	faceplayer
-	opentext
-	writetext RadioTower3FCooltrainerFYoureMyHeroText
-	promptbutton
-	verbosegiveitem HEAT_ROCK
-	iffalse_endtext
-	writetext RadioTower3FCooltrainerFItsAHeatRockText
-	waitbutton
-	closetext
-	setevent EVENT_GOT_HEAT_ROCK_FROM_RADIO_TOWER
-	end
-
-
 GenericTrainerRocketScientistMarc:
 	generictrainer ROCKET_SCIENTIST, MARC, EVENT_BEAT_ROCKET_SCIENTIST_MARC, RocketScientistMarcSeenText, RocketScientistMarcBeatenText
 
@@ -83,28 +56,12 @@ GenericTrainerRocketScientistMarc:
 	cont "I need from here."
 	done
 
-CardKeySlotScript::
+CardKeySlotScript:: ;SHOULD THIS HAVE ONLY ONE COLON?
 	opentext
 	writetext RadioTower3FCardKeySlotText
 	waitbutton
-	checkevent EVENT_USED_THE_CARD_KEY_IN_THE_RADIO_TOWER
-	iftrue .UsedCardKey
-	checkkeyitem CARD_KEY
-	iftrue .HaveCardKey
-.UsedCardKey:
 	endtext
 
-.HaveCardKey:
-	writetext InsertedTheCardKeyText
-	waitbutton
-	setevent EVENT_USED_THE_CARD_KEY_IN_THE_RADIO_TOWER
-	playsound SFX_ENTER_DOOR
-	changeblock 14, 2, $2a
-	changeblock 14, 4, $1
-	reloadmappart
-	closetext
-	waitsfx
-	end
 
 RadioTower3FSuperNerdText:
 	text "We have recordings"

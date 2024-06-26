@@ -163,7 +163,7 @@ CutFunction:
 	dw .FailCut
 
 .CheckAble:
-	ld de, ENGINE_HIVEBADGE ;change this to ENGINE_BOULDERBADGE, and defeating the first Anarres elder gives this engine thing
+	ld de, ENGINE_BOULDERBADGE ;change this to ENGINE_BOULDERBADGE, and defeating the first Anarres elder gives this engine thing
 	call CheckBadge
 	jr c, .nohivebadge
 	call CheckMapForSomethingToCut
@@ -436,7 +436,7 @@ SurfFunction:
 	dw .AlreadySurfing
 
 .TrySurf:
-	ld de, ENGINE_FOGBADGE
+	ld de, ENGINE_BOULDERBADGE ; USED TO BE FOG BADGE
 	call CheckBadge
 	jr c, .asm_c956
 	ld hl, wOWState
@@ -588,7 +588,7 @@ TrySurfOW::
 	call CheckDirection
 	jr c, .quit
 
-	ld de, ENGINE_FOGBADGE
+	ld de, ENGINE_BOULDERBADGE ; FOGBADGE
 	call CheckEngineFlag
 	jr c, .quit
 
@@ -672,7 +672,7 @@ FlyFunction:
 
 .TryFly:
 ; Fly
-	ld de, ENGINE_STORMBADGE
+	ld de, ENGINE_BOULDERBADGE ; STORMBADGE
 	call CheckBadge
 	jr c, .nostormbadge
 	call CheckFlyAllowedOnMap
@@ -761,7 +761,7 @@ WaterfallFunction:
 
 .TryWaterfall:
 ; Waterfall
-	ld de, ENGINE_RISINGBADGE
+	ld de, ENGINE_BOULDERBADGE ; RISINGBADGE
 	call CheckBadge
 	ld a, $80
 	ret c
@@ -832,7 +832,7 @@ TryWaterfallOW::
 	ld d, WATERFALL
 	call CheckPartyMove
 	jr c, .failed
-	ld de, ENGINE_RISINGBADGE
+	ld de, ENGINE_BOULDERBADGE ; RISING BADGE
 	call CheckEngineFlag
 	jr c, .failed
 	call CheckMapCanWaterfall
@@ -1067,7 +1067,7 @@ StrengthFunction:
 
 .TryStrength:
 ; Strength
-	ld de, ENGINE_PLAINBADGE
+	ld de, ENGINE_BOULDERBADGE ; PLAINBADGE
 	call CheckBadge
 	jr nc, .UseStrength
 
@@ -1132,7 +1132,7 @@ TryStrengthOW:
 	call CheckPartyMove
 	jr c, .nope
 
-	ld de, ENGINE_PLAINBADGE
+	ld de, ENGINE_BOULDERBADGE ; PLAINBADGE
 	call CheckEngineFlag
 	jr c, .nope
 
@@ -1171,7 +1171,7 @@ Jumptable_cdae:
 	dw .FailWhirlpool
 
 .TryWhirlpool:
-	ld de, ENGINE_GLACIERBADGE
+	ld de, ENGINE_BOULDERBADGE ; GLACIERBADGE
 	call CheckBadge
 	jr c, .noglacierbadge
 	call TryWhirlpoolMenu
@@ -1281,7 +1281,7 @@ TryWhirlpoolOW::
 	ld d, WHIRLPOOL
 	call CheckPartyMove
 	jr c, .failed
-	ld de, ENGINE_GLACIERBADGE
+	ld de, ENGINE_BOULDERBADGE ; GLACIER BADGE
 	call CheckEngineFlag
 	jr c, .failed
 	call TryWhirlpoolMenu
@@ -1849,7 +1849,7 @@ HasCutAvailable::
 	call CheckPartyMove
 	jr c, .no
 
-	ld de, ENGINE_HIVEBADGE
+	ld de, ENGINE_BOULDERBADGE ; HIVEBADGE
 	call CheckEngineFlag
 	jr c, .no
 

@@ -100,12 +100,12 @@ GoldenrodPokecenter1FPokefanF:
 	opentext
 	writetext GoldenrodPokecenter1FPokefanFDoYouHaveEonMailText
 	waitbutton
-	checkitem EON_MAIL
+	checkitem SURF_MAIL
 	iffalse_jumpopenedtext GoldenrodPokecenter1FPokefanFTooBadText
 	writetext GoldenrodPokecenter1FAskGiveAwayAnEonMailText
 	yesorno
 	iffalse_jumpopenedtext GoldenrodPokecenter1FPokefanFTooBadText
-	takeitem EON_MAIL
+	takeitem SURF_MAIL
 	writetext GoldenrodPokecenter1FPlayerGaveAwayTheEonMailText
 	waitbutton
 	writetext GoldenrodPokecenter1FPokefanFThisIsForYouText
@@ -120,7 +120,7 @@ GoldenrodPokecenter1FPokefanF:
 	done
 
 .NoRoomForEviolite:
-	giveitem EON_MAIL
+	giveitem SURF_MAIL
 	jumpthisopenedtext
 
 	text "Oh… Well, another"
@@ -133,7 +133,7 @@ GoldenrodPokecenter1FPokefanFDoYouHaveEonMailText:
 
 	para "Oh! Do you happen"
 	line "to have something"
-	cont "named Eon Mail?"
+	cont "named Surf Mail?"
 
 	para "My daughter is"
 	line "after one."

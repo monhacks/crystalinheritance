@@ -17,7 +17,7 @@ MapScenes::
 	scene_var BURNED_TOWER_1F,                        wBurnedTower1FSceneID
 	scene_var BURNED_TOWER_B1F,                       wBurnedTowerB1FSceneID
 	scene_var TINDER_GARDEN,                          wTinderGardenSceneID ; cerulean cape
-;	scene_var CERULEAN_CAVE_1F,                       wCeruleanCave1FSceneID
+	scene_var ANARRES_TOWER_3F,                       wAnarresTower3FSceneID ; cerulean cave 1f
 ;	scene_var CERULEAN_GYM,                           wCeruleanGymSceneID
 ;	scene_var CHERRYGROVE_CITY,                       wCherrygroveCitySceneID
 	scene_var CIANWOOD_CITY,                          wCianwoodCitySceneID

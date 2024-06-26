@@ -141,7 +141,7 @@ TrainerClassNames::
 	li "<PK><MN> Trainer" ; KUKUI
 	li "Surfer"           ; VICTOR
 	li "#Maniac"          ; BILL_T
-	li "Anarres"          ; TAMMY (YELLOW)
+	li "Anarres"          ; TAMMY (YELLOW), yup this is right
 	li "<PK><MN> Trainer" ; SILVER FROM WALKER rival
 	li "Student"          ; IMAKUNI
 	li "General"          ; Kensey  / LAWRENCE

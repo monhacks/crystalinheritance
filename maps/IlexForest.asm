@@ -34,16 +34,17 @@ IlexForest_MapScriptHeader:
 	object_event 10, 21, SPRITE_CELEBI, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IlexForestCelebiScript, EVENT_KURTS_HOUSE_KURT_0 ;stays disappeared
 	object_event  4, 26, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IlexForestRivalScript, EVENT_KURTS_HOUSE_KURT_0 ;stays disappeared
 	object_event 25, 24, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IlexHealerScript, -1
-	object_event  5, 35, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBug_catcherWade, -1 
-	object_event 13, 36, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerYoungsterJoey, -1 
-	object_event 19, 25, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBug_catcherArnie, -1 
-	object_event 29, 31, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerYoungsterMikey, -1 ; -
-	object_event 25, 19, SPRITE_PICNICKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerPicnickerLiz, -1 ; 
-	object_event 29, 11, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerEngineerSmith, EVENT_LOGGERS_ILEX_FOREST
-	object_event 15, 14, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerOfficerMKeith, EVENT_LOGGERS_ILEX_FOREST ;todo move keith
+	object_event  5, 35, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerBug_catcherWade, -1 
+	object_event 13, 36, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerYoungsterJoey, -1 
+	object_event 19, 25, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerBug_catcherArnie, -1 
+	object_event 29, 31, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerYoungsterMikey, -1 ; -
+	object_event 25, 19, SPRITE_PICNICKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerPicnickerLiz, -1 ; 
+	object_event 29, 11, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerEngineerSmith, EVENT_LOGGERS_ILEX_FOREST
+	object_event 15, 14, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerOfficerMKeith, EVENT_LOGGERS_ILEX_FOREST ;todo move keith
 	itemball_event 22, 34, REVIVE, 1, EVENT_ILEX_FOREST_REVIVE ;ok
 	tmhmball_event 13, 14, TM_SAFEGUARD, EVENT_ILEX_FOREST_ANTIDOTE
 	itemball_event 19, 16, SUPER_POTION, 1, EVENT_ILEX_FOREST_MULCH;OK
+	fruittree_event 10, 14, FRUITTREE_ILEX_FOREST, SHORE_FOAM, PAL_NPC_BLUE;OK
 
 
 	object_const_def
@@ -68,6 +69,7 @@ IlexForestKurtScript:
 	faceplayer
 	opentext
 	writetext RuinsOfAlphText
+	waitbutton
 	closetext
 	end
 	
@@ -248,9 +250,11 @@ GenericTrainerOfficerMKeith:
 IlexHealerScript:
 	opentext
 	writetext WantToHeal
+	waitbutton
 	special HealParty
 	special SaveMusic	
 	writetext IlexHealedPokemon
+	waitbutton
 	closetext
 	playmusic MUSIC_NONE	
 	special RestoreMusic
@@ -266,16 +270,20 @@ IlexForestKurtEngineerScript:
 	showemote EMOTE_SHOCK, ILEX_FOREST_KURT, 15
 	opentext
 	writetext KurtText1 
+	waitbutton
 	closetext
 	applymovement ILEX_FOREST_CAMDEN, CamdenMoves1
 	opentext
 	writetext CamdenText1
+	promptbutton
 	writetext KurtText2
+	waitbutton
 	closetext
 	disappear ILEX_GS_BALL
 	applymovement ILEX_FOREST_CAMDEN, CamdenMoves2
 	opentext
 	writetext CamdenText2
+	waitbutton
 	closetext
 	clearevent EVENT_LOGGERS_ILEX_FOREST
 	winlosstext CamdenWinText, 0
@@ -288,6 +296,7 @@ IlexForestKurtEngineerScript:
 ;	playmusic MUSIC_RIVAL_AFTER
 	opentext
 	writetext CamdenLeavingText ; should i opentext closetext this?
+	waitbutton
 	closetext
 	applymovement ILEX_FOREST_CAMDEN, CamdenExitMovement
 	disappear ILEX_FOREST_CAMDEN
@@ -297,8 +306,10 @@ IlexForestKurtEngineerScript:
 	turnobject PLAYER, RIGHT
 	opentext
 	writetext KurtExplainsGSBallText
+	waitbutton
 	showemote EMOTE_SHOCK, ILEX_FOREST_KURT, 15
 	writetext KurtExplainsGSBallText2
+	waitbutton
 	closetext
 	setevent EVENT_LOGGERS_ILEX_FOREST
 	setscene $0 ;won't get set for the time travel until ruins of alph is done
@@ -475,6 +486,7 @@ EngineerCamdenScript: ;shouldn't be able to access this
 GSBallScript: ;shouldn't be able to access this
 	opentext
 	writetext GSBallText
+	waitbutton
 	closetext
 	done
 	
@@ -499,6 +511,7 @@ IlexForestCelebiEventScript:
 	promptbutton
 	turnobject ILEX_FOREST_KURT, UP
 	writetext InsertingGSBallText
+	waitbutton
 	closetext ; start to appear celebi 
 	special Special_FadeOutMusic
 	pause 15
@@ -510,15 +523,19 @@ IlexForestCelebiEventScript:
 	showemote EMOTE_QUESTION, ILEX_RIVAL, 15
 	opentext
 	writetext IlexRivalWhatDoing
+	waitbutton
 	closetext
 	applymovement ILEX_FOREST_KURT, KurtMovesRival
 	opentext
 	writetext KurtStayOutOfThis
+	waitbutton
 	closetext
 	showemote EMOTE_SHOCK, ILEX_RIVAL, 15	
 	applymovement ILEX_RIVAL, RivalWalksToYou
+	turnobject PLAYER, LEFT
 	opentext
 	writetext RivalRespondsToKurt
+	waitbutton
 	closetext
 	checkevent EVENT_GOT_OSHAWOTT
 	iftrue .Oshawott
@@ -556,6 +573,7 @@ IlexForestCelebiEventScript:
 	playmusic MUSIC_RIVAL_AFTER
 	opentext
 	writetext RivalLeavesHumiliated
+	waitbutton
 	closetext
 	applymovement ILEX_RIVAL, IlexRivalLeavesMovement
 	disappear ILEX_RIVAL
@@ -567,12 +585,14 @@ IlexForestCelebiEventScript:
 	promptbutton
 	closetext
 	turnobject ILEX_FOREST_KURT, UP
+	turnobject PLAYER, RIGHT
 	appear ILEX_CELEBI
 	applymovement ILEX_CELEBI, IlexCelebiMovement
 	pause 50
 	showemote EMOTE_SHOCK, ILEX_FOREST_KURT, 15
 	opentext
 	writetext WhatIsNaturalText
+	waitbutton
 	closetext
 	setevent SUMMONED_CELEBI_IN_ILEX
 	setevent EVENT_ILEX_SHRINE_CELEBI

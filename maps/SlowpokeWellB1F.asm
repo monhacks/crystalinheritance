@@ -14,7 +14,9 @@ SlowpokeWellB1F_MapScriptHeader:
 
 	def_object_events
 	object_event 13, 2, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, SlowpokeWellB1FGuardScript, SLOWPOKE_WELL_MOVED_ASIDE
-	strengthboulder_event  3, 2
+	strengthboulder_event  12, 2
+	strengthboulder_event  14, 2
+	strengthboulder_event  3, 2	
 	itemball_event 10,  3, SUPER_POTION, 1, EVENT_SLOWPOKE_WELL_B1F_SUPER_POTION
 	object_event  5,  4, SPRITE_BAKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SlowpokeWellB1FRolloutScript, -1 ;todo make this cost a silver leaf
 
@@ -29,18 +31,23 @@ SlowpokeWellB1FGuardScript:
 	checkevent EVENT_LOGGERS_ILEX_FOREST
 	iftrue .MovesAside
 	writetext SlowpokeWellImGuardingText
+	waitbutton
 	closetext
-	end ;is this how it is done?
+	end 
 	
 .MovesAside:
 	writetext SlowpokeWellMovesAsideText
+	waitbutton
+	closetext
+	applyonemovement PLAYER, step_down
+	turnobject PLAYER, UP
 	applymovement SLOWPOKE_WELL_B1F_SCHOOLBOY, MovesAsideMovement
 	setevent SLOWPOKE_WELL_MOVED_ASIDE
-	closetext
 	end
 
 .MovedAside:
 	writetext SlowpokeWellMovesAsideText
+	waitbutton
 	closetext
 	end
 
@@ -53,8 +60,9 @@ SlowpokeWellImGuardingText:
 	done
 
 MovesAsideMovement:
-	step_left
-	turn_head_down
+	step_down
+	step_right
+	turn_head_left
 	step_end
 
 SlowpokeWellMovesAsideText:

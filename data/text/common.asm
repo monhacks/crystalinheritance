@@ -3,8 +3,8 @@ INCLUDE "constants.asm"
 
 SECTION "_FruitBearingTreeText", ROMX
 _FruitBearingTreeText::
-	text "It's a fruit-"
-	line "bearing tree."
+	text "This looks"
+	line "interesting."
 	done
 
 SECTION "_HeyItsFruitText", ROMX
@@ -2783,8 +2783,8 @@ _PokecenterPCCantUseText::
 
 SECTION "_PlayersPCTurnOnText", ROMX
 _PlayersPCTurnOnText::
-	text "<PLAYER> turned on"
-	line "the PC."
+	text "Accessing"
+	line "the PC..."
 	prompt
 
 SECTION "_PlayersPCAskWhatDoText", ROMX
@@ -3249,7 +3249,17 @@ _MayRegisterItemText::
 
 SECTION "_InitialOptionsText", ROMX
 _InitialOptionsText::
-	text "Please choose how"
+	text "This game was"
+	line "built on the"
+	cont "Polished Crystal"
+	cont "Romhack by dwg."
+	
+	para "Do not contact"
+	line "Rangi42 about"
+	cont "errors you may"
+	cont "encounter."
+	
+	para "Please choose how"
 	line "you want to play"
 	cont "Polished Crystal."
 	prompt

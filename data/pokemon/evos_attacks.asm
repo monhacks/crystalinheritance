@@ -567,8 +567,8 @@ JigglypuffEvosAttacks:
 	db 1, SWEET_KISS ; Igglybuff move
 	db 3, DEFENSE_CURL
 	db 5, TACKLE ; Pound → similar move
-	db 9, DIZZY_PUNCH ; Play Nice → Crystal unique move
-	db 11, DISARM_VOICE
+	db 9, DISARM_VOICE ; Play Nice → Crystal unique move
+	db 11, DIZZY_PUNCH
 	db 14, DISABLE
 	db 17, DOUBLE_SLAP
 	db 20, ROLLOUT
@@ -916,7 +916,7 @@ GrowlitheEvosAttacks:
 	db 1, GROWL
 	db 1, BITE
 	db 1, ROAR
-	db 6, EMBER
+	db 7, EMBER
 	db 8, LEER
 	db 10, SAFEGUARD ; Odor Sleuth → egg move
 	db 12, BATON_PASS ; Helping Hand → new move
@@ -1461,7 +1461,7 @@ GrimerEvosAttacks:
 	db 1, TACKLE ; Pound → similar move
 	db 1, ACID ; Poison Gas → new move
 	db 4, DEFENSE_CURL ; Harden → similar move
-	db 7, MUD_SLAP
+	db 9, MUD_SLAP
 	db 12, DISABLE
 	db 15, VENOSHOCK ; Sludge → tutor move
 	db 18, HAZE ; Mud Bomb → egg move
@@ -1580,7 +1580,7 @@ OnixEvosAttacks:
 	db 1, DEFENSE_CURL ; Harden → similar move
 	db 1, WRAP ; Bind → similar move
 	db 4, CURSE
-	db 7, ROCK_THROW
+	db 8, ROCK_THROW
 	db 10, RAGE
 	db 13, ROCK_BLAST ; Rock Tomb → egg move
 	db 16, BODY_SLAM ; Stealth Rock → TM move
@@ -1629,10 +1629,10 @@ VoltorbEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, THUNDERSHOCK ; Let's Go move
-	db 4, SONIC_BOOM
+	db 4, ROLLOUT
 	db 6, AGILITY ; Eerie Impulse → event move
 	db 9, SPARK
-	db 11, ROLLOUT
+	db 11, SONIC_BOOM
 	db 13, SCREECH
 	db 16, THUNDER_WAVE ; Charge Beam → TM move
 	db 20, SWIFT

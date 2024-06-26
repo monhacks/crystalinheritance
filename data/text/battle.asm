@@ -1716,16 +1716,16 @@ LeafFinalPkmnText:
 	text "………………"
 	prompt
 
-Rival1_1FinalPkmnText:
+Rival1_1FinalPkmnText: ; new
 	text "So this is a"
 	line "#mon battle?"
 
 	prompt
 
-Rival1_2FinalPkmnText:
-	text "Say, you've got a"
-	line "lot of nerve,"
-	cont "coming here…"
+Rival1_2FinalPkmnText: ; new
+	text "I'm not giving"
+	line "up so easily"
+	cont "this time!"
 	prompt
 
 Rival1_3FinalPkmnText:

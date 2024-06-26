@@ -3,7 +3,7 @@ TinderGarden_MapScriptHeader: ;todo something weird happens when I stand to the 
 	scene_script CelebiCeremonyIntroScript
 
 	def_callbacks
-	
+	callback MAPCALLBACK_OBJECTS, TinderGardenPryceIsLate
 	
 	def_warp_events
 	warp_event  4, 17, AZALEA_TOWN, 9
@@ -33,7 +33,7 @@ TinderGarden_MapScriptHeader: ;todo something weird happens when I stand to the 
 	object_event  8, 11, SPRITE_WEIRD_TREE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OshawottPokeBallScript, EVENT_KURTS_HOUSE_KURT_0
 	object_event  8, 12, SPRITE_WEIRD_TREE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, RowletPokeBallScript, EVENT_KURTS_HOUSE_KURT_0
 	object_event  4,  9, SPRITE_CELEBI, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CelebiScript, EVENT_KURTS_HOUSE_KURT_0
-	object_event  2, 10, SPRITE_PRYCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PryceScript, EVENT_KURT_HEARS_LOGGERS
+	object_event  4, 11, SPRITE_PRYCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PryceScript, EVENT_TALKED_TO_PRYCE_TINDER_GARDEN 
 
 	object_const_def
 	const TINDER_GARDEN_KURT
@@ -45,6 +45,16 @@ TinderGarden_MapScriptHeader: ;todo something weird happens when I stand to the 
 	const TINDER_GARDEN_POKE_BALL3	
 	const TINDER_GARDEN_CELEBI
 	const TINDER_GARDEN_PRYCE
+
+TinderGardenPryceIsLate: ; pryce should not be here until after you have talked to slowpoke well guy
+	checkevent SLOWPOKE_WELL_MOVED_ASIDE
+	iffalse .PryceDisappears
+	appear TINDER_GARDEN_PRYCE
+	endcallback
+	
+.PryceDisappears:
+	disappear TINDER_GARDEN_PRYCE
+	endcallback
 
 CelebiCeremonyIntroScript:
 	sdefer .Script
@@ -60,6 +70,7 @@ CelebiCeremonyIntroScript:
 	applymovement TINDER_GARDEN_OAK, TGOakMovesToYouMovement
 	opentext
 	writetext OakText_Pokedex
+	waitbutton
 	playsound SFX_ITEM
 	waitsfx
 	writetext OakText_Balls
@@ -68,24 +79,27 @@ CelebiCeremonyIntroScript:
 	giveitem POKE_BALL, 5
 	itemnotify
 	writetext CatchAll
+	waitbutton
 	setflag ENGINE_POKEDEX
 	closetext
 	applymovement TINDER_GARDEN_OAK, TGOakMovesToRivalMovement
 	opentext
 	writetext OakText_PokedexRival
+	waitbutton
 	playsound SFX_ITEM
 	waitsfx
 	closetext
 	applymovement TINDER_GARDEN_OAK, TGOakMovesBackMovement
 	opentext 
-	writetext KurtLetsBegin 
+	writetext KurtLetsBegin
+	waitbutton
 	closetext
 	turnobject TINDER_GARDEN_KURT, UP
 	turnobject TINDER_GARDEN_BLACK_BELT, UP
 	applymovement TINDER_GARDEN_OAK, TGOakBeginMovement 
-	applymovement TINDER_GARDEN_PRYCE, TGPryceBeginMovement 
 	opentext
 	writetext KurtLetsBegin2
+	waitbutton
 	closetext 
 	pause 20
 	appear TINDER_GARDEN_CELEBI
@@ -108,17 +122,19 @@ CelebiCeremonyIntroScript:
 	applymovement TINDER_GARDEN_KURT, TGKurtMovesBeforeOak
 	opentext
 	writetext WasThatCelebiText 
+	waitbutton
 	closetext
 	applymovement TINDER_GARDEN_OAK, TGOakChecksBalls 
 	showemote EMOTE_SHOCK, TINDER_GARDEN_OAK, 10
-	applymovement TINDER_GARDEN_PRYCE, TGPryceMovesBack
 	opentext
 	writetext WasThatCelebiTextOak	
+	waitbutton
 	closetext
 	applymovement TINDER_GARDEN_KURT, TGKurtChecksBalls 
 	turnobject TINDER_GARDEN_BLACK_BELT, DOWN
 	opentext
 	writetext WasThatCelebiTextKurt
+	waitbutton
 	closetext
 	setscene $1
 	end
@@ -151,8 +167,12 @@ TGOakMovesBackMovement:
 
 KurtText_Intro:
 	text "Kurt: Surprise!"
-	line "Oak is here,"
-	cont "as is Pryce."
+	line "Oak is here."
+	
+	para "Pryce couldn't"
+	line "make it. I'm sure"
+	cont "you will see him"
+	cont "later."
 	done
 	
 OakText_Pokedex:
@@ -207,11 +227,6 @@ KurtLetsBegin2:
 TGOakBeginMovement:
 	step_up
 	turn_head_right
-	step_end
-
-TGPryceBeginMovement:
-	step_up
-	step_right
 	step_end
 
 TinderGardenTryToLeaveScript:
@@ -281,11 +296,6 @@ TGOakChecksBalls:
 	turn_head_down	
 	step_end
 	
-TGPryceMovesBack:
-	step_left
-	step_down
-	step_end
-
 TGKurtMovesBeforeOak:
 	step_left
 	step_up
@@ -624,6 +634,7 @@ TinderGardenRivalBattleScript1:
 	turnobject TINDER_GARDEN_RIVAL, LEFT
 	opentext
 	writetext TGRivalGoodbyeText
+	promptbutton
 	closetext
 	applymovement TINDER_GARDEN_RIVAL, TGRivalLeavesMovement
 	disappear TINDER_GARDEN_RIVAL
@@ -634,6 +645,7 @@ TinderGardenRivalBattleScript1:
 	showemote EMOTE_SHOCK, TINDER_GARDEN_KURT, 15
 	opentext
 	writetext KurtThinksTheyreCuttingTreesText
+	promptbutton
 	closetext
 	applymovement TINDER_GARDEN_KURT, KurtLeavesInAHurryMovement
 	disappear TINDER_GARDEN_KURT
@@ -671,6 +683,7 @@ OakScript:
 PryceScript:
 	faceplayer
 	opentext
+	setevent EVENT_TALKED_TO_PRYCE_TINDER_GARDEN
 	jumpopenedtext PrycePokemonText
 
 TGKurtScript:
@@ -687,7 +700,15 @@ OakPokemonText:
 	done
 
 PrycePokemonText:
-	text "Congrats on"
+	text "Oh, <PLAYER>!"
+	line "How you've grown."
+	cont "Now you have your"
+	cont "own #mon!"
+	
+	para "I'm sorry that I"
+	line "was so late."	
+
+	para "Congrats on"
 	line "getting a nice"
 	cont "partner. I hope"
 	cont "it brings you"
@@ -695,6 +716,15 @@ PrycePokemonText:
 	cont "been a lot of"
 	cont "cynicism in"
 	cont "Johto, lately."
+	
+	para "It has been aff-"
+	line "ecting the other"
+	cont "Gym Leaders."
+	
+	para "I'm on a bit of"
+	line "a mission to get"
+	cont "them to recommit"
+	cont "to their mission."
 	done
 
 CharcoalScript:
@@ -732,8 +762,8 @@ RivalIndependentText:
 	line "to be more ind-"
 	cont "ependent. No one"
 	cont "seems to apprec-"
-	cont "iate my"
-	cont "inventions."
+	cont "iate my inve-"
+	cont "ntions."
 	done
 
 TGRivalChallengeText:
