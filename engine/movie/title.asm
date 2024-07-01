@@ -74,8 +74,8 @@ _TitleScreen:
 	rst ByteFill
 
 ; 'CRYSTAL VERSION'
-	hlbgcoord 5, 9
-	ld bc, NAME_LENGTH ; length of version text
+	hlbgcoord 0, 9;	hlbgcoord 5, 9
+	ld bc, 2 * BG_MAP_WIDTH; 	ld bc, NAME_LENGTH ; length of version text
 	ld a, 1
 	rst ByteFill
 
@@ -232,9 +232,9 @@ SuicuneFrameIterator:
 
 .Frames:
 	db $80 ; vTiles4 tile $00
-	db $88 ; vTiles4 tile $08
-	db $00 ; vTiles5 tile $00
-	db $08 ; vTiles5 tile $08
+	db $80 ; vTiles4 tile $08
+	db $80 ; vTiles5 tile $00
+	db $80 ; vTiles5 tile $08
 
 LoadSuicuneFrame:
 	hlcoord 6, 12
@@ -363,55 +363,60 @@ INCBIN "gfx/title/logo_version.2bpp.lz"
 TitleCrystalGFX:
 INCBIN "gfx/title/crystal.2bpp.lz"
 
-TitleScreenPalettes:
-; BG
-if !DEF(MONOCHROME)
-	RGB 00, 00, 00
-	RGB 19, 00, 00
-	RGB 15, 08, 31
-	RGB 15, 08, 31
+TitleScreenPalettes: ; 06-27-24: Need to make the exterior of Legends Celebilight green, and the interior of Legends Peach, and the interior of Celebi Blue. 
+; BG the logo and the suicune
+if !DEF(MONOCHROME) ; 31-15-15 and 15-4-18 for shiny
+	RGB 00, 00, 00 ; the animated part of the title - suicune. all white space to black
+	RGB 03, 13, 28 ; celebi blue, should be highlight. 
+	RGB 10, 31, 10 ; all dark grey to celebi green
+	RGB 31, 15, 15 ; shiny celebi red on the apricorn black parts
+
+	RGB 00, 00, 00 ; LEGENDS is these four lines. all white space turns to black. 
+	RGB 10, 31, 10;	RGB 15, 04, 18;02, 03, 30
+	RGB 31, 15, 15 ; celebi shiny pink 
+	RGB 02, 03, 30;	RGB 10, 31, 10 --> keep
 
 	RGB 00, 00, 00
-	RGB 31, 31, 31
-	RGB 15, 16, 31
-	RGB 31, 01, 13
-
-	RGB 00, 00, 00
-	RGB 07, 07, 07
-	RGB 31, 31, 31
+	RGB 10, 31, 10
+	RGB 31, 31, 31 ; ylw
 	RGB 02, 03, 30
 
 	RGB 00, 00, 00
-	RGB 13, 13, 13
-	RGB 31, 31, 18
+	RGB 10, 31, 10
+	RGB 31, 31, 18 ; ylw
 	RGB 02, 03, 30
 
 	RGB 00, 00, 00
-	RGB 19, 19, 19
-	RGB 29, 28, 12
+	RGB 10, 31, 10
+	RGB 29, 28, 12 ; ylw
 	RGB 02, 03, 30
 
 	RGB 00, 00, 00
-	RGB 25, 25, 25
-	RGB 28, 25, 06
+	RGB 10, 31, 10
+	RGB 28, 25, 06 ; ylw
 	RGB 02, 03, 30
 
 	RGB 00, 00, 00
-	RGB 31, 31, 31
-	RGB 26, 21, 00
+	RGB 10, 31, 10
+	RGB 26, 21, 00 ; ylw
 	RGB 02, 03, 30
 
 	RGB 00, 00, 00
 	RGB 11, 11, 19
+	RGB 31, 31, 31 ; ylw
+	RGB 02, 03, 30
+
+; OBJ this is the crystal
 	RGB 31, 31, 31
 	RGB 00, 00, 00
-
-; OBJ
 	RGB 00, 00, 00
-	RGB 10, 00, 15
-	RGB 17, 05, 22
-	RGB 19, 09, 31
+	RGB 00, 00, 00
 
+;	RGB 00, 00, 00
+;	RGB 10, 00, 15
+;	RGB 17, 05, 22
+;	RGB 19, 09, 31
+;
 	RGB 31, 31, 31
 	RGB 00, 00, 00
 	RGB 00, 00, 00

@@ -1796,7 +1796,7 @@ BugCatcherGroup:
 ; ================
 
 	; BUG_CATCHER
-	db "Al@"
+	db "Scott@"
 	db TRAINERTYPE_NORMAL
 	; party
 	db 14, VENOMOTH
@@ -1808,7 +1808,7 @@ BugCatcherGroup:
 	db "Josh@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 16, PINSIR
+	db 12, PINSIR
 	db -1 ; end
 
 ; ================

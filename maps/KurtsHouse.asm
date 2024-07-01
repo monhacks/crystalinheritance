@@ -290,13 +290,6 @@ endr
 	giveitem LEFTOVERS, 99
 	giveitem BIG_NUGGET, 99
 	giveitem SILVER_LEAF, 99
-	verbosegiveitem RADIANT_OPAL, 5
-	verbosegiveitem SHORE_FOAM, 5
-	verbosegiveitem FIXED_CHARGE, 5
-	verbosegiveitem TOUGH_LEAVES, 5
-	verbosegiveitem HOLLOW_ROCK, 5
-	verbosegiveitem WHT_APRICORN, 5
-	verbosegiveitem PNK_APRICORN, 5
 	; max money
 	givemoney $0, 1000000
 	givemoney $0, 1000000

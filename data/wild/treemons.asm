@@ -103,7 +103,7 @@ TreeMonSet_Lake:
 	db  5, EXEGGCUTE,  10
 	db -1
 
-TreeMonSet_Forest:;only for ilex forest
+TreeMonSet_Forest:;only for ilex forest and hollys holt
 	db 50, PINECO,     10
 	db 15, PINECO,     10
 	db 15, PINECO,     10

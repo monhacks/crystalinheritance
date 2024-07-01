@@ -10,43 +10,40 @@ AnarresTower3F_MapScriptHeader:  ; not sure why this isn't working....
 
 
 	def_coord_events
-	coord_event 4,  4, 0, AnarresTower3FStepRight
-	coord_event 5,  4, 0, AnarresTower3FEvent
+
 
 	def_bg_events
 
 
 	def_object_events
-	object_event  6,  6, SPRITE_HOLLIS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AnarresTower3FHollisScript, -1
-	object_event  7,  3, SPRITE_TAMMY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AnarresTower3FTammyScript, EVENT_BEAT_TAMMY;EVENT_BEAT_TAMMY
+	object_event  6,  6, SPRITE_HOLLIS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AnarresTowerHollisScript, -1
+	object_event  7,  3, SPRITE_TAMMY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AnarresTowerTammyScript, EVENT_BEAT_TAMMY
 
 	object_const_def
 	const ANARRES_TOWER_HOLLIS
 	const ANARRES_TOWER_TAMMY
 
-AnarresTower3FStepRight:
-	applyonemovement PLAYER, step_right
-AnarresTower3FEvent:	
-	applyonemovement PLAYER, step_down
-
 
 AnarresTower3FHollisScript:
 	faceplayer
+	opentext
+	writetext HollisAfterBattleText
+	closetext
+	end
+
+AnarresTower3FHollisScriptOld:
+	faceplayer
 	checkevent EVENT_BEAT_HOLLIS
-	iftrue_jumptext TextHollisAfterBattle
+	iftrue HollisAfterBattleText
 	appear ANARRES_TOWER_TAMMY
 	applymovement ANARRES_TOWER_TAMMY, TammyMovesToHollis
 	showemote EMOTE_SHOCK, ANARRES_TOWER_HOLLIS, 10
 	turnobject ANARRES_TOWER_HOLLIS, LEFT
 	opentext
 	writetext HollisPastGuards
-	waitbutton
-	showemote EMOTE_SAD, ANARRES_TOWER_TAMMY, 10
 	writetext TammyExplains
-	waitbutton
 	closetext
 	applymovement ANARRES_TOWER_HOLLIS, HollisToYou
-	turnobject PLAYER, RIGHT
 	showtext HollisChallengesText
 	winlosstext HollisBeatenText, 0
 	loadtrainer HOLLIS, 1 ; WILL THIS FIND?
@@ -55,14 +52,14 @@ AnarresTower3FHollisScript:
 	opentext
 	showemote EMOTE_HEART, ANARRES_TOWER_TAMMY, 10
 	showtext TammyText2
-;	waitbutton
+	promptbutton
 	showemote EMOTE_QUESTION, ANARRES_TOWER_HOLLIS, 10
-	showtext HollisHmm
-;	waitbutton
+	showtext HollisHm
+	promptbutton
 	turnobject ANARRES_TOWER_TAMMY, DOWN
 	pause 5
 	showtext TammyText3
-;	waitbutton
+	promptbutton
 	showemote EMOTE_SHOCK, ANARRES_TOWER_HOLLIS, 10
 	showtext HollisAbuse
 	pause 5
@@ -78,13 +75,11 @@ AnarresTower3FHollisScript:
 	applyonemovement ANARRES_TOWER_HOLLIS, step_left
 	opentext
 	writetext HollisCongratulates
-	waitbutton
 	verbosegivetmhm HM_CUT
 	setevent EVENT_GOT_HM01_CUT
 	setevent EVENT_BEAT_HOLLIS
 	setflag ENGINE_BOULDERBADGE
 	clearevent EVENT_TAMMY_HOLLYS_HOLT
-	setscene $1
 	jumpthisopenedtext
 
 	text "You can use"
@@ -156,8 +151,8 @@ TammyText2:
 	cont "hand."
 	done
 
-HollisHmm:
-	text "HOLLIS: Hmm?"
+HollisHm:
+	text "Hm?"
 	done
 
 TammyText3:
@@ -189,7 +184,6 @@ TammyText4:
 	para "We will review"
 	line "at yearly"
 	cont "rituals."
-	done
 
 HollisHM:
 	text "I appreciate"
@@ -245,36 +239,37 @@ AnarresTowerTammyScript:
 	line "your help!"
 	done
 
-TextHollisAfterBattle:
-	text "You showed me"
-	line "that might is"
-	cont "not always"
-	cont "right."
-
-	para "The Cut HM is"
-	line "is still too"
-	cont "powerful to be"
-	cont "used without"
-	cont "recognizing its"
-	cont "effects, but we"
-	cont "can build a"
-	cont "culture around"
-	cont "talking through"
-	cont "the tradeoffs"
-	cont "before taking"
-	cont "action."
-	done
-
-
-AnarresTower3FTammyScript:
+AnarresTowerHollisScript:
 	faceplayer
 	opentext
-	writetext .TammyAfterBattleText 
+	writetext HollisAfterBattleText
+	closetext
+	end
+
+HollisAfterBattleText:
+	faceplayer
+	opentext
+	writetext HollisAfterText
 	waitbutton
 	closetext
 	end
 
-.TammyAfterBattleText:
-	text "Thanks for"
-	line "your help!"
+HollisAfterText:
+	text "You showed me"
+	line "that might is"
+	cont "not always"
+	cont "right."
 	done
+;	para "The Cut HM is"
+;	line "is still too"
+;	cont "powerful to be"
+;	cont "used without"
+;	cont "recognizing its"
+;	cont "effects, but we"
+;	cont "can build a"
+;	cont "culture around"
+;	cont "talking through"
+;	cont "the tradeoffs"
+;	cont "before taking"
+;	cont "action."
+;	done 
