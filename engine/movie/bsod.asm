@@ -124,18 +124,18 @@ endc
 
 BSODMessage:
 	db    "      #mon"
-	next1 " Polished Crystal"
+	next1 " Legends Celebi"
 	next  "       ERROR"
 	next1 "------------------"
-	next  "Please report this"
-	next1 "crash to the deve-"
-	next1 "loper, Rangi42, at"
-	next1 "tinyurl.com/pkpc3."
+;	next  "Please report this"
+;	next1 "crash to the deve-"
+;	next1 "loper, Rangi42, at"
+;	next1 "tinyurl.com/pkpc3."
 	next  "Error:@"
 
 VBABSODMessage:
 	db    "      #mon"
-	next1 " Polished Crystal"
+	next1 " Legends Celebi"
 	next  "       ERROR"
 	next1 "------------------"
 	next  "Please use a more"

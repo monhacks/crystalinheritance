@@ -221,7 +221,7 @@ PokemonNames::
 	rawchar	"Gabite@@@@"
 	rawchar "Garchomp@@"
 	rawchar "Lucario@@@"
-	rawchar "Hippowdown"
+	rawchar "Hippowdon@"
 	rawchar "Drapion@@@"
 	rawchar "Toxicroak@"
 	rawchar "Snover@@@@"

@@ -28,6 +28,8 @@ AzaleaGymStatue:
 AzaleaGymBugsyScript:
 	checkevent EVENT_BEAT_BUGSY
 	iftrue_jumptextfaceplayer .AfterText
+	checkevent EVENT_SAW_KLEAVOR
+	iftrue .BattleBugsy
 	checkevent EVENT_BEAT_HOLLIS
 	iftrue .BattleBugsy
 	jumpthistextfaceplayer 
@@ -129,13 +131,18 @@ AzaleaGymBugsyScript:
 
 .BeatenText:
 	text "Whoa, amazing!"
-	line "You're an expert"
-	cont "on #mon!"
 
 	para "My research isn't"
 	line "complete yet."
+	
+	para "I'm going to keep"
+	line "going until I"
+	cont "show everyone the"
+	cont "connection between"
+	cont "Bug #mon and"
+	cont "people."
 
-	para "OK, you win. Take"
+	para "Please - take"
 	line "this Badge."
 	done
 

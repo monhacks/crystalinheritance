@@ -24,7 +24,7 @@ _TitleScreen:
 
 ; Decompress running Suicune gfx
 	ld hl, TitleSuicuneGFX
-	ld de, vTiles1
+	ld de, vTiles1 ; goes to vtiles1, ram/vram.asm
 	call Decompress
 
 ; Clear screen palettes
@@ -37,7 +37,7 @@ _TitleScreen:
 
 ; BG Map 1:
 
-; line 0 (copyright)
+; line 0 (copyright)?
 	hlbgcoord 0, 0, vBGMap1
 	ld bc, BG_MAP_WIDTH
 	ld a, 7 ; palette
@@ -48,41 +48,41 @@ _TitleScreen:
 ; Apply logo gradient:
 
 ; lines 3-4
-	hlbgcoord 0, 3
+	hlbgcoord 0, 1
 	ld bc, 2 * BG_MAP_WIDTH
 	ld a, 2
 	rst ByteFill
 ; line 5
-	hlbgcoord 0, 5
+	hlbgcoord 0, 3
 	ld bc, BG_MAP_WIDTH
 	ld a, 3
 	rst ByteFill
 ; line 6
-	hlbgcoord 0, 6
+	hlbgcoord 0, 4
 	ld bc, BG_MAP_WIDTH
 	ld a, 4
 	rst ByteFill
 ; line 7
-	hlbgcoord 0, 7
+	hlbgcoord 0, 5
 	ld bc, BG_MAP_WIDTH
 	ld a, 5
 	rst ByteFill
 ; lines 8-9
-	hlbgcoord 0, 8
+	hlbgcoord 0, 6
 	ld bc, 2 * BG_MAP_WIDTH
 	ld a, 6
 	rst ByteFill
 
 ; 'CRYSTAL VERSION'
-	hlbgcoord 0, 9;	hlbgcoord 5, 9
+	hlbgcoord 0, 7;	hlbgcoord 5, 9
 	ld bc, 2 * BG_MAP_WIDTH; 	ld bc, NAME_LENGTH ; length of version text
 	ld a, 1
 	rst ByteFill
 
-; Suicune gfx
+; Suicune gfx, lines 10-15?
 	hlbgcoord 0, 12
 	ld bc, 6 * BG_MAP_WIDTH ; the rest of the screen
-	ld a, 8
+	ld a, 8 ; these are palettes, but they are also controlling the tile that is placed. 
 	rst ByteFill
 
 ; Back to VRAM bank 0
@@ -95,7 +95,7 @@ _TitleScreen:
 	call Decompress
 
 ; Decompress background crystal
-	ld hl, TitleCrystalGFX
+	ld hl, TitleCrystalGFX 
 	ld de, vTiles0
 	call Decompress
 
@@ -106,10 +106,22 @@ _TitleScreen:
 	rst ByteFill
 
 ; Draw Pokemon logo
-	hlcoord 0, 3
+	hlcoord 0, 1
 	lb bc, 7, SCREEN_WIDTH
 	lb de, $80, SCREEN_WIDTH
 	call DrawTitleGraphic
+
+; Draw Celebi?
+;	hlcoord 0, 8
+;	lb bc, 5, 6
+;	lb de, $90, 6
+;	call DrawTitleGraphic
+; input:
+;   hl: draw location
+;   b: height
+;   c: width
+;   d: tile to start drawing from
+;   e: number of tiles to advance for each bgrows
 
 ; Draw copyright text
 	hlbgcoord 4, 0, vBGMap1
@@ -130,6 +142,7 @@ endc
 
 ; Initialize background crystal
 	call InitializeBackground
+
 
 ; Save WRAM bank
 	ldh a, [rSVBK]
@@ -196,7 +209,7 @@ endc
 	ldh [hBGMapMode], a
 
 	xor a
-	ld [wBGPals1 palette 0 + 2], a
+	ld [wBGPals1 palette 0 + 2], a ; sets everything to palette 0? 
 
 ; Play starting sound effect
 	call SFXChannelsOff
@@ -296,39 +309,40 @@ DrawTitleGraphic:
 	jr nz, .bgrows
 	ret
 
-InitializeBackground:
-	ld hl, wVirtualOAM
-	lb de, -$22, $0
-	ld c, 5
-.loop
-	push bc
-	call .InitColumn
-	pop bc
-	ld a, $10
-	add d
-	ld d, a
-	dec c
-	jr nz, .loop
-	ret
+InitializeBackground: ; this will draw the background, the tree. as of 07-05-24, if we can write along the row as 0, 1, 2, N_col, then we can set the number of rows c to 8 and ld a, $08 might do it?
+    ld hl, wVirtualOAM        ; Load the address of Virtual OAM into HL. 
+    lb de, -$08, $0           ; Initialize DE with -$22 and $0. D is a height index and e is a tile index. 
+    ld c, 4                  ; Initialize C with 5, indicating 5 rows to initialize. C is decremented 5 times. 5 of 8x16.
+.loop ; the code below tells everything to get two rows lower. 
+    push bc                   ; Save BC on stack
+    call .InitColumn          ; Initialize a column
+    pop bc                    ; Restore BC
+    ld a, $10                 ; lower by 16 pixels
+    add d                     ; Add D to A (modifying D for the next column)
+    ld d, a                   ; Store result back in D
+    dec c                     ; Decrease C by 1
+    jr nz, .loop              ; Repeat if C is not zero
+    ret                       ; Return from the function
 
 .InitColumn:
-	lb bc, $40, $6
+    lb bc, $30, $a         ; Initialize BC with $40 and $6, c is the number of columns to go through and b is a width location. when c = 4 and bc = _6 goes through 0-48. 
 .loop2
-	ld a, d
-	ld [hli], a
-	ld a, b
-	ld [hli], a
-	add $8
-	ld b, a
-	ld a, e
-	ld [hli], a
-	inc e
-	inc e
-	ld a, $80
-	ld [hli], a
-	dec c
-	jr nz, .loop2
-	ret
+    ld a, d                   ; Load D into A
+    ld [hli], a               ; Store A into (HL) and increment HL
+    ld a, b                   ; Load B into A
+    ld [hli], a               ; Store A into (HL) and increment HL
+    add $8                    ; Add $8 (8 in decimal) to A.  
+    ld b, a                   ; Store the result back in B
+    ld a, e                   ; Load E into A
+    ld [hli], a               ; Store A into (HL) and increment HL
+    inc e                     ; Increment E
+    inc e                     ; Increment E again...
+    ld a, $80                 ; Load A with $80, a = a + 128 (not sure why this exists -- seems to be related to rotation when a = $40)
+    ld [hli], a               ; Store A into (HL) and increment HL
+    dec c                     ; Decrease C by 1, c = c - 1
+    jr nz, .loop2             ; Repeat if C is not zero
+    ret                       ; Return from the function
+	
 
 AnimateTitleCrystal:
 ; Move the title screen crystal downward until it's fully visible
@@ -337,87 +351,81 @@ AnimateTitleCrystal:
 ; y is really from the bottom of the sprite, which is two tiles high
 	ld hl, wVirtualOAM
 	ld a, [hl]
-	cp 6 + $10
+	cp 4 + $40 ; this controls how far down it goes. 
 	ret z
 
-; Move all 30 parts of the crystal down by 2
-	ld c, 30
+; Move all parts of the background down
+	ld c, 40 ; 30
 .loop
 	ld a, [hl]
-	add 2
+	add 2 
 	ld [hli], a
 	inc hl
 	inc hl
 	inc hl
 	dec c
 	jr nz, .loop
-
 	ret
 
-TitleSuicuneGFX:
+TitleSuicuneGFX: ; this is the celebi and apricorn
 INCBIN "gfx/title/suicune.2bpp.lz"
 
 TitleLogoGFX:
-INCBIN "gfx/title/logo_version.2bpp.lz"
+INCBIN "gfx/title/logo_version.2bpp.lz" ; on 7-3-24, this makes with a transparent logo. Just need to save the old logo as the new one to get it back. 
 
-TitleCrystalGFX:
-INCBIN "gfx/title/crystal.2bpp.lz"
+TitleCrystalGFX: ; crystal is the original crystal, blossom_v3 is a 48x80 with similar tilemap to blossom_v2, blossom_v2 is 96x64
+INCBIN "gfx/title/rearranged_blossom.2bpp.lz"
 
-TitleScreenPalettes: ; 06-27-24: Need to make the exterior of Legends Celebilight green, and the interior of Legends Peach, and the interior of Celebi Blue. 
+TitleScreenPalettes: 
 ; BG the logo and the suicune
 if !DEF(MONOCHROME) ; 31-15-15 and 15-4-18 for shiny
-	RGB 00, 00, 00 ; the animated part of the title - suicune. all white space to black
+	RGB 00, 09, 00 ; 0 the animated part of the title - suicune. all white space to black
 	RGB 03, 13, 28 ; celebi blue, should be highlight. 
 	RGB 10, 31, 10 ; all dark grey to celebi green
-	RGB 31, 15, 15 ; shiny celebi red on the apricorn black parts
+	RGB 29, 29, 29 ; white. c.f. gfx/palettes.asm for the wht apricorn
 
-	RGB 00, 00, 00 ; LEGENDS is these four lines. all white space turns to black. 
+	RGB 00, 09, 00 ; 1 LEGENDS is these four lines. all white space turns to black. 
 	RGB 10, 31, 10;	RGB 15, 04, 18;02, 03, 30
 	RGB 31, 15, 15 ; celebi shiny pink 
 	RGB 02, 03, 30;	RGB 10, 31, 10 --> keep
 
-	RGB 00, 00, 00
+	RGB 00, 09, 00 ; 2
 	RGB 10, 31, 10
 	RGB 31, 31, 31 ; ylw
 	RGB 02, 03, 30
 
-	RGB 00, 00, 00
+	RGB 00, 09, 00; 3
 	RGB 10, 31, 10
 	RGB 31, 31, 18 ; ylw
 	RGB 02, 03, 30
 
-	RGB 00, 00, 00
+	RGB 00, 09, 00; 4
 	RGB 10, 31, 10
 	RGB 29, 28, 12 ; ylw
 	RGB 02, 03, 30
 
-	RGB 00, 00, 00
+	RGB 00, 09, 00; 5
 	RGB 10, 31, 10
 	RGB 28, 25, 06 ; ylw
 	RGB 02, 03, 30
 
-	RGB 00, 00, 00
+	RGB 00, 09, 00; 6
 	RGB 10, 31, 10
 	RGB 26, 21, 00 ; ylw
 	RGB 02, 03, 30
 
-	RGB 00, 00, 00
+	RGB 00, 09, 00 ; ; 7 copyright palette
 	RGB 11, 11, 19
 	RGB 31, 31, 31 ; ylw
 	RGB 02, 03, 30
 
-; OBJ this is the crystal
-	RGB 31, 31, 31
-	RGB 00, 00, 00
-	RGB 00, 00, 00
-	RGB 00, 00, 00
+; OBJ this is the crystal. 
+	RGB 00, 00, 00; 8
+	RGB 30, 22, 25	;
+	RGB 20, 15, 03
+	RGB 30, 10, 06
 
-;	RGB 00, 00, 00
-;	RGB 10, 00, 15
-;	RGB 17, 05, 22
-;	RGB 19, 09, 31
-;
-	RGB 31, 31, 31
+	RGB 31, 31, 31; 9
 	RGB 00, 00, 00
 	RGB 00, 00, 00
 	RGB 00, 00, 00
@@ -447,10 +455,10 @@ if !DEF(MONOCHROME) ; 31-15-15 and 15-4-18 for shiny
 	RGB 00, 00, 00
 	RGB 00, 00, 00
 
-	RGB 31, 31, 31
-	RGB 00, 00, 00
-	RGB 00, 00, 00
-	RGB 00, 00, 00
+	RGB 00, 00, 00 ; the animated part of the title - suicune. all white space to black
+	RGB 03, 13, 28 ; celebi blue, should be highlight. 
+	RGB 10, 31, 10 ; all dark grey to celebi green
+	RGB 23, 25, 27 ; white. c.f. gfx/palettes.asm for the wht apricorn
 else
 	RGB_MONOCHROME_BLACK
 	RGB_MONOCHROME_LIGHT

@@ -342,48 +342,38 @@ endr
 	; post-e4
 	setflag ENGINE_HAVE_SHINY_CHARM
 	; good party
-	givepoke ROTOM, NO_FORM, 100, BRIGHTPOWDER
-	loadmem wPartyMon1EVs+0, 252
-	loadmem wPartyMon1EVs+1, 252
-	loadmem wPartyMon1EVs+2, 252
-	loadmem wPartyMon1EVs+3, 252
-	loadmem wPartyMon1EVs+4, 252
-	loadmem wPartyMon1EVs+5, 252
-	loadmem wPartyMon1DVs+0, $ff
-	loadmem wPartyMon1DVs+1, $ff
-	loadmem wPartyMon1DVs+2, $ff
-	loadmem wPartyMon1Personality, ABILITY_2 | NAT_SATK_UP_ATK_DOWN
-	loadmem wPartyMon1Stats+0, HIGH(999)
-	loadmem wPartyMon1Stats+1, LOW(999)
-	loadmem wPartyMon1Stats+2, HIGH(999)
-	loadmem wPartyMon1Stats+3, LOW(999)
-	loadmem wPartyMon1Stats+4, HIGH(999)
-	loadmem wPartyMon1Stats+5, LOW(999)
-	loadmem wPartyMon1Stats+6, HIGH(999)
-	loadmem wPartyMon1Stats+7, LOW(999)
-	loadmem wPartyMon1Stats+8, HIGH(999)
-	loadmem wPartyMon1Stats+9, LOW(999)
+	givepoke DUSCLOPS, NO_FORM, 100, BRIGHTPOWDER
 	; hm slaves
-	givepoke FROSLASS, NO_FORM, 100, LEFTOVERS
-	givepoke URSALUNA, NO_FORM, 100, LEFTOVERS
-	loadmem wPartyMon2Moves+0, FLY
-	loadmem wPartyMon2Moves+1, SURF
-	loadmem wPartyMon2Moves+2, STRENGTH
-	loadmem wPartyMon2Moves+3, MAGMA_STORM
-	loadmem wPartyMon2PP+0, 15
-	loadmem wPartyMon2PP+1, 15
-	loadmem wPartyMon2PP+2, 15
-	loadmem wPartyMon2PP+3, 30
-	loadmem wPartyMon3Moves+0, FLASH
-	loadmem wPartyMon3Moves+1, ROCK_SMASH
-	loadmem wPartyMon3Moves+2, HEADBUTT
-	loadmem wPartyMon3Moves+3, WATERFALL
-	loadmem wPartyMon3PP+0, 20
-	loadmem wPartyMon3PP+1, 15
-	loadmem wPartyMon3PP+2, 15
-	loadmem wPartyMon3PP+3, 15
+	givepoke DUSKNOIR, NO_FORM, 100, LEFTOVERS
+	givepoke H__AVALUGG, NO_FORM, 100, LEFTOVERS	
+	givepoke GABITE, NO_FORM, 100, LEFTOVERS
+;	givepoke BASCULEGION, NO_FORM, 100, LEFTOVERS
+;	givepoke H__BRAVIARY, NO_FORM, 100, LEFTOVERS
+;	givepoke KIRLIA, NO_FORM, 100, LEFTOVERS
+;	givepoke GARDEVOIR, NO_FORM, 100, LEFTOVERS
+;	givepoke GALLADE, NO_FORM, 100, LEFTOVERS
+;	givepoke H__SLIGGOO, NO_FORM, 100, LEFTOVERS
+;	givepoke H__GOODRA, NO_FORM, 100, LEFTOVERS
+;	givepoke H__ZOROARK, NO_FORM, 100, LEFTOVERS	
+;	givepoke HEATRAN, NO_FORM, 100, LEFTOVERS	
+;	loadmem wPartyMon2Moves+0, FLY
+;	loadmem wPartyMon2Moves+1, SURF
+;	loadmem wPartyMon2Moves+2, STRENGTH
+;	loadmem wPartyMon2Moves+3, MAGMA_STORM
+;	loadmem wPartyMon2PP+0, 15
+;	loadmem wPartyMon2PP+1, 15
+;	loadmem wPartyMon2PP+2, 15
+;	loadmem wPartyMon2PP+3, 30
+;	loadmem wPartyMon3Moves+0, FLASH
+;	loadmem wPartyMon3Moves+1, ROCK_SMASH
+;	loadmem wPartyMon3Moves+2, HEADBUTT
+;	loadmem wPartyMon3Moves+3, WATERFALL
+;	loadmem wPartyMon3PP+0, 20
+;	loadmem wPartyMon3PP+1, 15
+;	loadmem wPartyMon3PP+2, 15
+;	loadmem wPartyMon3PP+3, 15
 	; fill pokedex
-	callasm FillPokedex
+;	callasm FillPokedex
 	closetext
 	end
 

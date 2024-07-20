@@ -25,6 +25,8 @@ TreeMonMaps:
 	treemon_map MAHOGANY_TOWN, 0
 	treemon_map LAKE_OF_RAGE, 5
 	treemon_map ILEX_FOREST, 6
+	treemon_map HOLLYS_HOLT, 6
+	treemon_map ANARRES_TOWN, 2
 	db -1
 
 RockMonMaps:

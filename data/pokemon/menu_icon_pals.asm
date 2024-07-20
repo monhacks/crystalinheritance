@@ -8,10 +8,10 @@ MenuMonIconColors:: ;TEAL, GREEN, RED, PINK, GRAY, BLUE, GREEN, BROWN, PURPLE,
 	iconpal RED, PINK ; QUILAVA
 	iconpal RED, PINK ; TYPHLOSION
 	iconpal RED, PURPLE ; HTYPHLOSION
-	iconpal GREEN, BROWN	;ROWLET	      ; 05
-	iconpal GREEN, BROWN	;DARTRIX         ; 06
-	iconpal GREEN, BROWN	;DECIDUEYE       ; 07
-	iconpal RED, BROWN		;H__DECIDUEYE    ; 08
+	iconpal GREEN, BROWN	;ROWLET	      ; 05 OK
+	iconpal BROWN, GREEN	;DARTRIX         ; 06 OK
+	iconpal BROWN, GREEN	;DECIDUEYE       ; 07
+	iconpal BROWN, RED		;H__DECIDUEYE    ; 08
 	iconpal BLUE, TEAL		;OSHAWOTT  ; 09
 	iconpal BLUE, TEAL		;DEWOTT   ; 0a
 	iconpal BLUE, TEAL		;SAMUROTT    ; 0b
@@ -209,8 +209,8 @@ MenuMonIconColors:: ;TEAL, GREEN, RED, PINK, GRAY, BLUE, GREEN, BROWN, PURPLE,
 	iconpal GRAY, RED ; STARAPTOR
 	iconpal BLUE, BROWN ; LUXIO
 	iconpal BLUE, BROWN ; LUXRAY
-	iconpal RED, GREEN ; ROSELIA
-	iconpal RED, GREEN ; ROSERADE	
+	iconpal GREEN, BROWN ; ROSELIA
+	iconpal GREEN, BROWN ; ROSERADE	
 	iconpal BROWN, RED ; RAMPARDOS
 	iconpal BROWN, RED ; BASTIODON
 	iconpal BROWN, RED ; VESPIQUEN
@@ -221,17 +221,17 @@ MenuMonIconColors:: ;TEAL, GREEN, RED, PINK, GRAY, BLUE, GREEN, BROWN, PURPLE,
 	iconpal TEAL, BROWN	; BRONZOR  ; d7
 	iconpal TEAL, RED ;BRONZONG   ; d8
 	iconpal PURPLE, GREEN ;SPIRITOMB     ; d9
-	iconpal PURPLE, RED ;GABITE   ; da
-	iconpal PURPLE, RED ;GARCHOMP     ; db
+	iconpal BLUE, RED ;GABITE   ; da
+	iconpal BLUE, RED ;GARCHOMP     ; db
 	iconpal TEAL, GRAY	; LUCARIO  ; dc
 	iconpal BROWN, RED ;HIPPOWDON  ; dd
 	iconpal PURPLE, PINK ;DRAPION    ; de
 	iconpal BLUE, RED ;TOXICROAK   ; df
 	iconpal GREEN, BROWN ; SNOVER  ; e0
-	iconpal GREEN, RED ; ABOMASNOW    ; e1
+	iconpal GREEN, BROWN ; ABOMASNOW    ; e1
 	iconpal GRAY, RED ; DUSCLOPS   ; e2
 	iconpal GRAY, BROWN ; DUSKNOIR   ; e3
-	iconpal TEAL, PURPLE ; FROSLASS   ; e4
+	iconpal TEAL, PURPLE ; FROSLASS   ; e4 OK
 	iconpal BROWN, TEAL ; ROTOM    ; e5
 	iconpal TEAL, GRAY ; H__AVALUGG     ; e6
 	iconpal RED, BLUE ; BASCULEGION    ; e7
@@ -239,8 +239,8 @@ MenuMonIconColors:: ;TEAL, GREEN, RED, PINK, GRAY, BLUE, GREEN, BROWN, PURPLE,
 	iconpal GREEN, RED ; KIRLIA  ; e9
 	iconpal GREEN, RED ; GARDEVOIR   ; ea
 	iconpal GREEN, RED ;GALLADE    ; eb
-	iconpal PINK, GRAY ; H__SLIGGOO  ; ec
-	iconpal PINK, GRAY ; H__GOODRA     ; ed
+	iconpal BLUE, GRAY ; H__SLIGGOO  ; ec
+	iconpal BLUE, GRAY ; H__GOODRA     ; ed
 	iconpal PINK, GRAY ; H__ZOROARK ; ee
 	iconpal BLUE, PINK ; DRATINI
 	iconpal BLUE, RED ; DRAGONAIR

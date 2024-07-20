@@ -712,10 +712,11 @@ ParasEvosAttacks:
 	db EVOLVE_LEVEL, 24, PARASECT
 	db 0 ; no more evolutions
 	db 1, TACKLE
+	db 1, ABSORB
 	db 2, SLEEP_POWDER ; Let's Go move
 	db 4, STUN_SPORE
 	db 6, POISONPOWDER
-	db 11, ABSORB
+	db 11, MEGA_DRAIN
 	db 17, BUG_BITE ; Fury Cutter → egg move
 	db 22, SPORE
 	db 27, SLASH

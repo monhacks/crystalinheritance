@@ -1,4 +1,4 @@
-AnarresTower3F_MapScriptHeader:  ; not sure why this isn't working.... 
+AnarresTower3F_MapScriptHeader:  
 	def_scene_scripts
 
 
@@ -17,23 +17,32 @@ AnarresTower3F_MapScriptHeader:  ; not sure why this isn't working....
 
 
 	def_object_events
-	object_event  6,  6, SPRITE_HOLLIS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AnarresTower3FHollisScript, -1
+	object_event  6,  6, SPRITE_HOLLIS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AnarresTower3FHollisScript, -1
 	object_event  7,  3, SPRITE_TAMMY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AnarresTower3FTammyScript, EVENT_BEAT_TAMMY;EVENT_BEAT_TAMMY
+	object_event  5,  6, SPRITE_AMOS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AnarresTower3FAmosScript, EVENT_BEAT_HOLLIS
 
 	object_const_def
 	const ANARRES_TOWER_HOLLIS
 	const ANARRES_TOWER_TAMMY
+	const ANARRES_TOWER_AMOS
 
 AnarresTower3FStepRight:
 	applyonemovement PLAYER, step_right
 AnarresTower3FEvent:	
 	applyonemovement PLAYER, step_down
-
+	turnobject ANARRES_TOWER_AMOS, UP
+	opentext 
+	writetext AmosSaysHelloText
+	closetext
+	applymovement ANARRES_TOWER_AMOS, AmosWalksAwayMovement
+	disappear ANARRES_TOWER_AMOS
+	end
 
 AnarresTower3FHollisScript:
 	faceplayer
 	checkevent EVENT_BEAT_HOLLIS
 	iftrue_jumptext TextHollisAfterBattle
+	setevent EVENT_SAW_KLEAVOR
 	appear ANARRES_TOWER_TAMMY
 	applymovement ANARRES_TOWER_TAMMY, TammyMovesToHollis
 	showemote EMOTE_SHOCK, ANARRES_TOWER_HOLLIS, 10
@@ -84,6 +93,12 @@ AnarresTower3FHollisScript:
 	setevent EVENT_BEAT_HOLLIS
 	setflag ENGINE_BOULDERBADGE
 	clearevent EVENT_TAMMY_HOLLYS_HOLT
+	setevent EVENT_BEAT_BUG_CATCHER_WAYNE
+	setevent EVENT_BEAT_BUG_CATCHER_KEN
+	setevent EVENT_BEAT_BUG_CATCHER_AL
+	setevent EVENT_BEAT_BUG_CATCHER_JOSH
+	setevent EVENT_BEAT_BUG_CATCHER_DON
+	setevent EVENT_BEAT_BUG_CATCHER_BENNY
 	setscene $1
 	jumpthisopenedtext
 
@@ -277,4 +292,34 @@ AnarresTower3FTammyScript:
 .TammyAfterBattleText:
 	text "Thanks for"
 	line "your help!"
+	done
+
+AnarresTower3FAmosScript: ; shouldn't be able to talk to him. 
+	end
+
+AmosWalksAwayMovement:
+	step_left
+	step_up
+	step_up
+	step_up
+	step_up
+	step_right
+	step_right
+	step_right
+	step_end
+
+AmosSaysHelloText:
+	text "Hm, are you one"
+	line "of his henchmen?"
+	
+	para "No, you don't"
+	line "look like one."
+	
+	para "I wish I could"
+	line "stay and chat,"
+	cont "but talking didn't"
+	cont "get me anywhere"
+	cont "with this geezer."
+	
+	para "I must be going."
 	done

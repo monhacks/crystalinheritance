@@ -1380,35 +1380,35 @@ endc
 
 KantoBadgePalettes:
 if !DEF(MONOCHROME)
-; Boulder Badge
+; Boulder Badge - hollis, tree trunk
 	RGB 31, 31, 31
-	RGB 23, 22, 22
-	RGB 14, 13, 13
+	RGB 22, 16, 10
+	RGB 15, 08, 04
 	RGB 00, 00, 00
-; Cascade Badge
+; Cascade Badge - fairy heart, clefairy colors
 	RGB 31, 31, 31
-	RGB 19, 31, 30
-	RGB 00, 23, 30
+	RGB 31, 14, 18
+	RGB 24, 10, 24
 	RGB 00, 00, 00
-; Thunder Badge
+; Thunder Badge - phoenix rising
 	RGB 31, 31, 31
-	RGB 31, 26, 05
-	RGB 31, 11, 00
+	RGB 31, 18, 14
+	RGB 31, 08, 02
 	RGB 00, 00, 00
-; Rainbow Badge
+; Rainbow Badge - crashing wave
 	RGB 31, 31, 31
-	RGB 31, 31, 14
-	RGB 00, 29, 07
+	RGB 14, 22, 31
+	RGB 04, 12, 24
 	RGB 00, 00, 00
-; Marsh Badge
+; Marsh Badge - ice crystal
 	RGB 31, 31, 31
-	RGB 31, 19, 30
-	RGB 31, 09, 30
+	RGB 14, 22, 31
+	RGB 08, 16, 31
 	RGB 00, 00, 00
-; Soul Badge
+; Soul Badge - eyeball
 	RGB 31, 31, 31
-	RGB 31, 22, 04
-	RGB 19, 13, 01
+	RGB 30, 28, 31
+	RGB 04, 12, 24
 	RGB 00, 00, 00
 ; Volcano Badge
 	RGB 31, 31, 31

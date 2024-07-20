@@ -565,26 +565,26 @@
 	; morn
 	wildmon 3, VENONAT
 	wildmon 3, PARAS
-	wildmon 5, VENONAT
-	wildmon 5, PARAS
+	wildmon 3, POLIWAG
+	wildmon 3, PARAS
 	wildmon 3, PIKACHU
-	wildmon 5, PIKACHU
+	wildmon 3, PIKACHU
 	wildmon 3, ROWLET
 	; day
 	wildmon 3, VENONAT
 	wildmon 3, PARAS
-	wildmon 5, VENONAT
-	wildmon 5, PARAS
+	wildmon 3, POLIWAG
+	wildmon 3, PARAS
 	wildmon 3, PIKACHU
-	wildmon 5, PIKACHU
+	wildmon 3, PIKACHU
 	wildmon 3, ROWLET
 	; nite
 	wildmon 3, VENONAT
 	wildmon 3, PARAS
-	wildmon 5, VENONAT
-	wildmon 5, PARAS
+	wildmon 3, POLIWAG
+	wildmon 3, PARAS
 	wildmon 3, PIKACHU
-	wildmon 5, PIKACHU
+	wildmon 3, PIKACHU
 	wildmon 3, ROWLET
 	end_grass_wildmons
 

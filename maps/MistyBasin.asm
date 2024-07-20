@@ -21,7 +21,7 @@ MistyBasin_MapScriptHeader: ; should be like  "BurnedTowerB1F_MapScriptHeader"
 	object_event  5,  4, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSageNico, EVENT_BEAT_TAMMY
 	object_event 13,  3, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerMediumMartha, EVENT_BEAT_TAMMY
 	object_event 14,  2, SPRITE_TAMMY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TammyScript, EVENT_BEAT_TAMMY
-	object_event 14, 13, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, MistyBasonMatronText, -1 ;
+	object_event 14, 13, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, MistyBasonMatronScript, -1 ;
 	fruittree_event 15, 13, FRUITTREE_MISTYBASIN, RADIANT_OPAL, PAL_NPC_RED
 
 	object_const_def
@@ -32,7 +32,42 @@ MistyBasin_MapScriptHeader: ; should be like  "BurnedTowerB1F_MapScriptHeader"
 
 
 
-MistyBasonMatronText:
+MistyBasonMatronScript:
+	checkevent EVENT_GOT_WATER_PULSE
+	iftrue_jumptextfaceplayer MatronYawnText
+	faceplayer
+	opentext
+	writetext MistyBasinGiveWaterPulse
+	promptbutton
+	verbosegivetmhm TM_WATER_PULSE
+	iffalse_endtext
+	setevent EVENT_GOT_WATER_PULSE
+	jumpthisopenedtext
+	
+	text "Use that"
+	line "technique to"
+	cont "turn your"
+	cont "opponent's"
+	cont "strength against"
+	cont "themselves."
+	done
+
+
+MistyBasinGiveWaterPulse:
+	text "Water is the"
+	line "lifeblood of all"
+	cont "living things."
+
+	para "If you can"
+	line "disrupt their"
+	cont "water, you can"
+	cont "disrupt your"
+	cont "opponent. Here,"
+	cont "take this."
+	done
+
+
+MatronYawnText:
 	text "A slowpoke yawn"
 	line "causes rain. Ten"
 	cont "elders ago,"

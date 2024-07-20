@@ -139,7 +139,7 @@ ENDM
 	map_const ANARRES_TOWN,                               20,  9 ;  2 johto traditional
 	map_const MISTY_BASIN,                                10,  9 ;  3 cave 
 	map_const ANARRES_DORMS,                               4,  3 ;  4 johto house
-	map_const ANARRES_STOCKROOM,                           5,  4 ;  5 traditional hosue
+	map_const ANARRES_STOCKROOM,                           6,  4 ;  5 traditional hosue
 	map_const ANARRES_TOWER_1F,                            6,  6 ;  6 sprout tower
 	map_const ANARRES_TOWER_2F,                            6,  6 ;  7 sprout tower
 	map_const ANARRES_TOWER_3F,                            6,  6 ;  8 sprout tower

@@ -276,6 +276,7 @@ IndigoPlateauMart:
 AnarresMart:
 	db 11 ; # items
 	db RARE_CANDY
+	db REPEL
 	db CHERI_BERRY
 	db CHESTO_BERRY
 	db PECHA_BERRY
@@ -285,7 +286,6 @@ AnarresMart:
 	db ORAN_BERRY 
 	db LUMINOUSMOSS
 	db WHITE_HERB
-	db MULCH
 	db -1
 
 PewterMart:

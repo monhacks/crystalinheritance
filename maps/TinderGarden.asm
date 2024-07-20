@@ -351,9 +351,9 @@ CyndaquilPokeBallScript:
 	setevent EVENT_GOT_CYNDAQUIL 
 	setevent EVENT_GOT_A_POKEMON
 	writetext ChoseStarterText;;;
-	promptbutton
+	waitbutton
 	waitsfx
-	givepoke CYNDAQUIL, NO_FORM, 5, ORAN_BERRY
+	givepoke CYNDAQUIL, NO_FORM, 5, ORAN_BERRY ; this only works when I have done something in the debug...
 	writetext RivalChoosesStarterText;;;
 	waitbutton
 	closetext
@@ -365,7 +365,7 @@ CyndaquilPokeBallScript:
 	writetext RivalReceivedStarterText;;;
 	playsound SFX_CAUGHT_MON
 	waitsfx
-	promptbutton
+	waitbutton
 	closetext
 	applymovement TINDER_GARDEN_RIVAL, RivalAfterOshawottMovement
 	opentext
@@ -725,6 +725,12 @@ PrycePokemonText:
 	line "a mission to get"
 	cont "them to recommit"
 	cont "to their mission."
+	
+	para "I'm hoping that"
+	line "a sprig from"
+	cont "this blossom tree"
+	cont "will remind them"
+	cont "of their duty."
 	done
 
 CharcoalScript:
