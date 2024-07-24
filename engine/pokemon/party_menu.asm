@@ -62,7 +62,7 @@ BT_SwapRentals:
 	cp c
 	jr z, .reset_switch
 
-;	; Figure out if we actually swapped one of ours with one of the last foe's.
+	; Figure out if we actually swapped one of ours with one of the last foe's.
 	ld b, 0
 	cp 3
 	rl b
@@ -185,7 +185,7 @@ BT_PartySelect:
 .loop
 	call InitPartyMenuLayout
 	call ApplyTilemapInVBlank
-;	ld a, CGB_PARTY_MENU
+	ld a, CGB_PARTY_MENU
 	call GetCGBLayout
 	call SetPalettes
 	call DelayFrame
@@ -495,7 +495,7 @@ BT_AddCurSelection:
 
 BT_RemoveCurSelection:
 ; Removes wCurPartyMon from BT selection and shifts other entries.
-;; Assumes the selection entry is valid and will break otherwise.
+; Assumes the selection entry is valid and will break otherwise.
 	push hl
 	push de
 	push bc

@@ -1,4 +1,4 @@
-InitIntroGradient::
+InitIntroGradient:: ; no difference with the clean version. 
 	; top stripe
 	hlcoord 0, 0
 	ld bc, SCREEN_WIDTH
@@ -322,7 +322,7 @@ Continue:
 	call ClearTileMap
 	ld c, 20
 	call DelayFrames
-;	farcall JumpRoamMons ; NO ROAMING MONS
+	farcall JumpRoamMons ; NO ROAMING MONS --- rtc problems here?
 	farcall ClockContinue ; time-related
 	ld a, [wSpawnAfterChampion]
 	cp SPAWN_LANCE
@@ -566,7 +566,7 @@ ProfElmSpeech:
 
 	xor a
 	ld [wCurPartySpecies], a
-	ld a, KURT ; Kurt's sprite replaces Imakuni. todo replace the sprite imakuni with kurt's since it will be easier to work with
+	ld a, KURT
 	ld [wTrainerClass], a
 	call Intro_PrepTrainerPic
 
@@ -575,7 +575,7 @@ ProfElmSpeech:
 	call InitIntroGradient
 	call Intro_RotatePalettesLeftFrontpic
 
-	ld hl, ElmText1 ; ?
+	ld hl, ElmText1 ; hello, are you excited
 	call PrintText
 if !DEF(DEBUG)
 	ld c, 15
@@ -585,7 +585,7 @@ if !DEF(DEBUG)
 	ld a, CYNDAQUIL
 	ld [wCurSpecies], a
 	ld [wCurPartySpecies], a
-	call GetBaseData ; [wCurForm] doesn't matter for Sylveon
+	call GetBaseData ; [wCurForm] doesn't matter for cyndaquil
 
 	hlcoord 6, 4
 	call PrepMonFrontpic
@@ -600,9 +600,9 @@ if !DEF(DEBUG)
 	call InitIntroGradient
 	call Intro_RotatePalettesLeftFrontpic
 
-	ld hl, ElmText2
+	ld hl, ElmText2 ; you will get your very first mon
 	call PrintText
-	ld hl, ElmText4
+	ld hl, ElmText4 ; evety 20 years
 	call PrintText
 	ld c, 15
 	call FadeToWhite
@@ -619,7 +619,7 @@ if !DEF(DEBUG)
 	call InitIntroGradient
 	call Intro_RotatePalettesLeftFrontpic
 
-	ld hl, ElmText5
+	ld hl, ElmText5 ; i know the drought makes it less festive
 	call PrintText
 endc
 
@@ -628,7 +628,7 @@ endc
 	ld c, 10
 	call DelayFrames
 
-	ld hl, ElmText6
+	ld hl, ElmText6 ; what should we call you?
 	call PrintText
 
 	call NamePlayer
@@ -643,7 +643,7 @@ endc
 	call InitIntroGradient
 	call Intro_RotatePalettesLeftFrontpic
 
-	ld hl, ElmText7
+	ld hl, ElmText7 ; are you ready?
 	jmp PrintText
 
 ElmText1:
@@ -656,7 +656,7 @@ ElmText2:
 	ld a, CYNDAQUIL
 	call PlayCry
 	call WaitSFX
-	ld hl, ElmText3
+	ld hl, ElmText3 ; waitbutton
 	ret
 
 ElmText3:
@@ -755,7 +755,7 @@ endc
 	db "Girl@"
 
 AreYouABoyOrAreYouAGirlText:
-	; Are you a boy? Or are you a girl?
+	; go as a boy? or a girl?
 	text_far Text_AreYouABoyOrAreYouAGirl
 	text_end
 

@@ -540,10 +540,10 @@ StatsScreen_LoadGFX:
 
 .PlaceOTInfo:
 	; for rental mons, replace the whole thing with "Rental #mon"
-	farcall BT_InRentalMode ;TODO CHECK THAT THE OT LOOKS OK ON THE STATS SCREEN - it didn't 05.03.24 so putting back in the battle tower stuff
+	farcall BT_InRentalMode
 	jr nz, .not_rental_mon
 	hlcoord 0, 15
-	ld de, .OT_ID_str;.Rental_OT USED TO BE
+	ld de, .Rental_OT
 	rst PlaceString
 	ret
 
@@ -747,9 +747,9 @@ TN_PrintToD:
 	db "Met/@"
 
 TN_PrintLocation:
-;	farcall BT_InRentalMode # TODO check that the orange page works wto show 
-;	ld de, .battle_factory
-;	jr z, .print
+	farcall BT_InRentalMode
+	ld de, .battle_factory
+	jr z, .print
 	ld a, [wTempMonCaughtLocation]
 	and a
 	ret z
@@ -764,8 +764,8 @@ TN_PrintLocation:
 	rst PlaceString
 	ret
 
-;.battle_factory
-;	db "Battle Factory@"
+.battle_factory
+	db "Battle Factory@"
 
 .event
 	db "Event #mon@"

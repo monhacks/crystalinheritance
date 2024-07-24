@@ -107,12 +107,12 @@ Pokegear_LoadGFX:
 	ld c, a
 	call GetWorldMapLocation
 	ld hl, FastShipGFX
-	cp TINDER_GARDEN ; removed 
+	cp CIANWOOD_CITY ; removed 
 	jr z, .load_alt_sprite
 	ld hl, SinjohRuinsArrowGFX
-	cp TINDER_GARDEN
+	cp CIANWOOD_CITY
 	jr z, .load_alt_sprite
-	cp TINDER_GARDEN
+	cp CIANWOOD_CITY
 	jr z, .load_alt_sprite
 	farcall GetPlayerIcon
 	ldh a, [rSVBK]

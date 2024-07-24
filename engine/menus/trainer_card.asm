@@ -1,4 +1,4 @@
-TRAINERCARD_BORDERGFX_START EQU $f4
+TRAINERCARD_BORDERGFX_START EQU $f4 ; no change from original except positions
 
 TrainerCard:
 	ld a, [wVramState]

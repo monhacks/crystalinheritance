@@ -351,7 +351,7 @@ CyndaquilPokeBallScript:
 	setevent EVENT_GOT_CYNDAQUIL 
 	setevent EVENT_GOT_A_POKEMON
 	writetext ChoseStarterText;;;
-	waitbutton
+	promptbutton
 	waitsfx
 	givepoke CYNDAQUIL, NO_FORM, 5, ORAN_BERRY ; this only works when I have done something in the debug...
 	writetext RivalChoosesStarterText;;;

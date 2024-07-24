@@ -33,16 +33,14 @@ AnarresTower3FEvent:
 	turnobject ANARRES_TOWER_AMOS, UP
 	opentext 
 	writetext AmosSaysHelloText
+	waitbutton
 	closetext
 	applymovement ANARRES_TOWER_AMOS, AmosWalksAwayMovement
 	disappear ANARRES_TOWER_AMOS
-	end
-
-AnarresTower3FHollisScript:
-	faceplayer
-	checkevent EVENT_BEAT_HOLLIS
-	iftrue_jumptext TextHollisAfterBattle
+	clearevent EVENT_BEAT_HOLLIS ; this flag randomly gets set somehow. This is a workaround, i think 
+	setscene $1
 	setevent EVENT_SAW_KLEAVOR
+	pause 10
 	appear ANARRES_TOWER_TAMMY
 	applymovement ANARRES_TOWER_TAMMY, TammyMovesToHollis
 	showemote EMOTE_SHOCK, ANARRES_TOWER_HOLLIS, 10
@@ -70,6 +68,7 @@ AnarresTower3FHollisScript:
 ;	waitbutton
 	turnobject ANARRES_TOWER_TAMMY, DOWN
 	pause 5
+	showemote EMOTE_HAPPY, ANARRES_TOWER_TAMMY, 10
 	showtext TammyText3
 ;	waitbutton
 	showemote EMOTE_SHOCK, ANARRES_TOWER_HOLLIS, 10
@@ -130,23 +129,47 @@ TammyMovesToHollis:
 	step_end
 
 HollisPastGuards:
-	text "HOLLIS: You made"
-	line "it past the guards?"
-	cont "Do I have to do it"
-	cont "all by myself?"
+	text "HOLLIS: Tammy-"
+	line "how are you here?"
+	
+	para "We have been"
+	line "through this."
+	
+	para "My watch has kept"
+	line "us safe so far."
+	
+	para "And why is"
+	line "<PLAYER> here?"
 	done
 
 HollisChallengesText:
-	text "I'm taking total"
+	text "No one else has"
+	line "my experience!"
+
+	para "I'm taking total"
 	line "control!"
 	
-	para "No one else has"
-	line "my experience!"
+	para "<PLAYER>, I'll"
+	line "start with you!"
 	done
 
 TammyExplains:
 	text "TAMMY: Won't"
 	line "you just listen?"
+	
+	para "<PLAYER> and I"
+	line "both think that"
+	cont "you need help."
+	
+	para "The problems in"
+	line "the Holt require"
+	cont "more than one"
+	cont "perspective to"
+	cont "solve, and the"
+	cont "Hisuians say the"
+	cont "Emperor will"
+	cont "soon bring us in"
+	cont "to the Empire."
 	done
 
 HollisToYou:
@@ -302,24 +325,41 @@ AmosWalksAwayMovement:
 	step_up
 	step_up
 	step_up
-	step_up
 	step_right
 	step_right
 	step_right
 	step_end
 
 AmosSaysHelloText:
-	text "Hm, are you one"
-	line "of his henchmen?"
+	text "Another flunkie"
+	line "to defend his"
+	cont "cowardice?"
 	
-	para "No, you don't"
-	line "look like one."
+	para "..."
+	line "No, you aren't"
+	cont "dressed right."
 	
-	para "I wish I could"
-	line "stay and chat,"
-	cont "but talking didn't"
-	cont "get me anywhere"
-	cont "with this geezer."
+	para "My name is Amos."
+	line "I'm trying to"
+	cont "convince Hollis"
+	cont "to join in opp-"
+	cont "osition to the"
+	cont "Emperor's plan."
+	
+	para "If he wants to"
+	line "stay the center"
+	cont "of his universe,"
+	cont "so be it."
+	
+	para "..."
 	
 	para "I must be going."
 	done
+
+AnarresTower3FHollisScript:
+	faceplayer
+	opentext
+	writetext TextHollisAfterBattle
+	waitbutton
+	closetext
+	end

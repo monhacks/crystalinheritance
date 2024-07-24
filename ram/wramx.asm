@@ -1037,13 +1037,13 @@ wCharcoalKilnSceneID:: db
 wBurnedTower1FSceneID:: db
 wBurnedTowerB1FSceneID:: db
 wTinderGardenSceneID:: db
-wAnarresTower3FSceneID:: db ;??
-wCeruleanGymSceneID:: db
-wCherrygroveCitySceneID:: db
-wCianwoodCitySceneID:: db
-wCinnabarLabSceneID:: db
-wColosseumSceneID:: db
-wDarkCaveVioletEntranceSceneID:: db
+wAnarresTower3FSceneID:: db
+wAzaleaPokecenter1FSceneID:: db 
+wHollysHoltSceneID:: db
+wCianwoodCitySceneID:: db 
+wMistyBasinSceneID:: db
+wColosseumSceneID:: db 
+wAnarresHouseSceneID:: db
 wDayCareSceneID:: db
 wDragonsDenB1FSceneID:: db
 wDragonShrineSceneID:: db
@@ -1114,13 +1114,7 @@ wVictoryRoad2FSceneID:: db
 wVioletGymSceneID:: db
 wWillsRoomSceneID:: db
 wWiseTriosRoomSceneID:: db
-wYellowForestSceneID:: db
-wAzaleaPokecenter1FSceneID:: db
-wHollysHoltSceneID:: db
-wMistyBasinSceneID:: db
-wAnarresHouseSceneID:: db
-
-
+wYellowForestSceneID:: db ; sceneids should only go through 1117 line. TODO 
 
 ; fight counts
 wJackFightCount::    db

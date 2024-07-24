@@ -51,7 +51,7 @@ KurtsHouseScript1:
 	turn_head_right
 	step_end
 
-KurtHouseEventScript: ;todo the apricorn box is still kinda messy
+KurtHouseEventScript:
 	opentext
 	writetext KurtIntroText
 	promptbutton
@@ -92,6 +92,8 @@ KurtHouseEventScript: ;todo the apricorn box is still kinda messy
 	promptbutton
 	special SpecialNameRival
 	writetext KurtOutroText	
+;	loadwildmon PIDGEY, 5 ; new 
+;	catchtutorial BATTLETYPE_TUTORIAL ; new
 	waitbutton
 	closetext
 	applymovement KURTSHOUSE_KURT, .kurt_walks_back
@@ -113,7 +115,16 @@ KurtIntroText:
 	
 	para "Before we go, I"
 	line "want to give you"
-	cont "a gift..."
+	cont "a some gifts."
+	done
+	
+KurtShuckleText:
+	text "First of all, a"
+	line "mighty Shuckle!"
+	
+	para "It will be with"
+	line "you through"
+	cont "anything."
 	done
 
 MomPokegearText:
@@ -178,8 +189,9 @@ KurtOutroText0:
 
 KurtOutroText:
 	text "Can you go see"
-	line "what is taking"
-	cont "them so long?"
+	line "what is holding"
+	cont "up <RIVAL> and"
+	cont "his dad?"
 	
 	para "I'll go outside"
 	line "and wait."
@@ -342,11 +354,12 @@ endr
 	; post-e4
 	setflag ENGINE_HAVE_SHINY_CHARM
 	; good party
-	givepoke DUSCLOPS, NO_FORM, 100, BRIGHTPOWDER
+	; here, trying to force things to be re-set....
+	givepoke SHUCKLE, MALE | NO_FORM, 25, BERRY_JUICE, NET_BALL, POISON_JAB, TRUE, ShuckieName, ShuckieOTName, ShuckieOTIDAndCaughtGender
 	; hm slaves
-	givepoke DUSKNOIR, NO_FORM, 100, LEFTOVERS
-	givepoke H__AVALUGG, NO_FORM, 100, LEFTOVERS	
-	givepoke GABITE, NO_FORM, 100, LEFTOVERS
+;	givepoke DUSKNOIR, NO_FORM, 100, LEFTOVERS
+;	givepoke H__AVALUGG, NO_FORM, 100, LEFTOVERS	
+;	givepoke GABITE, NO_FORM, 100, LEFTOVERS
 ;	givepoke BASCULEGION, NO_FORM, 100, LEFTOVERS
 ;	givepoke H__BRAVIARY, NO_FORM, 100, LEFTOVERS
 ;	givepoke KIRLIA, NO_FORM, 100, LEFTOVERS
@@ -555,3 +568,13 @@ CheckForApricornsText:
 	text "Any items"
 	line "in the bag?"
 	done
+
+ShuckieName:
+	rawchar "Shuckie@"
+
+ShuckieOTName:
+	rawchar "Kirk@"
+
+ShuckieOTIDAndCaughtGender:
+	bigdw KIRK_SHUCKIE_ID
+	db MALE

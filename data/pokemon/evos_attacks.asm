@@ -3440,11 +3440,11 @@ ShuckleEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, MUD_SLAP ; Constrict → GSC TM move
 	db 1, DEFENSE_CURL ; Withdraw → similar move
-	db 1, ROLLOUT
-	db 5, ENCORE
-	db 9, WRAP
+	db 1, WRAP
+	db 1, ROCK_SMASH
+	db 10, ROLLOUT
 	db 12, STRING_SHOT ; Struggle Bug → HGSS tutor move
-	db 16, SAFEGUARD
+	db 14, ENCORE
 	db 20, REST
 	db 23, ROCK_THROW
 	db 27, ACID ; Gastro Acid → egg move

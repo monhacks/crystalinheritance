@@ -342,7 +342,6 @@ InitializeBackground: ; this will draw the background, the tree. as of 07-05-24,
     dec c                     ; Decrease C by 1, c = c - 1
     jr nz, .loop2             ; Repeat if C is not zero
     ret                       ; Return from the function
-	
 
 AnimateTitleCrystal:
 ; Move the title screen crystal downward until it's fully visible
@@ -375,6 +374,9 @@ INCBIN "gfx/title/logo_version.2bpp.lz" ; on 7-3-24, this makes with a transpare
 
 TitleCrystalGFX: ; crystal is the original crystal, blossom_v3 is a 48x80 with similar tilemap to blossom_v2, blossom_v2 is 96x64
 INCBIN "gfx/title/rearranged_blossom.2bpp.lz"
+
+;TitleCrystalGFX: ; crystal is the original crystal, blossom_v3 is a 48x80 with similar tilemap to blossom_v2, blossom_v2 is 96x64
+;INCBIN "gfx/title/crystal.2bpp.lz"
 
 TitleScreenPalettes: 
 ; BG the logo and the suicune

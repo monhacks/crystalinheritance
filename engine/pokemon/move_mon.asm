@@ -1,4 +1,4 @@
-TryAddMonToParty:
+TryAddMonToParty: ; no difference with clean version
 ; Check if to copy wild Pkmn or generate new Pkmn
 	; Whose is it?
 	ld de, wPartyCount
@@ -1405,7 +1405,7 @@ GetNatureStatMultiplier::
 	pop de
 	ret
 
-GivePoke::
+GivePoke:: ; trying to track down which part of this is not working... seems to be an EB error?...
 	push de
 	push bc
 	ld a, [wCurPartySpecies]

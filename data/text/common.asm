@@ -89,7 +89,7 @@ _UsedMulchText::
 
 SECTION "_WhichApricornText", ROMX
 _WhichApricornText::
-	text "Which Apricorn"
+	text "Which one"
 	line "should I use?"
 	done
 
@@ -2848,8 +2848,7 @@ _PlayersPCNoRoomDepositText::
 
 SECTION "_PokecenterPCTurnOnText", ROMX
 _PokecenterPCTurnOnText::
-	text "<PLAYER> turned on"
-	line "the PC."
+	text "..."
 	prompt
 
 SECTION "_PokecenterPCWhoseText", ROMX
