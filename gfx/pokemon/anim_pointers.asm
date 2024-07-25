@@ -252,35 +252,34 @@ AnimationPointers:
  dw Ho_OhAnimation
  dw CelebiAnimation
 	assert_table_length NUM_POKEMON
-
  dw EggAnimation
-
- dw UnownBAnimation
- dw UnownCAnimation
- dw UnownDAnimation
- dw UnownEAnimation
- dw UnownFAnimation
- dw UnownGAnimation
- dw UnownHAnimation
- dw UnownIAnimation
- dw UnownJAnimation
- dw UnownKAnimation
- dw UnownLAnimation
- dw UnownMAnimation
- dw UnownNAnimation
- dw UnownOAnimation
- dw UnownPAnimation
- dw UnownQAnimation
- dw UnownRAnimation
- dw UnownSAnimation
- dw UnownTAnimation
- dw UnownUAnimation
- dw UnownVAnimation
- dw UnownWAnimation
- dw UnownXAnimation
- dw UnownYAnimation
- dw UnownZAnimation
- dw UnownExclamationAnimation
- dw UnownQuestionAnimation
-
+;
+; dw UnownBAnimation
+; dw UnownCAnimation
+; dw UnownDAnimation
+; dw UnownEAnimation
+; dw UnownFAnimation
+; dw UnownGAnimation
+; dw UnownHAnimation
+; dw UnownIAnimation
+; dw UnownJAnimation
+; dw UnownKAnimation
+; dw UnownLAnimation
+; dw UnownMAnimation
+; dw UnownNAnimation
+; dw UnownOAnimation
+; dw UnownPAnimation
+; dw UnownQAnimation
+; dw UnownRAnimation
+; dw UnownSAnimation
+; dw UnownTAnimation
+; dw UnownUAnimation
+; dw UnownVAnimation
+; dw UnownWAnimation
+; dw UnownXAnimation
+; dw UnownYAnimation
+; dw UnownZAnimation
+; dw UnownExclamationAnimation
+; dw UnownQuestionAnimation
+;
 ;	assert_table_length NUM_UNIQUE_POKEMON

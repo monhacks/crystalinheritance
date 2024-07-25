@@ -1414,7 +1414,7 @@ GivePoke:: ; trying to track down which part of this is not working... seems to 
 	ld [wOTPartyCount], a
 	ld [wCurOTMon], a
 	inc a
-	ld [wMonType], a
+	ld [wMonType], a ; shows up as wMusicEnd in the rom?... 
 	ld [wBattleMode], a
 	predef TryAddMonToParty
 	lb bc, $81, 1

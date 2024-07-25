@@ -167,7 +167,7 @@ MenuMonIconColors:: ;TEAL, GREEN, RED, PINK, GRAY, BLUE, GREEN, BROWN, PURPLE,
 	iconpal PURPLE, BROWN ; MISMAGIUS	
 	iconpal RED, BLUE ; YANMA
 	iconpal RED, BLUE ; YANMEGA
-	iconpal GRAY, BLUE ; UNOWN
+	iconpal GRAY, BLUE ; UNOWN_A
 	iconpal BROWN, BLUE ; GIRAFARIG
 	iconpal GRAY, RED ; PINECO
 	iconpal PURPLE, BROWN ; FORRETRESS
@@ -256,9 +256,8 @@ MenuMonIconColors:: ;TEAL, GREEN, RED, PINK, GRAY, BLUE, GREEN, BROWN, PURPLE,
 	iconpal RED, GREEN ; HO_OH
 	iconpal GREEN, RED ; CELEBI
 	assert_table_length NUM_POKEMON
-
 	iconpal RED, BLUE ; EGG
 
-rept NUM_UNOWN - 1
-	iconpal GRAY, BLUE
-endr
+;rept NUM_UNOWN - 1
+;	iconpal GRAY, BLUE
+;endr

@@ -11,7 +11,7 @@ Script_givepoke:
 	call GetScriptByte
 	ld [wCurPartyLevel], a
 	call GetScriptByte
-	ld [wCurItem], a
+	ld [wCurItem], a ; shows up as wMartItemID in the debugger. Maybe if there's no item then it work out? 
 	call GetScriptByte
 	ld [wGiftMonBall], a
 	call GetScriptByte

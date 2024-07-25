@@ -637,13 +637,13 @@ TrainerCard_JohtoBadgesOAM:
 
 	; Glacier Badge
 	db $80, $58, 6, 6, 6, 6
-	db $18, $20, $24, $20 | $80
-	db $18, $20, $24, $20 | $80
+	db $18, $18, $18, $18
+	db $18, $18, $18, $18
 
 	; Rising Badge
 	db $80, $78, 7, 7, 7, 7
-	db $1c, $20, $24, $20 | $80
-	db $1c, $20, $24, $20 | $80
+	db $1c, $1c, $1c, $1c
+	db $1c, $1c, $1c, $1c
 
 TrainerCard_KantoBadgesOAM: ; 072024 the badges aren't going to the right trainer, and trainers don't have the right palettes. 
 ; Template OAM data for each badge on the trainer card.

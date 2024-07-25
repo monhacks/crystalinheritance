@@ -253,34 +253,33 @@ FramesPointers:
 	dw CelebiFrames
 
 	assert_table_length NUM_POKEMON
-
 	dw EggFrames
-
-	dw UnownBFrames
-	dw UnownCFrames
-	dw UnownDFrames
-	dw UnownEFrames
-	dw UnownFFrames
-	dw UnownGFrames
-	dw UnownHFrames
-	dw UnownIFrames
-	dw UnownJFrames
-	dw UnownKFrames
-	dw UnownLFrames
-	dw UnownMFrames
-	dw UnownNFrames
-	dw UnownOFrames
-	dw UnownPFrames
-	dw UnownQFrames
-	dw UnownRFrames
-	dw UnownSFrames
-	dw UnownTFrames
-	dw UnownUFrames
-	dw UnownVFrames
-	dw UnownWFrames
-	dw UnownXFrames
-	dw UnownYFrames
-	dw UnownZFrames
-	dw UnownExclamationFrames
-	dw UnownQuestionFrames
+;
+;	dw UnownBFrames
+;	dw UnownCFrames
+;	dw UnownDFrames
+;	dw UnownEFrames
+;	dw UnownFFrames
+;	dw UnownGFrames
+;	dw UnownHFrames
+;	dw UnownIFrames
+;	dw UnownJFrames
+;	dw UnownKFrames
+;	dw UnownLFrames
+;	dw UnownMFrames
+;	dw UnownNFrames
+;	dw UnownOFrames
+;	dw UnownPFrames
+;	dw UnownQFrames
+;	dw UnownRFrames
+;	dw UnownSFrames
+;	dw UnownTFrames
+;	dw UnownUFrames
+;	dw UnownVFrames
+;	dw UnownWFrames
+;	dw UnownXFrames
+;	dw UnownYFrames
+;	dw UnownZFrames
+;	dw UnownExclamationFrames
+;	dw UnownQuestionFrames
 ;	assert_table_length NUM_UNIQUE_POKEMON

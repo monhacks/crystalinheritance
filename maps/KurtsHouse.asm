@@ -314,8 +314,6 @@ endr
 	givemoney $0, 1000000
 	givemoney $0, 999999
 	givecoins 50000
-;	loadmem wBattlePoints+0, 0
-;	loadmem wBattlePoints+1, 250
 	; all badges
 	setflag ENGINE_ZEPHYRBADGE
 	setflag ENGINE_HIVEBADGE
@@ -355,7 +353,7 @@ endr
 	setflag ENGINE_HAVE_SHINY_CHARM
 	; good party
 	; here, trying to force things to be re-set....
-	givepoke SHUCKLE, MALE | NO_FORM, 25, BERRY_JUICE, NET_BALL, POISON_JAB, TRUE, ShuckieName, ShuckieOTName, ShuckieOTIDAndCaughtGender
+	givepoke SHUCKLE, NO_FORM, 25
 	; hm slaves
 ;	givepoke DUSKNOIR, NO_FORM, 100, LEFTOVERS
 ;	givepoke H__AVALUGG, NO_FORM, 100, LEFTOVERS	
@@ -386,7 +384,7 @@ endr
 ;	loadmem wPartyMon3PP+2, 15
 ;	loadmem wPartyMon3PP+3, 15
 	; fill pokedex
-;	callasm FillPokedex
+	callasm FillPokedex
 	closetext
 	end
 
