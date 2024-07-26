@@ -113,8 +113,8 @@ NamingScreen:
 	db "Your name?@"
 
 .Rival:
-	ld hl, SilverSpriteGFX
-	lb bc, BANK(SilverSpriteGFX), SPRITE_ANIM_INDEX_RED_WALK
+	ld hl, RivalSpriteGFX; need to change to rival's sprite. used to be SilverSpriteGFX
+	lb bc, BANK(RivalSpriteGFX), SPRITE_ANIM_INDEX_BLUE_WALK
 	call .LoadSprite
 	hlcoord 5, 2
 	ld de, .RivalNameString

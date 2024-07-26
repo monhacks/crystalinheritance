@@ -299,13 +299,6 @@ SECTION "Item Icons 14", ROMX
 MintLeafIcon::     INCBIN "gfx/items/mint_leaf.2bpp.lz"
 FlowerMailIcon::   INCBIN "gfx/items/flower_mail.2bpp.lz"
 SurfMailIcon::
-PortraitMailIcon::
-LovelyMailIcon::
-EonMailIcon::      
-MorphMailIcon::    
-BlueSkyMailIcon::  
-MusicMailIcon::    
-MirageMailIcon::   
 LiteBlueMailIcon:: INCBIN "gfx/items/mail.2bpp.lz"
 WhiteApricornIcon::
 PinkApricornIcon:: INCBIN "gfx/items/apricorn.2bpp.lz" 

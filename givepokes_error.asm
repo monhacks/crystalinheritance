@@ -1,19 +1,19 @@
 ; in the map file
 givepoke SHUCKLE, MALE | NO_FORM, 25, BERRY_JUICE, NET_BALL, POISON_JAB, TRUE, ShuckieName, ShuckieOTName, ShuckieOTIDAndCaughtGender
 
-Script_givepoke:
+Script_givepoke: ; testing with F7 progression in bgb.exe
 ; return 0 in hScriptVar if no room in party or box
 ; return 1 if sent to party, return 2 if sent to box
-	call GetScriptByte
-	ld [wCurPartySpecies], a
-	call GetScriptByte
-	ld [wCurForm], a
-	call GetScriptByte
-	ld [wCurPartyLevel], a
-	call GetScriptByte
-	ld [wCurItem], a ; shows up as wMartItemID in the debugger. Maybe if there's no item then it work out? 
-	call GetScriptByte
-	ld [wGiftMonBall], a
+	call GetScriptByte ; good through here
+	ld [wCurPartySpecies], a ; good through here
+	call GetScriptByte ; good thru here
+	ld [wCurForm], a ; good through here
+	call GetScriptByte ; good through here
+	ld [wCurPartyLevel], a ; good
+	call GetScriptByte ; good
+	ld [wCurItem], a ; no crash yet
+	call GetScriptByte ; good 
+	ld [wGiftMonBall], a ; shows up as wMartItemID in the debutter. 
 	call GetScriptByte
 	ld [wCurPlayerMove], a
 	call GetScriptByte
@@ -35,7 +35,7 @@ endr
 
 ; from move_mon.asm
 GivePoke:: ; trying to track down which part of this is not working... seems to be an EB error?...
-	push de
+	push de ; no crash yet
 	push bc
 	ld a, [wCurPartySpecies]
 	ld [wEnemyMonSpecies], a

@@ -40,7 +40,7 @@ TryAddMonToParty: ; no difference with clean version
 .loadOTname
 	ldh a, [hMoveMon] ; Restore index from backup
 	dec a
-	call SkipNames
+	call SkipNames ; ok from here
 	ld d, h
 	ld e, l
 	ld hl, wPlayerName
@@ -131,7 +131,7 @@ TryAddMonToParty: ; no difference with clean version
 	and $f
 	jr z, .initializeStats
 	ld hl, wOTPartyMon1Species
-.initializeStats
+.initializeStats ; ok through here
 	ldh a, [hMoveMon]
 	dec a
 	ld bc, PARTYMON_STRUCT_LENGTH
@@ -161,7 +161,7 @@ rept NUM_MOVES - 1
 endr
 	ld [hl], a
 	ld [wBuffer1], a
-	; c = species
+	; c = species ; c = 30 for the kurtshouse shuckle?... 
 	ld a, [wCurSpecies]
 	ld c, a
 	; b = form
@@ -185,7 +185,7 @@ endr
 	push de
 	ld a, [wCurPartyLevel]
 	ld d, a
-	farcall CalcExpAtLevel
+	farcall CalcExpAtLevel ; good through here
 	pop de
 	ldh a, [hProduct + 1]
 	ld [de], a
@@ -289,12 +289,12 @@ endr
 .no_synchronize
 	ld a, NUM_NATURES
 	call RandomRange
-.got_nature
+.got_nature ; good thru here
 	ld b, a
 
 ; Random ability
 ; 5% hidden ability, otherwise 50% either main ability
-	ld a, [wBattleMode]
+	ld a, [wBattleMode] ; good thru here
 	dec a
 	jr nz, .ability_check
 
@@ -333,7 +333,7 @@ endr
 	cp BATTLETYPE_GROTTO
 	jr z, .not_shiny
 
-.shiny_check
+.shiny_check ; good through this line
 	call Random
 	and a
 	jr nz, .not_shiny ; 255/256 not shiny
@@ -413,7 +413,7 @@ endr
 	add b
 	ld [wDVAndPersonalityBuffer + 4], a
 
-.initializetrainermonstats
+.initializetrainermonstats ; no crash through here
 	ld bc, wDVAndPersonalityBuffer
 rept 5 ; DVs + Personality
 	ld a, [bc]
@@ -425,7 +425,7 @@ endr
 	push de
 	inc hl
 	inc hl
-	predef FillPP
+	predef FillPP ; no crash through here
 	pop de
 	pop hl
 rept NUM_MOVES
@@ -490,19 +490,19 @@ endr
 
 	ld a, [wMonType]
 	and $f
-	jr nz, .done
-	ld a, [wCurPartySpecies]
-	cp UNOWN
-	jr nz, .done
-	ld hl, wPartyMon1Form
-	ld a, [wPartyCount]
-	dec a
-	ld bc, PARTYMON_STRUCT_LENGTH
-	rst AddNTimes
-	predef GetVariant
-	farcall UpdateUnownDex
-
-.done
+;	jr nz, .done ; removed this section to avoid any problems with unown...
+;	ld a, [wCurPartySpecies]
+;	cp UNOWN
+;	jr nz, .done
+;	ld hl, wPartyMon1Form
+;	ld a, [wPartyCount]
+;	dec a
+;	ld bc, PARTYMON_STRUCT_LENGTH
+;	rst AddNTimes
+;	predef GetVariant
+;	farcall UpdateUnownDex
+;
+;.done
 	scf ; When this function returns, the carry flag indicates success vs failure.
 	ret
 
