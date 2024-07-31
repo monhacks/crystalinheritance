@@ -210,7 +210,7 @@ Kurt_FindApricornsInBag:
 	rst ByteFill
 
 	ld hl, wApricorns
-	ld b, RADIANT_OPAL ; used to be red_apricorn. just the first in the set
+	ld b, RED_APRICORN
 .loop
 	ld a, [hli]
 	and a

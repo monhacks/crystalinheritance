@@ -1374,8 +1374,8 @@ WhtApricornDesc:
 	next  "Apricorn.@"
 	
 HollowRockDesc:
-	db    "Sounds hollow!"
-	next  "@."
+	db    "Knock, knock."
+	next  "Seems spacious.@"
 	
 PnkApricornDesc:
 	db    "Lovely pink"

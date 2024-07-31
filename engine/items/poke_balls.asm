@@ -195,18 +195,17 @@ CheckBallOverflow:
 	xor a
 	ret
 
-BallMultiplierFunctionTable: ;TODO revise this according to the table. 
+BallMultiplierFunctionTable:
 ; table of routines that increase or decrease the catch rate based on
 ; which ball is used in a certain situation.
 	dbw GREAT_BALL,  GreatBallMultiplier
 	dbw ULTRA_BALL,  UltraBallMultiplier
 	dbw SAFARI_BALL, SafariBallMultiplier
-	dbw JEZE_BALL,   JezeBallMultiplier
-	dbw BUB_BALL,    BubBallMultiplier
-	dbw DECI_BALL,   DeciBallMultiplier
-	dbw HERB_BALL,   HerbBallMultiplier
+	dbw LEVEL_BALL,  LevelBallMultiplier
+	dbw LURE_BALL,   LureBallMultiplier
+	dbw MOON_BALL,   MoonBallMultiplier
 	dbw FAST_BALL,   FastBallMultiplier
-	dbw GEODE,       GeodeMultiplier
+	dbw HEAVY_BALL,  HeavyBallMultiplier
 	dbw LOVE_BALL,   LoveBallMultiplier
 	dbw PARK_BALL,   ParkBallMultiplier
 	dbw REPEAT_BALL, RepeatBallMultiplier
@@ -499,100 +498,6 @@ NetBallMultiplier:
 	cp WATER
 	jr z, .ok
 	cp BUG
-	ret nz
-
-.ok
-	ln a, 7, 2 ; x3.5
-	jmp MultiplyAndDivide
-	
-	
-JezeBallMultiplier:
-; multiply catch rate by 3.5 if mon is fairy, psychic, dark type
-	ld a, [wEnemyMonType1]
-	cp FAIRY
-	jr z, .ok
-	cp DARK
-	jr z, .ok
-	cp PSYCHIC
-	jr z, .ok
-	ld a, [wEnemyMonType2]
-	cp FAIRY
-	jr z, .ok
-	cp DARK
-	jr z, .ok
-	cp PSYCHIC
-	ret nz
-
-.ok
-	ln a, 7, 2 ; x3.5
-	jmp MultiplyAndDivide
-	
-BubBallMultiplier:
-; multiply catch rate by 3.5 if mon is water or ice type
-	ld a, [wEnemyMonType1]
-	cp WATER
-	jr z, .ok
-	cp ICE
-	jr z, .ok
-	ld a, [wEnemyMonType2]
-	cp WATER
-	jr z, .ok
-	cp ICE
-	ret nz
-
-.ok
-	ln a, 7, 2 ; x3.5
-	jmp MultiplyAndDivide
-
-DeciBallMultiplier:
-; multiply catch rate by 3.5 if mon is water or ice type
-	ld a, [wEnemyMonType1]
-	cp ELECTRIC
-	jr z, .ok
-	ld a, [wEnemyMonType2]
-	cp ELECTRIC
-	ret nz
-
-.ok
-	ln a, 7, 2 ; x3.5
-	jmp MultiplyAndDivide
-
-HerbBallMultiplier:
-; multiply catch rate by 3.5 if mon is bug, poison, grass
-	ld a, [wEnemyMonType1]
-	cp GRASS
-	jr z, .ok
-	cp POISON
-	jr z, .ok
-	cp BUG
-	jr z, .ok
-	ld a, [wEnemyMonType2]
-	cp GRASS
-	jr z, .ok
-	cp POISON
-	jr z, .ok
-	cp BUG
-	ret nz
-
-.ok
-	ln a, 7, 2 ; x3.5
-	jmp MultiplyAndDivide
-	
-GeodeMultiplier:
-; multiply catch rate by 3.5 if mon is rock, ground, steel type
-	ld a, [wEnemyMonType1]
-	cp ROCK
-	jr z, .ok
-	cp GROUND
-	jr z, .ok
-	cp STEEL
-	jr z, .ok
-	ld a, [wEnemyMonType2]
-	cp ROCK
-	jr z, .ok
-	cp GROUND
-	jr z, .ok
-	cp STEEL
 	ret nz
 
 .ok

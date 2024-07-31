@@ -38,11 +38,11 @@ _UpdateKeyItemIcon:
 	farcall LoadKeyItemIconPalette
 	jmp SetPalettes
 
-;Load.IconForOverworld: ; This is for a menu, it isn't a fruit tree
-;	ld hl, ApricornIcon
-;	lb bc, BANK(ApricornIcon), 9
-;	ld de, vTiles1 tile $6d
-;	jmp DecompressRequest2bpp
+LoadApricornIconForOverworld:
+	ld hl, ApricornIcon
+	lb bc, BANK(ApricornIcon), 9
+	ld de, vTiles1 tile $6d
+	jmp DecompressRequest2bpp
 
 LoadKeyItemIconForOverworld::
 	ld hl, KeyItemIconPointers

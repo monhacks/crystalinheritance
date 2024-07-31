@@ -61,7 +61,7 @@ CherrygroveMartAfterDex:
 	db -1
 
 VioletMart:
-	db 10 ; # items
+	db 11 ; # items
 	db POKE_BALL
 	db REPEAT_BALL
 	db POTION
@@ -72,6 +72,7 @@ VioletMart:
 	db X_ATTACK
 	db X_DEFEND
 	db X_SPEED
+	db FLOWER_MAIL
 	db -1
 
 AzaleaMart: ;updated
@@ -102,7 +103,7 @@ Goldenrod2FMart1:
 	db -1
 
 Goldenrod2FMart2:
-	db 8 ; # items
+	db 10 ; # items
 	db POKE_BALL
 	db GREAT_BALL
 	db LUXURY_BALL
@@ -111,10 +112,12 @@ Goldenrod2FMart2:
 	db ESCAPE_ROPE
 	db REPEL
 	db POKE_DOLL
+	db BLUESKY_MAIL
+	db MORPH_MAIL
 	db -1
 
 Goldenrod2FMart2Eevee:
-	db 8 ; # items
+	db 11 ; # items
 	db POKE_BALL
 	db GREAT_BALL
 	db LUXURY_BALL
@@ -123,6 +126,9 @@ Goldenrod2FMart2Eevee:
 	db ESCAPE_ROPE
 	db REPEL
 	db POKE_DOLL
+	db BLUESKY_MAIL
+	db MORPH_MAIL
+	db EON_MAIL
 	db -1
 
 Goldenrod3FMart:
@@ -162,7 +168,7 @@ Goldenrod5FTMMart:
 	db -1
 
 GoldenrodHarborMart:
-	db 7 ; # items
+	db 8 ; # items
 	db ETHER
 	db ELIXIR
 	db DESTINY_KNOT
@@ -170,6 +176,7 @@ GoldenrodHarborMart:
 	db WIDE_LENS
 	db ZOOM_LENS
 	db BRIGHTPOWDER
+	db SURF_MAIL
 	db -1
 
 UndergroundMart:
@@ -249,7 +256,7 @@ MahoganyMart2:
 	db -1
 
 BlackthornMart:
-	db 10 ; # items
+	db 11 ; # items
 	db GREAT_BALL
 	db ULTRA_BALL
 	db DUSK_BALL
@@ -260,6 +267,7 @@ BlackthornMart:
 	db MAX_REPEL
 	db X_DEFEND
 	db X_ATTACK
+	db MUSIC_MAIL
 	db -1
 
 IndigoPlateauMart:
@@ -275,7 +283,6 @@ IndigoPlateauMart:
 
 AnarresMart:
 	db 11 ; # items
-	db RARE_CANDY
 	db CHERI_BERRY
 	db CHESTO_BERRY
 	db PECHA_BERRY
@@ -286,6 +293,7 @@ AnarresMart:
 	db LUMINOUSMOSS
 	db WHITE_HERB
 	db MULCH
+	db FLOWER_MAIL
 	db -1
 
 PewterMart:
@@ -301,17 +309,19 @@ PewterMart:
 	db -1
 
 MtMoonMart:
-	db 6 ; # items
+	db 8 ; # items
 	db POKE_DOLL
 	db FRESH_WATER
 	db SODA_POP
 	db LEMONADE
 	db REPEL
 	db SUPER_REPEL
+	db MIRAGE_MAIL
+	db PORTRAITMAIL
 	db -1
 
 CeruleanMart:
-	db 9 ; # items
+	db 10 ; # items
 	db GREAT_BALL
 	db ULTRA_BALL
 	db DIVE_BALL
@@ -321,6 +331,7 @@ CeruleanMart:
 	db X_DEFEND
 	db X_ATTACK
 	db DIRE_HIT
+	db SURF_MAIL
 	db -1
 
 LavenderMart:
@@ -337,7 +348,7 @@ LavenderMart:
 	db -1
 
 VermilionMart:
-	db 8 ; # items
+	db 9 ; # items
 	db ULTRA_BALL
 	db REPEAT_BALL
 	db SUPER_POTION
@@ -346,6 +357,7 @@ VermilionMart:
 	db PARALYZEHEAL
 	db AWAKENING
 	db BURN_HEAL
+	db LITEBLUEMAIL
 	db -1
 
 Celadon2FMart1:
@@ -390,7 +402,7 @@ Celadon3FTMMart:
 	db -1
 
 Celadon4FMart:
-	db 7 ; # items
+	db 9 ; # items
 	db POKE_DOLL
 	db FIRE_STONE
 	db WATER_STONE
@@ -398,10 +410,12 @@ Celadon4FMart:
 	db LEAF_STONE
 	db ICE_STONE
 	db EXP_SHARE
+	db LOVELY_MAIL
+	db SURF_MAIL
 	db -1
 
 SaffronMart:
-	db 8 ; # items
+	db 9 ; # items
 	db GREAT_BALL
 	db ULTRA_BALL
 	db LUXURY_BALL
@@ -410,6 +424,7 @@ SaffronMart:
 	db FULL_HEAL
 	db X_ATTACK
 	db X_DEFEND
+	db FLOWER_MAIL
 	db -1
 
 SilphCoMart:
@@ -422,7 +437,7 @@ SilphCoMart:
 	db -1
 
 FuchsiaMart:
-	db 7 ; # items
+	db 8 ; # items
 	db GREAT_BALL
 	db ULTRA_BALL
 	db NEST_BALL
@@ -430,6 +445,7 @@ FuchsiaMart:
 	db HYPER_POTION
 	db FULL_HEAL
 	db MAX_REPEL
+	db FLOWER_MAIL
 	db -1
 
 ShamoutiMart1:

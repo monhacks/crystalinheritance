@@ -16,13 +16,13 @@
 
 	const SAFARI_BALL  ; 05
 
-	const JEZE_BALL    ; 06 FROM LEVEL BALL
-	const BUB_BALL     ; 07 FROM LURE BALL
-	const DECI_BALL    ; 08 FROM MOON BALL
-	const HERB_BALL    ; 09 FROM FRIEND BALL
-	const FAST_BALL    ; 0a KEEP
-	const GEODE        ; 0b FROM HEAVY BALL
-	const LOVE_BALL    ; 0c KEEP
+	const LEVEL_BALL   ; 06
+	const LURE_BALL    ; 07
+	const MOON_BALL    ; 08
+	const FRIEND_BALL  ; 09
+	const FAST_BALL    ; 0a
+	const HEAVY_BALL   ; 0b
+	const LOVE_BALL    ; 0c
 
 	const ABILITYPATCH ; 0d
 
@@ -290,15 +290,13 @@
 	const FLOWER_MAIL  ; f5
 	const SURF_MAIL    ; f6
 	const LITEBLUEMAIL ; f7
-	
-	const RADIANT_OPAL_dummy  ; f8
-	const SHORE_FOAM_dummy     ; f9
-	const FIXED_CHARGE_dummy   ; fa
-	const WHT_APRICORN_dummy ; fb
-	const TOUGH_LEAVES_dummy ; fc
-	const HOLLOW_ROCK_dummy   ; fd
-	const PNK_APRICORN_dummy  ; fe ; this is the max number!	
-
+	const PORTRAITMAIL ; f8
+	const LOVELY_MAIL  ; f9
+	const EON_MAIL     ; fa
+	const MORPH_MAIL   ; fb
+	const BLUESKY_MAIL ; fc
+	const MUSIC_MAIL   ; fd
+	const MIRAGE_MAIL  ; fe
 NUM_ITEMS EQU const_value - 1
 
 PARK_BALL      EQU $00
@@ -331,6 +329,7 @@ ALWAYS_ITEM_2  EQU $ff
 	const NAM_BLACK_BELT
 	const NAM_BLACK_SLUDGE
 	const NAM_BLACKGLASSES
+	const NAM_BLUESKY_MAIL
 	const NAM_BLUNDRPOLICY
 	const NAM_BOTTLE_CAP
 	const NAM_BRICK_PIECE
@@ -370,6 +369,7 @@ endc
 	const NAM_ENERGY_ROOT
 	const NAM_ENERGYPOWDER
 	const NAM_ENIGMA_BERRY
+	const NAM_EON_MAIL
 	const NAM_ESCAPE_ROPE
 	const NAM_ETHER
 	const NAM_EVERSTONE
@@ -384,7 +384,7 @@ endc
 	const NAM_FOCUS_BAND
 	const NAM_FOCUS_SASH
 	const NAM_FRESH_WATER
-	const NAM_HERB_BALL
+	const NAM_FRIEND_BALL
 	const NAM_FULL_HEAL
 	const NAM_FULL_RESTORE
 	const NAM_GANLON_BERRY
@@ -397,7 +397,7 @@ endc
 	const NAM_HEAL_BALL
 	const NAM_HEAL_POWDER
 	const NAM_HEAT_ROCK
-	const NAM_GEODE
+	const NAM_HEAVY_BALL
 	const NAM_HEAVY_BOOTS
 	const NAM_HELIX_FOSSIL
 	const NAM_HONDEW_BERRY
@@ -418,18 +418,19 @@ endc
 	const NAM_LEFTOVERS
 	const NAM_LEMONADE
 	const NAM_LEPPA_BERRY
-	const NAM_JEZE_BALL
+	const NAM_LEVEL_BALL
 	const NAM_LIECHI_BERRY
 	const NAM_LIFE_ORB
 	const NAM_LIGHT_BALL
 	const NAM_LIGHT_CLAY
 	const NAM_LITEBLUEMAIL
 	const NAM_LOVE_BALL
+	const NAM_LOVELY_MAIL
 	const NAM_LUCKY_EGG
 	const NAM_LUCKY_PUNCH
 	const NAM_LUM_BERRY
 	const NAM_LUMINOUSMOSS
-	const NAM_BUB_BALL
+	const NAM_LURE_BALL
 	const NAM_LUXURY_BALL
 	const NAM_MACHO_BRACE
 	const NAM_MAGMARIZER
@@ -447,11 +448,14 @@ endc
 	const NAM_METRONOME_I
 	const NAM_MINT_LEAF
 	const NAM_MIRACLE_SEED
+	const NAM_MIRAGE_MAIL
 	const NAM_MOOMOO_MILK
-	const NAM_DECI_BALL
+	const NAM_MOON_BALL
 	const NAM_MOON_STONE
+	const NAM_MORPH_MAIL
 	const NAM_MULCH
 	const NAM_MUSCLE_BAND
+	const NAM_MUSIC_MAIL
 	const NAM_MYSTIC_WATER
 	const NAM_NEST_BALL
 	const NAM_NET_BALL
@@ -472,6 +476,7 @@ endc
 	const NAM_POKE_BALL
 	const NAM_POKE_DOLL
 	const NAM_POMEG_BERRY
+	const NAM_PORTRAITMAIL
 	const NAM_POTION
 	const NAM_POWER_ANKLET
 	const NAM_POWER_BAND
@@ -561,23 +566,15 @@ endc
 	const NAM_X_SPEED
 	const NAM_ZINC
 	const NAM_ZOOM_LENS
-	const NAM_RADIANT_OPAL ; 1
-	const NAM_SHORE_FOAM ; 2
-	const NAM_FIXED_CHARGE ; 3
-	const NAM_TOUGH_LEAVES ; 4
-	const NAM_WHT_APRICORN ; 5
-	const NAM_HOLLOW_ROCK ; 6
-	const NAM_PNK_APRICORN ; 7
-
 
 ; APRICORN_BOX contents
 	const_def 1
-	const RADIANT_OPAL ; 1
-	const SHORE_FOAM ; 2
-	const FIXED_CHARGE ; 3
-	const TOUGH_LEAVES ; 4
+	const RED_APRICORN ; 1
+	const BLU_APRICORN ; 2
+	const YLW_APRICORN ; 3
+	const GRN_APRICORN ; 4
 	const WHT_APRICORN ; 5
-	const HOLLOW_ROCK ; 6
+	const BLK_APRICORN ; 6
 	const PNK_APRICORN ; 7
 NUM_APRICORNS EQU const_value - 1
 

@@ -259,13 +259,13 @@ ItemEffects:
 	dw IsntTheTimeMessage ; FLOWER_MAIL
 	dw IsntTheTimeMessage ; SURF_MAIL
 	dw IsntTheTimeMessage ; LITEBLUEMAIL
-	dw IsntTheTimeMessage ; apricorn1
-	dw IsntTheTimeMessage ; apricorn2
-	dw IsntTheTimeMessage ; apricorn3
-	dw IsntTheTimeMessage ; apricorn4
-	dw IsntTheTimeMessage ; apricorn5
-	dw IsntTheTimeMessage ; apricorn6
-	dw IsntTheTimeMessage ; apricorn7
+	dw IsntTheTimeMessage ; PORTRAITMAIL
+	dw IsntTheTimeMessage ; LOVELY_MAIL
+	dw IsntTheTimeMessage ; EON_MAIL
+	dw IsntTheTimeMessage ; MORPH_MAIL
+	dw IsntTheTimeMessage ; BLUESKY_MAIL
+	dw IsntTheTimeMessage ; MUSIC_MAIL
+	dw IsntTheTimeMessage ; MIRAGE_MAIL
 	assert_table_length NUM_ITEMS + 1 ; count PARK_BALL
 
 DoKeyItemEffect::
@@ -555,7 +555,7 @@ PokeBallEffect:
 	farcall SetCaughtData
 
 	ld a, [wCurItem]
-	cp LOVE_BALL ; USED TO BE FRIEND_BALL
+	cp FRIEND_BALL
 	jr nz, .SkipPartyMonFriendBall
 
 	ld a, [wPartyCount]
@@ -631,7 +631,7 @@ PokeBallEffect:
 	set 7, [hl]
 .BoxNotFullYet:
 	ld a, [wCurItem]
-	cp LOVE_BALL ; USED TO BE FRIEND BALL. 
+	cp FRIEND_BALL
 	jr nz, .SkipBoxMonFriendBall
 	; caught Pokemon become the first Pokemon in the box
 	ld a, FRIEND_BALL_HAPPINESS
@@ -1862,11 +1862,11 @@ ApricornBox:
 	db 0 ; default option
 
 .Text
-	text  " Opl   Bbl"
+	text  " Red   Blu"
 	next1 "   ×     ×"
-	next1 " FC    Lfs"
+	next1 " Ylw   Grn"
 	next1 "   ×     ×"
-	next1 " Wht   Roc"
+	next1 " Wht   Blk"
 	next1 "   ×     ×"
 	next1 " Pnk"
 	next1 "   ×"

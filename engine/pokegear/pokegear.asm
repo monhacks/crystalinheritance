@@ -2122,7 +2122,7 @@ FlyMap:
 
 ; visited and its flypoint enabled
 	push af
-	ld c, HOLLYS_HOLT ; TODO SHOULD BE HOLLYS HOLT, USED TO BE INDIGO PLATEAU THEN WAS LAKE OF RAGE
+	ld c, LAKE_OF_RAGE ; TODO SHOULD BE HOLLYS HOLT, USED TO BE INDIGO PLATEAU THEN WAS LAKE OF RAGE
 	call HasVisitedSpawn
 	and a
 	jr z, .NoKanto
@@ -2490,10 +2490,10 @@ Pokedex_GetArea:
 	jr z, .Sinjoh
 	farjp GetPlayerIcon
 
-.FastShip:
-	ld de, FastShipGFX
-	ld b, BANK(FastShipGFX)
-	ret
+;.FastShip:
+;	ld de, FastShipGFX
+;	ld b, BANK(FastShipGFX)
+;	ret
 
 .Sinjoh:
 	ld de, SinjohRuinsArrowGFX
