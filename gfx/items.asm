@@ -6,12 +6,12 @@ GreatBallIcon::    INCBIN "gfx/items/great_ball.2bpp.lz"
 UltraBallIcon::    INCBIN "gfx/items/ultra_ball.2bpp.lz"
 MasterBallIcon::   INCBIN "gfx/items/master_ball.2bpp.lz"
 SafariBallIcon::   INCBIN "gfx/items/safari_ball.2bpp.lz"
-LevelBallIcon::    INCBIN "gfx/items/level_ball.2bpp.lz"
-LureBallIcon::     INCBIN "gfx/items/lure_ball.2bpp.lz"
-MoonBallIcon::     INCBIN "gfx/items/moon_ball.2bpp.lz"
-FriendBallIcon::   INCBIN "gfx/items/friend_ball.2bpp.lz"
+JezeBallIcon::     INCBIN "gfx/items/jeze_ball.2bpp.lz"
+BubBallIcon::      INCBIN "gfx/items/bub_ball.2bpp.lz"
+DeciBallIcon::     INCBIN "gfx/items/deci_ball.2bpp.lz"
+HerbBallIcon::     INCBIN "gfx/items/herb_ball.2bpp.lz"
 FastBallIcon::     INCBIN "gfx/items/fast_ball.2bpp.lz"
-HeavyBallIcon::    INCBIN "gfx/items/heavy_ball.2bpp.lz"
+GeodeIcon::        INCBIN "gfx/items/geode.2bpp.lz"
 LoveBallIcon::     INCBIN "gfx/items/love_ball.2bpp.lz"
 AbilityPatchIcon:: INCBIN "gfx/items/abilitypatch.2bpp.lz"
 RepeatBallIcon::   INCBIN "gfx/items/repeat_ball.2bpp.lz"
@@ -299,17 +299,24 @@ SECTION "Item Icons 14", ROMX
 MintLeafIcon::     INCBIN "gfx/items/mint_leaf.2bpp.lz"
 FlowerMailIcon::   INCBIN "gfx/items/flower_mail.2bpp.lz"
 SurfMailIcon::
+PortraitMailIcon::
+LovelyMailIcon::
+EonMailIcon::      
+MorphMailIcon::    
+BlueSkyMailIcon::  
+MusicMailIcon::    
+MirageMailIcon::   
 LiteBlueMailIcon:: INCBIN "gfx/items/mail.2bpp.lz"
-PortraitMailIcon:: INCBIN "gfx/items/portraitmail.2bpp.lz"
-LovelyMailIcon::   INCBIN "gfx/items/lovely_mail.2bpp.lz"
-EonMailIcon::      INCBIN "gfx/items/eon_mail.2bpp.lz"
-MorphMailIcon::    INCBIN "gfx/items/morph_mail.2bpp.lz"
-BlueSkyMailIcon::  INCBIN "gfx/items/bluesky_mail.2bpp.lz"
-MusicMailIcon::    INCBIN "gfx/items/music_mail.2bpp.lz"
-MirageMailIcon::   INCBIN "gfx/items/mirage_mail.2bpp.lz"
+WhiteApricornIcon::
+PinkApricornIcon:: INCBIN "gfx/items/apricorn.2bpp.lz" 
+;ApricornIcon::    INCBIN "gfx/items/apricorn.2bpp.lz" ; need to rewrite this for WhtApricorn and PnkApricorn
+RadiantOpalIcon::  INCBIN "gfx/items/radiantopal.2bpp.lz"
+ShoreFoamIcon::     INCBIN "gfx/items/shorefoam.2bpp.lz"
+FixedChargeIcon::  INCBIN "gfx/items/fixedcharge.2bpp.lz"
+ToughLeavesIcon::  INCBIN "gfx/items/toughleaves.2bpp.lz"
+HollowRockIcon::   INCBIN "gfx/items/hollowrock.2bpp.lz"
 
 TMHMIcon::         INCBIN "gfx/items/tm_hm.2bpp.lz"
-ApricornIcon::     INCBIN "gfx/items/apricorn.2bpp.lz"
 ParkBallIcon::     INCBIN "gfx/items/park_ball.2bpp.lz"
 
 

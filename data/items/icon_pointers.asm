@@ -6,12 +6,12 @@ ItemIconPointers:
 	dba UltraBallIcon
 	dba MasterBallIcon
 	dba SafariBallIcon
-	dba LevelBallIcon
-	dba LureBallIcon
-	dba MoonBallIcon
-	dba FriendBallIcon
+	dba JezeBallIcon
+	dba BubBallIcon
+	dba DeciBallIcon
+	dba HerbBallIcon
 	dba FastBallIcon
-	dba HeavyBallIcon
+	dba GeodeIcon
 	dba LoveBallIcon
 	dba AbilityPatchIcon
 	dba RepeatBallIcon
@@ -248,14 +248,23 @@ ItemIconPointers:
 	dba FlowerMailIcon
 	dba SurfMailIcon
 	dba LiteBlueMailIcon
-	dba PortraitMailIcon
-	dba LovelyMailIcon
-	dba EonMailIcon
-	dba MorphMailIcon
-	dba BlueSkyMailIcon
-	dba MusicMailIcon
-	dba MirageMailIcon
-	assert_table_length NUM_ITEMS + 1
+	dba RadiantOpalIcon
+	dba ShoreFoamIcon
+	dba FixedChargeIcon
+	dba ToughLeavesIcon
+	dba WhiteApricornIcon
+	dba HollowRockIcon
+	dba PinkApricornIcon
+	assert_table_length NUM_ITEMS + 1 ; added the apricorns below... may need to verify these are correct?
+
+ApricornIconPointers:
+	dba RadiantOpalIcon
+	dba ShoreFoamIcon
+	dba FixedChargeIcon
+	dba ToughLeavesIcon
+	dba WhiteApricornIcon
+	dba HollowRockIcon
+	dba PinkApricornIcon
 
 KeyItemIconPointers:
 	dba BicycleIcon
@@ -266,7 +275,7 @@ KeyItemIconPointers:
 	dba ItemfinderIcon
 	dba MysteryEggIcon
 	dba SquirtBottleIcon
-	dba UnownReportIcon ; replaces spotion icon
+	dba UnownReportIcon ; replaces secretpotion icon
 	dba RedScaleIcon
 	dba CardKeyIcon
 	dba BasementKeyIcon

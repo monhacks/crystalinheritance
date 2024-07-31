@@ -277,22 +277,22 @@ if !DEF(MONOCHROME)
 ; SAFARI BALL
 	RGB 06, 15, 10
 	RGB 21, 21, 09
-; LEVEL BALL
-	RGB 31, 27, 04
-	RGB 30, 10, 06
-; LURE BALL
-	RGB 00, 19, 21
-	RGB 30, 10, 06
-; MOON BALL
-	RGB 00, 21, 23
-	RGB 30, 24, 08
-; FRIEND BALL
-	RGB 07, 20, 00
-	RGB 30, 10, 06
+; JEZE BALL ; REVISED 
+	RGB 20, 20, 20
+	RGB 31, 08, 06
+; BUB BALL
+	RGB 31, 25, 20
+	RGB 00, 16, 31
+; DECI BALL
+	RGB 28, 28, 28 ; BACKGROUND
+	RGB 31, 21, 00
+; HERB BALL
+	RGB 13, 25, 12
+	RGB 09, 19, 08
 ; GROWTH_FAST BALL
 	RGB 31, 15, 00
 	RGB 31, 25, 08
-; HEAVY BALL
+; GEODE
 	RGB 07, 07, 08
 	RGB 00, 15, 21
 ; LOVE BALL
@@ -1003,27 +1003,27 @@ if !DEF(MONOCHROME)
 ; LITEBLUEMAIL
 	RGB 24, 17, 31
 	RGB 08, 11, 31
-; PORTRAITMAIL
-	RGB 31, 25, 17
-	RGB 28, 12, 05
-; LOVELY MAIL
-	RGB 19, 26, 31
-	RGB 31, 09, 31
-; EON MAIL
-	RGB 31, 19, 28
-	RGB 12, 22, 00
-; MORPH MAIL
-	RGB 19, 17, 23
-	RGB 31, 12, 00
-; BLUESKY MAIL
-	RGB 07, 26, 31
-	RGB 31, 11, 11
-; MUSIC MAIL
-	RGB 21, 31, 21
-	RGB 31, 12, 00
-; MIRAGE MAIL
-	RGB 07, 26, 31
-	RGB 00, 21, 00
+; RED APRICORN / radiant opal - looks OK
+	RGB 31, 08, 06
+	RGB 08, 06, 31
+; BLU APRICORN / lake foam
+	RGB 06, 15, 30 ; blue
+	RGB 02, 10, 15 ; blue green
+; YLW APRICORN / fixed charge
+	RGB 30, 26, 06 ; yellow
+	RGB 23, 25, 27 ; silver?
+; GRN APRICORN / tough leaves
+	RGB 07, 24, 12 ; green
+	RGB 02, 15, 06 ; dark green
+; WHT APRICORN- as original
+	RGB 23, 25, 27
+	RGB 21, 12, 05
+; BLK APRICORN / hollow rock
+	RGB 12, 12, 12 ; black
+	RGB 05, 04, 05 ; blacker
+; PNK APRICORN- as original
+	RGB 31, 18, 23
+	RGB 21, 12, 05
 else
 rept NUM_ITEMS + 1
 	MONOCHROME_RGB_TWO
@@ -1219,25 +1219,25 @@ endc
 
 ApricornIconPalettes:
 if !DEF(MONOCHROME)
-; RED APRICORN
+; RED APRICORN / radiant opal - need to edit the 
 	RGB 31, 08, 06
-	RGB 21, 12, 05
-; BLU APRICORN
-	RGB 06, 15, 30
-	RGB 21, 12, 05
-; YLW APRICORN
-	RGB 30, 26, 06
-	RGB 21, 12, 05
-; GRN APRICORN
-	RGB 07, 24, 12
-	RGB 21, 12, 05
-; WHT APRICORN
+	RGB 25, 06, 04
+; BLU APRICORN / lake foam
+	RGB 06, 15, 30 ; blue
+	RGB 02, 10, 15 ; blue green
+; YLW APRICORN / fixed charge
+	RGB 30, 26, 06 ; yellow
+	RGB 23, 25, 27 ; silver?
+; GRN APRICORN / tough leaves
+	RGB 07, 24, 12 ; green
+	RGB 02, 15, 06 ; dark green
+; WHT APRICORN- as original
 	RGB 23, 25, 27
 	RGB 21, 12, 05
-; BLK APRICORN
-	RGB 09, 09, 09
-	RGB 21, 12, 05
-; PNK APRICORN
+; BLK APRICORN / hollow rock
+	RGB 12, 12, 12 ; black
+	RGB 05, 04, 05 ; blacker
+; PNK APRICORN- as original
 	RGB 31, 18, 23
 	RGB 21, 12, 05
 else

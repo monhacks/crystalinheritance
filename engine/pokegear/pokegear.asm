@@ -2122,7 +2122,7 @@ FlyMap:
 
 ; visited and its flypoint enabled
 	push af
-	ld c, HOLLYS_HOLT ; TODO SHOULD BE HOLLYS HOLT
+	ld c, HOLLYS_HOLT ; TODO SHOULD BE HOLLYS HOLT, USED TO BE INDIGO PLATEAU THEN WAS LAKE OF RAGE
 	call HasVisitedSpawn
 	and a
 	jr z, .NoKanto

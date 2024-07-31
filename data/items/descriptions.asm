@@ -5,12 +5,12 @@ ItemDescriptions:
 	dw UltraBallDesc
 	dw MasterBallDesc
 	dw SafariBallDesc
-	dw LevelBallDesc
-	dw LureBallDesc
-	dw MoonBallDesc
-	dw FriendBallDesc
+	dw JezeBallDesc
+	dw BubBallDesc
+	dw DeciBallDesc
+	dw HerbBallDesc
 	dw FastBallDesc
-	dw HeavyBallDesc
+	dw GeodeDesc
 	dw LoveBallDesc
 	dw AbilityPatchDesc
 	dw RepeatBallDesc
@@ -247,13 +247,13 @@ ItemDescriptions:
 	dw FlowerMailDesc
 	dw SurfMailDesc
 	dw LiteBlueMailDesc
-	dw PortraitMailDesc
-	dw LovelyMailDesc
-	dw EonMailDesc
-	dw MorphMailDesc
-	dw BlueSkyMailDesc
-	dw MusicMailDesc
-	dw MirageMailDesc
+	dw RadiantOpalDesc
+	dw ShoreFoamDesc
+	dw FixedChargeDesc
+	dw ToughLeavesDesc
+	dw WhtApricornDesc
+	dw HollowRockDesc
+	dw PnkApricornDesc
 	assert_table_length NUM_ITEMS
 
 KeyItemDescriptions:
@@ -308,33 +308,33 @@ SafariBallDesc:
 	db   "The Safari Game"
 	next "Ball.@"
 
-LevelBallDesc:
-	db   "A Ball for lower-"
-	next "level #mon.@"
+JezeBallDesc:
+	db   "For charmers"
+	next "or deceivers.@"
 
-LureBallDesc:
-	db   "A Ball for #mon"
-	next "hooked by a Rod.@"
+BubBallDesc:
+	db   "Very high surface"
+	next "tension.@"
 
-MoonBallDesc:
-	db   "A Ball for Moon"
-	next "Stone evolvers.@"
+DeciBallDesc:
+	db   "Emanates electric"
+	next "field lines.@"
 
-FriendBallDesc:
-	db   "A Ball that makes"
-	next "#mon friendly.@"
+HerbBallDesc:
+	db   "Smells homey yet"
+	next "musty.@"
 
 FastBallDesc:
 	db   "A Ball for catch-"
 	next "ing fast #mon.@"
 
-HeavyBallDesc:
-	db   "A Ball for catch-"
-	next "ing heavy #mon.@"
+GeodeDesc:
+	db   "Interior crystal"
+	next "cavity.@"
 
 LoveBallDesc:
-	db   "A Ball for the"
-	next "opposite gender.@"
+	db   "Both platonic"
+	next "and romantic.@"
 
 AbilityPatchDesc:
 	db   "Switches to a"
@@ -1173,34 +1173,6 @@ LiteBlueMailDesc:
 	db   "Modest yet"
 	next "refined.@"
 
-PortraitMailDesc:
-	db   "Mail featuring the"
-	next "holder's likeness.@"
-
-LovelyMailDesc:
-	db   "Heart-print Mail."
-	next "(Hold)@"
-
-EonMailDesc:
-	db   "Eevee-print Mail."
-	next "(Hold)@"
-
-MorphMailDesc:
-	db   "Ditto-print Mail."
-	next "(Hold)@"
-
-BlueSkyMailDesc:
-	db   "Sky-print Mail."
-	next "(Hold)@"
-
-MusicMailDesc:
-	db   "Natu-print Mail."
-	next "(Hold)@"
-
-MirageMailDesc:
-	db   "Mew-print Mail."
-	next "(Hold)@"
-
 EjectButtonDesc:
 	db   "Switches out when"
 	next "hit. (Hold)@"
@@ -1375,8 +1347,37 @@ SilphScope2Desc:
 
 ApricornBoxDesc:
 	db   "Holds up to 99 of"
-	next "each Apricorn.@"
+	next "each.@"
 
 TypeChartDesc:
 	db   "Summarizes all"
 	next "type advantages.@"
+
+RadiantOpalDesc:
+	db   "Mesmerizing"
+	next "and porous.@"
+
+ShoreFoamDesc:
+	db    "Very sturdy and"
+	next  "workable.@"
+
+FixedChargeDesc:
+	db   "A large static"
+	next "charge.@"
+
+ToughLeavesDesc:
+	db   "Impermeable,"
+	next "yet thin.@"
+	
+WhtApricornDesc:
+	db    "A white"
+	next  "Apricorn.@"
+	
+HollowRockDesc:
+	db    "Sounds hollow!"
+	next  "@."
+	
+PnkApricornDesc:
+	db    "Lovely pink"
+	next  "Apricorn.@"
+	

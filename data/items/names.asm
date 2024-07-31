@@ -9,12 +9,12 @@ ItemNames::
 	li "Ultra Ball"
 	li "Master Ball"
 	li "Safari Ball"
-	li "Level Ball"
-	li "Lure Ball"
-	li "Moon Ball"
-	li "Friend Ball"
+	li "Jeze Ball"
+	li "Bub Ball"
+	li "Deci Ball"
+	li "Herb Ball"
 	li "Fast Ball"
-	li "Heavy Ball"
+	li "Geode"
 	li "Love Ball"
 	li "AbilityPatch"
 	li "Repeat Ball"
@@ -259,13 +259,13 @@ endc
 	li "Flower Mail"
 	li "Surf Mail"
 	li "LiteBlueMail"
-	li "PortraitMail"
-	li "Lovely Mail"
-	li "Eon Mail"
-	li "Morph Mail"
-	li "BlueSky Mail"
-	li "Music Mail"
-	li "Mirage Mail"
+	li "Radiant Opal" ; 12 characters? red
+	li "Shore Foam" ; blue 
+	li "Fixed Charge" ; yellow
+	li "Tough Leaves" ; green
+	li "Wht Apricorn" ; white
+	li "Hollow Rock" ; black
+	li "Pnk Apricorn" ; pink
 	assert_list_length NUM_ITEMS + 1
 
 	setcharmap default

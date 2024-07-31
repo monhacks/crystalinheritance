@@ -39,8 +39,14 @@ FindItemInBallScript::
 
 .ShowItemIcon:
 	ld a, [wItemBallItemID]
-	call LoadItemIconForOverworld
+	call LoadItemIconForOverworld ; in engine-gfx-item icons
 	farcall LoadItemIconPalette
+	jmp PrintOverworldItemIcon
+	
+.ShowApricornItemIcon:
+	ld a, [wItemBallItemID]
+	call LoadItemIconForOverworld ; in engine-gfx-item icons
+	farcall LoadApricornIconPalette
 	jmp PrintOverworldItemIcon
 
 FindKeyItemInBallScript::
