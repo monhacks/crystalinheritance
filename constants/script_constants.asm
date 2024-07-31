@@ -200,6 +200,10 @@ EMOTE_FROM_MEM EQU -1
 	const FRUITTREE_HOLLYS_HOLT     ; 0a tough leaves TODO
 	const FRUITTREE_MISTYBASIN      ; 0b radiant opal
 FIRST_BERRY_TREE EQU const_value
+;	const FRUITTREE_ROUTE_29        ; 
+;	const FRUITTREE_ROUTE_30_1      ; 
+;	const FRUITTREE_ROUTE_30_2      ; 
+;	const FRUITTREE_ROUTE_31        ; 
 	const FRUITTREE_VIOLET_CITY     ; 0c
 	const FRUITTREE_ROUTE_32_COAST  ; 0d
 	const FRUITTREE_ROUTE_33        ; 0e
