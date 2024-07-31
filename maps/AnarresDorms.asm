@@ -5,18 +5,21 @@ AnarresDorms_MapScriptHeader:
 	def_callbacks
 
 
-	def_warp_events ;todo
-;	warp_event  4,  4, WISE_TRIOS_ROOM, 1
-;	warp_event  4,  5, WISE_TRIOS_ROOM, 2
+	def_warp_events
+	warp_event  4,  5, ANARRES_TOWN, 6
+	warp_event  5,  5, ANARRES_TOWN, 6
 
 	def_coord_events
 
 
 	def_bg_events
-	bg_event  7,  1, BGEVENT_READ, AnarresDormsBed 
+	bg_event  0,  2, BGEVENT_READ, AnarresDormsBed 
+	bg_event  0,  3, BGEVENT_READ, AnarresDormsBed 
+	bg_event  0,  4, BGEVENT_READ, AnarresDormsBed 
+	bg_event  0,  5, BGEVENT_READ, AnarresDormsBed 
 
-	def_object_events ;todo add a heal bed and Kurt Computer
-	object_event 1, 1, SPRITE_KURT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, jumptextfaceplayer, AnarresDormsKurtScript, -1 ;
+	def_object_events
+	object_event 2, 1, SPRITE_KURT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, jumptextfaceplayer, AnarresDormsKurtScript, -1 ;
 	object_event 5, 2, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, AnarresDormsNPC1Text, -1 ;
 	object_event 5, 3, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, AnarresDormsNPC2Text, -1 ;
 	object_event 3, 3, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, AnarresDormsNPC3Text, -1 ;
@@ -88,8 +91,11 @@ BedText2:
 	done
 
 AnarresDormsKurtScript: ; will this work?....
+	clearevent EVENT_BEAT_HOLLIS
+	faceplayer
 	opentext
 	writetext KurtAnarresDormsText
+	promptbutton
 	special PokemonCenterPC ; per engine/events/std_scripts.asm this is how it should be done. 
 	endtext
 	end
@@ -101,7 +107,7 @@ KurtAnarresDormsText:
 	cont "a rest."
 	
 	para "Also, if you"
-	cont "need me to run"
+	line "need me to run"
 	cont "quick back to our"
 	cont "time to access a"
 	cont "PC, I can. Just"

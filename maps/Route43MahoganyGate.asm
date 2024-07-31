@@ -17,19 +17,10 @@ Route43MahoganyGate_MapScriptHeader:
 	object_event  0,  4, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route43MahoganyGateOfficer, -1
 
 Route43MahoganyGateOfficer:
-	checkevent EVENT_CLEARED_ROCKET_HIDEOUT
-	iftrue_jumptextfaceplayer Route43MahoganyGateOfficerRocketsClearedText
 	jumpthistextfaceplayer
 
-	text "Only people headed"
-	line "up to Lake of Rage"
-
-	para "have been through"
-	line "here lately."
-	done
-
-Route43MahoganyGateOfficerRocketsClearedText:
-	text "Nobody goes up to"
+	text "Handly anyone"
+	line "goes up to the"
 	line "Lake of Rage these"
 	cont "days."
 	done

@@ -2122,7 +2122,7 @@ FlyMap:
 
 ; visited and its flypoint enabled
 	push af
-	ld c, LAKE_OF_RAGE ; TODO SHOULD BE HOLLYS HOLT
+	ld c, HOLLYS_HOLT ; TODO SHOULD BE HOLLYS HOLT
 	call HasVisitedSpawn
 	and a
 	jr z, .NoKanto

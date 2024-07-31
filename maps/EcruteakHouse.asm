@@ -2,7 +2,7 @@ EcruteakHouse_MapScriptHeader:
 	def_scene_scripts
 
 	def_callbacks
-	callback MAPCALLBACK_OBJECTS, EcruteakHouseInitializeSages
+
 
 	def_warp_events
 	warp_event  4, 17, ECRUTEAK_CITY, 3
@@ -12,74 +12,24 @@ EcruteakHouse_MapScriptHeader:
 	warp_event 17,  3, WISE_TRIOS_ROOM, 3
 
 	def_coord_events
-	coord_event  4,  7, 0, EcruteakHouse_XYTrigger1
-	coord_event  5,  7, 0, EcruteakHouse_XYTrigger2
+
 
 	def_bg_events
 
 	def_object_events
-	object_event  4,  6, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakTinTowerEntranceSageScript, EVENT_RANG_CLEAR_BELL_1
-	object_event  5,  6, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakTinTowerEntranceSageScript, EVENT_RANG_CLEAR_BELL_2
-	object_event  6,  9, SPRITE_SAGE, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakTinTowerEntranceWanderingSageScript, EVENT_ECRUTEAK_HOUSE_WANDERING_SAGE
-	object_event  3, 11, SPRITE_GRAMPS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakTinTowerEntranceGrampsText, EVENT_ECRUTEAK_HOUSE_WANDERING_SAGE
+	object_event  4,  6, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakTinTowerEntranceSageScript, -1
+	object_event  5,  6, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakTinTowerEntranceSageScript, -1
+	object_event  6,  9, SPRITE_SAGE, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakTinTowerEntranceWanderingSageScript, -1
+	object_event  3, 11, SPRITE_GRAMPS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakTinTowerEntranceGrampsText, -1
 
 	object_const_def
 	const ECRUTEAKHOUSE_SAGE1
 	const ECRUTEAKHOUSE_SAGE2
 
-EcruteakHouseInitializeSages:
-	checkevent EVENT_FOUGHT_SUICUNE
-	iftrue .DontBlockTower
-	checkevent EVENT_KOJI_ALLOWS_YOU_PASSAGE_TO_TIN_TOWER
-	iftrue .DontBlockTower
-	checkevent EVENT_CLEARED_RADIO_TOWER
-	iftrue .BlockTower
-	endcallback
-
-.BlockTower:
-	clearevent EVENT_RANG_CLEAR_BELL_1
-	setevent EVENT_RANG_CLEAR_BELL_2
-	setevent EVENT_ECRUTEAK_HOUSE_WANDERING_SAGE
-	checkkeyitem CLEAR_BELL
-	iftrue .NoClearBell
-	setscene $0
-.NoClearBell:
-	endcallback
-
-.DontBlockTower:
-	clearevent EVENT_ECRUTEAK_HOUSE_WANDERING_SAGE
-	endcallback
-
-EcruteakHouse_XYTrigger1:
-	checkevent EVENT_RANG_CLEAR_BELL_2
-	iftrue EcruteakHouse_XYTrigger_DontMove
-	applymovement ECRUTEAKHOUSE_SAGE2, EcruteakTinTowerEntranceSageBlocksLeftMovement
-	moveobject ECRUTEAKHOUSE_SAGE1, 4, 6
-	appear ECRUTEAKHOUSE_SAGE1
-	pause 5
-	disappear ECRUTEAKHOUSE_SAGE2
-	end
-
-EcruteakHouse_XYTrigger2:
-	checkevent EVENT_RANG_CLEAR_BELL_1
-	iftrue EcruteakHouse_XYTrigger_DontMove
-	applymovement ECRUTEAKHOUSE_SAGE1, EcruteakTinTowerEntranceSageBlocksRightMovement
-	moveobject ECRUTEAKHOUSE_SAGE2, 5, 6
-	appear ECRUTEAKHOUSE_SAGE2
-	pause 5
-	disappear ECRUTEAKHOUSE_SAGE1
-	end
-
-EcruteakHouse_XYTrigger_DontMove:
-	end
 
 EcruteakTinTowerEntranceSageScript:
 	faceplayer
 	opentext
-	checkevent EVENT_CLEARED_RADIO_TOWER
-	iftrue .CheckForClearBell
-	checkflag ENGINE_FOGBADGE
-	iftrue_jumpopenedtext EcruteakTinTowerEntranceSageText_GotFogBadge
 	jumpopenedtext EcruteakTinTowerEntranceSageText
 
 .CheckForClearBell:

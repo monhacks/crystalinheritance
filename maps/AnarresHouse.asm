@@ -6,8 +6,8 @@ AnarresHouse_MapScriptHeader:
 
 
 	def_warp_events
-	warp_event  2,  7, ANARRES_TOWN, 3
 	warp_event  3,  7, ANARRES_TOWN, 3
+	warp_event  4,  7, ANARRES_TOWN, 3
 
 	def_coord_events
 
@@ -16,7 +16,7 @@ AnarresHouse_MapScriptHeader:
 ;	bg_event 22, 12, BGEVENT_JUMPTEXT, TinTowerSignText
 
 	def_object_events
-	object_event  4,  6, SPRITE_FIREBREATHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AnarresHouseMushroomScript, -1 
+	object_event  5,  4, SPRITE_FIREBREATHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AnarresHouseMushroomScript, -1 
 
 	object_const_def
 	const ANARRES_HOUSE_CHEF
@@ -40,9 +40,9 @@ AnarresHouseMushroomScript:
 	opentext	
 	writetext NeedAMintLeafText
 	waitbutton
-	checkitem MINT_LEAF	
+	checkitem MINT_LEAF
 	iffalse NoMintLeaf
-	writetext Text_Route33TutorQuestion ;;
+	writetext Text_MintLeafQuestion ;;
 	yesorno
 	iffalse MintLeafRefused
 	takeitem SILVER_LEAF
@@ -66,7 +66,7 @@ NeedAMintLeafText:
 	line "come over to"
 	cont "eat. I picked"
 	cont "two buckets"
-	cont "ets of mushrooms!"
+	cont "of mushrooms!"
 	
 	para "Do you have any"
 	line "item that might"
@@ -76,6 +76,14 @@ NeedAMintLeafText:
 	para "I'll give you a"
 	line "savory mushroom"
 	cont "if you do."
+	done
+
+Text_MintLeafQuestion:
+	text "Oh! I smell it!"
+	
+	para "Would you please"
+	line "trade me that"
+	cont "Mint Leaf?"
 	done
 
 	

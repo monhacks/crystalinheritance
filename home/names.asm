@@ -160,7 +160,7 @@ GetKeyItemName::
 	jr PutNameInBufferAndGetName
 
 GetApricornName::
-; Get apricorn name wNamedObjectIndex.
+; Get apricorn name wNamedObjectIndex. This is working with the new icons
 	push hl
 	push bc
 	ld a, [wNamedObjectIndex]

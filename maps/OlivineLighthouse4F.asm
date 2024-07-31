@@ -44,8 +44,6 @@ TrainerSailorKent:
 
 SailorKentScript:
 	endifjustbattled
-	checkevent EVENT_JASMINE_RETURNED_TO_GYM
-	iftrue_jumptextfaceplayer SailorKentFinalText
 	jumptextfaceplayer SailorKentAfterBattleText
 
 SailorKentSeenText:

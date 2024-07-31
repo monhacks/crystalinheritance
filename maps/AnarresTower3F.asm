@@ -1,17 +1,16 @@
-AnarresTower3F_MapScriptHeader: 
+AnarresTower3F_MapScriptHeader:  ; not sure why this isn't working.... 
 	def_scene_scripts
 
 
-	def_callbacks ; TAMMY SHOULD DISAPPEAR
-;	AnarresTowerTammyCallback
+	def_callbacks 
+
 
 	def_warp_events
 	warp_event  7,  3, ANARRES_TOWER_2F, 3
 
 
 	def_coord_events
-	coord_event 4,  4, 1, AnarresTower3FStepRightTrigger
-	coord_event 5,  4, 1, AnarresTower3FHollisScript
+
 
 	def_bg_events
 
@@ -24,10 +23,10 @@ AnarresTower3F_MapScriptHeader:
 	const ANARRES_TOWER_HOLLIS
 	const ANARRES_TOWER_TAMMY
 
-AnarresTower3FStepRightTrigger:
-	applymovement PLAYER, PlayerStepsRightMovement
 AnarresTower3FHollisScript:
-	applymovement PLAYER, PlayerStepsDownMovement
+	faceplayer
+	checkevent EVENT_BEAT_HOLLIS
+	iftrue HollisAfterBattleText
 	appear ANARRES_TOWER_TAMMY
 	applymovement ANARRES_TOWER_TAMMY, TammyMovesToHollis
 	showemote EMOTE_SHOCK, ANARRES_TOWER_HOLLIS, 10
@@ -39,7 +38,7 @@ AnarresTower3FHollisScript:
 	applymovement ANARRES_TOWER_HOLLIS, HollisToYou
 	showtext HollisChallengesText
 	winlosstext HollisBeatenText, 0
-	loadtrainer HOLLIS, HOLLIS ; WILL THIS FIND?
+	loadtrainer HOLLIS, 1 ; WILL THIS FIND?
 	startbattle
 	reloadmapafterbattle ; is tammy still around? 
 	opentext
@@ -58,19 +57,21 @@ AnarresTower3FHollisScript:
 	pause 5
 	showtext TammyText4
 	turnobject ANARRES_TOWER_HOLLIS, RIGHT
-	applyonemovement ANARRES_TOWER_HOLLIS, RIGHT
+	applyonemovement ANARRES_TOWER_HOLLIS, step_right
 	showtext HollisHM
 	showemote EMOTE_HAPPY, ANARRES_TOWER_TAMMY, 15
 	showtext TammyThanks
 	closetext
 	applymovement ANARRES_TOWER_TAMMY, TammyWalksOutMovement
 	disappear ANARRES_TOWER_TAMMY
-	applyonemovement ANARRES_TOWER_HOLLIS, LEFT
+	applyonemovement ANARRES_TOWER_HOLLIS, step_left
 	opentext
 	writetext HollisCongratulates
 	verbosegivetmhm HM_CUT
 	setevent EVENT_GOT_HM01_CUT
 	setevent EVENT_BEAT_HOLLIS
+	setflag ENGINE_BOULDERBADGE
+	clearevent EVENT_TAMMY_HOLLYS_HOLT
 	jumpthisopenedtext
 
 	text "You can use"
@@ -79,9 +80,11 @@ AnarresTower3FHollisScript:
 	cont "forest."
 	done
 
-PlayerStepsRightMovement:
-	step_right
-	turn_head_down
+PlayerStepsToHollisMovement:
+	step_left
+	step_left
+	step_down
+	step_down
 	step_end
 	
 PlayerStepsDownMovement:
@@ -236,19 +239,29 @@ AnarresTowerHollisScript:
 	end
 
 HollisAfterBattleText:
+	faceplayer
+	opentext
+	writetext HollisAfterText
+	waitbutton
+	closetext
+	end
+
+HollisAfterText:
 	text "You showed me"
-	line "that my might is"
+	line "that might is"
 	cont "not always"
-	cont "right. The Cut"
-	cont "HM is still too"
-	cont "powerful to be"
-	cont "used without"
-	cont "recognizing its"
-	cont "effects, but we"
-	cont "can build a"
-	cont "culture around"
-	cont "talking through"
-	cont "the tradeoffs"
-	cont "before taking"
-	cont "action."
-	done 
+	cont "right."
+	done
+;	para "The Cut HM is"
+;	line "is still too"
+;	cont "powerful to be"
+;	cont "used without"
+;	cont "recognizing its"
+;	cont "effects, but we"
+;	cont "can build a"
+;	cont "culture around"
+;	cont "talking through"
+;	cont "the tradeoffs"
+;	cont "before taking"
+;	cont "action."
+;	done 

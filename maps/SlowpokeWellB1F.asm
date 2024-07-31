@@ -161,3 +161,4 @@ Text_RolloutTutorTaught:
 	cont "you start, it's"
 	cont "hard to stop!"
 	done
+

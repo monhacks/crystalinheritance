@@ -24,34 +24,45 @@ HollysHolt_MapScriptHeader:
 	bg_event 10, 24, BGEVENT_READ, HollysHoltShrineScript 
 
 	def_object_events
-	object_event  9, 25, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, HollysHoltKurtScript, EVENT_BEAT_HOLLIS ;todo add this 
+	object_event  9, 25, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, HollysHoltKurtScript, -1;EVENT_BEAT_HOLLIS ;todo add this 
 	object_event  8, 25, SPRITE_HOLLIS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, HollysHoltHollisScript, EVENT_TALKED_TO_HOLLIS;todo add this
-	object_event 17, 25, SPRITE_TAMMY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, HollysHoltTammyScript, -1;TOOD need to put in the tammy move tutor
-	object_event 17, 26, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, HollysHoltNPC6Text, -1;TOOD need to put in the tammy move tutor
+	object_event 18, 38, SPRITE_TAMMY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, HollysHoltTammyScript, EVENT_TAMMY_HOLLYS_HOLT ;TOOD need to put in the tammy move tutor
+	object_event 19, 38, SPRITE_BREEDER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, HollysHoltNPC6Text, EVENT_TAMMY_HOLLYS_HOLT 
 	object_event  8, 16, SPRITE_BREEDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, HollysHoltNPC1Text, -1
-	object_event 23, 24, SPRITE_GRAMPS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, jumptextfaceplayer, HollysHoltNPC2Script, -1 ; TODO this one should give you someting
-	object_event 16, 36, SPRITE_SCHOOLGIRL, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, HollysHoltNPC3Text, -1 ; THIS ONE DISAPPEARS AFTER BEATING HOLLIS
+	object_event 23, 24, SPRITE_GRAMPS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, jumptextfaceplayer, HollysHoltNPC2Script, -1 
+	object_event 16, 36, SPRITE_BREEDER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, HollysHoltNPC3Text, -1
 	object_event 19, 10, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, HollysHoltNPC4Text, -1 
-	object_event 24, 38, SPRITE_SCHOOLGIRL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, HollysHoltNPC5Text, -1 
+	object_event 24, 38, SPRITE_BREEDER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, HollysHoltNPC5Text, -1 
 	itemball_event 28, 14, ENERGYPOWDER, 1, EVENT_HOLLYS_HOLT_ENERGYPOWDER ;TODO
 	itemball_event 19, 16, REVIVAL_HERB, 1, EVENT_ILEX_FOREST_REVIVAL_HERB ;TODO
 	tmhmball_event 24, 33, TM_U_TURN, EVENT_GOT_TM69_U_TURN
 	cuttree_event 25, 5, EVENT_HOLLYS_HOLT_CUT_TREE
+	pokemon_event   6, 18, PINECO, -1, -1, PAL_NPC_BLUE, HollysHoltBagwormText, EVENT_BEAT_HOLLIS
+	pokemon_event  13, 11, PINECO, -1, -1, PAL_NPC_BLUE, HollysHoltBagwormText, EVENT_BEAT_HOLLIS
+	pokemon_event  29,  5, PINECO, -1, -1, PAL_NPC_BLUE, HollysHoltBagwormText, EVENT_BEAT_HOLLIS
+	pokemon_event  26, 14, PINECO, -1, -1, PAL_NPC_BLUE, HollysHoltBagwormText, EVENT_BEAT_HOLLIS
+	pokemon_event  29, 28, PINECO, -1, -1, PAL_NPC_BLUE, HollysHoltBagwormText, EVENT_BEAT_HOLLIS
+	pokemon_event  18, 37, PINECO, -1, -1, PAL_NPC_BLUE, HollysHoltBagwormText, -1
+	pokemon_event   3, 32, PINECO, -1, -1, PAL_NPC_BLUE, HollysHoltBagwormText, EVENT_BEAT_HOLLIS
+	pokemon_event   4, 40, PINECO, -1, -1, PAL_NPC_BLUE, HollysHoltBagwormText, EVENT_BEAT_HOLLIS
+
 
 	object_const_def
 	const HOLLYS_HOLT_KURT
 	const HOLLYS_HOLT_HOLLIS
 	const HOLLYS_HOLT_TAMMY
-	const HOLLYS_HOLT_BLACKBELT
+	const HOLLYS_HOLT_SCHOOLGIRL
 
 HollysHoltTammy:
-	checkevent EVENT_BEAT_HOLLIS
-	iffalse .TammyDisappears
-	endcallback
-	
-.TammyDisappears:
+	checkflag ENGINE_BOULDERBADGE
+	iftrue .AppearTammy
 	disappear HOLLYS_HOLT_TAMMY
-	disappear HOLLYS_HOLT_BLACKBELT
+	disappear HOLLYS_HOLT_SCHOOLGIRL
+	endcallback
+
+.AppearTammy:
+	appear HOLLYS_HOLT_TAMMY
+	appear HOLLYS_HOLT_SCHOOLGIRL	
 	endcallback
 
 HollysHoltTrigger:
@@ -64,20 +75,26 @@ HollysHoltScript1:
 	showemote EMOTE_SHOCK, HOLLYS_HOLT_HOLLIS, 15
 	turnobject HOLLYS_HOLT_KURT, LEFT
 	turnobject HOLLYS_HOLT_HOLLIS, RIGHT
+	turnobject PLAYER, LEFT
 	opentext
 	writetext HH_HollisHello
-	closetext
-	applymovement HOLLYS_HOLT_HOLLIS, HH_HollisSpins
-	opentext
+	waitbutton
+;	closetext ; these three lines may cause a crash?
+;	applymovement HOLLYS_HOLT_HOLLIS, HH_HollisSpins
+;	opentext
 	writetext HH_KurtExplains
+	waitbutton
 	closetext
 	showemote EMOTE_QUESTION, HOLLYS_HOLT_HOLLIS, 15
 	opentext
 	writetext HH_HollisPinecos
+	waitbutton
 	closetext
 	showemote EMOTE_SHOCK, HOLLYS_HOLT_KURT, 15
+	turnobject HOLLYS_HOLT_KURT, RIGHT
 	opentext
 	writetext HH_KurtHasAPlan
+	waitbutton
 	closetext
 	setevent EVENT_TALKED_TO_HOLLIS
 	setscene $1 ;shouldn't let you see it multiple times
@@ -87,6 +104,7 @@ HollysHoltKurtScript:
 	faceplayer
 	opentext
 	writetext HH_KurtHasAPlan
+	waitbutton
 	closetext
 	end
 	
@@ -94,6 +112,7 @@ HollysHoltHollisScript:
 	faceplayer
 	opentext
 	writetext HH_HollisHello2
+	waitbutton
 	closetext
 	end
 
@@ -113,14 +132,14 @@ HH_HollisHello:
 	line "give you a better"
 	cont "welcome, but"
 	cont "there are so"
-	cont "many pineco on"
+	cont "many Pineco on"
 	cont "the trees that"
 	cont "the forest is"
 	cont "overrun."
 	done
 	
 HH_KurtExplains:
-	text "Actually, we're"
+	text "Kurt: well, we're"
 	line "here to stop"
 	cont "Steel types from"
 	cont "entering Johto."
@@ -172,7 +191,6 @@ HH_HollisSpins:
 	pause 5
 	turn_head_right
 	step_end
-
 
 
 HollysHoltNPC1Text:
@@ -292,7 +310,7 @@ HH_HollisHello2:
 	line "as lively as"
 	cont "usual, due to"
 	cont "the bagworms"
-	cont "sickening so"
+	cont "damaging so"
 	cont "many of the"
 	cont "trees."
 	done
@@ -368,6 +386,7 @@ Text_HeadbuttIntro:
 	line "everyone how to"
 	cont "use Headbutt to"
 	cont "rattle trees!"
+	done
 
 Text_HHTutorHeadbutt:
 	text "I can teach your"
@@ -407,4 +426,11 @@ HollysHoltNPC6Text:
 	para "Tending nature"
 	line "is part of pro-"
 	cont "tecting it."
+	done
+
+HollysHoltBagwormText:
+	text "It's a Pineco."
+	line "The leaves are"
+	cont "decimated by"
+	cont "bug bites."
 	done

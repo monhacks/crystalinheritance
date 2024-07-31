@@ -108,21 +108,17 @@ Route32PokeCenter1FPokefanMScript:
 	writetext .Text3
 .Continue
 	promptbutton
-	verbosegiveitem LURE_BALL
+	verbosegiveitem POKE_BALL ; BUB BALL
 	iffalse .NoRoom
 	setevent EVENT_GOT_LURE_BALL_FROM_FRENCHMAN
 	jumpthisopenedtext
 
 	text "This Ball easily"
-	line "catches #mon"
-	cont "hooked on a Rod!"
+	line "catches water or"
+	cont "ice-type #mon!"
 
 	para "Kurt of Azalea"
-	line "Town made it from"
-	cont "an Apricorn."
-
-	para "Apricorns,"
-	line "hourrah!"
+	line "Town made it."
 	done
 
 .NoRoom

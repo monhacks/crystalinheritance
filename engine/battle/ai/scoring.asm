@@ -418,7 +418,7 @@ AI_Smart_LeechHit:
 
 ; 60% chance to discourage this move if not very effective.
 	ld a, [wTypeMatchup]
-	cp BASE_AI_SWITCH_SCORE
+	cp BASE_AI_SWITCH_SCORE ; ahhh is this the one? 
 	jr c, .discourage
 
 ; Do nothing if effectiveness is neutral.

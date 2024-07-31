@@ -188,18 +188,18 @@ EMOTE_FROM_MEM EQU -1
 ; FruitTreeItems indexes (see data/items/fruit_trees.asm)
 	const_def 1
 ; Apricorn trees come first, then Berry trees
-	const FRUITTREE_AZALEA_TOWN     ; 01
+	const FRUITTREE_AZALEA_TOWN     ; 01 wht aprx
 	const FRUITTREE_ROUTE_37_1      ; 02
 	const FRUITTREE_ROUTE_37_2      ; 03
 	const FRUITTREE_ROUTE_37_3      ; 04
 	const FRUITTREE_ROUTE_42_1      ; 05
 	const FRUITTREE_ROUTE_42_2      ; 06
 	const FRUITTREE_ROUTE_42_3      ; 07
+	const FRUITTREE_ILEX_FOREST     ; 08 shore foam
+	const FRUITTREE_UNION_CAVE      ; 09 hollow rock
+	const FRUITTREE_HOLLYS_HOLT     ; 0a tough leaves TODO
+	const FRUITTREE_MISTYBASIN      ; 0b radiant opal
 FIRST_BERRY_TREE EQU const_value
-	const FRUITTREE_ROUTE_29        ; 08
-	const FRUITTREE_ROUTE_30_1      ; 09
-	const FRUITTREE_ROUTE_30_2      ; 0a
-	const FRUITTREE_ROUTE_31        ; 0b
 	const FRUITTREE_VIOLET_CITY     ; 0c
 	const FRUITTREE_ROUTE_32_COAST  ; 0d
 	const FRUITTREE_ROUTE_33        ; 0e

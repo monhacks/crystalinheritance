@@ -51,7 +51,7 @@ GenericTrainerFisherRalph:
 
 	text "A big fish?"
 
-	text "The caves were"
+	para "The caves were"
 	line "dug by visitors"
 	cont "from Sinnoh,"
 	cont "long ago."

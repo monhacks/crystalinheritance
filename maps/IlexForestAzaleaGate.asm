@@ -31,7 +31,7 @@ ProfOaksAide1Script:
 	waitbutton
 	countseencaught
 	readvar VAR_DEXCAUGHT
-	ifgreater 6, .HereYouGo
+	ifgreater 5, .HereYouGo ; greater, not greater or equal to
 .UhOh
 	jumpopenedtext ProfOaksAide1UhOhText
 

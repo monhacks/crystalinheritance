@@ -3,7 +3,7 @@ AnarresTown_MapScriptHeader:
 
 
 	def_callbacks
-
+	callback MAPCALLBACK_NEWMAP, AnarresTownFlypointCallback
 
 	def_warp_events
 	warp_event  2, 10, HOLLYS_HOLT, 1 ;DONE
@@ -22,15 +22,25 @@ AnarresTown_MapScriptHeader:
 	bg_event 27,  5, BGEVENT_ITEM + ETHER, EVENT_ANARRES_ETHER ;ok
 	bg_event 28, 10, BGEVENT_ITEM + PP_UP, EVENT_ANARRES_PPUP ;ok
 	bg_event 13, 15, BGEVENT_JUMPTEXT, AnarresTowerSignText
+	bg_event 22,  6, BGEVENT_JUMPTEXT, AnarresStockroomSignText
+	bg_event 16, 10, BGEVENT_JUMPTEXT, AnarresDormsSignText
 
 	def_object_events
-	object_event 5, 9, SPRITE_BLACKBELT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, jumptextfaceplayer, AnarresNPC1Text, -1 
-	object_event 17, 14, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, jumptextfaceplayer, AnarresNPC2Text, -1 
-	object_event 12,  6, SPRITE_BUG_MANIAC, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, jumptextfaceplayer, AnarresNPC3Text, -1 
-	object_event 15, 13, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, jumptextfaceplayer, AnarresNPC4Text, -1 
-	object_event 11, 14, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, jumptextfaceplayer, AnarresNPC5Text, EVENT_BEAT_TAMMY
+	object_event  5,  9, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, AnarresNPC1Text, -1 
+	object_event 17, 14, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, AnarresNPC2Text, -1 
+	object_event 12,  6, SPRITE_BUG_MANIAC, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, AnarresNPC3Text, -1 
+	object_event 15, 13, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, AnarresNPC4Text, -1 
+	object_event 11, 15, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, AnarresNPC5Text, EVENT_BEAT_TAMMY
+	fruittree_event  6,  3, FRUITTREE_AZALEA_TOWN, PNK_APRICORN, PAL_NPC_RED
 
 	object_const_def
+
+
+
+AnarresTownFlypointCallback:
+	setflag ENGINE_FLYPOINT_ANARRES 
+	endcallback
+
 
 AnarresNPC1Text:
 	text "Elder Hollis"
@@ -85,3 +95,11 @@ AnarresTowerSignText:
 	line "honors all types"
 	cont "of #mon"
 	done
+
+AnarresStockroomSignText:
+	text "Anarres Stockroom"
+	done
+
+AnarresDormsSignText:
+	text "Anarres Dorms"
+	done	

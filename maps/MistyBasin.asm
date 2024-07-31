@@ -16,13 +16,20 @@ MistyBasin_MapScriptHeader: ; should be like  "BurnedTowerB1F_MapScriptHeader"
 
 
 	def_object_events
-	object_event 14, 13, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, jumptextfaceplayer, MistyBasonMatronText, -1 ;
-	object_event  4, 13, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerSageChow, EVENT_BEAT_HOLLIS 
-	object_event  5,  4, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerSageNico, EVENT_BEAT_HOLLIS
-	object_event 13,  3, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerMediumMartha, EVENT_BEAT_HOLLIS
-	object_event 14,  2, SPRITE_TAMMY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TammyScript, EVENT_BEAT_HOLLIS
+
+	object_event  4, 13, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSageChow, EVENT_BEAT_TAMMY 
+	object_event  5,  4, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSageNico, EVENT_BEAT_TAMMY
+	object_event 13,  3, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerMediumMartha, EVENT_BEAT_TAMMY
+	object_event 14,  2, SPRITE_TAMMY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TammyScript, EVENT_BEAT_TAMMY
+	object_event 14, 13, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, MistyBasonMatronText, -1 ;
+;	fruittree_event 13, 13, FRUITTREE_MISTYBASIN, RADIANT_OPAL, PAL_NPC_RED
 
 	object_const_def
+	const MISTY_BASIN_CHOW
+	const MISTY_BASIN_NICO
+	const MISTY_BASIN_MARTHA
+	const MISTY_BASIN_TAMMY
+
 
 
 MistyBasonMatronText:
@@ -58,7 +65,7 @@ SageChowBeatenText:
 	done
 
 GenericTrainerSageNico:
-	generictrainer SAGE, CHOW, EVENT_BEAT_SAGE_CHOW, SageNicoSeenText, SageNicoBeatenText
+	generictrainer SAGE, NICO, EVENT_BEAT_SAGE_NICO, SageNicoSeenText, SageNicoBeatenText
 
 	text "We're going to"
 	line "confront the"
@@ -76,7 +83,7 @@ SageNicoBeatenText:
 	done
 
 GenericTrainerMediumMartha:
-	generictrainer SAGE, CHOW, EVENT_BEAT_SAGE_CHOW, MediumMarthaSeenText, MediumMarthaBeatenText
+	generictrainer MEDIUM, MARTHA, EVENT_BEAT_MEDIUM_MARTHA, MediumMarthaSeenText, MediumMarthaBeatenText
 
 	text "Tammy developed"
 	line "a method of"
@@ -100,31 +107,51 @@ TammyScript:
 	faceplayer
 	showtext TammySeenText
 	winlosstext TammyBeatenText, 0
-	loadtrainer TAMMY, TAMMY ; call the right trainer?
+	loadtrainer TAMMY, 1 ; call the right trainer?
 	startbattle
 	reloadmapafterbattle
 	opentext
 	setevent EVENT_BEAT_TAMMY
-	jumpthisopenedtext
+	writetext TammyAfterBattleText
+	waitbutton
+	closetext
+	disappear MISTY_BASIN_CHOW
+	disappear MISTY_BASIN_NICO
+	applymovement MISTY_BASIN_MARTHA, MarthaMovement
+	disappear MISTY_BASIN_MARTHA
+	opentext
+	writetext TammySeeYaText
+	waitbutton
+	closetext
+	applymovement MISTY_BASIN_TAMMY, TammyMovementBasin
+	disappear MISTY_BASIN_TAMMY
+	end
 
+
+
+TammyAfterBattleText:
 	text "I invented a way"
 	line "to teach"
 	cont "techniques,"
 	cont "ramming a tree."
-	cont "It shakes off"
-	cont "pineco without"
+	
+	
+	para "It shakes off"
+	line "pineco without"
 	cont "damaging the"
 	cont "tree. The elder"
 	cont "says it's"
-	cont "unnatural. I"
-	cont "want to talk to"
-	cont "him, but he just"
+	cont "unnatural."
+	
+	para "I want to talk,"
+	line "but he just"
 	cont "sits on top of"
 	cont "the tower. Since"
 	cont "you're so"
-	cont "strong, can you"
-	cont "talk to him with"
-	cont "me?"
+	cont "strong, and you"
+	cont "need the HM too,"
+	cont "can you talk to"
+	cont "him with me?"
 	done
 
 TammySeenText:
@@ -144,4 +171,33 @@ TammyBeatenText:
 	text "You've proven"
 	line "yourself as a"
 	cont "strong trainer."
+	done
+
+MarthaMovement:
+	step_down
+	step_right
+	step_down
+	step_down
+	step_down
+	step_down
+	step_down
+	step_down
+	step_end
+	
+TammyMovementBasin:
+	step_left
+	step_down
+	step_down
+	step_right
+	step_down
+	step_down
+	step_down
+	step_down
+	step_down
+	step_down
+	step_end
+
+TammySeeYaText:	
+	text "See you at the"
+	line "tower!"
 	done

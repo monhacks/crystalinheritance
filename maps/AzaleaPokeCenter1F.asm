@@ -132,7 +132,7 @@ GiveMintLeafText: ;;
 	cont "great."
 	
 	para "Share it with"
-	line "Someone who"
+	line "someone who"
 	cont "wants to freshen"
 	cont "their breath."
 	done

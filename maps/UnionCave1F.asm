@@ -26,7 +26,7 @@ UnionCave1F_MapScriptHeader: ;todo add a heal
 	itemball_event  2,  8, X_ATTACK, 1, EVENT_UNION_CAVE_1F_X_ATTACK
 	itemball_event  3, 28, SUPER_POTION, 1, EVENT_UNION_CAVE_1F_POTION
 	itemball_event 12, 45, FULL_HEAL, 1, EVENT_UNION_CAVE_1F_AWAKENING
-	fruittree_event 14, 40, FRUITTREE_UNION_CAVE, HOLLOW_ROCK, PAL_NPC_BLUE
+;	fruittree_event 14, 40, FRUITTREE_UNION_CAVE, HOLLOW_ROCK, PAL_NPC_BLUE
 
 
 GenericTrainerScientistLowell:
