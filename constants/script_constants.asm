@@ -185,7 +185,7 @@ NUM_EMOTES EQU const_value
 EMOTE_FROM_MEM EQU -1
 
 ; fruittree arguments
-; FruitTreeItems indexes (see data/items/fruit_trees.asm)
+; FruitTreeItems indexes (see data/items/fruit_trees.asm) ; not sure where this is?... 
 	const_def 1
 ; Apricorn trees come first, then Berry trees
 	const FRUITTREE_AZALEA_TOWN     ; 01 wht aprx
@@ -196,14 +196,10 @@ EMOTE_FROM_MEM EQU -1
 	const FRUITTREE_ROUTE_42_2      ; 06
 	const FRUITTREE_ROUTE_42_3      ; 07
 	const FRUITTREE_ILEX_FOREST     ; 08 shore foam
-	const FRUITTREE_UNION_CAVE      ; 08 hollow rock
-	const FRUITTREE_HOLLYS_HOLT     ; 09 tough leaves TODO
-	const FRUITTREE_MISTYBASIN     ; 10 radiant opal
+	const FRUITTREE_UNION_CAVE      ; 09 hollow rock
+	const FRUITTREE_HOLLYS_HOLT     ; 0a tough leaves TODO
+	const FRUITTREE_MISTYBASIN     ;  0b radiant opal
 FIRST_BERRY_TREE EQU const_value
-	const FRUITTREE_ROUTE_29        ; 08
-	const FRUITTREE_ROUTE_30_1      ; 09
-	const FRUITTREE_ROUTE_30_2      ; 0a
-	const FRUITTREE_ROUTE_31        ; 0b
 	const FRUITTREE_VIOLET_CITY     ; 0c
 	const FRUITTREE_ROUTE_32_COAST  ; 0d
 	const FRUITTREE_ROUTE_33        ; 0e
