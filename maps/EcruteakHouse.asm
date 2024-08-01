@@ -32,8 +32,8 @@ EcruteakHouseInitializeSages:
 	iftrue .DontBlockTower
 	checkevent EVENT_KOJI_ALLOWS_YOU_PASSAGE_TO_TIN_TOWER
 	iftrue .DontBlockTower
-	checkevent EVENT_CLEARED_RADIO_TOWER
-	iftrue .BlockTower
+;	checkevent EVENT_CLEARED_RADIO_TOWER
+;	iftrue .BlockTower
 	endcallback
 
 .BlockTower:
@@ -76,10 +76,10 @@ EcruteakHouse_XYTrigger_DontMove:
 EcruteakTinTowerEntranceSageScript:
 	faceplayer
 	opentext
-	checkevent EVENT_CLEARED_RADIO_TOWER
-	iftrue .CheckForClearBell
-	checkflag ENGINE_FOGBADGE
-	iftrue_jumpopenedtext EcruteakTinTowerEntranceSageText_GotFogBadge
+;	checkevent EVENT_CLEARED_RADIO_TOWER
+;	iftrue .CheckForClearBell
+;	checkflag ENGINE_FOGBADGE
+;	iftrue_jumpopenedtext EcruteakTinTowerEntranceSageText_GotFogBadge
 	jumpopenedtext EcruteakTinTowerEntranceSageText
 
 .CheckForClearBell:

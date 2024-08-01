@@ -136,7 +136,7 @@ UnknownScript_0x5c088:
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .LoadFight3
 .Fight2:
-	checkevent EVENT_CLEARED_RADIO_TOWER
+	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .LoadFight2
 .Fight1:
 	checkflag ENGINE_FLYPOINT_OLIVINE

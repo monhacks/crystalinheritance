@@ -82,7 +82,7 @@ UnknownScript_0x1a927f:
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .LoadFight2
 .Fight1:
-	checkevent EVENT_CLEARED_ROCKET_HIDEOUT
+	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .LoadFight1
 .LoadFight0:
 	loadtrainer FISHER, TULLY1

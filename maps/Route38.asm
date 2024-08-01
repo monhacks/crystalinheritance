@@ -88,7 +88,7 @@ TrainerLassDana1:
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .LoadFight3
 .Fight2:
-	checkevent EVENT_CLEARED_RADIO_TOWER
+	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .LoadFight2
 .Fight1:
 	checkflag ENGINE_FLYPOINT_CIANWOOD
@@ -196,7 +196,7 @@ TrainerSchoolboyChad1:
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .LoadFight3
 .Fight2:
-	checkevent EVENT_CLEARED_RADIO_TOWER
+	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .LoadFight2
 .Fight1:
 	checkflag ENGINE_FLYPOINT_MAHOGANY

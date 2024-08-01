@@ -180,8 +180,6 @@ MoveTutor:
 	jumpopenedtext GoldenrodCityMoveTutorYouDontHaveEnoughCoinsText
 
 GoldenrodCityCooltrainerF1Script:
-	checkevent EVENT_CLEARED_RADIO_TOWER
-	iftrue_jumptextfaceplayer GoldenrodCityCooltrainerF1Text_ClearedRadioTower
 	jumptextfaceplayer GoldenrodCityCooltrainerF1Text
 
 GoldenrodCityCooltrainerF2Script:

@@ -58,14 +58,14 @@ AnarresTower3FHollisScript:
 	pause 5
 	showtext TammyText4
 	turnobject ANARRES_TOWER_HOLLIS, RIGHT
-	applyonemovement ANARRES_TOWER_HOLLIS, RIGHT
+	applyonemovement ANARRES_TOWER_HOLLIS, step_right
 	showtext HollisHM
 	showemote EMOTE_HAPPY, ANARRES_TOWER_TAMMY, 15
 	showtext TammyThanks
 	closetext
 	applymovement ANARRES_TOWER_TAMMY, TammyWalksOutMovement
 	disappear ANARRES_TOWER_TAMMY
-	applyonemovement ANARRES_TOWER_HOLLIS, LEFT
+	applyonemovement ANARRES_TOWER_HOLLIS, step_left
 	opentext
 	writetext HollisCongratulates
 	verbosegivetmhm HM_CUT

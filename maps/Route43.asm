@@ -2,8 +2,7 @@ Route43_MapScriptHeader:
 	def_scene_scripts
 
 	def_callbacks
-	callback MAPCALLBACK_NEWMAP, Route43CheckIfRocketsScript
-	callback MAPCALLBACK_TILES, Route43RainScript
+
 
 	def_warp_events
 	warp_event  9, 51, ROUTE_43_MAHOGANY_GATE, 1
@@ -37,25 +36,6 @@ Route43_MapScriptHeader:
 	object_const_def
 	const ROUTE43_SIGHTSEER_F
 
-Route43CheckIfRocketsScript:
-	checkevent EVENT_CLEARED_ROCKET_HIDEOUT
-	iftrue Route43NoRocketsScript
-	setmapscene ROUTE_43_GATE, $0
-	endcallback
-
-Route43RainScript:
-	special Special_GetOvercastIndex
-	ifequal LAKE_OF_RAGE_OVERCAST, .flood
-	changemapblocks Route43_BlockData
-	endcallback
-
-.flood
-	changemapblocks Route43Raining_BlockData
-	endcallback
-
-Route43NoRocketsScript:
-	setmapscene ROUTE_43_GATE, $1
-	endcallback
 
 Route43SightseerfScript:
 	checkevent EVENT_GOT_FLAME_ORB_FROM_ROUTE_43_LEADER
@@ -273,7 +253,7 @@ UnknownScript_0x19d0cf:
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .LoadFight2
 .Fight1:
-	checkevent EVENT_CLEARED_ROCKET_HIDEOUT
+	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .LoadFight1
 .LoadFight0:
 	loadtrainer POKEMANIAC, BRENT1
@@ -400,7 +380,7 @@ UnknownScript_0x19d1c1:
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .LoadFight2
 .Fight1:
-	checkevent EVENT_CLEARED_RADIO_TOWER
+	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .LoadFight1
 .LoadFight0:
 	loadtrainer PICNICKER, TIFFANY1

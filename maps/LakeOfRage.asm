@@ -3,8 +3,7 @@ LakeOfRage_MapScriptHeader:
 
 	def_callbacks
 	callback MAPCALLBACK_NEWMAP, LakeOfRageFlyPoint
-	callback MAPCALLBACK_OBJECTS, LakeOfRageWesleyAndEngineer
-	callback MAPCALLBACK_TILES, LakeOfRageFloodScript
+
 
 	def_warp_events
 	warp_event  7,  3, LAKE_OF_RAGE_HIDDEN_POWER_HOUSE, 1
@@ -37,43 +36,13 @@ LakeOfRage_MapScriptHeader:
 	itemball_event 13,  2, ELIXIR, 1, EVENT_LAKE_OF_RAGE_ELIXIR
 	itemball_event  7, 10, MAX_REVIVE, 1, EVENT_LAKE_OF_RAGE_MAX_REVIVE
 	tmhmball_event 35,  2, TM_SUBSTITUTE, EVENT_LAKE_OF_RAGE_TM_SUBSTITUTE
-	cuttree_event 18,  9, EVENT_LAKE_OF_RAGE_CUT_TREE_1
-	cuttree_event 11, 12, EVENT_LAKE_OF_RAGE_CUT_TREE_2
-	cuttree_event  5, 14, EVENT_LAKE_OF_RAGE_CUT_TREE_3
-	cuttree_event  6, 21, EVENT_LAKE_OF_RAGE_CUT_TREE_4
-	cuttree_event 23,  4, EVENT_LAKE_OF_RAGE_CUT_TREE_5
 
 	object_const_def
 	const LAKEOFRAGE_LANCE
 	const LAKEOFRAGE_RED_GYARADOS
-	const LAKEOFRAGE_WESLEY
 
 LakeOfRageFlyPoint:
 	setflag ENGINE_FLYPOINT_LAKE_OF_RAGE
-	endcallback
-
-LakeOfRageWesleyAndEngineer:
-	checkevent EVENT_LAKE_OF_RAGE_CIVILIANS
-	iftrue .NoEngineer
-	moveobject LAKEOFRAGE_LANCE, 18, 29
-.NoEngineer
-	readvar VAR_WEEKDAY
-	ifequal WEDNESDAY, .WesleyAppears
-	disappear LAKEOFRAGE_WESLEY
-	endcallback
-
-.WesleyAppears:
-	appear LAKEOFRAGE_WESLEY
-	endcallback
-
-LakeOfRageFloodScript:
-	special Special_GetOvercastIndex
-	ifequal LAKE_OF_RAGE_OVERCAST, .flood
-	changemapblocks LakeOfRage_BlockData
-	endcallback
-
-.flood
-	changemapblocks LakeOfRageFlooded_BlockData
 	endcallback
 
 LakeOfRageSignText:
@@ -85,14 +54,7 @@ LakeOfRageSignText:
 LakeOfRageFishingGuruSign:
 	opentext
 	writetext .Text
-	checkevent EVENT_CLEARED_ROCKET_HIDEOUT
-	iftrue .Continue
 	waitendtext
-
-.Continue:
-	promptbutton
-	special Special_MagikarpHouseSign
-	endtext
 
 .Text:
 	text "Fishing Guru's"
@@ -402,19 +364,12 @@ FisherRaymondBeatenText:
 	done
 
 LakeOfRageGrampsScript:
-	checkevent EVENT_CLEARED_ROCKET_HIDEOUT
-	iftrue_jumptextfaceplayer .Text2
 	jumpthistextfaceplayer
 
 	text "The Gyarados are"
 	line "angry!"
 
 	para "It's a bad omen!"
-	done
-
-.Text2:
-	text "Hahah! The Magi-"
-	line "karp are biting!"
 	done
 
 LakeOfRageSuperNerdText:

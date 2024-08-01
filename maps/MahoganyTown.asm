@@ -47,8 +47,6 @@ MahoganyTownTryARageCandyBarScript:
 MahoganyTownPokefanMScript:
 	faceplayer
 RageCandyBarMerchantScript:
-	checkevent EVENT_CLEARED_ROCKET_HIDEOUT
-	iftrue_jumptext RageCandyBarMerchantSoldOutText
 	opentext
 	writetext RageCandyBarMerchantTryOneText
 	special PlaceMoneyTopRight
@@ -75,8 +73,6 @@ UnknownScript_0x19006c:
 	done
 
 MahoganyTownGrampsScript:
-	checkevent EVENT_CLEARED_ROCKET_HIDEOUT
-	iftrue_jumptextfaceplayer MahoganyTownGrampsText_ClearedRocketHideout
 	jumptextfaceplayer MahoganyTownGrampsText
 
 MahoganyTownSouvenirShopSign:

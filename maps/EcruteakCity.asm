@@ -62,8 +62,6 @@ EcruteakCityLass2Script:
 	jumptextfaceplayer EcruteakCityLass2Text
 
 EcruteakCityFisherScript:
-	checkevent EVENT_JASMINE_RETURNED_TO_GYM
-	iftrue_jumptextfaceplayer EcruteakCityFisherText_JasmineReturned
 	jumptextfaceplayer EcruteakCityFisherText
 
 EcruteakCityGramps1Text:

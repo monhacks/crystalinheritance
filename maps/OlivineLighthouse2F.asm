@@ -24,8 +24,6 @@ TrainerGentlemanAlfred:
 
 GentlemanAlfredScript:
 	endifjustbattled
-	checkevent EVENT_JASMINE_RETURNED_TO_GYM
-	iftrue_jumptextfaceplayer GentlemanAlfredFinalText
 	jumptextfaceplayer GentlemanAlfredAfterBattleText
 
 TrainerSailorHuey1:
@@ -69,7 +67,7 @@ UnknownScript_0x5afc7:
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .LoadFight2
 .Fight1:
-	checkevent EVENT_CLEARED_RADIO_TOWER
+	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .LoadFight1
 .LoadFight0:
 	loadtrainer SAILOR, HUEY1

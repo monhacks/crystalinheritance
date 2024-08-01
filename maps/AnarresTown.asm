@@ -24,7 +24,7 @@ AnarresTown_MapScriptHeader:
 	bg_event 13, 15, BGEVENT_JUMPTEXT, AnarresTowerSignText
 
 	def_object_events
-	object_event 5, 9, SPRITE_BLACKBELT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, jumptextfaceplayer, AnarresNPC1Text, -1 
+	object_event 5, 9, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, jumptextfaceplayer, AnarresNPC1Text, -1 
 	object_event 17, 14, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, jumptextfaceplayer, AnarresNPC2Text, -1 
 	object_event 12,  6, SPRITE_BUG_MANIAC, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, jumptextfaceplayer, AnarresNPC3Text, -1 
 	object_event 15, 13, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, jumptextfaceplayer, AnarresNPC4Text, -1 
