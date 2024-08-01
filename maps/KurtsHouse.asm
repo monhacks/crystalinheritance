@@ -349,9 +349,8 @@ endr
 	setflag ENGINE_FLYPOINT_LAKE_OF_RAGE
 	; post-e4
 	setflag ENGINE_HAVE_SHINY_CHARM
-	; good party
-	; here, trying to force things to be re-set....
-;	givepoke SHUCKLE, NO_FORM, 25
+	; party
+	givepoke SHUCKLE, NO_FORM, 25
 	; hm slaves
 ;	givepoke DUSKNOIR, NO_FORM, 100, LEFTOVERS
 ;	givepoke H__AVALUGG, NO_FORM, 100, LEFTOVERS	
