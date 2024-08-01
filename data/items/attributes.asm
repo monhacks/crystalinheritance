@@ -501,19 +501,19 @@ ItemAttributes:
 	item_attribute 50, 0, 0, ITEM, ITEMMENU_NOUSE, ITEMMENU_NOUSE
 ; LITEBLUEMAIL
 	item_attribute 50, 0, 0, ITEM, ITEMMENU_NOUSE, ITEMMENU_NOUSE
-; apricorn1
+; mail
 	item_attribute 50, 0, 0, ITEM, ITEMMENU_NOUSE, ITEMMENU_NOUSE
-; apricorn1
+; mail
 	item_attribute 50, 0, 0, ITEM, ITEMMENU_NOUSE, ITEMMENU_NOUSE
-; apricorn1
+; mail
 	item_attribute 50, 0, 0, ITEM, ITEMMENU_NOUSE, ITEMMENU_NOUSE
-; apricorn1
+; mail
 	item_attribute 50, 0, 0, ITEM, ITEMMENU_NOUSE, ITEMMENU_NOUSE
-; apricorn1
+; mail
 	item_attribute 50, 0, 0, ITEM, ITEMMENU_NOUSE, ITEMMENU_NOUSE
-; apricorn1
+; mail
 	item_attribute 50, 0, 0, ITEM, ITEMMENU_NOUSE, ITEMMENU_NOUSE
-; apricorn1
+; mail
 	item_attribute 50, 0, 0, ITEM, ITEMMENU_NOUSE, ITEMMENU_NOUSE
 	assert_table_length NUM_ITEMS
 

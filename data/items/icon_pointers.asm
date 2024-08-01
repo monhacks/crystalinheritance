@@ -248,23 +248,14 @@ ItemIconPointers:
 	dba FlowerMailIcon
 	dba SurfMailIcon
 	dba LiteBlueMailIcon
-	dba RadiantOpalIcon
-	dba ShoreFoamIcon
-	dba FixedChargeIcon
-	dba ToughLeavesIcon
-	dba WhiteApricornIcon
-	dba HollowRockIcon
-	dba PinkApricornIcon
+	dba PortraitMailIcon
+	dba LovelyMailIcon
+	dba EonMailIcon
+	dba MorphMailIcon
+	dba BlueSkyMailIcon
+	dba MusicMailIcon
+	dba MirageMailIcon
 	assert_table_length NUM_ITEMS + 1 ; added the apricorns below... may need to verify these are correct?
-
-ApricornIconPointers:
-	dba RadiantOpalIcon
-	dba ShoreFoamIcon
-	dba FixedChargeIcon
-	dba ToughLeavesIcon
-	dba WhiteApricornIcon
-	dba HollowRockIcon
-	dba PinkApricornIcon
 
 KeyItemIconPointers:
 	dba BicycleIcon

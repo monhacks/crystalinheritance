@@ -247,13 +247,13 @@ ItemDescriptions:
 	dw FlowerMailDesc
 	dw SurfMailDesc
 	dw LiteBlueMailDesc
-	dw RadiantOpalDesc
-	dw ShoreFoamDesc
-	dw FixedChargeDesc
-	dw ToughLeavesDesc
-	dw WhtApricornDesc
-	dw HollowRockDesc
-	dw PnkApricornDesc
+	dw PortraitMailDesc
+	dw LovelyMailDesc
+	dw EonMailDesc
+	dw MorphMailDesc
+	dw BlueSkyMailDesc
+	dw MusicMailDesc
+	dw MirageMailDesc
 	assert_table_length NUM_ITEMS
 
 KeyItemDescriptions:
@@ -1166,12 +1166,40 @@ FlowerMailDesc:
 	next "(Hold)@"
 
 SurfMailDesc:
-	db   "Even smells like"
-	next "the sea.@"
+	db   "Lapras-print Mail."
+	next "(Hold)@"
 
 LiteBlueMailDesc:
-	db   "Modest yet"
-	next "refined.@"
+	db   "Dratini-print"
+	next "Mail. (Hold)@"
+
+PortraitMailDesc:
+	db   "Mail featuring the"
+	next "holder's likeness.@"
+
+LovelyMailDesc:
+	db   "Heart-print Mail."
+	next "(Hold)@"
+
+EonMailDesc:
+	db   "Eevee-print Mail."
+	next "(Hold)@"
+
+MorphMailDesc:
+	db   "Ditto-print Mail."
+	next "(Hold)@"
+
+BlueSkyMailDesc:
+	db   "Sky-print Mail."
+	next "(Hold)@"
+
+MusicMailDesc:
+	db   "Natu-print Mail."
+	next "(Hold)@"
+	
+MirageMailDesc:
+	db   "Now you see it."
+	next "Now you don't.@"
 
 EjectButtonDesc:
 	db   "Switches out when"

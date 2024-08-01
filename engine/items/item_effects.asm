@@ -259,13 +259,13 @@ ItemEffects:
 	dw IsntTheTimeMessage ; FLOWER_MAIL
 	dw IsntTheTimeMessage ; SURF_MAIL
 	dw IsntTheTimeMessage ; LITEBLUEMAIL
-	dw IsntTheTimeMessage ; apricorn1
-	dw IsntTheTimeMessage ; apricorn2
-	dw IsntTheTimeMessage ; apricorn3
-	dw IsntTheTimeMessage ; apricorn4
-	dw IsntTheTimeMessage ; apricorn5
-	dw IsntTheTimeMessage ; apricorn6
-	dw IsntTheTimeMessage ; apricorn7
+	dw IsntTheTimeMessage ; PORTRAITMAIL
+	dw IsntTheTimeMessage ; LOVELY_MAIL
+	dw IsntTheTimeMessage ; EON_MAIL
+	dw IsntTheTimeMessage ; MORPH_MAIL
+	dw IsntTheTimeMessage ; BLUESKY_MAIL
+	dw IsntTheTimeMessage ; MUSIC_MAIL
+	dw IsntTheTimeMessage ; MIRAGE_MAIL
 	assert_table_length NUM_ITEMS + 1 ; count PARK_BALL
 
 DoKeyItemEffect::

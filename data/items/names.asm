@@ -259,13 +259,13 @@ endc
 	li "Flower Mail"
 	li "Surf Mail"
 	li "LiteBlueMail"
-	li "Radiant Opal" ; 12 characters? red
-	li "Shore Foam" ; blue 
-	li "Fixed Charge" ; yellow
-	li "Tough Leaves" ; green
-	li "Wht Apricorn" ; white
-	li "Hollow Rock" ; black
-	li "Pnk Apricorn" ; pink
+	li "PortraitMail"
+	li "Lovely Mail"
+	li "Eon Mail"
+	li "Morph Mail"
+	li "BlueSky Mail"
+	li "Music Mail"
+	li "Mirage Mail"
 	assert_list_length NUM_ITEMS + 1
 
 	setcharmap default

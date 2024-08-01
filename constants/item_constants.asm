@@ -290,15 +290,13 @@
 	const FLOWER_MAIL  ; f5
 	const SURF_MAIL    ; f6
 	const LITEBLUEMAIL ; f7
-	
-	const RADIANT_OPAL_dummy  ; f8
-	const SHORE_FOAM_dummy     ; f9
-	const FIXED_CHARGE_dummy   ; fa
-	const WHT_APRICORN_dummy ; fb
-	const TOUGH_LEAVES_dummy ; fc
-	const HOLLOW_ROCK_dummy   ; fd
-	const PNK_APRICORN_dummy  ; fe ; this is the max number!	
-
+	const PORTRAITMAIL ; f8
+	const LOVELY_MAIL  ; f9
+	const EON_MAIL     ; fa
+	const MORPH_MAIL   ; fb
+	const BLUESKY_MAIL ; fc
+	const MUSIC_MAIL   ; fd
+	const MIRAGE_MAIL  ; fe
 NUM_ITEMS EQU const_value - 1
 
 PARK_BALL      EQU $00
@@ -568,13 +566,6 @@ endc
 	const NAM_X_SPEED
 	const NAM_ZINC
 	const NAM_ZOOM_LENS
-	const NAM_RADIANT_OPAL ; 1
-	const NAM_SHORE_FOAM ; 2
-	const NAM_FIXED_CHARGE ; 3
-	const NAM_TOUGH_LEAVES ; 4
-	const NAM_WHT_APRICORN ; 5
-	const NAM_HOLLOW_ROCK ; 6
-	const NAM_PNK_APRICORN ; 7
 
 
 ; APRICORN_BOX contents

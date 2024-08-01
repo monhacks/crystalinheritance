@@ -87,13 +87,11 @@ KurtHouseEventScript:
 	promptbutton
 .NoInstructions:
 	promptbutton
-	givekeyitem APRICORN_BOX ; used to be verbosegivekeyitem
+	givekeyitem APRICORN_BOX
 	writetext KurtOutroText0
 	promptbutton
 	special SpecialNameRival
 	writetext KurtOutroText	
-;	loadwildmon PIDGEY, 5 ; new 
-;	catchtutorial BATTLETYPE_TUTORIAL ; new
 	waitbutton
 	closetext
 	applymovement KURTSHOUSE_KURT, .kurt_walks_back
@@ -353,7 +351,7 @@ endr
 	setflag ENGINE_HAVE_SHINY_CHARM
 	; good party
 	; here, trying to force things to be re-set....
-	givepoke SHUCKLE, NO_FORM, 25
+;	givepoke SHUCKLE, NO_FORM, 25
 	; hm slaves
 ;	givepoke DUSKNOIR, NO_FORM, 100, LEFTOVERS
 ;	givepoke H__AVALUGG, NO_FORM, 100, LEFTOVERS	
