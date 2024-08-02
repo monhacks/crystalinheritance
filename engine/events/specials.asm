@@ -71,13 +71,13 @@ SpecialNameRival:
 	ld b, $2 ; rival
 	ld de, wRivalName
 	farcall _NamingScreen
-	; default to "Silver"
+	; default to "Rosin"
 	ld hl, wRivalName
 	ld de, .DefaultRivalName
 	jmp InitName
 
 .DefaultRivalName:
-	db "Silver@"
+	db "Rosin@@" ; changed
 
 SpecialTrendyPhrase:
 	ld b, $3 ; trendy phrase
