@@ -290,13 +290,15 @@
 	const FLOWER_MAIL  ; f5
 	const SURF_MAIL    ; f6
 	const LITEBLUEMAIL ; f7
-	const PORTRAITMAIL ; f8
-	const LOVELY_MAIL  ; f9
-	const EON_MAIL     ; fa
-	const MORPH_MAIL   ; fb
-	const BLUESKY_MAIL ; fc
-	const MUSIC_MAIL   ; fd
-	const MIRAGE_MAIL  ; fe
+
+	const RADIANT_OPAL_dummy  ; f8
+	const SHORE_FOAM_dummy     ; f9
+	const FIXED_CHARGE_dummy   ; fa
+	const WHT_APRICORN_dummy ; fb
+	const TOUGH_LEAVES_dummy ; fc
+	const HOLLOW_ROCK_dummy   ; fd
+	const PNK_APRICORN_dummy  ; fe ; this is the max number!
+
 NUM_ITEMS EQU const_value - 1
 
 PARK_BALL      EQU $00
@@ -329,7 +331,6 @@ ALWAYS_ITEM_2  EQU $ff
 	const NAM_BLACK_BELT
 	const NAM_BLACK_SLUDGE
 	const NAM_BLACKGLASSES
-	const NAM_BLUESKY_MAIL
 	const NAM_BLUNDRPOLICY
 	const NAM_BOTTLE_CAP
 	const NAM_BRICK_PIECE
@@ -369,7 +370,6 @@ endc
 	const NAM_ENERGY_ROOT
 	const NAM_ENERGYPOWDER
 	const NAM_ENIGMA_BERRY
-	const NAM_EON_MAIL
 	const NAM_ESCAPE_ROPE
 	const NAM_ETHER
 	const NAM_EVERSTONE
@@ -425,7 +425,6 @@ endc
 	const NAM_LIGHT_CLAY
 	const NAM_LITEBLUEMAIL
 	const NAM_LOVE_BALL
-	const NAM_LOVELY_MAIL
 	const NAM_LUCKY_EGG
 	const NAM_LUCKY_PUNCH
 	const NAM_LUM_BERRY
@@ -448,14 +447,11 @@ endc
 	const NAM_METRONOME_I
 	const NAM_MINT_LEAF
 	const NAM_MIRACLE_SEED
-	const NAM_MIRAGE_MAIL
 	const NAM_MOOMOO_MILK
 	const NAM_DECI_BALL
 	const NAM_MOON_STONE
-	const NAM_MORPH_MAIL
 	const NAM_MULCH
 	const NAM_MUSCLE_BAND
-	const NAM_MUSIC_MAIL
 	const NAM_MYSTIC_WATER
 	const NAM_NEST_BALL
 	const NAM_NET_BALL
@@ -476,7 +472,6 @@ endc
 	const NAM_POKE_BALL
 	const NAM_POKE_DOLL
 	const NAM_POMEG_BERRY
-	const NAM_PORTRAITMAIL
 	const NAM_POTION
 	const NAM_POWER_ANKLET
 	const NAM_POWER_BAND
@@ -537,10 +532,10 @@ endc
 	const NAM_STARDUST
 	const NAM_STARF_BERRY
 	const NAM_STICK
+	const NAM_SURF_MAIL
 	const NAM_SUN_STONE
 	const NAM_SUPER_POTION
 	const NAM_SUPER_REPEL
-	const NAM_SURF_MAIL
 	const NAM_SWEET_HONEY
 	const NAM_TAMATO_BERRY
 	const NAM_THICK_CLUB
@@ -566,6 +561,13 @@ endc
 	const NAM_X_SPEED
 	const NAM_ZINC
 	const NAM_ZOOM_LENS
+	const NAM_RADIANT_OPAL ; 1
+	const NAM_SHORE_FOAM ; 2
+	const NAM_FIXED_CHARGE ; 3
+	const NAM_TOUGH_LEAVES ; 4
+	const NAM_WHT_APRICORN ; 5
+	const NAM_HOLLOW_ROCK ; 6
+	const NAM_PNK_APRICORN ; 7
 
 
 ; APRICORN_BOX contents

@@ -3,7 +3,7 @@ AzaleaTown_MapScriptHeader:
 
 	def_callbacks
 	callback MAPCALLBACK_NEWMAP, AzaleaTownFlypointCallback
-;	callback MAPCALLBACK_TILES, AzaleaTownRainScript
+
 
 	def_warp_events ; good
 	warp_event 17,  5, AZALEA_POKECENTER_1F, 1
@@ -24,7 +24,7 @@ AzaleaTown_MapScriptHeader:
 	coord_event 20, 11, 0, Azalea_GrampsStopsYouTrigger2
 
 	def_bg_events
-	bg_event 19,  9, BGEVENT_JUMPTEXT, AzaleaTownSignText
+	bg_event 22,  8, BGEVENT_JUMPTEXT, AzaleaTownSignText
 	bg_event 10,  9, BGEVENT_JUMPTEXT, KurtsHouseSignText
 	bg_event 14, 15, BGEVENT_JUMPTEXT, AzaleaGymSignText
 	bg_event 29,  8, BGEVENT_JUMPTEXT, SlowpokeWellSignText ;TODO EDIT THIS

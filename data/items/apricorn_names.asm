@@ -1,4 +1,4 @@
-ApricornNames::
+ApricornNames:: ; these do not have at signs. 080324
 	list_start ApricornNames
 	li "?"
 	li "Radiant Opal" ; 12 characters? red

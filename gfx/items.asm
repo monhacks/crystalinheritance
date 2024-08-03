@@ -300,16 +300,15 @@ MintLeafIcon::     INCBIN "gfx/items/mint_leaf.2bpp.lz"
 FlowerMailIcon::   INCBIN "gfx/items/flower_mail.2bpp.lz"
 SurfMailIcon::
 LiteBlueMailIcon:: INCBIN "gfx/items/mail.2bpp.lz"
-PortraitMailIcon:: INCBIN "gfx/items/portraitmail.2bpp.lz"
-LovelyMailIcon::   INCBIN "gfx/items/lovely_mail.2bpp.lz"
-EonMailIcon::      INCBIN "gfx/items/eon_mail.2bpp.lz"
-MorphMailIcon::    INCBIN "gfx/items/morph_mail.2bpp.lz"
-BlueSkyMailIcon::  INCBIN "gfx/items/bluesky_mail.2bpp.lz"
-MusicMailIcon::    INCBIN "gfx/items/music_mail.2bpp.lz"
-MirageMailIcon::   INCBIN "gfx/items/mirage_mail.2bpp.lz"
+WhtApriconIcon::
+PnkApricornIcon:: INCBIN "gfx/items/apricorn.2bpp.lz" 
+RadiantOpalIcon::  INCBIN "gfx/items/radiantopal.2bpp.lz"
+ShoreFoamIcon::     INCBIN "gfx/items/shorefoam.2bpp.lz"
+FixedChargeIcon::  INCBIN "gfx/items/fixedcharge.2bpp.lz"
+ToughLeavesIcon::  INCBIN "gfx/items/toughleaves.2bpp.lz"
+HollowRockIcon::   INCBIN "gfx/items/hollowrock.2bpp.lz"
 
 TMHMIcon::         INCBIN "gfx/items/tm_hm.2bpp.lz"
-ApricornIcon::     INCBIN "gfx/items/apricorn.2bpp.lz"
 ParkBallIcon::     INCBIN "gfx/items/park_ball.2bpp.lz"
 
 

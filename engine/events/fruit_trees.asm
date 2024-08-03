@@ -129,10 +129,32 @@ PickApricornScript:
 	jmp CopyName2
 
 .ShowApricornIcon:
-	ld a, [wCurFruit]
-	call LoadApricornIconForOverworld
-	farcall LoadApricornIconPalette
-	jmp PrintOverworldItemIcon
+    ld a, [wCurFruitTree]          ; Load current fruit tree value into A
+    push af                        ; Save A and flags onto the stack
+    ld a, [wCurFruit]              ; Load current fruit value into A
+    push af                        ; Save the original fruit value for palette use
+
+    ; Add to the current value in 'a' to get to the correct images
+    add a, 128                     ; Add 128 to the value in 'a', this gets to the mail spot in the item constants
+    ld b, a                        ; Save the intermediate result in 'b'
+    ld a, b                        ; Restore the intermediate result to 'a'
+    add a, 119                     ; Add 119 to the value in 'a' to get the right value
+
+    ld [wItemBallItemID], a        ; Store the modified fruit value as the item ID
+
+    pop af                         ; Restore the original fruit value for palette use
+    call FindItemInBallScript.ShowApricornItemIcon  ; Call subroutine to show the item icon
+
+    pop af                         ; Restore previous A and flags from the stack
+    ld [wCurFruitTree], a          ; Restore current fruit tree value
+    ret                            ; Return from the subroutine             ; Return from the subroutine
+
+
+;.ShowApricornIcon:
+;	ld a, [wCurFruit]
+;	call LoadApricornIconForOverworld
+;	farcall LoadApricornIconPalette
+;	jmp PrintOverworldItemIcon
 
 CheckFruitTree:
 	ld b, CHECK_FLAG

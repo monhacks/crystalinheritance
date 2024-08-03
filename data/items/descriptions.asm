@@ -247,13 +247,13 @@ ItemDescriptions:
 	dw FlowerMailDesc
 	dw SurfMailDesc
 	dw LiteBlueMailDesc
-	dw PortraitMailDesc
-	dw LovelyMailDesc
-	dw EonMailDesc
-	dw MorphMailDesc
-	dw BlueSkyMailDesc
-	dw MusicMailDesc
-	dw MirageMailDesc
+	dw PortraitMailDesc ; shouldn't be able to access this. 
+	dw LovelyMailDesc ; shouldn't be able to access this. 
+	dw EonMailDesc ; shouldn't be able to access this. 
+	dw MorphMailDesc ; shouldn't be able to access this. 
+	dw BlueSkyMailDesc ; shouldn't be able to access this. 
+	dw MusicMailDesc ; shouldn't be able to access this. 
+	dw MirageMailDesc ; shouldn't be able to access this. 
 	assert_table_length NUM_ITEMS
 
 KeyItemDescriptions:

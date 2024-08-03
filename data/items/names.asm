@@ -259,13 +259,15 @@ endc
 	li "Flower Mail"
 	li "Surf Mail"
 	li "LiteBlueMail"
-	li "PortraitMail"
-	li "Lovely Mail"
-	li "Eon Mail"
-	li "Morph Mail"
-	li "BlueSky Mail"
-	li "Music Mail"
-	li "Mirage Mail"
+	
+	li "Radiant Opal"
+	li "Shore Foam"
+	li "Fixed Charge"
+	li "Wht Apricorn"
+	li "Tough Leaves"
+	li "Hollow Rock"
+	li "Pnk Apricorn"
+
 	assert_list_length NUM_ITEMS + 1
 
 	setcharmap default
