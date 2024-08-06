@@ -3,7 +3,6 @@ HollysHolt_MapScriptHeader:
 	scene_script HollysHoltTrigger
 
 	def_callbacks
-	callback MAPCALLBACK_OBJECTS, HollysHoltTammy
 
 
 	def_warp_events 
@@ -16,7 +15,7 @@ HollysHolt_MapScriptHeader:
 	def_coord_events
 
 
-	def_bg_events ;TODO ADD A FEW SIGNPOSTS
+	def_bg_events
 	bg_event  5, 19, BGEVENT_JUMPTEXT, HH_Sign1Text
 	bg_event 25, 25, BGEVENT_JUMPTEXT, HH_Sign2Text
 	bg_event 21, 41, BGEVENT_ITEM + SILVERPOWDER, EVENT_HOLLYS_HOLT_HIDDEN_SILVERPOWDER ;ok
@@ -26,15 +25,15 @@ HollysHolt_MapScriptHeader:
 	def_object_events
 	object_event  9, 25, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, HollysHoltKurtScript, -1;EVENT_BEAT_HOLLIS ;todo add this 
 	object_event  8, 25, SPRITE_HOLLIS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, HollysHoltHollisScript, EVENT_TALKED_TO_HOLLIS;todo add this
-	object_event 18, 38, SPRITE_TAMMY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, HollysHoltTammyScript, EVENT_TAMMY_HOLLYS_HOLT ;TOOD need to put in the tammy move tutor
+	object_event 18, 38, SPRITE_TAMMY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, HollysHoltTammyScript, EVENT_TAMMY_HOLLYS_HOLT
 	object_event 19, 38, SPRITE_BREEDER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, HollysHoltNPC6Text, EVENT_TAMMY_HOLLYS_HOLT 
 	object_event  8, 16, SPRITE_BREEDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, HollysHoltNPC1Text, -1
 	object_event 23, 24, SPRITE_GRAMPS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, HollysHoltNPC2Script, -1 
 	object_event 16, 36, SPRITE_BREEDER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, HollysHoltNPC3Text, -1
 	object_event 19, 10, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, HollysHoltNPC4Text, -1 
 	object_event 24, 38, SPRITE_BREEDER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, HollysHoltNPC5Text, -1 
-	itemball_event 28, 14, ENERGYPOWDER, 1, EVENT_HOLLYS_HOLT_ENERGYPOWDER ;TODO
-	itemball_event 19, 16, REVIVAL_HERB, 1, EVENT_ILEX_FOREST_REVIVAL_HERB ;TODO
+	itemball_event 28, 14, ENERGYPOWDER, 1, EVENT_HOLLYS_HOLT_ENERGYPOWDER
+	itemball_event 19, 16, REVIVAL_HERB, 1, EVENT_ILEX_FOREST_REVIVAL_HERB
 	tmhmball_event 24, 33, TM_X_SCISSOR, EVENT_GOT_TM_X_SCISSOR
 	cuttree_event 25, 5, EVENT_HOLLYS_HOLT_CUT_TREE
 	pokemon_event   6, 18, PINECO, -1, -1, PAL_NPC_BLUE, HollysHoltBagwormText, EVENT_BEAT_HOLLIS
@@ -53,18 +52,6 @@ HollysHolt_MapScriptHeader:
 	const HOLLYS_HOLT_TAMMY
 	const HOLLYS_HOLT_SCHOOLGIRL
 
-HollysHoltTammy:
-	checkflag ENGINE_BOULDERBADGE
-	iftrue .AppearTammy
-	disappear HOLLYS_HOLT_TAMMY
-	disappear HOLLYS_HOLT_SCHOOLGIRL
-	endcallback
-
-.AppearTammy:
-	appear HOLLYS_HOLT_TAMMY
-	appear HOLLYS_HOLT_SCHOOLGIRL	
-	endcallback
-
 HollysHoltTrigger:
 	sdefer HollysHoltScript1
 	end
@@ -79,9 +66,6 @@ HollysHoltScript1:
 	opentext
 	writetext HH_HollisHello
 	waitbutton
-;	closetext ; these three lines may cause a crash?
-;	applymovement HOLLYS_HOLT_HOLLIS, HH_HollisSpins
-;	opentext
 	writetext HH_KurtExplains
 	waitbutton
 	closetext

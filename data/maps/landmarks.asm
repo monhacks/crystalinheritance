@@ -42,37 +42,37 @@ Landmarks:
 	landmark 116,  52, Route43Name
 	landmark 116,  44, LakeOfRageName
 	assert_table_length KANTO_LANDMARK
-	landmark  60, 140, HollysHoltName
-	landmark  76, 140, AnarresTownName
-	landmark  72, 138, AnarresTowerName
-	landmark  84, 132, MistyBasinName
-	landmark  60, 124, CalmCoastName
-	landmark  60, 108, GauldenrodName
-	landmark  58, 107, GauldenrodTowerName
-	landmark  60,  92, SereneSpringsName
-	landmark  60,  80, StadiumGroundsName
-	landmark  60,  76, StadiumName
-	landmark  76,  56, EmperorsGardenName
-	landmark  76,  70, WesternCapitalName
-	landmark  78,  58, HisuiTowerName;tin OR BELL tower
-	landmark  74,  58, BrassTowerName ;burned tower
-	landmark  44,  60, CattleCullName
-	landmark  44,  76, TradersLandingName
-	landmark  28, 116, CianwoodCoveName
-	landmark  36, 116, ShelteredShoresName
-	landmark  36,  76, PhantomFjordName
-	landmark  36, 108, SeaFluxNexusName
-	landmark  36,  80, ArduousAnchorageName
-	landmark  44,  80, LandingDocksName
-	landmark 116,  44, TranquilTarnName
-	landmark 116,  28, GrottoedGlacierName
-	landmark 108,  28, WesternGlacierName
-	landmark 116,  34, SinjohCampName
-	landmark 116,  52, EmpiresReachName
-	landmark 116,  60, EerieHamletName
-	landmark 116,  56, RebelsRedoubtName
-	landmark 100,  60, SulfurStyName
-	landmark  92,  60, ClastsCradleName
+	landmark  76, 140, HollysHoltName ; good
+	landmark  92, 140, AnarresTownName ; good
+	landmark  92, 144, AnarresTowerName ; good
+	landmark  100, 132, MistyBasinName ; good
+	landmark  76, 124, CalmCoastName ; good
+	landmark  76, 116, GauldenrodName ; good
+	landmark  72, 116, GauldenrodTowerName ; good
+	landmark  76,  104, SereneSpringsName ; good
+	landmark  76,  92, StadiumGroundsName ; good
+	landmark  76,  88, StadiumName ; good
+	landmark  92,  52, EmperorsGardenName ; good
+	landmark  92,  68, WesternCapitalName
+	landmark  100,  59, HisuiTowerName; tin OR BELL tower, good
+	landmark  84,  59, BrassTowerName ; burned tower, good
+	landmark  60,  68, CattleCullName ; good
+	landmark  44,  84, TradersLandingName ; 44, x 
+	landmark  20, 140, CianwoodCoveName
+	landmark  44, 110, ShelteredShoresName ; OK good
+	landmark  36,  100, PhantomFjordName ; ok
+	landmark  36, 108, SeaFluxNexusName ; ok
+	landmark  44,  100, ArduousAnchorageName ; 44, ?
+	landmark  44,  88, LandingDocksName
+	landmark 140,  52, TranquilTarnName ; ok
+	landmark 144,  44, GrottoedGlacierName ; ok
+	landmark 136,  44, WesternGlacierName ; ok
+	landmark 140,  44, SinjohCampName ; good
+	landmark 140,  60, EmpiresReachName ; ok
+	landmark 140,  68, EerieHamletName ; ok
+	landmark 144,  66, RebelsRedoubtName
+	landmark 120,  68, SulfurStyName
+	landmark 112,  56, ClastsCradleName
 	assert_table_length SHAMOUTI_LANDMARK
 ;	landmark  76,  68, ShamoutiIslandName
 	assert_table_length NUM_LANDMARKS
@@ -138,7 +138,7 @@ ArduousAnchorageName:  rawchar "Arduous¯Anchorage@"
 LandingDocksName:      rawchar "Landing¯Docks@"
 TranquilTarnName:      rawchar "Tranquil¯Tarn@"
 GrottoedGlacierName:   rawchar "Grottoed¯Glacier@"
-WesternGlacierName:    rawchar "Western_Glacier@"
+WesternGlacierName:    rawchar "Western¯Glacier@"
 SinjohCampName:        rawchar "Sinjoh¯Camp@"
 EmpiresReachName:      rawchar "Empires¯Reach@"
 EerieHamletName:       rawchar "Eerie¯Hamlet@"

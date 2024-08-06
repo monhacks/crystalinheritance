@@ -12,8 +12,8 @@ KurtsHouse_MapScriptHeader: ; todo add the ability to make apricorns here at the
 
 
 	def_bg_events;done
-;	bg_event  6,  1, BGEVENT_JUMPSTD, radio2 ; this is fine for later
-	bg_event  6,  1, BGEVENT_READ, DebugRadio ;this line for debug
+	bg_event  6,  1, BGEVENT_JUMPSTD, radio2 ; this is fine for later
+;	bg_event  6,  1, BGEVENT_READ, DebugRadio ;this line for debug
 	bg_event  8,  0, BGEVENT_JUMPTEXT, KurtsHouseOakPhotoText ;revised
 	bg_event  9,  0, BGEVENT_JUMPTEXT, KurtsHouseOakPhotoText ;revised
 	bg_event  5,  1, BGEVENT_READ, PokemonJournalProfWestwoodScript ; revised
@@ -59,6 +59,7 @@ KurtHouseEventScript:
 	callstd receiveitem
 	setflag ENGINE_POKEGEAR
 	setflag ENGINE_PHONE_CARD
+	setflag ENGINE_MAP_CARD
 	addcellnum PHONE_MOM
 	setscene $1 ; this should keep the event from playing in a loop?
 	setevent EVENT_KURTS_HOUSE_KURT_0 ; changed from mom

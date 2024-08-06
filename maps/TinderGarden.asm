@@ -9,7 +9,7 @@ TinderGarden_MapScriptHeader: ;todo something weird happens when I stand to the 
 	warp_event  4, 17, AZALEA_TOWN, 9
 	warp_event  5, 17, AZALEA_TOWN, 10	
 	warp_event 12,  0, RUINS_OF_ALPH_OUTSIDE, 9 
-	warp_event 13,  0, RUINS_OF_ALPH_OUTSIDE, 10	
+	warp_event 13,  0, RUINS_OF_ALPH_OUTSIDE, 10
 	
 	
 	def_coord_events

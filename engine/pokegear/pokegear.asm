@@ -721,7 +721,7 @@ TownMap_GetJohtoLandmarkLimits:
 	ret
 
 TownMap_GetKantoLandmarkLimits: ; wil need to update these for the old johto map
-	lb de, LAKE_OF_RAGE, AZALEA_TOWN
+	lb de, BRASS_TOWER, HOLLYS_HOLT
 	ld a, [wStatusFlags]
 	bit 6, a
 	ret z
@@ -729,7 +729,7 @@ TownMap_GetKantoLandmarkLimits: ; wil need to update these for the old johto map
 	ret
 
 TownMap_GetOrangeLandmarkLimits:
-	lb de, LAKE_OF_RAGE, AZALEA_TOWN ; HOPEFULLY NO PROBLEM WITH THE ORANGE MAPS
+	lb de, LAKE_OF_RAGE, AZALEA_TOWN ; SHOULDN'T be able to access these... 
 	ret
 
 PokegearRadio_Init:

@@ -596,6 +596,7 @@ IlexForestCelebiEventScript:
 	closetext
 	setevent SUMMONED_CELEBI_IN_ILEX
 	setevent EVENT_ILEX_SHRINE_CELEBI
+	setevent EVENT_TAMMY_HOLLYS_HOLT
 	opentext
 	writetext YesTimeTravelText0
 	waitbutton
