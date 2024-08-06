@@ -179,6 +179,10 @@ ENDM
 	map_const WESTERN_CAPITAL,                              20, 18 ;  9
 	map_const WHISPERS_WAY,                                   10,  20 ; 10 WOULD LOVE TO PUT THIS IN SOMEHOW to the older place. 
 	map_const TIMELESS_TAPESTRY, 11, 21 ; JOHTO_OVERCAST
+	map_const BRASS_TOWER_1F
+	map_const TIN_TOWER_OLD_1F
+	map_const TIN_TOWER_OLD_2F
+	map_const TIN_TOWER_OLD_3F
 
 	newgroup                                                     ;  8
 	map_const AZALEA_POKECENTER_1F,                        6,  4 ;  1
@@ -256,10 +260,25 @@ ENDM
 
 
 	newgroup                                                     ; 13
+	map_const CATTLE_CULL
+	map_const TRADERS_LANDING
+	map_const LANDING_STOCKROOM
+	map_const LANDING_DORMS
+	map_const LANDING_HOUSE_1
+	map_const LANDING_HOUSE_2
+	map_const LANDING_TAVERN
+	map_const LANDING_BARBEAU
 
 
 	newgroup                                                     ; 14
-
+	map_const CIANWOOD_COVE
+	map_const PHANTOM_FJORD
+	map_const SHELTERED_SHORES
+	map_const RUSALKA_RUINS
+	map_const SEAFLUX_NEXUS
+	map_const LANDING_DOCKS
+	map_const ARDUOUS_ANCHORAGE
+	
 
 	newgroup                                                     ; 15
 	map_const TIN_TOWER_ROOF,                              7,  9 ; 11
@@ -268,12 +287,40 @@ ENDM
 	map_const BELLCHIME_TRAIL,                            12,  7 ; 10
 
 	newgroup                                                     ; 17
-
+	map_const TRANQUIL_TARN
+	map_const SINJOH_CROSSROADS
+	map_const SINJOH_DORMS
+	map_const SINJOH_ELDERS_HOUSE
+	map_const SINJOH_STOCKROOM
+	map_const GROTTOED_GLACIER_1F
+	map_const GROTTOED_GLACIER_B1F
+	map_const GROTTOED_GLACIER_B2F
+	map_const WESTERN_GLACIER_1F
+	map_const WESTERN_GLACIER_B1F
+	map_const WESTERN_GLACIER_B2F
 
 	newgroup                                                     ; 18
+	map_const EMPIRES_EXTENT
+	map_const EMPIRES_EXTENT_CAVERN
+	map_const DRAGONS_DEN
+	map_const EERIE_HAMLET
+	map_const EERIE_HAMLET_DORMS
+	map_const EERIE_HAMLET_STOCKROOM
+	map_const REBELS_REDOUBT_1F
+	map_const REBELS_REDOUBT_B1F
+	map_const REBELS_REDOUBT_B2F
+	map_const REBELS_REDOUBT_B3F
+	
 
 
 	newgroup                                                     ; 19
+	map_const SULFUR_STY
+	map_const SULFUR_STY_HOUSE_1
+	map_const SULFUR_STY_HOUSE_2
+	map_const CLASTS_CRADLE_3F
+	map_const CLASTS_CRADLE_2F
+	map_const CLASTS_CRADLE_1F
+	map_const CLASTS_CRADLE_B1F
 
 
 	newgroup                                                     ; 20
@@ -291,10 +338,10 @@ ENDM
 	map_const CIANWOOD_CITY,                              15, 27 ;  3
 	map_const MANIAS_HOUSE,                                4,  4 ;  4
 	map_const CIANWOOD_GYM,                                5,  9 ;  5
-	map_const CIANWOOD_POKECENTER_1F,                      6,  4 ;  6
-	map_const CIANWOOD_PHARMACY,                           4,  4 ;  7
-	map_const CIANWOOD_CITY_PHOTO_STUDIO,                  4,  4 ;  8
-	map_const CIANWOOD_LUGIA_SPEECH_HOUSE,                 4,  4 ;  9
+;	map_const CIANWOOD_POKECENTER_1F,                      6,  4 ;  6
+;	map_const CIANWOOD_PHARMACY,                           4,  4 ;  7
+;	map_const CIANWOOD_CITY_PHOTO_STUDIO,                  4,  4 ;  8
+;	map_const CIANWOOD_LUGIA_SPEECH_HOUSE,                 4,  4 ;  9
 	map_const MOVE_MANIACS_HOUSE,                          4,  4 ; 10
 
 
