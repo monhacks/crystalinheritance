@@ -52,7 +52,7 @@ ENDM
 	map_const ROUTE_42_ECRUTEAK_GATE,                      5,  4 ;  4
 	map_const ROUTE_42,                                   30,  9 ;  5
 	map_const MAHOGANY_TOWN,                              10,  9 ;  7
-;	map_const ENTEIS_CAVERN,                              11, 10 ;  8 CAVE
+	map_const ENTEIS_CAVERN,                              11, 10 ;  8 CAVE
 
 	newgroup                                                     ;  3
 	map_const SPROUT_TOWER_1F,                             8,  8 ;  1
@@ -133,6 +133,8 @@ ENDM
 	map_const VALERIES_HOUSE,                              4,  4 ; 14
 	map_const ECRUTEAK_CHERISH_BALL_HOUSE,                 4,  4 ; 15
 	map_const ECRUTEAK_DESTINY_KNOT_HOUSE,                 4,  4 ; 16
+	map_const DANCE_THEATRE_2F
+	map_const DANCE_THEATRE_3F
 
 	newgroup                                                     ;  5 anarres town and surrounding
 	map_const HOLLYS_HOLT, 								  17, 24 ;  1 forest
@@ -148,30 +150,35 @@ ENDM
 
 
 	newgroup                                                     ;  6 ;gauldenrod and surrounding
-;	map_const CALM_COAST,                                   10, 27 ;  1
-;	map_const SERENE_SPRINGS,                                   12, 18 ;  3
-;	map_const GAULDENROD,                             		22, 18 ;  6
-;	map_const GAULDENROD_DORMS,                              10,  9 ;  7
-;	map_const GAULDENROD_STOCKROOM,                              10,  9 ;  7
-;	map_const GAULDENROD_SERENE_SPRINGS_GATE,                     5,  4 ; 28
-;	map_const CALM_COAST_COTTAGE,                                     4,  4 ; 29
+	map_const CALM_COAST,                                   10, 27 ;  1
+	map_const SERENE_SPRINGS,                               12, 18 ;  3
+	map_const GAULDENROD,                             		22, 18 ;  6
+	map_const GAULDENROD_DORMS,                             10,  9 ;  7
+	map_const GAULDENROD_STOCKROOM,                         10,  9 ;  7
+	map_const GAULDENROD_GUILD
+	map_const GAULDENROD_HOUSE
+	map_const GAULDENROD_UNDERGROUND
+	map_const GAULDENROD_SERENE_SPRINGS_GATE,                5,  4 ; 28
+	map_const CALM_COAST_COTTAGE,                            4,  4 ; 29
+	map_const GAULDENROD_TOWER_1F, 						     6,  6
+	map_const GAULDENROD_TOWER_2F, 						     6,  6 
+	map_const GAULDENROD_TOWER_3F, 						     6,  6
+	map_const GAULDENROD_TOWER_4F, 						     6,  6
+	map_const STADIUM_GROUNDS, 
+	map_const STADIUM_UNDERGROUND, 
+	map_const STADIUM_BOX, 
 
 
-	newgroup                                                     ;  7
-;	map_const EMPERORS_GARDEN, 
-;	map_const WESTER_CAPITAL_DORMS,                      6,  4 ;  3
-;	map_const WESTER_CAPITAL_DANCE_THEATRE,                               6,  7 ;  5
-;	map_const WESTER_CAPITAL_STOCKROOM,                               6,  4 ;  6
-;	map_const WESTER_CAPITAL_CEMETERY,                                5,  9 ;  7
-;	map_const ECRUTEAK_ITEMFINDER_HOUSE,                   4,  4 ;  8
-;	map_const WESTER_CAPITAL,                              20, 18 ;  9
-;	map_const ROUTE_36,                                   32,  9 ; 10 WOULD LOVE TO PUT THIS IN SOMEHOW to the older place. 
-;	map_const ROUTE_36_RUINS_OF_ALPH_GATE,                 5,  4 ; 11
-;	map_const ROUTE_36_VIOLET_GATE,                        5,  4 ; 12
-;	map_const ROUTE_37,                                   10, 10 ; 13
-;	map_const VALERIES_HOUSE,                              4,  4 ; 14
-;	map_const ECRUTEAK_CHERISH_BALL_HOUSE,                 4,  4 ; 15
-;	map_const ECRUTEAK_DESTINY_KNOT_HOUSE,                 4,  4 ; 16
+	newgroup                                                 
+	map_const EMPERORS_GARDEN, 
+	map_const WESTER_CAPITAL_DORMS,                      6,  4 ;  3
+	map_const WESTER_CAPITAL_DANCE_THEATRE,                               6,  7 ;  5
+	map_const WESTER_CAPITAL_STOCKROOM,                               6,  4 ;  6
+	map_const WESTER_CAPITAL_CEMETERY,                                5,  9 ;  7
+	map_const ECRUTEAK_ITEMFINDER_HOUSE,                   4,  4 ;  8
+	map_const WESTERN_CAPITAL,                              20, 18 ;  9
+	map_const WHISPERS_WAY,                                   10,  20 ; 10 WOULD LOVE TO PUT THIS IN SOMEHOW to the older place. 
+	map_const TIMELESS_TAPESTRY, 11, 21 ; JOHTO_OVERCAST
 
 	newgroup                                                     ;  8
 	map_const AZALEA_POKECENTER_1F,                        6,  4 ;  1
@@ -239,12 +246,13 @@ ENDM
 
 
 	newgroup                                                     ; 12
-;	map_const ROUTE_KAJO								  30, 20 ; JOHTO MODERN
-;	map_const KAJO_ACQUIFER                               12,  9 ; 2 CAVE 
-;	map_const MAGNET_TRAIN_TUNNEL                          8,  3 ; MAGNET TRAIN
-;	map_const FIRST_CLASS_CABIN							   6,  4 ; 4 HOTEL
-;	map_const SECOND_CLASS_CABIN						   6,  3 ; 4 GAME CORNER
-;	map_const KAJO_CABIN                                   4,  4 ; SHARE ONE OF THE HOUSE DATAS
+	map_const GOLDENROD_UNDERGROUND_B2F
+	map_const ROUTE_KAJO								  30, 20 ; JOHTO MODERN
+	map_const KAJO_ACQUIFER                               12,  9 ; 2 CAVE 
+	map_const MAGNET_TRAIN_TUNNEL                          8,  3 ; MAGNET TRAIN
+	map_const FIRST_CLASS_CABIN							   6,  4 ; 4 HOTEL
+	map_const SECOND_CLASS_CABIN						   6,  3 ; 4 GAME CORNER
+	map_const KAJO_CABIN                                   4,  4 ; SHARE ONE OF THE HOUSE DATAS?
 
 
 	newgroup                                                     ; 13
