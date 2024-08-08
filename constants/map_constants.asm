@@ -152,21 +152,23 @@ ENDM
 	newgroup                                                     ;  6 ;gauldenrod and surrounding
 	map_const CALM_COAST,                                   10, 27 ;  1
 	map_const SERENE_SPRINGS,                               12, 18 ;  3
-	map_const GAULDENROD,                             		22, 18 ;  6
-	map_const GAULDENROD_DORMS,                             10,  9 ;  7
-	map_const GAULDENROD_STOCKROOM,                         10,  9 ;  7
-	map_const GAULDENROD_GUILD
-	map_const GAULDENROD_HOUSE
-	map_const GAULDENROD_UNDERGROUND
-	map_const GAULDENROD_SERENE_SPRINGS_GATE,                5,  4 ; 28
-	map_const CALM_COAST_COTTAGE,                            4,  4 ; 29
-	map_const GAULDENROD_TOWER_1F, 						     6,  6
-	map_const GAULDENROD_TOWER_2F, 						     6,  6 
-	map_const GAULDENROD_TOWER_3F, 						     6,  6
-	map_const GAULDENROD_TOWER_4F, 						     6,  6
-	map_const STADIUM_GROUNDS, 
-	map_const STADIUM_UNDERGROUND, 
-	map_const STADIUM_BOX, 
+	map_const GAULDENROD,                              		22, 18 ;  6
+	map_const GAULDENROD_DORMS,                               9, 4 ;  7 johto house
+	map_const GAULDENROD_STOCKROOM,                           5, 4 ;  7 traditional house
+	map_const GAULDENROD_GUILD,                               5, 4 ; traditional house
+	map_const GAULDENROD_HOUSE,                               4, 4 ; traditional house
+	map_const GAULDENROD_UNDERGROUND_SOUTH,                   4, 4 ; POKEMON MANSION
+	map_const GAULDENROD_UNDERGROUND_NORTH,                   4, 4 ; POKEMON MANSION
+	map_const GAULDENROD_UNDERGROUND,                         3, 18 ; POKEMON MANSION
+	map_const GAULDENROD_SERENE_SPRINGS_GATE,                 5, 4 ; 28
+	map_const CALM_COAST_COTTAGE,                             4, 4 ; 29
+	map_const GAULDENROD_TOWER_1F, 						      6, 6 ; sprout tower
+	map_const GAULDENROD_TOWER_2F, 					 	      6, 6 ; sprout tower
+	map_const GAULDENROD_TOWER_3F, 						      6, 6 ; sprout tower
+	map_const GAULDENROD_TOWER_4F, 					 	      6, 6 ; sprout tower
+	map_const STADIUM_GROUNDS,                               27, 21 ; JOHTO traditional
+	map_const STADIUM_UNDERGROUND,                            6, 9 ; cave
+	map_const STADIUM_BOX,                                    6, 6 ; traditional HOUSE
 
 
 	newgroup                                                 
