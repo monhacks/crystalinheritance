@@ -174,7 +174,7 @@ Scientist_TakeThisUnown:
 	
 	para "We have dozens"
 	line "of them at the"
-	cont "reseach center."
+	cont "research center."
 	done
 
 

@@ -38,7 +38,7 @@ ProfOaksAide1Script:
 .HereYouGo
 	writetext ProfOaksAide1HereYouGoText
 	waitbutton
-	verbosegiveitem EXP_SHARE
+	giveitem EXP_SHARE
 	iffalse .NoRoom
 	writetext ProfOaksAide1NestBallText
 	playsound SFX_ITEM

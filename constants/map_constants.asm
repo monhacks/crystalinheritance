@@ -133,8 +133,7 @@ ENDM
 	map_const VALERIES_HOUSE,                              4,  4 ; 14
 	map_const ECRUTEAK_CHERISH_BALL_HOUSE,                 4,  4 ; 15
 	map_const ECRUTEAK_DESTINY_KNOT_HOUSE,                 4,  4 ; 16
-	map_const DANCE_THEATRE_2F
-	map_const DANCE_THEATRE_3F
+
 
 	newgroup                                                     ;  5 anarres town and surrounding
 	map_const HOLLYS_HOLT, 								  17, 24 ;  1 forest
@@ -172,19 +171,26 @@ ENDM
 
 
 	newgroup                                                 
-	map_const EMPERORS_GARDEN, 
-	map_const WESTER_CAPITAL_DORMS,                      6,  4 ;  3
-	map_const WESTER_CAPITAL_DANCE_THEATRE,                               6,  7 ;  5
-	map_const WESTER_CAPITAL_STOCKROOM,                               6,  4 ;  6
-	map_const WESTER_CAPITAL_CEMETERY,                                5,  9 ;  7
-	map_const ECRUTEAK_ITEMFINDER_HOUSE,                   4,  4 ;  8
-	map_const WESTERN_CAPITAL,                              20, 18 ;  9
-	map_const WHISPERS_WAY,                                   10,  20 ; 10 WOULD LOVE TO PUT THIS IN SOMEHOW to the older place. 
-	map_const TIMELESS_TAPESTRY, 11, 21 ; JOHTO_OVERCAST
-	map_const BRASS_TOWER_1F
-	map_const TIN_TOWER_OLD_1F
-	map_const TIN_TOWER_OLD_2F
-	map_const TIN_TOWER_OLD_3F
+	map_const EMPERORS_GARDEN,                               20, 20 ; johto traditional
+	map_const WESTERN_CAPITAL_DORMS,                           9,  4 ; johto house c.f. gauldenron
+	map_const WESTERN_CAPITAL_DANCE_THEATRE,                   6,  7 ;  cf dance theatre
+	map_const WESTERN_CAPITAL_STOCKROOM,                       5,  4 ;  cf gauldenrod stockroom
+	map_const WESTERN_CAPITAL_CEMETERY,                        5,  9 ;  sprout tower
+	map_const WESTERN_CAPITAL,                                20, 18 ;  9 johto TRADERS_LANDING
+	map_const WHISPERS_WAY,                                   10,  20 ; 10 
+	map_const TIMELESS_TAPESTRY,                              11, 21 ; JOHTO_OVERCAST
+	map_const BRASS_TOWER_B1F,                                 6,  7 ; sprout tower
+	map_const BRASS_TOWER_1F,                                  6,  6 ; sprout tower
+	map_const BRASS_TOWER_2F,                                  6,  6 ; sprout tower
+	map_const BRASS_TOWER_3F,                                  6,  6 ; sprout tower
+	map_const BRASS_TOWER_4F,                                  6,  6 ; sprout tower	
+	map_const BRASS_TOWER_ROOF,                                9,  7 ; sprout tower	
+	map_const BRASS_TOWER_2F_WARP,                             5,  4 ; TRAD HOUSE
+	map_const BRASS_TOWER_3F_WARP,                             5,  5 ; PORT
+	map_const BRASS_TOWER_4F_WARP,                             5,  5 ; LAB
+	map_const TIN_TOWER_OLD_1F,                                8,  8 ; sprout tower
+	map_const TIN_TOWER_OLD_2F,                                8,  8 ; sprout tower
+	map_const TIN_TOWER_OLD_3F,                                8,  8 ; sprout tower
 
 	newgroup                                                     ;  8
 	map_const AZALEA_POKECENTER_1F,                        6,  4 ;  1

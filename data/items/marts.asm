@@ -3,7 +3,7 @@ Marts:
 	dw CherrygroveMart
 	dw CherrygroveMartAfterDex
 	dw VioletMart
-	dw AzaleaMart
+	dw AzaleaMartAzaleaMart
 	dw Goldenrod2FMart1
 	dw Goldenrod2FMart2
 	dw Goldenrod2FMart2Eevee
@@ -274,17 +274,15 @@ IndigoPlateauMart:
 	db -1
 
 AnarresMart:
-	db 11 ; # items
+	db 9 ; # items
 	db RARE_CANDY
 	db REPEL
 	db CHERI_BERRY
 	db CHESTO_BERRY
 	db PECHA_BERRY
-	db ENERGYPOWDER
 	db HEAL_POWDER
 	db REVIVAL_HERB
 	db ORAN_BERRY 
-	db LUMINOUSMOSS
 	db WHITE_HERB
 	db -1
 
