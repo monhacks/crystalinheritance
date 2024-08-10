@@ -146,6 +146,7 @@ ENDM
 	map_const ANARRES_TOWER_3F,                            6,  6 ;  8 sprout tower
 	map_const ANARRES_CHARCOAL_KILN,                       5,  4 ;  9 shares map with charcoal kiln
 	map_const ANARRES_HOUSE,  	                           4,  4 ;  10 traditional house
+	map_const ANARRES_HOLT_GATE,                           4,  4 ; sprout tower 
 
 
 	newgroup                                                     ;  6 ;gauldenrod and surrounding
@@ -159,8 +160,8 @@ ENDM
 	map_const GAULDENROD_UNDERGROUND_SOUTH,                   4, 4 ; POKEMON MANSION
 	map_const GAULDENROD_UNDERGROUND_NORTH,                   4, 4 ; POKEMON MANSION
 	map_const GAULDENROD_UNDERGROUND,                         3, 18 ; POKEMON MANSION
-	map_const GAULDENROD_SERENE_SPRINGS_GATE,                 5, 4 ; 28
-	map_const CALM_COAST_COTTAGE,                             4, 4 ; 29
+	map_const GAULDENROD_SERENE_SPRINGS_GATE,                 4, 4 ; sprout tower
+	map_const CALM_COAST_COTTAGE,                             4, 4 ; 29 johto house
 	map_const GAULDENROD_TOWER_1F, 						      6, 6 ; sprout tower
 	map_const GAULDENROD_TOWER_2F, 					 	      6, 6 ; sprout tower
 	map_const GAULDENROD_TOWER_3F, 						      6, 6 ; sprout tower
@@ -200,7 +201,7 @@ ENDM
 	map_const AZALEA_GYM,                                  5,  8 ;  5
 	map_const ROUTE_33,                                   10,  9 ;  6
 	map_const AZALEA_TOWN,                                20,  9 ;  7
-	map_const TINDER_GARDEN,                                7,  9 ;  8 ADDED
+	map_const TINDER_GARDEN,                               7,  9 ;  8 ADDED
 
 	newgroup                                                     ;  9
 	map_const LAKE_OF_RAGE_HIDDEN_POWER_HOUSE,             4,  4 ;  1
@@ -258,34 +259,39 @@ ENDM
 
 
 	newgroup                                                     ; 12
-	map_const GOLDENROD_UNDERGROUND_B2F
-	map_const ROUTE_KAJO								  30, 20 ; JOHTO MODERN
-	map_const KAJO_ACQUIFER                               12,  9 ; 2 CAVE 
-	map_const MAGNET_TRAIN_TUNNEL                          8,  3 ; MAGNET TRAIN
-	map_const FIRST_CLASS_CABIN							   6,  4 ; 4 HOTEL
-	map_const SECOND_CLASS_CABIN						   6,  3 ; 4 GAME CORNER
-	map_const KAJO_CABIN                                   4,  4 ; SHARE ONE OF THE HOUSE DATAS?
+	map_const ROUTE_KAJO,								  30, 20 ; JOHTO MODERN
+	map_const KAJO_ACQUIFER,                              12,  9 ; 2 CAVE 
+	map_const MAGNET_TRAIN_TUNNEL,                         8,  3 ; MAGNET TRAIN
+	map_const FIRST_CLASS_CABIN,						   6,  4 ; 4 HOTEL
+	map_const SECOND_CLASS_CABIN,						   6,  3 ; 4 GAME CORNER
+	map_const KAJO_CABIN ,                                 4,  4 ; SHARE ONE OF THE HOUSE DATAS?
 
 
 	newgroup                                                     ; 13
-	map_const CATTLE_CULL
-	map_const TRADERS_LANDING
-	map_const LANDING_STOCKROOM
-	map_const LANDING_DORMS
-	map_const LANDING_HOUSE_1
-	map_const LANDING_HOUSE_2
-	map_const LANDING_TAVERN
-	map_const LANDING_BARBEAU
+	map_const CAPITAL_CULL_GATE,                           4, 4, ; SPROUT TOWER
+	map_const CATTLE_CULL_38,                             20, 9 ; shamouti island
+	map_const CATTLE_CULL_39,                             10, 20 ; shamouti                    
+	map_const TRADERS_LANDING,                            23, 16 ; shamouti
+	map_const LANDING_STOCKROOM,                           5, 4 ; cf gauldenrod stock, trad house
+	map_const LANDING_DORMS,                               9, 4 ; cd gauldenrod dorms, 7 johto house
+	map_const LANDING_HOUSE_1,                             4, 4 ; traditional house
+	map_const LANDING_HOUSE_2,                             4, 4 ; traditional house
+	map_const LANDING_TAVERN,                              5, 4 ; johto house
+	map_const LANDING_BARBEAU,                             4, 5 ; lighthouse
 
 
 	newgroup                                                     ; 14
-	map_const CIANWOOD_COVE
-	map_const PHANTOM_FJORD
-	map_const SHELTERED_SHORES
-	map_const RUSALKA_RUINS
-	map_const SEAFLUX_NEXUS
-	map_const LANDING_DOCKS
-	map_const ARDUOUS_ANCHORAGE
+	map_const CIANWOOD_COVE,                               15, 27 ; johto overcast
+	map_const PHANTOM_FJORD,                                6,  6; cave
+	map_const SHELTERED_SHORES,                            27, 27 ; johto overcast
+	map_const RUSALKA_RUINS_1F,                            16,  9 ; LIGHTHOUSE
+	map_const RUSALKA_RUINS_B1F,                           14,  7 ; LIGHTHOUSE
+	map_const RUSALKA_RUINS_LIT_CABINS,                    13,  8 ; LIGHTHOUSE
+	map_const RUSALKA_RUINS_DARK_CABINS,                    5,  8 ; LIGHTHOUSE
+	map_const RUSALKA_RUINS_CAPTAIN,                        5,  6 ; lighthouse
+	map_const SEAFLUX_NEXUS,                               20, 14 ; cave
+	map_const LANDING_DOCKS,                              10, 10 ; port
+	map_const ARDUOUS_ANCHORAGE,                          20, 17 ; johto overcast
 	
 
 	newgroup                                                     ; 15
@@ -295,25 +301,26 @@ ENDM
 	map_const BELLCHIME_TRAIL,                            12,  7 ; 10
 
 	newgroup                                                     ; 17
-	map_const TRANQUIL_TARN
-	map_const SINJOH_CROSSROADS
-	map_const SINJOH_DORMS
-	map_const SINJOH_ELDERS_HOUSE
-	map_const SINJOH_STOCKROOM
-	map_const GROTTOED_GLACIER_1F
-	map_const GROTTOED_GLACIER_B1F
-	map_const GROTTOED_GLACIER_B2F
-	map_const WESTERN_GLACIER_1F
-	map_const WESTERN_GLACIER_B1F
-	map_const WESTERN_GLACIER_B2F
+	map_const TRANQUIL_TARN,                                 20, 18 ; johto overcast
+	map_const SINJOH_CROSSROADS,                             21, 12 ; johto overcast
+	map_const SINJOH_DORMS,                                   9, 4 ; cd gauldenrod dorms, 7 johto house
+	map_const SINJOH_ELDERS_HOUSE,                            4, 5 ; lighthouse
+	map_const SINJOH_STOCKROOM,                               5, 4 ; cf gauldenrod stock, trad house
+	map_const GROTTOED_GLACIER_1F,                            8, 8 ; ice path
+	map_const GROTTOED_GLACIER_B1F,                          12, 12; ice path
+	map_const GROTTOED_GLACIER_B2F,                          12, 9 ; ice path
+	map_const WESTERN_GLACIER_1F,                             7, 10 ; ice path
+	map_const WESTERN_GLACIER_B1F,                           16, 16 ; ice path
+	map_const WESTERN_GLACIER_B2F,                            6,  6 ; ice path
 
 	newgroup                                                     ; 18
-	map_const EMPIRES_EXTENT
-	map_const EMPIRES_EXTENT_CAVERN
-	map_const DRAGONS_DEN
-	map_const EERIE_HAMLET
-	map_const EERIE_HAMLET_DORMS
-	map_const EERIE_HAMLET_STOCKROOM
+	map_const EMPIRES_EXTENT_EERIE_HAMLET_GATE,               4,  4 ; sprout           
+	map_const EMPIRES_EXTENT,                                 9, 27 ; johto overcast
+	map_const EMPIRES_EXTENT_CAVERN,                          5, 5 ; ruins of alph
+	map_const DRAGONS_DEN,                                   13, 11 ; johto traditional
+	map_const EERIE_HAMLET,                                  10,  9; johto traditional
+	map_const EERIE_HAMLET_DORMS,                             9, 4 ; cd gauldenrod dorms, 7 johto house, 
+	map_const EERIE_HAMLET_STOCKROOM                          5, 4 ; cf gauldenrod stock, trad house, takes place of gym
 	map_const REBELS_REDOUBT_1F
 	map_const REBELS_REDOUBT_B1F
 	map_const REBELS_REDOUBT_B2F
@@ -323,8 +330,8 @@ ENDM
 
 	newgroup                                                     ; 19
 	map_const SULFUR_STY
-	map_const SULFUR_STY_HOUSE_1
-	map_const SULFUR_STY_HOUSE_2
+	map_const SULFUR_STY_HOUSE_1,                            4, 4 ; traditional house
+	map_const SULFUR_STY_HOUSE_2,                            4, 4 ; traditional house
 	map_const CLASTS_CRADLE_3F
 	map_const CLASTS_CRADLE_2F
 	map_const CLASTS_CRADLE_1F
