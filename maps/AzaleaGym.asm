@@ -83,12 +83,6 @@ AzaleaGymBugsyScript:
 		para "will obey you,"
 		line "even traded ones."
 
-		para "#mon that know"
-		line "Cut will be able"
-
-		para "to use it outside"
-		line "of battle too."
-
 		para "Here, I also want"
 		line "you to have this."
 		done

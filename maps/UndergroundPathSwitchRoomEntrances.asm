@@ -5,15 +5,15 @@ UndergroundPathSwitchRoomEntrances_MapScriptHeader:
 
 
 	def_warp_events
-	warp_event 23,  3, WAREHOUSE_ENTRANCE, 6
-	warp_event 22, 10, UNDERGROUND_WAREHOUSE, 1
-	warp_event 23, 10, UNDERGROUND_WAREHOUSE, 2
-	warp_event  5, 23, WAREHOUSE_ENTRANCE, 2
-	warp_event  4, 27, GOLDENROD_CITY, 14
-	warp_event  5, 27, GOLDENROD_CITY, 14
-	warp_event 21, 23, WAREHOUSE_ENTRANCE, 1
-	warp_event 20, 27, GOLDENROD_CITY, 13
-	warp_event 21, 27, GOLDENROD_CITY, 13
+	warp_event 23, -6, WAREHOUSE_ENTRANCE, 6
+	warp_event 22, -6, UNDERGROUND_WAREHOUSE, 1
+	warp_event 23, -6, UNDERGROUND_WAREHOUSE, 2
+	warp_event  5,  5, WAREHOUSE_ENTRANCE, 2
+	warp_event  4,  9, GOLDENROD_CITY, 14
+	warp_event  5,  9, GOLDENROD_CITY, 14
+	warp_event 21,  5, WAREHOUSE_ENTRANCE, 1
+	warp_event 20,  9, GOLDENROD_CITY, 13
+	warp_event 21,  9, GOLDENROD_CITY, 13
 
 	def_coord_events
 

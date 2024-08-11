@@ -251,6 +251,7 @@ IlexHealerScript:
 	opentext
 	writetext WantToHeal
 	waitbutton
+	playmusic MUSIC_HEAL
 	special HealParty
 	special SaveMusic	
 	writetext IlexHealedPokemon

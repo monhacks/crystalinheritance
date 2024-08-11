@@ -63,6 +63,10 @@ HollysHoltScript1:
 	turnobject HOLLYS_HOLT_KURT, LEFT
 	turnobject HOLLYS_HOLT_HOLLIS, RIGHT
 	turnobject PLAYER, LEFT
+	refreshscreen
+	trainerpic HOLLIS
+	waitbutton
+	closepokepic
 	opentext
 	writetext HH_HollisHello
 	waitbutton
@@ -112,8 +116,8 @@ HH_HollisHello:
 	line "Hollis. I am"
 	cont "the elder here."
 	
-	para "We wanted to"
-	line "give you a better"
+	para "We would give"
+	line "you a better"
 	cont "welcome, but"
 	cont "there are so"
 	cont "many Pineco on"

@@ -51,7 +51,7 @@ ENDM
 	map_const MAHOGANY_POKECENTER_1F,                      6,  4 ;  3
 	map_const ROUTE_42_ECRUTEAK_GATE,                      5,  4 ;  4
 	map_const ROUTE_42,                                   30,  9 ;  5
-	map_const MAHOGANY_TOWN,                              10,  9 ;  7
+	map_const MAHOGANY_TOWN,                              12,  9 ;  7
 	map_const ENTEIS_CAVERN,                              11, 10 ;  8 CAVE
 
 	newgroup                                                     ;  3
@@ -99,7 +99,7 @@ ENDM
 	map_const TEAM_ROCKET_BASE_B3F,                       15,  9 ; 42
 	map_const ILEX_FOREST,                                17, 24 ; 43
 	map_const WAREHOUSE_ENTRANCE,                          9, 18 ; 44
-	map_const UNDERGROUND_PATH_SWITCH_ROOM_ENTRANCES,     13, 14 ; 45
+	map_const UNDERGROUND_PATH_SWITCH_ROOM_ENTRANCES,     13,  5 ; 45 EDITED
 	map_const GOLDENROD_DEPT_STORE_B1F,                   10,  9 ; 46
 	map_const UNDERGROUND_WAREHOUSE,                      10,  9 ; 47
 	map_const MOUNT_MORTAR_1F_OUTSIDE,                    20, 18 ; 48
@@ -264,7 +264,8 @@ ENDM
 	map_const MAGNET_TRAIN_TUNNEL,                         8,  3 ; MAGNET TRAIN
 	map_const FIRST_CLASS_CABIN,						   6,  4 ; 4 HOTEL
 	map_const SECOND_CLASS_CABIN,						   6,  3 ; 4 GAME CORNER
-	map_const KAJO_CABIN ,                                 4,  4 ; SHARE ONE OF THE HOUSE DATAS?
+	map_const KAJO_CABIN,                                  4,  4 ; SHARE ONE OF THE HOUSE DATAS?
+	map_const UNDERGROUND_RADIO_TOWER,                    20, 5 ; TUNNEL
 
 
 	newgroup                                                     ; 13
@@ -314,28 +315,28 @@ ENDM
 	map_const WESTERN_GLACIER_B2F,                            6,  6 ; ice path
 
 	newgroup                                                     ; 18
-	map_const EMPIRES_EXTENT_EERIE_HAMLET_GATE,               4,  4 ; sprout           
+	map_const EMPIRES_EXTENT_EERIE_HAMLET_GATE,               4, 4 ; sprout           
 	map_const EMPIRES_EXTENT,                                 9, 27 ; johto overcast
 	map_const EMPIRES_EXTENT_CAVERN,                          5, 5 ; ruins of alph
 	map_const DRAGONS_DEN,                                   13, 11 ; johto traditional
-	map_const EERIE_HAMLET,                                  10,  9; johto traditional
+	map_const EERIE_HAMLET,                                  10, 9; johto traditional
 	map_const EERIE_HAMLET_DORMS,                             9, 4 ; cd gauldenrod dorms, 7 johto house, 
-	map_const EERIE_HAMLET_STOCKROOM                          5, 4 ; cf gauldenrod stock, trad house, takes place of gym
-	map_const REBELS_REDOUBT_1F
-	map_const REBELS_REDOUBT_B1F
-	map_const REBELS_REDOUBT_B2F
-	map_const REBELS_REDOUBT_B3F
+	map_const EERIE_HAMLET_STOCKROOM,                         5, 4 ; cf gauldenrod stock, trad house, takes place of gym
+	map_const REBELS_REDOUBT_1F,                              4,  4 ; take same as mahogany mart
+	map_const REBELS_REDOUBT_B1F,                             15, 9 ; sproute tower
+	map_const REBELS_REDOUBT_B2F,                             15, 9 ; sproute tower
+	map_const REBELS_REDOUBT_B3F,                             15, 9 ; sproute tower
 	
 
 
-	newgroup                                                     ; 19
-	map_const SULFUR_STY
-	map_const SULFUR_STY_HOUSE_1,                            4, 4 ; traditional house
-	map_const SULFUR_STY_HOUSE_2,                            4, 4 ; traditional house
-	map_const CLASTS_CRADLE_3F
-	map_const CLASTS_CRADLE_2F
-	map_const CLASTS_CRADLE_1F
-	map_const CLASTS_CRADLE_B1F
+	newgroup                                                       ; 19
+	map_const SULFUR_STY,                                   30, 17 ; johto traditional
+	map_const SULFUR_STY_HOUSE_1,                            4, 4  ; traditional house
+	map_const SULFUR_STY_HOUSE_2,                            4, 4  ; traditional house
+	map_const CLASTS_CRADLE_3F,                              5, 5  ; cave
+	map_const CLASTS_CRADLE_2F,                             10, 7  ; cave
+	map_const CLASTS_CRADLE_1F,                             20, 25 ; cave
+	map_const CLASTS_CRADLE_B1F,                            15, 15 ; cave
 
 
 	newgroup                                                     ; 20
@@ -345,6 +346,11 @@ ENDM
 	map_const ECRUTEAK_SHRINE_INSIDE,                      6,  6 ;  9
 
 	newgroup                                                     ; 21
+	map_const SLOWPOKE_DREAMS, 5, 5 ; home_decor_store
+	map_const SLOWPOKE_DREAMS_BACKGROUND_N, 9, 3 ; HOME_DECOR_STORE
+	map_const SLOWPOKE_DREAMS_BACKGROUND_S, 9, 3 ; HOME_DECOR_STORE
+	map_const SLOWPOKE_DREAMS_BACKGROUND_E, 3, 5 ; HOME_DECOR_STORE
+	map_const SLOWPOKE_DREAMS_BACKGROUND_W, 3, 5 ; HOME_DECOR_STORE
 
 
 	newgroup                                                     ; 22

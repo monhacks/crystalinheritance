@@ -78,6 +78,7 @@ RuinsOfAlphTeacherScript:
 	opentext
 	writetext WantToHeal2
 	promptbutton
+	playmusic MUSIC_HEAL
 	special HealParty
 	special SaveMusic	
 	writetext AlphHealedPokemon
