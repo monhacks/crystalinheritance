@@ -11,15 +11,15 @@ SpawnPoints:
 	spawn KURTS_HOUSE,                 7,  1 ; 
 
 	spawn ANARRES_TOWN,               17, 10 ;
-;	spawn VIRIDIAN_CITY,              23, 26
-;	spawn PEWTER_CITY,                13, 26
-;	spawn ROUTE_3,                    61,  4
-;	spawn CERULEAN_CITY,              19, 18
-;	spawn CERULEAN_CAPE,               9,  6
-;	spawn ROUTE_10_NORTH,             11, 36
-;	spawn VERMILION_CITY,              9,  6
-;	spawn LAVENDER_TOWN,               5,  8
-;	spawn SAFFRON_CITY,                9, 30
+	spawn GAULDENROD, ;             23, 26
+	spawn WESTERN_CAPITAL,                13, 26
+	spawn TRADERS_LANDING,                    61,  4
+	spawn SHELTERED_SHORES,              19, 18
+	spawn CIANWOOD_COVE,               9,  6
+	spawn TRANQUIL_TARN,             11, 36
+	spawn EERIE_HAMLET,              9,  6
+	spawn SULFUR_STY,               5,  8
+	spawn TIMELESS_TAPESTRY,                9, 30
 ;	spawn CELADON_CITY,               33, 10
 ;	spawn FUCHSIA_CITY,               19, 28
 ;	spawn CINNABAR_ISLAND,            11, 16

@@ -73,6 +73,7 @@ Landmarks:
 	landmark 144,  66, RebelsRedoubtName
 	landmark 120,  68, SulfurStyName
 	landmark 112,  56, ClastsCradleName
+	landmark  92,  92, TimelessTapestryName
 	assert_table_length SHAMOUTI_LANDMARK
 ;	landmark  76,  68, ShamoutiIslandName
 	assert_table_length NUM_LANDMARKS
@@ -145,6 +146,6 @@ EerieHamletName:       rawchar "Eerie¯Hamlet@"
 RebelsRedoubtName:     rawchar "Rebel's¯Redoubt@"
 SulfurStyName:         rawchar "Sulfur¯Sty@"
 ClastsCradleName:      rawchar "Clast's¯Cradle@"
-
+TimelessTapestryName:      rawchar "Timeless¯Tapestry@"
 
 SpecialMapName:        rawchar "?@"
