@@ -20,7 +20,7 @@ Landmarks:
 	landmark  60, 108, GoldenrodCityName
 	landmark  58, 108, RadioTowerName
 	landmark  60,  92, Route35Name
-	landmark  76, 100, RouteKaJoName ;add
+	landmark  76, 100, RouteKaJoName 
 	landmark  60,  76, NationalParkName
 	landmark  72,  76, Route36Name
 	landmark  76,  68, Route37Name

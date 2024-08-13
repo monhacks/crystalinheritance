@@ -110,7 +110,7 @@
 	tilecoll WALL, FLOOR, WALL, WALL ; 6d
 	tilecoll FLOOR, FLOOR, HOLE, HOLE ; 6e
 	tilecoll FLOOR, FLOOR, HOLE, FLOOR ; 6f
-	tilecoll FLOOR, FLOOR, FLOOR, HOLE ; 70
+	tilecoll STAIRCASE, FLOOR, FLOOR, FLOOR ; 70
 	tilecoll FLOOR, FLOOR, HOLE, HOLE ; 71
 	tilecoll FLOOR, FLOOR, HOLE, FLOOR ; 72
 	tilecoll HOLE, HOLE, HOLE, HOLE ; 73

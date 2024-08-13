@@ -338,3 +338,138 @@ ENDM
 	map_attributes AnarresCharcoalKiln, ANARRES_CHARCOAL_KILN, $0, 0
 	map_attributes AnarresHouse, ANARRES_HOUSE, $0, 0
 	
+	; new from 08-13-24
+	map_attributes CalmCoast, CALM_COAST, $5, NORTH
+	connection north, Gauldenrod, GAULDENROD, -7 ; NOT SURE IF IT WILL WORK
+	
+	map_attributes SereneSprings, SERENE_SPRINGS, $5, $5, SOUTH
+	connection south, Gauldenrod, GAULDENROD, -5
+	
+	map_attributes Gauldenrod, GAULDENROD, $5, NORTH | SOUTH
+	connection north, SereneSprings, SERENE_SPRINGS, 5
+	connection south, CalmCoast, CALM_COAST, 7
+	
+	map_attributes GauldenrodDorms, GAULDENROD_DORMS, $0, 0
+	map_attributes GauldenrodStockroom, GAULDENROD_STOCKROOM, $0, 0
+	map_attributes GauldenrodGuild, GAULDENROD_GUILD, $0, 0
+	map_attributes GauldenrodHouse, GAULDENROD_HOUSE, $0, 0
+	map_attributes GauldenrodUndergroundSouth, GAULDENROD_UNDERGROUND_SOUTH, $0, 0
+	map_attributes GauldenrodUndergroundNorth, GAULDENROD_UNDERGROUND_NORTH, $0, 0
+	map_attributes GauldenrodUnderground, GAULDENROD_UNDERGROUND, $0, 0
+	map_attributes GauldenrodSereneSpringsGate, GAULDENROD_SERENE_SPRINGS_GATE, $0, 0
+
+	map_attributes CalmCoastCottage, CALM_COAST_COTTAGE, $0, 0
+	map_attributes GauldenrodTower1F, GAULDENROD_TOWER_1F, $0, 0
+	map_attributes GauldenrodTower2F, GAULDENROD_TOWER_2F, $0, 0
+	map_attributes GauldenrodTower3F, GAULDENROD_TOWER_3F, $0, 0
+	map_attributes GauldenrodTower4F, GAULDENROD_TOWER_4F, $0, 0
+	map_attributes StadiumGrounds, STADIUM_GROUNDS, $0, 0
+	map_attributes StadiumUnderground, STADIUM_UNDERGROUND, $1D, 0 ; 
+	map_attributes StadiumBox, STADIUM_BOX, $0, 0
+
+	map_attributes RouteKajo, ROUTE_KAJO, $5, 0
+	map_attributes KajoAcquifer, KAJO_ACQUIFER, $9, 0
+	map_attributes MagnetTrainTunnel, MAGNET_TRAIN_TUNNEL, $0, 0
+	map_attributes FirstClassCabin, FIRST_CLASS_CABIN, $0, 0
+	map_attributes SecondClassCabin, SECOND_CLASS_CABIN, $0, 0
+	map_attributes KajoCabin, KAJO_CABIN, $0, 0
+	map_attributes UndergroundRadioTower, UNDERGROUND_RADIO_TOWER, $9, 0
+
+	map_attributes EmperorsGarden, EMPERORS_GARDEN, $5, 0
+	map_attributes WesternCapitalDorms, WESTERN_CAPITAL_DORMS, $0, 0
+	map_attributes WesternCapitalDanceTheatre, WESTERN_CAPITAL_DANCE_THEATRE, $0, 0
+	map_attributes WesternCapitalStockroom, WESTERN_CAPITAL_STOCKROOM, $0, 0
+	map_attributes WesternCapitalCemetery, WESTERN_CAPITAL_CEMETERY, $0, 0
+
+	map_attributes WesternCapital, WESTERN_CAPITAL, $0, 0 ; TODO
+	map_attributes WhispersWay, WHISPERS_WAY, $05, 0 ; TODO
+
+	map_attributes TimelessTapestry, TIMELESS_TAPESTRY, $5, 0 ;TODO
+
+
+	map_attributes BrassTowerB1F, BRASS_TOWER_B1F, $0, 0
+	map_attributes BrassTower1F, BRASS_TOWER_1F, $0, 0
+	map_attributes BrassTower2F, BRASS_TOWER_2F, $0, 0
+	map_attributes BrassTower3F, BRASS_TOWER_3F, $0, 0
+	map_attributes BrassTower4F, BRASS_TOWER_4F, $0, 0
+	map_attributes BrassTowerRoof, BRASS_TOWER_ROOF, $0, 0
+
+	map_attributes BrassTower2FWarp, BRASS_TOWER_2F_WARP, $0, 0
+	map_attributes BrassTower3FWarp, BRASS_TOWER_3F_WARP, $A, 0
+	map_attributes BrassTower4FWarp, BRASS_TOWER_4F_WARP, $0, 0
+
+	map_attributes TinTowerOld1F, TIN_TOWER_OLD_1F, $0, 0
+	map_attributes TinTowerOld2F, TIN_TOWER_OLD_2F, $0, 0
+	map_attributes TinTowerOld3F, TIN_TOWER_OLD_3F, $0, 0
+
+	map_attributes CapitalCullGate, CAPITAL_CULL_GATE, $0, 0
+
+	map_attributes CattleCull38, CATTLE_CULL_38, $5, 0; TODO
+	map_attributes CattleCull39, CATTLE_CULL_39, $5, 0; TODO
+	map_attributes TradersLanding, TRADERS_LANDING, $0, 0 ; TODO
+
+	map_attributes LandingStockroom, LANDING_STOCKROOM, $0, 0
+	map_attributes LandingDorms, LANDING_DORMS, $0, 0
+	map_attributes LandingHouse1, LANDING_HOUSE_1, $0, 0
+	map_attributes LandingHouse2, LANDING_HOUSE_2, $0, 0
+	map_attributes LandingTavern, LANDING_TAVERN, $0, 0
+	map_attributes LandingBarbeau, LANDING_BARBEAU, $0, 0
+
+	map_attributes ShelteredShores, SHELTERED_SHORES, $0, 0 ; TODO
+	map_attributes CianwoodCove, CIANWOOD_COVE, $0, 0 ; TODO
+	map_attributes ArduousAnchorage, ARDUOUS_ANCHORAGE, $0, 0 ;TODO
+
+	map_attributes PhantomFjord, PHANTOM_FJORD, $0, 0
+	map_attributes RusalkaRuins1F, RUSALKA_RUINS_1F, $0, 0
+	map_attributes RusalkaRuinsB1F, RUSALKA_RUINS_B1F, $0, 0
+	map_attributes RusalkaRuinsLitCabins, RUSALKA_RUINS_LIT_CABINS, $0, 0
+	map_attributes RusalkaRuinsDarkCabins, RUSALKA_RUINS_DARK_CABINS, $0, 0
+	map_attributes RusalkaRuinsCaptain, RUSALKA_RUINS_CAPTAIN, $0, 0
+	map_attributes SeafluxNexus, SEAFLUX_NEXUS, $9, 0
+	map_attributes LandingDocks, LANDING_DOCKS, $A, 0 
+
+	map_attributes SlowpokeDreams, SLOWPOKE_DREAMS, $0, 0 ; TODO
+	map_attributes SlowpokeDreamsBackgroundN, SLOWPOKE_DREAMS_BACKGROUND_N, $0, 0 ; TODO
+	map_attributes SlowpokeDreamsBackgroundS, SLOWPOKE_DREAMS_BACKGROUND_S, $0, 0 ; TODO
+	map_attributes SlowpokeDreamsBackgroundE, SLOWPOKE_DREAMS_BACKGROUND_E, $0, 0 ; TODO
+	map_attributes SlowpokeDreamsBackgroundW, SLOWPOKE_DREAMS_BACKGROUND_W, $0, 0 ; TODO
+
+	map_attributes EnteisCavern, ENTEIS_CAVERN, $9, 0
+
+	map_attributes TranquilTarn, TRANQUIL_TARN, $0, 0 ; TODO
+	map_attributes SinjohCrossroads, SINJOH_CROSSROADS, $0, 0; TODO
+	map_attributes EmpiresExtent, EMPIRES_EXTENT, $0, 0 ; todo
+
+	map_attributes SinjohDorms, SINJOH_DORMS, $0, 0
+	map_attributes SinjohEldersHouse, SINJOH_ELDERS_HOUSE, $0, 0
+	map_attributes SinjohStockroom, SINJOH_STOCKROOM, $0, 0
+
+	map_attributes GrottoedGlacier1F, GROTTOED_GLACIER_1F, $9, 0
+	map_attributes GrottoedGlacierB1F, GROTTOED_GLACIER_B1F, $9, 0
+	map_attributes GrottoedGlacierB2F, GROTTOED_GLACIER_B2F, $9, 0
+
+	map_attributes WesternGlacier1F, WESTERN_GLACIER_1F, $9, 0
+	map_attributes WesternGlacierB1F, WESTERN_GLACIER_B1F, $9, 0
+	map_attributes WesternGlacierB2F, WESTERN_GLACIER_B2F, $9, 0
+
+	map_attributes EmpiresExtentEerieHamletGate, EMPIRES_EXTENT_EERIE_HAMLET_GATE, $0, 0
+
+	map_attributes EmpiresExtentCavern, EMPIRES_EXTENT_CAVERN, $0, 0
+	map_attributes DragonsDen, DRAGONS_DEN, $0, 0
+
+	map_attributes EerieHamlet, EERIE_HAMLET, $0, 0	; TODO
+	map_attributes SulfurSty, SULFUR_STY, $0, 0 ; TODO
+
+	map_attributes EerieHamletDorms, EERIE_HAMLET_DORMS, $0, 0
+	map_attributes EerieHamletStockroom, EERIE_HAMLET_STOCKROOM, $0, 0
+	map_attributes RebelsRedoubt1F, REBELS_REDOUBT_1F, $0, 0
+	map_attributes RebelsRedoubtB1F, REBELS_REDOUBT_B1F, $0, 0
+	map_attributes RebelsRedoubtB2F, REBELS_REDOUBT_B2F, $0, 0
+	map_attributes RebelsRedoubtB3F, REBELS_REDOUBT_B3F, $0, 0
+
+	map_attributes SulfurStyHouse1, SULFUR_STY_HOUSE_1, $0, 0
+	map_attributes SulfurStyHouse2, SULFUR_STY_HOUSE_2, $0, 0
+	map_attributes ClastsCradle3F, CLASTS_CRADLE_3F, $9, 0
+	map_attributes ClastsCradle2F, CLASTS_CRADLE_2F, $9, 0
+	map_attributes ClastsCradle1F, CLASTS_CRADLE_1F, $9, 0
+	map_attributes ClastsCradleB1F, CLASTS_CRADLE_B1F, $9, 0
