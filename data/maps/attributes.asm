@@ -340,7 +340,7 @@ ENDM
 	
 	; new from 08-13-24
 	map_attributes CalmCoast, CALM_COAST, $5, NORTH
-	connection north, Gauldenrod, GAULDENROD, -7 ; NOT SURE IF IT WILL WORK
+	connection north, Gauldenrod, GAULDENROD, -7 ; NOT SURE IF IT WILL WORK, cf route above
 	
 	map_attributes SereneSprings, SERENE_SPRINGS, $5, $5, SOUTH
 	connection south, Gauldenrod, GAULDENROD, -5
@@ -381,11 +381,15 @@ ENDM
 	map_attributes WesternCapitalStockroom, WESTERN_CAPITAL_STOCKROOM, $0, 0
 	map_attributes WesternCapitalCemetery, WESTERN_CAPITAL_CEMETERY, $0, 0
 
-	map_attributes WesternCapital, WESTERN_CAPITAL, $0, 0 ; TODO
-	map_attributes WhispersWay, WHISPERS_WAY, $05, 0 ; TODO
+	map_attributes WesternCapital, WESTERN_CAPITAL, $5, SOUTH 
+	connection south, WhispersWay, WHISPERS_WAY, 7	; NEED TO CHECK todo
+	
+	map_attributes WhispersWay, WHISPERS_WAY, $5, NORTH 
+	connection north, WesternCapital, WESTERN_CAPITAL, 7	; NEED TO CHECK todo
 
-	map_attributes TimelessTapestry, TIMELESS_TAPESTRY, $5, 0 ;TODO
-
+	map_attributes TimelessTapestry, TIMELESS_TAPESTRY, $5, 0
+	
+	map_attributes WhispersTapestryGate, WHISPERS_TAPESTRY_GATE, $0, 0
 
 	map_attributes BrassTowerB1F, BRASS_TOWER_B1F, $0, 0
 	map_attributes BrassTower1F, BRASS_TOWER_1F, $0, 0
@@ -404,9 +408,15 @@ ENDM
 
 	map_attributes CapitalCullGate, CAPITAL_CULL_GATE, $0, 0
 
-	map_attributes CattleCull38, CATTLE_CULL_38, $5, 0; TODO
-	map_attributes CattleCull39, CATTLE_CULL_39, $5, 0; TODO
-	map_attributes TradersLanding, TRADERS_LANDING, $0, 0 ; TODO
+	map_attributes CattleCull38, CATTLE_CULL_38, $5, WEST; TODO
+	connection west, CattleCull39, CATTLE_CULL_39, 0
+
+	map_attributes CattleCull39, CATTLE_CULL_39, $5, SOUTH | EAST; TODO
+	connection south, TradersLanding, TRADERS_LANDING, -5
+	connection east, CattleCull38, CATTLE_CULL_38, 0
+
+	map_attributes TradersLanding, TRADERS_LANDING, $35, NORTH ; TODO
+	connection north, CattleCull39, CATTLE_CULL_39, 5
 
 	map_attributes LandingStockroom, LANDING_STOCKROOM, $0, 0
 	map_attributes LandingDorms, LANDING_DORMS, $0, 0
@@ -415,9 +425,15 @@ ENDM
 	map_attributes LandingTavern, LANDING_TAVERN, $0, 0
 	map_attributes LandingBarbeau, LANDING_BARBEAU, $0, 0
 
-	map_attributes ShelteredShores, SHELTERED_SHORES, $0, 0 ; TODO
-	map_attributes CianwoodCove, CIANWOOD_COVE, $0, 0 ; TODO
-	map_attributes ArduousAnchorage, ARDUOUS_ANCHORAGE, $0, 0 ;TODO
+	map_attributes ShelteredShores, SHELTERED_SHORES, $35, NORTH | WEST 
+	connection west, CianwoodCove, CIANWOOD_COVE, 0
+	connection north, ArduousAnchorage, ARDUOUS_ANCHORAGE, 15
+
+	map_attributes CianwoodCove, CIANWOOD_COVE, $35, EAST
+	connection east, ShelteredShores, SHELTERED_SHORES, 0
+
+	map_attributes ArduousAnchorage, ARDUOUS_ANCHORAGE, $35, SOUTH ;TODO
+	connection south, ShelteredShores, SHELTERED_SHORES, -15
 
 	map_attributes PhantomFjord, PHANTOM_FJORD, $0, 0
 	map_attributes RusalkaRuins1F, RUSALKA_RUINS_1F, $0, 0
@@ -428,7 +444,12 @@ ENDM
 	map_attributes SeafluxNexus, SEAFLUX_NEXUS, $9, 0
 	map_attributes LandingDocks, LANDING_DOCKS, $A, 0 
 
-	map_attributes SlowpokeDreams, SLOWPOKE_DREAMS, $0, 0 ; TODO
+	map_attributes SlowpokeDreams, SLOWPOKE_DREAMS, $0, NORTH | SOUTH | WEST | EAST ; TODO check the offsets 
+	connection north, SlowpokeDreamsBackgroundN, SLOWPOKE_DREAMS_BACKGROUND_N, 0
+	connection south, SlowpokeDreamsBackgroundS, SLOWPOKE_DREAMS_BACKGROUND_S, 0
+	connection west, SlowpokeDreamsBackgroundW, SLOWPOKE_DREAMS_BACKGROUND_W, 0
+	connection east, SlowpokeDreamsBackgroundE, SLOWPOKE_DREAMS_BACKGROUND_E, 0
+	
 	map_attributes SlowpokeDreamsBackgroundN, SLOWPOKE_DREAMS_BACKGROUND_N, $0, 0 ; TODO
 	map_attributes SlowpokeDreamsBackgroundS, SLOWPOKE_DREAMS_BACKGROUND_S, $0, 0 ; TODO
 	map_attributes SlowpokeDreamsBackgroundE, SLOWPOKE_DREAMS_BACKGROUND_E, $0, 0 ; TODO

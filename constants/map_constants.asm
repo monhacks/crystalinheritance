@@ -179,6 +179,7 @@ ENDM
 	map_const WESTERN_CAPITAL_CEMETERY,                        5,  9 ;  sprout tower
 	map_const WESTERN_CAPITAL,                                20, 18 ;  9 johto TRADERS_LANDING
 	map_const WHISPERS_WAY,                                   10,  20 ; 10 
+	map_const WHISPERS_TAPESTRY_GATE,                          4,   4 ; sprout tower
 	map_const TIMELESS_TAPESTRY,                              11, 21 ; JOHTO_OVERCAST
 	map_const BRASS_TOWER_B1F,                                 6,  7 ; sprout tower
 	map_const BRASS_TOWER_1F,                                  6,  6 ; sprout tower

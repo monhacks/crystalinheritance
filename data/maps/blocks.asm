@@ -71,6 +71,11 @@ VioletNicknameSpeechHouse_BlockData:
 VioletOnixTradeHouse_BlockData:
 ValeriesHouse_BlockData:
 AnarresHouse_BlockData:
+GauldenrodHouse_BlockData:
+LandingHouse1_BlockData:
+LandingHouse2_BlockData:
+SulfurStyHouse1_BlockData:
+SulfurStyHouse2_BlockData:
 	INCBIN "maps/TraditionalHouse.ablk.lz"
 
 SECTION "HiddenTreeGrotto_BlockData", ROMX
@@ -201,6 +206,7 @@ AnarresCharcoalKiln_BlockData:
 
 SECTION "KurtsHouse_BlockData", ROMX
 KurtsHouse_BlockData:
+SinjohEldersHouse_BlockData:
 	INCBIN "maps/KurtsHouse.ablk.lz"
 
 SECTION "SlowpokeWellEntrance_BlockData", ROMX
@@ -350,6 +356,7 @@ EcruteakHouse_BlockData:
 
 SECTION "DanceTheatre_BlockData", ROMX
 DanceTheatre_BlockData:
+WesternCapitalDanceTheatre_BlockData:
 	INCBIN "maps/DanceTheatre.ablk.lz"
 
 SECTION "WiseTriosRoom_BlockData", ROMX
@@ -649,4 +656,366 @@ SECTION "AnarresTower3F_BlockData", ROMX
 AnarresTower3F_BlockData:
 	INCBIN "maps/AnarresTower3F.ablk.lz"
 
-;new from 08-13-24
+;new from 08-13-24, TODO consolidate the stockrooms and dorms
+SECTION "CalmCoast_BlockData", ROMX
+CalmCoast_BlockData:
+	INCBIN "maps/CalmCoast.ablk.lz"
+
+SECTION "SereneSprings_BlockData", ROMX
+SereneSprings_BlockData:
+	INCBIN "maps/SereneSprings.ablk.lz"
+
+SECTION "Gauldenrod_BlockData", ROMX
+Gauldenrod_BlockData:
+	INCBIN "maps/Gauldenrod.ablk.lz"
+
+SECTION "GauldenrodDorms_BlockData", ROMX
+GauldenrodDorms_BlockData:
+WesternCapitalDorms_BlockData:
+LandingDorms_BlockData:
+SinjohDorms_BlockData:
+EerieHamletDorms_BlockData:
+	INCBIN "maps/OldJohtoDorms.ablk.lz"
+
+SECTION "GauldenrodStockroom_BlockData", ROMX
+GauldenrodStockroom_BlockData:
+WesternCapitalStockroom_BlockData:
+LandingStockroom_BlockData:
+SinjohStockroom_BlockData:
+EerieHamletDorms_BlockData:
+	INCBIN "maps/GauldenrodStockroom.ablk.lz"
+
+SECTION "GauldenrodGuild_BlockData", ROMX
+GauldenrodGuild_BlockData:
+	INCBIN "maps/GauldenrodGuild.ablk.lz"
+
+SECTION "GauldenrodUndergroundSouth_BlockData", ROMX
+GauldenrodUndergroundSouth_BlockData:
+	INCBIN "maps/GauldenrodUndergroundSouth.ablk.lz"
+
+SECTION "GauldenrodUndergroundNorth_BlockData", ROMX
+GauldenrodUndergroundNorth_BlockData:
+	INCBIN "maps/GauldenrodUndergroundNorth.ablk.lz"
+
+SECTION "GauldenrodUnderground_BlockData", ROMX
+GauldenrodUnderground_BlockData:
+	INCBIN "maps/GauldenrodUnderground.ablk.lz"
+
+SECTION "GauldenrodSereneSpringsGate_BlockData", ROMX
+GauldenrodSereneSpringsGate_BlockData:
+	INCBIN "maps/GauldenrodSereneSpringsGate.ablk.lz"
+
+SECTION "CalmCoastCottage_BlockData", ROMX
+CalmCoastCottage_BlockData:
+	INCBIN "maps/CalmCoastCottage.ablk.lz"
+
+SECTION "GauldenrodTower1F_BlockData", ROMX
+GauldenrodTower1F_BlockData:
+	INCBIN "maps/GauldenrodTower1F.ablk.lz"
+
+SECTION "GauldenrodTower2F_BlockData", ROMX
+GauldenrodTower2F_BlockData:
+	INCBIN "maps/GauldenrodTower2F.ablk.lz"
+
+SECTION "GauldenrodTower3F_BlockData", ROMX
+GauldenrodTower3F_BlockData:
+	INCBIN "maps/GauldenrodTower3F.ablk.lz"
+
+SECTION "GauldenrodTower4F_BlockData", ROMX
+GauldenrodTower4F_BlockData:
+	INCBIN "maps/GauldenrodTower4F.ablk.lz"
+
+SECTION "StadiumGrounds_BlockData", ROMX
+StadiumGrounds_BlockData:
+	INCBIN "maps/StadiumGrounds.ablk.lz"
+
+SECTION "StadiumUnderground_BlockData", ROMX
+StadiumUnderground_BlockData:
+	INCBIN "maps/StadiumUnderground.ablk.lz"
+
+SECTION "StadiumBox_BlockData", ROMX
+StadiumBox_BlockData:
+	INCBIN "maps/StadiumBox.ablk.lz"
+
+
+SECTION "RouteKajo_BlockData", ROMX
+RouteKajo_BlockData:
+	INCBIN "maps/RouteKajo.ablk.lz"
+
+SECTION "KajoAcquifer_BlockData", ROMX
+KajoAcquifer_BlockData:
+	INCBIN "maps/KajoAcquifer.ablk.lz"
+
+SECTION "MagnetTrainTunnel_BlockData", ROMX
+MagnetTrainTunnel_BlockData:
+	INCBIN "maps/MagnetTrainTunnel.ablk.lz"
+
+SECTION "FirstClassCabin_BlockData", ROMX
+FirstClassCabin_BlockData:
+	INCBIN "maps/FirstClassCabin.ablk.lz"
+
+SECTION "SecondClassCabin_BlockData", ROMX
+SecondClassCabin_BlockData:
+	INCBIN "maps/SecondClassCabin.ablk.lz"
+
+SECTION "KajoCabin_BlockData", ROMX
+KajoCabin_BlockData:
+	INCBIN "maps/KajoCabin.ablk.lz"
+
+SECTION "UndergroundRadioTower_BlockData", ROMX
+UndergroundRadioTower_BlockData:
+	INCBIN "maps/UndergroundRadioTower.ablk.lz"
+
+SECTION "EmperorsGarden_BlockData", ROMX
+EmperorsGarden_BlockData:
+	INCBIN "maps/EmperorsGarden.ablk.lz"
+
+SECTION "WesternCapitalDanceTheatre_BlockData", ROMX
+WesternCapitalDanceTheatre_BlockData:
+	INCBIN "maps/WesternCapitalDanceTheatre.ablk.lz"
+
+SECTION "WesternCapitalCemetery_BlockData", ROMX
+WesternCapitalCemetery_BlockData:
+	INCBIN "maps/WesternCapitalCemetery.ablk.lz"
+
+SECTION "WesternCapital_BlockData", ROMX
+WesternCapital_BlockData:
+	INCBIN "maps/WesternCapital.ablk.lz"
+
+SECTION "WhispersWay_BlockData", ROMX
+WhispersWay_BlockData:
+	INCBIN "maps/WhispersWay.ablk.lz"
+
+SECTION "TimelessTapestry_BlockData", ROMX
+TimelessTapestry_BlockData:
+	INCBIN "maps/TimelessTapestry.ablk.lz"
+
+SECTION "BrassTowerB1F_BlockData", ROMX
+BrassTowerB1F_BlockData:
+	INCBIN "maps/BrassTowerB1F.ablk.lz"
+
+SECTION "BrassTower1F_BlockData", ROMX
+BrassTower1F_BlockData:
+	INCBIN "maps/BrassTower1F.ablk.lz"
+
+SECTION "BrassTower2F_BlockData", ROMX
+BrassTower2F_BlockData:
+	INCBIN "maps/BrassTower2F.ablk.lz"
+
+SECTION "BrassTower3F_BlockData", ROMX
+BrassTower3F_BlockData:
+	INCBIN "maps/BrassTower3F.ablk.lz"
+
+SECTION "BrassTower4F_BlockData", ROMX
+BrassTower4F_BlockData:
+	INCBIN "maps/BrassTower4F.ablk.lz"
+
+SECTION "BrassTowerRoof_BlockData", ROMX
+BrassTowerRoof_BlockData:
+	INCBIN "maps/BrassTowerRoof.ablk.lz"
+
+SECTION "BrassTower2FWarp_BlockData", ROMX
+BrassTower2FWarp_BlockData:
+	INCBIN "maps/BrassTower2FWarp.ablk.lz"
+
+SECTION "BrassTower3FWarp_BlockData", ROMX
+BrassTower3FWarp_BlockData:
+	INCBIN "maps/BrassTower3FWarp.ablk.lz"
+
+SECTION "BrassTower4FWarp_BlockData", ROMX
+BrassTower4FWarp_BlockData:
+	INCBIN "maps/BrassTower4FWarp.ablk.lz"
+
+SECTION "TinTowerOld1F_BlockData", ROMX
+TinTowerOld1F_BlockData:
+	INCBIN "maps/TinTowerOld1F.ablk.lz"
+
+SECTION "TinTowerOld2F_BlockData", ROMX
+TinTowerOld2F_BlockData:
+	INCBIN "maps/TinTowerOld2F.ablk.lz"
+
+SECTION "TinTowerOld3F_BlockData", ROMX
+TinTowerOld3F_BlockData:
+	INCBIN "maps/TinTowerOld3F.ablk.lz"
+
+SECTION "CapitalCullGate_BlockData", ROMX
+CapitalCullGate_BlockData:
+	INCBIN "maps/CapitalCullGate.ablk.lz"
+
+SECTION "CattleCull38_BlockData", ROMX
+CattleCull38_BlockData:
+	INCBIN "maps/CattleCull38.ablk.lz"
+
+SECTION "CattleCull39_BlockData", ROMX
+CattleCull39_BlockData:
+	INCBIN "maps/CattleCull39.ablk.lz"
+
+SECTION "TradersLanding_BlockData", ROMX
+TradersLanding_BlockData:
+	INCBIN "maps/TradersLanding.ablk.lz"
+
+SECTION "LandingTavern_BlockData", ROMX
+LandingTavern_BlockData:
+	INCBIN "maps/LandingTavern.ablk.lz"
+
+SECTION "LandingBarbeau_BlockData", ROMX
+LandingBarbeau_BlockData:
+	INCBIN "maps/LandingBarbeau.ablk.lz"
+
+SECTION "CianwoodCove_BlockData", ROMX
+CianwoodCove_BlockData:
+	INCBIN "maps/CianwoodCove.ablk.lz"
+
+SECTION "PhantomFjord_BlockData", ROMX
+PhantomFjord_BlockData:
+	INCBIN "maps/PhantomFjord.ablk.lz"
+
+SECTION "ShelteredShores_BlockData", ROMX
+ShelteredShores_BlockData:
+	INCBIN "maps/ShelteredShores.ablk.lz"
+
+SECTION "RusalkaRuins1F_BlockData", ROMX
+RusalkaRuins1F_BlockData:
+	INCBIN "maps/RusalkaRuins1F.ablk.lz"
+
+SECTION "RusalkaRuinsB1F_BlockData", ROMX
+RusalkaRuinsB1F_BlockData:
+	INCBIN "maps/RusalkaRuinsB1F.ablk.lz"
+
+SECTION "RusalkaRuinsLitCabins_BlockData", ROMX
+RusalkaRuinsLitCabins_BlockData:
+	INCBIN "maps/RusalkaRuinsLitCabins.ablk.lz"
+
+SECTION "RusalkaRuinsDarkCabins_BlockData", ROMX
+RusalkaRuinsDarkCabins_BlockData:
+	INCBIN "maps/RusalkaRuinsDarkCabins.ablk.lz"
+
+SECTION "RusalkaRuinsCaptain_BlockData", ROMX
+RusalkaRuinsCaptain_BlockData:
+	INCBIN "maps/RusalkaRuinsCaptain.ablk.lz"
+
+SECTION "SeafluxNexus_BlockData", ROMX
+SeafluxNexus_BlockData:
+	INCBIN "maps/SeafluxNexus.ablk.lz"
+
+SECTION "LandingDocks_BlockData", ROMX
+LandingDocks_BlockData:
+	INCBIN "maps/LandingDocks.ablk.lz"
+
+SECTION "ArduousAnchorage_BlockData", ROMX
+ArduousAnchorage_BlockData:
+	INCBIN "maps/ArduousAnchorage.ablk.lz"
+
+SECTION "OlivineDesal1F_BlockData", ROMX
+OlivineDesal1F_BlockData:
+	INCBIN "maps/OlivineDesal1F.ablk.lz"
+
+SECTION "OlivineDesalIntake_BlockData", ROMX
+OlivineDesalIntake_BlockData:
+	INCBIN "maps/OlivineDesalIntake.ablk.lz"
+
+SECTION "OlivineDesalB1F_BlockData", ROMX
+OlivineDesalB1F_BlockData:
+	INCBIN "maps/OlivineDesalB1F.ablk.lz"
+
+SECTION "SlowpokeDreams_BlockData", ROMX
+SlowpokeDreams_BlockData:
+	INCBIN "maps/SlowpokeDreams.ablk.lz"
+
+SECTION "SlowpokeDreamsBackgroundNS_BlockData", ROMX
+SlowpokeDreamsBackgroundN_BlockData:
+SlowpokeDreamsBackgroundS_BlockData
+	INCBIN "maps/SlowkingDreamsBackgroundNS.ablk.lz"
+
+SECTION "SlowpokeDreamsBackgroundEW_BlockData", ROMX
+SlowpokeDreamsBackgroundE_BlockData:
+SlowpokeDreamsBackgroundW_BlockData:
+	INCBIN "maps/SlowpokeDreamsBackgroundEW.ablk.lz"
+
+SECTION "TranquilTarn_BlockData", ROMX
+TranquilTarn_BlockData:
+	INCBIN "maps/TranquilTarn.ablk.lz"
+
+SECTION "SinjohCrossroads_BlockData", ROMX
+SinjohCrossroads_BlockData:
+	INCBIN "maps/SinjohCrossroads.ablk.lz"
+
+SECTION "GrottoedGlacier1F_BlockData", ROMX
+GrottoedGlacier1F_BlockData:
+	INCBIN "maps/GrottoedGlacier1F.ablk.lz"
+
+SECTION "GrottoedGlacierB1F_BlockData", ROMX
+GrottoedGlacierB1F_BlockData:
+	INCBIN "maps/GrottoedGlacierB1F.ablk.lz"
+
+SECTION "GrottoedGlacierB2F_BlockData", ROMX
+GrottoedGlacierB2F_BlockData:
+	INCBIN "maps/GrottoedGlacierB2F.ablk.lz"
+
+SECTION "WesternGlacier1F_BlockData", ROMX
+WesternGlacier1F_BlockData:
+	INCBIN "maps/WesternGlacier1F.ablk.lz"
+
+SECTION "WesternGlacierB1F_BlockData", ROMX
+WesternGlacierB1F_BlockData:
+	INCBIN "maps/WesternGlacierB1F.ablk.lz"
+
+SECTION "WesternGlacierB2F_BlockData", ROMX
+WesternGlacierB2F_BlockData:
+	INCBIN "maps/WesternGlacierB2F.ablk.lz"
+
+SECTION "EmpiresExtentEerieHamletGate_BlockData", ROMX
+EmpiresExtentEerieHamletGate_BlockData:
+	INCBIN "maps/EmpiresExtentEerieHamletGate.ablk.lz"
+
+SECTION "EmpiresExtent_BlockData", ROMX
+EmpiresExtent_BlockData:
+	INCBIN "maps/EmpiresExtent.ablk.lz"
+
+SECTION "EmpiresExtentCavern_BlockData", ROMX
+EmpiresExtentCavern_BlockData:
+	INCBIN "maps/EmpiresExtentCavern.ablk.lz"
+
+SECTION "DragonsDen_BlockData", ROMX
+DragonsDen_BlockData:
+	INCBIN "maps/DragonsDen.ablk.lz"
+
+SECTION "EerieHamlet_BlockData", ROMX
+EerieHamlet_BlockData:
+	INCBIN "maps/EerieHamlet.ablk.lz"
+
+SECTION "RebelsRedoubt1F_BlockData", ROMX
+RebelsRedoubt1F_BlockData:
+	INCBIN "maps/RebelsRedoubt1F.ablk.lz"
+
+SECTION "RebelsRedoubtB1F_BlockData", ROMX
+RebelsRedoubtB1F_BlockData:
+	INCBIN "maps/RebelsRedoubtB1F.ablk.lz"
+
+SECTION "RebelsRedoubtB2F_BlockData", ROMX
+RebelsRedoubtB2F_BlockData:
+	INCBIN "maps/RebelsRedoubtB2F.ablk.lz"
+
+SECTION "RebelsRedoubtB3F_BlockData", ROMX
+RebelsRedoubtB3F_BlockData:
+	INCBIN "maps/RebelsRedoubtB3F.ablk.lz"
+
+SECTION "SulfurSty_BlockData", ROMX
+SulfurSty_BlockData:
+	INCBIN "maps/SulfurSty.ablk.lz"
+
+SECTION "ClastsCradle3F_BlockData", ROMX
+ClastsCradle3F_BlockData:
+	INCBIN "maps/ClastsCradle3F.ablk.lz"
+
+SECTION "ClastsCradle2F_BlockData", ROMX
+ClastsCradle2F_BlockData:
+	INCBIN "maps/ClastsCradle2F.ablk.lz"
+
+SECTION "ClastsCradle1F_BlockData", ROMX
+ClastsCradle1F_BlockData:
+	INCBIN "maps/ClastsCradle1F.ablk.lz"
+
+SECTION "ClastsCradleB1F_BlockData", ROMX
+ClastsCradleB1F_BlockData:
+	INCBIN "maps/ClastsCradleB1F.ablk.lz"

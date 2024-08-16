@@ -1,9 +1,9 @@
 Marts: 
 	table_width 2, Marts
-	dw CherrygroveMart
-	dw CherrygroveMartAfterDex
+	dw CherrygroveMart ; unused
+	dw CherrygroveMartAfterDex ; unused
 	dw VioletMart
-	dw AzaleaMartAzaleaMart
+	dw AzaleaMart
 	dw Goldenrod2FMart1
 	dw Goldenrod2FMart2
 	dw Goldenrod2FMart2Eevee
@@ -14,50 +14,42 @@ Marts:
 	dw UndergroundMart
 	dw EcruteakMart
 	dw OlivineMart
-	dw CianwoodMart
-	dw YellowForestMart
-	dw MahoganyMart1
+	dw CianwoodMart ; unused
+	dw YellowForestMart ; unused
+	dw MahoganyMart1 ; unused
 	dw MahoganyMart2
-	dw BlackthornMart
+	dw BlackthornMart ; unused
 	dw IndigoPlateauMart
 	dw AnarresMart
-	dw PewterMart
-	dw MtMoonMart
-	dw CeruleanMart
-	dw LavenderMart
-	dw VermilionMart
-	dw Celadon2FMart1
-	dw Celadon2FMart2
-	dw Celadon3FTMMart
-	dw Celadon4FMart
-	dw Celadon5FMart1
-	dw Celadon5FMart2
-	dw SaffronMart
-	dw SilphCoMart
-	dw FuchsiaMart
-	dw ShamoutiMart1
-	dw ShamoutiMart2
-	dw BattleTowerMart1
-	dw BattleTowerMart2
-	dw BattleTowerMart3
+	dw GauldenrodMart1
+	dw GauldenrodMart2
+	dw GauldenrodMart3
+	dw WesternCapitalMart
+	dw WesternCapitalMart_TM
+	dw TradersLandingMart
+	dw TradersLandingMart_Items
+	dw SinjohCrossroadsMart
+	dw EerieHamletMart
+	dw WesternCapitalMart2
+	dw Celadon5FMart2 ; unused
+	dw SaffronMart ; unused
+	dw SilphCoMart ; unused
+	dw FuchsiaMart ; unused
+	dw ShamoutiMart1 ; unused
+	dw ShamoutiMart2 ; unused
+	dw BattleTowerMart1 ; unused
+	dw BattleTowerMart2 ; unused
+	dw BattleTowerMart3 ; unused
 	assert_table_length NUM_MARTS
 
 CherrygroveMart:
-	db 4 ; # items
+	db 1 ; # items
 	db POTION
-	db ANTIDOTE
-	db PARALYZEHEAL
-	db AWAKENING
 	db -1
 
 CherrygroveMartAfterDex:
-	db 6 ; # items
-	db POKE_BALL
-	db HEAL_BALL
+	db 1 ; # items
 	db POTION
-	db ANTIDOTE
-	db PARALYZEHEAL
-	db AWAKENING
 	db -1
 
 VioletMart:
@@ -210,31 +202,21 @@ OlivineMart:
 	db -1
 
 CianwoodMart:
-	db 5 ; # items
+	db 1 ; # items
 	db POTION
-	db SUPER_POTION
-	db HYPER_POTION
-	db FULL_HEAL
-	db REVIVE
 	db -1
 
 YellowForestMart:
-	db 4 ; # items
-	db POKE_BALL
-	db REPEL
-	db FRESH_WATER
-	db FULL_HEAL
+	db 1 ; # items
+	db POTION
 	db -1
 
 MahoganyMart1:
-	db 4 ; # items
-	db TINYMUSHROOM
-	db RARE_CANDY
-	db GREAT_BALL
-	db SUPER_POTION
+	db 1 ; # items
+	db POTION
 	db -1
 
-MahoganyMart2:
+WesternCapitalMart:
 	db 10 ; # items
 	db RAGECANDYBAR
 	db AIR_BALLOON
@@ -248,7 +230,7 @@ MahoganyMart2:
 	db RARE_CANDY
 	db -1
 
-BlackthornMart:
+WesternCapitalMart_TM:
 	db 10 ; # items
 	db GREAT_BALL
 	db ULTRA_BALL
@@ -262,7 +244,7 @@ BlackthornMart:
 	db X_ATTACK
 	db -1
 
-IndigoPlateauMart:
+TradersLandingMart:
 	db 7 ; # items
 	db ULTRA_BALL
 	db MAX_REPEL
@@ -273,7 +255,7 @@ IndigoPlateauMart:
 	db FULL_HEAL
 	db -1
 
-AnarresMart:
+TradersLandingMart_Items:
 	db 9 ; # items
 	db RARE_CANDY
 	db REPEL
@@ -286,7 +268,7 @@ AnarresMart:
 	db WHITE_HERB
 	db -1
 
-PewterMart:
+GauldenrodMart1: ; normal items
 	db 8 ; # items
 	db GREAT_BALL
 	db DUSK_BALL
@@ -298,7 +280,7 @@ PewterMart:
 	db BURN_HEAL
 	db -1
 
-MtMoonMart:
+GauldenrodMart3: ; Held items
 	db 6 ; # items
 	db POKE_DOLL
 	db FRESH_WATER
@@ -308,20 +290,16 @@ MtMoonMart:
 	db SUPER_REPEL
 	db -1
 
-CeruleanMart:
-	db 9 ; # items
-	db GREAT_BALL
-	db ULTRA_BALL
-	db DIVE_BALL
-	db SUPER_POTION
-	db SUPER_REPEL
-	db FULL_HEAL
-	db X_DEFEND
-	db X_ATTACK
-	db DIRE_HIT
+GauldenrodMart3: ; TMs, HMs
+	db 8 ; # items
+	dbw TM_SAFEGUARD,     10000
+	dbw TM_SUNNY_DAY,     20000
+	dbw TM_RAIN_DANCE,    20000
+	dbw TM_SANDSTORM,     20000
+	dbw TM_HAIL,          20000
 	db -1
 
-LavenderMart:
+TradersLandingMart_Items:
 	db 9 ; # items
 	db GREAT_BALL
 	db HEAL_BALL
@@ -334,7 +312,7 @@ LavenderMart:
 	db BURN_HEAL
 	db -1
 
-VermilionMart:
+SinjohCrossroadsMart:
 	db 8 ; # items
 	db ULTRA_BALL
 	db REPEAT_BALL
@@ -346,7 +324,7 @@ VermilionMart:
 	db BURN_HEAL
 	db -1
 
-Celadon2FMart1:
+EerieHamletMart:
 	db 12 ; # items
 	db POTION
 	db SUPER_POTION
@@ -362,7 +340,7 @@ Celadon2FMart1:
 	db MAX_REVIVE
 	db -1
 
-Celadon2FMart2:
+WesternCapitalMart2:
 	db 9 ; # items
 	db POKE_BALL
 	db GREAT_BALL
@@ -387,7 +365,7 @@ Celadon3FTMMart:
 	dbw TM_HAIL,          40000
 	db -1
 
-Celadon4FMart:
+MahoganyMart2:
 	db 7 ; # items
 	db POKE_DOLL
 	db FIRE_STONE

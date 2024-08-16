@@ -36,7 +36,7 @@ SECTION "Battle Tower Scripts", ROMX
 
 
 
-SECTION "New Bark Scripts", ROMX ; used to be new bark scripts...?
+SECTION "New Bark Scripts", ROMX 
 
 INCLUDE "maps/HollysHolt.asm"
 INCLUDE "maps/AnarresTown.asm"
