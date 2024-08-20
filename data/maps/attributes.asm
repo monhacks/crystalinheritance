@@ -382,10 +382,10 @@ ENDM
 	map_attributes WesternCapitalCemetery, WESTERN_CAPITAL_CEMETERY, $0, 0
 
 	map_attributes WesternCapital, WESTERN_CAPITAL, $5, SOUTH 
-	connection south, WhispersWay, WHISPERS_WAY, 7	; NEED TO CHECK todo
+	connection south, WhispersWay, WHISPERS_WAY, 7	; TODO CHECK
 	
 	map_attributes WhispersWay, WHISPERS_WAY, $5, NORTH 
-	connection north, WesternCapital, WESTERN_CAPITAL, 7	; NEED TO CHECK todo
+	connection north, WesternCapital, WESTERN_CAPITAL, 7	; 
 
 	map_attributes TimelessTapestry, TIMELESS_TAPESTRY, $5, 0
 	
@@ -408,14 +408,14 @@ ENDM
 
 	map_attributes CapitalCullGate, CAPITAL_CULL_GATE, $0, 0
 
-	map_attributes CattleCull38, CATTLE_CULL_38, $5, WEST; TODO
+	map_attributes CattleCull38, CATTLE_CULL_38, $5, WEST; 
 	connection west, CattleCull39, CATTLE_CULL_39, 0
 
-	map_attributes CattleCull39, CATTLE_CULL_39, $5, SOUTH | EAST; TODO
+	map_attributes CattleCull39, CATTLE_CULL_39, $5, SOUTH | EAST; 
 	connection south, TradersLanding, TRADERS_LANDING, -5
 	connection east, CattleCull38, CATTLE_CULL_38, 0
 
-	map_attributes TradersLanding, TRADERS_LANDING, $35, NORTH ; TODO
+	map_attributes TradersLanding, TRADERS_LANDING, $35, NORTH ; 
 	connection north, CattleCull39, CATTLE_CULL_39, 5
 
 	map_attributes LandingStockroom, LANDING_STOCKROOM, $0, 0
@@ -432,7 +432,7 @@ ENDM
 	map_attributes CianwoodCove, CIANWOOD_COVE, $35, EAST
 	connection east, ShelteredShores, SHELTERED_SHORES, 0
 
-	map_attributes ArduousAnchorage, ARDUOUS_ANCHORAGE, $35, SOUTH ;TODO
+	map_attributes ArduousAnchorage, ARDUOUS_ANCHORAGE, $35, SOUTH
 	connection south, ShelteredShores, SHELTERED_SHORES, -15
 
 	map_attributes PhantomFjord, PHANTOM_FJORD, $0, 0
@@ -444,22 +444,38 @@ ENDM
 	map_attributes SeafluxNexus, SEAFLUX_NEXUS, $9, 0
 	map_attributes LandingDocks, LANDING_DOCKS, $A, 0 
 
-	map_attributes SlowpokeDreams, SLOWPOKE_DREAMS, $0, NORTH | SOUTH | WEST | EAST ; TODO check the offsets 
-	connection north, SlowpokeDreamsBackgroundN, SLOWPOKE_DREAMS_BACKGROUND_N, 0
-	connection south, SlowpokeDreamsBackgroundS, SLOWPOKE_DREAMS_BACKGROUND_S, 0
+	map_attributes SlowpokeDreams, SLOWPOKE_DREAMS, $0, NORTH | SOUTH | WEST | EAST 
+	connection north, SlowpokeDreamsBackgroundN, SLOWPOKE_DREAMS_BACKGROUND_N, -1
+	connection south, SlowpokeDreamsBackgroundS, SLOWPOKE_DREAMS_BACKGROUND_S, -1
 	connection west, SlowpokeDreamsBackgroundW, SLOWPOKE_DREAMS_BACKGROUND_W, 0
 	connection east, SlowpokeDreamsBackgroundE, SLOWPOKE_DREAMS_BACKGROUND_E, 0
 	
-	map_attributes SlowpokeDreamsBackgroundN, SLOWPOKE_DREAMS_BACKGROUND_N, $0, 0 ; TODO
-	map_attributes SlowpokeDreamsBackgroundS, SLOWPOKE_DREAMS_BACKGROUND_S, $0, 0 ; TODO
-	map_attributes SlowpokeDreamsBackgroundE, SLOWPOKE_DREAMS_BACKGROUND_E, $0, 0 ; TODO
-	map_attributes SlowpokeDreamsBackgroundW, SLOWPOKE_DREAMS_BACKGROUND_W, $0, 0 ; TODO
+	map_attributes SlowpokeDreamsBackgroundN, SLOWPOKE_DREAMS_BACKGROUND_N, $0, SOUTH | NORTH
+	connection south, SlowpokeDreams, SLOWPOKE_DREAMS, 1
+	connection north, SlowpokeDreamsBackgroundS, SLOWPOKE_DREAMS_BACKGROUND_S, -1
+
+	map_attributes SlowpokeDreamsBackgroundS, SLOWPOKE_DREAMS_BACKGROUND_S, $0, NORTH | SOUTH 
+	connection north, SlowpokeDreams, SLOWPOKE_DREAMS, 1
+	connection south, SlowpokeDreamsBackgroundN, SLOWPOKE_DREAMS_BACKGROUND_N, 0 ; might get some error about not being able to make this infinite loop
+
+	map_attributes SlowpokeDreamsBackgroundE, SLOWPOKE_DREAMS_BACKGROUND_E, $0, WEST 
+	connection west, SlowpokeDreams, SLOWPOKE_DREAMS, 0
+
+	map_attributes SlowpokeDreamsBackgroundW, SLOWPOKE_DREAMS_BACKGROUND_W, $0, EAST 
+	connection east, SlowpokeDreams, SLOWPOKE_DREAMS, 0
 
 	map_attributes EnteisCavern, ENTEIS_CAVERN, $9, 0
 
-	map_attributes TranquilTarn, TRANQUIL_TARN, $0, 0 ; TODO
-	map_attributes SinjohCrossroads, SINJOH_CROSSROADS, $0, 0; TODO
-	map_attributes EmpiresExtent, EMPIRES_EXTENT, $0, 0 ; todo
+	map_attributes TranquilTarn, TRANQUIL_TARN, $0, NORTH | SOUTH ; 
+	connection north, SinjohCrossroads, SINJOH_CROSSROADS, 0 ; to check todo
+	connection south, EmpiresExtent, EMPIRES_EXTENT, 0 ; to check todo
+	
+	map_attributes SinjohCrossroads, SINJOH_CROSSROADS, $5, SOUTH; TODO
+	connection south, TranquilTarn, TRANQUIL_TARN, 0 ; to check
+	
+	map_attributes EmpiresExtent, EMPIRES_EXTENT, $5, NORTH | SOUTH ; todo
+	connection north, TranquilTarn, TRANQUIL_TARN, 0 
+	connection south, EerieHamlet, EERIE_HAMLET, 0
 
 	map_attributes SinjohDorms, SINJOH_DORMS, $0, 0
 	map_attributes SinjohEldersHouse, SINJOH_ELDERS_HOUSE, $0, 0
@@ -475,11 +491,15 @@ ENDM
 
 	map_attributes EmpiresExtentEerieHamletGate, EMPIRES_EXTENT_EERIE_HAMLET_GATE, $0, 0
 
-	map_attributes EmpiresExtentCavern, EMPIRES_EXTENT_CAVERN, $0, 0
+	map_attributes EmpiresExtentCavern, EMPIRES_EXTENT_CAVERN, $5, 0
 	map_attributes DragonsDen, DRAGONS_DEN, $0, 0
 
-	map_attributes EerieHamlet, EERIE_HAMLET, $0, 0	; TODO
-	map_attributes SulfurSty, SULFUR_STY, $0, 0 ; TODO
+	map_attributes EerieHamlet, EERIE_HAMLET, $5, NORTH | WEST	; TODO
+	connection north, EmpiresExtent, EMPIRES_EXTENT, 0
+	connection west, SulfurSty, SULFUR_STY, -1
+	
+	map_attributes SulfurSty, SULFUR_STY, $5, EAST ; TODO
+	connection east, EerieHamlet, EERIE_HAMLET, 1
 
 	map_attributes EerieHamletDorms, EERIE_HAMLET_DORMS, $0, 0
 	map_attributes EerieHamletStockroom, EERIE_HAMLET_STOCKROOM, $0, 0
