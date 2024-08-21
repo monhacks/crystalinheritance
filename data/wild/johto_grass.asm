@@ -250,7 +250,7 @@
 	wildmon 43, KADABRA
 	wildmon 44, KADABRA
 	wildmon 44, KADABRA
-	end_grass_wildmons ; pick up here 04.03.24
+	end_grass_wildmons 
 
 	def_grass_wildmons BURNED_TOWER_1F
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
@@ -1232,89 +1232,89 @@
 	wildmon 44, YANMEGA
 	end_grass_wildmons
 
-;	def_grass_wildmons ROUTE_KAJO
-;	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
-;	; morn
-;	wildmon 21, RHYHORN
-;	wildmon 19, MANKEY
-;	wildmon 20, PONYTA
-;	wildmon 20, GLIGAR
-;	wildmon 20, MAGMAR
-;	wildmon 20, HITMONTOP
-;	wildmon 20, HITMONTOP
-;	; day
-;	wildmon 21, RHYHORN
-;	wildmon 19, MANKEY
-;	wildmon 20, PONYTA
-;	wildmon 20, GLIGAR
-;	wildmon 20, MAGMAR
-;	wildmon 20, HITMONTOP
-;	wildmon 20, HITMONTOP
-;	; nite
-;	wildmon 21, RHYHORN
-;	wildmon 19, MANKEY
-;	wildmon 20, PONYTA
-;	wildmon 20, GLIGAR
-;	wildmon 20, MAGMAR
-;	wildmon 20, HITMONTOP
-;	wildmon 20, HITMONTOP
-;	end_grass_wildmons
-;
-;	def_grass_wildmons KAJO_ACQUIFER
-;	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
-;	; morn
-;	wildmon 21, RHYHORN
-;	wildmon 19, MANKEY
-;	wildmon 20, MANKEY
-;	wildmon 20, GLIGAR
-;	wildmon 20, GLIGAR
-;	wildmon 20, DRATINI
-;	wildmon 20, DRATINI
-;	; day
-;	wildmon 21, RHYHORN
-;	wildmon 19, MANKEY
-;	wildmon 20, MANKEY
-;	wildmon 20, GLIGAR
-;	wildmon 20, GLIGAR
-;	wildmon 20, DRATINI
-;	wildmon 20, DRATINI
-;	; nite
-;	wildmon 21, RHYHORN
-;	wildmon 19, MANKEY
-;	wildmon 20, MANKEY
-;	wildmon 20, GLIGAR
-;	wildmon 20, GLIGAR
-;	wildmon 20, DRATINI
-;	wildmon 20, DRATINI
-;	end_grass_wildmons
-;
-;
-;	def_grass_wildmons MAGNET_TRAIN_TUNNEL
-;	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
-;	; morn
-;	wildmon 21, VOLTORB
-;	wildmon 19, RHYHORN
-;	wildmon 20, MAGNEMITE
-;	wildmon 20, VOLTORB
-;	wildmon 20, MAGNEMITE
-;	wildmon 20, ELECTABUZZ
-;	wildmon 20, ELECTABUZZ
-;	; day
-;;	wildmon 21, VOLTORB
-;	wildmon 19, RHYHORN
-;	wildmon 20, MAGNEMITE
-;	wildmon 20, VOLTORB
-;	wildmon 20, MAGNEMITE
-;	wildmon 20, ELECTABUZZ
-;	wildmon 20, ELECTABUZZ
-;	; nite
-;	wildmon 21, VOLTORB
-;	wildmon 19, RHYHORN
-;	wildmon 20, MAGNEMITE
-;	wildmon 20, VOLTORB
-;	wildmon 20, MAGNEMITE
-;	wildmon 20, ELECTABUZZ
-;	wildmon 20, ELECTABUZZ
-;	end_grass_wildmons
+	def_grass_wildmons ROUTE_KAJO
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	wildmon 21, RHYHORN
+	wildmon 19, MANKEY
+	wildmon 20, PONYTA
+	wildmon 20, GLIGAR
+	wildmon 20, MAGMAR
+	wildmon 20, HITMONTOP
+	wildmon 20, HITMONTOP
+	; day
+	wildmon 21, RHYHORN
+	wildmon 19, MANKEY
+	wildmon 20, PONYTA
+	wildmon 20, GLIGAR
+	wildmon 20, MAGMAR
+	wildmon 20, HITMONTOP
+	wildmon 20, HITMONTOP
+	; nite
+	wildmon 21, RHYHORN
+	wildmon 19, MANKEY
+	wildmon 20, PONYTA
+	wildmon 20, GLIGAR
+	wildmon 20, MAGMAR
+	wildmon 20, HITMONTOP
+	wildmon 20, HITMONTOP
+	end_grass_wildmons
+
+	def_grass_wildmons KAJO_ACQUIFER
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	wildmon 21, RHYHORN
+	wildmon 19, MANKEY
+	wildmon 20, MANKEY
+	wildmon 20, GLIGAR
+	wildmon 20, GLIGAR
+	wildmon 20, DRATINI
+	wildmon 20, DRATINI
+	; day
+	wildmon 21, RHYHORN
+	wildmon 19, MANKEY
+	wildmon 20, MANKEY
+	wildmon 20, GLIGAR
+	wildmon 20, GLIGAR
+	wildmon 20, DRATINI
+	wildmon 20, DRATINI
+	; nite
+	wildmon 21, RHYHORN
+	wildmon 19, MANKEY
+	wildmon 20, MANKEY
+	wildmon 20, GLIGAR
+	wildmon 20, GLIGAR
+	wildmon 20, DRATINI
+	wildmon 20, DRATINI
+	end_grass_wildmons
+
+
+	def_grass_wildmons MAGNET_TRAIN_TUNNEL
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	wildmon 21, VOLTORB
+	wildmon 19, RHYHORN
+	wildmon 20, MAGNEMITE
+	wildmon 20, VOLTORB
+	wildmon 20, MAGNEMITE
+	wildmon 20, ELECTABUZZ
+	wildmon 20, ELECTABUZZ
+	; day
+	wildmon 21, VOLTORB
+	wildmon 19, RHYHORN
+	wildmon 20, MAGNEMITE
+	wildmon 20, VOLTORB
+	wildmon 20, MAGNEMITE
+	wildmon 20, ELECTABUZZ
+	wildmon 20, ELECTABUZZ
+	; nite
+	wildmon 21, VOLTORB
+	wildmon 19, RHYHORN
+	wildmon 20, MAGNEMITE
+	wildmon 20, VOLTORB
+	wildmon 20, MAGNEMITE
+	wildmon 20, ELECTABUZZ
+	wildmon 20, ELECTABUZZ
+	end_grass_wildmons
 
 	db -1 ; end

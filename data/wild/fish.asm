@@ -15,7 +15,7 @@ FishGroups:
 	fishgroup 60 percent + 1, 70 percent + 1, .Qwilfish_Swarm_Old,   .Qwilfish_Swarm_Good,   .Qwilfish_Swarm_Super ;unused
 	fishgroup 60 percent + 1, 70 percent + 1, .Remoraid_Swarm_Old,   .Remoraid_Swarm_Good,   .Remoraid_Swarm_Super ;unused
 	fishgroup 60 percent + 1, 70 percent + 1, .Gyarados_Old,         .Gyarados_Good,         .Gyarados_Super ; LoR and TT
-	fishgroup 60 percent + 1, 70 percent + 1, .Dratini_2_Old,        .Dratini_2_Good,        .Dratini_2_Super  ;route 38/39 with toxic runoff
+	fishgroup 60 percent + 1, 70 percent + 1, .Dratini_2_Old,        .Dratini_2_Good,        .Dratini_2_Super  ;route 39 with toxic runoff
 	fishgroup 60 percent + 1, 70 percent + 1, .WhirlIslands_Old,     .WhirlIslands_Good,     .WhirlIslands_Super
 	fishgroup 60 percent + 1, 70 percent + 1, .Qwilfish_Old,         .Qwilfish_Good,         .Qwilfish_Super
 	fishgroup 60 percent + 1, 70 percent + 1, .Remoraid_Old,         .Remoraid_Good,         .Remoraid_Super
@@ -27,12 +27,12 @@ FishGroups:
 	db  85 percent + 1, MAGIKARP,   5
 	db 100 percent,     MAGIKARP,   5
 .Shore_Good:
-	db  35 percent,     MAGIKARP,   20
+	db  35 percent,     STARYU,   20
 	db  70 percent,     STARYU,     20
 	db  90 percent + 1, STARYU,     20
 	db 100 percent,     0, 0
 .Shore_Super:
-	db  40 percent,     STARYU,     40
+	db  40 percent,     CLOYSTER,     40
 	db  70 percent,     0, 1
 	db  90 percent + 1, CLOYSTER,   40
 	db 100 percent,     CLOYSTER,   40
@@ -42,7 +42,7 @@ FishGroups:
 	db  85 percent + 1, CHINCHOU,   5
 	db 100 percent,     CHINCHOU,   5
 .Ocean_Good:
-	db  35 percent,     CHINCHOU,   20
+	db  35 percent,     LANTURN,   20
 	db  70 percent,     LANTURN,    20
 	db  90 percent + 1, LANTURN,    20
 	db 100 percent,     0, 2
@@ -92,7 +92,7 @@ FishGroups:
 	db  90 percent + 1, PRINPLUP,   20
 	db 100 percent,     0, 8
 .Dratini_Super:
-	db  40 percent,     MAGIKARP,   40
+	db  40 percent,     PRINPLUP,   40
 	db  70 percent,     0, 9
 	db  90 percent + 1, PRINPLUP,   40
 	db 100 percent,     PRINPLUP,   40
@@ -117,7 +117,7 @@ FishGroups:
 	db  85 percent + 1, MAGIKARP,   10
 	db 100 percent,     OCTILLERY,   10
 .Remoraid_Swarm_Good:
-	db  35 percent,     MAGIKARP,   20
+	db  35 percent,     OCTILLERY,   20
 	db  70 percent,     OCTILLERY,   20
 	db  90 percent + 1, OCTILLERY,   20
 	db 100 percent,     0, 12
@@ -132,15 +132,15 @@ FishGroups:
 	db  85 percent + 1, MAGIKARP,   10
 	db 100 percent,     MAGIKARP,   10
 .Gyarados_Good:
-	db  35 percent,     MAGIKARP,   20
-	db  70 percent,     MAGIKARP,   20
-	db  90 percent + 1, MAGIKARP,   20
+	db  35 percent,     GYARADOS,   20
+	db  70 percent,     GYARADOS,   20
+	db  90 percent + 1, GYARADOS,   20
 	db 100 percent,     0, 14
 .Gyarados_Super:
-	db  40 percent,     MAGIKARP,   40
+	db  40 percent,     GYARADOS,   40
 	db  70 percent,     0, 15
-	db  90 percent + 1, MAGIKARP,   40
-	db 100 percent,     MAGIKARP,   40
+	db  90 percent + 1, GYARADOS,   40
+	db 100 percent,     GYARADOS,   40
 
 .Dratini_2_Old: ;ROUTE 38 39
 	db  70 percent + 1, MUK,        5
@@ -160,7 +160,7 @@ FishGroups:
 .WhirlIslands_Old:
 	db  70 percent + 1, MAGIKARP,   5
 	db  85 percent + 1, MAGIKARP,   5
-	db 100 percent,     OCTILLERY,  5
+	db 100 percent,     MAGIKARP,  5
 .WhirlIslands_Good:
 	db  35 percent,     SEADRA,     20
 	db  70 percent,     OCTILLERY,  20
@@ -169,7 +169,7 @@ FishGroups:
 .WhirlIslands_Super:
 	db  40 percent,     OCTILLERY,   40
 	db  70 percent,     0, 19
-	db  90 percent + 1, OCTILLERY,  40
+	db  90 percent + 1, KINGDRA,  40
 	db 100 percent,     KINGDRA,    40
 
 .Qwilfish_NoSwarm_Old:

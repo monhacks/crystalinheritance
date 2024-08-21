@@ -58,16 +58,16 @@
 
 	def_water_wildmons MOUNT_MORTAR_1F_OUTSIDE
 	db 4 percent ; encounter rate
-	wildmon 35, POLIWAG
-	wildmon 35, MARILL
-	wildmon 40, POLIWHIRL
+	wildmon 40, POLIWRATH
+	wildmon 40, AZUMARILL
+	wildmon 40, POLITOED
 	end_water_wildmons
 
 	def_water_wildmons MOUNT_MORTAR_2F_INSIDE
 	db 2 percent ; encounter rate
-	wildmon 40, POLIWAG
-	wildmon 40, MARILL
-	wildmon 40, POLIWHIRL
+	wildmon 40, POLIWRATH
+	wildmon 40, AZUMARILL
+	wildmon 40, POLITOED
 	end_water_wildmons
 
 	def_water_wildmons MOUNT_MORTAR_B1F
@@ -196,18 +196,18 @@
 	wildmon 45, MAGIKARP
 	end_water_wildmons
 
-;	def_water_wildmons ROUTE_KAJO
-;	db 6 percent ; encounter rate
-;	wildmon 20, POLIWHIRL
-;	wildmon 20, POLIWHIRL
-;	wildmon 20, PRINPLUP
-;	end_water_wildmons
-;
-;	def_water_wildmons KAJO_ACQUIFER
-;	db 6 percent ; encounter rate
-;	wildmon 20, SLOWPOKE
-;	wildmon 20, SLOWPOKE
-;	wildmon 20, TOTODILE
-;	end_water_wildmons
+	def_water_wildmons ROUTE_KAJO
+	db 6 percent ; encounter rate
+	wildmon 20, POLIWHIRL
+	wildmon 20, POLIWHIRL
+	wildmon 20, PRINPLUP
+	end_water_wildmons
+
+	def_water_wildmons KAJO_ACQUIFER
+	db 6 percent ; encounter rate
+	wildmon 20, SLOWPOKE
+	wildmon 20, SLOWPOKE
+	wildmon 20, TOTODILE
+	end_water_wildmons
 
 	db -1 ; end
