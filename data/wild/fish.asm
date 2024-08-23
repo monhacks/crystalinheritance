@@ -231,6 +231,6 @@ TimeFishGroups:
 	db SEADRA,  40,  SEADRA,  40
 
 FishItems:
-	db PEARL
+	db STARDUST
 	db BIG_PEARL
 	db BOTTLE_CAP

@@ -147,6 +147,7 @@ ENDM
 	map_const ANARRES_CHARCOAL_KILN,                       5,  4 ;  9 shares map with charcoal kiln
 	map_const ANARRES_HOUSE,  	                           4,  4 ;  10 traditional house
 	map_const ANARRES_HOLT_GATE,                           4,  4 ; sprout tower 
+	map_const HOLT_COAST_GATE
 
 
 	newgroup                                                     ;  6 ;gauldenrod and surrounding
@@ -360,10 +361,6 @@ ENDM
 	map_const CIANWOOD_CITY,                              15, 27 ;  3
 	map_const MANIAS_HOUSE,                                4,  4 ;  4
 	map_const CIANWOOD_GYM,                                5,  9 ;  5
-;	map_const CIANWOOD_POKECENTER_1F,                      6,  4 ;  6
-;	map_const CIANWOOD_PHARMACY,                           4,  4 ;  7
-;	map_const CIANWOOD_CITY_PHOTO_STUDIO,                  4,  4 ;  8
-;	map_const CIANWOOD_LUGIA_SPEECH_HOUSE,                 4,  4 ;  9
 	map_const MOVE_MANIACS_HOUSE,                          4,  4 ; 10
 
 

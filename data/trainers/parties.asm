@@ -5771,7 +5771,7 @@ SchoolboyGroup:
 	db "Johnny@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_NICKNAME
 	; party
-	db 18, WEEPINBELL, GOLD_LEAF, "Gold@"
+	db 18, WEEPINBELL, NO_ITEM, "Gold@"
 	db 16, ARIADOS, NO_ITEM, "Spin@"
 	db 17, MEOWTH, ORAN_BERRY, "Rat@"
 	db -1 ; end

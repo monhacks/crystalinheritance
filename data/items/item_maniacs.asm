@@ -78,5 +78,5 @@ FossilManiacItemRewards:
 	dbw RARE_BONE,    5000
 	dbw HELIX_FOSSIL, 1000
 	dbw DOME_FOSSIL,  1000
-	dbw OLD_AMBER,    1000
+	dbw STARDUST,    1000
 	db -1

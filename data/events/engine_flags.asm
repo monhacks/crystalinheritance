@@ -83,15 +83,15 @@ EngineFlags:
 
 	; fly
 	engine_flag wVisitedSpawns, 0  ; your house
-	engine_flag wVisitedSpawns, 1  ; pallet
-	engine_flag wVisitedSpawns, 2  ; viridian
-	engine_flag wVisitedSpawns, 3  ; pewter
-	engine_flag wVisitedSpawns, 4  ; mt moon
-	engine_flag wVisitedSpawns, 5  ; cerulean
-	engine_flag wVisitedSpawns, 6  ; cerulean cape
-	engine_flag wVisitedSpawns, 7  ; rock tunnel
-	engine_flag wVisitedSpawns, 8  ; vermilion
-	engine_flag wVisitedSpawns, 9  ; lavender
+	engine_flag wVisitedSpawns, 1  ; ANARRES
+	engine_flag wVisitedSpawns, 2  ; GAULDENROD
+	engine_flag wVisitedSpawns, 3  ; STADIUM
+	engine_flag wVisitedSpawns, 4  ; WESTERN CAPITAL
+	engine_flag wVisitedSpawns, 5  ; TRADERS LANDING
+	engine_flag wVisitedSpawns, 6  ; SHELTERED SHORES
+	engine_flag wVisitedSpawns, 7  ; CIANWOOD COVE
+	engine_flag wVisitedSpawns, 8  ; TRANQUIL_TARN
+	engine_flag wVisitedSpawns, 9  ; ERRIE HAMLET
 	engine_flag wVisitedSpawns, 10 ; saffron
 	engine_flag wVisitedSpawns, 11 ; celadon
 	engine_flag wVisitedSpawns, 12 ; fuchsia
@@ -111,6 +111,7 @@ EngineFlags:
 	engine_flag wVisitedSpawns, 26 ; lake of rage
 	engine_flag wVisitedSpawns, 27 ; blackthorn
 	engine_flag wVisitedSpawns, 28 ; silver cave
+
 
 	engine_flag wLuckyNumberShowFlag, 0 ; lucky number show
 

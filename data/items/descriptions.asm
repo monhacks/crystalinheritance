@@ -1085,8 +1085,8 @@ MagmarizerDesc:
 	next "magma energy.@"
 
 OddSouvenirDesc:
-	db   "An ornament from"
-	next "a far-away place.@"
+	db   "Evokes a new"
+	next "path forward.@"
 
 NuggetDesc:
 	db   "Made of pure gold."

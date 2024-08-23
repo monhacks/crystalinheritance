@@ -309,7 +309,7 @@
 	end_grass_wildmons
 
 	def_grass_wildmons NATIONAL_PARK
-	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
 	wildmon 22, NIDORINO
 	wildmon 23, NIDORINA
@@ -477,7 +477,7 @@
 	end_grass_wildmons
 
 	def_grass_wildmons SLOWPOKE_WELL_ENTRANCE
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
 	wildmon 3, ZUBAT
 	wildmon 3, EKANS
@@ -505,7 +505,7 @@
 	end_grass_wildmons
 
 	def_grass_wildmons SLOWPOKE_WELL_B1F
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
 	wildmon 4, ZUBAT
 	wildmon 4, EKANS
@@ -533,7 +533,7 @@
 	end_grass_wildmons
 
 	def_grass_wildmons SLOWPOKE_WELL_B2F
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
 	wildmon 25, GOLBAT
 	wildmon 25, ARBOK
@@ -925,7 +925,7 @@
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_32
-	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
 	wildmon 24, FURRET
 	wildmon 25, ARBOK
@@ -953,7 +953,7 @@
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_33
-	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
 	wildmon 3, JIGGLYPUFF
 	wildmon 3, PIDGEY
@@ -981,7 +981,7 @@
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_34
-	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
 	wildmon 15, SNUBBULL
 	wildmon 15, PIDGEY
@@ -1009,7 +1009,7 @@
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_35
-	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
 	wildmon 12, ABRA
 	wildmon 14, GRIMER
@@ -1037,7 +1037,7 @@
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_36
-	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
 	wildmon 20, TANGELA
 	wildmon 21, STANTLER
@@ -1065,7 +1065,7 @@
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_37
-	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
 	wildmon 20, TANGELA
 	wildmon 21, STANTLER
@@ -1093,7 +1093,7 @@
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_38
-	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
 	wildmon 36, GRANBULL
 	wildmon 36, PERSIAN
@@ -1149,7 +1149,7 @@
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_42
-	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
 	wildmon 40, DONPHAN
 	wildmon 42, SKARMORY
@@ -1177,7 +1177,7 @@
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_43
-	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
 	wildmon 45, AMPHAROS
 	wildmon 43, VENOMOTH
@@ -1205,7 +1205,7 @@
 	end_grass_wildmons
 
 	def_grass_wildmons LAKE_OF_RAGE
-	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
 	wildmon 41, KANGASKHAN
 	wildmon 39, SCYTHER
@@ -1233,7 +1233,7 @@
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_KAJO
-	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
 	wildmon 21, RHYHORN
 	wildmon 19, MANKEY
@@ -1261,7 +1261,7 @@
 	end_grass_wildmons
 
 	def_grass_wildmons KAJO_ACQUIFER
-	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
 	wildmon 21, RHYHORN
 	wildmon 19, MANKEY
@@ -1290,7 +1290,7 @@
 
 
 	def_grass_wildmons MAGNET_TRAIN_TUNNEL
-	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
 	wildmon 21, VOLTORB
 	wildmon 19, RHYHORN

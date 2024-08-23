@@ -251,12 +251,11 @@ ItemIconPointers:
 	dba RadiantOpalIcon
 	dba ShoreFoamIcon
 	dba FixedChargeIcon
-	dba WhtApriconIcon
 	dba ToughLeavesIcon
+	dba WhtApriconIcon
 	dba HollowRockIcon
 	dba PnkApricornIcon
 	assert_table_length NUM_ITEMS + 1 
-
 
 KeyItemIconPointers:
 	dba BicycleIcon

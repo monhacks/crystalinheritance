@@ -339,6 +339,9 @@ ENDM
 	map_attributes AnarresHouse, ANARRES_HOUSE, $0, 0
 	
 	; new from 08-13-24
+	map_attributes AnarresHoltGate, ANARRES_HOLT_GATE, $0, 0
+	map_attributes HoltCoastGate, HOLT_COAST_GATE, $0, 0
+	
 	map_attributes CalmCoast, CALM_COAST, $5, NORTH
 	connection north, Gauldenrod, GAULDENROD, -7 ; NOT SURE IF IT WILL WORK, cf route above
 	

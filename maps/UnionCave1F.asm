@@ -22,12 +22,13 @@ UnionCave1F_MapScriptHeader: ;todo add a heal
 	object_event  6, 17, SPRITE_FIREBREATHER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerFirebreatherRay, -1
 	object_event  6,  5, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerScientistDennett, -1
 	
-	itemball_event  3, 41, ESCAPE_ROPE, 1, EVENT_UNION_CAVE_1F_GREAT_BALL
-	itemball_event  2,  8, X_ATTACK, 1, EVENT_UNION_CAVE_1F_X_ATTACK
-	itemball_event  3, 28, SUPER_POTION, 1, EVENT_UNION_CAVE_1F_POTION
-	itemball_event 12, 45, FULL_HEAL, 1, EVENT_UNION_CAVE_1F_AWAKENING
+	itemball_event   3, 41, ESCAPE_ROPE, 1, EVENT_UNION_CAVE_1F_GREAT_BALL
+	itemball_event   2,  8, X_ATTACK, 1, EVENT_UNION_CAVE_1F_X_ATTACK
+	itemball_event   3, 28, SUPER_POTION, 1, EVENT_UNION_CAVE_1F_POTION
+	itemball_event  12, 45, FULL_HEAL, 1, EVENT_UNION_CAVE_1F_AWAKENING
 	fruittree_event 14, 40, FRUITTREE_UNION_CAVE, HOLLOW_ROCK, PAL_NPC_BLUE
-
+	tmhmball_event   2, 14, TM_BULLDOZE, EVENT_ROUTE_39_TM_BULLDOZE ;BULLDOZE
+	smashrock_event  3, 14 
 
 GenericTrainerScientistLowell:
 	generictrainer SCIENTIST, LOWELL, EVENT_BEAT_SCIENTIST_LOWELL, ScientistLowellSeenText, ScientistLowellBeatenText

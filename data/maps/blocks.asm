@@ -701,6 +701,14 @@ SECTION "GauldenrodUnderground_BlockData", ROMX
 GauldenrodUnderground_BlockData:
 	INCBIN "maps/GauldenrodUnderground.ablk.lz"
 
+SECTION "AnarresHoltGate_BlockData", ROMX
+AnarresHoltGate_BlockData:
+	INCBIN "maps/AnarresHoltGate.ablk.lz"
+
+SECTION "HoltCoastGate_BlockData", ROMX
+HoltCoastGate_BlockData:
+	INCBIN "maps/HoltCoastGate.ablk.lz"
+
 SECTION "GauldenrodSereneSpringsGate_BlockData", ROMX
 GauldenrodSereneSpringsGate_BlockData:
 	INCBIN "maps/GauldenrodSereneSpringsGate.ablk.lz"

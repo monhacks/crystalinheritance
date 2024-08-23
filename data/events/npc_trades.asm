@@ -37,7 +37,7 @@ NPCTrades:
 	rawchar "Jacques@", $00
 ; NPC_TRADE_HARI in Ecruteak City
 	rawchar 0, FARFETCH_D, PIDGEY,      "Clarence@@@"
-	db $EE, $EE, $EE, HIDDEN_ABILITY | NAT_SPD_UP_DEF_DOWN,   MALE,   FAST_BALL,    GOLD_LEAF
+	db $EE, $EE, $EE, HIDDEN_ABILITY | NAT_SPD_UP_DEF_DOWN,   MALE,   FAST_BALL,    SITRUS_BERRY
 	dw 43972
 	rawchar "Hari@@@@", $00
 	assert_table_length NUM_NPC_TRADES

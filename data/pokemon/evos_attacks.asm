@@ -31,7 +31,7 @@ CyndaquilEvosAttacks:
 
 QuilavaEvosAttacks:
 	db EVOLVE_LEVEL, 36, TYPHLOSION
-	db EVOLVE_ITEM, FIRE_STONE, H__TYPHLOSION
+	db EVOLVE_HOLDING, ODD_SOUVENIR, H__TYPHLOSION
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, LEER
@@ -106,7 +106,7 @@ RowletEvosAttacks:
 	
 DartrixEvosAttacks:
 	db EVOLVE_LEVEL, 34, DECIDUEYE
-	db EVOLVE_ITEM, LEAF_STONE, H__DECIDUEYE
+	db EVOLVE_HOLDING, ODD_SOUVENIR,  H__DECIDUEYE
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, LEER
@@ -182,7 +182,7 @@ OshawottEvosAttacks:
 	
 DewottEvosAttacks:
 	db EVOLVE_LEVEL, 34, SAMUROTT
-	db EVOLVE_ITEM, WATER_STONE, H__SAMUROTT
+	db EVOLVE_HOLDING, ODD_SOUVENIR, H__SAMUROTT
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, LEER
@@ -913,6 +913,7 @@ PrimeapeEvosAttacks:
 	
 GrowlitheEvosAttacks:
 	db EVOLVE_ITEM, FIRE_STONE, ARCANINE
+	db EVOLVE_HOLDING, ODD_SOUVENIR, H__ARCANINE
 	db 0 ; no more evolutions
 	db 1, GROWL
 	db 1, BITE
@@ -1328,10 +1329,10 @@ SlowbroEvosAttacks:
 	db 14, CONFUSION
 	db 19, DISABLE
 	db 30, AQUA_TAIL
-	db 30, HEADBUTT
-	db 30, SHELL_SMASH
 	db 30, ZEN_HEADBUTT
-	db 36, SAFEGUARD ; Slack Off → egg move
+	db 30, SHELL_SMASH
+	db 30 ,HEADBUTT
+	db 35, SAFEGUARD ; Slack Off → egg move
 	db 43, AMNESIA
 	db 49, PSYCHIC_M
 	db 55, RAIN_DANCE
@@ -1385,7 +1386,6 @@ MagnemiteEvosAttacks:
 
 MagnetonEvosAttacks:
 	db EVOLVE_ITEM, THUNDERSTONE, MAGNEZONE 
-;	db EVOLVE_LOCATION, ROUTE KA_JO, MAGNEZONE ; NEED TO FIX THIS
 	db 0 ; no more evolutions
 	db 1, TRI_ATTACK ; evolution move
 	db 1, SUPERSONIC
@@ -1626,7 +1626,7 @@ SteelixEvosAttacks:
 
 VoltorbEvosAttacks:
 	db EVOLVE_LEVEL, 30, ELECTRODE
-	db EVOLVE_ITEM, LEAF_STONE, H__ELECTRODE
+	db EVOLVE_HOLDING, ODD_SOUVENIR,  H__ELECTRODE
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, THUNDERSHOCK ; Let's Go move
@@ -3390,7 +3390,7 @@ GranbullEvosAttacks:
 	db 0 ; no more level-up moves
 
 QwilfishEvosAttacks:
-	db EVOLVE_ITEM, DUSK_STONE, OVERQWIL
+	db EVOLVE_HOLDING, ODD_SOUVENIR,  OVERQWIL
 	db 0 ; no more evolutions	
 	db 1, WATER_GUN
 	db 1, SPIKES
@@ -3479,7 +3479,7 @@ HeracrossEvosAttacks:
 
 SneaselEvosAttacks:
 	db EVOLVE_HOLDING, RAZOR_CLAW, WEAVILE
-	db EVOLVE_HOLDING, POISON_BARB, SNEASLER
+	db EVOLVE_HOLDING, ODD_SOUVENIR, SNEASLER
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, LEER
@@ -3809,7 +3809,7 @@ DonphanEvosAttacks:
 	db 0 ; no more level-up moves
 
 StantlerEvosAttacks:
-	db EVOLVE_ITEM, MOON_STONE, WYRDEER
+	db EVOLVE_HOLDING, ODD_SOUVENIR, WYRDEER
 	db 0 ; no more evolutions
 	db 1, HEADBUTT
 	db 1, HYPNOSIS

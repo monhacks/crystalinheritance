@@ -680,40 +680,49 @@ OakScript:
 	opentext
 	jumpopenedtext OakPokemonText
 
-PryceScript:
+
+IlexForestAzaleaGateOfficerScript: 
+	checkevent EVENT_GOT_TM46_THIEF_FROM_LANCE
+	iftrue_jumptextfaceplayer IlexForestAzaleaGateOfficer_GotThief
 	faceplayer
 	opentext
-	setevent EVENT_TALKED_TO_PRYCE_TINDER_GARDEN
-	jumpopenedtext PrycePokemonText
+	writetext IlexForestAzaleaGateOfficerText
+	promptbutton
+	verbosegivetmhm TM_THIEF
+	setevent EVENT_GOT_TM46_THIEF_FROM_LANCE
+	jumpthisopenedtext
 
-TGKurtScript:
-	faceplayer
-	opentext
-	jumpopenedtext TGKurtFirstPokemonText
-
-OakPokemonText:
-	text "What strange"
-	line "#mon. I"
-	cont "haven't had a"
-	cont "rush like that"
-	cont "in years!"
+IlexForestAzaleaGateOfficer_GotThief:
+	text "Stay alert for"
+	line "troublemakers!"
 	done
-
-PrycePokemonText:
-	text "Oh, <PLAYER>!"
-	line "How you've grown."
-	cont "Now you have your"
-	cont "own #mon!"
 	
-	para "I'm sorry that I"
-	line "was so late."	
+IlexForestAzaleaGateOfficerText:
+	text "Watch out."
+	
+	para "There's reports of"
+	line "groups stealing"
+	cont "equipment in Ilex"
+	cont "Forest. If you see"
+	cont "them, can you"
+	cont "steal it back?"
+	done
+	
 
-	para "Congrats on"
-	line "getting a nice"
-	cont "partner. I hope"
-	cont "it brings you"
-	cont "joy. There's"
-	cont "been a lot of"
+PryceScript:
+	checkevent EVENT_GOT_RETURN_PRYCE
+	iftrue_jumptextfaceplayer PryceSprigText
+	faceplayer
+	opentext
+	writetext PrycePokemonText
+	promptbutton
+	verbosegivetmhm TM_RETURN
+	setevent EVENT_GOT_RETURN_PRYCE
+	jumpopenedtext
+
+PryceSprigText:
+	text "There has been"
+	line "quite a lot of"
 	cont "cynicism in"
 	cont "Johto, lately."
 	
@@ -732,6 +741,39 @@ PrycePokemonText:
 	cont "will remind them"
 	cont "of their duty."
 	done
+
+PrycePokemonText:
+	text "Oh, <PLAYER>!"
+	line "How you've grown."
+	cont "Now you have your"
+	cont "own #mon!"
+	
+	para "I'm sorry that I"
+	line "was so late."	
+
+	para "Congrats on"
+	line "getting a nice"
+	cont "partner. I hope"
+	cont "it brings you"
+	cont "joy. Here's a"
+	cont "TM that will get"
+	cont "stronger as your"
+	cont "bond grows."
+	done
+
+TGKurtScript:
+	faceplayer
+	opentext
+	jumpopenedtext TGKurtFirstPokemonText
+
+OakPokemonText:
+	text "What strange"
+	line "#mon. I"
+	cont "haven't had a"
+	cont "rush like that"
+	cont "in years!"
+	done
+
 
 CharcoalScript:
 	faceplayer
