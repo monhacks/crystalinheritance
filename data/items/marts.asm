@@ -15,11 +15,11 @@ Marts:
 	dw EcruteakMart
 	dw OlivineMart
 	dw WesternCapitalMonMart
-	dw YellowForestMart ; unused
+	dw WesternCapitalPrepMart ; unused
 	dw MahoganyMart1 ; unused
 	dw MahoganyMart2
 	dw BlackthornMart ; unused
-	dw IndigoPlateauMart
+	dw TradersLandingMart
 	dw AnarresMart
 	dw GauldenrodMart1
 	dw GauldenrodMart2 ; BERRIES
@@ -48,6 +48,11 @@ CherrygroveMart:
 	db -1
 
 CherrygroveMartAfterDex:
+	db 1 ; # items
+	db POTION
+	db -1
+	
+BlackthornMart:
 	db 1 ; # items
 	db POTION
 	db -1
@@ -224,7 +229,7 @@ WesternCapitalPrepMart:
 	db MAX_POTION
 	db REVIVE
 	db ULTRA_BALL
-	db MAX_ELIXER
+	db MAX_ELIXIR
 	db RARE_CANDY
 	db PP_MAX	
 	db -1
@@ -312,17 +317,8 @@ GauldenrodMart2: ; berries
 	db SITRUS_BERRY
 	db -1
 
-GauldenrodMart3: ; Held items
-	db 4 ; # items
-	db POKE_DOLL
-	db FRESH_WATER
-	db SODA_POP
-	db MOOMOO_MILK
-	db -1
-
 GauldenrodMart3: ; TMs, HMs
-	db 8 ; # items
-	dbw TM_FLASH,          1000
+	db 6 ; # items
 	dbw TM_ROCK_SMASH,     5000
 	dbw TM_THUNDER_WAVE,  10000
 	dbw TM_SUNNY_DAY,     20000
@@ -434,12 +430,11 @@ OlivineBattleMart:
 	db -1
 
 SinjohCrossroadsMonMart: ; todo
-	db 7 ; # items
+	db 4 ; # items
 	db DRAGON_SCALE
 	db SCOPE_LENS
 	db FOCUS_BAND
 	db FOCUS_SASH
-	db WEAKNESS_POLICY
 	db -1
 
 GauldenrodTMMart: ; todo

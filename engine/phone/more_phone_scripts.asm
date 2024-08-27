@@ -1227,7 +1227,7 @@ IrwinRumorScript:
 	iftrue UnknownScript_0xa08d0
 	checkflag ENGINE_SOULBADGE
 	iftrue UnknownScript_0xa08f0
-	checkflag ENGINE_FLYPOINT_VERMILION
+	checkflag EVENT_BEAT_ELITE_FOUR
 	iftrue UnknownScript_0xa08c8
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue UnknownScript_0xa08c0

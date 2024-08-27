@@ -2092,12 +2092,12 @@ FlyMap:
 ; Note that .NoKanto should be modified in tandem with this branch
 	push af
 ; Start from New Bark Town
-	ld a, FLY_NEW_BARK
+	ld a, FLY_VIOLET
 	ld [wTownMapPlayerIconLandmark], a
 ; Flypoints begin at New Bark Town...
 	ld [wStartFlypoint], a
 ; ..and end at Silver Cave
-	ld a, FLY_MT_SILVER
+	ld a, FLY_LAKE_OF_RAGE
 	ld [wEndFlypoint], a
 ; Fill out the map
 	call FillJohtoMap
@@ -2122,17 +2122,17 @@ FlyMap:
 
 ; visited and its flypoint enabled
 	push af
-	ld c, HOLLYS_HOLT ; TODO SHOULD BE HOLLYS HOLT, USED TO BE INDIGO PLATEAU THEN WAS LAKE OF RAGE
+	ld c, SPAWN_ANARRES_SP ; TODO SHOULD BE HOLLYS HOLT, USED TO BE INDIGO PLATEAU THEN WAS LAKE OF RAGE
 	call HasVisitedSpawn
 	and a
 	jr z, .NoKanto
 ; Kanto's map is only loaded if we've visited Indigo Plateau
 
 ; Flypoints begin at Pallet Town...
-	ld a, FLY_PALLET
+	ld a, FLY_ANARRES_SP
 	ld [wStartFlypoint], a
 ; ...and end at Indigo Plateau
-	ld a, FLY_INDIGO
+	ld a, FLY_TIMELESS_TAPESTRY_SP
 	ld [wEndFlypoint], a
 ; Because Indigo Plateau is the first flypoint the player
 
@@ -2151,12 +2151,12 @@ FlyMap:
 ; If Indigo Plateau hasn't been visited, we use Johto's map instead
 
 ; Start from New Bark Town
-	ld a, FLY_NEW_BARK
+	ld a, FLY_AZALEA
 	ld [wTownMapPlayerIconLandmark], a
 ; Flypoints begin at New Bark Town...
 	ld [wStartFlypoint], a
 ; ..and end at Silver Cave
-	ld a, FLY_MT_SILVER
+	ld a, FLY_LAKE_OF_RAGE
 	ld [wEndFlypoint], a
 	call FillJohtoMap
 	pop af

@@ -94,7 +94,7 @@
 	wildmon 12, ABRA
 	wildmon 12, MAREEP
 	wildmon 12, SNUBBULL
-	wildmon 12, SLUGMA
+	wildmon 12, MAGCARGO
 	wildmon 12, YANMA
 ;	; day
 	wildmon 12, NIDORINO
@@ -102,7 +102,7 @@
 	wildmon 12, ABRA
 	wildmon 12, MAREEP
 	wildmon 12, SNUBBULL
-	wildmon 12, SLUGMA
+	wildmon 12, MAGCARGO
 	wildmon 12, YANMA
 ;	; nite
 	wildmon 12, NIDORINO
@@ -110,7 +110,7 @@
 	wildmon 12, ABRA
 	wildmon 12, MAREEP
 	wildmon 12, SNUBBULL
-	wildmon 12, SLUGMA
+	wildmon 12, MAGCARGO
 	wildmon 12, YANMA
 	end_grass_wildmons
 
@@ -173,7 +173,7 @@
 	def_grass_wildmons CATTLE_CULL_38
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 ;	; morn
-	wildmon 24, FARFETCH'D
+	wildmon 24, FARFETCH_D
 	wildmon 24, MEOWTH
 	wildmon 24, MILTANK
 	wildmon 24, TAUROS
@@ -181,7 +181,7 @@
 	wildmon 24, GLIGAR
 	wildmon 24, GLIGAR
 ;	; day
-	wildmon 24, FARFETCH'D
+	wildmon 24, FARFETCH_D
 	wildmon 24, MEOWTH
 	wildmon 24, MILTANK
 	wildmon 24, TAUROS
@@ -189,7 +189,7 @@
 	wildmon 24, GLIGAR
 	wildmon 24, GLIGAR
 ;	; nite
-	wildmon 24, FARFETCH'D
+	wildmon 24, FARFETCH_D
 	wildmon 24, MEOWTH
 	wildmon 24, MILTANK
 	wildmon 24, TAUROS
@@ -201,7 +201,7 @@
 	def_grass_wildmons CATTLE_CULL_39
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 ;	; morn
-	wildmon 25, FARFETCH'D
+	wildmon 25, FARFETCH_D
 	wildmon 25, MEOWTH
 	wildmon 25, MILTANK
 	wildmon 25, TAUROS
@@ -209,7 +209,7 @@
 	wildmon 25, ELECTABUZZ
 	wildmon 25, ELECTABUZZ
 ;	; day
-	wildmon 25, FARFETCH'D
+	wildmon 25, FARFETCH_D
 	wildmon 25, MEOWTH
 	wildmon 25, MILTANK
 	wildmon 25, TAUROS
@@ -217,7 +217,7 @@
 	wildmon 25, ELECTABUZZ
 	wildmon 25, ELECTABUZZ
 ;	; nite
-	wildmon 25, FARFETCH'D
+	wildmon 25, FARFETCH_D
 	wildmon 25, MEOWTH
 	wildmon 25, MILTANK
 	wildmon 25, TAUROS
@@ -254,7 +254,35 @@
 	wildmon 26, GOLBAT
 	end_grass_wildmons
 
-	def_grass_wildmons RUSALKA_RUINS
+	def_grass_wildmons RUSALKA_RUINS_1F
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
+;	; morn
+	wildmon 27, DUSCLOPS
+	wildmon 27, HAUNTER
+	wildmon 27, CLOYSTER
+	wildmon 27, ROTOM
+	wildmon 27, DUSCLOPS
+	wildmon 27, HAUNTER
+	wildmon 27, FROSLASS
+;	; day
+	wildmon 27, DUSCLOPS
+	wildmon 27, HAUNTER
+	wildmon 27, CLOYSTER
+	wildmon 27, ROTOM
+	wildmon 27, DUSCLOPS
+	wildmon 27, HAUNTER
+	wildmon 27, FROSLASS
+;	; nite
+	wildmon 27, DUSCLOPS
+	wildmon 27, HAUNTER
+	wildmon 27, CLOYSTER
+	wildmon 27, ROTOM
+	wildmon 27, DUSCLOPS
+	wildmon 27, HAUNTER
+	wildmon 27, FROSLASS
+	end_grass_wildmons
+
+	def_grass_wildmons RUSALKA_RUINS_B1F
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 ;	; morn
 	wildmon 27, DUSCLOPS
@@ -478,31 +506,31 @@
 	wildmon 33, DRAPION
 	end_grass_wildmons
 
-	def_grass_wildmons EMPIRES_REACH
+	def_grass_wildmons EMPIRES_EXTENT
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 ;	; morn
 	wildmon 35, TOXICROAK
-	wildmon 35, HBRAVIARY
+	wildmon 35, H__BRAVIARY
 	wildmon 35, STARAVIA
 	wildmon 35, LUXIO
 	wildmon 35, ROSELIA
-	wildmon 35, HBRAVIARY
+	wildmon 35, H__BRAVIARY
 	wildmon 35, TOXICROAK
 ;	; day
 	wildmon 35, TOXICROAK
-	wildmon 35, HBRAVIARY
+	wildmon 35, H__BRAVIARY
 	wildmon 35, STARAVIA
 	wildmon 35, LUXIO
 	wildmon 35, ROSELIA
-	wildmon 35, HBRAVIARY
+	wildmon 35, H__BRAVIARY
 	wildmon 35, TOXICROAK
 ;	; nite
 	wildmon 35, TOXICROAK
-	wildmon 35, HBRAVIARY
+	wildmon 35, H__BRAVIARY
 	wildmon 35, STARAVIA
 	wildmon 35, LUXIO
 	wildmon 35, ROSELIA
-	wildmon 35, HBRAVIARY
+	wildmon 35, H__BRAVIARY
 	wildmon 35, TOXICROAK
 	end_grass_wildmons
 

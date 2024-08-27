@@ -680,35 +680,6 @@ OakScript:
 	opentext
 	jumpopenedtext OakPokemonText
 
-
-IlexForestAzaleaGateOfficerScript: 
-	checkevent EVENT_GOT_TM46_THIEF_FROM_LANCE
-	iftrue_jumptextfaceplayer IlexForestAzaleaGateOfficer_GotThief
-	faceplayer
-	opentext
-	writetext IlexForestAzaleaGateOfficerText
-	promptbutton
-	verbosegivetmhm TM_THIEF
-	setevent EVENT_GOT_TM46_THIEF_FROM_LANCE
-	jumpthisopenedtext
-
-IlexForestAzaleaGateOfficer_GotThief:
-	text "Stay alert for"
-	line "troublemakers!"
-	done
-	
-IlexForestAzaleaGateOfficerText:
-	text "Watch out."
-	
-	para "There's reports of"
-	line "groups stealing"
-	cont "equipment in Ilex"
-	cont "Forest. If you see"
-	cont "them, can you"
-	cont "steal it back?"
-	done
-	
-
 PryceScript:
 	checkevent EVENT_GOT_RETURN_PRYCE
 	iftrue_jumptextfaceplayer PryceSprigText
@@ -718,7 +689,7 @@ PryceScript:
 	promptbutton
 	verbosegivetmhm TM_RETURN
 	setevent EVENT_GOT_RETURN_PRYCE
-	jumpopenedtext
+	jumpthisopenedtext
 
 PryceSprigText:
 	text "There has been"

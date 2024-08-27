@@ -66,7 +66,7 @@ Landmarks:
 	landmark  44,  88, LandingDocksName
 	landmark 140,  52, TranquilTarnName ; ok
 	landmark 144,  44, GrottoedGlacierName ; ok
-	landmark 136,  44, WesternGlacierName ; ok
+	landmark 136,  44, EnigmaGlacierName ; ok
 	landmark 140,  44, SinjohCampName ; good
 	landmark 140,  60, EmpiresReachName ; ok
 	landmark 140,  68, EerieHamletName ; ok
@@ -139,7 +139,7 @@ ArduousAnchorageName:  rawchar "Arduous¯Anchorage@"
 LandingDocksName:      rawchar "Landing¯Docks@"
 TranquilTarnName:      rawchar "Tranquil¯Tarn@"
 GrottoedGlacierName:   rawchar "Grottoed¯Glacier@"
-WesternGlacierName:    rawchar "Western¯Glacier@"
+EnigmaGlacierName:    rawchar "Enigma¯Glacier@"
 SinjohCampName:        rawchar "Sinjoh¯Camp@"
 EmpiresReachName:      rawchar "Empires¯Reach@"
 EerieHamletName:       rawchar "Eerie¯Hamlet@"

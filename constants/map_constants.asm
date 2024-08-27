@@ -147,7 +147,7 @@ ENDM
 	map_const ANARRES_CHARCOAL_KILN,                       5,  4 ;  9 shares map with charcoal kiln
 	map_const ANARRES_HOUSE,  	                           4,  4 ;  10 traditional house
 	map_const ANARRES_HOLT_GATE,                           4,  4 ; sprout tower 
-	map_const HOLT_COAST_GATE
+	map_const HOLT_COAST_GATE,                             4,  4 ; sprout tower
 
 
 	newgroup                                                     ;  6 ;gauldenrod and surrounding
@@ -172,7 +172,7 @@ ENDM
 	map_const STADIUM_BOX,                                    6, 6 ; traditional HOUSE
 
 
-	newgroup                                                 
+	newgroup        ; 7                                         
 	map_const EMPERORS_GARDEN,                               20, 20 ; johto traditional
 	map_const WESTERN_CAPITAL_DORMS,                           9,  4 ; johto house c.f. gauldenron
 	map_const WESTERN_CAPITAL_DANCE_THEATRE,                   6,  7 ;  cf dance theatre

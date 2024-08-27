@@ -105,7 +105,7 @@
 	wildmon 25, LAPRAS
 	end_water_wildmons
 
-	def_water_wildmons EMPIRES_REACH
+	def_water_wildmons EMPIRES_EXTENT
 	db 4 percent ; encounter rate
 	wildmon 35, SLOWBRO
 	wildmon 40, POLIWHIRL

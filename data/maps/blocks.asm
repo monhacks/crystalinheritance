@@ -682,7 +682,7 @@ GauldenrodStockroom_BlockData:
 WesternCapitalStockroom_BlockData:
 LandingStockroom_BlockData:
 SinjohStockroom_BlockData:
-EerieHamletDorms_BlockData:
+EerieHamletStockroom_BlockData:
 	INCBIN "maps/GauldenrodStockroom.ablk.lz"
 
 SECTION "GauldenrodGuild_BlockData", ROMX
@@ -778,10 +778,6 @@ SECTION "EmperorsGarden_BlockData", ROMX
 EmperorsGarden_BlockData:
 	INCBIN "maps/EmperorsGarden.ablk.lz"
 
-SECTION "WesternCapitalDanceTheatre_BlockData", ROMX
-WesternCapitalDanceTheatre_BlockData:
-	INCBIN "maps/WesternCapitalDanceTheatre.ablk.lz"
-
 SECTION "WesternCapitalCemetery_BlockData", ROMX
 WesternCapitalCemetery_BlockData:
 	INCBIN "maps/WesternCapitalCemetery.ablk.lz"
@@ -793,6 +789,10 @@ WesternCapital_BlockData:
 SECTION "WhispersWay_BlockData", ROMX
 WhispersWay_BlockData:
 	INCBIN "maps/WhispersWay.ablk.lz"
+	
+SECTION "WhispersTapestryGate_BlockData", ROMX
+WhispersTapestryGate_BlockData:
+	INCBIN "maps/WhispersTapestryGate.ablk.lz"
 
 SECTION "TimelessTapestry_BlockData", ROMX
 TimelessTapestry_BlockData:
@@ -914,17 +914,17 @@ SECTION "ArduousAnchorage_BlockData", ROMX
 ArduousAnchorage_BlockData:
 	INCBIN "maps/ArduousAnchorage.ablk.lz"
 
-SECTION "OlivineDesal1F_BlockData", ROMX
-OlivineDesal1F_BlockData:
-	INCBIN "maps/OlivineDesal1F.ablk.lz"
+SECTION "OlivineCityDesal1F_BlockData", ROMX
+OlivineCityDesal1F_BlockData:
+	INCBIN "maps/OlivineCityDesal1F.ablk.lz"
 
-SECTION "OlivineDesalIntake_BlockData", ROMX
-OlivineDesalIntake_BlockData:
-	INCBIN "maps/OlivineDesalIntake.ablk.lz"
+SECTION "OlivineCityDesalIntake_BlockData", ROMX
+OlivineCityDesalIntake_BlockData:
+	INCBIN "maps/OlivineCityDesalIntake.ablk.lz"
 
-SECTION "OlivineDesalB1F_BlockData", ROMX
-OlivineDesalB1F_BlockData:
-	INCBIN "maps/OlivineDesalB1F.ablk.lz"
+SECTION "OlivineCityDesalB1F_BlockData", ROMX
+OlivineCityDesalB1F_BlockData:
+	INCBIN "maps/OlivineCityDesalB1F.ablk.lz"
 
 SECTION "SlowpokeDreams_BlockData", ROMX
 SlowpokeDreams_BlockData:
@@ -932,7 +932,7 @@ SlowpokeDreams_BlockData:
 
 SECTION "SlowpokeDreamsBackgroundNS_BlockData", ROMX
 SlowpokeDreamsBackgroundN_BlockData:
-SlowpokeDreamsBackgroundS_BlockData
+SlowpokeDreamsBackgroundS_BlockData:
 	INCBIN "maps/SlowkingDreamsBackgroundNS.ablk.lz"
 
 SECTION "SlowpokeDreamsBackgroundEW_BlockData", ROMX
@@ -1027,3 +1027,7 @@ ClastsCradle1F_BlockData:
 SECTION "ClastsCradleB1F_BlockData", ROMX
 ClastsCradleB1F_BlockData:
 	INCBIN "maps/ClastsCradleB1F.ablk.lz"
+
+SECTION "EnteisCavern_BlockData", ROMX
+EnteisCavern_BlockData:
+	INCBIN "maps/EnteisCavern.ablk.lz"

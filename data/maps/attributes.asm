@@ -322,10 +322,6 @@ ENDM
 	map_attributes HiddenCaveGrotto, HIDDEN_CAVE_GROTTO, $9, 0
 	map_attributes ManiasHouse, MANIAS_HOUSE, $0, 0
 	map_attributes CianwoodGym, CIANWOOD_GYM, $0, 0
-	map_attributes CianwoodPokeCenter1F, CIANWOOD_POKECENTER_1F, $0, 0
-	map_attributes CianwoodPharmacy, CIANWOOD_PHARMACY, $0, 0
-	map_attributes CianwoodCityPhotoStudio, CIANWOOD_CITY_PHOTO_STUDIO, $0, 0
-	map_attributes CianwoodLugiaSpeechHouse, CIANWOOD_LUGIA_SPEECH_HOUSE, $0, 0
 	map_attributes MoveManiacsHouse, MOVE_MANIACS_HOUSE, $0, 0
 	map_attributes HollysHolt, HOLLYS_HOLT, $35, 0 ; start of anarres group
 	map_attributes AnarresTown, ANARRES_TOWN, $5, 0 
@@ -339,7 +335,14 @@ ENDM
 	map_attributes AnarresHouse, ANARRES_HOUSE, $0, 0
 	
 	; new from 08-13-24
+	map_attributes OlivineCityDesal1F, OLIVINE_DESAL_1F, $0, 0
+
+	map_attributes OlivineCityDesalIntake, OLIVINE_DESAL_INTAKE, $0, 0
+
+	map_attributes OlivineCityDesalB1F, OLIVINE_DESAL_B1F, $0, 0	
+	
 	map_attributes AnarresHoltGate, ANARRES_HOLT_GATE, $0, 0
+	
 	map_attributes HoltCoastGate, HOLT_COAST_GATE, $0, 0
 	
 	map_attributes CalmCoast, CALM_COAST, $5, NORTH

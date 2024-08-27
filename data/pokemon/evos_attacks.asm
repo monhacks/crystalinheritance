@@ -3604,13 +3604,13 @@ MagcargoEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, SHELL_SMASH ; evolution move
 	db 1, MUD_SLAP ; Smog → TM move
-	db 6, EMBER
-	db 8, ROCK_THROW
-	db 13, DEFENSE_CURL ; Harden → similar move
-	db 15, FIRE_SPIN ; Incinerate → new move
-	db 20, SMOKESCREEN ; Clear Smog → egg move
-	db 22, ANCIENTPOWER
-	db 27, FLAME_CHARGE ; Flame Burst → TM move
+	db 6, SCREECH
+	db 6, FIRE_SPIN
+	db 6, SMOKESCREEN ; Clear Smog → egg move
+	db 6, DEFENSE_CURL ; Harden → similar move
+	db 22, EMBER ; Incinerate → new move
+	db 22, ROCK_THROW
+	db 27, SCALD ; Flame Burst → TM move
 	db 29, ROCK_SLIDE
 	db 34, PAIN_SPLIT ; Lava Plume → HGSS tutor move
 	db 36, AMNESIA

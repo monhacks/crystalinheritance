@@ -35,8 +35,8 @@ TreeMonMaps:
 	treemon_map EMPERORS_GARDEN, 4
 	treemon_map WESTERN_CAPITAL, 4
 	treemon_map TRANQUIL_TARN, 5
-	treemon_map SINJOH_CAMP, 5
-	treemon_map EMPIRES_REACH, 5
+	treemon_map SINJOH_CROSSROADS, 5
+	treemon_map EMPIRES_EXTENT, 5 
 	treemon_map SULFUR_STY, 3
 	db -1
 
@@ -49,15 +49,7 @@ RockMonMaps:
 	treemon_map SLOWPOKE_WELL_B1F, 7
 	treemon_map BURNED_TOWER_B1F, 7
 ;icemon maps
-	treemon_map 
+	treemon_map GROTTOED_GLACIER_1F, 8
+	treemon_map GROTTOED_GLACIER_B1F, 8
+	treemon_map GROTTOED_GLACIER_B2F, 8
 	db -1
-
-;0	dw TreeMonSet_City
-;1	dw TreeMonSet_Canyon
-;2	dw TreeMonSet_Town
-;3	dw TreeMonSet_Route
-;4	dw TreeMonSet_Kanto
-;5	dw TreeMonSet_Lake
-;6	dw TreeMonSet_Forest
-;7	dw TreeMonSet_Rock
-;8	dw TreeMonSet_Ice
