@@ -692,45 +692,59 @@ PryceScript:
 	jumpthisopenedtext
 
 PryceSprigText:
-	text "There has been"
-	line "quite a lot of"
-	cont "cynicism in"
-	cont "Johto, lately."
-	
-	para "It has been aff-"
-	line "ecting the other"
-	cont "Gym Leaders."
-	
-	para "I'm on a bit of"
-	line "a mission to get"
-	cont "them to recommit"
-	cont "to their mission."
-	
-	para "I'm hoping that"
-	line "a sprig from"
-	cont "this blossom tree"
-	cont "will remind them"
-	cont "of their duty."
+	text "Ah, <PLAYER>,"
+	line "Johto's been a"
+	cont "bit gloomy"
+	cont "lately."
+
+	para "Even some Gym"
+	line "Leaders seem to"
+	cont "have lost their"
+	cont "spark!"
+
+	para "But fear not!"
+	line "I'm on a grand"
+	cont "quest to reignite"
+	cont "their passions!"
+
+	para "This little sprig"
+	line "from our sacred"
+	cont "blossom tree-"
+
+	para "It's more than"
+	line "just a twig,"
+	cont "it's hope!"
+
+	para "It'll remind them"
+	line "of the heritage"
+	cont "they're meant"
+	cont "to uphold!"
 	done
 
 PrycePokemonText:
 	text "Oh, <PLAYER>!"
-	line "How you've grown."
-	cont "Now you have your"
-	cont "own #mon!"
-	
-	para "I'm sorry that I"
-	line "was so late."	
+	line "Look at you now!"
 
-	para "Congrats on"
-	line "getting a nice"
-	cont "partner. I hope"
-	cont "it brings you"
-	cont "joy. Here's a"
-	cont "TM that will get"
-	cont "stronger as your"
-	cont "bond grows."
+	para "Your very own"
+	line "#MON partner!"
+	cont "What a moment!"
+
+	para "Forgive my"
+	line "tardiness, I"
+	cont "got caught up"
+	cont "in memories."
+
+	para "This reminds me"
+	line "of my first"
+	cont "adventure!"
+
+	para "Here's a special"
+	line "TM. It grows"
+	cont "stronger with"
+	cont "your bond!"
 	done
+
+
 
 TGKurtScript:
 	faceplayer

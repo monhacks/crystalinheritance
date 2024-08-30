@@ -20,8 +20,8 @@ NUM_SPRITEDATA_FIELDS EQU _RS
 	const PAL_OW_GREEN  ; 2
 	const PAL_OW_BROWN  ; 3
 	const PAL_OW_PURPLE ; 4
-	const PAL_OW_SILVER ; 5
-	const PAL_OW_TREE   ; 6
+	const PAL_OW_SILVER ; 5 ; possibly up for grabs?
+	const PAL_OW_TREE   ; 6 ; 
 	const PAL_OW_ROCK   ; 7
 
 ; for party menu icons

@@ -195,27 +195,24 @@ TammyText2:
 	done
 
 HollisHmm:
-	text "HOLLIS: Hmm?"
+	text "HOLLIS: I..."
+	line "I'm listening."
 	done
 
 TammyText3:
-	text "The forest is a"
-	line "shared resource"
-	cont "for us all. It"
-	cont "connects us to"
-	cont "our past and our"
-	cont "future. My"
-	cont "technique will"
-	cont "allow people to"
-	cont "take part in"
-	cont "managing it."
+	text "The forest binds"
+	line "us all. Past,"
+	cont "present, future."
+
+	para "My technique lets"
+	line "everyone be a"
+	cont "guardian."
 	done
 
 HollisAbuse:
-	text "But how can we"
-	line "know that it"
-	cont "will not be"
-	cont "abused?"
+	text "But what if"
+	line "people misuse"
+	cont "this power?"
 	done
 	
 TammyText4:
@@ -230,18 +227,16 @@ TammyText4:
 	done
 
 HollisHM:
-	text "I appreciate"
-	line "your idea. It"
-	cont "may take years"
-	cont "for the forest"
-	cont "to grow back to"
-	cont "its original"
-	cont "size. My HM is"
-	cont "still too"
-	cont "powerful, but I"
-	cont "will let you"
-	cont "teach others"
-	cont "your technique."
+	text "I... I see your"
+	line "point. My method"
+	cont "is too harsh."
+
+	para "We'll try your"
+	line "way, carefully."
+
+	para "It's time I"
+	line "learned to trust"
+	cont "others again."
 	done
 
 TammyThanks:
@@ -260,19 +255,29 @@ TammyWalksOutMovement:
 
 HollisCongratulates:
 	text "Congratulations"
-	line "on beating me in"
-	cont "a battle. No one"
-	cont "has done that in"
-	cont "a long time. I"
-	cont "need to learn to"
-	cont "build other"
-	cont "people up so"
-	cont "that we can live"
-	cont "as a community"
-	cont "again. Oh, and"
-	cont "you've earned"
-	cont "the right to"
-	cont "have this."
+	line "on your victory."
+
+	para "It's been a long"
+	line "time since I've"
+	cont "faced defeat."
+
+	para "Perhaps it's"
+	line "time I learned"
+	cont "from others,"
+	cont "not just teach."
+
+	para "Together, we"
+	line "might build"
+	cont "something"
+	cont "greater than"
+	cont "I imagined."
+
+	para "You've proven"
+	line "yourself worthy."
+
+	para "Please, accept"
+	line "this as a token"
+	cont "of my respect."
 	done
 
 AnarresTowerTammyScript:
@@ -284,23 +289,24 @@ AnarresTowerTammyScript:
 	done
 
 TextHollisAfterBattle:
-	text "You showed me"
-	line "that might is"
-	cont "not always"
-	cont "right."
+	text "You've opened"
+	line "my eyes."
 
-	para "The Cut HM is"
-	line "is still too"
-	cont "powerful to be"
-	cont "used without"
-	cont "recognizing its"
-	cont "effects, but we"
-	cont "can build a"
-	cont "culture around"
-	cont "talking through"
-	cont "the tradeoffs"
-	cont "before taking"
-	cont "action."
+	para "I thought I was"
+	line "protecting us,"
+	cont "but I was just"
+	cont "holding us back."
+
+	para "This HM... it's"
+	line "powerful, but"
+	cont "it needs wisdom"
+	cont "to use right."
+
+	para "Maybe together,"
+	line "we can find that"
+	cont "wisdom. And heal"
+	cont "more than just"
+	cont "the forest."
 	done
 
 
@@ -331,29 +337,40 @@ AmosWalksAwayMovement:
 	step_end
 
 AmosSaysHelloText:
-	text "Another flunkie"
-	line "to defend his"
-	cont "cowardice?"
-	
+	text "A flunkie to"
+	line "throw me out?"
+
 	para "..."
-	line "No, you aren't"
-	cont "dressed right."
-	
-	para "My name is Amos."
-	line "I'm trying to"
-	cont "convince Hollis"
-	cont "to join in opp-"
-	cont "osition to the"
-	cont "Emperor's plan."
-	
-	para "If he wants to"
-	line "stay the center"
-	cont "of his universe,"
-	cont "so be it."
-	
+
+	para "Oh, you're not--"
+	line "Never mind."
+
+	para "I'm Amos. I've"
+	line "been trying to"
+	cont "get Hollis to"
+	cont "see reason about"
+	cont "the Emperor's"
+	cont "threat."
+
+	para "But he'd rather"
+	line "hide in his"
+	cont "tower than help"
+	cont "his neighbors"
+	cont "prepare."
+
 	para "..."
-	
-	para "I must be going."
+
+	para "Fine. Let him"
+	line "cling to what"
+	cont "remains of the"
+	cont "forest, while"
+	cont "the rest of us"
+	cont "fight for our"
+	cont "future."
+
+	para "I've wasted"
+	line "enough time"
+	cont "here."
 	done
 
 AnarresTower3FHollisScript:
