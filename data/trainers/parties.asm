@@ -1647,23 +1647,24 @@ YoungsterGroup:
 
 ; ================
 
-	; YOUNGSTER
+	; YOUNGSTER ; CALM COAST 
 	db "Warren@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 56, PIDGEOTTO
-	db 60, FURRET
+	db 14, TANGELA
+	db 16, MAREEP
+	db 18, NATU
 	db -1 ; end
 
 ; ================
 
-	; YOUNGSTER
+	; YOUNGSTER CALM COAST 
 	db "Jimmy@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 60, FURRET
-	db 60, ARBOK
-	db 60, PARASECT
+	db 16, CYNDAQUIL
+	db 16, EKANS
+	db 16, DIGLETT
 	db -1 ; end
 
 ; ================
@@ -5390,7 +5391,7 @@ FirebreatherGroup:
 ; ================================
 ; ================
 
-	; FIREBREATHER
+	; FIREBREATHER ; union cave
 	db "Otis@"
 	db TRAINERTYPE_NORMAL
 	; party
@@ -5400,13 +5401,13 @@ FirebreatherGroup:
 
 ; ================
 
-	; FIREBREATHER
+	; FIREBREATHER ; gauldenrod
 	db "Dick@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 53, GROWLITHE
-	db 55, GROWLITHE
-	db 57, ARCANINE
+	db 16, QUILAVA
+	db 16, MAGCARGO
+	db 14, WEEZING
 	db -1 ; end
 
 ; ================
@@ -8338,34 +8339,33 @@ BattleGirlGroup:
 ; ================================
 ; ================
 
-	; BATTLE_GIRL
+	; BATTLE_GIRL ' CALM COAST
 	db "Subaru@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 26, MACHOP
-	db 27, MACHOKE
-	db 28, PRIMEAPE
+	db 15, OSHAWOTT
+	db 18, DEWOTT
 	db -1 ; end
 
 ; ================
 
-	; BATTLE_GIRL
+	; BATTLE_GIRL CALM COAST
 	db "Diane@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 28, HITMONLEE
-	db 28, URSARING
+	db 14, MARILL
+	db 18, AZJMARILL
 	db -1 ; end
 
 ; ================
 
-	; BATTLE_GIRL
+	; BATTLE_GIRL CALM COAST
 	db "Kagami@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 35, PRIMEAPE
-	db 35, MACHOKE
-	db 37, URSARING
+	db 15, POLIWAG
+	db 15, POLIWHIRL
+	db 15, POLIWRATH
 	db -1 ; end
 
 ; ================
@@ -8924,11 +8924,9 @@ TamerGroup:
 
 	; TAMER
 	db "Brett@"
-	db TRAINERTYPE_NORMAL
+	db TRAINERTYPE_NORMAL ; GAULDENROD
 	; party
-	db 59, ARBOK
-	db 59, TAUROS
-	db 61, URSARING
+	db 18, GABITE
 	db -1 ; end
 
 ; ================
@@ -9023,8 +9021,9 @@ AromaLadyGroup:
 	db "Dahlia@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 58, VILEPLUME
-	db 58, BELLOSSOM
+	db 18, DARTRIX
+	db 18, PARASECT
+	db 18, EXEGGCUTE
 	db -1 ; end
 
 ; ================
@@ -9250,16 +9249,16 @@ CooltrainerMGroup:
 ; ================================
 ; ================
 
-	; COOLTRAINERM
+	; COOLTRAINERM ; CALM COAST
 	db "Gaven@"
 	db TRAINERTYPE_MOVES
 	; party
-	db 39, VICTREEBEL
-		db WRAP, TOXIC, ACID, RAZOR_LEAF
-	db 39, FERALIGATR
-		db BUBBLE_BEAM, STOMP, DIG, PROTECT
-	db 39, FLAREON
-		db MUD_SLAP, QUICK_ATTACK, BITE, FIRE_SPIN
+	db 14, FLAREON
+		db SUNNY_DAY, EMBER, QUICK_ATTACK, GROWTH
+	db 14, GLOOM
+		db GROWTH, ABSORB, POISONPOWDER, ACID
+	db 14, LUXIO
+		db THUNDER_WAVE, THUNDERSHOCK, BITE, NO_MOVE	
 	db -1 ; end
 
 ; ================
@@ -9282,11 +9281,11 @@ CooltrainerMGroup:
 	db "Gaven@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_MOVES
 	; party
-	db 45, VICTREEBEL, NO_ITEM
+	db 15, VICTREEBEL, NO_ITEM
 		db GIGA_DRAIN, TOXIC, SLUDGE_BOMB, RAZOR_LEAF
-	db 45, FERALIGATR, KINGS_ROCK
+	db 15, FERALIGATR, KINGS_ROCK
 		db SURF, STOMP, DIG, BLIZZARD
-	db 45, FLAREON, NO_ITEM
+	db 15, FLAREON, NO_ITEM
 		db FLAMETHROWER, QUICK_ATTACK, BITE, FIRE_SPIN
 	db -1 ; end
 
@@ -9525,14 +9524,16 @@ CooltrainerFGroup:
 ; ================================
 ; ================
 
-	; COOLTRAINERF
+	; CooltrainerF
 	db "Beth@"
-	db TRAINERTYPE_MOVES
+	db TRAINERTYPE_ITEM | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
 	; party
-	db 40, RAPIDASH
-		db STOMP, FIRE_SPIN, PLAY_ROUGH, AGILITY
-	db 39, FLAAFFY
-		db SWIFT, THUNDERSHOCK, THUNDER_WAVE, LIGHT_SCREEN
+	db 16, DUNSPARCE, LEFTOVERS, "Par Four@"
+		db SANDSTORM, PROTECT, ROOST, HEADBUTT
+	db 18, RHYHORN, SALAC_BERRY, "Ivory@"
+		db SANDSTORM, ROCK_POLISH, DIG, STRENGTH
+	db 20, GLIGAR, POISON_BARB, "Scorpius@"
+		db SANDSTORM, AERIAL_ACE, DIG, POISON_STING
 	db -1 ; end
 
 ; ================

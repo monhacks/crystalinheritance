@@ -6,8 +6,8 @@ AnarresTown_MapScriptHeader:
 	callback MAPCALLBACK_NEWMAP, AnarresTownFlypointCallback
 
 	def_warp_events
-	warp_event  2, 10, HOLLYS_HOLT, 1 ;DONE
-	warp_event  2, 11, HOLLYS_HOLT, 2 ;DONE
+	warp_event  2, 10, ANARRES_HOLT_GATE, 1 ;DONE
+	warp_event  2, 11, ANARRES_HOLT_GATE, 2 ;DONE
 	warp_event  9,  3, ANARRES_HOUSE, 1 ;DONE
 	warp_event 21, 15, ANARRES_CHARCOAL_KILN, 1 ;DONE
 	warp_event 11, 13, ANARRES_TOWER_1F, 1

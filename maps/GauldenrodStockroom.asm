@@ -10,11 +10,12 @@ GauldenrodStockroom_MapScriptHeader:
 	def_coord_events
 
 	def_bg_events
+	bg_event  10,  2, BGEVENT_READ, GSApricornBenchScript
 
 	def_object_events
-	object_event 2, 3, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GauldenrodStockroomNPC1Script, -1
-	object_event 5, 2, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GauldenrodStockroomNPC2Script, -1
-	object_event 3, 5, SPRITE_SAGE, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GauldenrodStockroomNPC3Script, -1
+	object_event 2, 3, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GauldenrodStockroomNPC1Script, -1
+	object_event 5, 2, SPRITE_ELDER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GauldenrodStockroomNPC2Script, -1
+	object_event 3, 5, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GauldenrodStockroomNPC3Script, -1
 	object_event 7, 4, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GauldenrodStockroomNPC4Script, -1
 	object_event 1, 6, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GauldenrodStockroomNPC5Script, -1
 
@@ -123,4 +124,169 @@ GauldenrodStockroomNPC5Text:
 
 	para "It was a dangerous"
 	line "rite."
+	done
+
+GSApricornBenchScript:
+	opentext
+	writetext GSCheckForApricornsText
+	promptbutton
+.ApricornBenchScript2:
+	opentext
+	checkevent EVENT_GAVE_KURT_RED_APRICORN
+	iftrue .GiveLevelBall
+	checkevent EVENT_GAVE_KURT_BLU_APRICORN
+	iftrue .GiveLureBall
+	checkevent EVENT_GAVE_KURT_YLW_APRICORN
+	iftrue .GiveMoonBall
+	checkevent EVENT_GAVE_KURT_GRN_APRICORN
+	iftrue .GiveFriendBall
+	checkevent EVENT_GAVE_KURT_WHT_APRICORN
+	iftrue .GiveFastBall
+	checkevent EVENT_GAVE_KURT_BLK_APRICORN
+	iftrue .GiveHeavyBall
+	checkevent EVENT_GAVE_KURT_PNK_APRICORN
+	iftrue .GiveLoveBall
+	callasm .CheckHaveAnyApricorns
+	iftrue .AskApricorn
+	jumpopenedtext ASThatsALetdownText
+
+.CheckHaveAnyApricorns:
+	xor a
+	ld hl, wApricorns
+	or [hl]
+rept NUM_APRICORNS - 1
+	inc hl
+	or [hl]
+endr
+	ldh [hScriptVar], a
+	ret
+
+.AskApricorn:
+	writetext GSYouHaveAnApricornText
+	promptbutton
+	special Special_SelectApricornForKurt
+	iffalse_jumpopenedtext GSThatsALetdownText
+	ifequal SHORE_FOAM, .Blu
+	ifequal FIXED_CHARGE, .Ylw
+	ifequal TOUGH_LEAVES, .Grn
+	ifequal WHT_APRICORN, .Wht
+	ifequal HOLLOW_ROCK, .Blk
+	ifequal PNK_APRICORN, .Pnk
+;.Red yes this should be commented out
+	setevent EVENT_GAVE_KURT_RED_APRICORN
+	sjump .GaveKurtApricorns
+
+.Blu:
+	setevent EVENT_GAVE_KURT_BLU_APRICORN
+	sjump .GaveKurtApricorns
+
+.Ylw:
+	setevent EVENT_GAVE_KURT_YLW_APRICORN
+	sjump .GaveKurtApricorns
+
+.Grn:
+	setevent EVENT_GAVE_KURT_GRN_APRICORN
+	sjump .GaveKurtApricorns
+
+.Wht:
+	setevent EVENT_GAVE_KURT_WHT_APRICORN
+	sjump .GaveKurtApricorns
+
+.Blk:
+	setevent EVENT_GAVE_KURT_BLK_APRICORN
+	sjump .GaveKurtApricorns
+
+.Pnk:
+	setevent EVENT_GAVE_KURT_PNK_APRICORN
+.GaveKurtApricorns:
+	writetext GSGetStartedText
+	waitbutton
+	closetext
+	sjump .ApricornBenchScript2 ;Kurt1
+
+.ThatTurnedOutGreat:
+	jumpopenedtext GSTurnedOutGreatText
+
+.GiveLevelBall:
+	writetext GSJustFinishedYourBallText
+	promptbutton
+	verbosegiveitemvar JEZE_BALL, VAR_KURT_APRICORNS
+	iffalse_endtext
+	clearevent EVENT_GAVE_KURT_RED_APRICORN
+	sjump .ThatTurnedOutGreat
+
+.GiveLureBall:
+	writetext GSJustFinishedYourBallText
+	promptbutton
+	verbosegiveitemvar BUB_BALL, VAR_KURT_APRICORNS
+	iffalse_endtext
+	clearevent EVENT_GAVE_KURT_BLU_APRICORN
+	sjump .ThatTurnedOutGreat
+
+.GiveMoonBall:
+	writetext GSJustFinishedYourBallText
+	promptbutton
+	verbosegiveitemvar DECI_BALL, VAR_KURT_APRICORNS
+	iffalse_endtext
+	clearevent EVENT_GAVE_KURT_YLW_APRICORN
+	sjump .ThatTurnedOutGreat
+
+.GiveFriendBall:
+	writetext GSJustFinishedYourBallText
+	promptbutton
+	verbosegiveitemvar HERB_BALL, VAR_KURT_APRICORNS
+	iffalse_endtext
+	clearevent EVENT_GAVE_KURT_GRN_APRICORN
+	sjump .ThatTurnedOutGreat
+
+.GiveFastBall:
+	writetext GSJustFinishedYourBallText
+	promptbutton
+	verbosegiveitemvar FAST_BALL, VAR_KURT_APRICORNS
+	iffalse_endtext
+	clearevent EVENT_GAVE_KURT_WHT_APRICORN
+	sjump .ThatTurnedOutGreat
+
+.GiveHeavyBall:
+	writetext GSJustFinishedYourBallText
+	promptbutton
+	verbosegiveitemvar GEODE, VAR_KURT_APRICORNS
+	iffalse_endtext
+	clearevent EVENT_GAVE_KURT_BLK_APRICORN
+	sjump .ThatTurnedOutGreat
+
+.GiveLoveBall:
+	writetext GSJustFinishedYourBallText
+	promptbutton
+	verbosegiveitemvar LOVE_BALL, VAR_KURT_APRICORNS
+	iffalse_endtext
+	clearevent EVENT_GAVE_KURT_PNK_APRICORN
+	sjump .ThatTurnedOutGreat
+
+GSGetStartedText:
+	text "Time to work on"
+	line "this."
+	done
+
+GSJustFinishedYourBallText:
+	text "All done!"
+	done
+
+GSTurnedOutGreatText:
+	text "Looks like a"
+	line "good one!"
+	done
+	
+GSThatsALetdownText:
+	text "Too bad. Need"
+	line "to find some!"
+	done
+
+GSYouHaveAnApricornText:
+	text "Which one?"
+	done
+
+GSCheckForApricornsText:
+	text "Any items"
+	line "in the bag?"
 	done

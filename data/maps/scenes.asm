@@ -51,8 +51,8 @@ MapScenes::
 	scene_var VIOLET_GYM,                             wVioletGymSceneID
 	scene_var HOLLYS_HOLT,                            wHollysHoltSceneID
 	scene_var MISTY_BASIN,                            wMistyBasinSceneID 
-	scene_var ANARRES_HOUSE,                          wAnarresHouseSceneID ; for the trade quest
-;	scene_var BATTLE_TOWER_OUTSIDE,                   wBattleTowerOutsideSceneID
+	scene_var ANARRES_HOUSE,                          wAnarresHouseSceneID 
+	scene_var ANARRES_HOLT_GATE,                      wAnarresHoltGateSceneID
 ;	scene_var BATTLE_FACTORY_1F,                      wBattleFacilitySceneID
 ;	scene_var BATTLE_FACTORY_BATTLE_ROOM,             wAlways0SceneID
 ;	scene_var BATTLE_FACTORY_HALLWAY,                 wAlways0SceneID
@@ -108,5 +108,4 @@ MapScenes::
 ;	scene_var DARK_CAVE_VIOLET_ENTRANCE,              wDarkCaveVioletEntranceSceneID
 ;	scene_var CERULEAN_GYM,                           wCeruleanGymSceneID
 ;	scene_var CHERRYGROVE_CITY,                       wCherrygroveCitySceneID
-
 	db -1

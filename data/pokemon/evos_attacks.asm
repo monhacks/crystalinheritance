@@ -979,7 +979,7 @@ PoliwagEvosAttacks:
 	db 5, HYPNOSIS ; Water Gun → Hypnosis
 	db 8, DOUBLE_SLAP ; Hypnosis → Double Slap
 	db 11, AQUA_JET ; Bubble → new move
-	db 15, MUD_SLAP ; Double Slap → TM move
+	db 16, MUD_SLAP ; Double Slap → TM move
 	db 18, RAIN_DANCE
 	db 21, BODY_SLAM
 	db 25, BUBBLE_BEAM
@@ -999,7 +999,7 @@ PoliwhirlEvosAttacks:
 	db 5, HYPNOSIS ; Water Gun → Hypnosis
 	db 8, DOUBLE_SLAP ; Hypnosis → Double Slap
 	db 11, AQUA_JET ; Bubble → new move
-	db 15, MUD_SLAP ; Double Slap → TM move
+	db 15, AMNESIA ; Double Slap → TM move
 	db 18, RAIN_DANCE
 	db 21, BODY_SLAM
 	db 27, BUBBLE_BEAM
@@ -1016,6 +1016,10 @@ PoliwrathEvosAttacks:
 	db 1, HYPNOSIS
 	db 1, DOUBLE_SLAP
 	db 1, CLOSE_COMBAT ; evolution move
+	db 1, HYPNOSIS
+	db 1, KARATE_CHOP
+	db 1, AQUA_JET
+	db 1, BULK_UP
 	db 32, DYNAMICPUNCH
 	db 43, EARTH_POWER ; Mind Reader → Poliwhirl move
 	db 53, CROSS_CHOP ; Circle Throw → similar move
@@ -4177,10 +4181,10 @@ SpiritombEvosAttacks:;encounter at lv 35
 GabiteEvosAttacks:
 	db EVOLVE_LEVEL, 48, GARCHOMP
 	db 0 ; no more Evolutions
-	db 1, BULLDOZE
-	db 1, SLASH
 	db 1, DIG
-	db 1, DRAGONBREATH
+	db 1, SLASH
+	db 30, BULLDOZE
+	db 30, DRAGONBREATH
 	db 35, METAL_CLAW
 	db 41, DRAGON_CLAW
 	db 48, EARTHQUAKE

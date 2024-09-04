@@ -6,10 +6,10 @@ HollysHolt_MapScriptHeader:
 
 
 	def_warp_events 
-	warp_event  7, 44, ANARRES_TOWN, 1
-	warp_event  7, 45, ANARRES_TOWN, 2
-;	warp_event  4,  6, CALM_COAST, 1
-;	warp_event  5,  6, CALM_COAST, 2
+	warp_event  7, 44, ANARRES_HOLT_GATE, 3
+	warp_event  7, 45, ANARRES_HOLT_GATE, 4
+	warp_event  4,  6, HOLT_COAST_GATE, 1
+	warp_event  5,  6, HOLT_COAST_GATE, 2
 
 	
 	def_coord_events
@@ -44,7 +44,7 @@ HollysHolt_MapScriptHeader:
 	pokemon_event  18, 37, PINECO, -1, -1, PAL_NPC_BLUE, HollysHoltBagwormText, -1
 	pokemon_event   3, 32, PINECO, -1, -1, PAL_NPC_BLUE, HollysHoltBagwormText, EVENT_BEAT_HOLLIS
 	pokemon_event   4, 40, PINECO, -1, -1, PAL_NPC_BLUE, HollysHoltBagwormText, EVENT_BEAT_HOLLIS
-
+	fruittree_event  9,  8, FRUITTREE_HOLLYS_HOLT, TOUGH_LEAVES, PAL_NPC_GREEN
 
 	object_const_def
 	const HOLLYS_HOLT_KURT

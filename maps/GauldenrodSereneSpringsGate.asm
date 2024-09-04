@@ -5,7 +5,7 @@ GauldenrodSereneSpringsGate_MapScriptHeader:
 
 	def_warp_events
 	warp_event  4,  0, GAULDENROD, 7
-	warp_event  5,  0, GAULDENROD, 7
+	warp_event  5,  0, GAULDENROD, 8
 	warp_event  4,  7, SERENE_SPRINGS, 1
 	warp_event  5,  7, SERENE_SPRINGS, 1
 
@@ -14,7 +14,7 @@ GauldenrodSereneSpringsGate_MapScriptHeader:
 	def_bg_events
 
 	def_object_events
-	object_event  5,  4, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GauldenrodSereneSpringsGateNPCScript, -1
+	object_event  5,  4, SPRITE_VETERAN_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GauldenrodSereneSpringsGateNPCScript, -1
 
 GauldenrodSereneSpringsGateNPCScript:
 	jumptextfaceplayer GauldenrodSereneSpringsGateNPCText

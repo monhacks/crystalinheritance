@@ -4,35 +4,47 @@ Gauldenrod_MapScriptHeader: ; TODO: ADD A WANTED POSTER FOR AMOS
 	def_callbacks
 
 	def_warp_events
-	warp_event 10, 5, GAULDENROD_DORMS, 1
-	warp_event 15, 9, GAULDENROD_STOCKROOM, 1
-	warp_event 20, 7, GAULDENROD_GUILD, 1
-	warp_event 25, 11, GAULDENROD_HOUSE, 1
-	warp_event 8, 15, GAULDENROD_UNDERGROUND_SOUTH, 1
-	warp_event 22, 15, GAULDENROD_UNDERGROUND_NORTH, 1
-	warp_event 0, 9, GAULDENROD_SERENE_SPRINGS_GATE, 1
-	warp_event 11, 0, GAULDENROD_TOWER_1F, 1
+	warp_event 18, 27, GAULDENROD_DORMS, 1
+	warp_event 27, 13, GAULDENROD_STOCKROOM, 1
+	warp_event 28, 7, GAULDENROD_GUILD, 1
+	warp_event  9, 31, GAULDENROD_HOUSE, 1  ; TRADE QUEST
+	warp_event 11, 25, GAULDENROD_UNDERGROUND_SOUTH, 1
+	warp_event 13,  7, GAULDENROD_UNDERGROUND_NORTH, 1
+	warp_event 23, 3, GAULDENROD_SERENE_SPRINGS_GATE, 1
+	warp_event 24, 3, GAULDENROD_SERENE_SPRINGS_GATE, 2
+	warp_event  9, 15, GAULDENROD_TOWER_1F, 1
 
 	def_coord_events
 
 	def_bg_events
-	bg_event 12, 2, BGEVENT_READ, GauldenrodTowerSign
-	bg_event 18, 8, BGEVENT_READ, GauldenrodCitySign
-	bg_event 21, 13, BGEVENT_READ, GauldenrodStadiumSign
+	bg_event 15, 15, BGEVENT_READ, GauldenrodTowerSign
+	bg_event 26, 16, BGEVENT_READ, GauldenrodCitySign
+	bg_event 28, 22, BGEVENT_READ, GauldenrodBazaarSign
+	bg_event 21, 31, BGEVENT_READ, AmosWantedSign
+	bg_event 32,  6, BGEVENT_READ, GauldenrodGuildSign
 
 	def_object_events
-	object_event  5,  7, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GauldenrodNPC1Script, -1
-	object_event 12, 10, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GauldenrodBerrySalesmanScript, -1
-	object_event 14, 10, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GauldenrodApricornSalesScript, -1
-	object_event 13, 12, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GauldenrodTMSalesScript, -1
-	object_event 16, 11, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GauldenrodHisuiTraderScript, -1
-	object_event 19, 6, SPRITE_POKEFAN_F, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GauldenrodNPC2Script, -1
-	object_event  8, 13, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GauldenrodNPC3Script, -1
-	object_event 22,  9, SPRITE_GRAMPS, SPRITEMOVEDATA_SLOW_RANDOM_WALK, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GauldenrodNPC4Script, -1
-	object_event 17, 15, SPRITE_LASS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GauldenrodNPC5Script, -1
-	object_event  6, 11, SPRITE_ROCKER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 2, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GauldenrodNPC6Script, -1
-	object_event 24,  7, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GauldenrodNPC7Script, -1
-	object_event 13,  5, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GauldenrodNPC8Script, -1
+	object_event 24, 22, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GauldenrodNPC1Script, -1
+	
+	object_event 31, 25, SPRITE_VETERAN_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GauldenrodBerrySalesmanScript, -1
+	object_event 31, 20, SPRITE_VETERAN_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GauldenrodApricornSalesScript, -1
+	object_event 34, 22, SPRITE_FIREBREATHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GauldenrodTMSalesScript, -1
+	object_event 28, 20, SPRITE_FIREBREATHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GauldenrodHisuiTraderScript, -1
+
+	mart_clerk_event  31, 25, MARTTYPE_STANDARD, MART_GAULDENROD_1	
+	mart_clerk_event  31, 20, MARTTYPE_STANDARD, MART_GAULDENROD_2	
+	mart_clerk_event  34, 22, MARTTYPE_STANDARD, MART_GAULDENROD_3	
+	
+	object_event 23, 6, SPRITE_POKEFAN_F, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GauldenrodNPC2Script, -1
+	object_event 23, 29, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GauldenrodNPC3Script, -1
+	object_event 17,  9, SPRITE_GRAMPS, SPRITEMOVEDATA_SLOW_RANDOM_WALK, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GauldenrodNPC4Script, -1
+	object_event 23, 12, SPRITE_LASS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GauldenrodNPC5Script, -1
+	object_event 13,  9, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 2, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GauldenrodNPC6Script, -1
+	object_event 19, 17, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GauldenrodNPC7Script, -1
+	object_event 12, 17, SPRITE_LASS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GauldenrodNPC8Script, -1
+	fruittree_event  36, 7, FRUITTREE_GAULDENROD, RADIANT_OPAL, PAL_NPC_RED
+	object_event 22, 4, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BrigaderScript, EVENT_BEAT_SANDRA
+	object_event 25, 4, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BrigaderScript, EVENT_BEAT_SANDRA
 
 GauldenrodNPC1Script:
 	jumptextfaceplayer GauldenrodNPC1Text
@@ -166,19 +178,54 @@ GauldenrodTowerSignText:
 	done
 
 GauldenrodCitySign:
-	jumptext GauldenrodCitySignText
+	refreshscreen
+	trainerpic BOBESH
+	waitbutton
+	closepokepic
+	jumpthistext
 
-GauldenrodCitySignText:
 	text "Gauldenrod City"
-	line "The Emperor's"
-	cont "Jewel"
+	line "Overseen by"
+	cont "General Bobesh"
 	done
 
-GauldenrodStadiumSign:
-	jumptext GauldenrodStadiumSignText
+GauldenrodBazaarSign:
+	jumptext GauldenrodBazaarSignText
 
-GauldenrodStadiumSignText:
-	text "Gauldenrod Stadium"
-	line "Where Legends"
-	cont "are Born"
+GauldenrodBazaarSignText:
+	text "Gauldenrod Bazaar"
 	done
+
+AmosWantedSign:
+	refreshscreen
+	trainerpic AMOS
+	waitbutton
+	closepokepic
+	jumpthistext
+
+	text "WANTED: This man"
+	line "is wanted for"
+	cont "crimes against"
+	cont "the emperor."
+
+	para "If you see him,"
+	line "please notify a"
+	cont "brigader"
+	cont "immediately."
+
+	para "Known alias:"
+	line "Amos."
+	done
+
+GauldenrodGuildSign:
+	text "Gauldenrod Guild"
+	line "What's old is"
+	cont "new again"
+	done
+
+BrigaderScript:
+	jumptextfaceplayer GauldenrodBrigaderText
+	
+GauldenrodBrigaderText:
+	text "Stay out of"
+	line "trouble."

@@ -10,12 +10,12 @@ GauldenrodGuild_MapScriptHeader:
 	def_coord_events
 
 	def_bg_events
-	bg_event 0, 1, BGEVENT_READ, GauldenrodGuildSign
+
 
 	def_object_events
 	object_event 5, 3, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GauldenrodGuildNPC1Script, -1
 	object_event 2, 4, SPRITE_GRAMPS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GauldenrodGuildNPC2Script, -1
-	object_event 7, 5, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GauldenrodGuildNPC3Script, -1
+	object_event 7, 5, SPRITE_FAT_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GauldenrodGuildNPC3Script, -1
 
 GauldenrodGuildNPC1Script:
 	jumptextfaceplayer GauldenrodGuildNPC1Text
@@ -63,13 +63,4 @@ GauldenrodGuildNPC3Text:
 	line "sure no one tries"
 	cont "to talk about"
 	cont "that, though."
-	done
-
-GauldenrodGuildSign:
-	jumptext GauldenrodGuildSignText
-
-GauldenrodGuildSignText:
-	text "Gauldenrod Guild"
-	line "Preserving Our"
-	cont "Crafts and Heritage"
 	done

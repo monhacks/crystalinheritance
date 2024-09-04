@@ -184,6 +184,15 @@ NUM_FLOORS EQU const_value
 NUM_EMOTES EQU const_value
 EMOTE_FROM_MEM EQU -1
 
+;Jeze Ball / RADIANT OPAL
+;Bub Ball
+;Deci Ball
+;Herb Ball / 
+;Fast Ball / WHT APRICORN
+;Geode / HOLLOW ROCK
+;Love Ball / PNK APRICORN
+
+
 ; fruittree arguments
 ; FruitTreeItems indexes (see data/items/fruit_trees.asm) ; not sure where this is?... 
 	const_def 1
@@ -192,12 +201,12 @@ EMOTE_FROM_MEM EQU -1
 	const FRUITTREE_ROUTE_37_1      ; 02
 	const FRUITTREE_ROUTE_37_2      ; 03
 	const FRUITTREE_ROUTE_37_3      ; 04
-	const FRUITTREE_ROUTE_42_1      ; 05
-	const FRUITTREE_ROUTE_42_2      ; 06
-	const FRUITTREE_ROUTE_42_3      ; 07
+	const FRUITTRE_CALM_COAST_3      ; 05
+	const FRUITTREE_MAGNET_TUNNEL      ; 06 FIXED CHARGE
+	const FRUITTREE_GAULDENROD      ; 07 radiant opal
 	const FRUITTREE_ILEX_FOREST     ; 08 shore foam
 	const FRUITTREE_UNION_CAVE      ; 09 hollow rock
-	const FRUITTREE_HOLLYS_HOLT     ; 0a tough leaves TODO
+	const FRUITTREE_HOLLYS_HOLT     ; 0a tough leaves
 	const FRUITTREE_MISTYBASIN     ;  0b radiant opal
 FIRST_BERRY_TREE EQU const_value
 ;	const FRUITTREE_ROUTE_29        ; 
@@ -226,8 +235,8 @@ FIRST_BERRY_TREE EQU const_value
 	const FRUITTREE_ROUTE_2         ; 1f
 	const FRUITTREE_ROUTE_1         ; 20
 	const FRUITTREE_LUCKY_ISLAND    ; 21
-	const FRUITTREE_SHAMOUTI_ISLAND ; 22
-	const FRUITTREE_ROUTE_49        ; 23
+	const FRUITTREE_CALM_COAST_1 ; 22
+	const FRUITTREE_CALM_COAST_2        ; 23
 NUM_FRUIT_TREES EQU const_value - 1
 
 ; hidden grottoes

@@ -24,16 +24,22 @@ CalmCoastCottageDayCareManText:
 	line "a Dartrix. It is"
 	cont "interested in my"
 	cont "wife's Pidgeotto."
+	
+	para "If they make an"
+	line "egg, I wonder"
+	cont "what #mon will"
+	cont "come out?"
 	done
 
 CalmCoastCottageChildScript:
 	jumptextfaceplayer CalmCoastCottageChildText
 
 CalmCoastCottageChildText:
-	text "Pidgey kept eating"
-	line "our berries. So my"
-	cont "parents hired a"
-	cont "boy from the city"
+	text "Pidgey kept eat-"
+	line "ing our berries."
+	cont "So my parents"
+	cont "hired a kid"
+	cont "from the city"
 	cont "to guard our"
 	cont "garden."
 	done

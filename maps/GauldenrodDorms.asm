@@ -94,7 +94,7 @@ KurtGauldenrodDormsText:
 	para "Maybe we can pass"
 	line "through whatever"
 	cont "used to be at the"
-	cont "national park?"
+	cont "National Park?"
 
 	para "Also, if you"
 	line "need me to run"
