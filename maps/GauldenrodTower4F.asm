@@ -1,31 +1,32 @@
 GauldenrodTower4F_MapScriptHeader:
 	def_scene_scripts
-	scene_script GauldenrodTower4FTrigger0
+
 
 	def_callbacks
 
 	def_warp_events
-	warp_event  7, 15, GAULDENROD_TOWER_3F, 2
-	warp_event  7,  2, GAULDENROD_TOWER_ROOF, 1
-	warp_event 16,  7, GAULDENROD_TOWER_4F, 4 ; side door for Amos
+	warp_event  3,  9, GAULDENROD_TOWER_3F, 2
+	warp_event  8,  9, GAULDENROD_TOWER_1F, 4
+
 
 	def_coord_events
 
 	def_bg_events
 
 	def_object_events
-	object_event  7,  7, SPRITE_SANDRA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GauldenrodTower4FSandraScript, EVENT_GAULDENROD_TOWER_4F_AMOS
-	object_event  7, 10, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_GAULDENROD_TOWER_4F_BRIGADER
-	object_event 15,  7, SPRITE_AMOS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_GAULDENROD_TOWER_4F_AMOS
-	tmhm 16, 2, TM_ROOST, 1, EVENT_GAULDENROD_TOWER_4F_TM_ROOST
+	object_event  5,  2, SPRITE_SANDRA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GauldenrodTower4FSandraScript, EVENT_BEAT_SANDRA
+	object_event 10,  2, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_SANDRA
+	object_event  2, 10, SPRITE_AMOS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_HOLLIS
+	pokemon_event  14, 19, CLEFAIRY, -1, -1, PAL_NPC_RED, GauldenrodClefairyText, EVENT_BEAT_SANDRA
+	tmhmball_event 4, 50, TM_ROOST, EVENT_TM_ROOST
+
 
 	object_const_def
 	const GAULDENRODTOWER4F_SANDRA
 	const GAULDENRODTOWER4F_BRIGADER
 	const GAULDENRODTOWER4F_AMOS
+	const GAULDENRODTOWER4F_CLEFAIRY
 
-GauldenrodTower4FTrigger0:
-	end
 
 GauldenrodTower4FSandraScript:
 	faceplayer
@@ -40,15 +41,16 @@ GauldenrodTower4FSandraScript:
 	loadtrainer SANDRA, 1
 	startbattle
 	reloadmapafterbattle
+	disappear GAULDENRODTOWER4F_CLEFAIRY
 	setevent EVENT_BEAT_SANDRA
 	opentext
 	writetext SandraAfterText
+	setflag ENGINE_CASCADEBADGE ; todo
 	waitbutton
 	closetext
-	setflag ENGINE_SANDRABADGE ; todo
 	appear GAULDENRODTOWER4F_BRIGADER
 	applymovement GAULDENRODTOWER4F_BRIGADER, BrigaderApproachMovement
-	turnobject PLAYER, DOWN
+	turnobject GAULDENRODTOWER4F_SANDRA, RIGHT
 	opentext
 	writetext BrigaderInterruptText
 	waitbutton
@@ -59,8 +61,9 @@ GauldenrodTower4FSandraScript:
 	writetext SandraAgreementText
 	waitbutton
 	closetext
+	applymovement GAULDENRODTOWER4F_BRIGADER, BrigaderLeaveMovement1
 	applymovement GAULDENRODTOWER4F_SANDRA, SandraLeaveMovement
-	applymovement GAULDENRODTOWER4F_BRIGADER, BrigaderLeaveMovement
+	applymovement GAULDENRODTOWER4F_BRIGADER, BrigaderLeaveMovement2
 	disappear GAULDENRODTOWER4F_SANDRA
 	disappear GAULDENRODTOWER4F_BRIGADER
 	pause 15
@@ -83,7 +86,7 @@ GauldenrodTower4FSandraScript:
 SandraIntroText:
 	text "Player, you have"
 	line "shown your connec-"
-	cont "tion to #MON."
+	cont "tion to #mon."
 	cont "Why are you here?"
 
 	para "..."
@@ -111,7 +114,7 @@ SandraIntroText:
 SandraChallengeText:
 	text "Show me your"
 	line "connection with"
-	cont "your #MON!"
+	cont "your #mon!"
 	done
 
 SandraWinText:
@@ -120,6 +123,10 @@ SandraWinText:
 	done
 
 SandraAfterText:
+	text "Please, take this"
+	line "badge as a sign"
+	cont "of my respect."
+
 	text "With my blessing"
 	line "you can use the"
 	cont "HM Strength."
@@ -135,73 +142,101 @@ SandraRefusedText:
 	done
 
 BrigaderInterruptText:
-	text "Sandra! You must"
-	line "come with us, now!"
+	text "Brigader:"
+	line "Sandra! You must"
+	cont "come with us, now!"
 	done
 
 SandraResponseText:
-	text "What's this about?"
+	text "Sandra:"
+	line "What's this?"
 	done
 
 BrigaderExplanationText:
-	text "You'll see! You are"
-	line "summoned by"
+	text "Brigader:"
+	line "You'll see! You are"
+	cont "summoned by"
 	cont "General Bobesh to"
-	cont "the stadium at"
-	cont "once!"
+	cont "the stadium!"
 	done
 
 SandraAgreementText:
-	text "Oh my… I have"
-	line "wanted to talk to"
-	cont "him for a while."
+	text "Sandra:"
+	line "Very well."
+	
+	para "I have wanted to"
+	line "talk to him for"
+	cont "some time."
 	done
 
 AmosText:
-	text "Hello, have you"
-	line "seen Sandra?"
+	text "AMOS: Excuse me,"
+	line "Have you seen"
+	line "Sandra?"
+	
+	para "..."
 
-	para "Oh, the brigaders"
-	line "just took her to"
+	para "Oh, you were just"
+	line "with her before"
+	cont "the brigaders"
+	line "took her away to"
 	cont "the stadium?"
 
 	para "Then I was just a"
 	line "little too late..."
 
 	para "Say, you look"
-	line "familiar..."
+	line "familiar."
 
-	para "Oh, right, you"
+	para "Oh, right! You"
 	line "were in Anarres"
 	cont "Town, interrupting"
 	cont "my conversation"
 	cont "with Hollis."
+	
+	para "I hope they are"
+	line "doing OK. It's"
+	cont "hard to get any"
+	cont "intel these days."
+	
+	para "..."
 
 	para "Well, I'd better"
 	line "get out of here,"
 	cont "before any"
 	cont "brigaders find me."
-
-	para "Maybe that tunnel"
-	line "under the city"
-	cont "will have a way"
-	cont "out..."
 	done
 
 BrigaderApproachMovement:
-	step_up
-	step_up
-	step_up
+	step_left
+	step_left
+	step_left
+	step_left
 	step_end
 
 SandraLeaveMovement:
+	step_right
+	step_right
+	step_right
 	step_down
 	step_down
 	step_down
 	step_down
+	step_down
+	step_down	
 	step_end
 
-BrigaderLeaveMovement:
+BrigaderLeaveMovement1:
+	step_up
+	turn_head_down
+	step_end
+
+BrigaderLeaveMovement2:
+	step_down
+	step_right
+	step_right
+	step_right
+	step_down
 	step_down
 	step_down
 	step_down
@@ -210,8 +245,16 @@ BrigaderLeaveMovement:
 	step_end
 
 AmosEnterMovement:
-	step_left
-	step_left
+	step_up
+	step_up
+	step_up
+	step_up
+	step_up
+	step_up
+	step_up
+	step_up
+	step_right	
+	step_right
 	step_end
 
 AmosLeaveMovement:
@@ -222,3 +265,8 @@ AmosLeaveMovement:
 	step_down
 	step_down
 	step_end
+
+GauldenrodClefairyText:
+	text "Supernova:"
+	line "Shammoo!"
+	done

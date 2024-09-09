@@ -50,7 +50,7 @@ GauldenrodDormsNPC3Text:
 	done
 
 GauldenrodDormsBed:
-	showtext BedText1
+	showtext GauldenrodBedText1
 	special Special_FadeBlackQuickly
 	special Special_ReloadSpritesNoPalettes
 	special HealParty
@@ -58,15 +58,15 @@ GauldenrodDormsBed:
 	pause 60
 	special RestartMapMusic
 	special Special_FadeInQuickly
-	showtext BedText2
+	showtext GauldenrodBedText2
 	end
 
-BedText1:
+GauldenrodBedText1:
 	text "A comfy bed!"
 	line "Time to sleep…"
 	done
 
-BedText2:
+GauldenrodBedText2:
 	text "Ah, refreshed and"
 	line "restored!"
 	done

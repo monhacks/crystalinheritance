@@ -4,10 +4,8 @@ GauldenrodUnderground_MapScriptHeader:
 	def_callbacks
 
 	def_warp_events
-	warp_event  5,  2, GAULDENROD_UNDERGROUND_NORTH, 3
-	warp_event  6,  2, GAULDENROD_UNDERGROUND_NORTH, 4
-	warp_event  5, 34, GAULDENROD_UNDERGROUND_SOUTH, 1
-	warp_event  6, 34, GAULDENROD_UNDERGROUND_SOUTH, 2
+	warp_event  3,  2, GAULDENROD_UNDERGROUND_NORTH, 3
+	warp_event  3, 32, GAULDENROD_UNDERGROUND_SOUTH, 3
 
 	def_coord_events
 
@@ -15,12 +13,12 @@ GauldenrodUnderground_MapScriptHeader:
 
 
 	def_object_events
-	object_event  7,  7, SPRITE_AROMA_LADY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerAromaLadyDahlia, EVENT_GOT_HM_STRENGTH
-	object_event 12, 12, SPRITE_FIREBREATHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerFirebreatherDick, EVENT_GOT_HM_STRENGTH
-	object_event 17, 17, SPRITE_TAMER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerTamerBrett, EVENT_GOT_HM_STRENGTH
-	object_event 22, 22, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerCooltrainerMNAME4, EVENT_GOT_HM_STRENGTH
-	object_event 27, 27, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, GauldenrodUndergroundNPC5Script, EVENT_GOT_HM_STRENGTH
-	itemball_event 16, 20, BIG_ROOT, 1, EVENT_UNDERGROUND_BIG_ROOT
+	object_event  1, 14, SPRITE_AROMA_LADY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerAromaLadyDahlia, EVENT_GOT_HM_STRENGTH
+	object_event  2, 17, SPRITE_FIREBREATHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerFirebreatherDick, EVENT_GOT_HM_STRENGTH
+	object_event  1, 20, SPRITE_TAMER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerTamerBrett, EVENT_GOT_HM_STRENGTH
+	object_event  2, 25, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerCooltrainerFBeth, EVENT_GOT_HM_STRENGTH
+	object_event  1, 26, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, GauldenrodUndergroundNPC5Script, EVENT_GOT_HM_STRENGTH
+	itemball_event 1,  7, BIG_ROOT, 1, EVENT_UNDERGROUND_BIG_ROOT
 
 	object_const_def
 	const GAULDENRODUNDERGROUND_NPC1
@@ -29,8 +27,8 @@ GauldenrodUnderground_MapScriptHeader:
 	const GAULDENRODUNDERGROUND_NPC4
 	const GAULDENRODUNDERGROUND_NPC5
 
-GenericTrainerYoungsterNAME1:
-	generictrainer YOUNGSTER, NAME1, EVENT_BEAT_GAULDENROD_UNDERGROUND_NAME1, YoungsterNAME1SeenText, YoungsterNAME1BeatenText
+GenericTrainerAromaLadyDahlia:
+	generictrainer AROMA_LADY, DAHLIA, EVENT_BEAT_AROMA_LADY_DAHLIA, AromaLadyDahliaSeenText, AromaLadyDahliaBeatenText
 
 	text "The elders have"
 	line "been trying to"
@@ -42,18 +40,18 @@ GenericTrainerYoungsterNAME1:
 	line "it's working."
 	done
 
-YoungsterNAME1SeenText:
+AromaLadyDahliaSeenText:
 	text "Are you from"
 	line "Hisui?"
 	done
 
-YoungsterNAME1BeatenText:
+AromaLadyDahliaBeatenText:
 	text "You look so"
 	line "different."
 	done
 
-GenericTrainerYoungsterNAME2:
-	generictrainer YOUNGSTER, NAME2, EVENT_BEAT_GAULDENROD_UNDERGROUND_NAME2, YoungsterNAME2SeenText, YoungsterNAME2BeatenText
+GenericTrainerFirebreatherDick:
+	generictrainer FIREBREATHER, DICK, EVENT_BEAT_FIREBREATHER_DICK, FirebreatherDickSeenText, FirebreatherDickBeatenText
 
 	text "There's an aquifer"
 	line "under the stadium."
@@ -61,19 +59,19 @@ GenericTrainerYoungsterNAME2:
 	cont "say."
 	done
 
-YoungsterNAME2SeenText:
+FirebreatherDickSeenText:
 	text "Let's see if my"
 	line "techniques will"
 	cont "work!"
 	done
 
-YoungsterNAME2BeatenText:
+FirebreatherDickBeatenText:
 	text "Needs some"
 	line "refinement…"
 	done
 
-GenericTrainerYoungsterNAME3:
-	generictrainer YOUNGSTER, NAME3, EVENT_BEAT_GAULDENROD_UNDERGROUND_NAME3, YoungsterNAME3SeenText, YoungsterNAME3BeatenText
+GenericTrainerTamerBrett:
+	generictrainer TAMER, BRETT, EVENT_BEAT_TAMER_BRETT, TamerBrettSeenText, TamerBrettBeatenText
 
 	text "I was supposed to"
 	line "take these on my"
@@ -82,19 +80,19 @@ GenericTrainerYoungsterNAME3:
 	cont "closed."
 	done
 
-YoungsterNAME3SeenText:
+TamerBrettSeenText:
 	text "My dad gave me"
 	line "these #mon!"
 	done
 
-YoungsterNAME3BeatenText:
+TamerBrettBeatenText:
 	text "Maybe I don't know"
 	line "enough about them"
 	cont "yet."
 	done
 
-GenericTrainerCooltrainerMNAME4:
-	generictrainer COOLTRAINERM, NAME4, EVENT_BEAT_GAULDENROD_UNDERGROUND_NAME4, CooltrainerMNAME4SeenText, CooltrainerMNAME4BeatenText
+GenericTrainerCooltrainerFBeth:
+	generictrainer COOLTRAINERF, BETH, EVENT_BEAT_COOLTRAINERF_BETH, CooltrainerFBethSeenText, CooltrainerFBethBeatenText
 
 	text "You'll need a"
 	line "blessing from"
@@ -104,12 +102,12 @@ GenericTrainerCooltrainerMNAME4:
 	cont "battle."
 	done
 
-CooltrainerMNAME4SeenText:
+CooltrainerFBethSeenText:
 	text "Are you a new"
 	line "recruit?"
 	done
 
-CooltrainerMNAME4BeatenText:
+CooltrainerFBethBeatenText:
 	text "You might teach"
 	line "the younger ones"
 	cont "a few things."
@@ -124,25 +122,34 @@ GauldenrodUndergroundNPC5Script:
 	writetext GauldenrodUndergroundNPC4AfterText
 	waitbutton
 	closetext
-	applymovement GAULDENRODUNDERGROUND_NPC5, GauldenrodUndergroundNPC5Movement
+	applymovement GAULDENRODUNDERGROUND_NPC3, GauldenrodUndergroundNPC5Movement
 	opentext
 	writetext GauldenrodUndergroundNPC5Text
 	waitbutton
 	closetext
-	applymovement GAULDENRODUNDERGROUND_NPC1, GauldenrodUndergroundNPCLeaveMovement
-	applymovement GAULDENRODUNDERGROUND_NPC2, GauldenrodUndergroundNPCLeaveMovement
 	applymovement GAULDENRODUNDERGROUND_NPC3, GauldenrodUndergroundNPCLeaveMovement
 	applymovement GAULDENRODUNDERGROUND_NPC4, GauldenrodUndergroundNPCLeaveMovement
-	applymovement GAULDENRODUNDERGROUND_NPC5, GauldenrodUndergroundNPCLeaveMovement
-	disappear GAULDENRODUNDERGROUND_NPC1
-	disappear GAULDENRODUNDERGROUND_NPC2
 	disappear GAULDENRODUNDERGROUND_NPC3
 	disappear GAULDENRODUNDERGROUND_NPC4
+	applymovement GAULDENRODUNDERGROUND_NPC1, GauldenrodUndergroundNPCLeaveMovement
+	applymovement GAULDENRODUNDERGROUND_NPC2, GauldenrodUndergroundNPCLeaveMovement
+	disappear GAULDENRODUNDERGROUND_NPC1
+	disappear GAULDENRODUNDERGROUND_NPC2
+	opentext
+	writetext GauldenrodUndergroundNPC5Text2
+	closetext
+	applymovement GAULDENRODUNDERGROUND_NPC5, GauldenrodUndergroundNPC5LeaveMovement
 	disappear GAULDENRODUNDERGROUND_NPC5
 	end
 
 GauldenrodUndergroundNPC4Text:
-	text "Please, take a"
+	text "We're digging a"
+	line "tunnel underneath"
+	cont "the tower in case"
+	cont "Sandra ever needs"
+	cont "a quick escape."
+	
+	para "Please, take a"
 	line "look around."
 
 	para "Also, take this,"
@@ -164,21 +171,57 @@ GauldenrodUndergroundNPC5Text:
 	line "word that"
 	cont "something is going"
 	cont "to happen at the"
-	cont "stadium! Let's go!"
+	cont "stadium!"
+	
+	para "Whatever it is,"
+	line "we have to stop"
+	cont "General Bobesh"
+	cont "and the brig-"
+	cont "aders!"
+	done
+	
+GauldenrodUndergroundNPC5Text2:
+	text "You were pretty"
+	line "tough. We could"
+	cont "use someone like"
+	cont "you."
+	
+	para "Remember, you"
+	cont "need Sandra's"
+	cont "blessing to use"
+	cont "Strength out of"
+	cont "battle."
+	
+	para "You can find her"
+	line "at the top of"
+	cont "the tower."
 	done
 
 GauldenrodUndergroundNPC5Movement:
-	step_right
-	step_right
+	step_down
+	step_down
+	step_down
 	step_end
 
 GauldenrodUndergroundNPCLeaveMovement:
-	big_step_down
-	big_step_down
-	big_step_down
-	big_step_down
-	big_step_down
+	step_up
+	step_up
+	step_up
+	step_up
+	step_up
+	step_up
+	step_up
 	step_end
-
-GauldenrodUndergroundHiddenBigRoot:
-	hiddenitem BIG_ROOT, EVENT_GAULDENROD_UNDERGROUND_HIDDEN_BIG_ROOT
+	
+GauldenrodUndergroundNPC5LeaveMovement:
+	step_right
+	step_up
+	step_up
+	step_up
+	step_up
+	step_up
+	step_up
+	step_up
+	step_up	
+	step_end
+	

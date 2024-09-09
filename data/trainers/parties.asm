@@ -559,42 +559,20 @@ SandraGroup:
 ; ================================
 ; ================
 
-	; Sandra
+	; Sandra ; Clefairy	Wigglytuff	Vulpix	Togetic	Granbull
 	db "Sandra@"
-	db TRAINERTYPE_ITEM | TRAINERTYPE_EVS | TRAINERTYPE_PERSONALITY | TRAINERTYPE_MOVES
+	db TRAINERTYPE_ITEM | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
 	; party
-	db 53, UMBREON, LEFTOVERS, 192, ABILITY_1 | NAT_NEUTRAL, FEMALE
-		db MUD_SLAP, CONFUSE_RAY, FEINT_ATTACK, MEAN_LOOK
-	db 53, PERSIAN, PINK_BOW, 192, ABILITY_1 | NAT_NEUTRAL, FEMALE
-		db NIGHT_SLASH, FEINT_ATTACK, SCREECH, PLAY_ROUGH
-	db 54, WEAVILE, KINGS_ROCK, 192, ABILITY_1 | NAT_NEUTRAL, FEMALE
-		db SWORDS_DANCE, SCREECH, NIGHT_SLASH, ICE_PUNCH
-	db 55, GENGAR, SPELL_TAG, 192, ABILITY_1 | NAT_NEUTRAL, FEMALE
-		db SHADOW_BALL, WILL_O_WISP, CURSE, DESTINY_BOND
-	db 55, HONCHKROW, BLACKGLASSES, 192, ABILITY_1 | NAT_NEUTRAL, FEMALE
-		db DRILL_PECK, SUCKER_PUNCH, PURSUIT, BRAVE_BIRD
-	db 57, HOUNDOOM, CHARCOAL, 192, ABILITY_1 | NAT_NEUTRAL, FEMALE
-		db ROAR, PURSUIT, FLAMETHROWER, DARK_PULSE
-	db -1 ; end
-
-; ================
-
-	; Sandra
-	db "Sandra@"
-	db TRAINERTYPE_ITEM | TRAINERTYPE_MOVES
-	; party
-	db 71, UMBREON, LEFTOVERS
-		db CHARM, HEALINGLIGHT, PURSUIT, TOXIC
-	db 72, WEAVILE, KINGS_ROCK
-		db SWORDS_DANCE, SCREECH, SLASH, ICE_PUNCH
-	db 74, GENGAR, MAGNET
-		db HYPNOSIS, THUNDER, SHADOW_BALL, DESTINY_BOND
-	db 73, HONCHKROW, BLACKGLASSES
-		db DRILL_PECK, SUCKER_PUNCH, NIGHT_SLASH, BRAVE_BIRD
-	db 74, TYRANITAR, SOFT_SAND
-		db EARTHQUAKE, CRUNCH, STONE_EDGE, PURSUIT
-	db 76, HOUNDOOM, WISE_GLASSES
-		db ROAR, NASTY_PLOT, FIRE_BLAST, DARK_PULSE
+	db 20, WIGGLYTUFF, NO_ITEM, "Cresendo@"
+		db COUNTER, SING, ROLLOUT, HYPER_VOICE
+	db 20, VULPIX, NO_ITEM, "Flare@"
+		db FLAME_CHARGE, CONFUSE_RAY, SAFEGUARD, SUNNY_DAY
+	db 22, TOGETIC, NO_ITEM, "Clutch@"
+		db ROOST, DRAIN_KISS, EXTRASENSORY, METRONOME
+	db 23, GRANBULL, NO_ITEM, "Winston@"
+		db PLAY_ROUGH, BITE, SCARY_FACE, SCREECH
+	db 25, CLEFAIRY, NO_ITEM, "Supernova@"
+		db MOONBLAST, THUNDER_WAVE, ENCORE, TRI_ATTACK
 	db -1 ; end
 
 ; ================
@@ -2932,8 +2910,8 @@ BirdKeeperGroup:
 	db "Vance@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 36, PIDGEOTTO
-	db 36, PIDGEOTTO
+	db 20, TOGETIC
+	db 14, H__BRAVIARY
 	db -1 ; end
 
 ; ================
@@ -3654,122 +3632,124 @@ BrigaderGroup:
 
 ; ================
 
-	; GRUNTM ; remove
-	db "Grunt@"
+	; GRUNTM ; 2?
+	db "Smith@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 7, MEOWTH
-	db 9, ZUBAT
-	db 9, GASTLY
+	db 14, PIDGEOTTO
+	db 15, VULPIX
+	db 15, Voltorb
+	db 15, GROWLITHE
 	db -1 ; end
 
 ; ================
 
-	; GRUNTM
-	db "Grunt@"
-	db TRAINERTYPE_PERSONALITY
-	; party
-	db 33, SNEASEL, ABILITY_1 | NAT_NEUTRAL, MALE
-	db -1 ; end
-
-; ================
-
-	; GRUNTM
-	db "Grunt@"
-	db TRAINERTYPE_PERSONALITY
-	; party
-	db 32, GRIMER, ABILITY_1 | NAT_NEUTRAL, MALE
-	db 33, HOUNDOUR, ABILITY_1 | NAT_NEUTRAL, MALE
-	db -1 ; end
-
-; ================
-
-	; GRUNTM
-	db "Grunt@"
-	db TRAINERTYPE_PERSONALITY
-	; party
-	db 31, MEOWTH, ABILITY_1 | NAT_NEUTRAL, MALE
-	db 33, HOUNDOUR, ABILITY_1 | NAT_NEUTRAL, MALE
-	db 32, FURRET, ABILITY_1 | NAT_NEUTRAL, MALE
-	db 33, MEOWTH, ABILITY_1 | NAT_NEUTRAL, MALE
-	db -1 ; end
-
-; ================
-
-	; GRUNTM
-	db "Grunt@"
+	; GRUNTM ; 2?
+	db "Johnson@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 34, GOLBAT
-	db 34, VENOMOTH
+	db 14, PIDGEOTTO
+	db 15, VULPIX
+	db 15, VOLTORB
+	db 15, GROWLITHE
 	db -1 ; end
 
 ; ================
 
-	; GRUNTM
-	db "Grunt@"
+	; GRUNTM ; 3 
+	db "Brown@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 33, GROWLITHE
-	db 33, GRIMER
-	db 34, GOLBAT
-	db 34, FURRET
+	db 18, PIDGEOTTO
+	db 18, GOLBAT
+	db 18, FARFETCH_D
 	db -1 ; end
 
 ; ================
 
 	; GRUNTM
-	db "Grunt@"
+	db "Miller@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 36, WEEZING
+	db 18, NIDORINA
+	db 198, NIDORINO
 	db -1 ; end
 
 ; ================
 
 	; GRUNTM
-	db "Grunt@"
+	db "Davis@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 35, FURRET
-	db 36, WEEZING
+	db 15, VOLTORB
+	db 15, ELECTRODE
+	db 15, JOLTEON
 	db -1 ; end
 
 ; ================
 
 	; GRUNTM
-	db "Grunt@"
+	db "Garcia@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 32, ZUBAT
-	db 35, GOLBAT
-	db 33, MUK
+	db 16, KADABRA
+	db 16, STARYU
 	db -1 ; end
 
 ; ================
 
-	; GRUNTM
-	db "Grunt@"
+	; GRUNTM 
+	db "Zhang@" ; SERENE SPRINGS
 	db TRAINERTYPE_NORMAL
 	; party
-	db 34, MUK
-	db 35, HAUNTER
-	db 36, FURRET
+	db 15, SEADRA
+	db 18, OCTILLERY
 	db -1 ; end
 
 ; ================
 
 	; GRUNTM
-	db "Grunt@"
-	db TRAINERTYPE_PERSONALITY
+	db "Patel@" ; START STADIUM GROUNDS
+	db TRAINERTYPE_NORMAL
 	; party
-	db 23, FURRET, ABILITY_1 | NAT_NEUTRAL, MALE
+	db 20, HITMONLEE
+	db 20, HITMONCHAN
 	db -1 ; end
 
 ; ================
 
 	; GRUNTM
-	db "Grunt@"
+	db "Kim@"
+	db TRAINERTYPE_NORMAL
+	; party
+	db 15, MACHOP
+	db 20, MACHOKE
+	db -1 ; end
+
+; ================
+
+	; GRUNTM
+	db "Manolete@" ; should be #10
+	db TRAINERTYPE_ITEM | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
+	; party
+	db 23, TAUROS, CHOICE_BAND, "Islero@"
+		db THRASH, NO_MOVE, NO_MOVE, NO_MOVE
+	db -1 ; end	
+
+; ================
+
+	; GRUNTM
+	db "Chen@"
+	db TRAINERTYPE_NORMAL
+	; party
+	db 20, POLIWHIRL
+	db 20, POLIWRATH
+	db -1 ; end
+
+; ================
+
+	; GRUNTM
+	db "Lopez@"
 	db TRAINERTYPE_NORMAL
 	; party
 	db 37, FURRET
@@ -3778,7 +3758,7 @@ BrigaderGroup:
 ; ================
 
 	; GRUNTM
-	db "Grunt@"
+	db "Singh@"
 	db TRAINERTYPE_NORMAL
 	; party
 	db 35, FURRET
@@ -3788,7 +3768,7 @@ BrigaderGroup:
 ; ================
 
 	; GRUNTM
-	db "Grunt@"
+	db "Ali@"
 	db TRAINERTYPE_NORMAL
 	; party
 	db 35, MUK
@@ -3798,7 +3778,7 @@ BrigaderGroup:
 ; ================
 
 	; GRUNTM
-	db "Grunt@"
+	db "Suzuki@"
 	db TRAINERTYPE_PERSONALITY
 	; party
 	db 26, GASTLY, ABILITY_1 | NAT_NEUTRAL, MALE
@@ -3808,7 +3788,7 @@ BrigaderGroup:
 ; ================
 
 	; GRUNTM
-	db "Grunt@"
+	db "Marten@"
 	db TRAINERTYPE_NORMAL
 	; party
 	db 32, GOLBAT
@@ -3817,7 +3797,7 @@ BrigaderGroup:
 ; ================
 
 	; GRUNTM
-	db "Grunt@"
+	db "Lee@"
 	db TRAINERTYPE_NORMAL
 	; party
 	db 27, HOUNDOUR
@@ -3828,7 +3808,7 @@ BrigaderGroup:
 ; ================
 
 	; GRUNTM
-	db "Grunt@"
+	db "Gupta@"
 	db TRAINERTYPE_NORMAL
 	; party
 	db 28, VENONAT
@@ -3838,7 +3818,7 @@ BrigaderGroup:
 ; ================
 
 	; GRUNTM
-	db "Grunt@"
+	db "Liu@"
 	db TRAINERTYPE_NORMAL
 	; party
 	db 26, ZUBAT
@@ -5416,9 +5396,9 @@ FirebreatherGroup:
 	db "Ned@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 16, GROWLITHE
-	db 17, GROWLITHE
-	db 16, GROWLITHE
+	db 16, PONYTA
+	db 17, MAGMAR
+	db 16, MONFERNO
 	db -1 ; end
 
 ; ================
@@ -5595,8 +5575,9 @@ SchoolboyGroup:
 	db "Jack@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 12, GLOOM
-	db 15, VOLTORB
+	db 16, CYNDAQUIL
+	db 16, EKANS
+	db 16, DIGLETT
 	db -1 ; end
 
 ; ================
@@ -9017,7 +8998,7 @@ AromaLadyGroup:
 ; ================================
 ; ================
 
-	; AROMA_LADY
+	; AROMA_LADY ; UNDERGROUND
 	db "Dahlia@"
 	db TRAINERTYPE_NORMAL
 	; party
@@ -9030,12 +9011,11 @@ AromaLadyGroup:
 
 	; AROMA_LADY
 	db "Bryony@"
-	db TRAINERTYPE_MOVES
+	db TRAINERTYPE_NORMAL
 	; party
-	db 55, BELLOSSOM
-		db SOLAR_BEAM, SUNNY_DAY, STUN_SPORE, GROWTH
-	db 55, BELLOSSOM
-		db SOLAR_BEAM, SUNNY_DAY, STUN_SPORE, GROWTH
+	db 18, JIGGLYPUFF
+	db 18, WIGGLYTUFF
+	db 18, CLEFAIRY
 	db -1 ; end
 
 ; ================
@@ -9044,9 +9024,9 @@ AromaLadyGroup:
 	db "Heather@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 35, CHIKORITA
-	db 45, BAYLEEF
-	db 55, MEGANIUM
+	db 18, CHIKORITA
+	db 18, FURRET
+	db 18, BAYLEEF
 	db -1 ; end
 
 ; ================
@@ -9055,8 +9035,9 @@ AromaLadyGroup:
 	db "Holly@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 62, SUNFLORA
-	db 62, SUNFLORA
+	db 18, MEOWTH
+	db 18, MEOWTH
+	db 18, PERSIAN
 	db -1 ; end
 
 ; ================
@@ -9065,7 +9046,7 @@ AromaLadyGroup:
 	db "Peony@"
 	db TRAINERTYPE_NORMAL
 
-	; TODO: party
+	; PARTY
 	db 50, CHIKORITA
 	db -1 ; end
 
@@ -10020,20 +10001,14 @@ VeteranFGroup:
 
 	; VETERANF
 	db "Joanne@"
-	db TRAINERTYPE_ITEM | TRAINERTYPE_MOVES
+	db TRAINERTYPE_ITEM | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
 	; party
-	db 41, MEGANIUM, MIRACLE_SEED
-		db GROWTH, SLUDGE_BOMB, PETAL_DANCE, SLEEP_POWDER
-	db 38, PIDGEOT, QUICK_CLAW
-		db ROOST, FLY, SWIFT, ROAR
-	db 39, SCYTHER, EVIOLITE
-		db SLASH, AERIAL_ACE, SWORDS_DANCE, PURSUIT
-	db 38, ELECTABUZZ, MAGNET
-		db THUNDERBOLT, BULK_UP, KARATE_CHOP, LIGHT_SCREEN
-	db 40, POLIWRATH, KINGS_ROCK
-		db WATERFALL, SURF, STRENGTH, BODY_SLAM
-	db 37, FLAREON, CHARCOAL
-		db SMOKESCREEN, FLAME_CHARGE, QUICK_ATTACK, IRON_TAIL
+	db 20, MR__MIME, NO_ITEM, "Blanco@"
+		db REFLECT, LIGHT_SCREEN, BATON_PASS, CONFUSION
+	db 20, SYLVEON, BIG_ROOT, "Sanguina@"
+		db DRAIN_KISS, NO_MOVE, NO_MOVE, NO_MOVE
+	db 20, GIRAFARIG, NO_ITEM, "Janus@"
+		db STOMP, BITE, CONFUSION, NO_MOVE
 	db -1 ; end
 
 ; ================
@@ -10942,17 +10917,36 @@ BobeshGroup:
 ; ================================
 ; ================
 
-	; Bobesh
-	db "Bobesh@"
-	db TRAINERTYPE_ITEM
+	; Bobesh stadium
+	db "Bobesh@" ; todo: names, items
+	db TRAINERTYPE_ITEM | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
 	; party
-	; TODO: movesets, etc
-	db 63, FLAREON, NO_ITEM
-	db 62, MAGMAR, NO_ITEM
-	db 63, ARCANINE, NO_ITEM
-	db 61, DRAGONITE, NO_ITEM
-	db 62, ARCANINE, NO_ITEM
-	db 65, ENTEI, CHARCOAL
+	db 23, MAGMAR, NO_ITEM, "Culverin@"
+		db SUNNY_DAY, KARATE_CHOP, PSYBEAM, FIRE_PUNCH
+	db 23, SUNFLORA, NO_ITEM, "Helia@"
+		db SUNNY_DAY, GROWTH, ENERGY_BALL, LEECH_SEED
+	db 25, OCTILLERY, SCOPE_LENS, "Levi@"
+		db FLAMETHROWER, OCTAZOOKA, NO_MOVE, NO_MOVE
+	db 25, FLAREON, NO_ITEM, "Kotei@"
+		db SUNNY_DAY, FLAME_CHARGE, ROCK_SMASH, SMOKESCREEN
+	db -1 ; end
+	
+	; Bobesh e4
+	db "Bobesh@" ; todo: names, items
+	db TRAINERTYPE_ITEM | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
+	; party
+	db 23, NINETALES, NO_ITEM, "NAME@"
+		db SUNNY_DAY, KARATE_CHOP, PSYBEAM, FIRE_PUNCH
+	db 23, MAGMORTAR, NO_ITEM, "Culverin@"
+		db SUNNY_DAY, KARATE_CHOP, PSYBEAM, FIRE_PUNCH
+	db 23, SUNFLORA, NO_ITEM, "Helia@"
+		db SUNNY_DAY, GROWTH, ENERGY_BALL, LEECH_SEED
+	db 25, OCTILLERY, SCOPE_LENS, "Levi@"
+		db FLAMETHROWER, OCTAZOOKA, HYPER_BEAM, NO_MOVE
+	db 25, FLAREON, NO_ITEM, "Kotei@"
+		db SUNNY_DAY, FLAME_CHARGE, ROCK_SMASH, SMOKESCREEN
+	db 25, H__ARCANINE, NO_ITEM, "NAME@"
+		db SUNNY_DAY, FLAME_CHARGE, ROCK_SMASH, SMOKESCREEN
 	db -1 ; end
 
 ; ================

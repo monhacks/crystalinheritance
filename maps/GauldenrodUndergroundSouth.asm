@@ -1,4 +1,4 @@
-GauldenrodUndergroundNorth_MapScriptHeader:
+GauldenrodUndergroundSouth_MapScriptHeader:
 	def_scene_scripts
 
 	def_callbacks
@@ -17,7 +17,7 @@ GauldenrodUndergroundNorth_MapScriptHeader:
 	object_event  6,  4, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GauldenrodUndergroundSouthGateScript, EVENT_GAULDENROD_UNDERGROUND_MOVED
 
 	object_const_def
-	const GAULDENRODUNDERGROUNDNORTH_OFFICER
+	const GAULDENRODUNDERGROUNDSOUTH_OFFICER
 
 GauldenrodUndergroundSouthGateScript:
 	faceplayer
@@ -25,7 +25,7 @@ GauldenrodUndergroundSouthGateScript:
 	writetext GauldenrodUndergroundSouthGateText1
 	waitbutton
 	closetext
-	applymovement GAULDENRODUNDERGROUNDNORTH_OFFICER, GauldenrodUndergroundNorthGateMovement
+	applymovement GAULDENRODUNDERGROUNDSOUTH_OFFICER, GauldenrodUndergroundSouthGateMovement
 	opentext
 	writetext GauldenrodUndergroundSouthGateText2
 	setevent EVENT_GAULDENROD_UNDERGROUND_MOVED
@@ -33,13 +33,13 @@ GauldenrodUndergroundSouthGateScript:
 	closetext
 	end
 
-GauldenrodUndergroundNorthGateMovement:
+GauldenrodUndergroundSouthGateMovement:
 	step_up
 	step_left
 	turn_head_right
 	step_end
 
-GauldenrodUndergroundNorthGateText1:
+GauldenrodUndergroundSouthGateText1:
 	text "Nothing to see"
 	line "here..."
 

@@ -3698,6 +3698,7 @@ OctilleryEvosAttacks:
 	db 6, FORESIGHT ; Constrict → new move
 	db 10, PSYBEAM
 	db 14, AURORA_BEAM
+	db 14, EMBER
 	db 18, BUBBLE_BEAM
 	db 22, FOCUS_ENERGY
 	db 26, WRAP ; Wring Out → new move

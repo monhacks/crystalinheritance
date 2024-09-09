@@ -53,7 +53,7 @@ AnarresHoltGateHollisScene:
 	end
 
 HollisTurnDown:
-	turn_head DOWN
+	turn_head_down
 	step_end
 
 HollisExitMovement:
@@ -87,7 +87,7 @@ TammyDialogue2:
 	cont "holing up in your"
 	cont "tower. It's OK to"
 	cont "admit you made an"
-	cont "error – it would"
+	cont "error. It would"
 	cont "prove you are"
 	cont "human, just like"
 	cont "the rest of us."

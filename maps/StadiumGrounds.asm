@@ -7,29 +7,34 @@ StadiumGrounds_MapScriptHeader:
 	callback MAPCALLBACK_OBJECTS, StadiumGroundsAdrinnaDisappears
 	
 	def_warp_events
-	warp_event 13, 27, SERENE_SPRINGS, 3
-	warp_event 14, 27, SERENE_SPRINGS, 3
-	warp_event 13,  2, STADIUM_BOX, 1
-
+	warp_event  5, 41, SERENE_SPRINGS, 3
+	warp_event  6, 41, SERENE_SPRINGS, 3
+	warp_event  4, 23, STADIUM_UNDERGROUND, 1
+	warp_event 26,  5, STADIUM_BOX, 1
+	
 	def_coord_events
-	coord_event 13, 12, 0, StadiumGroundsBobeshScene
-	coord_event 13,  7, 1, StadiumGroundsSandraScene
-	coord_event 10, 15, 2, StadiumGroundsAdrinnaScene
+	coord_event 32,  3, 0, StadiumGroundsBobeshScene
+	coord_event 33,  8, 1, StadiumGroundsSandraScene
+	coord_event 20,  3, 2, StadiumGroundsAdrinnaScene
 
 	def_bg_events
+	bg_event  8, 36, BGEVENT_JUMPTEXT, Text_StadiumSign1;
+	bg_event 20, 32, BGEVENT_JUMPTEXT, Text_StadiumSign2;
+
 
 	def_object_events
-	object_event 13, 11, SPRITE_BOBESH, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumGroundsBobeshScript, EVENT_BEAT_BOBESH_STADIUM
-	object_event 13,  6, SPRITE_SANDRA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumGroundsSandraScript, EVENT_BEAT_BOBESH_STADIUM
-	object_event 13,  9, SPRITE_TOXICROAK, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, StadiumGroundsToxicroakScript, EVENT_TOXICROAK_STADIUM
-	object_event 20, 30, SPRITE_SANDRA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumGroundsSandra2Script, -1	
-	object_event 10, 15, SPRITE_ADRINNA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumGroundsAdrinnaScript, EVENT_STADIUM_ADRINNA
-	object_event  8, 20, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigaderNAME1, -1
-	object_event 18, 16, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigaderNAME2, -1
-	object_event 10, 12, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigaderNAME3, -1
-	object_event 16,  8, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigaderNAME4, -1
-	object_event 12,  4, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigaderNAME5, -1
-
+	object_event 29,  6, SPRITE_BOBESH, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumGroundsBobeshScript, EVENT_BEAT_BOBESH_STADIUM
+	object_event 30,  6, SPRITE_SANDRA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumGroundsSandraScript, EVENT_BEAT_BOBESH_STADIUM
+	object_event 30, 10, SPRITE_TOXICROAK, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, StadiumGroundsToxicroakScript, EVENT_TOXICROAK_STADIUM
+	object_event 46, 28, SPRITE_SANDRA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumGroundsSandra2Script, -1	
+	object_event 21,  3, SPRITE_ADRINNA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumGroundsAdrinnaScript, EVENT_STADIUM_ADRINNA
+	object_event 48, 18, SPRITE_BRIGADER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader8, EVENT_BEAT_BOBESH_STADIUM
+	object_event 48,  9, SPRITE_BRIGADER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader9, EVENT_BEAT_BOBESH_STADIUM
+	object_event 42,  5, SPRITE_BRIGADER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader10, EVENT_BEAT_BOBESH_STADIUM
+	object_event 46,  6, SPRITE_BRIGADER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader11, EVENT_BEAT_BOBESH_STADIUM
+	object_event  7,  9, SPRITE_BRIGADER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader12, EVENT_BEAT_BOBESH_STADIUM
+;	object_event 22, 30, SPRITE_BRIGADER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_GENERICTRAINER, 3, StadiumClosedScript, -1
+;	object_event 21, 30, SPRITE_BRIGADER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_GENERICTRAINER, 3, StadiumClosedScript, -1
 
 	object_const_def
 	const STADIUMGROUNDS_BOBESH
@@ -41,12 +46,19 @@ StadiumGrounds_MapScriptHeader:
 StadiumGroundsFloodCallback:
 	checkevent EVENT_STADIUM_GROUNDS_FIRST_FLOOD
 	iffalse .Done
-	changeblock 12, 10, $2c
-	changeblock 14, 10, $2c
+	changeblock 13,  5, $35
+	changeblock 13,  7, $35
+	changeblock 12,  6, $35	
+	changeblock 14,  6, $35
+	changeblock 13,  6, $86
 	checkevent EVENT_STADIUM_GROUNDS_SECOND_FLOOD
 	iffalse .Done
-	changeblock 12, 12, $2c
-	changeblock 14, 12, $2c
+	changeblock 14,  5, $35
+	changeblock 12,  5, $35
+	changeblock 11,  6, $35
+	changeblock 15,  6, $35
+	changeblock 12,  7, $35
+	changeblock 14,  7, $35	
 .Done:
 	endcallback
 
@@ -161,7 +173,6 @@ SandraExitMovement:
 	step_up
 	step_end
 
-BobeshIntroText:
 BobeshIntroText:
 	text "Who let you in?..."
 
@@ -310,3 +321,120 @@ AdrinnaDialogueStadium:
 	line "your progress with"
 	cont "great interest."
 	done
+
+GenericTrainerBrigader8:
+	generictrainer BRIGADER, 8, EVENT_BEAT_ROCKET_GRUNTM_8, Brigader8SeenText, Brigader8BeatenText
+
+	text "This place was a"
+	line "haven for bug"
+	cont "#mon."
+	done
+
+Brigader8SeenText:
+	text "We drained a marsh"
+	line "to make this. We"
+	cont "can take on a"
+	cont "pesky kid like"
+	cont "you!"
+	done
+
+Brigader8BeatenText:
+	text "Swamped."
+	done
+
+GenericTrainerBrigader9:
+	generictrainer BRIGADER, 9, EVENT_BEAT_ROCKET_GRUNTM_9, Brigader9SeenText, Brigader9BeatenText
+
+	text "General Bobesh has"
+	line "a plan to change"
+	cont "Gauldenrod tradi-"
+	cont "tions to favor the"
+	cont "emperor."
+	done
+
+Brigader9SeenText:
+	text "Intruder!"
+	done
+
+Brigader9BeatenText:
+	text "Your elder is in"
+	line "the stadium. I"
+	cont "don't think she's"
+	cont "going back…"
+	done
+
+GenericTrainerBrigader10:
+	generictrainer BRIGADER, 10, EVENT_BEAT_ROCKET_GRUNTM_10, Brigader10SeenText, Brigader10BeatenText
+
+	text "We find really"
+	line "strong wild"
+	cont "#mon to battle"
+	cont "trainers at the"
+	cont "stadium."
+	done
+
+Brigader10SeenText:
+	text "Don't mess with"
+	line "me, I got mine"
+	cont "from the stadium!"
+	done
+
+Brigader10BeatenText:
+	text "Now I'm seeing"
+	line "red."
+	done
+
+GenericTrainerBrigader11:
+	generictrainer BRIGADER, 11, EVENT_BEAT_ROCKET_GRUNTM_11, Brigader11SeenText, Brigader11BeatenText
+
+	text "The gladiators are"
+	line "usually rebels"
+	cont "against the"
+	cont "emperor. We make"
+	cont "sure they're tired,"
+	cont "so that they just"
+	cont "sound crazy to the"
+	cont "crowd in battle."
+	done
+
+Brigader11SeenText:
+	text "Are you an escapee"
+	line "from the stadium?"
+	done
+
+Brigader11BeatenText:
+	text "No, you don't look"
+	line "like it."
+	done
+
+GenericTrainerBrigader12:
+	generictrainer BRIGADER, 12, EVENT_BEAT_ROCKET_GRUNTM_12, Brigader12SeenText, Brigader12BeatenText
+
+	text "Why do I smell"
+	line "sulfur?"
+	done
+
+Brigader12SeenText:
+	text "I'm the last one!"
+	line "You won't get"
+	cont "past!"
+	done
+
+Brigader12BeatenText:
+	text "I've been hearing"
+	line "some strange sounds"
+	cont "from underground."
+	done
+
+Text_StadiumSign1:
+	text "National Stadium"
+	done
+	
+Text_StadiumSign2:
+	text "EV Training"
+	line "Facility:"
+	
+	para "Coming soon"
+	done
+
+

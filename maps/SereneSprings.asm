@@ -4,23 +4,31 @@ SereneSprings_MapScriptHeader:
 	def_callbacks
 
 	def_warp_events
-	warp_event  4,  0, GAULDENROD_SERENE_SPRINGS_GATE, 3
-	warp_event  5,  0, GAULDENROD_SERENE_SPRINGS_GATE, 4
-	warp_event 20, 38, STADIUM_GROUNDS, 1
+	warp_event  9, 35, GAULDENROD_SERENE_SPRINGS_GATE, 3
+	warp_event 10, 35, GAULDENROD_SERENE_SPRINGS_GATE, 4
+	warp_event  6,  5, STADIUM_GROUNDS, 1
 
 	def_coord_events
 
 	def_bg_events
 
 	def_object_events
-	object_event  8,  6, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigaderNAME1, -1
-	object_event 14, 12, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigaderNAME2, -1
-	object_event  9, 19, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigaderNAME3, -1
-	object_event 16, 25, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigaderNAME4, -1
-	object_event 11, 32, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigaderNAME5, -1
+	object_event 13, 14, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, StadiumHotSpringsReceptionistScript, EVENT_TAUGHT_COUNTER
+	object_event 11, 34, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader3, EVENT_BEAT_BOBESH_STADIUM
+	object_event  8, 22, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader4, EVENT_BEAT_BOBESH_STADIUM
+	object_event 11, 22, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader5, EVENT_BEAT_BOBESH_STADIUM
+	object_event  6,  7, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader6, EVENT_BEAT_BOBESH_STADIUM
+	object_event  9,  7, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader7, EVENT_BEAT_BOBESH_STADIUM
+	itemball_event 18, 32, ROCKY_HELMET, 1, EVENT_SERENE_SPRINGS_ROCKY_HELMET ;ok
+	itemball_event 3, 23, ELIXIR, 1, EVENT_SERENE_SPRINGS_ELIXIR ;ok
 
-GenericTrainerBrigaderNAME1:
-	generictrainer BRIGADERS, NAME1, EVENT_BEAT_BRIGADER_NAME1, BrigaderNAME1SeenText, BrigaderNAME1BeatenText
+
+	object_const_def
+	const STADIUMHOTSPRINGS_RECEPTIONIST
+
+
+GenericTrainerBrigader3:
+	generictrainer BRIGADER, 3, EVENT_BEAT_ROCKET_GRUNTM_3, Brigader3SeenText, Brigader3BeatenText
 
 	text "I think I'd be a"
 	line "pretty strong"
@@ -28,38 +36,38 @@ GenericTrainerBrigaderNAME1:
 	cont "stadium."
 	done
 
-BrigaderNAME1SeenText:
+Brigader3SeenText:
 	text "Stop right there!"
 	line "No one is allowed"
 	cont "into the stadium"
 	cont "at the moment!"
 	done
 
-BrigaderNAME1BeatenText:
+Brigader3BeatenText:
 	text "You'd make a good"
 	line "candidate at the"
 	cont "arena."
 	done
 
-GenericTrainerBrigaderNAME2:
-	generictrainer BRIGADERS, NAME2, EVENT_BEAT_BRIGADER_NAME2, BrigaderNAME2SeenText, BrigaderNAME2BeatenText
+GenericTrainerBrigader4:
+	generictrainer BRIGADER, 4, EVENT_BEAT_ROCKET_GRUNTM_4, Brigader4SeenText, Brigader4BeatenText
 
 	text "My boss will be"
 	line "so mad at me."
 	done
 
-BrigaderNAME2SeenText:
+Brigader4SeenText:
 	text "The stadium isn't"
 	line "open! Turn back!"
 	done
 
-BrigaderNAME2BeatenText:
+Brigader4BeatenText:
 	text "I wish I could"
 	line "stop you…"
 	done
 
-GenericTrainerBrigaderNAME3:
-	generictrainer BRIGADERS, NAME3, EVENT_BEAT_BRIGADER_NAME3, BrigaderNAME3SeenText, BrigaderNAME3BeatenText
+GenericTrainerBrigader5:
+	generictrainer BRIGADER, 5, EVENT_BEAT_ROCKET_GRUNTM_5, Brigader5SeenText, Brigader5BeatenText
 
 	text "There's a lot of"
 	line "hot springs in"
@@ -69,18 +77,18 @@ GenericTrainerBrigaderNAME3:
 	cont "stadium."
 	done
 
-BrigaderNAME3SeenText:
+Brigader5SeenText:
 	text "I'll shock you if"
 	line "you come any"
 	cont "closer!"
 	done
 
-BrigaderNAME3BeatenText:
+Brigader5BeatenText:
 	text "Lost my potential."
 	done
 
-GenericTrainerBrigaderNAME4:
-	generictrainer BRIGADERS, NAME4, EVENT_BEAT_BRIGADER_NAME4, BrigaderNAME4SeenText, BrigaderNAME4BeatenText
+GenericTrainerBrigader6:
+	generictrainer BRIGADER, 6, EVENT_BEAT_ROCKET_GRUNTM_6, Brigader6SeenText, Brigader6BeatenText
 
 	text "Want to know a"
 	line "secret? Sometimes"
@@ -91,16 +99,16 @@ GenericTrainerBrigaderNAME4:
 	cont "battle."
 	done
 
-BrigaderNAME4SeenText:
+Brigader6SeenText:
 	text "Focus, tightening…"
 	done
 
-BrigaderNAME4BeatenText:
+Brigader6BeatenText:
 	text "Mind blown."
 	done
 
-GenericTrainerBrigaderNAME5:
-	generictrainer BRIGADERS, NAME5, EVENT_BEAT_BRIGADER_NAME5, BrigaderNAME5SeenText, BrigaderNAME5BeatenText
+GenericTrainerBrigader7:
+	generictrainer BRIGADER, 7, EVENT_BEAT_ROCKET_GRUNTM_7, Brigader7SeenText, Brigader7BeatenText
 
 	text "There used to be"
 	line "Slugma here,"
@@ -108,12 +116,148 @@ GenericTrainerBrigaderNAME5:
 	cont "these hot springs."
 	done
 
-BrigaderNAME5SeenText:
+Brigader7SeenText:
 	text "Begone!"
 	done
 
-BrigaderNAME5BeatenText:
+Brigader7BeatenText:
 	text "I need to alert"
 	line "the stadium"
 	cont "brigade."
+	done
+
+StadiumHotSpringsReceptionistScript:
+	faceplayer
+	opentext
+	checkevent EVENT_LISTENED_TO_COUNTER_INTRO
+	iftrue .AlreadyIntroduced
+	writetext ReceptionistIntroText
+	waitbutton
+	setevent EVENT_LISTENED_TO_COUNTER_INTRO
+.AlreadyIntroduced
+	writetext ReceptionistOfferText
+	waitbutton
+	checkitem SILVER_LEAF
+	iffalse .NoPayment
+	writetext ReceptionistAskTeachText
+	yesorno
+	iffalse .Refused
+	setval COUNTER
+	writetext ClearText
+	special Special_MoveTutor
+	ifequal FALSE, .TeachMove
+	sjump .Refused
+
+.TeachMove
+	takeitem SILVER_LEAF
+	writetext ReceptionistTaughtText
+	waitbutton
+	closetext
+	end
+
+.NoPayment
+	writetext ReceptionistNoPaymentText
+	waitbutton
+	closetext
+	end
+
+.Refused
+	writetext ReceptionistRefusedText
+	waitbutton
+	closetext
+	end
+
+ReceptionistIntroText:
+	text "Oh, hello there!"
+	line "Welcome to our"
+	cont "glorious hot"
+	cont "springs!"
+
+	para "I'm the towel"
+	line "manager. It's"
+	cont "such a fun job!"
+	done
+
+ReceptionistOfferText:
+	text "Say, you look like"
+	line "someone who enjoys"
+	cont "a good challenge!"
+
+	para "How would you like"
+	line "to learn the art"
+	cont "of towel counting?"
+
+	para "It's thrilling!"
+
+	para "Every day is an"
+	line "adventure in"
+	cont "arithmetic, "
+	cont "making sure I"
+	cont "track down all"
+	cont "the towels the"
+	cont "brigaders used."
+
+	para "I can teach your"
+	line "#MON to Counter"
+	cont "just like I do!"
+
+	para "All I ask is a"
+	line "Silver Leaf. It's"
+	cont "a bargain!"
+	done
+
+ReceptionistAskTeachText:
+	text "So, what do you"
+	line "say? Want to join"
+	cont "the exciting world"
+	cont "of towel counting?"
+	done
+
+ReceptionistTaughtText:
+	text "Yes! Yes! You've"
+	line "made a wise"
+	cont "choice!"
+
+	para "Your #mon now"
+	line "knows Counter!"
+
+	para "Use it wisely,"
+	line "count carefully,"
+	cont "and maybe you can"
+	cont "take over my j-"
+
+	para "I mean, enjoy your"
+	line "new skill!"
+	done
+
+ReceptionistNoPaymentText:
+	text "Oh... you don't"
+	line "have a Silver"
+	cont "Leaf?"
+
+	para "That's... that's"
+	line "fine. I'll just"
+	cont "keep counting."
+
+	para "One, two, three..."
+
+	para "WHERE DID THEY ALL"
+	line "GO?!"
+	done
+
+ReceptionistRefusedText:
+	text "You... you don't"
+	line "want to learn the"
+	cont "joy of counting?"
+
+	para "Fine. FINE!"
+
+	para "I'll just keep"
+	line "doing this myself."
+
+	para "Forever."
+
+	para "And ever."
+
+	para "...and ever."
 	done

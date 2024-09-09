@@ -2,21 +2,49 @@ StadiumUnderground_MapScriptHeader:
 	def_scene_scripts
 
 	def_callbacks
+	callback MAPCALLBACK_STONETABLE, StadiumUndergroundBoulders
 
 	def_warp_events
-	warp_event  5,  1, GAULDENROD_UNDERGROUND, 3
-	warp_event  6,  1, GAULDENROD_UNDERGROUND, 3
+	warp_event  3, 13, STADIUM_GROUNDS, 3
+	warp_event  11, 1, STADIUM_BOX, 2
 
 	def_coord_events
 
 	def_bg_events
 
 	def_object_events
-	object_event  3,  4, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, StadiumUndergroundNPC1Script, -1
-	object_event  7,  6, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, StadiumUndergroundNPC2Script, -1
-	object_event  2,  2, SPRITE_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, StadiumUndergroundHealerScript, -1
-	strengthboulder_event  5, 3
-	strengthboulder_event  6, 5
+	strengthboulder_event  5, 3, EVENT_BOULDER_IN_STADIUM_UNDERGROUND
+	object_event 11,  2, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, StadiumUndergroundWarpNPCScript, EVENT_BOULDER_IN_STADIUM_UNDERGROUND
+	object_event  3,  4, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, StadiumUndergroundNPC1Script, EVENT_BOULDER_IN_STADIUM_UNDERGROUND
+	object_event  4,  1, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, StadiumUndergroundNPC2Script, EVENT_BOULDER_IN_STADIUM_UNDERGROUND
+	object_event  2,  2, SPRITE_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, StadiumUndergroundHealerScript, EVENT_BOULDER_IN_STADIUM_UNDERGROUND
+
+	object_const_def
+	const STADIUMUNDERGROUND_BOULDER1
+	const STADIUMUNDERGROUND_NPC
+
+StadiumUndergroundBoulders:
+	usestonetable .BoulderTable
+	endcallback
+
+.BoulderTable:
+	stonetable 5, STADIUMUNDERGROUND_BOULDER1, .Disappear
+	db -1 ; end
+
+.Disappear:
+	disappear STADIUMUNDERGROUND_BOULDER1
+	pause 30
+	playsound SFX_STRENGTH
+	earthquake 80
+	jumpthistext
+
+	text "The boulder fell"
+	line "through!"
+	
+	text "There's a sound"
+	line "of water filling"
+	cont "up a basin..."
+	done
 
 StadiumUndergroundNPC1Script:
 	jumptextfaceplayer StadiumUndergroundNPC1Text
@@ -32,10 +60,6 @@ StadiumUndergroundNPC1Text:
 	para "Soon, the whole"
 	line "stadium will be"
 	cont "flooded."
-
-	para "I think I heard"
-	line "the elder up"
-	cont "there."
 	done
 
 StadiumUndergroundNPC2Script:
@@ -69,17 +93,70 @@ StadiumUndergroundHealerScript:
 	end
 
 StadiumUndergroundHealerText:
-	text "Your #MON look"
-	line "tired. Let me"
-	cont "heal them for"
-	cont "you."
+	text "There may be a"
+	line "big battle up"
+	cont "ahead."
+
+	para "Let me heal your"
+	cont "#mon."
 	done
 
 StadiumUndergroundHealedText:
-	text "Your #MON are"
+	text "Your #mon are"
 	line "fully healed."
-
-	para "Be careful out"
-	line "there."
 	done
 	
+	
+StadiumUndergroundWarpNPCScript:
+	faceplayer
+	opentext
+	checkevent STADIUM_UNDERGROUND_MOVED_ASIDE
+	iftrue .MovedAside
+	checkevent EVENT_BOULDER_IN_STADIUM_UNDERGROUND
+	iftrue .MovesAside
+	writetext StadiumUndergroundBoulderText
+	waitbutton
+	closetext
+	end 
+	
+.MovesAside:
+	writetext StadiumUndergroundMovesAsideText
+	waitbutton
+	closetext
+	applyonemovement STADIUMUNDERGROUND_NPC, step_up
+	turnobject STADIUMUNDERGROUND_NPC, RIGHT
+	setevent STADIUM_UNDERGROUND_MOVED_ASIDE
+	end
+
+.MovedAside:
+	writetext LetsRescueSandraText
+	waitbutton
+	closetext
+	end
+
+LetsRescueSandraText:
+	text "Let's go save"
+	line "Sandra!"
+	done
+	
+StadiumUndergroundBoulderText:
+	text "We need to fill"
+	line "in that hole to"
+	cont "divert the under-"
+	cont "water springs"
+	cont "into the stadium."
+	done
+	
+StadiumUndergroundMovesAsideText:
+	text "You did it!"
+	
+	para "The underground"
+	line "springs are now"
+	cont "being diverted"
+	cont "underneath the"
+	cont "stadium."
+	
+	para "Soon, we will"
+	line "flush out that"
+	cont "General Bobesh!"
+	done

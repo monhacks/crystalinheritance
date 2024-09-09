@@ -4,20 +4,20 @@ GauldenrodTower3F_MapScriptHeader:
 	def_callbacks
 
 	def_warp_events
-	warp_event  7, 15, GAULDENROD_TOWER_2F, 2
-	warp_event  7,  2, GAULDENROD_TOWER_4F, 1
+	warp_event  6,  1, GAULDENROD_TOWER_1F, 6
+	warp_event  1,  7, GAULDENROD_TOWER_4F, 1
 
 	def_coord_events
 
 	def_bg_events
 
 	def_object_events
-	object_event  5,  7, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerSageNAME1, -1
-	object_event 10,  9, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerSageNAME2, -1
-	object_event  8,  5, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSageNAME3, -1
+	object_event  8,  0, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBirdKeeperVance, EVENT_BEAT_SANDRA
+	object_event  9,  0, SPRITE_FIREBREATHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerFirebreatherNed, EVENT_BEAT_SANDRA
+	object_event 10,  0, SPRITE_VETERANF, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSageNAME3, EVENT_BEAT_SANDRA
 
 GenericTrainerSageNAME1:
-	generictrainer SAGE, NAME1, EVENT_BEAT_GAULDENROD_TOWER_3F_TRAINER_1, SageNAME1SeenText, SageNAME1BeatenText
+	generictrainer BIRD_KEEPER, VANCE1, EVENT_BEAT_BIRD_KEEPER_VANCE, BirdKeeperVanceSeenText, BirdKeeperVanceBeatenText
 
 	text "I heard that you"
 	line "organized against"
@@ -28,7 +28,7 @@ GenericTrainerSageNAME1:
 	cont "our movement."
 	done
 
-SageNAME1SeenText:
+BirdKeeperVanceSeenText:
 	text "When you let your"
 	line "feelings flow"
 	cont "through you, you"
@@ -36,13 +36,13 @@ SageNAME1SeenText:
 	cont "anything."
 	done
 
-SageNAME1BeatenText:
+BirdKeeperVanceBeatenText:
 	text "Your flow is"
 	line "astounding."
 	done
 
-GenericTrainerSageNAME2:
-	generictrainer SAGE, NAME2, EVENT_BEAT_GAULDENROD_TOWER_3F_TRAINER_2, SageNAME2SeenText, SageNAME2BeatenText
+GenericTrainerFirebreatherNed:
+	generictrainer FIREBREATHER, NED, EVENT_BEAT_FIREBREATHER_NED, FirebreatherNedSeenText, FirebreatherNedBeatenText
 
 	text "If people learn to"
 	line "reject the stadium"
@@ -53,7 +53,7 @@ GenericTrainerSageNAME2:
 	cont "to terrible things."
 	done
 
-SageNAME2SeenText:
+FirebreatherNedSeenText:
 	text "The bell at the"
 	line "top of this tower"
 	cont "was forged from"
@@ -61,12 +61,12 @@ SageNAME2SeenText:
 	cont "you handle it?"
 	done
 
-SageNAME2BeatenText:
+FirebreatherNedBeatenText:
 	text "You are tempered."
 	done
 
-GenericTrainerSageNAME3:
-	generictrainer SAGE, NAME3, EVENT_BEAT_GAULDENROD_TOWER_3F_TRAINER_3, SageNAME3SeenText, SageNAME3BeatenText
+GenericTrainerVeteranFJoanne:
+	generictrainer VETERAN_F, JOANNE, EVENT_BEAT_VETERAN_F_JOANNE, VeteranFJoanneSeenText, VeteranFJoanneBeatenText
 
 	text "Sandra has been"
 	line "trying to coax the"
@@ -76,14 +76,14 @@ GenericTrainerSageNAME3:
 	cont "time."
 	done
 
-SageNAME3SeenText:
+VeteranFJoanneSeenText:
 	text "My colleagues say"
 	line "that you have a"
 	cont "strong connection"
 	cont "to your #MON."
 	done
 
-SageNAME3BeatenText:
+VeteranFJoanneBeatenText:
 	text "Indeed, you are"
 	line "pure of heart…"
 	cont "you should see"

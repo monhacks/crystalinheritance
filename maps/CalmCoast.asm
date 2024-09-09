@@ -4,8 +4,8 @@ CalmCoast_MapScriptHeader:
 	def_callbacks
 
 	def_warp_events
-	warp_event 0, 0, HOLT_COAST_GATE, 1
-	warp_event 0, 0, HOLT_COAST_GATE, 2
+	warp_event 15, 51, HOLT_COAST_GATE, 1
+	warp_event 16, 51, HOLT_COAST_GATE, 2
 	warp_event 13, 15, CALM_COAST_COTTAGE, 1
 
 	def_coord_events
@@ -16,12 +16,12 @@ CalmCoast_MapScriptHeader:
 
 	def_object_events
 	object_event 15, 10, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 5, GenericTrainerYoungsterWarren, -1
-	object_event 13, 26, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerCooltrainerMGaven, -1
-	object_event 11, 6, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerYoungsterJimmy, -1
-	object_event 6, 50, SPRITE_BATTLE_GIRL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerBattleGirlSubaru, -1
-	object_event 7, 48, SPRITE_BATTLE_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerCooltrainerFNAME5, -1
-	object_event 5, 48, SPRITE_BATTLE_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerBlackbeltNAME6, -1
-	object_event 11, 4, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerBrigaderNAME7, -1
+	object_event 13, 26, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerCooltrainerMGaven, -1
+	object_event 11, 6, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerYoungsterJimmy, -1
+	object_event 6, 50, SPRITE_BATTLE_GIRL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBattleGirlSubaru, -1
+	object_event 7, 48, SPRITE_BATTLE_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBattleGirlDiane, -1
+	object_event 5, 48, SPRITE_BATTLE_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBattleGirlKajimi, -1
+	object_event 11, 4, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerBrigader2, -1
 	object_event 16, 48, SPRITE_KURT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CalmCoastKurtScript, -1
 	tmhmball_event 4, 50, TM_ROAR, EVENT_CALM_COAST_TM_ROAR
 	pokemon_event  14, 19, PIDGEOTTO, -1, -1, PAL_NPC_RED, CalmCoastPidgeottoText, -1
@@ -29,6 +29,7 @@ CalmCoast_MapScriptHeader:
 	fruittree_event 17, 14, FRUITTREE_CALM_COAST_1, SITRUS_BERRY, PAL_NPC_RED
 	fruittree_event 18, 14, FRUITTREE_CALM_COAST_2, LUM_BERRY, PAL_NPC_RED
 	fruittree_event 18, 14, FRUITTREE_CALM_COAST_3, PNK_APRICORN, PAL_NPC_RED
+	itemball_event 3, 23, SOOTHE_BELL, 1, EVENT_SOOTHE_BELL ;ok
 
 GenericTrainerYoungsterWarren:
 	generictrainer YOUNGSTER, WARREN, EVENT_BEAT_YOUNGSTER_WARREN, YoungsterWarrenSeenText, YoungsterWarrenBeatenText
@@ -67,19 +68,19 @@ CooltrainerMGavenSeenText:
 	done
 
 GenericTrainerYoungsterJimmy:
-	generictrainer YOUNGSTER, JIMMY, EVENT_BEAT_YOUNGSTER_JIMMY, YoungsterJimmySeenText, YoungsterJimmyBeatenText
+	generictrainer SCHOOLBOY, JACK, EVENT_BEAT_SCHOOLBOY_JACK, SchoolboyJackSeenText, SchoolboyJackBeatenText
 
 	text "Now I'll never"
 	line "make it as a"
 	cont "brigadier."
 	done
 
-YoungsterJimmySeenText:
+SchoolboyJackSeenText:
 	text "I'm trying to join"
 	line "the brigaders!"
 	done
 
-YoungsterJimmyBeatenText:
+SchoolboyJackBeatenText:
 	text "Now I'll never"
 	line "make it as a"
 	cont "brigadier."
@@ -136,8 +137,8 @@ BlackbeltNAME6BeatenText:
 	line "laugh."
 	done
 
-GenericTrainerBrigaderNAME7:
-	generictrainer BRIGADERS, NAME7, EVENT_BEAT_BRIGADER_NAME7, BrigaderNAME7SeenText, BrigaderNAME7BeatenText
+GenericTrainerBrigader2:
+	generictrainer BRIGADER, 2, EVENT_BEAT_ROCKET_GRUNTM_2, BrigaderNAME7SeenText, BrigaderNAME7BeatenText
 
 	text "I'm on the lookout"
 	line "for three women"

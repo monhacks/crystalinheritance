@@ -1,25 +1,24 @@
-StadiumBox_MapScriptHeader:
+StadiumBox_MapScriptHeader: ; todo: make sandra only talkable from one tile, using Kurt. 
 	def_scene_scripts
 
 	def_callbacks
 	callback MAPCALLBACK_OBJECTS, StadiumBoxSandraKurtCallback
 
 	def_warp_events
-	warp_event  3,  7, STADIUM_GROUNDS, 3
-	warp_event  4,  7, STADIUM_GROUNDS, 3
-	warp_event  3,  1, STADIUM_UNDERGROUND, 1
-	warp_event  4,  1, STADIUM_UNDERGROUND, 1
+	warp_event  5, 11, STADIUM_GROUNDS, 3
+	warp_event  6, 11, STADIUM_GROUNDS, 3
+	warp_event  5,  2, STADIUM_UNDERGROUND, 2
+
 
 	def_coord_events
-	coord_event  3,  6, 0, StadiumBoxDialogueEvent
-	coord_event  4,  6, 0, StadiumBoxDialogueEvent
+
 
 	def_bg_events
 
 	def_object_events
-	object_event  2,  4, SPRITE_SANDRA, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumBoxSandraScript, EVENT_STADIUM_BOX_SANDRA
-	object_event  5,  4, SPRITE_KURT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumBoxKurtScript, EVENT_STADIUM_BOX_SANDRA
-	itemball_event  4,  4, SCOPE_LENS, 1, EVENT_STADIUM_BOX_SCOPE_LENS
+	object_event  5,  7, SPRITE_SANDRA, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumBoxSandraScript, EVENT_STADIUM_BOX_SANDRA
+	object_event  6,  7, SPRITE_KURT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumBoxKurtScript, EVENT_STADIUM_BOX_SANDRA ; todo, make a script for Kurt to say something before you talk to Sandra
+	itemball_event  8,  2, SCOPE_LENS, 1, EVENT_STADIUM_BOX_SCOPE_LENS
 
 	object_const_def
 	const STADIUMBOX_SANDRA
@@ -32,8 +31,14 @@ StadiumBoxSandraKurtCallback:
 	disappear STADIUMBOX_KURT
 	endcallback
 .SandraKurtAppear:
+	checkevent EVENT_STADIUM_BOX_SANDRA
+	iftrue .SandraKurtDisappear
 	appear STADIUMBOX_SANDRA
 	appear STADIUMBOX_KURT
+	endcallback
+.SandraKurtDisappear:
+	disappear STADIUMBOX_SANDRA
+	disappear STADIUMBOX_KURT
 	endcallback
 
 StadiumBoxDialogueEvent:
@@ -50,7 +55,7 @@ StadiumBoxDialogueEvent:
 	writetext SandraDialogue2
 	waitbutton
 	closetext
-	applymovement STADIUMBOX_SANDRA, SandraExitMovement
+	applymovement STADIUMBOX_SANDRA, BoxSandraExitMovement
 	disappear STADIUMBOX_SANDRA
 	setevent EVENT_STADIUM_BOX_SANDRA
 	setscene $1
@@ -59,10 +64,11 @@ StadiumBoxDialogueEvent:
 StadiumBoxSandraScript:
 	end
 
-StadiumBoxKurtScript:
-	end
-
-SandraExitMovement:
+BoxSandraExitMovement:
+	step_down
+	step_down
+	step_down
+	step_down
 	step_down
 	step_down
 	step_down
