@@ -84,7 +84,6 @@ StadiumUndergroundHealerScript:
 	playmusic MUSIC_HEAL
 	special HealParty
 	pause 30
-	special FadeInQuickly
 	special RestartMapMusic
 	opentext
 	writetext StadiumUndergroundHealedText
@@ -126,6 +125,7 @@ StadiumUndergroundWarpNPCScript:
 	applyonemovement STADIUMUNDERGROUND_NPC, step_up
 	turnobject STADIUMUNDERGROUND_NPC, RIGHT
 	setevent STADIUM_UNDERGROUND_MOVED_ASIDE
+	setevent EVENT_STADIUM_BOX_ADRINNA
 	end
 
 .MovedAside:

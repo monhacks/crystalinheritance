@@ -14,9 +14,9 @@ GauldenrodTower3F_MapScriptHeader:
 	def_object_events
 	object_event  8,  0, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBirdKeeperVance, EVENT_BEAT_SANDRA
 	object_event  9,  0, SPRITE_FIREBREATHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerFirebreatherNed, EVENT_BEAT_SANDRA
-	object_event 10,  0, SPRITE_VETERANF, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSageNAME3, EVENT_BEAT_SANDRA
+	object_event 10,  0, SPRITE_VETERANF, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerVeteranFJoanne, EVENT_BEAT_SANDRA
 
-GenericTrainerSageNAME1:
+GenericTrainerBirdKeeperVance:
 	generictrainer BIRD_KEEPER, VANCE1, EVENT_BEAT_BIRD_KEEPER_VANCE, BirdKeeperVanceSeenText, BirdKeeperVanceBeatenText
 
 	text "I heard that you"
@@ -66,12 +66,12 @@ FirebreatherNedBeatenText:
 	done
 
 GenericTrainerVeteranFJoanne:
-	generictrainer VETERAN_F, JOANNE, EVENT_BEAT_VETERAN_F_JOANNE, VeteranFJoanneSeenText, VeteranFJoanneBeatenText
+	generictrainer VETERANF, JOANNE, EVENT_BEAT_VETERANF_JOANNE, VeteranFJoanneSeenText, VeteranFJoanneBeatenText
 
 	text "Sandra has been"
 	line "trying to coax the"
 	cont "rainbow bird"
-	cont "#MON back to"
+	cont "#mon back to"
 	cont "our roof for some"
 	cont "time."
 	done

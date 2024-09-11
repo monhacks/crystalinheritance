@@ -15,20 +15,20 @@ CalmCoast_MapScriptHeader:
 	bg_event 12,  6, BGEVENT_READ, CalmCoastSign2Text
 
 	def_object_events
-	object_event 15, 10, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 5, GenericTrainerYoungsterWarren, -1
-	object_event 13, 26, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerCooltrainerMGaven, -1
+	object_event 15, 10, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 5, GenericTrainerYoungsterWarren, EVENT_BEAT_BOBESH_STADIUM ; 
+	object_event 13, 26, SPRITE_COOLTRAINERM, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerCooltrainerMGaven, -1
 	object_event 11, 6, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerYoungsterJimmy, -1
 	object_event 6, 50, SPRITE_BATTLE_GIRL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBattleGirlSubaru, -1
 	object_event 7, 48, SPRITE_BATTLE_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBattleGirlDiane, -1
 	object_event 5, 48, SPRITE_BATTLE_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBattleGirlKajimi, -1
 	object_event 11, 4, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerBrigader2, -1
 	object_event 16, 48, SPRITE_KURT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CalmCoastKurtScript, -1
-	tmhmball_event 4, 50, TM_ROAR, EVENT_CALM_COAST_TM_ROAR
+	tmhmball_event 4, 50, TM_ROAR, EVENT_GOT_TM05_ROAR
 	pokemon_event  14, 19, PIDGEOTTO, -1, -1, PAL_NPC_RED, CalmCoastPidgeottoText, -1
 	pokemon_event  17, 18, DARTRIX, -1, -1, PAL_NPC_GREEN, CalmCoastDartrixText, -1	
 	fruittree_event 17, 14, FRUITTREE_CALM_COAST_1, SITRUS_BERRY, PAL_NPC_RED
 	fruittree_event 18, 14, FRUITTREE_CALM_COAST_2, LUM_BERRY, PAL_NPC_RED
-	fruittree_event 18, 14, FRUITTREE_CALM_COAST_3, PNK_APRICORN, PAL_NPC_RED
+	fruittree_event 19, 12, FRUITTREE_CALM_COAST_3, PNK_APRICORN, PAL_NPC_RED
 	itemball_event 3, 23, SOOTHE_BELL, 1, EVENT_SOOTHE_BELL ;ok
 
 GenericTrainerYoungsterWarren:
@@ -37,6 +37,9 @@ GenericTrainerYoungsterWarren:
 	text "Can you tell the"
 	line "old guy I'm ready"
 	cont "to go home?"
+	
+	para "I'm getting so"
+	line "bored standing here."
 	done
 
 YoungsterWarrenSeenText:
@@ -51,7 +54,7 @@ YoungsterWarrenBeatenText:
 	done
 
 GenericTrainerCooltrainerMGaven:
-	generictrainer COOLTRAINERM, GAVEN, EVENT_BEAT_COOLTRAINER_M_GAVEN, CooltrainerMGavenSeenText, CooltrainerMGavenBeatenText
+	generictrainer COOLTRAINERM, GAVEN, EVENT_BEAT_COOLTRAINERM_GAVEN, CooltrainerMGavenSeenText, CooltrainerMGavenBeatenText
 
 	text "I lost? Now that's"
 	line "bizarre."
@@ -68,7 +71,7 @@ CooltrainerMGavenSeenText:
 	done
 
 GenericTrainerYoungsterJimmy:
-	generictrainer SCHOOLBOY, JACK, EVENT_BEAT_SCHOOLBOY_JACK, SchoolboyJackSeenText, SchoolboyJackBeatenText
+	generictrainer SCHOOLBOY, JACK1, EVENT_BEAT_SCHOOLBOY_JACK, SchoolboyJackSeenText, SchoolboyJackBeatenText
 
 	text "Now I'll never"
 	line "make it as a"
@@ -110,29 +113,29 @@ GenericTrainerBattleGirlDiane:
 	line "burned."
 	done
 
-CooltrainerFNAME5SeenText:
+BattleGirlDianeSeenText:
 	text "Let my rage flow"
 	line "through me!"
 	done
 
-CooltrainerFNAME5BeatenText:
+BattleGirlDianeBeatenText:
 	text "Crashed and"
 	line "burned."
 	done
 
-GenericTrainerBattleGirlKajimi:
-	generictrainer BATTLE_GIRL, KAJIMI, EVENT_BEAT_BATTLE_GIRL_KAJIMI, BattleGirlKajimiSeenText, BattleGirlKajimiBeatenText
+GenericTrainerBattleGirlKagami:
+	generictrainer BATTLE_GIRL, KAGAMI, EVENT_BEAT_BATTLE_GIRL_KAGAMI, BattleGirlKagamiSeenText, BattleGirlKagamiBeatenText
 
 	text "This spot is so"
 	line "quiet, it's good"
 	cont "for training."
 	done
 
-BlackbeltNAME6SeenText:
+BattleGirlKagamiSeenText:
 	text "Kame-hame…"
 	done
 
-BlackbeltNAME6BeatenText:
+BattleGirlKagamiBeatenText:
 	text "You got the last"
 	line "laugh."
 	done

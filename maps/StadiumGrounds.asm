@@ -1,10 +1,9 @@
-StadiumGrounds_MapScriptHeader:
+StadiumGrounds_MapScriptHeader: ; todo make everything happen once you talk to Bobesh - a scene_script rather than various coord_events, and making sandra2 only visible once the scene is over. 
 	def_scene_scripts
 
 	def_callbacks
 	callback MAPCALLBACK_TILES, StadiumGroundsFloodCallback
 	callback MAPCALLBACK_OBJECTS, StadiumGroundsSandraAppears
-	callback MAPCALLBACK_OBJECTS, StadiumGroundsAdrinnaDisappears
 	
 	def_warp_events
 	warp_event  5, 41, SERENE_SPRINGS, 3
@@ -13,9 +12,7 @@ StadiumGrounds_MapScriptHeader:
 	warp_event 26,  5, STADIUM_BOX, 1
 	
 	def_coord_events
-	coord_event 32,  3, 0, StadiumGroundsBobeshScene
-	coord_event 33,  8, 1, StadiumGroundsSandraScene
-	coord_event 20,  3, 2, StadiumGroundsAdrinnaScene
+	coord_event 26,  6, 0, StadiumGroundsBobeshScene
 
 	def_bg_events
 	bg_event  8, 36, BGEVENT_JUMPTEXT, Text_StadiumSign1;
@@ -25,9 +22,8 @@ StadiumGrounds_MapScriptHeader:
 	def_object_events
 	object_event 29,  6, SPRITE_BOBESH, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumGroundsBobeshScript, EVENT_BEAT_BOBESH_STADIUM
 	object_event 30,  6, SPRITE_SANDRA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumGroundsSandraScript, EVENT_BEAT_BOBESH_STADIUM
-	object_event 30, 10, SPRITE_TOXICROAK, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, StadiumGroundsToxicroakScript, EVENT_TOXICROAK_STADIUM
+	pokemon_event  30, 10, TOXICROAK, -1, -1, PAL_NPC_BLUE, StadiumGroundsToxicroakScript, EVENT_BEAT_BOBESH_STADIUM
 	object_event 46, 28, SPRITE_SANDRA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumGroundsSandra2Script, -1	
-	object_event 21,  3, SPRITE_ADRINNA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumGroundsAdrinnaScript, EVENT_STADIUM_ADRINNA
 	object_event 48, 18, SPRITE_BRIGADER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader8, EVENT_BEAT_BOBESH_STADIUM
 	object_event 48,  9, SPRITE_BRIGADER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader9, EVENT_BEAT_BOBESH_STADIUM
 	object_event 42,  5, SPRITE_BRIGADER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader10, EVENT_BEAT_BOBESH_STADIUM
@@ -41,7 +37,7 @@ StadiumGrounds_MapScriptHeader:
 	const STADIUMGROUNDS_SANDRA
 	const STADIUMGROUNDS_TOXICROAK
 	const STADIUMGROUNDS_SANDRA_2
-	const STADIUMGROUNDS_ADRINNA
+
 
 StadiumGroundsFloodCallback:
 	checkevent EVENT_STADIUM_GROUNDS_FIRST_FLOOD
@@ -62,54 +58,41 @@ StadiumGroundsFloodCallback:
 .Done:
 	endcallback
 
-StadiumGroundsSandraAppears:
-	checkevent EVENT_STADIUM_BOX_SANDRA
-	iffalse .Sandra2Disappears
-	appear STADIUMGROUNDS_SANDRA_2
+StadiumGroundsSandraAppears: ; sandra should appear only once
+	checkevent EVENT_STADIUM_BOX_SANDRA ; this is set in the stadium box
+	iffalse .Sandra2Disappears ; sandra 2 only appears after talking in the stadium box
+	appear STADIUMGROUNDS_SANDRA_2 
 	endcallback
 
 .Sandra2Disappears:
 	disappear STADIUMGROUNDS_SANDRA_2
 	endcallback
 
-StadiumGroundsAdrinnaDisappears:
-	disappear STADIUMGROUNDS_ADRINNA
-	endcallback
-
 StadiumGroundsBobeshScene:
-	turnobject PLAYER, UP
-	showemote EMOTE_SHOCK, PLAYER, 15
-	special Special_FadeOutMusic
+	applymovement PLAYER, PlayerWalksDownMovement
 	pause 15
-	turnobject STADIUMGROUNDS_BOBESH, DOWN
+	showemote EMOTE_SHOCK, STADIUMGROUNDS_BOBESH, 10
+	turnobject STADIUMGROUNDS_BOBESH, RIGHT
 	opentext
 	writetext BobeshIntroText
 	waitbutton
 	closetext
-	special Special_FadeInMusic
 	applymovement PLAYER, PlayerMovesToToxicroak
-	turnobject STADIUMGROUNDS_TOXICROAK, DOWN
-	setscene SCENE_STADIUM_GROUNDS_TOXICROAK_BATTLE
-	end
-
-StadiumGroundsToxicroakScript:
-	faceplayer
 	opentext
 	writetext ToxicroakChallengeText
 	waitbutton
 	closetext
-	loadwildmon TOXICROAK, 30
+	loadvar VAR_BATTLETYPE, BATTLETYPE_TRAP
+	loadwildmon TOXICROAK, 20
 	startbattle
-	reloadmapafterbattle
+	ifequal $1, .Continue
+.Continue:
 	setevent EVENT_STADIUM_GROUNDS_FIRST_FLOOD
-	setscene SCENE_STADIUM_GROUNDS_TOXICROAK_DEFEATED
-	end
-
-StadiumGroundsSandraScene:
-	turnobject PLAYER, UP
-	showemote EMOTE_SHOCK, PLAYER, 15
+	disappear STADIUMGROUNDS_TOXICROAK
+	reloadmapafterbattle
 	applymovement STADIUMGROUNDS_BOBESH, BobeshBlocksStairs
-	turnobject STADIUMGROUNDS_SANDRA, DOWN
+	opentext
+	turnobject STADIUMGROUNDS_SANDRA, RIGHT
 	opentext
 	writetext SandraThankYouText
 	waitbutton
@@ -117,34 +100,32 @@ StadiumGroundsSandraScene:
 	writetext SandraNegotiateText
 	waitbutton
 	closetext
-	end
-
-StadiumGroundsBobeshScript:
-	faceplayer
-	checkevent EVENT_STADIUM_GROUNDS_SECOND_FLOOD
-	iftrue .Defeated
+	applymovement PLAYER, PlayerWalkToBobeshMovement
+	applymovement STADIUMGROUNDS_SANDRA, SandraWalkToBobeshMovement
 	opentext
 	writetext BobeshBattleText
 	waitbutton
 	closetext
 	winlosstext BobeshWinText, 0
-	loadtrainer GENTLEMAN, BOBESH
+	loadtrainer BOBESH, 1
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_STADIUM_GROUNDS_SECOND_FLOOD
+	setevent EVENT_BEAT_BOBESH_STADIUM
 	opentext
 	writetext BobeshDefeatText
 	waitbutton
 	closetext
 	applymovement STADIUMGROUNDS_BOBESH, BobeshExitMovement
 	disappear STADIUMGROUNDS_BOBESH
-	applymovement STADIUMGROUNDS_SANDRA, SandraExitMovement
-	disappear STADIUMGROUNDS_SANDRA
-	setscene SCENE_FINISHED
+	opentext
+	writetext SandraInvitesToBoxText
+	waitbutton
+	closetext	
+	clearevent EVENT_STADIUM_BOX_ADRINNA ; now she should show up in the box
+	setscene $1
 	end
 
-.Defeated:
-	jumptext BobeshAfterText
 
 StadiumGroundsSandraScript:
 	end
@@ -174,7 +155,12 @@ SandraExitMovement:
 	step_end
 
 BobeshIntroText:
-	text "Who let you in?..."
+	text "Bobesh: Eh? Who"
+	line "are you, and how"
+	cont "did you get past"
+	cont "the guards?"
+	
+	para "No matter."
 
 	para "I am General"
 	line "Bobesh, sent by"
@@ -183,20 +169,20 @@ BobeshIntroText:
 	cont "this chaotic town."
 
 	para "In nature, life"
-	line "is 'nasty, brut-"
-	cont "ish, and short.'"
+	line "is nasty, brut-"
+	cont "ish, and short."
 	cont "Only a strong"
 	cont "ruler can provide"
 	cont "true peace."
 
 	para "This woman, Sandra,"
 	line "naively believes"
-	cont "all #MON have"
+	cont "all #mon have"
 	cont "equal value."
 
 	para "But without a"
 	line "hierarchy, without"
-	cont "stronger #MON"
+	cont "stronger #mon"
 	cont "to aspire to, we'd"
 	cont "remain in a state"
 	cont "of anarchy."
@@ -241,9 +227,15 @@ SandraNegotiateText:
 	done
 
 BobeshBattleText:
-	text "Hey! Where did"
-	line "that water come"
-	cont "from?"
+	text "Grr, I thought"
+	line "that feral Toxi-"
+	cont "croak would rip"
+	cont "you both to"
+	cont "shreds." 
+
+	text "And whoa- where"
+	line "did that water"
+	cont "come from?"
 
 	para "I'm not letting"
 	line "you escape!"
@@ -260,15 +252,10 @@ BobeshDefeatText:
 	cont "again, but my"
 	cont "fire types don't"
 	cont "like this water…"
-	done
 
-BobeshAfterText:
-	text "You haven't seen"
+	para "You haven't seen"
 	line "the last of me!"
 	done
-
-StadiumGroundsAdrinnaScript:
-	end
 	
 StadiumGroundsAdrinnaScene:
 	playsound SFX_WARP_TO
@@ -277,7 +264,7 @@ StadiumGroundsAdrinnaScene:
 	opentext
 	writetext AdrinnaDialogueStadium
 	closetext
-	applyonemovement CINNABARISLAND_BLUE, teleport_from
+	applyonemovement STADIUMGROUNDS_ADRINNA, teleport_from
 	disappear STADIUMGROUNDS_ADRINNA
 	setevent EVENT_STADIUM_ADRINNA 
 	end
@@ -437,4 +424,77 @@ Text_StadiumSign2:
 	para "Coming soon"
 	done
 
+SandraInvitesToBoxText:
+	text "<PLAYER>. Excel-"
+	line "lent battle"
+	cont "against General"
+	cont "Bobesh."
 
+	para "I have much admir-"
+	line "ation for your"
+	cont "bond with your"
+	cont "#mon."
+
+	para "Please, meet me in"
+	line "the Stadium Box"
+	cont "above, and we can"
+	cont "discuss your"
+	cont "journey."
+	done
+
+StadiumGroundsSandra2Script:
+	opentext
+	writetext StadiumGroundsSandraAsksToTimeTravel
+	yesorno
+	iffalse_jumpopenedtext StadiumGroundsNoTimeTravel
+	writetext StadiumGroundsTimeTravel
+	waitbutton
+	closetext
+	playsound SFX_WARP_TO
+	special FadeOutPalettes
+	waitsfx
+	warp NATIONAL_PARK, 20, 20
+	end
+
+StadiumGroundsSandraAsksToTimeTravel:
+	text "<PLAYER>. You seek"
+	line "entrance to the"
+	cont "Trader's Landing"
+	cont "port to block"
+	cont "Steel types, but"
+	cont "you cannot find a"
+	cont "path there from"
+	cont "here."
+
+	para "Would you like to"
+	line "summon Celebi to"
+	cont "bring you forward"
+	cont "to your time?"
+	done
+
+
+StadiumGroundsNoTimeTravel:
+	text "I see. Please take"
+	line "your time and"
+	cont "return if you"
+	cont "would like to"
+	cont "honor Celebi."
+	done
+
+StadiumGroundsTimeTravel:
+	text "Celebi, in this"
+	line "place of super-"
+	cont "iority, help us to"
+	cont "be humble and"
+	cont "recognize that the"
+	cont "highest branch and"
+	cont "deepest roots are"
+	cont "each important."
+
+	para "We wish that the"
+	line "wind will blow the"
+	cont "clouds to see more"
+	cont "clearly how we"
+	cont "depend on each"
+	cont "other."
+	done

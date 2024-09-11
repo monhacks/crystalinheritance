@@ -4243,10 +4243,10 @@ DrapionEvosAttacks:
 	
 ToxicroakEvosAttacks:
 	db 0 ; no more Evolutions
-	db 1, MUD_SLAP
-	db 1, VENOSHOCK
+	db 1, SEISMIC_TOSS
+	db 1, POISON_STING
 	db 1, LOW_KICK
-	db 1, BULK_UP
+	db 1, SWORDS_DANCE
 	db 34, NASTY_PLOT
 	db 38, EARTH_POWER
 	db 40, SLUDGE_BOMB

@@ -4,8 +4,8 @@
 	db POISON, FIGHTING ; type
 	db 75 ; catch rate
 	db 172 ; base exp
-	db NO_ITEM ; item 1
-	db NO_ITEM ; item 2
+	db ALWAYS_ITEM_2 ; item 1
+	db BERSERK_GENE ; item 2
 	dn GENDER_F50, 3 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/toxicroak/front.dimensions"
 	abilities_for TOXICROAK, DRY_SKIN, DRY_SKIN, DRY_SKIN

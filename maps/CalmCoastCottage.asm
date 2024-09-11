@@ -52,12 +52,9 @@ CalmCoastCottageDayCareWomanScript:
 	writetext CalmCoastCottageDayCareWomanText
 	waitbutton
 	closetext
-	special FadeBlackQuickly
-	special ReloadSpritesNoPalettes
 	playmusic MUSIC_HEAL
 	special HealParty
 	pause 60
-	special FadeInQuickly
 	special RestartMapMusic
 	end
 

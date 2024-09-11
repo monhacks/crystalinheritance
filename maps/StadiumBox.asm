@@ -16,35 +16,32 @@ StadiumBox_MapScriptHeader: ; todo: make sandra only talkable from one tile, usi
 	def_bg_events
 
 	def_object_events
-	object_event  5,  7, SPRITE_SANDRA, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumBoxSandraScript, EVENT_STADIUM_BOX_SANDRA
-	object_event  6,  7, SPRITE_KURT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumBoxKurtScript, EVENT_STADIUM_BOX_SANDRA ; todo, make a script for Kurt to say something before you talk to Sandra
+	object_event  5,  3, SPRITE_ADRINNA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumBoxAdrinna, EVENT_STADIUM_BOX_ADRINNA
+	object_event  5,  11, SPRITE_SANDRA, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumBoxSandraScript, EVENT_STADIUM_BOX_SANDRA
+	object_event  6,  11, SPRITE_KURT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumBoxKurtScript, EVENT_STADIUM_BOX_SANDRA ; todo, make a script for Kurt to say something before you talk to Sandra
 	itemball_event  8,  2, SCOPE_LENS, 1, EVENT_STADIUM_BOX_SCOPE_LENS
 
 	object_const_def
+	const STADIUMBOX_ADRINNA
 	const STADIUMBOX_SANDRA
 	const STADIUMBOX_KURT
 
 StadiumBoxSandraKurtCallback:
-	checkevent EVENT_BEAT_BOBESH_STADIUM
-	iftrue .SandraKurtAppear
-	disappear STADIUMBOX_SANDRA
-	disappear STADIUMBOX_KURT
-	endcallback
-.SandraKurtAppear:
-	checkevent EVENT_STADIUM_BOX_SANDRA
-	iftrue .SandraKurtDisappear
-	appear STADIUMBOX_SANDRA
-	appear STADIUMBOX_KURT
-	endcallback
-.SandraKurtDisappear:
 	disappear STADIUMBOX_SANDRA
 	disappear STADIUMBOX_KURT
 	endcallback
 
-StadiumBoxDialogueEvent:
-	turnobject STADIUMBOX_KURT, DOWN
-	turnobject STADIUMBOX_SANDRA, DOWN
-	turnobject PLAYER, UP
+StadiumBoxAdrinna:
+	opentext
+	writetext AdrinnaDialogueStadium
+	closetext
+	applyonemovement STADIUMGROUNDS_ADRINNA, teleport_from
+	disappear STADIUMGROUNDS_ADRINNA
+	setevent EVENT_STADIUM_ADRINNA 
+	appear STADIUMBOX_SANDRA
+	applymovement STADIUMBOX_SANDRA, StadiumBoxSandraWalksToPlayer
+	appear STADIUMBOX_KURT
+	applymovement STADIUMBOX_KURT, StadiumBoxKurtWalksToPlayer
 	opentext
 	writetext KurtDialogue
 	waitbutton
@@ -96,10 +93,11 @@ SandraDialogue:
 	done
 
 KurtDialogue2:
-	text "KURT: <PLAYER>. If"
-	line "we can find a way"
-	cont "into Ecruteak, we"
-	cont "can get to the"
+	text "KURT: <PLAYER>."
+	line "We must get"
+	cont "into Ecruteak."
+	cont "Then we can get" 
+	cont "to old Oliving"
 	cont "port and stop the"
 	cont "shipment. I wonder"
 	cont "if we can ask"

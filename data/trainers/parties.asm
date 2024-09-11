@@ -3638,7 +3638,7 @@ BrigaderGroup:
 	; party
 	db 14, PIDGEOTTO
 	db 15, VULPIX
-	db 15, Voltorb
+	db 15, VOLTORB
 	db 15, GROWLITHE
 	db -1 ; end
 
@@ -8335,7 +8335,7 @@ BattleGirlGroup:
 	db TRAINERTYPE_NORMAL
 	; party
 	db 14, MARILL
-	db 18, AZJMARILL
+	db 18, AZUMARILL
 	db -1 ; end
 
 ; ================
@@ -9512,7 +9512,7 @@ CooltrainerFGroup:
 	db 16, DUNSPARCE, LEFTOVERS, "Par Four@"
 		db SANDSTORM, PROTECT, ROOST, HEADBUTT
 	db 18, RHYHORN, SALAC_BERRY, "Ivory@"
-		db SANDSTORM, ROCK_POLISH, DIG, STRENGTH
+		db SANDSTORM, ROCK_THROW, DIG, STRENGTH
 	db 20, GLIGAR, POISON_BARB, "Scorpius@"
 		db SANDSTORM, AERIAL_ACE, DIG, POISON_STING
 	db -1 ; end

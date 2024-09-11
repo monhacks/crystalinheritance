@@ -509,7 +509,7 @@
 	def_grass_wildmons EMPIRES_EXTENT
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 ;	; morn
-	wildmon 35, TOXICROAK
+	wildmon 35, ROSELIA
 	wildmon 35, H__BRAVIARY
 	wildmon 35, STARAVIA
 	wildmon 35, LUXIO
@@ -517,7 +517,7 @@
 	wildmon 35, H__BRAVIARY
 	wildmon 35, TOXICROAK
 ;	; day
-	wildmon 35, TOXICROAK
+	wildmon 35, ROSELIA
 	wildmon 35, H__BRAVIARY
 	wildmon 35, STARAVIA
 	wildmon 35, LUXIO
@@ -525,7 +525,7 @@
 	wildmon 35, H__BRAVIARY
 	wildmon 35, TOXICROAK
 ;	; nite
-	wildmon 35, TOXICROAK
+	wildmon 35, ROSELIA
 	wildmon 35, H__BRAVIARY
 	wildmon 35, STARAVIA
 	wildmon 35, LUXIO
