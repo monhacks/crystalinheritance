@@ -20,8 +20,6 @@ Route36VioletGate_MapScriptHeader:
 Route36VioletGateOfficerScript:
 	faceplayer
 	opentext
-	checkevent EVENT_FOUGHT_SUDOWOODO
-	iftrue .ClearedSudowoodo
 	jumpopenedtext Route36VioletGateOfficerText1
 
 .ClearedSudowoodo

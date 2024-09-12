@@ -221,8 +221,8 @@ ElmPhoneScript1:
 	ifequal SPECIALCALL_POKERUS, .pokerus
 	checkevent EVENT_SHOWED_TOGEPI_TO_ELM
 	iftrue .discovery
-	checkevent EVENT_GOT_TOGEPI_EGG_FROM_ELMS_AIDE
-	iffalse .next
+;	checkevent EVENT_GOT_TOGEPI_EGG_FROM_ELMS_AIDE
+;	iffalse .next
 	checkevent EVENT_TOGEPI_HATCHED
 	iftrue .egghatched
 .next
