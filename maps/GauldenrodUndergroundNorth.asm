@@ -21,6 +21,8 @@ GauldenrodUndergroundNorth_MapScriptHeader:
 
 GauldenrodUndergroundNorthGateScript:
 	faceplayer
+	checkevent EVENT_BEAT_SANDRA
+	iffalse NoEnterUnderground
 	opentext
 	writetext GauldenrodUndergroundNorthGateText1
 	waitbutton
@@ -33,6 +35,12 @@ GauldenrodUndergroundNorthGateScript:
 	closetext
 	end
 
+NoEnterUnderground:
+	opentext
+	writetext NoEnterUndergroundText
+	waitbutton
+	closetext
+
 GauldenrodUndergroundNorthGateMovement:
 	step_up
 	step_left
@@ -43,9 +51,11 @@ GauldenrodUndergroundNorthGateText1:
 	text "Nothing to see"
 	line "here..."
 
-	para "Oh, you're not a"
-	line "brigader?"
-	cont "Please pass."
+	para "Oh, you have a"
+	line "blessing from"
+	cont "Sandra?"
+	
+	para "Please pass."
 	
 	para "There are some"
 	line "trainers digging"
@@ -56,3 +66,14 @@ GauldenrodUndergroundNorthGateText2:
 	text "We dug this"
 	line "in secret."
 	done
+
+NoEnterUndergroundText:
+	text "Excuse me, who"
+	line "are you?"
+	
+	para "..."
+	
+	para "Nothing to see"
+	line "here!"
+	cont
+	

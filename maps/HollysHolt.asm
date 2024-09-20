@@ -78,6 +78,8 @@ HollysHoltScript1:
 	writetext HH_HollisPinecos
 	waitbutton
 	closetext
+	applymovement HOLLYS_HOLT_HOLLIS, HH_Hollis_Leaves
+	disappear HOLLYS_HOLT_HOLLIS
 	showemote EMOTE_SHOCK, HOLLYS_HOLT_KURT, 15
 	turnobject HOLLYS_HOLT_KURT, RIGHT
 	opentext
@@ -105,8 +107,9 @@ HollysHoltHollisScript:
 	end
 
 HH_HollisHello:
-	text "Hello! How did"
-	line "you get behind"
+	text "Hollis:"
+	line "Hello! How did"
+	cont "you get behind"
 	cont "the shrine?"
 	
 	para "Are you also"
@@ -116,18 +119,21 @@ HH_HollisHello:
 	line "Hollis. I am"
 	cont "the elder here."
 	
-	para "We would give"
-	line "you a better"
-	cont "welcome, but"
-	cont "there are so"
-	cont "many Pineco on"
-	cont "the trees that"
-	cont "the forest is"
-	cont "overrun."
+	para "I was just, eh"
+	line "praying at the"
+	cont "shrine."
+	
+	para "You will see that"
+	line "Pineco are a pox"
+	cont "on the trees."
+	
+	para "I'm the only one"
+	line "who can safely"
+	cont "remove them."
 	done
 	
 HH_KurtExplains:
-	text "Kurt: well, we're"
+	text "Kurt: Ah, we're"
 	line "here to stop"
 	cont "Steel types from"
 	cont "entering Johto."
@@ -139,7 +145,7 @@ HH_KurtExplains:
 	done
 
 HH_HollisPinecos:
-	text "Steel types?"
+	text "Hollis: Steel?"
 	line "Pineco becomes"
 	cont "a steel type"
 	cont "when it evolves,"
@@ -154,10 +160,16 @@ HH_HollisPinecos:
 	cont "in through the"
 	cont "port west of the"
 	cont "Capital."
+	
+	para "I wish I could"
+	line "stay and chat"
+	cont "more, but I am"
+	cont "so tired from"
+	cont "this work."
 	done
 
 HH_KurtHasAPlan:
-	text "<PLAYER>!"
+	text "Kurt: <PLAYER>!"
 	line "Of course, the"
 	cont "steel types are"
 	cont "being brought"
@@ -422,3 +434,13 @@ HollysHoltBagwormText:
 	cont "decimated by"
 	cont "bug bites."
 	done
+
+HH_Hollis_Leaves:
+	step_down
+	step_left
+	step_left
+	step_left
+	step_left
+	step_left
+	step_end
+	

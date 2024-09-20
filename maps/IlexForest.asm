@@ -32,7 +32,7 @@ IlexForest_MapScriptHeader:
 	pokemon_event  9, 27, SHUCKLE, -1, -1, PAL_NPC_RED, IlexForestShuckleText, EVENT_LOGGERS_ILEX_FOREST
 	pokemon_event 10, 27, SCIZOR, -1, -1, PAL_NPC_RED, IlexForestScizorText, EVENT_LOGGERS_ILEX_FOREST
 	object_event 10, 21, SPRITE_CELEBI, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IlexForestCelebiScript, EVENT_KURTS_HOUSE_KURT_0 ;stays disappeared
-	object_event  4, 26, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IlexForestRivalScript, EVENT_KURTS_HOUSE_KURT_0 ;stays disappeared
+	object_event  4, 26, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IlexForestRivalScript, EVENT_ILEX_FOREST_RIVAL ;stays disappeared
 	object_event 25, 24, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IlexHealerScript, -1
 	object_event  5, 35, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerBug_catcherWade, -1 
 	object_event 13, 36, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerYoungsterJoey, -1 
@@ -516,12 +516,13 @@ IlexForestCelebiEventScript:
 	closetext ; start to appear celebi 
 	special Special_FadeOutMusic
 	pause 15
-	playmusic MUSIC_RIVAL_ENCOUNTER
+
 	appear ILEX_RIVAL
 	applymovement ILEX_RIVAL, IlexRivalWalksToShrine
 	turnobject PLAYER, DOWN
 	turnobject ILEX_FOREST_KURT, DOWN
 	showemote EMOTE_QUESTION, ILEX_RIVAL, 15
+	playmusic MUSIC_RIVAL_ENCOUNTER
 	opentext
 	writetext IlexRivalWhatDoing
 	waitbutton
@@ -538,13 +539,14 @@ IlexForestCelebiEventScript:
 	writetext RivalRespondsToKurt
 	waitbutton
 	closetext
+	setevent EVENT_ILEX_FOREST_RIVAL
 	checkevent EVENT_GOT_OSHAWOTT
 	iftrue .Oshawott
 	checkevent EVENT_GOT_ROWLET
 	iftrue .Rowlet
 	winlosstext IlexForestWinText, IlexForestLossText
 	setlasttalked ILEX_RIVAL
-	loadtrainer RIVAL1, RIVAL1_6 ; _6 OR _3?
+	loadtrainer RIVAL1, RIVAL1_6 ; 
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
@@ -607,7 +609,6 @@ IlexForestCelebiEventScript:
 	special FadeOutPalettes
 	waitsfx
 	warp HOLLYS_HOLT, 10, 26
-
 	end
 
 IlexForestShrineScript:

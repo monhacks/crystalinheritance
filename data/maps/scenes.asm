@@ -53,10 +53,10 @@ MapScenes::
 	scene_var MISTY_BASIN,                            wMistyBasinSceneID 
 	scene_var ANARRES_HOUSE,                          wAnarresHouseSceneID 
 	scene_var ANARRES_HOLT_GATE,                      wAnarresHoltGateSceneID
-;	scene_var BATTLE_FACTORY_1F,                      wBattleFacilitySceneID
+	scene_var STADIUM_GROUNDS,                        wStadiumGroundsSceneID
 ;	scene_var BATTLE_FACTORY_BATTLE_ROOM,             wAlways0SceneID
 ;	scene_var BATTLE_FACTORY_HALLWAY,                 wAlways0SceneID
-;	scene_var WILLS_ROOM,                             wWillsRoomSceneID
+	scene_var GAULDENROD,                             wGauldenrodSceneID
 ;	scene_var WISE_TRIOS_ROOM,                        wWiseTriosRoomSceneID
 ;	scene_var YELLOW_FOREST,                          wYellowForestSceneID
 ;	scene_var VERMILION_CITY,                         wVermilionCitySceneID

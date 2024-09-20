@@ -16,15 +16,11 @@ Route35GoldenrodGate_MapScriptHeader:
 	def_object_events
 	object_event  0,  4, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, RandyScript, -1
 	object_event  6,  4, SPRITE_BREEDER, SPRITEMOVEDATA_WALK_UP_DOWN, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route35GoldenrodGatePokefanFScript, -1
-	object_event  3,  2, SPRITE_FAT_GUY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route35GoldenrodGateFisherText, -1
+	object_event  3,  2, SPRITE_SCIENTIST, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route35GoldenrodGateFisherText, -1
 
 RandyScript:
 	faceplayer
 	opentext
-	checkevent EVENT_GOT_HP_UP_FROM_RANDY
-	iftrue .gothpup
-	checkevent EVENT_GAVE_KENYA
-	iftrue .questcomplete
 	checkevent EVENT_GOT_KENYA
 	iftrue .alreadyhavekenya
 	writetext Route35GoldenrodGateRandyAskTakeThisMonToMyFriendText
@@ -38,7 +34,7 @@ RandyScript:
 	writetext Route35GoldenrodGatePlayerReceivedAMonWithMailText
 	playsound SFX_KEY_ITEM
 	waitsfx
-	givepoke FARFETCH_D, FEMALE | NO_FORM, 10, NO_ITEM, NET_BALL, NO_MOVE, TRUE, GiftFarfetch_dName, GiftFarfetch_dOTName, GiftFarfetch_dOTIDAndCaughtGender
+	givepoke SUDOWOODO, MALE | NO_FORM, 20, NO_ITEM, HERB_BALL, GROWTH, TRUE, GiftFarfetch_dName, GiftFarfetch_dOTName, GiftFarfetch_dOTIDAndCaughtGender
 	givepokemail GiftFarfetch_dMail
 	setevent EVENT_GOT_KENYA
 .alreadyhavekenya
@@ -50,28 +46,19 @@ RandyScript:
 .refused
 	jumpopenedtext Route35GoldenrodGateRandyOhNeverMindThenText
 
-.questcomplete
-	writetext Route35GoldenrodGateRandySomethingForYourTroubleText
-	promptbutton
-	verbosegiveitem HP_UP
-	iffalse .bagfull
-	setevent EVENT_GOT_HP_UP_FROM_RANDY
-.gothpup
-	writetext Route35GoldenrodGateRandyMyPalWasSnoozingRightText
-	waitbutton
 .bagfull
 	endtext
 
 GiftFarfetch_dMail:
 	db   FLOWER_MAIL
-	db   "Dark Cave leads"
-	next "to another road@"
+	db   "Don't ride the"
+	next "train today@"
 
 GiftFarfetch_dName:
-	rawchar "Kenya@"
+	rawchar "Bonsai@"
 
 GiftFarfetch_dOTName:
-	rawchar "Randy@"
+	rawchar "Guy@"
 
 GiftFarfetch_dOTIDAndCaughtGender:
 	bigdw 01001
@@ -80,35 +67,45 @@ GiftFarfetch_dOTIDAndCaughtGender:
 Route35GoldenrodGatePokefanFScript:
 	faceplayer
 	opentext
-	checkevent EVENT_FOUGHT_SUDOWOODO
-	iftrue .aftersudowoodo
 	jumpopenedtext Route35GoldenrodGatePokefanFText
 
-.aftersudowoodo
-	jumpopenedtext Route35GoldenrodGatePokefanFText_FoughtSudowoodo
 
 Route35GoldenrodGateRandyAskTakeThisMonToMyFriendText:
-	text "Excuse me, kid!"
-	line "Can you do a guy"
-	cont "a favor?"
+	text "Psst, excuse me!"
+	
+	para "You there!"
+	
+	para "I've got a favor"
+	line "to ask."
+	
+	para "I need you to"
+	line "take this #mon"
+	cont "with Mail to my"
+	cont "brother."
+	
+	para "It's urgent."
+	
+	para "He's about to"
+	line "board on the"
+	cont "magnet train."
 
-	para "Can you take this"
-	line "#mon with Mail"
-	cont "to my friend?"
-
-	para "He's on Route 31."
 	done
 
 Route35GoldenrodGateRandyThanksText:
 	text "You will? Perfect!"
 	line "Thanks, kid!"
 
-	para "My pal's a chubby"
-	line "guy who snoozes"
-	cont "all the time."
+	para "My brother is"
+	line "a fancy guy in"
+	cont "red clothes."
 
 	para "You'll recognize"
 	line "him right away!"
+	
+	para "And, uh, don't"
+	line "tell anyone else"
+	cont "where you got"
+	cont "that mail, OK?"
 	done
 
 Route35GoldenrodGatePlayerReceivedAMonWithMailText:
@@ -117,16 +114,17 @@ Route35GoldenrodGatePlayerReceivedAMonWithMailText:
 	done
 
 Route35GoldenrodGateRandyWeirdTreeBlockingRoadText:
-	text "You can read it,"
-	line "but don't lose it!"
-	cont "Route 31!"
+	para "My brother is"
+	line "a fancy guy in"
+	cont "red clothes."
 
-	para "Oh, yeah. There"
-	line "was a weird tree"
-	cont "blocking the road."
-
-	para "I wonder if it's"
-	line "been cleared?"
+	para "You'll recognize"
+	line "him right away!"
+	
+	para "And, uh, don't"
+	line "tell anyone else"
+	cont "where you got"
+	cont "that mail, OK?"
 	done
 
 Route35GoldenrodGateRandyCantCarryAnotherMonText:
@@ -155,24 +153,12 @@ Route35GoldenrodGateRandyMyPalWasSnoozingRightText:
 	done
 
 Route35GoldenrodGatePokefanFText:
-	text "A strange tree is"
-	line "blocking the road."
-
-	para "It wriggles around"
-	line "if you talk to it."
-
-	para "I heard it became"
-	line "wild when someone"
-
-	para "watered it with a"
-	line "SquirtBottle."
+	text "Isn't it weird"
+	line "how Whitney's"
+	cont "friends don't have"
+	cont "any cute #mon?"
 	done
 
-Route35GoldenrodGatePokefanFText_FoughtSudowoodo:
-	text "I like the #mon"
-	line "Lullaby they play"
-	cont "on the radio."
-	done
 
 Route35GoldenrodGateFisherText:
 	text "I wonder how many"
@@ -186,4 +172,10 @@ Route35GoldenrodGateFisherText:
 
 	para "there were 150"
 	line "different kinds."
+	
+	para "Now, there are"
+	line "hundreds more!"
+	
+	para "Science sure is"
+	line "amazing."
 	done

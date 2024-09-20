@@ -2,8 +2,6 @@ GoldenrodDeptStoreB1F_MapScriptHeader:
 	def_scene_scripts
 
 	def_callbacks
-	callback MAPCALLBACK_TILES, UnknownScript_0x7d781
-	callback MAPCALLBACK_NEWMAP, UnknownScript_0x7d7ac
 
 	def_warp_events
 	warp_event 17,  2, UNDERGROUND_WAREHOUSE, 3
@@ -23,35 +21,6 @@ GoldenrodDeptStoreB1F_MapScriptHeader:
 	object_event  4,  8, SPRITE_BLACK_BELT, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodDeptStoreB1FBlackBelt2Text, -1
 	object_event  6, 13, SPRITE_BLACK_BELT, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodDeptStoreB1FBlackBelt3Text, -1
 	pokemon_event  7,  7, MACHOKE, -1, -1, PAL_NPC_BLUE, GoldenrodDeptStoreB1FMachokeText, -1
-
-UnknownScript_0x7d781:
-	checkevent EVENT_RECEIVED_CARD_KEY
-	iftrue UnknownScript_0x7d78a
-	sjump UnknownScript_0x7d791
-
-UnknownScript_0x7d78a:
-	changeblock 16, 4, $d
-	sjump UnknownScript_0x7d791
-
-UnknownScript_0x7d791:
-	checkevent EVENT_WAREHOUSE_LAYOUT_2
-	iftrue .Layout2
-	checkevent EVENT_WAREHOUSE_LAYOUT_3
-	iftrue .Layout3
-	changeblock 10, 8, $d
-	endcallback
-
-.Layout2:
-	changeblock 4, 10, $d
-	endcallback
-
-.Layout3:
-	changeblock 10, 12, $d
-	endcallback
-
-UnknownScript_0x7d7ac:
-	clearevent EVENT_WAREHOUSE_BLOCKED_OFF
-	endcallback
 
 GoldenrodDeptStoreB1FBlackBelt1Text:
 	text "Hey, kid! You're"

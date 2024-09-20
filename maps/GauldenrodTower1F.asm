@@ -4,8 +4,8 @@ GauldenrodTower1F_MapScriptHeader:
 	def_callbacks
 
 	def_warp_events
-	warp_event  2, 11, GAULDENROD, 13
-	warp_event  3, 11, GAULDENROD, 13
+	warp_event  2, 11, GAULDENROD, 9
+	warp_event  3, 11, GAULDENROD, 9
 	warp_event 11,  1, GAULDENROD_TOWER_2F, 1
 	warp_event  1, 11, GAULDENROD_TOWER_2F, 2
 	warp_event  5,  3, GAULDENROD_TOWER_2F, 3
@@ -20,6 +20,8 @@ GauldenrodTower1F_MapScriptHeader:
 	object_event  6, 10, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GauldenrodTower1FBrigader2Script, EVENT_BEAT_SANDRA
 
 GauldenrodTower1FBrigader1Script:
+	setevent EVENT_4F_BRIGADER
+	setevent EVENT_4F_AMOS
 	jumptextfaceplayer GauldenrodTower1FBrigader1Text
 
 GauldenrodTower1FBrigader1Text:

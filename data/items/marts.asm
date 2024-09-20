@@ -279,7 +279,7 @@ TradersLandingMart:
 	db -1
 
 AnarresMart:
-	db 9 ; # items
+	db 10 ; # items
 	db RARE_CANDY
 	db MAX_REPEL
 	db CHERI_BERRY
@@ -289,23 +289,24 @@ AnarresMart:
 	db REVIVAL_HERB
 	db ORAN_BERRY 
 	db WHITE_HERB
+	db POKE_BALL
 	db -1
 
 GauldenrodMart1: ; normal items
 	db 9 ; # items
 	db RARE_CANDY
+	db MAX_REPEL
 	db GREAT_BALL
 	db ESCAPE_ROPE
 	db DUSK_BALL
 	db SUPER_POTION
-	db MAX_REPEL
 	db HEAL_POWDER
 	db ENERGYPOWDER
 	db REVIVAL_HERB
 	db -1
 	
 GauldenrodMart2: ; berries
-	db 7 ; # items
+	db 9 ; # items
 	db CHERI_BERRY
 	db CHESTO_BERRY
 	db PECHA_BERRY
@@ -318,8 +319,7 @@ GauldenrodMart2: ; berries
 	db -1
 
 GauldenrodMart3: ; TMs, HMs
-	db 6 ; # items
-	dbw TM_ROCK_SMASH,     5000
+	db 5 ; # items
 	dbw TM_THUNDER_WAVE,  10000
 	dbw TM_SUNNY_DAY,     20000
 	dbw TM_RAIN_DANCE,    20000

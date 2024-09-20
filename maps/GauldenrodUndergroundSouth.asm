@@ -6,7 +6,7 @@ GauldenrodUndergroundSouth_MapScriptHeader:
 	def_warp_events
 	warp_event  2,  7, GAULDENROD, 6
 	warp_event  3,  7, GAULDENROD, 6
-	warp_event  3,  3, GAULDENROD_UNDERGROUND, 1
+	warp_event  3,  3, GAULDENROD_UNDERGROUND, 2
 
 
 	def_coord_events

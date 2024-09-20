@@ -293,7 +293,7 @@ ElmPhoneScript2:
 .disaster
 	farwritetext ElmPhoneDisasterText
 	specialphonecall SPECIALCALL_NONE
-	setevent EVENT_ELM_CALLED_ABOUT_STOLEN_POKEMON
+;	setevent EVENT_ELM_CALLED_ABOUT_STOLEN_POKEMON
 	end
 
 .assistant

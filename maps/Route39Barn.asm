@@ -61,11 +61,6 @@ MooMoo:
 	special PlaySlowCry
 	promptbutton
 	writetext Text_ItsCryIsWeak
-	checkevent EVENT_TALKED_TO_FARMER_ABOUT_MOOMOO
-	iftrue .GiveBerry
-	waitendtext
-
-.GiveBerry:
 	promptbutton
 	writetext Text_AskGiveBerry
 	yesorno

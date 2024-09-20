@@ -6,11 +6,13 @@ SereneSprings_MapScriptHeader:
 	def_warp_events
 	warp_event  9, 35, GAULDENROD_SERENE_SPRINGS_GATE, 3
 	warp_event 10, 35, GAULDENROD_SERENE_SPRINGS_GATE, 4
-	warp_event  6,  5, STADIUM_GROUNDS, 1
+	warp_event  7,  1, STADIUM_GROUNDS, 3
+	warp_event  8,  1, STADIUM_GROUNDS, 4
 
 	def_coord_events
 
 	def_bg_events
+	bg_event  5,  7, BGEVENT_READ, StadiumAheadSign
 
 	def_object_events
 	object_event 13, 14, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, StadiumHotSpringsReceptionistScript, EVENT_TAUGHT_COUNTER
@@ -19,7 +21,7 @@ SereneSprings_MapScriptHeader:
 	object_event 11, 22, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader5, EVENT_BEAT_BOBESH_STADIUM
 	object_event  6,  7, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader6, EVENT_BEAT_BOBESH_STADIUM
 	object_event  9,  7, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader7, EVENT_BEAT_BOBESH_STADIUM
-	itemball_event 18, 32, ROCKY_HELMET, 1, EVENT_SERENE_SPRINGS_ROCKY_HELMET ;ok
+	itemball_event 16, 30, ROCKY_HELMET, 1, EVENT_SERENE_SPRINGS_ROCKY_HELMET ;ok
 	itemball_event 3, 23, ELIXIR, 1, EVENT_SERENE_SPRINGS_ELIXIR ;ok
 
 
@@ -260,4 +262,11 @@ ReceptionistRefusedText:
 	para "And ever."
 
 	para "...and ever."
+	done
+
+StadiumAheadSign:
+	jumptext StadiumAheadSignText
+
+StadiumAheadSignText:
+	text "Stadium Grounds"
 	done

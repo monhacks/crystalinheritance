@@ -4,8 +4,8 @@ GauldenrodGuild_MapScriptHeader:
 	def_callbacks
 
 	def_warp_events
-	warp_event 2, 7, GAULDENROD, 3
 	warp_event 3, 7, GAULDENROD, 3
+	warp_event 4, 7, GAULDENROD, 3
 
 	def_coord_events
 

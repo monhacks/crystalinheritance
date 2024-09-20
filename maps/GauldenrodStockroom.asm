@@ -4,13 +4,13 @@ GauldenrodStockroom_MapScriptHeader:
 	def_callbacks
 
 	def_warp_events
+	warp_event  3,  7, GAULDENROD, 2
 	warp_event  4,  7, GAULDENROD, 2
-	warp_event  5,  7, GAULDENROD, 2
 
 	def_coord_events
 
 	def_bg_events
-	bg_event  10,  2, BGEVENT_READ, GSApricornBenchScript
+	bg_event  0,  2, BGEVENT_READ, GSApricornBenchScript
 
 	def_object_events
 	object_event 2, 3, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GauldenrodStockroomNPC1Script, -1
@@ -39,6 +39,8 @@ GauldenrodStockroomNPC1Text:
 
 GauldenrodStockroomNPC2Script:
 	faceplayer
+	checkevent EVENT_GOT_EXPERT_BELT
+	iftrue .GotBelt
 	opentext
 	writetext GauldenrodStockroomNPC2Text1
 	promptbutton
@@ -52,10 +54,17 @@ GauldenrodStockroomNPC2Script:
 	promptbutton
 	verbosegiveitem EXPERT_BELT
 	iffalse .BagFull
+	setevent EVENT_GOT_EXPERT_BELT
 	writetext GauldenrodStockroomNPC2Text3
 	waitbutton
 .BagFull:
 	closetext
+	end
+
+.GotBelt
+	opentext
+	writetext GauldenrodStockroomNPC2Text3
+	waitbutton
 	end
 
 GauldenrodStockroomNPC2Text1:

@@ -10,18 +10,19 @@ CalmCoast_MapScriptHeader:
 
 	def_coord_events
 
+
 	def_bg_events
 	bg_event 13, 33, BGEVENT_READ, CalmCoastSign1Text
 	bg_event 12,  6, BGEVENT_READ, CalmCoastSign2Text
 
 	def_object_events
-	object_event 15, 10, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 5, GenericTrainerYoungsterWarren, EVENT_BEAT_BOBESH_STADIUM ; 
-	object_event 13, 26, SPRITE_COOLTRAINERM, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerCooltrainerMGaven, -1
-	object_event 11, 6, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerYoungsterJimmy, -1
-	object_event 6, 50, SPRITE_BATTLE_GIRL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBattleGirlSubaru, -1
-	object_event 7, 48, SPRITE_BATTLE_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBattleGirlDiane, -1
-	object_event 5, 48, SPRITE_BATTLE_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBattleGirlKajimi, -1
-	object_event 11, 4, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerBrigader2, -1
+	object_event 15, 10, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerYoungsterWarren, EVENT_BEAT_BOBESH_STADIUM ; 
+	object_event 13, 26, SPRITE_ACE_TRAINER_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerCooltrainerMGaven, -1
+	object_event 11, 6, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerYoungsterJimmy, -1
+	object_event 6, 50, SPRITE_BATTLE_GIRL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBattleGirlSubaru, -1
+	object_event 7, 48, SPRITE_BATTLE_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBattleGirlDiane, -1
+	object_event 5, 48, SPRITE_BATTLE_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBattleGirlKagami, -1
+	object_event 11, 4, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerBrigader2, -1
 	object_event 16, 48, SPRITE_KURT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CalmCoastKurtScript, -1
 	tmhmball_event 4, 50, TM_ROAR, EVENT_GOT_TM05_ROAR
 	pokemon_event  14, 19, PIDGEOTTO, -1, -1, PAL_NPC_RED, CalmCoastPidgeottoText, -1
@@ -54,7 +55,7 @@ YoungsterWarrenBeatenText:
 	done
 
 GenericTrainerCooltrainerMGaven:
-	generictrainer COOLTRAINERM, GAVEN, EVENT_BEAT_COOLTRAINERM_GAVEN, CooltrainerMGavenSeenText, CooltrainerMGavenBeatenText
+	generictrainer COOLTRAINERM, GAVEN1, EVENT_BEAT_COOLTRAINERM_GAVEN, CooltrainerMGavenSeenText, CooltrainerMGavenBeatenText
 
 	text "I lost? Now that's"
 	line "bizarre."
@@ -96,12 +97,12 @@ GenericTrainerBattleGirlSubaru:
 	line "sisters."
 	done
 
-SwimmerfNAME4SeenText:
+BattleGirlSubaruSeenText:
 	text "Our secret hiding"
 	line "spot! Get out!"
 	done
 
-SwimmerfNAME4BeatenText:
+BattleGirlSubaruBeatenText:
 	text "Don't tell anyone"
 	line "we're here."
 	done

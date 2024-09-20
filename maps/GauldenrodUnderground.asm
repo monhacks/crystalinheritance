@@ -13,11 +13,11 @@ GauldenrodUnderground_MapScriptHeader:
 
 
 	def_object_events
-	object_event  1, 14, SPRITE_AROMA_LADY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerAromaLadyDahlia, EVENT_GOT_HM04_STRENGTH
-	object_event  2, 17, SPRITE_FIREBREATHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerFirebreatherDick, EVENT_GOT_HM04_STRENGTH
-	object_event  1, 20, SPRITE_TAMER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerTamerBrett, EVENT_GOT_HM04_STRENGTH
-	object_event  2, 25, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerCooltrainerFBeth, EVENT_GOT_HM04_STRENGTH
-	object_event  1, 26, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, GauldenrodUndergroundNPC5Script, EVENT_GOT_HM04_STRENGTH
+	object_event  1, 15, SPRITE_AROMA_LADY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerAromaLadyDahlia, EVENT_GOT_HM04_STRENGTH
+	object_event  2, 17, SPRITE_FIREBREATHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerFirebreatherDick, EVENT_GOT_HM04_STRENGTH
+	object_event  1, 20, SPRITE_TAMER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerTamerBrett, EVENT_GOT_HM04_STRENGTH
+	object_event  2, 25, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerCooltrainerFBeth, EVENT_GOT_HM04_STRENGTH
+	object_event  1, 26, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, GauldenrodUndergroundNPC5Script, EVENT_GOT_HM04_STRENGTH
 	itemball_event 1,  7, BIG_ROOT, 1, EVENT_UNDERGROUND_BIG_ROOT
 
 	object_const_def
@@ -92,14 +92,11 @@ TamerBrettBeatenText:
 	done
 
 GenericTrainerCooltrainerFBeth:
-	generictrainer COOLTRAINER_F, BETH, EVENT_BEAT_COOLTRAINERF_BETH, CooltrainerFBethSeenText, CooltrainerFBethBeatenText
+	generictrainer COOLTRAINERF, BETH1, EVENT_BEAT_COOLTRAINERF_BETH, CooltrainerFBethSeenText, CooltrainerFBethBeatenText
 
-	text "You'll need a"
-	line "blessing from"
-	cont "Sandra at the top"
-	cont "of the tower to"
-	cont "use it outside of"
-	cont "battle."
+	text "You might teach"
+	line "the younger ones"
+	cont "a few things."
 	done
 
 CooltrainerFBethSeenText:
@@ -187,7 +184,7 @@ GauldenrodUndergroundNPC5Text2:
 	cont "you."
 	
 	para "Remember, you"
-	cont "need Sandra's"
+	line "need Sandra's"
 	cont "blessing to use"
 	cont "Strength out of"
 	cont "battle."

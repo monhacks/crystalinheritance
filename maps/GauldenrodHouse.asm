@@ -4,8 +4,8 @@ GauldenrodHouse_MapScriptHeader:
 	def_callbacks
 
 	def_warp_events
-	warp_event  3,  7, GAULDENROD, 3
-	warp_event  4,  7, GAULDENROD, 3
+	warp_event  3,  7, GAULDENROD, 4
+	warp_event  4,  7, GAULDENROD, 4
 
 	def_coord_events
 
@@ -55,7 +55,7 @@ WantLemonadeText:
 	cont "enough?"
 
 	para "I would give you"
-	line "some fresh-squeezed"
+	line "some fresh"
 	cont "lemonade from my"
 	cont "garden."
 	done
@@ -93,7 +93,7 @@ RefusedLemonadeTradeText:
 
 NoTinyMushroomText:
 	text "Oh, you don't have"
-	line "a Tiny Mushroom?"
+	line "a Tinymushroom?"
 
 	para "That's okay. If you"
 	line "find one, feel free"

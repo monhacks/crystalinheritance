@@ -1029,7 +1029,7 @@ wFarfetchdPosition:: db
 ; map triggers
 wAlways0SceneID:: db
 wAzaleaTownSceneID:: db
-wBattleFacilitySceneID:: db
+wStadiumGroundsSceneID:: db ; formerly wbattlefacilitysceneid
 	ds 3 ; unused
 wAnarresHoltGateSceneID:: db
 wBellchimeTrailSceneID:: db
@@ -1112,7 +1112,7 @@ wVermilionCitySceneID:: db
 wVermilionPortSceneID:: db
 wVictoryRoad2FSceneID:: db
 wVioletGymSceneID:: db
-wWillsRoomSceneID:: db
+wGauldenrodSceneID:: db ; willsroomsceneid
 wWiseTriosRoomSceneID:: db
 wYellowForestSceneID:: db ; sceneids should only go through 1117 line. TODO 
 

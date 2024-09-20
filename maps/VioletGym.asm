@@ -1,6 +1,6 @@
 VioletGym_MapScriptHeader:
 	def_scene_scripts
-	scene_script VioletGymTrigger0
+
 
 	def_callbacks
 

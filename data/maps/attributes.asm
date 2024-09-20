@@ -348,11 +348,15 @@ ENDM
 	map_attributes CalmCoast, CALM_COAST, $5, NORTH
 	connection north, Gauldenrod, GAULDENROD, -7 ; NOT SURE IF IT WILL WORK, cf route above
 	
-	map_attributes SereneSprings, SERENE_SPRINGS, $5, $5, SOUTH
-	connection south, Gauldenrod, GAULDENROD, -5
+	map_attributes SereneSprings, SERENE_SPRINGS, $5, NORTH | SOUTH
+	connection north, StadiumGrounds, STADIUM_GROUNDS, 0 
+	connection south, Gauldenrod, GAULDENROD, -7 
+
+	map_attributes StadiumGrounds, STADIUM_GROUNDS, $5, SOUTH	
+	connection south, SereneSprings, SERENE_SPRINGS, 0 
 	
 	map_attributes Gauldenrod, GAULDENROD, $5, NORTH | SOUTH
-	connection north, SereneSprings, SERENE_SPRINGS, 5
+	connection north, SereneSprings, SERENE_SPRINGS, 7 
 	connection south, CalmCoast, CALM_COAST, 7
 	
 	map_attributes GauldenrodDorms, GAULDENROD_DORMS, $0, 0
@@ -369,7 +373,7 @@ ENDM
 	map_attributes GauldenrodTower2F, GAULDENROD_TOWER_2F, $0, 0
 	map_attributes GauldenrodTower3F, GAULDENROD_TOWER_3F, $0, 0
 	map_attributes GauldenrodTower4F, GAULDENROD_TOWER_4F, $0, 0
-	map_attributes StadiumGrounds, STADIUM_GROUNDS, $0, 0
+
 	map_attributes StadiumUnderground, STADIUM_UNDERGROUND, $1D, 0 ; 
 	map_attributes StadiumBox, STADIUM_BOX, $0, 0
 

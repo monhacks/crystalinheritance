@@ -1015,11 +1015,11 @@ PoliwrathEvosAttacks:
 	db 1, BUBBLE_BEAM
 	db 1, HYPNOSIS
 	db 1, DOUBLE_SLAP
-	db 1, CLOSE_COMBAT ; evolution move
 	db 1, HYPNOSIS
 	db 1, KARATE_CHOP
 	db 1, AQUA_JET
 	db 1, BULK_UP
+	db 25, CLOSE_COMBAT ; evolution move
 	db 32, DYNAMICPUNCH
 	db 43, EARTH_POWER ; Mind Reader → Poliwhirl move
 	db 53, CROSS_CHOP ; Circle Throw → similar move
@@ -1370,7 +1370,7 @@ MagnemiteEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, SUPERSONIC
 	db 1, TACKLE
-	db 5, THUNDERSHOCK
+	db 7, THUNDERSHOCK
 	db 7, THUNDER_WAVE
 	db 11, QUICK_ATTACK ; Magnet Bomb → TCG move
 	db 13, LIGHT_SCREEN
@@ -4069,7 +4069,7 @@ VespiquenEvosAttacks:
 	db 0 ; no more Evolutions
 	db 1, PIN_MISSILE
 	db 1, ROOST
-	db 1, GUST
+	db 1, POISON_STING
 	db 1, DEFENSE_CURL
 	db 25, FRESH_SNACK
 	db 30, BUG_BUZZ

@@ -563,10 +563,8 @@ SandraGroup:
 	db "Sandra@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
 	; party
-	db 20, WIGGLYTUFF, NO_ITEM, "Cresendo@"
+	db 20, WIGGLYTUFF, NO_ITEM, "Crescendo@"
 		db COUNTER, SING, ROLLOUT, HYPER_VOICE
-	db 20, VULPIX, NO_ITEM, "Flare@"
-		db FLAME_CHARGE, CONFUSE_RAY, SAFEGUARD, SUNNY_DAY
 	db 22, TOGETIC, NO_ITEM, "Clutch@"
 		db ROOST, DRAIN_KISS, EXTRASENSORY, METRONOME
 	db 23, GRANBULL, NO_ITEM, "Winston@"
@@ -1063,8 +1061,8 @@ Rival1Group:
 	db TRAINERTYPE_ITEM | TRAINERTYPE_EVS
 	; party
 	db 10, GROWLITHE, NO_ITEM, 16
-	db 12, MURKROW, NO_ITEM, 16
-	db 14, ROWLET, ORAN_BERRY, 16
+	db 11, MURKROW, NO_ITEM, 16
+	db 12, ROWLET, ORAN_BERRY, 16
 	db -1 ; end
 
 ; ================
@@ -1074,8 +1072,8 @@ Rival1Group:
 	db TRAINERTYPE_ITEM | TRAINERTYPE_EVS
 	; party
 	db 10, SLOWPOKE, NO_ITEM, 16
-	db 12, YANMA, NO_ITEM, 16
-	db 14, QUILAVA, ORAN_BERRY, 16
+	db 11, YANMA, NO_ITEM, 16
+	db 12, QUILAVA, ORAN_BERRY, 16
 	db -1 ; end
 
 ; ================
@@ -1084,9 +1082,9 @@ Rival1Group:
 	db "<RIVAL>@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_EVS
 	; party
-	db 12, TANGELA, NO_ITEM, 16
+	db 10, TANGELA, NO_ITEM, 16
 	db  8, TOGETIC, NO_ITEM, 16
-	db 14, OSHAWOTT, ORAN_BERRY, 16
+	db 12, OSHAWOTT, ORAN_BERRY, 16
 	db -1 ; end
 
 ; ================
@@ -1917,13 +1915,13 @@ CamperGroup:
 
 ; ================
 
-	; CAMPER
+	; CAMPER ; ROUTE 35
 	db "Ivan@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 10, DIGLETT
-	db 10, ZUBAT
-	db 14, DIGLETT
+	db 15, DIGLETT
+	db 20, GOLBAT
+	db 21, NIDORINO
 	db -1 ; end
 
 ; ================
@@ -2107,9 +2105,9 @@ PicnickerGroup:
 	db "Gina@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 9, SUNFLORA
-	db 9, SUNFLORA
-	db 12, CHIKORITA
+	db 15, CYNDAQUIL
+	db 16, MEOWTH
+	db 20, FURRET
 	db -1 ; end
 
 ; ================
@@ -3648,10 +3646,9 @@ BrigaderGroup:
 	db "Johnson@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 14, PIDGEOTTO
-	db 15, VULPIX
-	db 15, VOLTORB
-	db 15, GROWLITHE
+	db 18, PIDGEOTTO
+	db 18, MAGMAR
+	db 18, ELECTABUZZ
 	db -1 ; end
 
 ; ================
@@ -3660,7 +3657,7 @@ BrigaderGroup:
 	db "Brown@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 18, PIDGEOTTO
+	db 18, STARAVIA
 	db 18, GOLBAT
 	db 18, FARFETCH_D
 	db -1 ; end
@@ -3672,7 +3669,7 @@ BrigaderGroup:
 	db TRAINERTYPE_NORMAL
 	; party
 	db 18, NIDORINA
-	db 198, NIDORINO
+	db 20, NIDORINO
 	db -1 ; end
 
 ; ================
@@ -3692,8 +3689,8 @@ BrigaderGroup:
 	db "Garcia@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 16, KADABRA
-	db 16, STARYU
+	db 20, KADABRA
+	db 20, STARYU
 	db -1 ; end
 
 ; ================
@@ -3702,7 +3699,7 @@ BrigaderGroup:
 	db "Zhang@" ; SERENE SPRINGS
 	db TRAINERTYPE_NORMAL
 	; party
-	db 15, SEADRA
+	db 20, SEADRA
 	db 18, OCTILLERY
 	db -1 ; end
 
@@ -3719,23 +3716,23 @@ BrigaderGroup:
 ; ================
 
 	; GRUNTM
-	db "Kim@"
-	db TRAINERTYPE_NORMAL
-	; party
-	db 15, MACHOP
-	db 20, MACHOKE
-	db -1 ; end
-
-; ================
-
-	; GRUNTM
-	db "Manolete@" ; should be #10
+	db "Manolete@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
 	; party
 	db 23, TAUROS, CHOICE_BAND, "Islero@"
 		db THRASH, NO_MOVE, NO_MOVE, NO_MOVE
 	db -1 ; end	
 
+
+; ================
+
+	; GRUNTM
+	db "Kim@" ; should be #10
+	db TRAINERTYPE_NORMAL
+	; party
+	db 15, MACHOP
+	db 20, MACHOKE
+	db -1 ; end
 ; ================
 
 	; GRUNTM
@@ -4046,10 +4043,11 @@ PokefanMGroup:
 ; ================
 
 	; POKEFANM
-	db "William@"
+	db "William@" ; NATIONAL PARK 
 	db TRAINERTYPE_ITEM
 	; party
-	db 16, RAICHU, ORAN_BERRY
+	db 20, RAICHU, ORAN_BERRY
+	db 20, AZUMARILL, ORAN_BERRY	
 	db -1 ; end
 
 ; ================
@@ -4162,10 +4160,10 @@ PokefanFGroup:
 ; ================
 
 	; POKEFANF
-	db "Beverly@"
+	db "Beverly@" ; NATIONAL PARK
 	db TRAINERTYPE_ITEM
 	; party
-	db 16, SNUBBULL, ORAN_BERRY
+	db 20, SNUBBULL, ORAN_BERRY
 	db -1 ; end
 
 ; ================
@@ -4258,8 +4256,8 @@ OfficerMGroup:
 	db "Dirk@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 14, GROWLITHE
-	db 14, MACHOP
+	db 20, GROWLITHE
+	db 20, MACHOP
 	db -1 ; end
 
 ; ================
@@ -4830,11 +4828,11 @@ endc
 ; ================
 
 	; LASS
-	db "Krise@"
+	db "Krise@" ; NATIONAL PARK
 	db TRAINERTYPE_NORMAL
 	; party
-	db 14, GLOOM
-	db 17, DIGLETT
+	db 20, GLOOM
+	db 22, DIGLETT
 	db -1 ; end
 
 ; ================
@@ -5163,11 +5161,13 @@ BugManiacGroup:
 ; ================
 
 	; BUG_MANIAC
-	db "Lou@"
+	db "Lou@" ; NATIONAL PARK 
 	db TRAINERTYPE_MOVES
 	; party
 	db 19, YANMA
 		db BUG_BITE, QUICK_ATTACK, DOUBLE_TEAM, SONIC_BOOM
+	db 19, BUTTERFREE
+		db CONFUSION, SUPERSONIC, GUST, DEFENSE_CURL
 	db -1 ; end
 
 ; ================
@@ -5393,7 +5393,7 @@ FirebreatherGroup:
 ; ================
 
 	; FIREBREATHER
-	db "Ned@"
+	db "Ned@" ; USED
 	db TRAINERTYPE_NORMAL
 	; party
 	db 16, PONYTA
@@ -5404,11 +5404,12 @@ FirebreatherGroup:
 ; ================
 
 	; FIREBREATHER
-	db "Burt@"
+	db "Burt@" ; ROUTE 36 
 	db TRAINERTYPE_NORMAL
 	; party
-	db 59, WEEZING
-	db 61, MAGCARGO
+	db 18, EKANS
+	db 21, GRIMER
+	db 25, NIDORINO
 	db -1 ; end
 
 ; ================
@@ -5572,7 +5573,7 @@ SchoolboyGroup:
 ; ================
 
 	; SCHOOLBOY
-	db "Jack@"
+	db "Jack@" ; USED
 	db TRAINERTYPE_NORMAL
 	; party
 	db 16, CYNDAQUIL
@@ -5628,12 +5629,14 @@ SchoolboyGroup:
 ; ================
 
 	; SCHOOLBOY
-	db "Alan@"
-	db TRAINERTYPE_NORMAL
+	db "Alan@" ; ROUTE 36
+	db TRAINERTYPE_MOVES
 	; party
-	db 17, TANGELA
+	db 20, MISDREAVUS
+		db PAIN_SPLIT, CURSE, PSYBEAM, FUTURE_SIGHT
+	db 22, TANGELA
+		db REST, SLEEP_TALK, CURSE, VINE_WHIP
 	db -1 ; end
-
 ; ================
 
 	; SCHOOLBOY
@@ -9035,9 +9038,9 @@ AromaLadyGroup:
 	db "Holly@"
 	db TRAINERTYPE_NORMAL
 	; party
+	db 18, JIGGLYPUFF
+	db 18, CLEFAIRY
 	db 18, MEOWTH
-	db 18, MEOWTH
-	db 18, PERSIAN
 	db -1 ; end
 
 ; ================
@@ -9274,14 +9277,12 @@ CooltrainerMGroup:
 
 	; COOLTRAINERM
 	db "Nick@"
-	db TRAINERTYPE_MOVES
+	db TRAINERTYPE_MOVES ; route 35
 	; party
-	db 26, QUILAVA
-		db EMBER, SMOKESCREEN, RAGE, SCARY_FACE
-	db 26, QUILAVA
-		db DEFENSE_CURL, WATER_GUN, BITE, CURSE
-	db 26, QUILAVA
-		db LEECH_SEED, POISONPOWDER, SLEEP_POWDER, RAZOR_LEAF
+	db 22, CLEFAIRY
+		db METRONOME, ATTRACT, SING, CALM_MIND
+	db 22, MACHOKE
+		db KARATE_CHOP, FORESIGHT, BULK_UP, NO_MOVE
 	db -1 ; end
 
 ; ================
@@ -9588,13 +9589,11 @@ endc
 ; ================
 
 	; COOLTRAINERF
-	db "Gwen@"
+	db "Gwen@" ; route 35
 	db TRAINERTYPE_NORMAL
 	; party
-	db 26, EEVEE
-	db 22, FLAREON
-	db 22, VAPOREON
-	db 22, JOLTEON
+	db 22, CORSOLA
+	db 22, TOGETIC
 	db -1 ; end
 
 ; ================
@@ -10923,12 +10922,12 @@ BobeshGroup:
 	; party
 	db 23, MAGMAR, NO_ITEM, "Culverin@"
 		db SUNNY_DAY, KARATE_CHOP, PSYBEAM, FIRE_PUNCH
-	db 23, SUNFLORA, NO_ITEM, "Helia@"
+	db 25, SUNFLORA, NO_ITEM, "Helia@"
 		db SUNNY_DAY, GROWTH, ENERGY_BALL, LEECH_SEED
 	db 25, OCTILLERY, SCOPE_LENS, "Levi@"
 		db FLAMETHROWER, OCTAZOOKA, NO_MOVE, NO_MOVE
-	db 25, FLAREON, NO_ITEM, "Kotei@"
-		db SUNNY_DAY, FLAME_CHARGE, ROCK_SMASH, SMOKESCREEN
+	db 27, FLAREON, NO_ITEM, "Kotei@"
+		db SUNNY_DAY, FLAME_CHARGE, ROCK_SMASH, DIG
 	db -1 ; end
 	
 	; Bobesh e4

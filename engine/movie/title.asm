@@ -407,7 +407,7 @@ if !DEF(MONOCHROME) ; 31-15-15 and 15-4-18 for shiny
 	RGB 02, 03, 30
 
 	RGB 00, 09, 00; 5
-	RGB 10, 31, 10
+	RGB 31, 15, 15 ; celebi shiny pink 
 	RGB 28, 25, 06 ; ylw
 	RGB 02, 03, 30
 

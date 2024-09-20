@@ -14,11 +14,11 @@ GauldenrodTower4F_MapScriptHeader:
 	def_bg_events
 
 	def_object_events
-	object_event  5,  2, SPRITE_SANDRA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GauldenrodTower4FSandraScript, EVENT_BEAT_SANDRA
-	object_event 10,  2, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_SANDRA
-	object_event  2, 10, SPRITE_AMOS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_HOLLIS
-	pokemon_event  14, 19, CLEFAIRY, -1, -1, PAL_NPC_RED, GauldenrodClefairyText, EVENT_BEAT_SANDRA
-	tmhmball_event 4, 50, TM_ROOST, EVENT_TM_ROOST
+	object_event   5,  2, SPRITE_SANDRA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GauldenrodTower4FSandraScript, EVENT_BEAT_SANDRA
+	object_event  10,  2, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_SANDRA
+	object_event   1,  7, SPRITE_AMOS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_HOLLIS
+	pokemon_event  6,  2, CLEFAIRY, -1, -1, PAL_NPC_RED, GauldenrodClefairyText, EVENT_BEAT_SANDRA
+	tmhmball_event 5,  1, TM_ROOST, EVENT_TM_ROOST
 
 
 	object_const_def
@@ -42,13 +42,12 @@ GauldenrodTower4FSandraScript:
 	startbattle
 	reloadmapafterbattle
 	disappear GAULDENRODTOWER4F_CLEFAIRY
-	setevent EVENT_BEAT_SANDRA
 	opentext
 	writetext SandraAfterText
+	givekeyitem RAINBOW_WING
 	setflag ENGINE_CASCADEBADGE ; todo
 	waitbutton
 	closetext
-	appear GAULDENRODTOWER4F_BRIGADER
 	applymovement GAULDENRODTOWER4F_BRIGADER, BrigaderApproachMovement
 	turnobject GAULDENRODTOWER4F_SANDRA, RIGHT
 	opentext
@@ -64,17 +63,22 @@ GauldenrodTower4FSandraScript:
 	applymovement GAULDENRODTOWER4F_BRIGADER, BrigaderLeaveMovement1
 	applymovement GAULDENRODTOWER4F_SANDRA, SandraLeaveMovement
 	applymovement GAULDENRODTOWER4F_BRIGADER, BrigaderLeaveMovement2
-	disappear GAULDENRODTOWER4F_SANDRA
-	disappear GAULDENRODTOWER4F_BRIGADER
 	pause 15
-	appear GAULDENRODTOWER4F_AMOS
+	appear GAULDENRODTOWER4F_AMOS;, AmosMovement1
 	applymovement GAULDENRODTOWER4F_AMOS, AmosEnterMovement
+	turnobject PLAYER, LEFT
 	opentext
 	writetext AmosText
 	waitbutton
 	closetext
 	applymovement GAULDENRODTOWER4F_AMOS, AmosLeaveMovement
+	disappear GAULDENRODTOWER4F_SANDRA
+	disappear GAULDENRODTOWER4F_BRIGADER
 	disappear GAULDENRODTOWER4F_AMOS
+	setevent EVENT_BEAT_SANDRA
+	special Special_FadeBlackQuickly
+	special Special_ReloadSpritesNoPalettes
+	special Special_FadeInQuickly
 	end
 
 .Refused:
@@ -84,11 +88,10 @@ GauldenrodTower4FSandraScript:
 	end
 
 SandraIntroText:
-	text "Player, you have"
-	line "shown your connec-"
-	cont "tion to #mon."
-	cont "Why are you here?"
-
+	text "My child. Why"
+	line "have you come"
+	cont "to me?"
+	
 	para "..."
 	
 	para "Ah, you seek"
@@ -126,13 +129,21 @@ SandraAfterText:
 	text "Please, take this"
 	line "badge as a sign"
 	cont "of my respect."
-
-	text "With my blessing"
+	
+	para "With my blessing"
 	line "you can use the"
 	cont "HM Strength."
-
-	para "I have much to"
-	line "tell you."
+	
+	para "Also, please"
+	line "accept this Rain-"
+	cont "bow wing."
+	
+	para "It is a feather of"
+	line "the mighty Ho-Oh."
+	
+	para "It signifies that"
+	line "you are pure of"
+	cont "heart."
 	done
 
 SandraRefusedText:
@@ -172,14 +183,14 @@ SandraAgreementText:
 AmosText:
 	text "AMOS: Excuse me,"
 	line "Have you seen"
-	line "Sandra?"
+	cont "Sandra?"
 	
 	para "..."
 
 	para "Oh, you were just"
 	line "with her before"
 	cont "the brigaders"
-	line "took her away to"
+	cont "took her away to"
 	cont "the stadium?"
 
 	para "Then I was just a"
@@ -218,6 +229,7 @@ SandraLeaveMovement:
 	step_right
 	step_right
 	step_right
+	step_right
 	step_down
 	step_down
 	step_down
@@ -236,6 +248,7 @@ BrigaderLeaveMovement2:
 	step_right
 	step_right
 	step_right
+	step_right
 	step_down
 	step_down
 	step_down
@@ -244,13 +257,22 @@ BrigaderLeaveMovement2:
 	step_down
 	step_end
 
+AmosMovement1:
+	step_left
+	step_left
+	step_left
+	step_left
+	step_left
+	step_left
+	step_left
+	step_left
+	step_left	
+	step_end
+
 AmosEnterMovement:
 	step_up
 	step_up
-	step_up
-	step_up
-	step_up
-	step_up
+	step_up	
 	step_up
 	step_up
 	step_right	
@@ -258,9 +280,10 @@ AmosEnterMovement:
 	step_end
 
 AmosLeaveMovement:
-	step_right
-	step_right
-	step_right
+	step_left
+	step_left
+	step_down
+	step_down
 	step_down
 	step_down
 	step_down

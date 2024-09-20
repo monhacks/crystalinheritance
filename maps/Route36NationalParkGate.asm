@@ -307,9 +307,15 @@ Route36NationalParkGateOfficer1WaitHereForAnnouncementText:
 	done
 
 Route36NationalParkGateOfficer1SomeMonOnlySeenInParkText:
-	text "Some #mon can"
-	line "only be seen in"
-	cont "the Park."
+	text "The drought in"
+	line "Johto is so bad"
+	cont "everywhere."
+	
+	para "Grass #mon"
+	line "are having a"
+	cont "hard time getting"
+	cont "their roots deep"
+	cont "enough."
 	done
 
 BugCatchingContestant1BText:

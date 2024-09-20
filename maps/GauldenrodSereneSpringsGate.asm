@@ -4,10 +4,10 @@ GauldenrodSereneSpringsGate_MapScriptHeader:
 	def_callbacks
 
 	def_warp_events
-	warp_event  4,  0, GAULDENROD, 7
-	warp_event  5,  0, GAULDENROD, 8
-	warp_event  4,  7, SERENE_SPRINGS, 1
-	warp_event  5,  7, SERENE_SPRINGS, 1
+	warp_event  2,  7, GAULDENROD, 7
+	warp_event  3,  7, GAULDENROD, 8
+	warp_event  2,  0, SERENE_SPRINGS, 1
+	warp_event  3,  0, SERENE_SPRINGS, 1
 
 	def_coord_events
 
@@ -20,28 +20,28 @@ GauldenrodSereneSpringsGateNPCScript:
 	jumptextfaceplayer GauldenrodSereneSpringsGateNPCText
 
 GauldenrodSereneSpringsGateNPCText:
-	text "Did you know there's"
-	line "an old myth about"
-	cont "the Serene Springs"
-	cont "just ahead?"
+	text "Did you know an"
+	line "old myth about"
+	cont "Serene Springs?"
 
-	para "They say that when-"
-	line "ever there's seis-"
-	cont "mic activity in"
-	cont "the area, the"
-	cont "springs bubble up"
-	cont "more vigorously."
+	para "They say when"
+	line "there's seismic"
+	cont "activity nearby,"
 
-	para "Some believe it's"
-	line "the earth's way of"
-	cont "relieving pressure."
+	para "the springs bubble"
+	line "up more strongly."
 
-	para "Others think it's"
-	line "caused by ancient"
-	cont "#mon stirring"
-	cont "deep underground."
+	para "Some think it's"
+	line "Earth relieving"
+	cont "pressure."
 
-	para "Whatever the cause,"
-	line "it's a fascinating"
-	cont "phenomenon!"
+	para "Others say it's"
+	line "ancient #mon"
+	cont "stirring deep"
+	cont "underground."
+
+	para "..."
+
+	para "Say, I think I"
+	line "smell sulfur."
 	done

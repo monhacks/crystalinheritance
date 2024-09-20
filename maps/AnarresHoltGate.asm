@@ -5,10 +5,10 @@ AnarresHoltGate_MapScriptHeader: ; todo add a wram flag ?
 	def_callbacks
 
 	def_warp_events
-	warp_event 4, 0, ANARRES_TOWN, 1
-	warp_event 5, 0, ANARRES_TOWN, 2
-	warp_event 4, 7, HOLLYS_HOLT, 1
-	warp_event 5, 7, HOLLYS_HOLT, 2
+	warp_event 7, 2, ANARRES_TOWN, 1
+	warp_event 7, 3, ANARRES_TOWN, 2
+	warp_event 0, 2, HOLLYS_HOLT, 1
+	warp_event 0, 3, HOLLYS_HOLT, 2
 
 	def_coord_events
 
@@ -16,9 +16,9 @@ AnarresHoltGate_MapScriptHeader: ; todo add a wram flag ?
 	def_bg_events
 
 	def_object_events
-	object_event 3, 4, SPRITE_TAMMY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AnarresHoltGateTammyScript, EVENT_ANARRES_HOLT_GATE
-	object_event 5, 4, SPRITE_HOLLIS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AnarresHoltGateHollisScript, EVENT_ANARRES_HOLT_GATE
-	object_event 3, 6, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AnarresHoltGateNPCScript, -1
+	object_event 3, 4, SPRITE_TAMMY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AnarresHoltGateTammyScript, EVENT_ANARRES_HOLT_GATE
+	object_event 4, 4, SPRITE_HOLLIS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AnarresHoltGateHollisScript, EVENT_ANARRES_HOLT_GATE
+	object_event 3, 6, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AnarresHoltGateNPCScript, -1
 
 	object_const_def
 	const ANARRESHOLTGATE_TAMMY
@@ -47,6 +47,7 @@ AnarresHoltGateHollisScene:
 	writetext TammyDialogue3
 	waitbutton
 	closetext
+	applymovement ANARRESHOLTGATE_TAMMY, TammyExitMovement
 	disappear ANARRESHOLTGATE_TAMMY
 	setevent EVENT_ANARRES_HOLT_GATE
 	setscene $1
@@ -57,13 +58,13 @@ HollisTurnDown:
 	step_end
 
 HollisExitMovement:
-	step_down
-	step_down
-	step_down
+	step_right
+	step_right
+	step_right
 	step_end
 
 TammyDialogue1:
-	text "TAMMY: Now, Hollis,"
+	text "TAMMY: Hollis,"
 	line "don't you see? The"
 	cont "Pineco are getting"
 	cont "worse and worse."
@@ -98,7 +99,6 @@ HollisDialogue2:
 	line "disrespect! I"
 	cont "won't hear any"
 	cont "more of this!"
-	cont "Out of my way!"
 	done
 
 TammyDialogue3:
@@ -125,7 +125,7 @@ AnarresHoltGateNPCText:
 	line "visited, they"
 	cont "brought the most"
 	cont "incredible"
-	cont "#MON!"
+	cont "#mon!"
 
 	para "I saw one that"
 	line "looked like a"
@@ -137,3 +137,11 @@ AnarresHoltGateNPCText:
 	cont "#MON exist in"
 	cont "far-off regions?"
 	done
+
+TammyExitMovement:
+	step_right
+	step_right
+	step_right
+	step_right
+	step_right
+	step_end

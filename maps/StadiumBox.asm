@@ -2,11 +2,11 @@ StadiumBox_MapScriptHeader: ; todo: make sandra only talkable from one tile, usi
 	def_scene_scripts
 
 	def_callbacks
-	callback MAPCALLBACK_OBJECTS, StadiumBoxSandraKurtCallback
+
 
 	def_warp_events
-	warp_event  5, 11, STADIUM_GROUNDS, 3
-	warp_event  6, 11, STADIUM_GROUNDS, 3
+	warp_event  5, 11, STADIUM_GROUNDS, 2
+	warp_event  6, 11, STADIUM_GROUNDS, 2
 	warp_event  5,  2, STADIUM_UNDERGROUND, 2
 
 
@@ -16,9 +16,9 @@ StadiumBox_MapScriptHeader: ; todo: make sandra only talkable from one tile, usi
 	def_bg_events
 
 	def_object_events
-	object_event  5,  3, SPRITE_ADRINNA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumBoxAdrinna, EVENT_STADIUM_BOX_ADRINNA
-	object_event  5,  11, SPRITE_SANDRA, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumBoxSandraScript, EVENT_STADIUM_BOX_SANDRA
-	object_event  6,  11, SPRITE_KURT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumBoxKurtScript, EVENT_STADIUM_BOX_SANDRA ; todo, make a script for Kurt to say something before you talk to Sandra
+	object_event  6,  7, SPRITE_ADRINNA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumBoxAdrinna, EVENT_STADIUM_BOX_ADRINNA
+	object_event  5,  11, SPRITE_SANDRA, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumBoxSandraScript, EVENT_BEAT_SANDRA
+	object_event  6,  11, SPRITE_KURT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumBoxKurtScript, EVENT_BEAT_SANDRA ; todo, make a script for Kurt to say something before you talk to Sandra
 	itemball_event  8,  2, SCOPE_LENS, 1, EVENT_STADIUM_BOX_SCOPE_LENS
 
 	object_const_def
@@ -26,18 +26,17 @@ StadiumBox_MapScriptHeader: ; todo: make sandra only talkable from one tile, usi
 	const STADIUMBOX_SANDRA
 	const STADIUMBOX_KURT
 
-StadiumBoxSandraKurtCallback:
-	disappear STADIUMBOX_SANDRA
-	disappear STADIUMBOX_KURT
-	endcallback
-
 StadiumBoxAdrinna:
+	faceplayer
+	refreshscreen
+	trainerpic ADRINNA
+	waitbutton
+	closepokepic
 	opentext
 	writetext AdrinnaDialogueStadium
 	closetext
-	applyonemovement STADIUMGROUNDS_ADRINNA, teleport_from
-	disappear STADIUMGROUNDS_ADRINNA
-	setevent EVENT_STADIUM_ADRINNA 
+	applyonemovement STADIUMBOX_ADRINNA, teleport_from
+	disappear STADIUMBOX_ADRINNA
 	appear STADIUMBOX_SANDRA
 	applymovement STADIUMBOX_SANDRA, StadiumBoxSandraWalksToPlayer
 	appear STADIUMBOX_KURT
@@ -47,6 +46,7 @@ StadiumBoxAdrinna:
 	waitbutton
 	writetext SandraDialogue
 	waitbutton
+	turnobject STADIUMBOX_KURT, UP
 	writetext KurtDialogue2
 	waitbutton
 	writetext SandraDialogue2
@@ -54,18 +54,14 @@ StadiumBoxAdrinna:
 	closetext
 	applymovement STADIUMBOX_SANDRA, BoxSandraExitMovement
 	disappear STADIUMBOX_SANDRA
-	setevent EVENT_STADIUM_BOX_SANDRA
-	setscene $1
+	clearevent EVENT_NO_EVENT
+	setevent EVENT_STADIUM_BOX_ADRINNA
 	end
 
 StadiumBoxSandraScript:
 	end
 
 BoxSandraExitMovement:
-	step_down
-	step_down
-	step_down
-	step_down
 	step_down
 	step_down
 	step_down
@@ -86,10 +82,21 @@ SandraDialogue:
 	line "the Trader's"
 	cont "Landing? You would"
 	cont "have to get inside"
-	cont "the capitol. I"
+	cont "the capital. I"
 	cont "hear that there is"
 	cont "a path that goes"
 	cont "there."
+	
+	para "However, the path"
+	line "from here to the"
+	cont "capital is very"
+	cont "tightly guarded."
+	
+	para "You will need to"
+	line "find a way in"
+	cont "to the capital"
+	cont "from your own"
+	cont "time period."
 	done
 
 KurtDialogue2:
@@ -97,11 +104,15 @@ KurtDialogue2:
 	line "We must get"
 	cont "into Ecruteak."
 	cont "Then we can get" 
-	cont "to old Oliving"
+	cont "to old Olivine"
 	cont "port and stop the"
-	cont "shipment. I wonder"
-	cont "if we can ask"
-	cont "Celebi for help?"
+	cont "shipment."
+	
+	para "We will go back"
+	line "in time from"
+	cont "modern Ecruteak"
+	cont "to get to the"
+	cont "port."
 	done
 
 SandraDialogue2:
@@ -125,3 +136,59 @@ StadiumBoxKurtScript:
 	waitbutton
 	closetext
 	end
+
+AdrinnaDialogueStadium:
+	text "<PLAYER>-"
+	line "I've been watching"
+	cont "you. I'm General"
+	cont "Adrinna."
+
+	para "Don't be alarmed,"
+	line "I'm not here to"
+	cont "fight."
+
+	para "Your victory over"
+	line "Bobesh was..."
+	cont "extraordinary."
+
+	para "You achieved it"
+	line "through your own"
+	cont "merit, not relying"
+	cont "on those subpar"
+	cont "minds cowering"
+	cont "below."
+
+	para "I see in you the"
+	line "potential for"
+	cont "greatness,"
+	cont "unburdened by the"
+	cont "misguided ideal of"
+	cont "self-sacrifice."
+
+	para "Remember, <PLAYER>:"
+	line "The world is full"
+	cont "of unrealized"
+	cont "potential, waiting"
+	cont "for those with the"
+	cont "will to seize it."
+
+	para "I'll be observing"
+	line "your progress with"
+	cont "great interest."
+	done
+	
+StadiumBoxSandraWalksToPlayer:
+	step_up
+	step_up	
+	step_up
+	step_end
+	
+
+StadiumBoxKurtWalksToPlayer:
+	step_up
+	step_left
+	step_left
+	step_up	
+	step_up	
+	turn_head_right
+	step_end

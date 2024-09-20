@@ -1,4 +1,4 @@
-NationalPark_MapScriptHeader:
+NationalPark_MapScriptHeader: 
 	def_scene_scripts
 
 	def_callbacks
@@ -18,19 +18,19 @@ NationalPark_MapScriptHeader:
 	bg_event  8, 47, BGEVENT_ITEM + FULL_HEAL, EVENT_NATIONAL_PARK_HIDDEN_FULL_HEAL
 
 	def_object_events
-	object_event 17, 24, SPRITE_PICNICKER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, NationalParkLassText, -1
-	object_event 16,  4, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_COMMAND, jumptextfaceplayer, NationalParkPokefanFText, -1
-	object_event 29, 40, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NationalParkTeacher1Script, -1
-	object_event 28,  6, SPRITE_GAMEBOY_KID, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NationalParkGameboyKidScript, -1
-	object_event 12, 41, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerSchoolboyJohnny, -1
-	object_event 19, 41, SPRITE_POKEFAN_F, SPRITEMOVEDATA_WANDER, 2, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, NationalParkTeacher2Text, -1
+	object_event 17, 24, SPRITE_PICNICKER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, NationalParkLassText, -1 ; ok
+	object_event 16,  4, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_COMMAND, jumptextfaceplayer, NationalParkPokefanFText, -1 ; ok
+	object_event 29, 40, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NationalParkTeacher1Script, -1 ; ok
+	object_event 28,  6, SPRITE_GAMEBOY_KID, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NationalParkGameboyKidScript, -1 ; ok
+	object_event 12, 41, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerSchoolboyJohnny, -1 ; ok
+	object_event 19, 41, SPRITE_POKEFAN_F, SPRITEMOVEDATA_WANDER, 2, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, NationalParkTeacher2Text, -1 ; ok
 	pokemon_event 28, 40, PERSIAN, -1, -1, PAL_NPC_BROWN, NationalParkPersianText, -1
-	object_event 29, 23, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerSchoolboyJack1, -1
 	object_event 20, 29, SPRITE_POKEFAN_F, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerPokefanfBeverly1, -1
 	object_event 18,  9, SPRITE_POKEFAN_M, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerPokefanmWilliam, -1
 	object_event 10, 14, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerLassKrise, -1
 	object_event 28, 13, SPRITE_BUG_MANIAC, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBugManiacLou, -1
 	object_event  4, 19, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OfficermKeithScript, -1
+	object_event  20, 33, SPRITE_PICNICKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ThirstyCamperScript, -1
 	itemball_event 37, 12, SHINY_STONE, 1, EVENT_NATIONAL_PARK_SHINY_STONE
 	tmhmball_event  3, 43, TM_DIG, EVENT_NATIONAL_PARK_TM_DIG
 
@@ -50,10 +50,10 @@ UnknownScript_0x5c01d:
 UnknownScript_0x5c021:
 	endtext
 
-OfficermKeithScript:
+OfficermKeithScript: ; ACTUALY DIRK
 	checktime 1 << NITE
 	iffalse_jumptextfaceplayer OfficermKeithDaytimeText
-	checkevent EVENT_BEAT_OFFICERM_KEITH
+	checkevent EVENT_BEAT_OFFICERM_DIRK
 	iftrue_jumptextfaceplayer OfficermKeithAfterText
 	faceplayer
 	opentext
@@ -63,7 +63,7 @@ OfficermKeithScript:
 	waitbutton
 	closetext
 	winlosstext OfficermKeithWinText, 0
-	loadtrainer OFFICERM, KEITH
+	loadtrainer OFFICERM, DIRK
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_OFFICERM_KEITH
@@ -72,134 +72,24 @@ OfficermKeithScript:
 GenericTrainerBugManiacLou:
 	generictrainer BUG_MANIAC, LOU, EVENT_BEAT_BUG_MANIAC_LOU, BugManiacLouSeenText, BugManiacLouBeatenText
 
-	text "I used to be just"
-	line "a Bug Catcher,"
-
-	para "but I evolved into"
-	line "a Bug Maniac!"
+	text "My girlfriend"
+	line "wanted to go camp-"
+	cont "ing, but she is"
+	cont "so squeamish of"
+	cont "bug #mon."
 	done
 	
 GenericTrainerSchoolboyJohnny:
 	generictrainer SCHOOLBOY, JOHNNY, EVENT_BEAT_SCHOOLBOY_JOHNNY, SchoolboyJohnnySeenText, SchoolboyJohnnyBeatenText
 
-	text "Yeah, well, I"
-	line "still prefer"
-	cont "Bellsprout."
+	text "I need more"
+	line "experiments."
 	done
 
 NationalParkGameboyKidScript:
 	showtextfaceplayer NationalParkGameboyKidText
 	turnobject LAST_TALKED, DOWN
 	end
-
-TrainerSchoolboyJack1:
-	trainer SCHOOLBOY, JACK1, EVENT_BEAT_SCHOOLBOY_JACK, SchoolboyJack1SeenText, SchoolboyJack1BeatenText, 0, SchoolboyJack1Script
-
-SchoolboyJack1Script:
-	loadvar VAR_CALLERID, PHONE_SCHOOLBOY_JACK
-	opentext
-	checkflag ENGINE_JACK_READY_FOR_REMATCH
-	iftrue UnknownScript_0x5c088
-	checkcellnum PHONE_SCHOOLBOY_JACK
-	iftrue UnknownScript_0x5c108
-	checkevent EVENT_JACK_ASKED_FOR_PHONE_NUMBER
-	iftrue UnknownScript_0x5c071
-	writetext SchoolboyJackTradeMonText
-	promptbutton
-	setevent EVENT_JACK_ASKED_FOR_PHONE_NUMBER
-	scall UnknownScript_0x5c0fc
-	sjump UnknownScript_0x5c074
-
-UnknownScript_0x5c071:
-	scall UnknownScript_0x5c100
-UnknownScript_0x5c074:
-	askforphonenumber PHONE_SCHOOLBOY_JACK
-	ifequal $1, UnknownScript_0x5c110
-	ifequal $2, UnknownScript_0x5c10c
-	gettrainername SCHOOLBOY, JACK1, $0
-	scall UnknownScript_0x5c104
-	sjump UnknownScript_0x5c108
-
-UnknownScript_0x5c088:
-	scall UnknownScript_0x5c114
-	winlosstext SchoolboyJack1BeatenText, 0
-	readmem wJackFightCount
-	ifequal 4, .Fight4
-	ifequal 3, .Fight3
-	ifequal 2, .Fight2
-	ifequal 1, .Fight1
-	ifequal 0, .LoadFight0
-.Fight4:
-	checkevent EVENT_BEAT_ELITE_FOUR
-	iftrue .LoadFight4
-.Fight3:
-	checkevent EVENT_BEAT_ELITE_FOUR
-	iftrue .LoadFight3
-.Fight2:
-	checkevent EVENT_BEAT_ELITE_FOUR
-	iftrue .LoadFight2
-.Fight1:
-	checkflag ENGINE_FLYPOINT_OLIVINE
-	iftrue .LoadFight1
-.LoadFight0:
-	loadtrainer SCHOOLBOY, JACK1
-	startbattle
-	reloadmapafterbattle
-	loadmem wJackFightCount, 1
-	clearflag ENGINE_JACK_READY_FOR_REMATCH
-	end
-
-.LoadFight1:
-	loadtrainer SCHOOLBOY, JACK2
-	startbattle
-	reloadmapafterbattle
-	loadmem wJackFightCount, 2
-	clearflag ENGINE_JACK_READY_FOR_REMATCH
-	end
-
-.LoadFight2:
-	loadtrainer SCHOOLBOY, JACK3
-	startbattle
-	reloadmapafterbattle
-	loadmem wJackFightCount, 3
-	clearflag ENGINE_JACK_READY_FOR_REMATCH
-	end
-
-.LoadFight3:
-	loadtrainer SCHOOLBOY, JACK4
-	startbattle
-	reloadmapafterbattle
-	loadmem wJackFightCount, 4
-	clearflag ENGINE_JACK_READY_FOR_REMATCH
-	end
-
-.LoadFight4:
-	loadtrainer SCHOOLBOY, JACK5
-	startbattle
-	reloadmapafterbattle
-	clearflag ENGINE_JACK_READY_FOR_REMATCH
-	end
-
-UnknownScript_0x5c0fc:
-	jumpstd asknumber1m
-
-UnknownScript_0x5c100:
-	jumpstd asknumber2m
-
-UnknownScript_0x5c104:
-	jumpstd registerednumberm
-
-UnknownScript_0x5c108:
-	jumpstd numberacceptedm
-
-UnknownScript_0x5c10c:
-	jumpstd numberdeclinedm
-
-UnknownScript_0x5c110:
-	jumpstd phonefullm
-
-UnknownScript_0x5c114:
-	jumpstd rematchm
 
 GenericTrainerPokefanmWilliam:
 	generictrainer POKEFANM, WILLIAM, EVENT_BEAT_POKEFANM_WILLIAM, PokefanmWilliamSeenText, PokefanmWilliamBeatenText
@@ -287,17 +177,17 @@ GenericTrainerLassKrise:
 	done
 
 NationalParkLassText:
-	text "Look! Check out my"
-	line "bag!"
-
-	para "I pinned my badges"
-	line "onto it."
+	text "I decorated my"
+	line "#mon to be"
+	cont "just like Whitney!"	
 	done
 
 NationalParkPokefanFText:
-	text "This is Mail I got"
-	line "from my daughter."
-	cont "It cheers me up."
+	text "Whitney comes off"
+	line "as kinda fake."
+	
+	para "But maybe it's"
+	line "just me?"	
 	done
 
 NationalParkTeacher1Text:
@@ -330,23 +220,25 @@ NationalParkTeacher1Text_GotQuickClaw:
 	done
 
 SchoolboyJohnnySeenText:
-	text "Bellsprout is just"
-	line "the coolest!"
-
-	para "Aren't I right?"
+	text "Look what I"
+	line "learned!"
 	done
 
 SchoolboyJohnnyBeatenText:
-	text "Bellsprout, no…"
+	text "I need to do"
+	line "more experiments."
 	done
 
 NationalParkTeacher2Text:
-	text "Those kids should"
-	line "battle inside the"
-	cont "grass."
-
-	para "They're disturbing"
-	line "my quiet walk…"
+	text "The drought has"
+	line "caused the water"
+	cont "to be shut off"
+	cont "from the fountain."
+	
+	para "But I heard that"
+	line "Falkner may have"
+	cont "some way to get"
+	cont "more water."
 	done
 
 NationalParkPersianText:
@@ -362,35 +254,6 @@ NationalParkGameboyKidText:
 
 	para "dex with one of"
 	line "each #mon."
-	done
-
-SchoolboyJack1SeenText:
-	text "The world of"
-	line "#mon is deep."
-
-	para "There are still"
-	line "lots of things we"
-	cont "don't know."
-
-	para "But I know more"
-	line "than you do!"
-	done
-
-SchoolboyJack1BeatenText:
-	text "Wha-wha-what?"
-	done
-
-SchoolboyJackTradeMonText:
-	text "There is a lot"
-	line "to learn."
-
-	para "For example…"
-
-	para "There are {d:NUM_TMS} kinds"
-	line "of TMs."
-
-	para "Traded #mon"
-	line "level up faster."
 	done
 
 PokefanfBeverly1SeenText:
@@ -449,13 +312,18 @@ LassKriseBeatenText:
 	done
 
 BugManiacLouSeenText:
-	text "Nobody can beat"
-	line "my passion for"
-	cont "bug #mon!"
+	text "Arg, I can't"
+	line "get this tent set"
+	cont "up myself!"
+	
+	para "I'll take it out"
+	line "on you!"
 	done
 
 BugManiacLouBeatenText:
-	text "How can this be?!"
+	text "Could you at"
+	line "least help me"
+	cont "with the spokes?"
 	done
 
 OfficermKeithSeenText:
@@ -514,4 +382,96 @@ NationalParkTrainerTipsText:
 	para "haircuts, bless-"
 	line "ings, photographs,"
 	cont "and other treats."
+	done
+
+ThirstyCamperScript:
+	faceplayer
+	opentext
+	checkevent EVENT_GOT_BRICK_PIECE_FROM_CAMPER ; to add
+	iftrue .AlreadyGaveLemonade
+	writetext ThirstyCamperIntroText
+	yesorno
+	iffalse .Refused
+	checkitem LEMONADE
+	iffalse .NoLemonade
+	takeitem LEMONADE
+	writetext ThirstyCamperGivingBrickPieceText
+	promptbutton
+	verbosegiveitem BRICK_PIECE
+	iffalse .NoRoom
+	setevent EVENT_GOT_BRICK_PIECE_FROM_CAMPER
+	jumpthisopenedtext
+
+	text "Ah, that hits the"
+	line "spot! Thanks!"
+
+	para "Hope you find a"
+	line "good use for that"
+	cont "old Brick Piece."
+	done
+
+.AlreadyGaveLemonade:
+	jumpthisopenedtext
+	text "Thanks again for"
+	line "the Lemonade!"
+
+	para "That Brick Piece"
+	line "was pretty old."
+	
+	para "I wonder if the"
+	line "museum would be"
+	cont "interested in it?"
+	done
+
+.Refused:
+	jumpthisopenedtext
+	text "Oh, alright. I'll"
+	line "just have to find"
+	cont "water somewhere…"
+	done
+
+.NoLemonade:
+	jumpthisopenedtext
+	text "Oh, you don't have"
+	line "any Lemonade?"
+
+	para "That's too bad. I'm"
+	line "so thirsty…"
+	done
+
+.NoRoom:
+	jumpthisopenedtext
+	text "Oh? Your Bag is"
+	line "full. Come back"
+	cont "when you have room"
+	cont "for this Brick"
+	cont "Piece."
+	done
+
+ThirstyCamperIntroText:
+	text "Whew! Setting up"
+	line "this tent really"
+	cont "worked up a sweat!"
+
+	para "I'm so thirsty…"
+
+	para "Hey, you wouldn't"
+	line "happen to have any"
+	cont "Lemonade, would"
+	cont "you?"
+
+	para "I found this old"
+	line "Brick Piece while"
+	cont "digging. I'll"
+	cont "trade you for it!"
+	done
+
+ThirstyCamperGivingBrickPieceText:
+	text "Oh, thank you so"
+	line "much! Here, take"
+	cont "this Brick Piece."
+	
+	para "Looks like it was"
+	line "part of a stru-"
+	cont "cture long ago."
 	done

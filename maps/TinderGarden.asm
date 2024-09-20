@@ -652,6 +652,7 @@ TinderGardenRivalBattleScript1:
 	setscene $2 ; when this was $0 I got stuck in a loop constantly doing the scene
 	setmapscene AZALEA_TOWN, $1 ;now the people shouldn't stop you
 	setmapscene ILEX_FOREST, $1 ;ready for the fight at Ilex Forest
+	setevent EVENT_ILEX_FOREST_RIVAL
 	playmapmusic
 	end
 	
@@ -708,7 +709,7 @@ PryceSprigText:
 	cont "their passions!"
 
 	para "This little sprig"
-	line "from our sacred"
+	line "from this sacred"
 	cont "blossom tree-"
 
 	para "It's more than"
@@ -878,9 +879,15 @@ KurtThinksTheyreCuttingTreesText:
 	para "That's against"
 	line "the agreement!"
 	
-	para "<PLAYER>, I"
-	line "am going to"
-	cont "stop them!"
+	para "<PLAYER>, We"
+	line "need to stop them!"
+	
+	para "Now that you have"
+	line "a #mon to"
+	cont "help you, you can"
+	cont "catch a diverse"
+	cont "team in the areas"
+	cont "east of Azalea."
 	
 	para "I will see"
 	line "you in Ilex"

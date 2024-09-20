@@ -52,6 +52,11 @@ ENDM
 	special_bg_pal tileset,  TILESET_ALPH_WORD_ROOM,      PAL_SINGLE,    RuinsPalette
 ;	special_bg_pal map, 	 HOLLYS_HOLT, 				  PAL_SINGLE,    SepiaForestPalette ; LOOKS REALLY BAD...
 	special_bg_pal landmark, ANARRES_TOWN, 				  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; looks OK.
+	special_bg_pal landmark, CALM_COAST, 				  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; looks OK.
+	special_bg_pal landmark, GAULDENROD, 				  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; looks OK.	
+	special_bg_pal landmark, SERENE_SPRINGS,			  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; looks OK.	
+	special_bg_pal landmark, STADIUM,			          PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; looks OK.	
+	special_bg_pal landmark, STADIUM_GROUNDS,			  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; looks OK.	
 	special_bg_pal overcast, (unused),                    PAL_TIMEOFDAY, OvercastBGPalette
 	db 0 ; end
 
