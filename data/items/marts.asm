@@ -73,16 +73,16 @@ VioletMart:
 
 AzaleaMart: ;updated
 	db 10 ; # items
-	db CHARCOAL
+	db RARE_CANDY
+	db MAX_REPEL
+	db POTION
 	db POKE_BALL
 	db NET_BALL
-	db POTION
-	db RARE_CANDY
 	db ESCAPE_ROPE
-	db MAX_REPEL
 	db ANTIDOTE
-	db PARALYZEHEAL
+	db SMOKE_BALL
 	db SILVER_LEAF
+	db CHARCOAL
 	db -1
 
 Goldenrod2FMart1:

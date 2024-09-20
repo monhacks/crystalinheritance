@@ -19,18 +19,21 @@ Route36_MapScriptHeader:
 	bg_event 49, 11, BGEVENT_JUMPTEXT, RuinsOfAlphNorthSignText
 	bg_event 59,  7, BGEVENT_JUMPTEXT, Route36SignText
 	bg_event 25,  7, BGEVENT_JUMPTEXT, Route36TrainerTips1Text
+	bg_event 22,  3, BGEVENT_READ, Route36TreeScript
+	bg_event 23,  3, BGEVENT_READ, Route36TreeScript
 
+	
 	def_object_events
 	object_event 53,  6, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ArthurScript, -1
-	fruittree_event 25,  4, FRUITTREE_ROUTE_36, RAWST_BERRY, PAL_NPC_BLUE
-	object_event 40,  6, SPRITE_KURT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route36KurtScript, EVENT_BEAT_FALKNER
-	pokemon_event 45,  8, BRONZONG, -1, -1, PAL_NPC_BLUE, Route36BronzongText, -1
-	object_event 30,  9, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route36MatronScript, -1
-	object_event 46,  9, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route36Scientist1Text, -1
-	object_event 47, 10, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route36Scientist2Text, -1
-	object_event 35,  5, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerSchoolboyRoute36, -1 ; ALAN1
-	object_event 28, 11, SPRITE_FIREBREATHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerFirebreatherRoute36, -1 ; BURT
-	object_event 55, 10, SPRITE_PICNICKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerPicnickerRoute36, -1 ; GINA1
+	fruittree_event 25,  4, FRUITTREE_ROUTE_36, WHT_APRICORN, PAL_NPC_SILVER ; USED TO BE A BERRY TREE
+	object_event 36, 13, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route36KurtScript, EVENT_BEAT_FALKNER
+	pokemon_event 39,  9, BRONZONG, -1, -1, PAL_NPC_BLUE, Route36BronzongText, -1
+	object_event 24,  7, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route36MatronScript, -1
+	object_event 39, 10, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route36Scientist1Text, -1
+	object_event 40,  9, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route36Scientist2Text, -1
+	object_event 31, 13, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerSchoolboyRoute36, -1 ; ALAN1
+	object_event 34,  3, SPRITE_FIREBREATHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerFirebreatherRoute36, -1 ; BURT
+	object_event 23, 14, SPRITE_PICNICKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerPicnickerRoute36, -1 ; GINA1
 
 
 	object_const_def
@@ -189,7 +192,7 @@ Route36PicnickerBeatenText:
 ArthurScript:
 	faceplayer
 	opentext
-	checkevent EVENT_GOT_HARD_STONE_FROM_ARTHUR
+	checkevent EVENT_GOT_TM48_ROCK_SLIDE
 	iftrue .AlreadyGotStone
 	checkevent EVENT_MET_ARTHUR_OF_THURSDAY
 	iftrue .MetArthur
@@ -199,9 +202,9 @@ ArthurScript:
 .MetArthur:
 	writetext ArthurGivesGiftText
 	promptbutton
-	verbosegiveitem HARD_STONE
+	verbosegivetmhm TM_ROCK_SLIDE
 	iffalse .BagFull
-	setevent EVENT_GOT_HARD_STONE_FROM_ARTHUR
+	setevent EVENT_GOT_TM48_ROCK_SLIDE
 	jumpopenedtext ArthurGaveGiftText
 
 .AlreadyGotStone:
@@ -209,9 +212,6 @@ ArthurScript:
 	waitbutton
 .BagFull:
 	endtext
-
-ArthurNotThursdayScript:
-	jumpopenedtext ArthurNotThursdayText
 
 MeetArthurText:
 	text "Arthur: Who are"
@@ -227,14 +227,15 @@ ArthurGivesGiftText:
 	done
 
 ArthurGaveGiftText:
-	text "Arthur: A #mon"
-	line "that uses Rock-"
-
-	para "type moves should"
-	line "hold on to that."
-
-	para "It pumps up Rock-"
-	line "type attacks."
+	text "Arthur: That"
+	line "technique may"
+	cont "make the foe"
+	cont "flinch."
+	
+	para "It's a powerful"
+	line "move against"
+	cont "flying type"
+	cont "#mon."
 	done
 
 ArthurThursdayText:
@@ -245,11 +246,6 @@ ArthurThursdayText:
 	line "of seven children."
 	done
 
-ArthurNotThursdayText:
-	text "Arthur: Today's"
-	line "not Thursday. How"
-	cont "disappointing."
-	done
 
 Route36SignText:
 	text "Route 36"
@@ -289,4 +285,33 @@ Route36TrainerTips2Text:
 
 	para "caves and other"
 	line "landmarks."
+	done
+
+
+Route36TreeScript:
+	opentext
+	writetext AskToTimeTravelTextRoute36
+	yesorno
+	iffalse_jumpopenedtext NoTimeTravelTextRoute36
+	writetext YesTimeTravelTextRoute36
+	waitbutton
+	closetext
+	playsound SFX_WARP_TO
+	special FadeOutPalettes
+	waitsfx
+	warp STADIUM_GROUNDS, 33, 10
+	end
+	
+AskToTimeTravelTextRoute36:
+	text "Travel back"
+	line "in time?"
+	done
+
+NoTimeTravelTextRoute36:
+	text "More to do in"
+	line "the present." 
+	done
+	
+YesTimeTravelTextRoute36:
+	text "Time to go!"
 	done

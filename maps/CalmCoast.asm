@@ -30,7 +30,8 @@ CalmCoast_MapScriptHeader:
 	fruittree_event 17, 14, FRUITTREE_CALM_COAST_1, SITRUS_BERRY, PAL_NPC_RED
 	fruittree_event 18, 14, FRUITTREE_CALM_COAST_2, LUM_BERRY, PAL_NPC_RED
 	fruittree_event 19, 12, FRUITTREE_CALM_COAST_3, PNK_APRICORN, PAL_NPC_RED
-	itemball_event 3, 23, SOOTHE_BELL, 1, EVENT_SOOTHE_BELL ;ok
+	itemball_event 18, 20, SOOTHE_BELL, 1, EVENT_SOOTHE_BELL ;ok
+
 
 GenericTrainerYoungsterWarren:
 	generictrainer YOUNGSTER, WARREN, EVENT_BEAT_YOUNGSTER_WARREN, YoungsterWarrenSeenText, YoungsterWarrenBeatenText

@@ -48,19 +48,66 @@ StadiumUndergroundBoulders:
 	done
 
 StadiumUndergroundNPC1Script:
-	jumptextfaceplayer StadiumUndergroundNPC1Text
+	checkevent EVENT_GOT_PROTECT_PADS_FROM_LIGHTHOUSE_LEADER
+	iftrue .AlreadyGotItem
+	opentext
+	writetext StadiumUndergroundNPC1Text
+	promptbutton
+	verbosegiveitem PROTECT_PADS
+	iffalse .BagFull
+	setevent EVENT_GOT_PROTECT_PADS_FROM_LIGHTHOUSE_LEADER
+	jumpthisopenedtext StadiumUndergroundNPC1GaveItemText
+.AlreadyGotItem:
+	jumptextfaceplayer StadiumUndergroundNPC1AfterText
+.BagFull:
+	jumpthisopenedtext StadiumUndergroundNPC1BagFullText
 
 StadiumUndergroundNPC1Text:
 	text "Are you the new"
-	line "recruit? We've"
-	cont "almost finished"
-	cont "clearing the rock"
-	cont "in front of the"
-	cont "aquifer."
+	line "recruit?"
+	
+	para "Seems like you"
+	line "took the long way"
+	cont "here."
+	
+	para "We've nearly"
+	line "finished divert-"
+	cont "ing the under-"
+	cont "ground river."
+	
+	para "The rocks can be"
+	line "pretty rough on"
+	cont "your #mon."
 
-	para "Soon, the whole"
-	line "stadium will be"
-	cont "flooded."
+	para "Take these Protect"
+	line "Pads to avoid"
+	cont "contact damage."
+	done
+
+StadiumUndergroundNPC1GaveItemText:
+	text "Once we get the"
+	line "last boulder in"
+	cont "place, the basin"
+	cont "will fill and"
+	cont "a geyser will"
+	cont "erupt in the"
+	cont "stadium."
+	done
+
+StadiumUndergroundNPC1AfterText:
+	text "I can't wait to"
+	line "see the look on"
+	cont "Bobesh's face when"
+	cont "we flood the"
+	cont "stadium."
+	done
+
+StadiumUndergroundNPC1BagFullText:
+	text "Oh? Your bag is"
+	line "full. Come back"
+	cont "when you have"
+	cont "some space for"
+	cont "the Protect Pads."
 	done
 
 StadiumUndergroundNPC2Script:
@@ -160,4 +207,7 @@ StadiumUndergroundMovesAsideText:
 	para "Soon, we will"
 	line "flush out that"
 	cont "General Bobesh!"
+	
+	para "Let's go save"
+	line "Sandra."
 	done

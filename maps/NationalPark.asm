@@ -87,9 +87,62 @@ GenericTrainerSchoolboyJohnny:
 	done
 
 NationalParkGameboyKidScript:
-	showtextfaceplayer NationalParkGameboyKidText
-	turnobject LAST_TALKED, DOWN
-	end
+    faceplayer
+    opentext
+    checkevent EVENT_YELLOW_FOREST_TM_LEECH_LIFE
+    iftrue .AlreadyGotTM
+    writetext GameboyKidComplainText
+    promptbutton
+    verbosegivetmhm TM_LEECH_LIFE
+    iffalse .BagFull
+    setevent EVENT_YELLOW_FOREST_TM_LEECH_LIFE
+    jumpthisopenedtext GameboyKidGaveTMText
+.AlreadyGotTM
+    jumpthisopenedtext GameboyKidAfterText
+.BagFull
+    jumpthisopenedtext GameboyKidBagFullText
+
+GameboyKidComplainText:
+    text "Ugh!"
+    line "These bugs keep"
+    cont "biting me!"
+	
+    para "I'm trying to"
+    line "beat this level,"
+    cont "but I can't"
+    cont "focus!"
+	
+    para "Hey, you're a"
+    line "#mon trainer,"
+    cont "right? Take"
+    cont "this!"
+    done
+
+GameboyKidGaveTMText:
+    text "That's Leech"
+    line "Life. Give those"
+    cont "bugs a taste of"
+    cont "their own"
+    cont "medicine!"
+    done
+
+GameboyKidAfterText:
+    text "The bugs aren't"
+    line "as bad now."
+
+    para "Maybe they"
+    line "learned their"
+    cont "lesson?"
+    done
+
+GameboyKidBagFullText:
+    text "Your bag is full."
+	
+    para "Come back when"
+    line "you have space."
+    cont "These bugs"
+    cont "won't wait!"
+    done
 
 GenericTrainerPokefanmWilliam:
 	generictrainer POKEFANM, WILLIAM, EVENT_BEAT_POKEFANM_WILLIAM, PokefanmWilliamSeenText, PokefanmWilliamBeatenText
@@ -243,17 +296,6 @@ NationalParkTeacher2Text:
 
 NationalParkPersianText:
 	text "Persian: Fufushaa!"
-	done
-
-NationalParkGameboyKidText:
-	text "I'm studying my"
-	line "#dex."
-
-	para "I want to collect"
-	line "a living #-"
-
-	para "dex with one of"
-	line "each #mon."
 	done
 
 PokefanfBeverly1SeenText:

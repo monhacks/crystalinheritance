@@ -179,7 +179,7 @@
 	wildmon 24, TAUROS
 	wildmon 24, GIRAFARIG
 	wildmon 24, GLIGAR
-	wildmon 24, GLIGAR
+	wildmon 24, GROTLE
 ;	; day
 	wildmon 24, FARFETCH_D
 	wildmon 24, MEOWTH
@@ -187,7 +187,7 @@
 	wildmon 24, TAUROS
 	wildmon 24, GIRAFARIG
 	wildmon 24, GLIGAR
-	wildmon 24, GLIGAR
+	wildmon 24, GROTLE
 ;	; nite
 	wildmon 24, FARFETCH_D
 	wildmon 24, MEOWTH
@@ -195,7 +195,7 @@
 	wildmon 24, TAUROS
 	wildmon 24, GIRAFARIG
 	wildmon 24, GLIGAR
-	wildmon 24, GLIGAR
+	wildmon 24, GROTLE
 	end_grass_wildmons
 
 	def_grass_wildmons CATTLE_CULL_39
@@ -550,7 +550,7 @@
 	wildmon 40, WEEZING
 	wildmon 40, GABITE
 	wildmon 40, HIPPOWDON
-	wildmon 40, GABITE
+	wildmon 40, MONFERNO
 	wildmon 40, HIPPOWDON
 ;	; nite
 	wildmon 40, LARVITAR
@@ -558,7 +558,7 @@
 	wildmon 40, WEEZING
 	wildmon 40, GABITE
 	wildmon 40, HIPPOWDON
-	wildmon 40, GABITE
+	wildmon 40, MONFERNO
 	wildmon 40, HIPPOWDON
 	end_grass_wildmons
 
@@ -570,7 +570,7 @@
 	wildmon 40, WEEZING
 	wildmon 40, GABITE
 	wildmon 40, HIPPOWDON
-	wildmon 40, GABITE
+	wildmon 40, MONFERNO
 	wildmon 40, HIPPOWDON
 ;	; day
 	wildmon 40, LARVITAR
@@ -578,7 +578,7 @@
 	wildmon 40, WEEZING
 	wildmon 40, GABITE
 	wildmon 40, HIPPOWDON
-	wildmon 40, GABITE
+	wildmon 40, MONFERNO
 	wildmon 40, HIPPOWDON
 ;	; nite
 	wildmon 40, LARVITAR
@@ -586,7 +586,7 @@
 	wildmon 40, WEEZING
 	wildmon 40, GABITE
 	wildmon 40, HIPPOWDON
-	wildmon 40, GABITE
+	wildmon 40, MONFERNO
 	wildmon 40, HIPPOWDON
 	end_grass_wildmons
 	
@@ -598,7 +598,7 @@
 	wildmon 40, WEEZING
 	wildmon 40, GABITE
 	wildmon 40, HIPPOWDON
-	wildmon 40, GABITE
+	wildmon 40, MONFERNO
 	wildmon 40, HIPPOWDON
 ;	; day
 	wildmon 40, LARVITAR
@@ -606,7 +606,7 @@
 	wildmon 40, WEEZING
 	wildmon 40, GABITE
 	wildmon 40, HIPPOWDON
-	wildmon 40, GABITE
+	wildmon 40, MONFERNO
 	wildmon 40, HIPPOWDON
 ;	; nite
 	wildmon 40, LARVITAR
@@ -614,36 +614,35 @@
 	wildmon 40, WEEZING
 	wildmon 40, GABITE
 	wildmon 40, HIPPOWDON
-	wildmon 40, GABITE
+	wildmon 40, MONFERNO
 	wildmon 40, HIPPOWDON
 	end_grass_wildmons
 
 	def_grass_wildmons SULFUR_STY
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 ;	; morn
-	wildmon 40, RAMPARDOS
-	wildmon 40, SKUNTANK
-	wildmon 40, DONPHAN
-	wildmon 40, MAGCARGO
-	wildmon 40, RAMPARDOS
-	wildmon 40, SKUNTANK
-	wildmon 40, DONPHAN
+	wildmon 40, LARVITAR
+	wildmon 40, MAGMORTAR
+	wildmon 40, WEEZING
+	wildmon 40, GABITE
+	wildmon 40, HIPPOWDON
+	wildmon 40, MONFERNO
+	wildmon 40, HIPPOWDON
 ;	; day
-	wildmon 40, RAMPARDOS
-	wildmon 40, SKUNTANK
-	wildmon 40, DONPHAN
-	wildmon 40, MAGCARGO
-	wildmon 40, RAMPARDOS
-	wildmon 40, SKUNTANK
-	wildmon 40, DONPHAN
+	wildmon 40, LARVITAR
+	wildmon 40, MAGMORTAR
+	wildmon 40, WEEZING
+	wildmon 40, GABITE
+	wildmon 40, HIPPOWDON
+	wildmon 40, MONFERNO
+	wildmon 40, HIPPOWDON
 ;	; nite
-	wildmon 40, RAMPARDOS
-	wildmon 40, SKUNTANK
-	wildmon 40, DONPHAN
-	wildmon 40, MAGCARGO
-	wildmon 40, RAMPARDOS
-	wildmon 40, SKUNTANK
-	wildmon 40, DONPHAN
+	wildmon 40, LARVITAR
+	wildmon 40, MAGMORTAR
+	wildmon 40, WEEZING
+	wildmon 40, GABITE
+	wildmon 40, HIPPOWDON
+	wildmon 40, MONFERNO
+	wildmon 40, HIPPOWDON
 	end_grass_wildmons
-
 	db -1 ; end

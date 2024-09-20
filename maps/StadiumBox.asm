@@ -20,6 +20,7 @@ StadiumBox_MapScriptHeader: ; todo: make sandra only talkable from one tile, usi
 	object_event  5,  11, SPRITE_SANDRA, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumBoxSandraScript, EVENT_BEAT_SANDRA
 	object_event  6,  11, SPRITE_KURT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumBoxKurtScript, EVENT_BEAT_SANDRA ; todo, make a script for Kurt to say something before you talk to Sandra
 	itemball_event  8,  2, SCOPE_LENS, 1, EVENT_STADIUM_BOX_SCOPE_LENS
+	itemball_event  2,  2, WIDE_LENS, 1, EVENT_WIDE_LENS
 
 	object_const_def
 	const STADIUMBOX_ADRINNA

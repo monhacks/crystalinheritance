@@ -30,6 +30,7 @@ StadiumGrounds_MapScriptHeader: ; todo make everything happen once you talk to B
 	object_event 34, 37, SPRITE_BRIGADER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader11, EVENT_BEAT_BOBESH_STADIUM
 	object_event  7,  9, SPRITE_BRIGADER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader12, EVENT_BEAT_BOBESH_STADIUM
 	tmhmball_event 53, 35, TM_FLAME_CHARGE, EVENT_BURNED_TOWER_B1F_TM_FLAME_CHARGE
+	itemball_event 14,  8, BLACK_BELT, EVENT_GOT_BLACK_BELT_FROM_WESLEY
 
 	object_const_def
 	const STADIUMGROUNDS_BOBESH
@@ -90,6 +91,7 @@ StadiumGroundsBobeshScene:
 	turnobject STADIUMGROUNDS_SANDRA, DOWN
 	opentext
 	writetext SandraThankYouText
+	verbosegivetmhm TM_DAZZLING_GLEAM
 	waitbutton
 	special HealParty
 	writetext SandraNegotiateText
@@ -228,11 +230,15 @@ SandraThankYouText:
 	cont "fighting the"
 	cont "Toxicroak..."
 
-	para "but I pack a few"
+	para "But I pack a few"
 	line "psychic techniques"
 	cont "and could have"
 	cont "handled myself"
 	cont "easily."
+	
+	para "Still, it was"
+	line "dazzling to"
+	cont "witness."
 	
 	para "Oh, and I see"
 	line "that my friends"
@@ -424,7 +430,7 @@ StadiumGroundsSandra2Script:
 	playsound SFX_WARP_TO
 	special FadeOutPalettes
 	waitsfx
-	warp NATIONAL_PARK, 20, 35
+	warp ROUTE_36, 22, 4
 	end
 
 StadiumGroundsSandraAsksToTimeTravel:
