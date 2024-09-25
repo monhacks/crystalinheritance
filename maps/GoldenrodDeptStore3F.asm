@@ -27,20 +27,23 @@ GoldenrodDeptStore3FSuperNerdText:
 	cont "my #mon."
 	done
 
-GoldenrodDeptStore3FRockerText:
-	text "Hey! When you bat-"
-	line "tle, do you use X"
-	cont "Spcl.Atk?"
-
-	para "It's awesome. It"
-	line "really jacks up"
-	cont "Special Attack!"
+GoldenrodDeptStore3FSuperNerdText:
+	text "The attendants"
+	line "here rent their"
+	cont "space. Isn't it"
+	cont "great?"
+	para "The best vendors"
+	line "get to stay!"
 	done
 
-GoldenrodDeptStore3FDirectoryText:
-	text "For Victory"
-	line "Seekers"
-
-	para "3F Battle"
-	line "   Collection"
+GoldenrodDeptStore3FRockerText:
+	text "My mom sold"
+	line "X-items here"
+	cont "part time for"
+	cont "30 years."
+	para "But she took a"
+	line "buyout when"
+	cont "Silph made"
+	cont "everyone go"
+	cont "full time."
 	done

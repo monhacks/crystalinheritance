@@ -12,53 +12,72 @@ GoldenrodHPUpHouse_MapScriptHeader:
 	def_bg_events
 
 	def_object_events
-	object_event  2,  3, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodHPUpHousePokefanMScript, -1
+	object_event  2,  3, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodHPUpFisherScript, -1
 	object_event  5,  4, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodHPUpHousePokefanFText, -1
-	pokemon_event  6,  3, PIKACHU, -1, -1, PAL_NPC_RED, GoldenrodHPUpHousePikachuText, -1
+	pokemon_event  6,  3, QUAGSIRE, -1, -1, PAL_NPC_BLUE, GoldenrodHPUpHousePikachuText, -1
 
-GoldenrodHPUpHousePokefanMScript:
-	checkevent EVENT_GOT_HP_UP_FROM_GOLDENROD
-	iftrue_jumptextfaceplayer .Text2
-	faceplayer
-	opentext
-	writetext .Text1
-	promptbutton
-	verbosegiveitem HP_UP
-	iffalse_endtext
-	setevent EVENT_GOT_HP_UP_FROM_GOLDENROD
-	jumpthisopenedtext
+FisherGoodRodScript:
+    faceplayer
+    opentext
+    checkkeyitem GOOD_ROD
+    iftrue .AlreadyHaveRod
+    writetext FisherIntroText
+    promptbutton
+    verbosegivekeyitem GOOD_ROD
+    iffalse .BagFull
+    setevent EVENT_GOT_GOOD_ROD
+    jumpthisopenedtext FisherGiveRodText
+.AlreadyHaveRod
+    jumpthisopenedtext FisherAfterText
+.BagFull
+    jumpthisopenedtext FisherBagFullText
 
-.Text2:
-	text "The Haircut Bro-"
-	line "thers sure know"
+FisherIntroText:
+    text "I was married to"
+    line "the sea."
+	
+	para "We had a tough"
+	line "breakup - she"
+	cont "got to be too"
+	cont "tempestuous for"
+	cont "me."
+	
+	para "Ah, so I don't"
+	line "need this any"
+	cont "longer."
+    done
 
-	para "how to make"
-	line "#mon happy."
-	done
+FisherGiveRodText:
+    text "You never know"
+	line "what you'll pull"
+	cont "up with that!"
+    done
 
-.Text1:
-	text "If your #mon"
-	line "gets a haircut, it"
+FisherAfterText:
+    text "Remember - "
+	line "there's always"
+	cont "more fish in"
+	cont "the sea!"
+    done
 
-	para "seems to become"
-	line "happier."
+FisherBagFullText:
+    text "Your bag's full!"
+    line "Come back when"
+    cont "you have space."
+    done
 
-	para "But this works"
-	line "too!"
-	done
 
 GoldenrodHPUpHousePokefanFText:
-	text "I gave my Pichu a"
-	line "haircut from the"
-
-	para "Haircut Brothers"
-	line "every day."
-
-	para "Then it went and"
-	line "evolved! I didn't"
-	cont "expect that!"
+	text "After the wedding"
+	line "I realized I was"
+	cont "Whicash-fished."
+	
+	para "His ex took all"
+	line "of his stuff in"
+	cont "the divorce."
 	done
 
 GoldenrodHPUpHousePikachuText:
-	text "Pikachu: Pika!"
+	text "Quagsire: "
+	line "Qua!"
 	done

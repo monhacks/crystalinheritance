@@ -9,164 +9,92 @@ GoldenrodMagnetTrainStation_MapScriptHeader:
 
 
 	def_coord_events
-	coord_event 11,  6, 0, Script_ArriveFromSaffron
+
 
 	def_bg_events
 
 	def_object_events
 	object_event  9,  9, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GoldenrodMagnetTrainStationOfficerScript, -1
-	object_event 11, 14, SPRITE_GENTLEMAN, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodMagnetTrainStationGentlemanText, EVENT_GOLDENROD_TRAIN_STATION_GENTLEMAN
-	object_event  6, 12, SPRITE_LASS, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GoldenrodMagnetTrainStationCooltrainerfScript, -1
+	object_event 11, 14, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GoldenrodMagnetTrainStationGentlemanScript, EVENT_GENTLEMAN_READ_TRAIN_MAIL
+	object_event  6, 13, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GoldenrodMagnetTrainStationCooltrainerf1Script, -1
+	object_event  7, 13, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GoldenrodMagnetTrainStationCooltrainerf2Script, -1
 
 	object_const_def
-	const GOLDENRODMAGNETTRAINSTATION_OFFICER
+	const STATION_GENTLEMAN
 
 GoldenrodMagnetTrainStationOfficerScript:
-	faceplayer
-	opentext
-	checkevent EVENT_RESTORED_POWER_TO_KANTO
-	iftrue .MagnetTrainToSaffron
-	jumpopenedtext GoldenrodMagnetTrainStationOfficerTheTrainHasntComeInText
+    jumptextfaceplayer GoldenrodMagnetTrainStationOfficerText
 
-.MagnetTrainToSaffron:
-	writetext GoldenrodMagnetTrainStationOfficerAreYouComingAboardText
-	yesorno
-	iffalse_jumpopenedtext GoldenrodMagnetTrainStationOfficerHopeToSeeYouAgainText
-	checkkeyitem PASS
-	iffalse_jumpopenedtext GoldenrodMagnetTrainStationOfficerYouDontHaveARailPassText
-	writetext GoldenrodMagnetTrainStationOfficerRightThisWayText
-	waitbutton
-	closetext
-	applymovement GOLDENRODMAGNETTRAINSTATION_OFFICER, GoldenrodMagnetTrainStationOfficerApproachTrainDoorMovement
-	applymovement PLAYER, GoldenrodMagnetTrainStationPlayerApproachAndEnterTrainMovement
-	setval $0
-	special Special_MagnetTrain
-	warpcheck
-	newloadmap MAPSETUP_TRAIN
-	applyonemovement PLAYER, turn_head_down
-	wait 36
-	end
+GoldenrodMagnetTrainStationGentlemanScript:
+    faceplayer
+    opentext
+    checkevent EVENT_GOT_KENYA
+    iftrue .GotKenya
+    writetext GentlemanNormalText
+    waitbutton
+    closetext
+    end
 
-Script_ArriveFromSaffron:
-	applymovement GOLDENRODMAGNETTRAINSTATION_OFFICER, GoldenrodMagnetTrainStationOfficerApproachTrainDoorMovement
-	applymovement PLAYER, GoldenrodMagnetTrainStationPlayerLeaveTrainAndEnterStationMovement
-	applymovement GOLDENRODMAGNETTRAINSTATION_OFFICER, GoldenrodMagnetTrainStationOfficerReturnToBoardingGateMovement
-	jumptext GoldenrodMagnetTrainStationOfficerArrivedInGoldenrodText
+.GotKenya
+    writetext GentlemanReadMailText
+    waitbutton
+    closetext
+    turnobject STATION_GENTLEMAN, DOWN
+    pause 10
+    applymovement STATION_GENTLEMAN, GentlemanExitMovement
+    disappear STATION_GENTLEMAN
+    setevent EVENT_GENTLEMAN_READ_TRAIN_MAIL
+    end
 
-GoldenrodMagnetTrainStationCooltrainerfScript:
-	checkevent EVENT_RESTORED_POWER_TO_KANTO
-	iftrue .PowerRestored
-	jumptextfaceplayer GoldenrodMagnetTrainStationCooltrainerfText1
+GoldenrodMagnetTrainStationCooltrainerf1Script:
+    jumptextfaceplayer GoldenrodMagnetTrainStationCooltrainerf1Text
 
-.PowerRestored
-	jumptextfaceplayer GoldenrodMagnetTrainStationCooltrainerfText2
+GoldenrodMagnetTrainStationCooltrainerf2Script:
+    jumptextfaceplayer GoldenrodMagnetTrainStationCooltrainerf2Text
 
-GoldenrodMagnetTrainStationOfficerApproachTrainDoorMovement:
-	step_up
-	step_up
-	step_right
-	turn_head_left
-	step_end
-
-GoldenrodMagnetTrainStationOfficerReturnToBoardingGateMovement:
-	step_left
+GentlemanExitMovement:
 	step_down
 	step_down
-	step_end
-
-GoldenrodMagnetTrainStationPlayerApproachAndEnterTrainMovement:
-	step_up
-	step_up
-	step_up
-	step_left
-	step_left
-	step_left
-	step_up
-	step_up
-	step_end
-
-GoldenrodMagnetTrainStationPlayerLeaveTrainAndEnterStationMovement:
 	step_left
 	step_left
 	step_down
-	step_down
-	step_down
-	step_down
-	turn_head_up
-	step_end
+    step_end
 
-GoldenrodMagnetTrainStationOfficerTheTrainHasntComeInText:
-	text "The train hasn't"
-	line "come in…"
+GoldenrodMagnetTrainStationOfficerText:
+    text "Explore in"
+    line "comfort!"
+    para "Oh… you don't"
+    line "have a ticket."
+    done
 
-	para "I know! I'll carry"
-	line "the passengers on"
-	cont "my back!"
+GentlemanNormalText:
+    text "The trains run on"
+    line "geothermal energy"
+    cont "from the under-"
+    cont "ground."
+    para "It's so clean!"
+    done
 
-	para "That won't work."
-	done
+GentlemanReadMailText:
+    text "Oh, you have mail"
+    line "for me?"
+    para "… What does it"
+    line "say?"
+    para "… Well, thank you"
+    line "for telling me."
+    para "I must go now."
+    done
 
-GoldenrodMagnetTrainStationOfficerAreYouComingAboardText:
-	text "We'll soon depart"
-	line "for Saffron."
+GoldenrodMagnetTrainStationCooltrainerf1Text:
+    text "This train"
+    line "travels between"
+    cont "Kanto and Johto."
+    done
 
-	para "Are you coming"
-	line "aboard?"
-	done
-
-GoldenrodMagnetTrainStationOfficerRightThisWayText:
-	text "May I see your"
-	line "rail pass, please?"
-
-	para "OK. Right this"
-	line "way, please."
-	done
-
-GoldenrodMagnetTrainStationOfficerYouDontHaveARailPassText:
-	text "Sorry. You don't"
-	line "have a rail pass."
-	done
-
-GoldenrodMagnetTrainStationOfficerHopeToSeeYouAgainText:
-	text "We hope to see you"
-	line "again!"
-	done
-
-GoldenrodMagnetTrainStationOfficerArrivedInGoldenrodText:
-	text "We have arrived in"
-	line "Goldenrod."
-
-	para "We hope to see you"
-	line "again."
-	done
-
-GoldenrodMagnetTrainStationGentlemanText:
-	text "I'm the President."
-
-	para "My dream was to"
-	line "build a train that"
-
-	para "is faster than any"
-	line "#mon."
-
-	para "It really brings"
-	line "Johto much closer"
-	cont "to Kanto."
-	done
-
-GoldenrodMagnetTrainStationCooltrainerfText1:
-	text "The Magnet Train"
-	line "is like, zoooom,"
-	cont "byun! Shuuu!"
-
-	para "At least when"
-	line "it's running…"
-	done
-
-GoldenrodMagnetTrainStationCooltrainerfText2:
-	text "The Magnet Train"
-	line "is like, zoooom,"
-	cont "byun! Shuuu!"
-
-	para "It's so cool!"
-	done
+GoldenrodMagnetTrainStationCooltrainerf2Text:
+    text "I really like the"
+    line "new cars. The old"
+    cont "ones were quite"
+    cont "unsafe."
+    done
+	

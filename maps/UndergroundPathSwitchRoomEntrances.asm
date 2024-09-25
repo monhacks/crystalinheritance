@@ -5,9 +5,6 @@ UndergroundPathSwitchRoomEntrances_MapScriptHeader:
 
 
 	def_warp_events
-	warp_event 23, -6, WAREHOUSE_ENTRANCE, 6
-	warp_event 22, -6, UNDERGROUND_WAREHOUSE, 1
-	warp_event 23, -6, UNDERGROUND_WAREHOUSE, 2
 	warp_event  5,  5, WAREHOUSE_ENTRANCE, 2
 	warp_event  4,  9, GOLDENROD_CITY, 14
 	warp_event  5,  9, GOLDENROD_CITY, 14

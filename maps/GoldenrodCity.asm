@@ -45,56 +45,24 @@ GoldenrodCity_MapScriptHeader:
 	bg_event 27, 15, BGEVENT_JUMPTEXT, GoldenrodMuseumSignText
 
 	def_object_events
-	object_event 16, 22, SPRITE_POKEFAN_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MoveTutor, -1
-	object_event 28,  8, SPRITE_CUTE_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodCityGymLassText, EVENT_GOLDENROD_GYM_WHITNEY
-	object_event 38, 24, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodCityBeautyText, -1
-	object_event 11, 18, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodCityPokefanMText, -1
-	object_event 38, 17, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 2, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodCityYoungster1Text, -1
-	object_event 16, 16, SPRITE_BATTLE_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GoldenrodCityCooltrainerF1Script, -1
+	object_event 16, 22, SPRITE_POKEFAN_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MoveTutor, -1 ; no changes
+	object_event 28,  8, SPRITE_CUTE_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodCityGymLassText, -1 ; done
+	object_event 38, 24, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodCityBeautyText, -1 ; done
+	object_event 11, 18, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodCityPokefanMText, -1 ; done
+	object_event 38, 17, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 2, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodCityYoungster1Text, -1 ; done
+	object_event 16, 16, SPRITE_BATTLE_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GoldenrodCityCooltrainerF1Script, -1 ; done 
 	object_event 25, 25, SPRITE_BATTLE_GIRL, SPRITEMOVEDATA_WANDER, 2, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GoldenrodCityCooltrainerF2Script, -1
-	object_event 25, 17, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GoldenrodCityYoungster2Script, -1
-	object_event 20, 10, SPRITE_LASS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodCityLassText, -1
-	object_event 15, 27, SPRITE_GRAMPS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodCityGrampsText, -1
+	object_event 25, 17, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GoldenrodCityYoungster2Script, -1 ; no changes
+	object_event 20, 10, SPRITE_LASS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodCityLassText, -1 ; done
+	object_event 15, 27, SPRITE_GRAMPS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodCityGrampsText, -1 ; done
 
 
 	object_const_def
-	const GOLDENRODCITY_POKEFAN_M2
+
 
 GoldenrodCityFlyPointAndFloria:
 	setflag ENGINE_FLYPOINT_GOLDENROD
 	endcallback
-
-.MoveTutorDisappear
-	disappear GOLDENRODCITY_POKEFAN_M2
-	endcallback
-
-GoldenrodCityTrigger0:
-	sdefer GoldenrodCityStepDownScript
-	end
-
-GoldenrodCityStepDownScript:
-	readvar VAR_YCOORD
-	ifnotequal $f, .Done
-	readvar VAR_XCOORD
-	ifnotequal $9, .Done
-	applyonemovement PLAYER, step_down
-.Done
-	setscene $1
-	end
-
-GoldenrodCityPanUpScript:
-	playsound SFX_EXIT_BUILDING
-	applyonemovement PLAYER, hide_object
-	waitsfx
-	applymovement PLAYER, GoldenrodCityPanUpMovementData
-	disappear PLAYER
-	pause 10
-	special Special_FadeOutMusic
-	special FadeOutPalettes
-	pause 15
-	setscene $0
-	warpfacing UP, RADIO_TOWER_1F, 2, 7
-	end
 
 MoveTutor:
 	faceplayer
@@ -193,41 +161,28 @@ GoldenrodCityPanUpMovementData:
 	step_end
 
 GoldenrodCityPokefanMText:
-	text "They built the new"
-	line "Radio Tower to"
-
-	para "replace the old,"
-	line "creaky one."
-
-	para "Now it transmits"
-	line "every #gear"
-
-	para "broadcast in"
-	line "Johto."
+	text "I heard that"
+	line "Goldenrod used to"
+	cont "have a big wooden"
+	cont "tower, kind of"
+	cont "like Sprout Tower"
+	cont "used to be in"
+	cont "Violet City."
 	done
 
 GoldenrodCityYoungster1Text:
-	text "I know there's a"
-	line "new bike shop, but"
-
-	para "I can't find it"
-	line "anywhere."
+	text "I love my new"
+	line "e-bike."
 	done
 
 GoldenrodCityCooltrainerF1Text:
-	text "Is that man in"
-	line "black dressed up"
+	text "I love talking to"
+	line "other people abou"
+	cont "t Whitney's show,"
+	cont " ReArming Voice."
 
-	para "like a Team Rocket"
-	line "member? How silly!"
-	done
-
-GoldenrodCityCooltrainerF1Text_ClearedRadioTower:
-	text "Was that man in"
-	line "black really part"
-
-	para "of Team Rocket? I"
-	line "can't believe it!"
+	para "It's a real"
+	line "community!"
 	done
 
 GoldenrodCityCooltrainerF2Text:
@@ -264,11 +219,6 @@ GoldenrodCityCooltrainerF2Text_GotRadioCard:
 	done
 
 GoldenrodCityYoungsterDayText:
-;	text "Have you been to"
-;	line "the Museum?"
-;
-;	para "It's full of cool"
-;	line "exhibits!"
 	text "I can't wait to"
 	line "visit the Museum"
 	cont "once it's open!"
@@ -289,44 +239,43 @@ GoldenrodCityYoungster2Text:
 	done
 
 GoldenrodCityLassText:
-	text "The man at that"
-	line "house rates your"
-	cont "#mon names."
+	text "Whitney has lots"
+	line "of people on her"
+	cont "show."
 
-	para "He can help rename"
-	line "your #mon too."
-
-	para "He liked all of"
-	line "my nicknames, even"
-	cont "the silly ones!"
+	para "But sometimes"
+	line "she's out of her"
+	cont "depth."
 	done
 
-GoldenrodCityGrampsText:
-	text "Whew! This is one"
-	line "big town. I don't"
 
-	para "know where any-"
-	line "thing is."
+GoldenrodCityGrampsText:
+	text "My son works for"
+	line "Silph!"
+	
+	para "I'm so proud."
 	done
 
 GoldenrodCityGymLassText:
-	text "The Gym Leader,"
-	line "Whitney, went"
-	cont "flying by saying,"
+	text "Want to do a fun"
+	line "experiment?"
 
-	para "“I have got to get"
-	line "a Radio Card!”"
+	para "Take a quote "
+	line "from Whitney’s"
+	cont "show and ask a"
+	cont "friend if she "
+	cont "said it, or if "
+	cont "Giovanni said it."
+	
+	para "You’d be surprised"	
+	line "how often they"
+	cont "get it wrong."
 	done
 
 GoldenrodCityBeautyText:
-	text "I went on a tour"
-	line "of the Radio"
-
-	para "Tower. I saw all"
-	line "three studios and"
-
-	para "even ate in the"
-	line "café."
+	text "“I wonder what this"
+	line "town was like a "
+	cont "long time ago."
 	done
 
 GoldenrodCityStationSignText:
@@ -345,10 +294,15 @@ GoldenrodDeptStoreSignText:
 
 	para "Goldenrod City"
 	line "Dept.Store"
+	
+	para "Run by Silph"
 	done
 
 GoldenrodGymSignText:
-	text "Goldenrod City"
+	text "The sign is"
+	line "faded..."
+	
+	para "Goldenrod City"
 	line "#mon Gym"
 	cont "Leader: Whitney"
 
@@ -361,6 +315,7 @@ GoldenrodCitySignText:
 
 	para "The Festive City"
 	line "of Opulent Charm"
+
 	done
 
 GoldenrodCityBikeShopSignText:
@@ -400,8 +355,8 @@ PokeComCenterSignText:
 	done
 
 GoldenrodCityFlowerShopSignText:
-	text "Blooming Beautiful"
-	line "Flower Shop"
+	text "Gloria's"
+	line "Smile Plumes"
 	done
 
 GoldenrodMuseumSignText:

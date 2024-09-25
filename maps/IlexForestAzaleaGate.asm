@@ -19,8 +19,8 @@ IlexForestAzaleaGate_MapScriptHeader:
 	object_event  8,  3, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ProfOaksAide1Script, -1
 
 	object_const_def
-	const LEXFORESTGATE_OFFICER
-	const LEXFORESTGATE_GRANNY
+	const ILEXFORESTGATE_OFFICER
+	const ILEXFORESTGATE_GRANNY
 
 ProfOaksAide1Script:
 	faceplayer

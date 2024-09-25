@@ -34,8 +34,12 @@ GoldenrodDeptStore4FCooltrainerMText:
 	done
 
 GoldenrodDeptStore4FBugCatcherText:
-	text "Iron adds to your"
-	line "#mon's Defense."
+	text "My friend always"
+	line "uses Chansey."
+	
+	para "I can never win,"
+	line "even using Hyper"
+	cont "beam..."
 	done
 
 GoldenrodDeptStore4FGameboyKidText:

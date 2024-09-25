@@ -36,7 +36,6 @@ GoldenrodBikeShopClerkScript:
 	promptbutton
 	waitsfx
 	verbosegivekeyitem BICYCLE
-	setflag ENGINE_BIKE_SHOP_CALL_ENABLED
 	setevent EVENT_GOT_BICYCLE
 	jumpthisopenedtext
 
@@ -49,26 +48,55 @@ GoldenrodBikeShopClerkFirstRateBikesText:
 	done
 
 GoldenrodBikeShopClerkIntroText:
-	text "…sigh… I opened"
-	line "a branch here,"
+	text "Clerk: Oh, a"
+	line "trainer! Say,"
+	cont "you remind me of"
+	cont "someone..."
+	
+	para "See that bike in"
+	line "the corner? It's"
+	cont "from my very"
+	cont "first shipment."
+	
+	para "Back then, a"
+	line "young kid helped"
+	cont "me advertise."
 
-	para "but I can't sell"
-	line "my Bicycles."
-	cont "Why is that?"
+	para "Thanks to that"
+	line "child, my shop"
+	cont "took off."
+	
+	para "But now... Well,"
+	line "I need to keep"
+	cont "up with the"
+	cont "times, you know?"
+	
+	para "E-bikes are the"
+	line "future. I've got"
+	cont "to make room"
+	cont "for progress."
+	
+	para "That old bike..."
+	line "I can't just"
+	cont "toss it. Too"
+	cont "many memories."
 
-	para "Could you ride a"
-	line "Bicycle and adver-"
-	cont "tise for me?"
+	para "Say, would you"
+	line "take it? Give it"
+	cont "a new adventure?"
+	
+	para "What do you say?"
+	line "Will you help an"
+	cont "old man move"
+	cont "forward?"
 	done
 
 GoldenrodBikeShopClerkAgreedText:
 	text "Really? Great!"
 
-	para "Give me your name"
-	line "and phone number,"
-
-	para "and I'll loan you"
-	line "a Bicycle."
+	para "I hope you have"
+	line "some great ad-"
+	cont "ventures on it."
 	done
 
 GoldenrodBikeShopClerkRefusedText:
@@ -78,8 +106,12 @@ GoldenrodBikeShopClerkRefusedText:
 	done
 
 GoldenrodBikeShopBicycleText:
-	text "It's a shiny new"
+	text "It's a retro"
 	line "Bicycle!"
+	
+	para "Need to remember"
+	line "to ask Kurt how"
+	cont "the brakes work."
 	done
 
 GoldenrodBikeShopJustReleasedCompactBikeText:

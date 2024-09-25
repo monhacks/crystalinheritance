@@ -32,12 +32,11 @@ GoldenrodDeptStore6FLassText:
 	done
 
 GoldenrodDeptStore6FSuperNerdText:
-	text "If you're tired,"
-	line "try the vending"
-	cont "machine's drinks."
-
-	para "Your #mon will"
-	line "love them too."
+	text "I heard that the"
+	line "Fresh Water is"
+	cont "tapped straight"
+	cont "from Slowpoke"
+	cont "Well."
 	done
 
 GoldenrodDeptStore6FDirectoryText:

@@ -1,4 +1,4 @@
-GoldenrodDeptStoreRoof_MapScriptHeader:
+GoldenrodDeptStoreRoof_MapScriptHeader: ; todo change binoculars
 	def_scene_scripts
 
 	def_callbacks
@@ -17,7 +17,7 @@ GoldenrodDeptStoreRoof_MapScriptHeader:
 	bg_event  3,  0, BGEVENT_UP, PokeDollVendingMachine
 
 	def_object_events
-	object_event  2,  1, SPRITE_FAT_GUY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GoldenrodDeptStoreRoofFisherScript, -1
+	object_event  2,  1, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GoldenrodDeptStoreRoofScientistScript, -1
 	object_event 10,  3, SPRITE_POKEFAN_F, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodDeptStoreRoofPokefanFText, -1
 	object_event 14,  6, SPRITE_POKEMANIAC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GoldenrodDeptStoreRoofSuperNerdScript, EVENT_GOLDENROD_SALE_ON
 	object_event  3,  4, SPRITE_SCHOOLGIRL, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodDeptStoreRoofTwinText, EVENT_GOLDENROD_SALE_ON
@@ -48,28 +48,62 @@ GoldenrodDeptStoreRoofCheckSaleChangeClerk:
 	setevent EVENT_GOLDENROD_SALE_ON
 	endcallback
 
-GoldenrodDeptStoreRoofFisherScript:
-	faceplayer
-	opentext
-	checkevent EVENT_DECO_VOLTORB_DOLL
-	iftrue .AlreadyGotVoltorbDoll
-	writetext GoldenrodDeptStoreRoofFisherText
-	waitbutton
-	writetext GoldenrodDeptStoreRoofFisherDuplicateText
-	waitbutton
-	setevent EVENT_DECO_VOLTORB_DOLL
-	writetext GotVoltorbDollText
-	playsound SFX_ITEM
-	pause 60
-	promptbutton
-	writetext VoltorbDollSentText
-	waitbutton
-.AlreadyGotVoltorbDoll
-	writetext GoldenrodDeptStoreRoofFisherCatchEmAllText
-	waitbutton
-	closetext
-	turnobject LAST_TALKED, UP
-	end
+GoldenrodDeptStoreRoofScientistScript:
+    faceplayer
+    opentext
+    checkevent EVENT_GOT_AIR_BALLOON_FROM_ROUTE_31_LEADER
+    iftrue .AlreadyGotBalloon
+    writetext ScientistObservationText
+    promptbutton
+    verbosegiveitem AIR_BALLOON
+    iffalse .BagFull
+    setevent EVENT_GOT_AIR_BALLOON_FROM_ROUTE_31_LEADER
+    jumpthisopenedtext ScientistExplanationText
+.AlreadyGotBalloon
+    jumpthisopenedtext ScientistAfterText
+.BagFull
+    jumpthisopenedtext ScientistBagFullText
+
+ScientistObservationText:
+    text "Scientist: Ah,"
+    line "fascinating!"
+    para "See that balloon?"
+    line "It rises until"
+    cont "the buoyant"
+    cont "force is zero."
+    para "Here, take this"
+    line "Air Balloon. It"
+    cont "works similarly."
+    done
+
+ScientistExplanationText:
+    text "The Air Balloon"
+    line "lifts a #mon"
+    cont "into the air,"
+    cont "avoiding Ground"
+    cont "attacks!"
+    para "It pops after"
+    line "one hit, though."
+    cont "Just like my"
+    cont "test balloons!"
+    done
+
+ScientistAfterText:
+    text "Scientist: The"
+    line "principles of"
+    cont "buoyancy apply"
+    cont "to #mon too!"
+    para "Isn't science"
+    line "wonderful?"
+    done
+
+ScientistBagFullText:
+    text "Oh? Your bag is"
+    line "full. Maybe you"
+    cont "can float some"
+    cont "items away?"
+    done
+	
 
 GoldenrodDeptStoreRoofSuperNerdScript:
 	showtext GoldenrodDeptStoreRoofSuperNerdOhWowText
@@ -177,39 +211,6 @@ GoldenrodDeptStoreRoofPokefanFText:
 	line "from shopping."
 	done
 
-GoldenrodDeptStoreRoofFisherText:
-	text "Pardon? Who says"
-	line "an adult can't get"
-	cont "into this?"
-
-	para "I'm going to be"
-	line "back every day to"
-
-	para "collect all the"
-	line "dolls!"
-	done
-
-GoldenrodDeptStoreRoofFisherDuplicateText:
-	text "This one is a"
-	line "duplicate. Here,"
-	cont "you can have it."
-	done
-
-GotVoltorbDollText:
-	text "<PLAYER> received"
-	line "Voltorb Doll."
-	done
-
-VoltorbDollSentText:
-	text "Voltorb Doll"
-	line "was sent home."
-	done
-
-GoldenrodDeptStoreRoofFisherCatchEmAllText:
-	text "I heard there are"
-	line "30 kinds of dolls."
-	done
-
 GoldenrodDeptStoreRoofTwinText:
 	text "They have bargain"
 	line "sales here every"
@@ -259,7 +260,26 @@ GoldenrodDeptStoreRoofBugCatcherText:
 	line "there's any left?"
 	done
 
+
+
 Binoculars1Text:
+	text "Wow, I can see"
+	line "the whole magnet"
+	cont "train route over"
+	cont "the mountain!"
+	
+	para "Wait, are those"
+	line "Prinplup playing"
+	cont "at the peak?"
+	done
+
+Binoculars2Text:
+	text "Why does Sprout"
+	line "Tower look so"
+	cont "metallic?"
+	done
+
+Binoculars3Text:
 	text "These binoculars"
 	line "let me see far"
 
@@ -268,30 +288,6 @@ Binoculars1Text:
 
 	para "Is it the one with"
 	line "the green roof?"
-	done
-
-Binoculars2Text:
-	text "Hey! Some trainers"
-	line "are battling on"
-	cont "the road!"
-
-	para "A #mon fired a"
-	line "flurry of leaves!"
-
-	para "That makes me feel"
-	line "like battling"
-	cont "right now!"
-	done
-
-Binoculars3Text:
-	text "A Fisher caught a"
-	line "lot of Magikarp…"
-
-	para "They're Splashing"
-	line "at the same time!"
-
-	para "Look at the water"
-	line "going everywhere!"
 	done
 
 PokeDollVendingMachineText:

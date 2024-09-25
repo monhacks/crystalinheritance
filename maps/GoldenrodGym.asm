@@ -14,180 +14,137 @@ GoldenrodGym_MapScriptHeader:
 	bg_event  4, 15, BGEVENT_READ, GoldenrodGymStatue
 
 	def_object_events
-	object_event  9,  6, SPRITE_CUTE_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSrandjrJoandcath1, -1
+	object_event  0,  1, SPRITE_CUTE_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSrandjrJoandcath1, -1
+	object_event  1,  1, SPRITE_CUTE_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSrandjrJoandcath2, -1
 	object_event  9, 13, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerLassCathy, -1
-	object_event  9,  7, SPRITE_CUTE_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSrandjrJoandcath2, -1
-	object_event  0,  2, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBeautyVictoria, -1
-	object_event 19,  5, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerBeautySamantha, -1
-	object_event  5, 15, SPRITE_GYM_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GoldenrodGymGuyScript, -1
+	object_event  9,  6, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerBeautyVictoria, -1
+	object_event  8,  3, SPRITE_PRYCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PryceScript, EVENT_GAVE_FACADE
 
 	object_const_def
-	const GOLDENRODGYM_LASS2
 
-GenericTrainerLassCathy:
-	generictrainer LASS, CATHY, EVENT_BEAT_LASS_CATHY, LassCathySeenText, LassCathyBeatenText
-
-	text "Do my #mon"
-	line "think I'm cute?"
-	done
-
-GenericTrainerSrandjrJoandcath1:
-	generictrainer SR_AND_JR, JOANDCATH1, EVENT_BEAT_SR_AND_JR_JO_AND_CATH, SrandjrJoandcath1SeenText, SrandjrJoandcath1BeatenText
-
-	text "Jo: I'm helping my"
-	line "junior Cath to"
-
-	para "earn a badge"
-	line "from Whitney."
-
-	para "She's improving"
-	line "gradually."
-	done
 
 GenericTrainerSrandjrJoandcath2:
-	generictrainer SR_AND_JR, JOANDCATH2, EVENT_BEAT_SR_AND_JR_JO_AND_CATH, SrandjrJoandcath2SeenText, SrandjrJoandcath2BeatenText
+GenericTrainerSrandjrJoandcath1:
+    generictrainer SRANDJR, JOANDCATH1, EVENT_BEAT_SRANDJR_JOANDCATH1, SrandjrJoandcath1SeenText, SrandjrJoandcath1BeatenText
 
-	text "Cath: I keep on"
-	line "losing to Whitney."
-	cont "It's depressing."
-
-	para "I'm OK! If I lose,"
-	line "I'll just try"
-	cont "harder next time!"
-	done
-
-GenericTrainerBeautyVictoria:
-	generictrainer BEAUTY, VICTORIA, EVENT_BEAT_BEAUTY_VICTORIA, BeautyVictoriaSeenText, BeautyVictoriaBeatenText
-
-	text "Wow, you must be"
-	line "good to beat me!"
-	cont "Keep it up!"
-	done
-
-GenericTrainerBeautySamantha:
-	generictrainer BEAUTY, SAMANTHA, EVENT_BEAT_BEAUTY_SAMANTHA, BeautySamanthaSeenText, BeautySamanthaBeatenText
-
-	text "I taught Meowth"
-	line "moves for taking"
-	cont "on any type…"
-	done
-
-GoldenrodGymGuyScript:
-	jumpthistextfaceplayer
-
-	text "Yo! Champ in"
-	line "making!"
-
-	para "This Gym is home"
-	line "to Normal-type"
-	cont "#mon trainers."
-
-	para "I recommend you"
-	line "use Fighting-type"
-	cont "#mon."
-
-	para "But be careful--"
-	line "Fairy #mon"
-
-	para "resist Fighting-"
-	line "type moves,"
-
-	para "and they're used"
-	line "here too!"
-	done
-
-GoldenrodGymStatue:
-	gettrainername WHITNEY, 1, $1
-	checkflag ENGINE_PLAINBADGE
-	iftrue .Beaten
-	jumpstd gymstatue1
-.Beaten:
-	readvar VAR_BADGES
-	ifgreater 10, .LyraToo
-	jumpstd gymstatue2
-.LyraToo
-	jumpstd gymstatue3
-
-LassCathySeenText:
-	text "Don't let my"
-	line "#mon's cute"
-
-	para "looks fool you."
-	line "They can whip you!"
-	done
-
-LassCathyBeatenText:
-	text "Darn… I thought"
-	line "you were weak…"
-	done
+    text "Whitney made it"
+    line "all look so easy."
+    para "Maybe we need to"
+    line "rethink things."
+    done
 
 SrandjrJoandcath1SeenText:
-	text "Jo: If you want to"
-	line "face Whitney,"
-
-	para "you'll have to go"
-	line "through me!"
-
-	para "Cath, did that"
-	line "sound cool?"
-	done
+    text "We thought we had"
+    line "paradise here."
+    para "But at what cost?"
+    done
 
 SrandjrJoandcath1BeatenText:
-	text "Jo: Losing isn't"
-	line "cool at all!"
-	done
+    text "Huh. Didn't see"
+    line "that coming."
+    done
+	
+GenericTrainerLassCathy:
+    generictrainer LASS, CATHY, EVENT_BEAT_LASS_CATHY, LassCathySeenText, LassCathyBeatenText
 
-SrandjrJoandcath2SeenText:
-	text "Cath: I'm trying"
-	line "to beat Whitney,"
-	cont "but my senior and"
+    text "We used to idolize"
+    line "Whitney, you know?"
+    para "Now I wonder if we"
+    line "were too hasty."
+    done
 
-	para "I can beat you"
-	line "first!"
-	done
+LassCathySeenText:
+    text "I've been here"
+    line "since the start."
+    para "Let me show you"
+    line "how we battle!"
+    done
 
-SrandjrJoandcath2BeatenText:
-	text "Cath: Oh, no,"
-	line "no, no!"
-	done
+LassCathyBeatenText:
+    text "Times change,"
+    line "don't they?"
+    done
+	
+GenericTrainerBeautyVictoria:
+    generictrainer BEAUTY, VICTORIA, EVENT_BEAT_BEAUTY_VICTORIA, BeautyVictoriaSeenText, BeautyVictoriaBeatenText
 
-JoWhitneyCriesText:
-	text "Oh, no. You made"
-	line "Whitney cry."
-
-	para "It's OK. She'll"
-	line "stop soon. She"
-
-	para "always cries when"
-	line "she loses."
-	done
+    text "My little corner"
+    line "here is perfect."
+    para "No need for"
+    line "Whitney's glamour."
+    done
 
 BeautyVictoriaSeenText:
-	text "Oh, you are a cute"
-	line "little trainer! ♥"
-
-	para "I like you, but I"
-	line "won't hold back!"
-	done
+    text "Welcome to our"
+    line "sanctuary."
+    para "Care for a battle?"
+    done
 
 BeautyVictoriaBeatenText:
-	text "Let's see… Oops,"
-	line "it's over?"
-	done
+    text "Defeat is just"
+    line "part of life."
+    done
 
-BeautySamanthaSeenText:
-	text "Give it your best"
-	line "shot, or I'll take"
-	cont "you down!"
-	done
+PryceScript:
+    faceplayer
+    opentext
+    checkevent EVENT_GAVE_FACADE
+    iftrue .AlreadyGaveTM
+    writetext PryceText
+    promptbutton
+    verbosegivetmhm TM_FACADE
+    iffalse .NoRoom
+    setevent EVENT_GAVE_FACADE
+    jumpthisopenedtext PryceAfterText
+.AlreadyGaveTM
+    writetext PryceAfterText
+    waitbutton
+    closetext
+    end
+.NoRoom
+    jumpthisopenedtext PryceNoRoomText
 
-BeautySamanthaBeatenText:
-	text "No! Oh, Meowth,"
-	line "I'm so sorry!"
-	done
+PryceText:
+    text "Pryce: <PLAYER>…"
+    line "what are you"
+    cont "doing here?"
+    para "… Ah, I see."
+    line "Well you are"
+    cont "probably asking"
+    cont "the same of me."
+    para "I came here to"
+    line "confront Whitney,"
+    cont "but she is in the"
+    cont "Radio Tower."
+    para "Her gym trainers"
+    line "are still"
+    cont "grinding away,"
+    cont "though."
+    para "They seem to"
+    line "think her cute"
+    cont "demeanor was just"
+    cont "a Facade."
+	para "For your trouble,"
+	line "please take this"
+	cont "TM."
+    done
 
-GoldenrodGymGuyWinText:
-	text "You won? Great! I"
-	line "was busy admiring"
-	cont "the ladies here."
-	done
+PryceAfterText:
+    text "I hear Whitney is"
+    line "at the radio"
+    cont "tower now, and"
+    cont "has her own show."
+    para "Its following"
+    line "is... far from"
+    cont "underground, if"
+    cont "you catch my"
+    cont "drift."
+    done
+
+PryceNoRoomText:
+    text "You don't have"
+    line "room for this TM."
+    para "Come back when"
+    line "you've made space"
+    cont "in your pack."
+    done

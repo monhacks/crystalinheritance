@@ -46,7 +46,6 @@ GoldenrodGameCorner_MapScriptHeader:
 	object_event  3,  2, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumpstd, gamecornercoinvendor, -1
 	object_event 16,  2, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GoldenrodGameCornerTMVendorScript, -1
 	object_event 18,  2, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GoldenrodGameCornerPrizeMonVendorScript, -1
-	object_event 10,  1, SPRITE_FAT_GUY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GoldenrodGameCornerFisherScript, -1
 	object_event 10,  3, SPRITE_BATTLE_GIRL, SPRITEMOVEDATA_WANDER, 1, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodGameCornerCooltrainerFText, -1
 	object_event 17,  6, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodGameCornerPokefanFScript, -1
 	object_event  8,  7, SPRITE_BURGLAR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, (1 << DAY) | (1 << NITE), 0, OBJECTTYPE_SCRIPT, 0, GoldenrodGameCornerPharmacistScript, -1
@@ -60,35 +59,6 @@ GoldenrodGameCornerPokefanM3Script:
 	showtextfaceplayer GoldenrodGameCornerPokefanM3Text
 	turnobject LAST_TALKED, RIGHT
 	end
-
-GoldenrodGameCornerFisherScript:
-	faceplayer
-	opentext
-	checkevent EVENT_LISTENED_TO_PAY_DAY_INTRO
-	iftrue GoldenrodGameCornerTutorPayDayScript
-	writetext GoldenrodGameCornerFisherText
-	waitbutton
-	setevent EVENT_LISTENED_TO_PAY_DAY_INTRO
-GoldenrodGameCornerTutorPayDayScript:
-	writetext Text_GoldenrodGameCornerTutorPayDayQuestion
-	checkitem SILVER_LEAF
-	iffalse .NoSilverLeaf
-	yesorno
-	iffalse .TutorRefused
-	setval PAY_DAY
-	writetext ClearText
-	special Special_MoveTutor
-	ifequal $0, .TeachMove
-.TutorRefused
-	jumpopenedtext Text_GoldenrodGameCornerTutorRefused
-
-.NoSilverLeaf
-	waitbutton
-	jumpopenedtext Text_GoldenrodGameCornerTutorNoSilverLeaf
-
-.TeachMove
-	takeitem SILVER_LEAF
-	jumpopenedtext Text_GoldenrodGameCornerTutorTaught
 
 GoldenrodGameCornerTMVendorScript:
 	faceplayer
@@ -111,37 +81,37 @@ GoldenrodGameCornerTMVendor_LoopScript: ; 056c36
 .flamethrower:
 	checktmhm TM_FLAMETHROWER
 	iftrue GoldenrodGameCornerPrizeVendor_AlreadyHaveTMScript
-	checkcoins 4000
+	checkcoins 10000
 	ifequal $2, GoldenrodGameCornerPrizeVendor_NotEnoughCoinsScript
 	gettmhmname TM_FLAMETHROWER, $0
 	scall GoldenrodGameCornerPrizeVendor_ConfirmPurchaseScript
 	iffalse_jumpopenedtext GoldenrodGameCornerPrizeVendorQuitText
 	givetmhm TM_FLAMETHROWER
-	takecoins 4000
+	takecoins 10000
 	sjump GoldenrodGameCornerTMVendor_FinishScript
 
 .thunderbolt:
 	checktmhm TM_THUNDERBOLT
 	iftrue GoldenrodGameCornerPrizeVendor_AlreadyHaveTMScript
-	checkcoins 4000
+	checkcoins 10000
 	ifequal $2, GoldenrodGameCornerPrizeVendor_NotEnoughCoinsScript
 	gettmhmname TM_THUNDERBOLT, $0
 	scall GoldenrodGameCornerPrizeVendor_ConfirmPurchaseScript
 	iffalse_jumpopenedtext GoldenrodGameCornerPrizeVendorQuitText
 	givetmhm TM_THUNDERBOLT
-	takecoins 4000
+	takecoins 10000
 	sjump GoldenrodGameCornerTMVendor_FinishScript
 
 .ice_beam:
 	checktmhm TM_ICE_BEAM
 	iftrue GoldenrodGameCornerPrizeVendor_AlreadyHaveTMScript
-	checkcoins 4000
+	checkcoins 10000
 	ifequal $2, GoldenrodGameCornerPrizeVendor_NotEnoughCoinsScript
 	gettmhmname TM_ICE_BEAM, $0
 	scall GoldenrodGameCornerPrizeVendor_ConfirmPurchaseScript
 	iffalse_jumpopenedtext GoldenrodGameCornerPrizeVendorQuitText
 	givetmhm TM_ICE_BEAM
-	takecoins 4000
+	takecoins 10000
 	sjump GoldenrodGameCornerTMVendor_FinishScript
 
 GoldenrodGameCornerPrizeVendor_ConfirmPurchaseScript:
@@ -174,9 +144,9 @@ GoldenrodGameCornerTMVendorMenuData:
 .MenuData2:
 	db $80 ; flags
 	db 4 ; items
-	db "TM35    4000@"
-	db "TM24    4000@"
-	db "TM13    4000@"
+	db "TM35   10000@"
+	db "TM24   10000@"
+	db "TM13   10000@"
 	db "Cancel@"
 
 GoldenrodGameCornerPrizeMonVendorScript:
@@ -260,7 +230,7 @@ GoldenrodGameCornerPrizeMonVendorScript:
 	db 4 ; items
 	db "Eevee       200@"
 	db "Porygon     800@"
-	db "Chansey   2500@"
+	db "Chansey    2500@"
 	db "Cancel@"
 
 GoldenrodGameCornerPharmacistScript:
@@ -457,12 +427,6 @@ GoldenrodGameCornerPokefanM2Text:
 
 	para "blew it on card"
 	line "flipping…"
-
-	para "I got so furious,"
-	line "I tossed out my"
-
-	para "Coin Case in the"
-	line "Underground."
 	done
 
 GoldenrodGameCornerPokefanM3Text:

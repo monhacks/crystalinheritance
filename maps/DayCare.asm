@@ -37,29 +37,24 @@ DayCareEggCheckCallback:
 DayCareManScript_Inside:
 	faceplayer
 	opentext
-	checkevent EVENT_GOT_ODD_EGG
-	iftrue .AlreadyHaveOddEgg
-	writetext DayCareManText_GiveOddEgg
-	promptbutton
-	special GiveOddEgg
-	iffalse_jumpopenedtext DayCareText_PartyAndBoxFull
-	writetext DayCareText_GotOddEgg
-	playsound SFX_GET_EGG_FROM_DAYCARE_LADY
-	waitsfx
-	ifequal 1, .InParty
-	special Special_CurBoxFullCheck
-	iffalse .BoxNotFull
-	farwritetext _CurBoxFullText
-.BoxNotFull
-	special GetCurBoxName
-	farwritetext _EggSentToPCText
-	promptbutton
-.InParty:
-	writetext DayCareText_DescribeOddEgg
-	setevent EVENT_GOT_ODD_EGG
+	checkevent EVENT_GOT_EVIOLITE_FROM_DAYCARE
+	iftrue .AlreadyHaveEviolite
+	writetext DayCareManText_GiveEviolite
+    yesorno
+    iffalse .DeclinedEviolite
+    verbosegiveitem EVIOLITE
+    iffalse .BagFull
+    setevent EVENT_GOT_EVIOLITE_FROM_DAYCARE
+    writetext DayCareText_GotEviolite
+	special Special_DayCareMan
 	waitendtext
 
-.AlreadyHaveOddEgg:
+.BagFull:
+    writetext DayCareText_BagFull
+    waitendtext
+
+
+.AlreadyHaveEviolite:
 	special Special_DayCareMan
 	waitendtext
 
@@ -85,68 +80,57 @@ Text_GrampsLookingForYou:
 	line "for you."
 	done
 
-DayCareManText_GiveOddEgg:
-	text "I'm the Day-Care"
-	line "Man."
-
-	para "Do you know about"
-	line "Eggs?"
-
-	para "I was raising"
-	line "#mon with my"
-	cont "wife, you see."
-
-	para "We were shocked to"
-	line "find an Egg!"
-
-	para "How incredible is"
-	line "that?"
-
-	para "Well, wouldn't you"
-	line "like this Egg?"
-
-	para "Then fine, this is"
-	line "yours to keep!"
-	done
-
-DayCareText_GotOddEgg:
-	text "<PLAYER> received"
-	line "the Odd Egg!"
-	done
-
-DayCareText_DescribeOddEgg:
-	text "I found that when"
-	line "I was caring for"
-
-	para "someone's #mon"
-	line "before."
-
-	para "But the trainer"
-	line "didn't want the"
-
-	para "Egg, so I'd kept"
-	line "it around."
-	done
-
-DayCareLadyText_GiveLyrasEgg:
-	text "Hello, dear."
-
-	para "Lyra told me this"
-	line "Egg was a gift for"
-	cont "you. Here you go!"
-	done
-
-DayCareLadyText_DescribeLyrasEgg:
-	text "That Egg came from"
-	line "her first #mon."
-
-	para "She must really"
-	line "trust you as a"
-	cont "trainer."
-	done
+DayCareManText_GiveEviolite:
+    text "After running this"
+    line "Day Care for so"
+    cont "long, I've grown"
+    cont "quite fond of"
+    cont "unevolved #mon."
+    para "They're just so"
+    line "adorable!"
+    para "But I know they"
+    line "sometimes struggle"
+    cont "in battles."
+    para "I'd like to help"
+    line "them out. Would"
+    cont "you take this"
+    cont "Eviolite?"
+    done
 
 DayCareText_PartyAndBoxFull:
 	text "You have no room"
 	line "for this, even in"
 	cont "your box."
 	done
+
+DayCareText_BagFull:
+    text "Oh my, your Bag"
+    line "is full. Make some"
+    cont "room and come back"
+    cont "for this Eviolite."
+    para "The unevolved"
+    line "#mon are"
+    cont "counting on you!"
+    done
+	
+DayCareText_GotEviolite:
+    text "Wonderful! This"
+    line "Eviolite will"
+    cont "boost the defenses"
+    cont "of any #mon"
+    cont "that can still"
+    cont "evolve."
+    para "It's perfect for"
+    line "those cute little"
+    cont "unevolved #mon!"
+    done
+
+DayCareManText_DeclinedEviolite:
+    text "Oh, that's too"
+    line "bad. Well, if you"
+    cont "change your mind,"
+    cont "come back anytime."
+    para "I'll always be here"
+    line "to support the"
+    cont "little ones!"
+    done

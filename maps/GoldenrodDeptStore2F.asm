@@ -38,24 +38,35 @@ GoldenrodDeptStore2FYoungsterText:
 	cont "can be annoying."
 	done
 
-GoldenrodDeptStore2FCooltrainerFText:
-	text "I got my Abra at"
-	line "the Game Corner."
-
-	para "Now it's my best"
-	line "partner."
+GoldenrodDeptStore2FGentlemanText:
+	text "Let's see. I'm"
+	line "going to take a"
+	cont "two day trip to"
+	cont "the park, so I"
+	cont "need potions,"
+	para "antidotes,"
+	line "balls, a radio,"
+	cont "a sleeping bag,"
+	para "a toaster oven,"
+	line "a generator, a"
+	cont "folding table…"
 	done
 
-GoldenrodDeptStore2FGentlemanText:
-	text "This Dept.Store"
-	line "makes me realize"
-
-	para "that Goldenrod is"
-	line "a big city."
-
-	para "The selection here"
-	line "is unmatched any-"
-	cont "where else."
+GoldenrodDeptStore2FCooltrainerFText:
+	text "If you don't"
+	line "have enough, you"
+	cont "can just get it"
+	cont "on credit."
+	para "Just keep track"
+	line "of your bike"
+	cont "purchase, your"
+	cont "potions, your"
+	cont "#balls,"
+	para "your haircut,"
+	line "and anything"
+	cont "else, so your"
+	cont "credit score"
+	cont "stays good."
 	done
 
 GoldenrodDeptStore2FDirectoryText:

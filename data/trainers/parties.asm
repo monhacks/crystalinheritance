@@ -1847,11 +1847,11 @@ CamperGroup:
 ; ================================
 ; ================
 
-	; CAMPER
+	; CAMPER ; ROUTE 34?
 	db "Todd@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 8, WOOPER
+	db 22, QUAGSIRE
 	db -1 ; end
 
 ; ================
@@ -2168,11 +2168,11 @@ endc
 ; ================
 
 	; PICNICKER
-	db "Erin@"
+	db "Erin@" ; ROUTE 34 
 	db TRAINERTYPE_NORMAL
 	; party
-	db 18, PONYTA
-	db 16, GLOOM
+	db 21, CLEFAIRY
+	db 21, GLOOM
 	db -1 ; end
 
 ; ================
@@ -4096,11 +4096,11 @@ PokefanMGroup:
 ; ================
 
 	; POKEFANM
-	db "Brandon@"
+	db "Brandon@" ; ROUTE 34
 	db TRAINERTYPE_ITEM
 	; party
-	db 13, SNUBBULL, ORAN_BERRY
-	db 13, FLAAFFY, NO_ITEM
+	db 23, SNUBBULL, ORAN_BERRY
+	db 23, FLAAFFY, ORAN_BERRY
 	db -1 ; end
 
 ; ================
@@ -4279,10 +4279,12 @@ OfficerFGroup:
 ; ================
 
 	; OFFICERF
-	db "Mara@"
+	db "Mara@" ; ROUTE 34 
 	db TRAINERTYPE_NORMAL
 	; party
-	db 17, GROWLITHE
+	db 20, GROWLITHE
+	db 20, HOUNDOUR
+	db 20, MACHOP	
 	db -1 ; end
 
 ; ================
@@ -4806,11 +4808,11 @@ endc
 
 ; ================
 
-	; LASS
+	; LASS ; goldenrod gym
 	db "Cathy@"
 	db TRAINERTYPE_MOVES
 	; party
-	db 18, SNUBBULL
+	db 25, SNUBBULL
 		db SCARY_FACE, CHARM, BITE, LICK
 	db -1 ; end
 
@@ -5009,12 +5011,12 @@ BeautyGroup:
 ; ================
 
 	; BEAUTY
-	db "Victoria@"
+	db "Victoria@" ; goldenrod gym
 	db TRAINERTYPE_NORMAL
 	; party
-	db 9, FURRET
-	db 13, FURRET
-	db 17, FURRET
+	db 15, FURRET
+	db 20, FURRET
+	db 25, FURRET
 	db -1 ; end
 
 ; ================
@@ -6464,12 +6466,12 @@ SrAndJrGroup:
 ; ================================
 ; ================
 
-	; SR_AND_JR
+	; SR_AND_JR ; goldenrod gym
 	db "Jo & Cath@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 18, TEDDIURSA
-	db 16, JIGGLYPUFF
+	db 24, TEDDIURSA
+	db 24, JIGGLYPUFF
 	db -1 ; end
 
 ; ================
@@ -6773,16 +6775,18 @@ RichBoyGroup:
 
 ; ================
 
-	; RICH_BOY
+	; RICH_BOY ; route_34
 	db "Irving@"
-	db TRAINERTYPE_ITEM | TRAINERTYPE_DVS | TRAINERTYPE_PERSONALITY | TRAINERTYPE_MOVES
+	db TRAINERTYPE_ITEM | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
 	; party
-	db 16, TOGETIC, KINGS_ROCK, $EE, $EE, $EE, ABIL_TOGETIC_SERENE_GRACE | NAT_NEUTRAL, MALE
-		db HEADBUTT, METRONOME, SWEET_KISS, DISARM_VOICE
-	db 16, CHANSEY, KINGS_ROCK, $EE, $EE, $EE, ABIL_CHANSEY_SERENE_GRACE | NAT_NEUTRAL, MALE
-		db HEADBUTT, FRESH_SNACK, SWEET_KISS, ZEN_HEADBUTT
+	db 25, EEVEE, NUGGET, "Eon@"
+		db CHARM, BITE, CURSE, QUICK_ATTACK
+	db 25, CHANSEY, NUGGET, "Clutch@"
+		db FRESH_SNACK, SEISMIC_TOSS, COUNTER, TOXIC
+	db 25, PORYGON, NUGGET, "Bill@"
+		db THUNDERBOLT, ICE_BEAM, CONVERSION, PSYBEAM
 	db -1 ; end
-
+	
 ; ================
 ; ================================
 
@@ -6805,13 +6809,13 @@ BreederGroup:
 ; ================================
 ; ================
 
-	; BREEDER
+	; BREEDER ; route 34
 	db "Julie@"
 	db TRAINERTYPE_ITEM
 	; party
-	db 7, PIKACHU, EVIOLITE
-	db 10, SNUBBULL, METAL_POWDER
-	db 8, TOGETIC, EVIOLITE
+	db 17, PIKACHU, EVIOLITE
+	db 20, SNUBBULL, METAL_POWDER
+	db 18, TOGETIC, EVIOLITE
 	db -1 ; end
 
 ; ================
@@ -9632,17 +9636,17 @@ endc
 ; ================
 
 	; COOLTRAINERF
-	db "Kate@"
+	db "Kate@" ; route 34
 	db TRAINERTYPE_NORMAL
 	; party
+	db 24, SEADRA
 	db 26, CLOYSTER
-	db 28, CLOYSTER
 	db -1 ; end
 
 ; ================
 
 	; COOLTRAINERF
-	db "Irene@"
+	db "Irene@" ; route 34
 	db TRAINERTYPE_NORMAL
 	; party
 	db 22, TOTODILE
@@ -9731,7 +9735,7 @@ endc
 ; ================
 
 	; COOLTRAINERF
-	db "Jenn@"
+	db "Jenn@" ; route 34 
 	db TRAINERTYPE_NORMAL
 	; party
 	db 24, STARYU

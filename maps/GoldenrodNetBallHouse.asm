@@ -12,8 +12,8 @@ GoldenrodNetBallHouse_MapScriptHeader:
 	def_bg_events
 
 	def_object_events
-	object_event  2,  4, SPRITE_BUG_MANIAC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodNetBallHouseYoungsterScript, -1
-	object_event  6,  3, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodNetBallHouseBugCatcherText, -1
+	object_event  2,  4, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodNetBallHouseYoungsterScript, -1
+	object_event  6,  3, SPRITE_ELDER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodNetBallHouseBugCatcherText, -1
 
 GoldenrodNetBallHouseYoungsterScript:
 	checkevent EVENT_GOT_NET_BALL_FROM_GOLDENROD
@@ -22,39 +22,38 @@ GoldenrodNetBallHouseYoungsterScript:
 	opentext
 	writetext .Text1
 	promptbutton
-	verbosegiveitem NET_BALL
+	verbosegiveitem WISE_GLASSES
 	iffalse_endtext
 	setevent EVENT_GOT_NET_BALL_FROM_GOLDENROD
 	jumpthisopenedtext
 
 .Text2:
-	text "Sometimes you get"
-	line "really lucky and"
-	cont "catch a #mon at"
-
-	para "full HP. I love"
-	line "that feeling."
+	text "My dad could"
+	line "never focus on"
+	cont "details with"
+	cont "those Wise "
+	cont "Glasses."
 	done
 
 .Text1:
-	text "I stocked up on"
-	line "Net Balls to catch"
-	cont "a Pineco, but got"
-
-	para "it with my very"
-	line "first one!"
-
-	para "I won't be needing"
-	line "this anymore."
+	text "My dad's vision"
+	line "perscription is"
+	cont "always changing."
+	
+	para "We don't need"
+	line "these anymore."
+	
+	para "Maybe they are"
+	line "of some use to"
+	cont "you?"
 	done
 
 GoldenrodNetBallHouseBugCatcherText:
-	text "They hold Bug-"
-	line "Catching Contests"
-
-	para "in National Park"
-	line "on Route 35."
-
-	para "Sometimes even"
-	line "Bugsy competes."
+	text "My son says that"
+	line "my eyes are bad."
+	
+	para "I say, he can"
+	line "never see the"
+	cont "forest for the"
+	cont "trees!"
 	done

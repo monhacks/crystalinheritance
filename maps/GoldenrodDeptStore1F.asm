@@ -25,17 +25,6 @@ GoldenrodDeptStore1FReceptionistText:
 	line "rod Dept.Store."
 	done
 
-GoldenrodDeptStore1FGentlemanText:
-	text "The Dept.Store"
-	line "has a decent se-"
-	cont "lection."
-
-	para "But some items"
-	line "are only available"
-
-	para "as Game Corner"
-	line "prizes."
-	done
 
 GoldenrodDeptStore1FPokefanFText:
 	text "I'm raring to shop"
@@ -43,14 +32,27 @@ GoldenrodDeptStore1FPokefanFText:
 	done
 
 GoldenrodDeptStore1FBugCatcherText:
-	text "Mom's good at"
-	line "bargain hunting."
-
-	para "She always buys"
-	line "stuff at lower"
-	cont "prices."
+	text "My dad says that"
+	line "I should try to"
+	cont "fix this."
+	para "But there's a"
+	line "cheaper one"
+	cont "here."
 	done
 
+GoldenrodDeptStore1FGentlemanText:
+	text "Want to know a"
+	line "secret? Some of"
+	cont "the drinks"
+	cont "restore more HP"
+	cont "than potions,"
+	para "if you do the"
+	line "math. Sounds"
+	cont "like some clever"
+	cont "marketing by"
+	cont "the potions."
+	done
+	
 GoldenrodDeptStore1FDirectoryText:
 	text "1F Service Counter"
 

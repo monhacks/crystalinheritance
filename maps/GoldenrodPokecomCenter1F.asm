@@ -6,7 +6,7 @@ GoldenrodPokecomCenter1F_MapScriptHeader:
 	def_warp_events
 	warp_event  6, 15, GOLDENROD_CITY, 15
 	warp_event  7, 15, GOLDENROD_CITY, 15
-	warp_event  1,  6, GOLDENROD_POKECOM_CENTER_OFFICE, 2
+
 
 	def_coord_events
 
@@ -31,9 +31,11 @@ GoldenrodPokecomCenter1F_MapScriptHeader:
 	bg_event 24,  3, BGEVENT_ITEM + RARE_CANDY, EVENT_GOLDENROD_POKECOM_CENTER_1F_HIDDEN_RARE_CANDY
 
 	def_object_events
-;	object_event 16,  8, SPRITE_LINK_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, WonderTradeReceptionistScript, -1
-;	object_event  3,  9, SPRITE_ICE_BOULDER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, InfoSignScript, -1
-;	object_event 23,  3, SPRITE_ICE_BOULDER, SPRITEMOVEDATA_POKECOM_NEWS, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, end, NULL, -1
+	object_event  7,  7, SPRITE_BOWING_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodPokecenter1FNurseScript, -1
+	object_event  1,  9, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, MapNameNPC1Script, -1
+	object_event  9, 10, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, MapNameNPC2Script, -1
+	object_event  3, 12, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, MapNameNPC3Script, -1
+	object_event 16,  8, SPRITE_LINK_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, WonderTradeReceptionistScript, -1
 
 	object_const_def
 
@@ -77,3 +79,145 @@ JudgeMachineScript:
 	opentext
 	special JudgeMachine
 	waitendtext
+
+
+MapNameNPC1Script:
+	jumptextfaceplayer MapNameNPC1Text
+
+MapNameNPC2Script:
+	jumptextfaceplayer MapNameNPC2Text
+
+MapNameNPC3Script:
+	jumptextfaceplayer MapNameNPC3Text
+
+MapNameNPC1Text:
+	text "New technology"
+	line "is so amazing."
+	para "But I wish I"
+	line "didn't have to"
+	cont "take out a loan"
+	cont "to get a new"
+	cont "#dex every"
+	cont "other year…"
+	done
+
+MapNameNPC2Text:
+	text "With my new Bike"
+	line "I can deliver"
+	cont "groceries so"
+	cont "much faster!"
+	done
+
+MapNameNPC3Text:
+	text "The Radio Tower"
+	line "has had to"
+	cont "increase"
+	cont "security even"
+	cont "more. It's just"
+	cont "a magnet for"
+	cont "crime."
+	done
+
+
+WonderTradeReceptionistScript:
+	opentext
+	writetext WonderTradeIntroText
+	waitbutton
+	checkevent EVENT_INTRODUCED_TEALA
+	iftrue .introduced
+	writetext IntroduceTealaText
+	waitbutton
+	setevent EVENT_INTRODUCED_TEALA
+.introduced
+	writetext WonderTradeExplanationText
+	promptbutton
+	special WonderTrade
+	iffalse .done
+	playmusic MUSIC_POKECOM_CENTER
+	writetext WonderTradeCompleteText
+	playsound SFX_DEX_FANFARE_80_109
+	waitsfx
+	ifnotequal 2, .done
+	setevent EVENT_GOT_GS_BALL_FROM_POKECOM_CENTER
+	setevent EVENT_CAN_GIVE_GS_BALL_TO_KURT
+	playmusic MUSIC_SPIKY_EARED_PICHU_HGSS
+	writetext WonderTradeForGSBallPichuText
+	promptbutton
+	verbosegivekeyitem GS_BALL
+	writetext WonderTradeForGSBallPichuText2
+	waitbutton
+.done
+	jumpopenedtext WonderTradeGoodbyeText
+
+WonderTradeIntroText:
+	text "Hello! Welcome to"
+	line "#Com Center"
+	cont "Wonder Trade Hub."
+	done
+
+IntroduceTealaText:
+	text "I'm Teala, your"
+	line "trade attendant."
+	done
+
+WonderTradeExplanationText:
+	text "You can trade"
+	line "#mon with other"
+	cont "people far away."
+	done
+
+WonderTradeCompleteText:
+	text "It's your new"
+	line "partner."
+
+	para "Please take care"
+	line "of it with love."
+	done
+
+WonderTradeGoodbyeText:
+	text "We hope to see you"
+	line "again."
+	done
+
+WonderTradeForGSBallPichuText:
+	text "…But what's this?"
+	line "Is something wrong"
+
+	para "with the Wonder"
+	line "Trade machine?"
+
+	para "It seems like you"
+	line "just traded a"
+
+	para "#mon with"
+	line "yourself."
+
+	para "But that can't be"
+	line "right… You can't"
+
+	para "be in two places"
+	line "at once."
+
+	para "Besides, the ma-"
+	line "chine communicates"
+
+	para "through space,"
+	line "not time…"
+
+	para "And what is that"
+	line "strange Ball it's"
+
+	para "holding? Is it an"
+	line "Apricorn Ball?"
+
+	para "Here, take a look…"
+	done
+
+WonderTradeForGSBallPichuText2:
+	text "It may be unusual,"
+	line "but a #mon"
+	cont "is a #mon."
+
+	para "Please look after"
+	line "it carefully."
+	done

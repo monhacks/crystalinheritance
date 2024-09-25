@@ -2,7 +2,7 @@ Route34IlexForestGate_MapScriptHeader:
 	def_scene_scripts
 
 	def_callbacks
-	callback MAPCALLBACK_OBJECTS, UnknownScript_0x62d2d
+
 
 	def_warp_events
 	warp_event  4,  0, ROUTE_34, 1
@@ -16,94 +16,115 @@ Route34IlexForestGate_MapScriptHeader:
 	def_bg_events
 
 	def_object_events
-	object_event  9,  3, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route34IlexForestGateTeacherScript, EVENT_ROUTE_34_ILEX_FOREST_GATE_TEACHER_BEHIND_COUNTER
-	object_event  5,  7, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route34IlexForestGateTeacherScript, EVENT_ROUTE_34_ILEX_FOREST_GATE_TEACHER_IN_WALKWAY
-	pokemon_event  9,  4, HERACROSS, -1, -1, PAL_NPC_BLUE, Route34IlexForestGateButterfreeText, -1
+    object_event  8,  4, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, EggEnthusiastGrannyScript, -1
+	pokemon_event  9,  4, MILTANK, -1, -1, PAL_NPC_BLUE, Route34IlexForestGateButterfreeText, -1
 	object_event  3,  4, SPRITE_PICNICKER, SPRITEMOVEDATA_WALK_UP_DOWN, 1, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route34IlexForestGateLassText, EVENT_ROUTE_34_ILEX_FOREST_GATE_LASS
 
 	object_const_def
-	const ROUTE34ILEXFORESTGATE_TEACHER1
-	const ROUTE34ILEXFORESTGATE_TEACHER2
 
-UnknownScript_0x62d2d:
-	checkevent EVENT_FOREST_IS_RESTLESS
-	iffalse UnknownScript_0x62d38
-	disappear ROUTE34ILEXFORESTGATE_TEACHER1
-	appear ROUTE34ILEXFORESTGATE_TEACHER2
-	endcallback
 
-UnknownScript_0x62d38:
-	disappear ROUTE34ILEXFORESTGATE_TEACHER2
-	appear ROUTE34ILEXFORESTGATE_TEACHER1
-	endcallback
+EggEnthusiastGrannyScript:
+    faceplayer
+    opentext
+    checkevent EVENT_GOT_LUCKY_EGG_FROM_GRANNY
+    iftrue .AlreadyGotEgg
+    writetext EggGrannyIntroText
+    promptbutton
+    writetext EggGrannyEggCountText
+    promptbutton
+    writetext EggGrannyStrengthText
+    promptbutton
+    writetext EggGrannyOfferEggText
+    promptbutton
+    verbosegiveitem LUCKY_EGG
+    iffalse .BagFull
+    setevent EVENT_GOT_LUCKY_EGG_FROM_GRANNY
+    writetext EggGrannyAfterText
+    waitbutton
+    closetext
+    end
 
-Route34IlexForestGateCelebiEvent:
-	checkevent EVENT_FOREST_IS_RESTLESS
-	iffalse UnknownScript_0x62d62
-	showemote EMOTE_SHOCK, ROUTE34ILEXFORESTGATE_TEACHER2, 20
-	turnobject ROUTE34ILEXFORESTGATE_TEACHER2, LEFT
-	turnobject PLAYER, RIGHT
-	follow PLAYER, ROUTE34ILEXFORESTGATE_TEACHER2
-	applymovement PLAYER, Route34IlexForestGateTeacherBlocksPlayerMovement
-	stopfollow
-	turnobject PLAYER, DOWN
-	showtext Route34IlexForestGateTeacher_ForestIsRestless
-	applymovement ROUTE34ILEXFORESTGATE_TEACHER2, Route34IlexForestGateTeacherReturnsMovement
-UnknownScript_0x62d62:
-	end
+.AlreadyGotEgg
+    writetext EggGrannyRemindText
+    waitbutton
+    closetext
+    end
 
-Route34IlexForestGateTeacherScript:
-	checkevent EVENT_FOREST_IS_RESTLESS
-	iftrue_jumptextfaceplayer Route34IlexForestGateTeacher_ForestIsRestless
-	checkevent EVENT_GOT_TM54_FALSE_SWIPE
-	iftrue_jumptextfaceplayer Route34IlexForestGateTeacher_GotSweetScent
-	faceplayer
-	opentext
-	writetext Route34IlexForestGateTeacherText
-	promptbutton
-	verbosegivetmhm TM_FALSE_SWIPE
-	setevent EVENT_GOT_TM54_FALSE_SWIPE
-	jumpthisopenedtext
+.BagFull
+    writetext EggGrannyBagFullText
+    waitbutton
+    closetext
+    end
 
-Route34IlexForestGateTeacher_GotSweetScent:
-	text "It's False Swipe."
+EggGrannyIntroText:
+    text "Oh, dearie! Let me"
+    line "tell you about the"
+    cont "wonders of eggs!"
+    done
 
-	para "Teach it to a"
-	line "special #mon."
-	done
+EggGrannyEggCountText:
+    text "I eat 12 eggs"
+    line "every morning!"
+    para "Sunny side up,"
+    line "scrambled, boiled"
+    cont "you name it!"
+    done
 
-Route34IlexForestGateTeacherBlocksPlayerMovement:
-	step_up
-	step_up
-	step_end
+EggGrannyStrengthText:
+    text "And that's how I"
+    line "can still crush a"
+    cont "Pinap Berry with"
+    cont "my bare hands!"
+    para "I churn butter by"
+    line "shaking a whole"
+    cont "Miltank!"
+    done
 
-Route34IlexForestGateTeacherReturnsMovement:
-	step_down
-	step_right
-	step_end
+EggGrannyOfferEggText:
+    text "Oh, you must try"
+    line "my egg diet! Here,"
+    cont "take this egg."
+    para "It's special! It'll"
+    line "help your #mon"
+    cont "grow big and"
+    cont "strong!"
+    done
 
-Route34IlexForestGateTeacherText:
-	text "Oh, honey. You're"
-	line "making a #dex?"
+EggGrannyAfterText:
+    text "That Lucky Egg"
+    line "will help your"
+    cont "#mon gain"
+    cont "experience faster!"
+    para "Soon, they'll be"
+    line "strong enough to"
+    cont "shake Miltank too!"
+    done
 
-	para "It must be hard to"
-	line "catch all those"
-	cont "#mon."
+EggGrannyRemindText:
+    text "How are your"
+    line "#mon, dearie?"
+    para "Remember, twelve"
+    line "eggs a day keeps"
+    cont "the doctor away!"
+    para "And the neighbors."
+    line "And wild #mon."
+    cont "And..."
+    done
 
-	para "Here, take this"
-	line "TM."
-	done
-
-Route34IlexForestGateTeacher_ForestIsRestless:
-	text "Something's wrong"
-	line "in Ilex Forest…"
-
-	para "You should stay"
-	line "away right now."
-	done
+EggGrannyBagFullText:
+    text "Oh my, your bag is"
+    line "full! You must be"
+    cont "carrying too many"
+    cont "eggs already!"
+    para "Come back when you"
+    line "have room for this"
+    cont "Lucky Egg!"
+    done
 
 Route34IlexForestGateButterfreeText:
-	text "Heracross: Cross!"
+	text "This Miltank is"
+	line "wobbly, like it"
+	cont "is feeling dizzy."
 	done
 
 Route34IlexForestGateLassText:

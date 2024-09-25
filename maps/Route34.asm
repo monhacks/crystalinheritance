@@ -22,19 +22,19 @@ Route34_MapScriptHeader:
 	bg_event 17, 19, BGEVENT_ITEM + SUPER_POTION, EVENT_ROUTE_34_HIDDEN_SUPER_POTION
 
 	def_object_events
-	object_event 11, 20, SPRITE_RICH_BOY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route34RichBoyIrvingScript, -1
+	object_event 11, 20, SPRITE_RICH_BOY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route34RichBoyIrvingScript, -1 ; done
 	object_event 10, 15, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DayCareManScript_Outside, EVENT_DAYCARE_MAN_ON_ROUTE_34
-	object_event 13,  7, SPRITE_CAMPER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 5, TrainerCamperTodd1, -1
+	object_event 13,  7, SPRITE_CAMPER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 5, GenericTrainerCamperTodd1, -1
 	object_event 15, 32, SPRITE_BREEDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBreederJulie, -1
-	object_event 10, 26, SPRITE_PICNICKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerPicnickerGina1, -1
-	object_event  6, 10, SPRITE_OFFICER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OfficerfMaraScript, -1
+	object_event 10, 26, SPRITE_PICNICKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerPicnickerGina1, -1
+	object_event  8, 18, SPRITE_OFFICER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericOfficerfMaraScript, -1
 	object_event 18, 28, SPRITE_POKEFAN_M, SPRITEMOVEDATA_SPINCOUNTERCLOCKWISE, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerPokefanmBrandon, -1
-	object_event 14, 18, SPRITE_DAYCARE_MON_1, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DayCareMon1Script, EVENT_DAYCARE_MON_1
-	object_event 17, 19, SPRITE_DAYCARE_MON_2, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DayCareMon2Script, EVENT_DAYCARE_MON_2
 	object_event 11, 48, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 5, TrainerCooltrainerfIrene, -1
 	object_event  3, 48, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerCooltrainerfJenn, -1
 	object_event  6, 51, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerCooltrainerfKate, -1
 	itemball_event  7, 30, NUGGET, 1, EVENT_ROUTE_34_NUGGET
+	object_event 14, 18, SPRITE_DAYCARE_MON_1, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DayCareMon1Script, EVENT_DAYCARE_MON_1
+	object_event 17, 19, SPRITE_DAYCARE_MON_2, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DayCareMon2Script, EVENT_DAYCARE_MON_2
 
 	object_const_def
 	const ROUTE34_RICH_BOY
@@ -107,264 +107,10 @@ DayCareMon2Script:
 	special Special_DayCareMon2
 	endtext
 
-TrainerCamperTodd1:
-	trainer CAMPER, TODD1, EVENT_BEAT_CAMPER_TODD, CamperTodd1SeenText, CamperTodd1BeatenText, 0, .Script
-
-.Script:
-	loadvar VAR_CALLERID, PHONE_CAMPER_TODD
-	opentext
-	checkflag ENGINE_TODD_READY_FOR_REMATCH
-	iftrue .Rematch
-	checkflag ENGINE_GOLDENROD_DEPT_STORE_SALE_IS_ON
-	iftrue_jumpopenedtext CamperToddSaleText
-	checkcellnum PHONE_CAMPER_TODD
-	iftrue .NumberAccepted
-	checkevent EVENT_TODD_ASKED_FOR_PHONE_NUMBER
-	iftrue .AskAgain
-	writetext CamperTodd1AfterText
-	promptbutton
-	setevent EVENT_TODD_ASKED_FOR_PHONE_NUMBER
-	callstd asknumber1m
-	sjump .FinishAsk
-
-.AskAgain:
-	callstd asknumber2m
-.FinishAsk:
-	askforphonenumber PHONE_CAMPER_TODD
-	ifequal $1, .PhoneFull
-	ifequal $2, .NumberDeclined
-	gettrainername CAMPER, TODD1, $0
-	callstd registerednumberm
-	jumpstd numberacceptedm
-
-.Rematch:
-	callstd rematchm
-	winlosstext CamperTodd1BeatenText, 0
-	readmem wToddFightCount
-	ifequal 4, .Fight4
-	ifequal 3, .Fight3
-	ifequal 2, .Fight2
-	ifequal 1, .Fight1
-	ifequal 0, .LoadFight0
-.Fight4:
-	checkevent EVENT_RESTORED_POWER_TO_KANTO
-	iftrue .LoadFight4
-.Fight3:
-	checkevent EVENT_BEAT_ELITE_FOUR
-	iftrue .LoadFight3
-.Fight2:
-	checkflag ENGINE_FLYPOINT_BLACKTHORN
-	iftrue .LoadFight2
-.Fight1:
-	checkflag ENGINE_FLYPOINT_CIANWOOD
-	iftrue .LoadFight1
-.LoadFight0:
-	loadtrainer CAMPER, TODD1
-	startbattle
-	reloadmapafterbattle
-	loadmem wToddFightCount, 1
-	clearflag ENGINE_TODD_READY_FOR_REMATCH
-	end
-
-.LoadFight1:
-	loadtrainer CAMPER, TODD2
-	startbattle
-	reloadmapafterbattle
-	loadmem wToddFightCount, 2
-	clearflag ENGINE_TODD_READY_FOR_REMATCH
-	end
-
-.LoadFight2:
-	loadtrainer CAMPER, TODD3
-	startbattle
-	reloadmapafterbattle
-	loadmem wToddFightCount, 3
-	clearflag ENGINE_TODD_READY_FOR_REMATCH
-	end
-
-.LoadFight3:
-	loadtrainer CAMPER, TODD4
-	startbattle
-	reloadmapafterbattle
-	loadmem wToddFightCount, 4
-	clearflag ENGINE_TODD_READY_FOR_REMATCH
-	end
-
-.LoadFight4:
-	loadtrainer CAMPER, TODD5
-	startbattle
-	reloadmapafterbattle
-	clearflag ENGINE_TODD_READY_FOR_REMATCH
-	end
-
-.NumberAccepted:
-	jumpstd numberacceptedm
-
-.NumberDeclined:
-	jumpstd numberdeclinedm
-
-.PhoneFull:
-	jumpstd phonefullm
-
-TrainerPicnickerGina1:
-	trainer PICNICKER, GINA1, EVENT_BEAT_PICNICKER_GINA, PicnickerGina1SeenText, PicnickerGina1BeatenText, 0, .Script
-
-.Script:
-	loadvar VAR_CALLERID, PHONE_PICNICKER_GINA
-	opentext
-	checkflag ENGINE_GINA_READY_FOR_REMATCH
-	iftrue .Rematch
-	checkflag ENGINE_GINA_HAS_LEAF_STONE
-	iftrue .LeafStone
-	checkcellnum PHONE_PICNICKER_GINA
-	iftrue .NumberAccepted
-	checkevent EVENT_GINA_ASKED_FOR_PHONE_NUMBER
-	iftrue .AskAgain
-	writetext PicnickerGina1AfterText
-	promptbutton
-	setevent EVENT_GINA_ASKED_FOR_PHONE_NUMBER
-	callstd asknumber1f
-	sjump .FinishAsk
-
-.AskAgain:
-	callstd asknumber2f
-.FinishAsk:
-	askforphonenumber PHONE_PICNICKER_GINA
-	ifequal $1, .PhoneFull
-	ifequal $2, .NumberDeclined
-	gettrainername PICNICKER, GINA1, $0
-	callstd registerednumberf
-	jumpstd numberacceptedf
-
-.Rematch:
-	callstd rematchf
-	winlosstext PicnickerGina1BeatenText, 0
-	readmem wGinaFightCount
-	ifequal 4, .Fight4
-	ifequal 3, .Fight3
-	ifequal 2, .Fight2
-	ifequal 1, .Fight1
-	ifequal 0, .LoadFight0
-.Fight4:
-	checkevent EVENT_BEAT_ELITE_FOUR
-	iftrue .LoadFight4
-.Fight3:
-	checkevent EVENT_BEAT_ELITE_FOUR
-	iftrue .LoadFight3
-.Fight2:
-	checkevent EVENT_BEAT_ELITE_FOUR
-	iftrue .LoadFight2
-.Fight1:
-	checkflag ENGINE_FLYPOINT_MAHOGANY
-	iftrue .LoadFight1
-.LoadFight0:
-	loadtrainer PICNICKER, GINA1
-	startbattle
-	reloadmapafterbattle
-	loadmem wGinaFightCount, 1
-	clearflag ENGINE_GINA_READY_FOR_REMATCH
-	end
-
-.LoadFight1:
-	loadtrainer PICNICKER, GINA2
-	startbattle
-	reloadmapafterbattle
-	loadmem wGinaFightCount, 2
-	clearflag ENGINE_GINA_READY_FOR_REMATCH
-	end
-
-.LoadFight2:
-	loadtrainer PICNICKER, GINA3
-	startbattle
-	reloadmapafterbattle
-	loadmem wGinaFightCount, 3
-	clearflag ENGINE_GINA_READY_FOR_REMATCH
-	end
-
-.LoadFight3:
-	loadtrainer PICNICKER, GINA4
-	startbattle
-	reloadmapafterbattle
-	loadmem wGinaFightCount, 4
-	clearflag ENGINE_GINA_READY_FOR_REMATCH
-	end
-
-.LoadFight4:
-	loadtrainer PICNICKER, GINA5
-	startbattle
-	reloadmapafterbattle
-	clearflag ENGINE_GINA_READY_FOR_REMATCH
-	end
-
-.LeafStone:
-	callstd giftf
-	verbosegiveitem LEAF_STONE
-	iffalse .BagFull
-	clearflag ENGINE_GINA_HAS_LEAF_STONE
-	setevent EVENT_GINA_GAVE_LEAF_STONE
-	jumpstd numberacceptedf
-
-.BagFull:
-	jumpstd packfullf
-
-.NumberAccepted:
-	jumpstd numberacceptedf
-
-.NumberDeclined:
-	jumpstd numberdeclinedf
-
-.PhoneFull:
-	jumpstd phonefullf
-
-OfficerfMaraScript:
-	checktime 1 << NITE
-	iffalse_jumptextfaceplayer OfficerfMaraDaytimeText
-	checkevent EVENT_BEAT_OFFICERF_MARA
-	iftrue_jumptextfaceplayer OfficerfMaraAfterText
-	faceplayer
-	opentext
-	special SaveMusic
-	playmusic MUSIC_OFFICER_ENCOUNTER
-	writetext OfficerfMaraSeenText
-	waitbutton
-	closetext
-	winlosstext OfficerfMaraWinText, 0
-	loadtrainer OFFICERF, MARA
-	startbattle
-	reloadmapafterbattle
-	setevent EVENT_BEAT_OFFICERF_MARA
-	endtext
-
-GenericTrainerBreederJulie:
-	generictrainer BREEDER, JULIE, EVENT_BEAT_BREEDER_JULIE, BreederJulieSeenText, BreederJulieBeatenText
-
-	text "One of my #mon"
-	line "has an Adamant"
-
-	para "nature. Another"
-	line "has a Lax nature."
-
-	para "It seems to make"
-	line "a difference in"
-	cont "battle."
-	done
-
 Route34RichBoyIrvingScript:
 	checkevent EVENT_GOT_BIG_NUGGET_FROM_ROUTE_34_LEADER
 	iftrue_jumptextfaceplayer .AfterText2
 	faceplayer
-	checkevent EVENT_BEAT_RICH_BOY_IRVING
-	iftrue .Beaten
-	checkevent EVENT_BEAT_CAMPER_TODD
-	iffalse_jumptext .IntroText
-	checkevent EVENT_BEAT_PICNICKER_GINA
-	iffalse_jumptext .IntroText
-	checkevent EVENT_BEAT_OFFICERF_MARA
-	iffalse_jumptext .IntroText
-	checkevent EVENT_BEAT_POKEFANM_BRANDON
-	iffalse_jumptext .IntroText
-	checkevent EVENT_BEAT_BREEDER_JULIE
-	iffalse_jumptext .IntroText
 	opentext
 	writetext .QuestionText
 	yesorno
@@ -413,9 +159,16 @@ Route34RichBoyIrvingScript:
 	done
 
 .QuestionText:
-	text "You really did it!"
-	line "Well then,"
-	cont "noblesse oblige."
+	text "I don't need to"
+	line "gamble for Coins."
+
+	para "I'm rich, so I"
+	line "bought my #-"
+	cont "mon with cash!"
+
+	para "They're strong"
+	line "enough that we"
+	cont "beat Azalea's Gym!"
 
 	para "Are you ready to"
 	line "fight my top-shelf"
@@ -449,17 +202,6 @@ Route34RichBoyIrvingScript:
 	para "or keep it as a"
 	line "memento of our"
 	cont "battle."
-	done
-
-GenericTrainerPokefanmBrandon:
-	generictrainer POKEFANM, BRANDON, EVENT_BEAT_POKEFANM_BRANDON, PokefanmBrandonSeenText, PokefanmBrandonBeatenText
-
-	text "My #mon knew"
-	line "moves I didn't"
-	cont "know it had."
-
-	para "That confounded me"
-	line "to no end!"
 	done
 
 TrainerCooltrainerfIrene:
@@ -521,102 +263,6 @@ Route34MovementData_DayCareManWalksBackInside_WalkAroundPlayer:
 	slow_step_right
 	step_end
 
-BreederJulieSeenText:
-	text "This is where I"
-	line "train my baby"
-	cont "#mon!"
-	done
-
-BreederJulieBeatenText:
-	text "Beaten by a"
-	line "passing stranger!"
-	done
-
-CamperTodd1SeenText:
-	text "I'm confident in"
-	line "my ability to"
-	cont "raise #mon."
-
-	para "Want to see?"
-	done
-
-CamperTodd1BeatenText:
-	text "Did I screw up my"
-	line "training?"
-	done
-
-CamperTodd1AfterText:
-	text "Maybe I should"
-	line "take one to a Day-"
-
-	para "Care. Or maybe use"
-	line "some items…"
-	done
-
-CamperToddSaleText:
-	text "Shopping under the"
-	line "sky!"
-
-	para "It feels so nice"
-	line "up on a rooftop."
-	done
-
-PicnickerGina1SeenText:
-	text "Are you a trainer?"
-
-	para "Let's have a"
-	line "practice battle."
-	done
-
-PicnickerGina1BeatenText:
-	text "Oh, no! I just"
-	line "can't win…"
-	done
-
-PicnickerGina1AfterText:
-	text "You're too strong"
-	line "to be a practice"
-	cont "partner."
-	done
-
-OfficerfMaraSeenText:
-	text "Who goes there?"
-	line "What are you up"
-	cont "to?"
-	done
-
-OfficerfMaraWinText:
-	text "You're a tough"
-	line "little kid."
-	done
-
-OfficerfMaraAfterText:
-	text "Yes, I see nothing"
-	line "wrong today. You"
-
-	para "be good and stay"
-	line "out of trouble."
-	done
-
-OfficerfMaraDaytimeText:
-	text "I'm on patrol for"
-	line "suspicious indi-"
-	cont "viduals."
-	done
-
-PokefanmBrandonSeenText:
-	text "I just got my"
-	line "#mon back from"
-	cont "Day-Care."
-
-	para "Let's see how much"
-	line "stronger it got!"
-	done
-
-PokefanmBrandonBeatenText:
-	text "Why does it end"
-	line "this way?"
-	done
 
 CooltrainerfIreneSeenText:
 	text "Irene: Kyaaah!"
@@ -678,9 +324,6 @@ Route34SignText:
 
 	para "Goldenrod City -"
 	line "Azalea Town"
-
-	para "Ilex Forest"
-	line "Somewhere Between"
 	done
 
 Route34TrainerTipsText:
@@ -701,3 +344,109 @@ DayCareSignText:
 	para "Let Us Raise Your"
 	line "#mon For You!"
 	done
+
+
+GenericTrainerCamperTodd1:
+    generictrainer CAMPER, TODD1, EVENT_BEAT_CAMPER_TODD, CamperTodd1SeenText, CamperTodd1BeatenText
+
+    text "Maybe I should"
+    line "camp closer to"
+    cont "Goldenrod. It's"
+    cont "noisy, but safer."
+    done
+
+CamperTodd1SeenText:
+    text "I came to enjoy"
+    line "nature, but all I"
+    cont "hear is loggers!"
+    done
+
+CamperTodd1BeatenText:
+    text "Defeated amidst"
+    line "all this noise!"
+    done
+
+GenericTrainerBreederJulie:
+    generictrainer BREEDER, JULIE, EVENT_BEAT_BREEDER_JULIE, BreederJulieSeenText, BreederJulieBeatenText
+
+    text "Even if the"
+	line "Ilex Forest"
+	cont "is cleared, I"
+	cont "still have hope"
+	cont "for the future."
+    done
+
+BreederJulieSeenText:
+    text "How are you"
+	line "raising your"
+	cont "#mon?"
+    done
+
+BreederJulieBeatenText:
+    text "My #mon seem"
+    line "stressed..."
+    done
+
+GenericTrainerPicnickerErin:
+    generictrainer PICNICKER, ERIN1, EVENT_BEAT_PICNICKER_ERIN, PicnickerGina1SeenText, PicnickerGina1BeatenText
+
+    text "I guess I'll go"
+    line "shopping instead."
+    cont "So much for"
+    cont "nature..."
+    done
+
+PicnickerGina1SeenText:
+    text "I wanted a nice"
+	line "picnic in the"
+	cont "forest."
+	
+	para "I'll have to ba-"
+	line "ttle you instead!"
+    done
+
+PicnickerGina1BeatenText:
+    text "That was more"
+    line "stressful than"
+    cont "relaxing!"
+    done
+
+GenericOfficerfMaraScript:
+    generictrainer OFFICERF, MARA, EVENT_BEAT_OFFICERF_MARA, OfficerfMaraSeenText, OfficerfMaraBeatenText
+
+    text "Just forget what"
+    line "you saw here,"
+    cont "okay? Go enjoy"
+    cont "the city!"
+    done
+
+OfficerfMaraSeenText:
+    text "Hey! Were you"
+	line "poking around in"
+	cont "the forest?"
+    done
+
+OfficerfMaraBeatenText:
+    text "Just forget what"
+    line "you saw, OK?"
+    done
+
+GenericTrainerPokefanmBrandon:
+    generictrainer POKEFANM, BRANDON, EVENT_BEAT_POKEFANM_BRANDON, PokefanmBrandonSeenText, PokefanmBrandonBeatenText
+
+    text "Something fishy is"
+    line "going on between"
+    cont "here and the"
+    cont "Azalea..."
+    done
+
+PokefanmBrandonSeenText:
+    text "Whitney's show is"
+    line "odd, but these"
+    cont "forest noises..."
+    done
+
+PokefanmBrandonBeatenText:
+    text "Suspicious indeed!"
+    done
+	
