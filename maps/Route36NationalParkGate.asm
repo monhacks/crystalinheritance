@@ -26,12 +26,13 @@ Route36NationalParkGate_MapScriptHeader:
 	object_event  2,  6, SPRITE_ACE_TRAINER_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BugCatchingContestant3BScript, EVENT_BUG_CATCHING_CONTESTANT_3B
 	object_event  6,  5, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BugCatchingContestant4BScript, EVENT_BUG_CATCHING_CONTESTANT_4B
 	object_event  2,  7, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BugCatchingContestant5BScript, EVENT_BUG_CATCHING_CONTESTANT_5B
-	object_event  5,  6, SPRITE_CAMPER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BugCatchingContestant6BScript, EVENT_BUG_CATCHING_CONTESTANT_6B
+	object_event  5,  6, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BugCatchingContestant6BScript, EVENT_BUG_CATCHING_CONTESTANT_6B
 	object_event  3,  6, SPRITE_PICNICKER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BugCatchingContestant7BScript, EVENT_BUG_CATCHING_CONTESTANT_7B
 	object_event  4,  7, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BugCatchingContestant8BScript, EVENT_BUG_CATCHING_CONTESTANT_8B
 	object_event  6,  7, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BugCatchingContestant9BScript, EVENT_BUG_CATCHING_CONTESTANT_9B
-	object_event  6,  6, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BugCatchingContestant10BScript, EVENT_BUG_CATCHING_CONTESTANT_10B
+	object_event  6,  6, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BugCatchingContestant10BScript, EVENT_BUG_CATCHING_CONTESTANT_10B
 	object_event  3,  2, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route36NationalParkGateOfficerScript, EVENT_ROUTE_36_NATIONAL_PARK_GATE_OFFICER_NOT_CONTEST_DAY
+	object_event  7,  2, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ProfOaksAide2Script, -1
 
 	object_const_def
 	const ROUTE36NATIONALPARKGATE_OFFICER1
@@ -474,3 +475,94 @@ Route36NationalParkGateOfficer1HeresThePrizeText:
 	line "we were holding"
 	cont "for you."
 	done
+
+ProfOaksAide2Script:
+    faceplayer
+    opentext
+    checkevent EVENT_GOT_ITEMFINDER_FROM_PROF_OAKS_AIDE
+    iftrue .Explain
+    writetext ProfOaksAide2HiText
+    waitbutton
+    countseencaught
+    readvar VAR_DEXCAUGHT
+    ifgreater 24, .HereYouGo ; greater than 24, which means 25 or more
+.UhOh
+    jumpopenedtext ProfOaksAide2UhOhText
+.HereYouGo
+    writetext ProfOaksAide2HereYouGoText
+    waitbutton
+    givekeyitem ITEMFINDER
+    iffalse .NoRoom
+    writetext ProfOaksAide2ItemFinderText
+    playsound SFX_ITEM
+    waitsfx
+    itemnotify
+    setevent EVENT_GOT_ITEMFINDER_FROM_PROF_OAKS_AIDE
+.Explain
+    jumpopenedtext ProfOaksAide2ExplainText
+.NoRoom
+    jumpopenedtext ProfOaksAide2NoRoomText
+
+ProfOaksAide2HiText:
+    text "Hi! I'm one of"
+    line "PROF.OAK's AIDES."
+
+    para "If you've caught"
+    line "25 or more kinds"
+    cont "of #MON, I'm"
+    cont "supposed to give"
+    cont "you a reward."
+    done
+
+ProfOaksAide2UhOhText:
+    text "Let's see…"
+    line "Uh-oh! You've only"
+
+    para "caught "
+    text_decimal hScriptVar, 1, 3
+    text " kinds"
+    line "of #MON."
+
+    para "Come back when"
+    line "you've caught 25"
+    cont "or more!"
+    done
+
+ProfOaksAide2HereYouGoText:
+    text "Let's see…"
+    line "Great job! You've"
+
+    para "caught "
+    text_decimal hScriptVar, 1, 3
+    text " kinds"
+    line "of #MON."
+
+    para "Congratulations!"
+    line "Here you go!"
+    done
+
+ProfOaksAide2ItemFinderText:
+    text "<PLAYER> received"
+    line "ITEMFINDER!"
+    done
+
+ProfOaksAide2ExplainText:
+    text "ITEMFINDER will"
+    line "help you locate"
+    cont "hidden items."
+
+    para "Just use it, and"
+    line "it'll show you if"
+    cont "any items are"
+    cont "hidden nearby!"
+    done
+
+ProfOaksAide2NoRoomText:
+    text "Oh! I see you"
+    line "don't have any"
+    cont "room for this."
+
+    para "Please make room"
+    line "in your PACK and"
+    cont "come back."
+    done

@@ -2,26 +2,24 @@ WarehouseEntrance_MapScriptHeader:
 	def_scene_scripts
 
 	def_callbacks
-	callback MAPCALLBACK_NEWMAP, WarehouseEntranceResetSwitches
+	callback MAPCALLBACK_NEWMAP, WarehouseEntranceResetSwitches ; TRY TO KEEP THIS... 
 	callback MAPCALLBACK_TILES, WarehouseEntranceCheckBasementKey
 	callback MAPCALLBACK_OBJECTS, WarehouseEntranceCheckDayOfWeek
 
 	def_warp_events
 	warp_event  1,  2, UNDERGROUND_PATH_SWITCH_ROOM_ENTRANCES, 7
 	warp_event  1, 34, UNDERGROUND_PATH_SWITCH_ROOM_ENTRANCES, 4
-	warp_event 16,  6, WAREHOUSE_ENTRANCE, 4
-	warp_event 13, 35, WAREHOUSE_ENTRANCE, 3
-	warp_event 14, 35, WAREHOUSE_ENTRANCE, 3
-	warp_event 14, 31, UNDERGROUND_PATH_SWITCH_ROOM_ENTRANCES, 1
+	warp_event 16,  0, UNDERGROUND_RADIO_TOWER, 1
+
 
 	def_coord_events
 
 	def_bg_events
-	bg_event 16,  6, BGEVENT_READ, BasementDoorScript
-	bg_event 17,  6, BGEVENT_JUMPTEXT, GoldenrodUndergroundNoEntryText
-	bg_event  4, 13, BGEVENT_ITEM + PARALYZEHEAL, EVENT_WAREHOUSE_ENTRANCE_HIDDEN_PARALYZEHEAL
-	bg_event  2, 18, BGEVENT_ITEM + SUPER_POTION, EVENT_WAREHOUSE_ENTRANCE_HIDDEN_SUPER_POTION
-	bg_event 15,  8, BGEVENT_ITEM + ANTIDOTE, EVENT_WAREHOUSE_ENTRANCE_HIDDEN_ANTIDOTE
+	bg_event 16,  0, BGEVENT_READ, BasementDoorScript ; should be OK
+	bg_event 17,  6, BGEVENT_JUMPTEXT, GoldenrodUndergroundNoEntryText ; ok
+	bg_event  4, 13, BGEVENT_ITEM + PARALYZEHEAL, EVENT_WAREHOUSE_ENTRANCE_HIDDEN_PARALYZEHEAL ; ok 
+	bg_event  2, 18, BGEVENT_ITEM + SUPER_POTION, EVENT_WAREHOUSE_ENTRANCE_HIDDEN_SUPER_POTION ; ok 
+	bg_event 15,  8, BGEVENT_ITEM + ANTIDOTE, EVENT_WAREHOUSE_ENTRANCE_HIDDEN_ANTIDOTE ; ok 
 
 	def_object_events
 	object_event  5, 11, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BargainMerchantScript, EVENT_WAREHOUSE_ENTRANCE_GRAMPS
@@ -41,7 +39,7 @@ WarehouseEntrance_MapScriptHeader:
 	const WAREHOUSEENTRANCE_SUPER_NERD6
 	const WAREHOUSEENTRANCE_GRANNY
 
-WarehouseEntranceResetSwitches:
+WarehouseEntranceResetSwitches: ; TRY TO KEEP 
 	clearevent EVENT_SWITCH_1
 	clearevent EVENT_SWITCH_2
 	clearevent EVENT_SWITCH_3
@@ -135,19 +133,22 @@ WarehouseEntranceCheckDayOfWeek:
 GenericTrainerSupernerdEric:
 	generictrainer SUPER_NERD, ERIC, EVENT_BEAT_SUPER_NERD_ERIC, SupernerdEricSeenText, SupernerdEricBeatenText
 
-	text "I guess I have to"
-	line "do things fair and"
-	cont "square…"
+	text "I heard that"
+	line "you can get 20"
+	cont "to 1 odds of"
+	cont "Whitney's Miltank"
+	cont "hitting all five"
+	cont "rollouts in her"
+	cont "next battle."
 	done
 
 GenericTrainerSupernerdTeru:
 	generictrainer SUPER_NERD, TERU, EVENT_BEAT_SUPER_NERD_TERU, SupernerdTeruSeenText, SupernerdTeruBeatenText
 
-	text "I know my #mon"
-	line "type alignments."
-
-	para "But I only use one"
-	line "type of #mon."
+	text "New evolution"
+	line "methods are"
+	cont "discovered every"
+	cont "day!"
 	done
 
 GenericTrainerPokemaniacIssac:
@@ -163,16 +164,9 @@ GenericTrainerPokemaniacIssac:
 GenericTrainerPokemaniacDonald:
 	generictrainer POKEMANIAC, DONALD, EVENT_BEAT_POKEMANIAC_DONALD, PokemaniacDonaldSeenText, PokemaniacDonaldBeatenText
 
-	text "Are you making a"
-	line "#dex? Here's a"
-	cont "hot tip."
-
-	para "The Hiker on Route"
-	line "33, Anthony, is a"
-	cont "good guy."
-
-	para "He'll phone you if"
-	line "he sees any rare"
+	text "The museum says"
+	line "this tunnel was"
+	cont "carved by"
 	cont "#mon."
 	done
 
@@ -383,13 +377,11 @@ BasementDoorScript::
 	endtext
 
 SupernerdEricSeenText:
-	text "I got booted out"
-	line "of the Game Cor-"
-	cont "ner."
-
-	para "I was trying to"
-	line "cheat using my"
-	cont "#mon…"
+	text "I'm almost out"
+	line "of cash."
+	
+	para "Until I beat"
+	line "you!"
 	done
 
 SupernerdEricBeatenText:
@@ -397,19 +389,15 @@ SupernerdEricBeatenText:
 	done
 
 SupernerdTeruSeenText:
-	text "Do you consider"
-	line "type alignments in"
-	cont "battle?"
-
-	para "If you know your"
-	line "type advantages,"
-
-	para "you'll do better"
-	line "in battle."
+	text "Have you seen"
+	line "these #mon"
+	cont "from Sinnoh?"
 	done
 
 SupernerdTeruBeatenText:
-	text "Ow, ow, ow!"
+	text "I should have"
+	line "gotten stronger"
+	cont "#mon..."
 	done
 
 PokemaniacIssacSeenText:
@@ -425,16 +413,15 @@ PokemaniacIssacBeatenText:
 	done
 
 PokemaniacDonaldSeenText:
-	text "I think you have"
-	line "some rare #mon"
-	cont "with you."
-
-	para "Let me see them!"
+	text "Do you think"
+	line "this tunnel has"
+	cont "any connnection"
+	cont "to Diglett's?"
 	done
 
 PokemaniacDonaldBeatenText:
-	text "Gaah! I lost!"
-	line "That makes me mad!"
+	text "Being underground"
+	line "is so cool."
 	done
 
 CosplayerClaraSeenText:
@@ -583,6 +570,6 @@ GoldenrodUndergroundWeAreNotOpenTodayText:
 	done
 
 GoldenrodUndergroundNoEntryText:
-	text "NO ENTRY BEYOND"
-	line "THIS POINT"
+	text "DANGER:"
+	line "No Entry"
 	done

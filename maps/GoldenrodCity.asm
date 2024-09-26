@@ -229,14 +229,13 @@ GoldenrodCityYoungsterDayText:
 	done
 
 GoldenrodCityYoungster2Text:
-	text "E-he-he-he…"
-
-	para "I got in trouble"
-	line "for playing in the"
-
-	para "basement of the"
-	line "Dept.Store."
-	done
+    text "I tried to get my"
+    line "friends to read"
+    cont "that Anti-Silph"
+    cont "indie magazine,"
+    para "but they say it's"
+    line "too boring."
+    done
 
 GoldenrodCityLassText:
 	text "Whitney has lots"
@@ -246,7 +245,6 @@ GoldenrodCityLassText:
 	para "But sometimes"
 	line "she's out of her"
 	cont "depth."
-	done
 
 
 GoldenrodCityGrampsText:

@@ -811,11 +811,11 @@ TGRivalChallengeText:
 	cont "can do!"
 	done
 
-TGRivalLoseText: ;rival loses
+TGRivalLoseText:
 	text "Showed you."
 	done
 
-TGRivalWinText: ;rival won
+TGRivalWinText:
 	text "I'm only going"
 	line "to get stronger."
 	done

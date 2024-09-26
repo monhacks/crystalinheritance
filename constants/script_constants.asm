@@ -216,7 +216,7 @@ FIRST_BERRY_TREE EQU const_value
 	const FRUITTREE_VIOLET_CITY     ; 0c
 	const FRUITTREE_ROUTE_32_COAST  ; 0d
 	const FRUITTREE_ROUTE_33        ; 0e
-	const FRUITTREE_ROUTE_35        ; 0f
+	const FRUITTREE_ROUTE_35        ; 0f ; shore foam
 	const FRUITTREE_ROUTE_36        ; 10 ; WHT APRICORN
 	const FRUITTREE_ROUTE_38        ; 11
 	const FRUITTREE_ROUTE_39        ; 12

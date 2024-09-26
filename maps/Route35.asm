@@ -7,7 +7,7 @@ Route35_MapScriptHeader:
 	warp_event 13, 33, ROUTE_35_GOLDENROD_GATE, 1
 	warp_event 14, 33, ROUTE_35_GOLDENROD_GATE, 2
 	warp_event  7,  5, ROUTE_35_NATIONAL_PARK_GATE, 3
-	warp_event 14, 16, HIDDEN_TREE_GROTTO, 1
+
 
 	def_coord_events
 
@@ -15,8 +15,6 @@ Route35_MapScriptHeader:
 	bg_event  5,  7, BGEVENT_JUMPTEXT, Route35SignText
 	bg_event 15, 31, BGEVENT_JUMPTEXT, Route35SignText
 	bg_event  4, 11, BGEVENT_ITEM + NUGGET, EVENT_ROUTE_35_HIDDEN_NUGGET
-	bg_event 14, 15, BGEVENT_JUMPSTD, treegrotto, HIDDENGROTTO_ROUTE_35
-	bg_event 15, 15, BGEVENT_JUMPSTD, treegrotto, HIDDENGROTTO_ROUTE_35
 
 	def_object_events
 	object_event  8, 19, SPRITE_CAMPER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerCamperIvan, -1;
@@ -26,6 +24,8 @@ Route35_MapScriptHeader:
 	object_event 18, 29, SPRITE_BREEDER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBreederTheresa, -1
 	object_event  6, 10, SPRITE_FIREBREATHER, SPRITEMOVEDATA_SPINCOUNTERCLOCKWISE, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerFirebreatherWalt, -1
 	object_event  9, 10, SPRITE_JUGGLER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerJugglerIrwin, -1
+	fruittree_event  10, 25, FRUITTREE_ROUTE_35, SHORE_FOAM, PAL_NPC_BLUE
+	tmhmball_event 4, 50, TM_DRAIN_PUNCH, EVENT_GOT_TM_DRAIN_PUNCH
 
 GenericTrainerCamperIvan:
 	generictrainer CAMPER, IVAN, EVENT_BEAT_CAMPER_IVAN, CamperIvanSeenText, CamperIvanBeatenText

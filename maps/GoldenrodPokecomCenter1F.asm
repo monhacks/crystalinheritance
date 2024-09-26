@@ -1,5 +1,6 @@
 GoldenrodPokecomCenter1F_MapScriptHeader:
 	def_scene_scripts
+	scene_script GoldenrodPokecomCenter1FTrigger 	
 
 	def_callbacks
 
@@ -31,6 +32,7 @@ GoldenrodPokecomCenter1F_MapScriptHeader:
 	bg_event 24,  3, BGEVENT_ITEM + RARE_CANDY, EVENT_GOLDENROD_POKECOM_CENTER_1F_HIDDEN_RARE_CANDY
 
 	def_object_events
+	object_event  5, 12, SPRITE_LANNA, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1 -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, PokecomLannaScript, EVENT_TALKED_TO_LANNA_POKECOM
 	object_event  7,  7, SPRITE_BOWING_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodPokecenter1FNurseScript, -1
 	object_event  1,  9, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, MapNameNPC1Script, -1
 	object_event  9, 10, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, MapNameNPC2Script, -1
@@ -38,7 +40,24 @@ GoldenrodPokecomCenter1F_MapScriptHeader:
 	object_event 16,  8, SPRITE_LINK_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, WonderTradeReceptionistScript, -1
 
 	object_const_def
+	const_def POKECOM_LANNA
 
+
+GoldenrodPokecomCenter1FTrigger:
+	sdefer .PokecomLannaScript
+	end
+
+
+PokecomLannaScript:
+	showemote EMOTE_SHOCK, POKECOM_LANNA, 10
+	applymovement POKECOM_LANNA, PokecomLannaMovesToYou
+	opentext
+	writetext LannaIsABigFanText
+	waitbutton
+	closetext
+	giveitem BASEMENT_KEY
+	setscene $1
+	end
 
 GoldenrodPokecenter1FNurseScript:
 	setevent EVENT_WELCOMING_TO_POKECOM_CENTER
@@ -221,3 +240,54 @@ WonderTradeForGSBallPichuText2:
 	para "Please look after"
 	line "it carefully."
 	done
+
+PokecomLannaScript:
+	end
+
+LannaIsABigFanText:
+    text "Lanna: Excuse me,"
+    line "are you the one"
+    cont "who drove out the"
+    cont "Ilex Loggers?"
+	
+    para "... Don't answer"
+    line "that, actually."
+	
+	para "It's just nice to"
+	line "see someone who"
+	cont "isn't checking"
+	cont "their Radio for"
+	cont "Whitney's latest"
+	cont "show."
+
+    para "Allow me to"
+    line "introduce myself."
+
+    para "My name is Lanna."
+    line "I'm sort of an"
+    cont "organizer. I"
+    cont "think you might"
+	cont "fit in to my"
+	cont "group."
+
+    para "..."
+
+    para "I see. So you"
+    line "need to get to"
+    cont "Ecruteak City,"
+    cont "but your path is"
+    cont "blocked."
+	
+    para "Well, I might be"
+    line "able to help."
+
+    para "But you'll have"
+    line "to help me first."
+	
+    para "I'm planning an"
+    line "operation in the"
+    cont "Goldenrod"
+    cont "Underground."
+	
+    para "Meet me there."
+    done

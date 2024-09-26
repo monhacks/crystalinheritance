@@ -168,16 +168,16 @@ WhitneyGroup:
 
 	; WHITNEY
 	db "Whitney@"
-	db TRAINERTYPE_ITEM | TRAINERTYPE_EVS | TRAINERTYPE_PERSONALITY | TRAINERTYPE_MOVES
+	db TRAINERTYPE_ITEM | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
 	; party
-	db 19, CLEFAIRY, NO_ITEM, 48, ABILITY_1 | NAT_NEUTRAL, FEMALE
-		db METRONOME, DISARM_VOICE, DOUBLE_SLAP, ATTRACT
-	db 20, TEDDIURSA, NO_ITEM, 48, ABILITY_1 | NAT_NEUTRAL, FEMALE
-		db TACKLE, ATTRACT, LICK, FEINT_ATTACK
-	db 19, SNORLAX, NO_ITEM, 48, ABILITY_1 | NAT_NEUTRAL, FEMALE
-		db ATTRACT, METRONOME, DEFENSE_CURL, ROLLOUT
-	db 21, MILTANK, LUM_BERRY, 48, ABIL_MILTANK_SCRAPPY | NAT_NEUTRAL, FEMALE
-		db DEFENSE_CURL, STOMP, FRESH_SNACK, ROLLOUT
+	db 25, GIRAFARIG, FOCUS_SASH, "@"
+		db AGILITY, BATON_PASS, STOMP, ZEN_HEADBUTT
+	db 27, PORYGON2, SPELL_TAG, "SecondSex@"
+		db CONVERSION, SHADOW_BALL, NO_MOVE, NO_MOVE
+	db 28, AMBIPOM, LUM_BERRY, "@"
+		db LOW_KICK, NASTY_PLOT, SWIFT, BATON_PASS
+	db 30, MILTANK, LUM_BERRY, "UddrDefeat@"
+		db ROLLOUT, DEFENSE_CURL, FRESH_SNACK, BODY_SLAM
 	db -1 ; end
 
 ; ================
@@ -1093,15 +1093,15 @@ Rival1Group:
 	db "<RIVAL>@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_EVS | TRAINERTYPE_MOVES
 	; party
-	db 20, HAUNTER, NO_ITEM, 52
+	db 20, HAUNTER, NO_ITEM, 32
 		db LICK, CONFUSE_RAY, MEAN_LOOK, CURSE
-	db 18, MAGNEMITE, NO_ITEM, 52
+	db 18, MAGNEMITE, NO_ITEM, 32
 		db TACKLE, THUNDERSHOCK, SUPERSONIC, SONIC_BOOM
-	db 19, ABRA, NO_ITEM, 52
+	db 19, ABRA, NO_ITEM, 32
 		db SWIFT, CONFUSION, HEADBUTT, LOW_KICK
-	db 20, ZUBAT, NO_ITEM, 52
+	db 20, ZUBAT, NO_ITEM, 32
 		db LEECH_LIFE, SUPERSONIC, BITE, CONFUSE_RAY
-	db 22, BAYLEEF, ORAN_BERRY, 52
+	db 22, BAYLEEF, ORAN_BERRY, 32
 		db REFLECT, RAZOR_LEAF, POISONPOWDER, DISARM_VOICE
 	db -1 ; end
 
@@ -1111,33 +1111,33 @@ Rival1Group:
 	db "<RIVAL>@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_EVS | TRAINERTYPE_MOVES
 	; party
-	db 20, HAUNTER, NO_ITEM, 52
+	db 20, HAUNTER, NO_ITEM, 32
 		db LICK, CONFUSE_RAY, MEAN_LOOK, CURSE
-	db 18, MAGNEMITE, NO_ITEM, 52
+	db 18, MAGNEMITE, NO_ITEM, 32
 		db TACKLE, THUNDERSHOCK, SUPERSONIC, SONIC_BOOM
-	db 19, ABRA, NO_ITEM, 52
+	db 19, ABRA, NO_ITEM, 32
 		db SWIFT, CONFUSION, HEADBUTT, LOW_KICK
-	db 20, ZUBAT, NO_ITEM, 52
+	db 20, ZUBAT, NO_ITEM, 32
 		db LEECH_LIFE, SUPERSONIC, BITE, CONFUSE_RAY
-	db 22, QUILAVA, ORAN_BERRY, 52
+	db 22, QUILAVA, ORAN_BERRY, 32
 		db LEER, SMOKESCREEN, EMBER, QUICK_ATTACK
 	db -1 ; end
 
 ; ================
 
-	; RIVAL1
+	; RIVAL1 ; if you took CYNDAQUIL
 	db "<RIVAL>@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_EVS | TRAINERTYPE_MOVES
 	; party
-	db 20, HAUNTER, NO_ITEM, 52
+	db 20, HAUNTER, NO_ITEM, 32
 		db LICK, CONFUSE_RAY, MEAN_LOOK, CURSE
-	db 18, MAGNEMITE, NO_ITEM, 52
+	db 18, MAGNEMITE, NO_ITEM, 32
 		db TACKLE, THUNDERSHOCK, SUPERSONIC, SONIC_BOOM
-	db 19, ABRA, NO_ITEM, 52
+	db 19, ABRA, NO_ITEM, 32
 		db SWIFT, CONFUSION, HEADBUTT, LOW_KICK
-	db 20, ZUBAT, NO_ITEM, 52
+	db 20, ZUBAT, NO_ITEM, 32
 		db LEECH_LIFE, SUPERSONIC, BITE, CONFUSE_RAY
-	db 22, CROCONAW, ORAN_BERRY, 52
+	db 22, CROCONAW, ORAN_BERRY, 32
 		db LEER, RAGE, WATER_GUN, BITE
 	db -1 ; end
 
@@ -2905,7 +2905,7 @@ BirdKeeperGroup:
 ; ================
 
 	; BIRD_KEEPER
-	db "Vance@"
+	db "Vance@" ; undrground radio tower
 	db TRAINERTYPE_NORMAL
 	; party
 	db 20, TOGETIC
@@ -4433,12 +4433,12 @@ PokemaniacGroup:
 
 ; ================
 
-	; POKEMANIAC
+	; POKEMANIAC ; UNDERGROUND
 	db "Donald@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 11, SLOWPOKE
-	db 11, NIDORINO
+	db 18, TANGELA
+	db 22, TEDDIURSA
 	db -1 ; end
 
 ; ================
@@ -4490,12 +4490,12 @@ CosplayerGroup:
 ; ================================
 ; ================
 
-	; COSPLAYER
+	; COSPLAYER ; UNDERGROUND
 	db "Clara@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 11, VULPIX
-	db 11, VULPIX
+	db 22, VULPIX
+	db 22, PIKACHU
 	db -1 ; end
 
 ; ================
@@ -4546,11 +4546,11 @@ SuperNerdGroup:
 ; ================
 
 	; SUPER_NERD
-	db "Eric@"
+	db "Eric@" ; goldenrod underground
 	db TRAINERTYPE_NORMAL
 	; party
-	db 11, GRIMER
-	db 12, PORYGON
+	db 20, NATU
+	db 20, VOLTORB
 	db -1 ; end
 
 ; ================
@@ -4597,13 +4597,11 @@ SuperNerdGroup:
 ; ================
 
 	; SUPER_NERD
-	db "Teru@"
+	db "Teru@" ; UNDERGROUND
 	db TRAINERTYPE_NORMAL
 	; party
-	db 7, MAGNEMITE
-	db 11, VOLTORB
-	db 7, MAGNEMITE
-	db 9, MAGNEMITE
+	db 20, SKUNTANK
+	db 18, DRIFBLIM
 	db -1 ; end
 
 ; ================
@@ -5938,7 +5936,7 @@ SchoolgirlGroup:
 	db "Imogen@"
 	db TRAINERTYPE_NICKNAME
 	; party
-	db 4, SNUBBULL, "ColdWatr@"
+	db 4, SNUBBULL, "ColdWater@"
 	db -1 ; end
 
 ; ================
@@ -8167,7 +8165,7 @@ BlackbeltGroup:
 ; ================================
 ; ================
 
-	; BLACKBELT_T
+	; BLACKBELT_T ; underground radio tower
 	db "Kenji@"
 	db TRAINERTYPE_NORMAL
 	; party

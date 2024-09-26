@@ -1113,8 +1113,8 @@ wVermilionPortSceneID:: db
 wVictoryRoad2FSceneID:: db
 wVioletGymSceneID:: db
 wGauldenrodSceneID:: db ; willsroomsceneid
-wWiseTriosRoomSceneID:: db
-wYellowForestSceneID:: db ; sceneids should only go through 1117 line. TODO 
+wGoldenrodPokecomCenterSceneID:: db ; wisetrios
+wRadioTower1FSceneID:: db ; yellowforest sceneid ; sceneids should only go through 1117 line. TODO 
 
 ; fight counts
 wJackFightCount::    db
