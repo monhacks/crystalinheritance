@@ -15,15 +15,15 @@ GoldenrodGym_MapScriptHeader:
 
 	def_object_events
 	object_event  0,  1, SPRITE_CUTE_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSrandjrJoandcath1, -1
-	object_event  1,  1, SPRITE_CUTE_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSrandjrJoandcath2, -1
+	object_event  1,  1, SPRITE_CUTE_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSrandjrJoandcath1, -1
 	object_event  9, 13, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerLassCathy, -1
 	object_event  9,  6, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerBeautyVictoria, -1
-	object_event  8,  3, SPRITE_PRYCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PryceScript, EVENT_GAVE_FACADE
+	object_event  8,  3, SPRITE_PRYCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PryceScript, EVENT_BEAT_WHITNEY
+	object_event  8,  4, SPRITE_WHITNEY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, WhitneyScript, EVENT_WHITNEY_GYM
 
 	object_const_def
 
 
-GenericTrainerSrandjrJoandcath2:
 GenericTrainerSrandjrJoandcath1:
     generictrainer SRANDJR, JOANDCATH1, EVENT_BEAT_SRANDJR_JOANDCATH1, SrandjrJoandcath1SeenText, SrandjrJoandcath1BeatenText
 
@@ -141,10 +141,29 @@ PryceAfterText:
     cont "drift."
     done
 
-PryceNoRoomText:
-    text "You don't have"
-    line "room for this TM."
-    para "Come back when"
-    line "you've made space"
-    cont "in your pack."
-    done
+
+WhitneyScript:
+    faceplayer
+    opentext
+    checkevent EVENT_GAVE_FACADE
+    iftrue .AlreadyGaveTMWhitney
+    writetext WhitneyTextFacade
+    promptbutton
+    verbosegivetmhm TM_FACADE
+    setevent EVENT_GAVE_FACADE
+    jumpthisopenedtext WhitneyAfterText
+.AlreadyGaveTMWhitney
+    writetext WhitneyAfterText
+    waitbutton
+    closetext
+    end
+
+WhitneyTextFacade:
+	text "
+
+
+WhitneyAfterText:
+
+
+
+

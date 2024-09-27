@@ -264,11 +264,18 @@ LannaIsABigFanText:
     line "introduce myself."
 
     para "My name is Lanna."
-    line "I'm sort of an"
-    cont "organizer. I"
-    cont "think you might"
-	cont "fit in to my"
-	cont "group."
+    line "I run a subve-"
+	cont "rseive literary"
+	cont "magazine, with"
+	cont "...hands-on"
+	cont "literary cri-"
+	cont "ticism."
+
+	para "Let's just say "
+	line "our editing pro-"
+	cont "cess extends well" 
+	cont "beyond the "
+	cont "printed word."
 
     para "..."
 

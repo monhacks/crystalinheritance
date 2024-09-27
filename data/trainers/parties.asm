@@ -5020,7 +5020,7 @@ BeautyGroup:
 ; ================
 
 	; BEAUTY
-	db "Samantha@"
+	db "Samantha@"; UNDERGROUND
 	db TRAINERTYPE_MOVES
 	; party
 	db 16, MEOWTH
@@ -5032,7 +5032,7 @@ BeautyGroup:
 ; ================
 
 	; BEAUTY
-	db "Cassie@"
+	db "Cassie@"; UNDERGROUND
 	db TRAINERTYPE_NORMAL
 	; party
 	db 47, VILEPLUME
@@ -5042,7 +5042,7 @@ BeautyGroup:
 ; ================
 
 	; BEAUTY
-	db "Julia@"
+	db "Julia@"; UNDERGROUND
 	db TRAINERTYPE_NORMAL
 	; party
 	db 56, PARAS
@@ -6679,7 +6679,7 @@ GentlemanGroup:
 ; ================
 
 	; GENTLEMAN
-	db "Preston@"
+	db "Preston@" ; radio tower 2f
 	db TRAINERTYPE_NORMAL
 	; party
 	db 18, GROWLITHE
@@ -6689,7 +6689,7 @@ GentlemanGroup:
 ; ================
 
 	; GENTLEMAN
-	db "Edward@"
+	db "Edward@" ; radio tower 2f
 	db TRAINERTYPE_NORMAL
 	; party
 	db 49, PERSIAN
@@ -6698,7 +6698,7 @@ GentlemanGroup:
 ; ================
 
 	; GENTLEMAN
-	db "Gregory@"
+	db "Gregory@" ; radio tower 2f
 	db TRAINERTYPE_NORMAL
 	; party
 	db 56, PIKACHU
@@ -9289,7 +9289,7 @@ CooltrainerMGroup:
 
 ; ================
 
-	; COOLTRAINERM
+	; COOLTRAINERM ; radio tower
 	db "Aaron@"
 	db TRAINERTYPE_NORMAL
 	; party
@@ -9300,7 +9300,7 @@ CooltrainerMGroup:
 
 ; ================
 
-	; COOLTRAINERM
+	; COOLTRAINERM ; RADIO TOWER
 	db "Cody@"
 	db TRAINERTYPE_NORMAL
 	; party
