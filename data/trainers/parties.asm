@@ -1905,7 +1905,7 @@ CamperGroup:
 ; ================
 
 	; CAMPER
-	db "Roland@"
+	db "Roland@" ; route 35
 	db TRAINERTYPE_NORMAL
 	; party
 	db 19, NIDORINO
@@ -1925,10 +1925,11 @@ CamperGroup:
 ; ================
 
 	; CAMPER
-	db "Barry@"
+	db "Barry@" ; ROUTE KAJO
 	db TRAINERTYPE_NORMAL
 	; party
-	db 60, NIDOKING
+	db 25, NIDORINO
+	db 20, NIDOKING
 	db -1 ; end
 
 ; ================
@@ -2201,10 +2202,11 @@ endc
 
 	; PICNICKER
 	db "Tiffany@"
-	db TRAINERTYPE_MOVES
+	db TRAINERTYPE_NORMAL
 	; party
-	db 31, CLEFAIRY
-		db ENCORE, SING, TRI_ATTACK, MINIMIZE
+	db 25, CLEFAIRY
+	db 25, JIGGLYPUFF
+	db 20, PONYTA
 	db -1 ; end
 
 ; ================
@@ -3230,7 +3232,7 @@ HikerGroup:
 ; ================
 
 	; HIKER
-	db "Anthony@"
+	db "Anthony@" ; route 33
 	db TRAINERTYPE_NORMAL
 	; party
 	db 3, MACHOP
@@ -3285,7 +3287,7 @@ HikerGroup:
 ; ================
 
 	; HIKER
-	db "Parry@"
+	db "Parry@" ; union cave
 	db TRAINERTYPE_NORMAL
 	; party
 	db 5, GEODUDE
@@ -3320,7 +3322,7 @@ HikerGroup:
 ; ================
 
 	; HIKER
-	db "Russell@"
+	db "Russell@" ; union cave
 	db TRAINERTYPE_NORMAL
 	; party
 	db 6, ONIX
@@ -3331,7 +3333,7 @@ HikerGroup:
 ; ================
 
 	; HIKER
-	db "Phillip@"
+	db "Phillip@" ; union cave
 	db TRAINERTYPE_NORMAL
 	; party
 	db 7, RHYHORN
@@ -3366,9 +3368,9 @@ HikerGroup:
 	db "Erik@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 35, GRAVELER
-	db 37, DONPHAN
-	db 37, GLIGAR
+	db 20, HITMONTOP
+	db 23, DONPHAN
+	db 25, GLIGAR
 	db -1 ; end
 
 ; ================
@@ -3377,9 +3379,9 @@ HikerGroup:
 	db "Michael@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 35, GEODUDE
-	db 35, GRAVELER
-	db 35, GOLEM
+	db 22, GEODUDE
+	db 25, GRAVELER
+	db 28, GOLEM
 	db -1 ; end
 
 ; ================
@@ -4055,7 +4057,7 @@ PokefanMGroup:
 	db "Robert@"
 	db TRAINERTYPE_ITEM
 	; party
-	db 56, QUAGSIRE, SITRUS_BERRY
+	db 27, QUAGSIRE, SITRUS_BERRY
 	db -1 ; end
 
 ; ================
@@ -5899,9 +5901,9 @@ SchoolgirlGroup:
 	db "Faith@"
 	db TRAINERTYPE_NICKNAME
 	; party
-	db 57, WEEPINBELL, "@"
-	db 58, WEEPINBELL, "@"
-	db 59, VICTREEBEL, "Audrey@"
+	db 15, UNOWN, "Alphred@"
+	db 20, DRATINI, "Hugs@"
+	db 25, PRINPLUP, "Tuxie@"
 	db -1 ; end
 
 ; ================
@@ -6813,7 +6815,7 @@ BreederGroup:
 
 ; ================
 
-	; BREEDER
+	; BREEDER ; used somewhere
 	db "Theresa@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_PERSONALITY
 	; party
@@ -6825,14 +6827,11 @@ BreederGroup:
 
 	; BREEDER
 	db "Jody@"
-	db TRAINERTYPE_ITEM | TRAINERTYPE_MOVES
+	db TRAINERTYPE_ITEM
 	; party
-	db 27, MACHOP, EVIOLITE
-		db TACKLE, RAGE, FORESIGHT, HI_JUMP_KICK
-	db 28, SNORLAX, EVIOLITE
-		db METRONOME, BODY_SLAM, SCREECH, GUNK_SHOT
-	db 29, SNUBBULL, METAL_POWDER
-		db TRANSFORM, NO_MOVE, NO_MOVE, NO_MOVE
+	db 24, SNUBBULL, EVIOLITE
+	db 24, MACHOP, EVIOLITE
+	db 24, TOGETIC, EVIOLITE
 	db -1 ; end
 
 ; ================
@@ -9936,18 +9935,18 @@ VeteranMGroup:
 	db "Matthew@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_MOVES
 	; party
-	db 41, FERALIGATR, KINGS_ROCK
-		db SCARY_FACE, METAL_CLAW, CRUNCH, WATERFALL
-	db 40, AMPHAROS, MAGNET
-		db THUNDER_WAVE, CONFUSE_RAY, DRAGON_PULSE, THUNDERBOLT
-	db 38, URSARING, LEFTOVERS
-		db BELLY_DRUM, PLAY_ROUGH, SLASH, STRENGTH
-	db 38, PIDGEOTTO, QUICK_CLAW
-		db REFLECT, PSYCHIC_M, SHADOW_BALL, AIR_SLASH
-	db 39, ARCANINE, CHARCOAL
-		db FLAME_CHARGE, FLAMETHROWER, DOUBLE_KICK, TAKE_DOWN
-	db 37, DUGTRIO, HARD_STONE
-		db SLASH, EARTHQUAKE, DEFENSE_CURL, ROLLOUT
+	db 32, FERALIGATR, KINGS_ROCK
+		db SCARY_FACE, METAL_CLAW, BITE, WATER_PULSE
+	db 30, AMPHAROS, MAGNET
+		db THUNDER_WAVE, CONFUSE_RAY, DRAGON_PULSE, THUNDERSHOCK
+	db 30, URSARING, LEFTOVERS
+		db BELLY_DRUM, SLASH, NO_MOVE, NO_MOVE
+;	db 38, PIDGEOTTO, QUICK_CLAW
+;		db REFLECT, PSYCHIC_M, SHADOW_BALL, AIR_SLASH
+;	db 39, ARCANINE, CHARCOAL
+;		db FLAME_CHARGE, FLAMETHROWER, DOUBLE_KICK, TAKE_DOWN
+;	db 37, DUGTRIO, HARD_STONE
+;		db SLASH, EARTHQUAKE, DEFENSE_CURL, ROLLOUT
 	db -1 ; end
 
 ; ================
