@@ -40,12 +40,11 @@ DayCareManScript_Inside:
 	checkevent EVENT_GOT_EVIOLITE_FROM_DAYCARE
 	iftrue .AlreadyHaveEviolite
 	writetext DayCareManText_GiveEviolite
-    yesorno
-    iffalse .DeclinedEviolite
-    verbosegiveitem EVIOLITE
+    giveitem EVIOLITE
     iffalse .BagFull
     setevent EVENT_GOT_EVIOLITE_FROM_DAYCARE
     writetext DayCareText_GotEviolite
+	promptbutton
 	special Special_DayCareMan
 	waitendtext
 
@@ -92,9 +91,9 @@ DayCareManText_GiveEviolite:
     line "sometimes struggle"
     cont "in battles."
     para "I'd like to help"
-    line "them out. Would"
-    cont "you take this"
-    cont "Eviolite?"
+    line "them out. Here-"
+    cont "take this"
+    cont "Eviolite."
     done
 
 DayCareText_PartyAndBoxFull:

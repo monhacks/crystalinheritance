@@ -15,8 +15,33 @@ GoldenrodBillsHouse_MapScriptHeader:
 	object_event  2,  3, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_UP, 2, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BillsGrandpa, -1
 	object_event  5,  3, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, BillsMom, -1
 	object_event  5,  4, SPRITE_SCHOOLGIRL, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, BillsSister, -1
+
 BillsGrandpa:
-    jumptextfaceplayer BillsGrandpaText
+    faceplayer
+    opentext
+    checkevent EVENT_GOT_AMULET_COIN
+    iftrue .AlreadyHaveAmuletCoin
+    writetext BillsGrandpaAmuletCoinText
+    promptbutton
+    giveitem AMULET_COIN
+    iffalse .BagFull
+    setevent EVENT_GOT_AMULET_COIN
+    writetext BillsGrandpaText
+    waitbutton
+    closetext
+    end
+
+.AlreadyHaveAmuletCoin:
+    writetext BillsGrandpaText
+    waitbutton
+    closetext
+    end
+
+.BagFull:
+    writetext BillsMomBagFullText
+    waitbutton
+    closetext
+    end
 
 BillsMom:
     faceplayer
@@ -72,7 +97,7 @@ BillsMomRemindText:
 BillsMomBagFullText:
     text "Oh, your Bag is"
     line "full. Come back"
-    cont "later. Quietly!"
+    cont "later."
     done
 
 BillsSisterText:
@@ -84,3 +109,22 @@ BillsSisterText:
     cont "close to the"
     cont "casino…"
     done
+	
+BillsGrandpaAmuletCoinText:
+	text "Hey kid, want"
+	line "to know how I"
+	cont "always win at"
+	cont "the slots?"
+	
+	para "Practice!"
+	
+	para "I get enough"
+	line "cash with this"
+	cont "trendy item."
+	
+	para "Take one of"
+	line "these Amulet"
+	cont "Coins. They"
+	cont "double your"
+	cont "earnings!"
+	done

@@ -18,14 +18,6 @@ GoldenrodDeptStore3F_MapScriptHeader:
 	object_event 12,  5, SPRITE_POKEMANIAC, SPRITEMOVEDATA_SPINRANDOM_FAST, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodDeptStore3FSuperNerdText, -1
 	object_event  2,  5, SPRITE_ROCKER, SPRITEMOVEDATA_WALK_UP_DOWN, 1, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodDeptStore3FRockerText, -1
 
-GoldenrodDeptStore3FSuperNerdText:
-	text "I, I, I'm really"
-	line "impatient!"
-
-	para "I use X Speed in"
-	line "battle to speed up"
-	cont "my #mon."
-	done
 
 GoldenrodDeptStore3FSuperNerdText:
 	text "The attendants"
@@ -46,4 +38,12 @@ GoldenrodDeptStore3FRockerText:
 	cont "Silph made"
 	cont "everyone go"
 	cont "full time."
+	done
+
+GoldenrodDeptStore3FDirectoryText:
+	text "For Victory"
+	line "Seekers"
+
+	para "3F Battle"
+	line "   Collection"
 	done

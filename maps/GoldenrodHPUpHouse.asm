@@ -4,8 +4,8 @@ GoldenrodHPUpHouse_MapScriptHeader:
 	def_callbacks
 
 	def_warp_events
-	warp_event  2,  7, GOLDENROD_CITY, 21
-	warp_event  3,  7, GOLDENROD_CITY, 21
+	warp_event  2,  7, GOLDENROD_CITY, 19
+	warp_event  3,  7, GOLDENROD_CITY, 19
 
 	def_coord_events
 
@@ -16,23 +16,27 @@ GoldenrodHPUpHouse_MapScriptHeader:
 	object_event  5,  4, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodHPUpHousePokefanFText, -1
 	pokemon_event  6,  3, QUAGSIRE, -1, -1, PAL_NPC_BLUE, GoldenrodHPUpHousePikachuText, -1
 
-FisherGoodRodScript:
+GoldenrodHPUpFisherScript:
+    checkevent EVENT_GOT_GOOD_ROD
+	iftrue_jumptextfaceplayer .AlreadyHaveRodText
     faceplayer
     opentext
-    checkkeyitem GOOD_ROD
-    iftrue .AlreadyHaveRod
-    writetext FisherIntroText
+    writetext .FisherIntroText
     promptbutton
     verbosegivekeyitem GOOD_ROD
-    iffalse .BagFull
+	iffalse .BagFull
     setevent EVENT_GOT_GOOD_ROD
-    jumpthisopenedtext FisherGiveRodText
-.AlreadyHaveRod
-    jumpthisopenedtext FisherAfterText
+    jumpthisopenedtext
+		
+    text "You never know"
+	line "what you'll pull"
+	cont "up with that!"
+    done	
+		
 .BagFull
     jumpthisopenedtext FisherBagFullText
 
-FisherIntroText:
+.FisherIntroText:
     text "I was married to"
     line "the sea."
 	
@@ -47,23 +51,11 @@ FisherIntroText:
 	cont "longer."
     done
 
-FisherGiveRodText:
-    text "You never know"
-	line "what you'll pull"
-	cont "up with that!"
-    done
-
-FisherAfterText:
+.AlreadyHaveRodText:
     text "Remember - "
 	line "there's always"
 	cont "more fish in"
 	cont "the sea!"
-    done
-
-FisherBagFullText:
-    text "Your bag's full!"
-    line "Come back when"
-    cont "you have space."
     done
 
 

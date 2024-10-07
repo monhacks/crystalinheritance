@@ -4,7 +4,7 @@ RadioTower4F_MapScriptHeader:
 	def_callbacks
 
 	def_warp_events
-	warp_event 12,  0, RADIO_TOWER_5F, 2
+	warp_event 12,  0, RADIO_TOWER_5F, 1
 	warp_event 17,  0, RADIO_TOWER_3F, 3
 
 	def_coord_events
@@ -13,8 +13,8 @@ RadioTower4F_MapScriptHeader:
 	bg_event 15,  0, BGEVENT_JUMPTEXT, RadioTower4FStudio2SignText
 
 	def_object_events
-    object_event 14,  2, SPRITE_LANNA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, RadioTower4FLannaScript, EVENT_BEAT_WHITNEY
-
+    object_event 14,  2, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RadioTower4FKurtScript, EVENT_BEAT_WHITNEY
+	object_event  15,  6, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, WhitneysNoteScript, -1
 
 RadioTower4FProductionSignText:
 	text "4F Production"
@@ -25,36 +25,128 @@ RadioTower4FStudio2SignText:
 	done
 
 
-RadioTower4FLannaScript:
+RadioTower4FKurtScript:
     faceplayer
     opentext
-    writetext RadioTower4FLannaHealText
+    writetext RadioTower4FKurtHealText
     waitbutton
     closetext
+	playmusic MUSIC_HEAL
     special HealParty
+	special SaveMusic	
+	playmusic MUSIC_NONE	
+	special RestoreMusic
     opentext
-    writetext RadioTower4FLannaRemindText
+    writetext RadioTower4KurtRemindText
     waitbutton
     closetext
+	setevent EVENT_BEAT_RADIO_TOWER_RIVAL
+	clearevent EVENT_BEAT_WHITNEY
     end
 
-RadioTower4FLannaHealText:
-    text "Lanna: <PLAYER>!"
+RadioTower4FKurtHealText:
+    text "<PLAYER>!"
     line "You made it. Let"
     cont "me heal your"
     cont "#mon."
     done
 
-RadioTower4FLannaRemindText:
+RadioTower4KurtRemindText:
     text "We're almost to"
     line "the top floor."
-    para "There, you will"
-	line "see a fire exit"
-    line "that leads"
-    cont "to the Magnet"
-    cont "Train tracks."
-    para "That might be your"
-    line "way to Ecruteak."
-    para "Be careful, and"
-    line "good luck!"
+	
+	para "We just have to"
+	line "get past Whitney"
+	cont "and show everyone"
+	cont "how she is int-"
+	cont "rinsically bad."
+	
+	para "Then, her show"
+	line "will be ruined!"	
+    done
+
+WhitneysNoteScript:	
+    opentext
+    writetext NoticeRadioScriptText
+    yesorno
+    iffalse .DeclineRead
+    checkevent EVENT_READ_WHITNEY_RADIO_SCRIPT
+    iftrue .AlreadyRead
+    writetext WhitneyRadioText
+    promptbutton
+    giveitem DESTINY_KNOT
+    iffalse .BagFull
+    setevent EVENT_READ_WHITNEY_RADIO_SCRIPT
+    writetext ReceiveDestinyKnotText
+    waitbutton
+    closetext
+    end
+
+.AlreadyRead:
+    writetext WhitneyRadioText
+    waitbutton
+    closetext
+    end
+
+.DeclineRead:
+    waitbutton
+    closetext
+    end
+
+.BagFull:
+    writetext RadioTowerBagFullText
+    waitbutton
+    closetext
+    end
+
+NoticeRadioScriptText:
+	text "It's Whitney's"
+	line "script. Read?"
+    done
+
+ReceiveDestinyKnotText:
+    text "There's a"
+    line "Destiny Knot"
+    cont "attached to the"
+    cont "script!"
+    done
+
+RadioTowerBagFullText:
+    text "You found a"
+    line "Destiny Knot, but"
+    cont "your Bag is full!"
+    done
+
+WhitneyRadioText:
+    text "(Charm!) Welcome"
+    line "back to the only"
+    cont "show that truly"
+    cont "gets you."
+
+    para "Let's embrace"
+    line "the beautiful"
+    cont "chaos of now."
+	
+	para "We have a very"
+	line "special guest-"
+	
+	para "Someone like a"
+	line "lot of you."
+	
+	para "His talents were"
+	line "not appreciated."
+
+	para "Now, with Silph,"
+	line "he is an award-"
+	cont "winning inventor!"
+
+    para "Just another ex-"
+	line "ample of how the"
+	cont "old traditions"
+    cont "don't work in this"
+    cont "day and age."
+
+    para "After all, it's"
+    line "all made up - so"
+    cont "make it amazing."
     done

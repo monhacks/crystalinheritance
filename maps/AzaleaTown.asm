@@ -34,6 +34,7 @@ AzaleaTown_MapScriptHeader:
 
 	def_object_events
 	object_event 18, 10, SPRITE_GRAMPS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AzaleaTownGrampsScript, -1
+	object_event 26,  9, SPRITE_GRAMPS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, PokemonMemoriesNPCScript, -1
 	object_event  7, 10, SPRITE_POKEFAN_F, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AzaleaTownPokefanFScript, -1
 	object_event 12, 16, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_DOWN, 0, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AzaleaTownMatronScript, -1
 	object_event 13,  8, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KurtAZScript, EVENT_CHARCOAL_TALKED
@@ -320,3 +321,183 @@ Movement_GrampsBringsYouBack1_AT:
 	step_left
 	turn_head_right
 	step_end ;todo check the head on both of these
+
+PokemonMemoriesNPCScript:
+    faceplayer
+    opentext
+    checkevent EVENT_GOT_SILK_SCARF_FROM_MEMORIES_NPC
+    iftrue .CheckPidgey
+	writetext AzaleaUsedToBeATrainerText
+    writetext AskForTeddiursaText
+    promptbutton
+    checkpoke TEDDIURSA
+    iftrue .GiveSilkScarf
+    writetext DontHaveTeddiursaText
+    waitbutton
+    closetext
+    end
+
+.GiveSilkScarf:
+    writetext GiveSilkScarfText
+    promptbutton
+    verbosegiveitem SILK_SCARF
+    iffalse .BagFull
+    setevent EVENT_GOT_SILK_SCARF_FROM_MEMORIES_NPC
+    sjump .CheckPidgey
+
+.CheckPidgey:
+    checkevent EVENT_GOT_SHARP_BEAK_FROM_MEMORIES_NPC
+    iftrue .CheckEkans
+    writetext AskForPidgeyText
+    promptbutton
+    checkpoke PIDGEY
+    iftrue .GiveSharpBeak
+    writetext DontHavePidgeyText
+    waitbutton
+    closetext
+    end
+
+.GiveSharpBeak:
+    writetext GiveSharpBeakText
+    promptbutton
+    verbosegiveitem SHARP_BEAK
+    iffalse .BagFull
+    setevent EVENT_GOT_SHARP_BEAK_FROM_MEMORIES_NPC
+    sjump .CheckEkans
+
+.CheckEkans:
+    checkevent EVENT_GOT_POISON_BARB_FROM_MEMORIES_NPC
+    iftrue .AllDone
+    writetext AskForEkansText
+    promptbutton
+    checkpoke EKANS
+    iftrue .GivePoisonBarb
+    writetext DontHaveEkansText
+    waitbutton
+    closetext
+    end
+
+.GivePoisonBarb:
+    writetext GivePoisonBarbText
+    promptbutton
+    verbosegiveitem POISON_BARB
+    iffalse .BagFull
+    setevent EVENT_GOT_POISON_BARB_FROM_MEMORIES_NPC
+    sjump .AllDone
+
+.AllDone:
+    writetext AllDoneText
+    waitbutton
+    closetext
+    end
+
+.BagFull:
+    writetext BagFullText
+    waitbutton
+    closetext
+    end
+
+AzaleaUsedToBeATrainerText:
+	text "Ah, a trainer!"
+	
+	para "I used to be"
+	line "one, just like"
+	cont "you. I still"
+	cont "have a lot of"
+	cont "items. If you"
+	cont "show me some of"
+	cont "my favorites,"
+	cont "I'll pass them"
+	cont "down to you."
+
+AskForTeddiursaText:
+    text "Can you show me"
+    line "the little bear"
+    cont "#mon that only"
+    cont "drifts away from"
+    cont "its mother to"
+    cont "gather honey?"
+    done
+
+DontHaveTeddiursaText:
+    text "Oh, you don't have"
+    line "one? That's okay."
+    cont "Come back if you"
+    cont "find one!"
+    done
+
+GiveSilkScarfText:
+    text "Oh, Teddiursa!"
+    line "How adorable!"
+    para "Here, take this"
+    line "Silk Scarf as"
+    cont "thanks!"
+    done
+
+AskForPidgeyText:
+    text "Next, can you show"
+    line "me the little bird"
+    cont "#mon that kicks"
+    cont "up dust to avoid"
+    cont "fighting?"
+    done
+
+DontHavePidgeyText:
+    text "No? That's"
+    line "alright. They're"
+    cont "common, so I'm"
+    cont "sure you'll find"
+    cont "one soon!"
+    done
+
+GiveSharpBeakText:
+    text "Ah, Pidgey! It"
+    line "brings back so"
+    cont "many memories!"
+    para "Here's a Sharp"
+    line "Beak for you!"
+    done
+
+AskForEkansText:
+    text "Lastly, can you"
+    line "show me the"
+    cont "#mon whose name"
+    cont "is evoked by this"
+    cont "phrase:"
+    para "A man, a plan,"
+    line "a canal-Panama!"
+    done
+
+DontHaveEkansText:
+    text "No? It's a"
+    line "tricky one! Come"
+    cont "back when you've"
+    cont "caught one!"
+    done
+
+GivePoisonBarbText:
+    text "Ekans! You got it!"
+    line "Quite the"
+    cont "palindrome, eh?"
+    para "Here's a Poison"
+    line "Barb for you!"
+    done
+
+AllDoneText:
+    text "Thank you for"
+    line "indulging an old"
+    cont "trainer's"
+    cont "memories!"
+    para "May your journey"
+    line "be filled with"
+    cont "wonderful #mon"
+    cont "encounters!"
+    done
+
+BagFullText:
+    text "Oh! Your Bag is"
+    line "full. Make some"
+    cont "room and come"
+    cont "back for your"
+    cont "gift!"
+    done

@@ -40,12 +40,12 @@ IlexForest_MapScriptHeader:
 	object_event 29, 31, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerYoungsterMikey, -1 ; -
 	object_event 25, 19, SPRITE_PICNICKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerPicnickerLiz, -1 ; 
 	object_event 29, 11, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerEngineerSmith, EVENT_LOGGERS_ILEX_FOREST
-	object_event 15, 14, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerOfficerMKeith, EVENT_LOGGERS_ILEX_FOREST ;todo move keith
+	object_event 15, 14, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerOfficerMKeith, EVENT_LOGGERS_ILEX_FOREST 
 	itemball_event 22, 34, REVIVE, 1, EVENT_ILEX_FOREST_REVIVE ;ok
 	tmhmball_event 13, 14, TM_SAFEGUARD, EVENT_ILEX_FOREST_ANTIDOTE
 	itemball_event 19, 16, SUPER_POTION, 1, EVENT_ILEX_FOREST_MULCH;OK
 	fruittree_event 10, 14, FRUITTREE_ILEX_FOREST, SHORE_FOAM, PAL_NPC_BLUE;OK
-
+	object_event 3, 8, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IlexOfficer2Script, EVENT_SANDRA_WARPED
 
 	object_const_def
 	const ILEX_FOREST_KURT
@@ -805,3 +805,21 @@ IlexKurtBackToIt:
 	done
 	
 
+IlexOfficer2Script:
+	opentext
+	writetext IlexOfficer2InvestigationText
+	promptbutton
+	closetext
+
+IlexOfficer2InvestigationText:
+	text "Sorry. Can't"
+	line "let you past."
+	
+	para "We need to keep"
+	line "up security."
+	
+	para "There's some"
+	line "noise about a"
+	cont "troublesome group"
+	cont "in Goldenrod."
+	done

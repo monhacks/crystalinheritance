@@ -25,26 +25,20 @@ GoldenrodFlowerShop_MapScriptHeader:
 	const GOLDENRODFLOWERSHOP_NPC1
 
 FlowerShopNPC1Script:
-	faceplayer
-	opentext
-	checkevent EVENT_GOT_BERRY_GLORIA
-	iftrue .GotBerry
-	writetext NPC1GiveBerryText
-	promptbutton
-	verbosegiveitem RAWST_BERRY
-	iffalse .NoRoom
-	setevent EVENT_GOT_BERRY_GLORIA
-	jumpthisopenedtext NPC1AfterText
+	jumptextfaceplayer NPC1GiveBerryText
+	end
+	
 .GotBerry
-	jumpthisopenedtext NPC1AfterText
-.NoRoom
-	jumpthisopenedtext NPC1NoRoomText
+	jumptextfaceplayer NPC1AfterText
+	end
 
 FlowerShopNPC2Script:
 	jumptextfaceplayer FlowerShopNPC2Text
+	end
 
 FlowerShopGloriaScript:
 	jumptextfaceplayer FlowerShopGloriaText
+	end
 
 FlowerShopSeedsSign:
 	jumptext FlowerShopSeedsSignText
@@ -56,18 +50,18 @@ FlowerShopLogBook:
 	jumptext FlowerShopLogBookText
 
 NPC1GiveBerryText:
-	text "Sniff, sniff. You"
-	line "smell like a"
-	cont "forest!"
-	para "Are you from out"
-	line "of town? You will"
-	cont "know how to use"
-	cont "this!"
+	text "Sniff, sniff."
+	line "You smell like"
+	cont "a forest!"
 	done
 
 NPC1AfterText:
-	text "Rawst Berries are"
-	line "great for burns!"
+	text "Buy Silph's"
+	line "berries!"
+	
+	para "Freshest and"
+	line "best in all of"
+	cont "Johto!"
 	done
 
 NPC1NoRoomText:

@@ -13,48 +13,7 @@ EcruteakItemfinderHouse_MapScriptHeader:
 	bg_event  2,  1, BGEVENT_JUMPSTD, radio2
 
 	def_object_events
-	object_event  2,  3, SPRITE_ACE_TRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakItemfinderGuy, -1
 	object_event  3,  3, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakHistoryBook, -1
-
-EcruteakItemfinderGuy:
-	checkevent EVENT_GOT_ITEMFINDER
-	iftrue_jumptextfaceplayer ItemfinderExplanationText
-	faceplayer
-	opentext
-	writetext EcruteakItemfinderAdventureText
-	yesorno
-	iffalse_jumpopenedtext EcruteakItemfinderToEachHisOwnText
-	writetext EcruteakItemfinderTrueSpiritText
-	promptbutton
-	verbosegivekeyitem ITEMFINDER
-	setevent EVENT_GOT_ITEMFINDER
-	jumpthisopenedtext
-
-ItemfinderExplanationText:
-	text "There are many"
-	line "items lying about"
-
-	para "that aren't ob-"
-	line "vious."
-
-	para "Use Itemfinder to"
-	line "check if there is"
-
-	para "an item on the"
-	line "ground near you."
-
-	para "It doesn't show"
-	line "the exact spot,"
-
-	para "so you'll have to"
-	line "look yourself."
-
-	para "Oh yeah--I heard"
-	line "there are items"
-
-	para "in Ecruteak's"
-	line "Burned Tower."
-	done
 
 EcruteakHistoryBook:
 	opentext
@@ -87,35 +46,6 @@ EcruteakHistoryBook:
 
 	para "wind off into the"
 	line "grassland."
-	done
-
-EcruteakItemfinderAdventureText:
-	text "Ah. You're on an"
-	line "adventure with"
-	cont "your #mon?"
-
-	para "Well, what's an"
-	line "adventure without"
-	cont "treasure hunting?"
-
-	para "Am I right, or am"
-	line "I right?"
-	done
-
-EcruteakItemfinderTrueSpiritText:
-	text "Good! You under-"
-	line "stand the true"
-
-	para "spirit of adven-"
-	line "ture."
-
-	para "I like that! Take"
-	line "this with you."
-	done
-
-EcruteakItemfinderToEachHisOwnText:
-	text "Oh… To each his"
-	line "own, I suppose…"
 	done
 
 EcruteakHistoryBookText:

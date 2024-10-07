@@ -7,6 +7,7 @@ RadioTower1F_MapScriptHeader:
 	warp_event  2,  7, GOLDENROD_CITY, 11
 	warp_event  3,  7, GOLDENROD_CITY, 11
 	warp_event 15,  0, RADIO_TOWER_2F, 2
+	warp_event  0,  4, UNDERGROUND_RADIO_TOWER, 2
 
     def_coord_events
     coord_event 15, 1, 0, RadioTowerRivalTrigger1
@@ -45,8 +46,8 @@ RadioTowerRivalBattleScript:
     setevent EVENT_RIVAL_RADIO_TOWER
     checkevent EVENT_GOT_OSHAWOTT
     iftrue .Oshawott
-    checkevent EVENT_GOT_DARTRIX
-    iftrue .Dartrix
+    checkevent EVENT_GOT_ROWLET
+    iftrue .Rowlet
     winlosstext RadioTowerRivalWinText, RadioTowerRivalLossText
     setlasttalked RADIOTOWER_RIVAL
     loadtrainer RIVAL1, 6
@@ -64,7 +65,7 @@ RadioTowerRivalBattleScript:
     reloadmapafterbattle
     sjump .FinishRivalBattle
 
-.Dartrix:
+.Rowlet:
     winlosstext RadioTowerRivalWinText, RadioTowerRivalLossText
     setlasttalked RADIOTOWER_RIVAL
     loadtrainer RIVAL1, 5
@@ -90,6 +91,7 @@ RadioTowerPlayerPushbackMovement:
 RadioTowerRivalRetreatMovement:
     step_left
     step_left
+	step_down
     step_left
     step_left
     step_left
@@ -102,17 +104,26 @@ RadioTowerRivalBeforeText:
     line "see you finally"
     cont "made it out of"
     cont "Azalea."
+	
+	para "Bet this power"
+	line "outage makes"
+	cont "you feel right"
+	cont "at home, eh?"
+	
     para "Whitney invited me"
     line "on her show to"
     cont "talk about my"
     cont "inventions -"
+	
     para "the apricorn oil"
     line "distiller that"
     cont "your grandpa"
     cont "mocked."
+
     para "It's nice to be"
     line "supported by"
     cont "Silph, for once."
+
     para "We're building a"
     line "new world - you"
     cont "and your grandpa"
@@ -134,7 +145,7 @@ RadioTowerRivalLossText:
 
 RadioTowerRivalAfterText:
     text "I must be going..."
-    line "I heard that my"
+    line "Silph says my"
     cont "distiller could be"
     cont "used for"
     cont "desalination."

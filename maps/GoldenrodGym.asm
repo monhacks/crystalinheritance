@@ -10,22 +10,21 @@ GoldenrodGym_MapScriptHeader:
 	def_coord_events
 
 	def_bg_events
-	bg_event  1, 15, BGEVENT_READ, GoldenrodGymStatue
-	bg_event  4, 15, BGEVENT_READ, GoldenrodGymStatue
+
 
 	def_object_events
-	object_event  0,  1, SPRITE_CUTE_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSrandjrJoandcath1, -1
-	object_event  1,  1, SPRITE_CUTE_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSrandjrJoandcath1, -1
-	object_event  9, 13, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerLassCathy, -1
-	object_event  9,  6, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerBeautyVictoria, -1
-	object_event  8,  3, SPRITE_PRYCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PryceScript, EVENT_BEAT_WHITNEY
+	object_event  0,  1, SPRITE_CUTE_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSrandjrJoandcath1, EVENT_BEAT_WHITNEY
+	object_event  1,  1, SPRITE_CUTE_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSrandjrJoandcath1, EVENT_BEAT_WHITNEY
+	object_event  9, 13, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerLassCathy, EVENT_BEAT_WHITNEY
+	object_event  9,  6, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerBeautyVictoria, EVENT_BEAT_WHITNEY
+	object_event  8,  3, SPRITE_PRYCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PryceScriptGoldenrod, EVENT_BEAT_WHITNEY
 	object_event  8,  4, SPRITE_WHITNEY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, WhitneyScript, EVENT_WHITNEY_GYM
 
 	object_const_def
 
 
 GenericTrainerSrandjrJoandcath1:
-    generictrainer SRANDJR, JOANDCATH1, EVENT_BEAT_SRANDJR_JOANDCATH1, SrandjrJoandcath1SeenText, SrandjrJoandcath1BeatenText
+    generictrainer SR_AND_JR, JOANDCATH1, EVENT_BEAT_SR_AND_JR_JO_AND_CATH, SrandjrJoandcath1SeenText, SrandjrJoandcath1BeatenText
 
     text "Whitney made it"
     line "all look so easy."
@@ -85,7 +84,7 @@ BeautyVictoriaBeatenText:
     line "part of life."
     done
 
-PryceScript:
+PryceScriptGoldenrod:
     faceplayer
     opentext
     checkevent EVENT_GAVE_FACADE
@@ -159,11 +158,44 @@ WhitneyScript:
     end
 
 WhitneyTextFacade:
-	text "
+	text "<PLAYER>."
+	
+	para "When Silph let"
+	line "me have my own"
+	cont "show, I thought"
+	cont "it would be a"
+	cont "way to let cute"
+	cont "#mon take"
+	cont "center stage."
+	
+	para "But over time,"
+	line "I was shifting to"
+	cont "pushing everyone"
+	cont "in my life"
+	cont "away."
+	
+	para "I was putting"
+	line "up a false im-"
+	cont "age of myself"
+	cont "with that show."
+
+	para "For your candid"
+	line "thoughts, please"
+	cont "take this TM."
+	done
 
 
 WhitneyAfterText:
-
-
-
-
+	text "I need to get"
+	line "back to the rea-"
+	cont "son why I be-"
+	cont "came a Gym"
+	cont "Leader in the"
+	cont "first place."
+	
+	para "I should get"
+	line "get back to"
+	cont "helping people"
+	cont "see the cuteness"
+	cont "in each other."
+	done

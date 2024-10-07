@@ -31,6 +31,7 @@ CalmCoast_MapScriptHeader:
 	fruittree_event 18, 14, FRUITTREE_CALM_COAST_2, LUM_BERRY, PAL_NPC_RED
 	fruittree_event 19, 12, FRUITTREE_CALM_COAST_3, PNK_APRICORN, PAL_NPC_RED
 	itemball_event 18, 20, SOOTHE_BELL, 1, EVENT_SOOTHE_BELL ;ok
+	itemball_event  3, 49, SOFT_SAND, 1, EVENT_CALM_COAST_SOFT_SAND ;ok
 
 
 GenericTrainerYoungsterWarren:

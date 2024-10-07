@@ -4,25 +4,26 @@ UndergroundRadioTower_MapScriptHeader:
     def_callbacks
 
     def_warp_events
-    ; Add warp events here
+	warp_event 37, 7, WAREHOUSE_ENTRANCE, 3
+	warp_event  3, 3, RADIO_TOWER_1F, 4
 
     def_coord_events
 
     def_bg_events
 
     def_object_events
-    object_event  5,  5, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerBirdKeeperVance1, EVENT_FOUGHT_RADIO_TOWER_RIVAL
-    object_event 10,  8, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 1, TrainerBlackbeltKenji, EVENT_FOUGHT_RADIO_TOWER_RIVAL
-    object_event 15,  7, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerBeautySamantha, EVENT_FOUGHT_RADIO_TOWER_RIVAL
-    object_event  8, 12, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerBeautyCassie, EVENT_FOUGHT_RADIO_TOWER_RIVAL
-    object_event 18, 10, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerBeautyJulia, EVENT_FOUGHT_RADIO_TOWER_RIVAL
-    object_event 20, 15, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, UndergroundRadioTowerLannaScript, EVENT_FOUGHT_RADIO_TOWER_RIVAL
+    object_event  3,  5, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, UndergroundRadioTowerKurtScript, EVENT_KURT_UNDERGROUND
+    object_event 32,  7, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 0, TrainerBirdKeeperVance1, EVENT_FOUGHT_RADIO_TOWER_RIVAL;
+    object_event 28,  5, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 0, TrainerBlackbeltKenji, EVENT_FOUGHT_RADIO_TOWER_RIVAL;
+    object_event 20,  4, SPRITE_BEAUTY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 0, TrainerBeautySamantha, EVENT_FOUGHT_RADIO_TOWER_RIVAL;
+    object_event  8,  6, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 0, TrainerBeautyCassie, EVENT_FOUGHT_RADIO_TOWER_RIVAL;
+    object_event  9,  6, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 0, TrainerBeautyJulia, EVENT_FOUGHT_RADIO_TOWER_RIVAL;
 
-	const_def
-	CONST_UNDERGROUND_LANNA
+	object_const_def
+	const UNDERGROUND_KURT
 	
 TrainerBirdKeeperVance1:
-    trainer BIRD_KEEPER, VANCE1, EVENT_BEAT_BIRD_KEEPER_VANCE1, BirdKeeperVance1SeenText, BirdKeeperVance1BeatenText, 0, .Script
+    trainer BIRD_KEEPER, VANCE1, EVENT_BEAT_BIRD_KEEPER_VANCE, BirdKeeperVance1SeenText, BirdKeeperVance1BeatenText, 0, .Script
 
 .Script:
     endifjustbattled
@@ -33,7 +34,7 @@ TrainerBirdKeeperVance1:
     end
 
 TrainerBlackbeltKenji:
-    trainer BLACKBELT_T, KENJI, EVENT_BEAT_BLACKBELT_KENJI, BlackbeltKenjiSeenText, BlackbeltKenjiBeatenText, 0, .Script
+    trainer BLACKBELT_T, KENJI1, EVENT_BEAT_BLACKBELT_KENJI, BlackbeltKenjiSeenText, BlackbeltKenjiBeatenText, 0, .Script
 
 .Script:
     endifjustbattled
@@ -76,38 +77,35 @@ TrainerBeautyJulia:
     closetext
     end
 
-UndergroundRadioTowerLannaScript:
+UndergroundRadioTowerKurtScript:
     faceplayer
     opentext
-    writetext LannaThankYouText
+    writetext KurtThankYouText
     special HealParty
     playsound SFX_FULL_HEAL
     waitsfx
-    writetext LannaAfterHealText
+    writetext KurtAfterHealText
     yesorno
     iffalse .NotReady
-    writetext LannaReadyText
+    writetext KurtReadyText
     promptbutton
     verbosegivetmhm HM_FLY
-    iffalse .NoRoom
-    setevent EVENT_GOT_FLY_LANNA
+    setevent EVENT_GOT_FLY_KURT
 	setevent EVENT_RIVAL_RADIO_TOWER
-    writetext LannaAfterFlyText
+    writetext KurtAfterFlyText
     waitbutton
     closetext
-	applymovement CONST_UNDERGROUND_LANNA, UndergroundLannaMoves
+	applymovement UNDERGROUND_KURT, UndergroundKurtMoves
+	disappear UNDERGROUND_KURT
+	setevent EVENT_KURT_UNDERGROUND
     end
 	
 .NotReady
-    writetext LannaNotReadyText
+    writetext KurtNotReadyText
     waitbutton
     closetext
     end
-.NoRoom
-    writetext LannaNoRoomText
-    waitbutton
-    closetext
-    end
+
 
 BirdKeeperVance1SeenText:
     text "We're fighting for"
@@ -222,67 +220,89 @@ BeautyJuliaAfterText:
     cont "drought."
     done
 
-LannaThankYouText:
-    text "Lanna: <PLAYER>,"
+KurtThankYouText:
+    text "<PLAYER>,"
     line "thank you for"
     cont "coming."
-    para "I see you helped"
-    line "our members get"
-    cont "stronger."
+
+	para "There might be"
+	line "a few fights up"
+	cont "ahead."
+	
     para "Let me heal your"
     line "#mon."
     done
 
-LannaAfterHealText:
-    text "Whitney was once"
-    line "good, but now just"
-    cont "cares that she"
-	cont "stays on top."
-    para "Too many follow"
-    line "her blindly. We"
-    cont "must act."
+KurtAfterHealText:
+    text "These trainers"
+	line "all have some"
+	cont "reason to opp-"
+	cont "ose letting Silph"
+	cont "and Whitney take"
+	cont "over their city."
+
+	para "Whitney beams her"
+	line "show into so "
+	cont "many receptive"
+	cont "antennas."
+
+    para "She makes people"
+	line "believe that"
+	cont "their interest in"
+	cont "her is more imp-"
+	cont "ortant than their"
+	cont "real family! More"
+	cont "than their real"
+	cont "heritage!"
+	
     para "We'll shut off the"
     line "Radio Tower power."
-    para "When power's down,"
-    line "sneak onto tracks"
-	cont "from the roof of"
-	cont "the Radio Tower."
+
+    para "We will sneak"
+	line "through, defeat"
+	cont "her, and then"
+	cont "we can approach"
+	cont "Ecruteak from"
+	cont "the other side"
+	cont "by climbing over"
+	cont "the rocky pass."
+
     para "Are you ready?"
+
     done
 
 
 
-LannaNotReadyText:
+KurtNotReadyText:
     text "OK. Let me know if"
     line "you change your"
     cont "mind."
     done
-	
 
-LannaReadyText:
+KurtReadyText:
     text "Thank you. This"
     line "ladder leads to"
-    cont "the radio tower."
-    para "Climb to the roof,"
-    line "then hop onto the"
-    cont "train tracks."
-    para "Watch for guards."
-    line "We'll work on"
-    cont "taking her show"
-    cont "off the air..."
+    cont "the Radio Tower."
+	
+	para "While the lights"
+	line "are off, we can"
+	cont "sneak past the"
+	cont "guards."
+	
     done
 
-LannaAfterFlyText:
-    text "This HM will help"
-    line "you escape if"
-    cont "things get dicey."
-    para "Good luck,"
-    line "<PLAYER>."
+KurtAfterFlyText:
+	text "By the way, you"
+	line "should have this"
+	cont "now."
+    para "This HM will help"
+    line "us escape if"
+    cont "we need to."
     done
 
-LannaNoRoomText:
-    text "Oh! Your pack is"
-    line "full. Make some"
-    cont "room and come"
-    cont "back for this HM."
-    done
+UndergroundKurtMoves:
+	step_up
+	step_up
+	step_end
+	
+

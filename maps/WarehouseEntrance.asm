@@ -7,8 +7,8 @@ WarehouseEntrance_MapScriptHeader:
 	callback MAPCALLBACK_OBJECTS, WarehouseEntranceCheckDayOfWeek
 
 	def_warp_events
-	warp_event  1,  2, UNDERGROUND_PATH_SWITCH_ROOM_ENTRANCES, 7
-	warp_event  1, 34, UNDERGROUND_PATH_SWITCH_ROOM_ENTRANCES, 4
+	warp_event  1,  2, UNDERGROUND_PATH_SWITCH_ROOM_ENTRANCES, 4
+	warp_event  1, 34, UNDERGROUND_PATH_SWITCH_ROOM_ENTRANCES, 1
 	warp_event 16,  0, UNDERGROUND_RADIO_TOWER, 1
 
 
@@ -30,8 +30,8 @@ WarehouseEntrance_MapScriptHeader:
 	object_event  4,  9, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerSupernerdTeru, -1
 	object_event  1, 27, SPRITE_POKEMANIAC, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerPokemaniacIssac, -1
 	object_event  0,  6, SPRITE_POKEMANIAC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerPokemaniacDonald, -1
-	keyitemball_event  4, 25, COIN_CASE, EVENT_WAREHOUSE_ENTRANCE_COIN_CASE
 	object_event  1, 18, SPRITE_COSPLAYER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerCosplayerClara, -1
+	object_event 16, 1, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, WarehouseEntranceBlackbelt, EVENT_GOT_BASEMENT_KEY
 
 	object_const_def
 	const WAREHOUSEENTRANCE_GRAMPS
@@ -572,4 +572,15 @@ GoldenrodUndergroundWeAreNotOpenTodayText:
 GoldenrodUndergroundNoEntryText:
 	text "DANGER:"
 	line "No Entry"
+	done
+
+WarehouseEntranceBlackbelt:
+	jumptextfaceplayer WarehouseEntranceBlackBeltText
+	
+WarehouseEntranceBlackBeltText:
+	text "Nothing to see!"
+	
+	para "What, you're mad"
+	line "that I'm so curt"
+	cont "with you?"
 	done

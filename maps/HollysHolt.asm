@@ -28,7 +28,7 @@ HollysHolt_MapScriptHeader:
 	object_event 18, 38, SPRITE_TAMMY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, HollysHoltTammyScript, EVENT_TAMMY_HOLLYS_HOLT
 	object_event 19, 38, SPRITE_BREEDER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, HollysHoltNPC6Text, EVENT_TAMMY_HOLLYS_HOLT 
 	object_event  8, 16, SPRITE_BREEDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, HollysHoltNPC1Text, -1
-	object_event 23, 24, SPRITE_GRAMPS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, HollysHoltNPC2Script, -1 
+	object_event 23, 24, SPRITE_GRAMPS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, HollysHoltNPC2Script, -1  ; gives seed
 	object_event 16, 36, SPRITE_BREEDER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, HollysHoltNPC3Text, -1
 	object_event 19, 10, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, HollysHoltNPC4Text, -1 
 	object_event 24, 38, SPRITE_BREEDER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, HollysHoltNPC5Text, -1 
@@ -271,7 +271,7 @@ HollysHoltNPC3Text:
 	cont "restore balance."
 	done
 
-HollysHoltNPC4Text: ; rollout move tutor?
+HollysHoltNPC4Text: 
 	text "Just like me,"
 	line "this used to be"
 	cont "a rolling stone."

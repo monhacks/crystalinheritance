@@ -8,7 +8,7 @@ StadiumGrounds_MapScriptHeader: ; todo make everything happen once you talk to B
 	def_warp_events
 	warp_event  4, 23, STADIUM_UNDERGROUND, 1
 	warp_event 26,  5, STADIUM_BOX, 1
-	warp_event  7, 38, SERENE_SPRINGS, 3
+	warp_event  8, 39, SERENE_SPRINGS, 3
 	warp_event  7, 39, SERENE_SPRINGS, 4
 	
 	def_coord_events
@@ -30,8 +30,9 @@ StadiumGrounds_MapScriptHeader: ; todo make everything happen once you talk to B
 	object_event 34, 37, SPRITE_BRIGADER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader11, EVENT_BEAT_BOBESH_STADIUM
 	object_event  7,  9, SPRITE_BRIGADER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader12, EVENT_BEAT_BOBESH_STADIUM
 	tmhmball_event 53, 35, TM_FLAME_CHARGE, EVENT_BURNED_TOWER_B1F_TM_FLAME_CHARGE
-	itemball_event 14,  8, BLACK_BELT, EVENT_GOT_BLACK_BELT_FROM_WESLEY
+	itemball_event 14,  8, BLACK_BELT, 1, EVENT_GOT_BLACK_BELT_FROM_WESLEY
 
+	
 	object_const_def
 	const STADIUMGROUNDS_BOBESH
 	const STADIUMGROUNDS_SANDRA
@@ -91,7 +92,7 @@ StadiumGroundsBobeshScene:
 	turnobject STADIUMGROUNDS_SANDRA, DOWN
 	opentext
 	writetext SandraThankYouText
-	verbosegivetmhm TM_DAZZLING_GLEAM
+	verbosegivetmhm TM_DAZZLINGLEAM
 	waitbutton
 	special HealParty
 	writetext SandraNegotiateText
@@ -394,8 +395,7 @@ Text_StadiumSign1:
 	done
 	
 Text_StadiumSign2:
-	text "EV Training"
-	line "Facility:"
+	text "Battle Tower:"
 	
 	para "Coming soon"
 	done
@@ -428,6 +428,8 @@ StadiumGroundsSandra2Script:
 	waitbutton
 	closetext
 	playsound SFX_WARP_TO
+	setevent EVENT_SANDRA_WARPED
+	setevent EVENT_WHITNEY_GYM
 	special FadeOutPalettes
 	waitsfx
 	warp ROUTE_36, 22, 4

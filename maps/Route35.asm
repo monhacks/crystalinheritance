@@ -4,8 +4,8 @@ Route35_MapScriptHeader:
 	def_callbacks
 
 	def_warp_events
-	warp_event 13, 33, ROUTE_35_GOLDENROD_GATE, 1
-	warp_event 14, 33, ROUTE_35_GOLDENROD_GATE, 2
+	warp_event 13, 31, ROUTE_35_GOLDENROD_GATE, 1
+	warp_event 14, 31, ROUTE_35_GOLDENROD_GATE, 2
 	warp_event  7,  5, ROUTE_35_NATIONAL_PARK_GATE, 3
 
 
@@ -13,7 +13,7 @@ Route35_MapScriptHeader:
 
 	def_bg_events
 	bg_event  5,  7, BGEVENT_JUMPTEXT, Route35SignText
-	bg_event 15, 31, BGEVENT_JUMPTEXT, Route35SignText
+	bg_event 15, 29, BGEVENT_JUMPTEXT, Route35SignText
 	bg_event  4, 11, BGEVENT_ITEM + NUGGET, EVENT_ROUTE_35_HIDDEN_NUGGET
 
 	def_object_events
@@ -24,8 +24,8 @@ Route35_MapScriptHeader:
 	object_event 18, 29, SPRITE_BREEDER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBreederTheresa, -1
 	object_event  6, 10, SPRITE_FIREBREATHER, SPRITEMOVEDATA_SPINCOUNTERCLOCKWISE, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerFirebreatherWalt, -1
 	object_event  9, 10, SPRITE_JUGGLER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerJugglerIrwin, -1
-	fruittree_event  10, 25, FRUITTREE_ROUTE_35, SHORE_FOAM, PAL_NPC_BLUE
-	tmhmball_event 4, 50, TM_DRAIN_PUNCH, EVENT_GOT_TM_DRAIN_PUNCH
+	fruittree_event  10, 26, FRUITTREE_ROUTE_35, SHORE_FOAM, PAL_NPC_BLUE
+	tmhmball_event 11, 11, TM_DRAIN_PUNCH, EVENT_GOT_TM_DRAIN_PUNCH
 
 GenericTrainerCamperIvan:
 	generictrainer CAMPER, IVAN, EVENT_BEAT_CAMPER_IVAN, CamperIvanSeenText, CamperIvanBeatenText
@@ -160,48 +160,15 @@ FirebreatherWaltBeatenText:
 	done
 
 TrainerJugglerIrwin:
-	trainer JUGGLER, IRWIN1, EVENT_BEAT_JUGGLER_IRWIN, JugglerIrwin1SeenText, JugglerIrwin1BeatenText, 0, .Script
+	generictrainer JUGGLER, IRWIN1, EVENT_BEAT_JUGGLER_IRWIN, JugglerIrwin1SeenText, JugglerIrwin1BeatenText
 
-.Script:
-	loadvar VAR_CALLERID, PHONE_JUGGLER_IRWIN
-	opentext
-	checkcellnum PHONE_JUGGLER_IRWIN
-	iftrue .NumberAccepted
-	checkevent EVENT_IRWIN_ASKED_FOR_PHONE_NUMBER
-	iftrue .AskedAlready
-	writetext JugglerIrwinAfterBattleText
-	promptbutton
-	setevent EVENT_IRWIN_ASKED_FOR_PHONE_NUMBER
-	scall .AskNumber1
-	sjump .RequestNumber
-
-.AskedAlready:
-	scall .AskNumber2
-.RequestNumber:
-	askforphonenumber PHONE_JUGGLER_IRWIN
-	ifequal $1, .PhoneFull
-	ifequal $2, .NumberDeclined
-	gettrainername JUGGLER, IRWIN1, $0
-	scall .RegisteredNumber
-	sjump .NumberAccepted
-
-.AskNumber1:
-	jumpstd asknumber1m
-
-.AskNumber2:
-	jumpstd asknumber2m
-
-.RegisteredNumber:
-	jumpstd registerednumberm
-
-.NumberAccepted:
-	jumpstd numberacceptedm
-
-.NumberDeclined:
-	jumpstd numberdeclinedm
-
-.PhoneFull:
-	jumpstd phonefullm
+JugglerIrwinAfterBattleText:
+	text "They're saying"
+	line "that a new"
+	cont "technique is"
+	cont "going to bring"
+	cont "rain."
+	done
 
 JugglerIrwin1SeenText:
 	text "Have you heard"
@@ -214,14 +181,8 @@ JugglerIrwin1BeatenText:
 	line "have seen it."
 	done
 
-JugglerIrwinAfterBattleText:
-	text "They're saying"
-	line "that a new"
-	cont "technique is"
-	cont "going to bring"
-	cont "rain."
-	done
 
 Route35SignText:
 	text "Route 35"
 	done
+	

@@ -32,7 +32,7 @@ Route36NationalParkGate_MapScriptHeader:
 	object_event  6,  7, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BugCatchingContestant9BScript, EVENT_BUG_CATCHING_CONTESTANT_9B
 	object_event  6,  6, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BugCatchingContestant10BScript, EVENT_BUG_CATCHING_CONTESTANT_10B
 	object_event  3,  2, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route36NationalParkGateOfficerScript, EVENT_ROUTE_36_NATIONAL_PARK_GATE_OFFICER_NOT_CONTEST_DAY
-	object_event  7,  2, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ProfOaksAide2Script, -1
+	object_event  7,  2, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ProfOaksAide3Script, -1
 
 	object_const_def
 	const ROUTE36NATIONALPARKGATE_OFFICER1
@@ -476,34 +476,34 @@ Route36NationalParkGateOfficer1HeresThePrizeText:
 	cont "for you."
 	done
 
-ProfOaksAide2Script:
+ProfOaksAide3Script:
     faceplayer
     opentext
     checkevent EVENT_GOT_ITEMFINDER_FROM_PROF_OAKS_AIDE
     iftrue .Explain
-    writetext ProfOaksAide2HiText
+    writetext ProfOaksAide3HiText
     waitbutton
     countseencaught
     readvar VAR_DEXCAUGHT
     ifgreater 24, .HereYouGo ; greater than 24, which means 25 or more
 .UhOh
-    jumpopenedtext ProfOaksAide2UhOhText
+    jumpopenedtext ProfOaksAide3UhOhText
 .HereYouGo
-    writetext ProfOaksAide2HereYouGoText
+    writetext ProfOaksAide3HereYouGoText
     waitbutton
     givekeyitem ITEMFINDER
     iffalse .NoRoom
-    writetext ProfOaksAide2ItemFinderText
+    writetext ProfOaksAide3ItemFinderText
     playsound SFX_ITEM
     waitsfx
     itemnotify
     setevent EVENT_GOT_ITEMFINDER_FROM_PROF_OAKS_AIDE
 .Explain
-    jumpopenedtext ProfOaksAide2ExplainText
+    jumpopenedtext ProfOaksAide3ExplainText
 .NoRoom
-    jumpopenedtext ProfOaksAide2NoRoomText
+    jumpopenedtext ProfOaksAide3NoRoomText
 
-ProfOaksAide2HiText:
+ProfOaksAide3HiText:
     text "Hi! I'm one of"
     line "PROF.OAK's AIDES."
 
@@ -514,7 +514,7 @@ ProfOaksAide2HiText:
     cont "you a reward."
     done
 
-ProfOaksAide2UhOhText:
+ProfOaksAide3UhOhText:
     text "Let's see…"
     line "Uh-oh! You've only"
 
@@ -528,7 +528,7 @@ ProfOaksAide2UhOhText:
     cont "or more!"
     done
 
-ProfOaksAide2HereYouGoText:
+ProfOaksAide3HereYouGoText:
     text "Let's see…"
     line "Great job! You've"
 
@@ -541,12 +541,12 @@ ProfOaksAide2HereYouGoText:
     line "Here you go!"
     done
 
-ProfOaksAide2ItemFinderText:
+ProfOaksAide3ItemFinderText:
     text "<PLAYER> received"
     line "ITEMFINDER!"
     done
 
-ProfOaksAide2ExplainText:
+ProfOaksAide3ExplainText:
     text "ITEMFINDER will"
     line "help you locate"
     cont "hidden items."
@@ -557,7 +557,7 @@ ProfOaksAide2ExplainText:
     cont "hidden nearby!"
     done
 
-ProfOaksAide2NoRoomText:
+ProfOaksAide3NoRoomText:
     text "Oh! I see you"
     line "don't have any"
     cont "room for this."

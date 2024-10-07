@@ -27,6 +27,7 @@ Gauldenrod_MapScriptHeader: ; TODO: ADD A WANTED POSTER FOR AMOS
 	bg_event 21, 31, BGEVENT_READ, AmosWantedSign
 	bg_event 32,  6, BGEVENT_READ, GauldenrodGuildSign
 	bg_event 16,  6, BGEVENT_READ, GauldenrodTunnelSign
+	bg_event 22, 22, BGEVENT_READ, GauldenrodNoFishingSign
 
 	def_object_events
 	object_event  23, 30, SPRITE_BOBESH, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0,  OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_GAULDENROD_BOBESH
@@ -48,6 +49,7 @@ Gauldenrod_MapScriptHeader: ; TODO: ADD A WANTED POSTER FOR AMOS
 	fruittree_event  36, 7, FRUITTREE_GAULDENROD, RADIANT_OPAL, PAL_NPC_RED
 	object_event 23, 4, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BrigaderScript, EVENT_GOT_HM04_STRENGTH
 	object_event 24, 4, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BrigaderScript, EVENT_GOT_HM04_STRENGTH
+	cuttree_event 21, 23, EVENT_HOLLYS_HOLT_CUT_TREE
 
 	object_const_def
 	const GAULDENROD_BOBESH
@@ -238,6 +240,14 @@ GauldenrodTunnelSignText:
 	text "Just a humble"
 	line "abode, nothing"
 	cont "to see here."
+	
+GauldenrodNoFishingSign:
+	jumptext GauldenrodNoFishingSignText
+	
+GauldenrodNoFishingSignText:
+	text "Posted: No"
+	line "Fishing!"
+	
 	
 GauldenrodHisuiTraderScript:
 	faceplayer

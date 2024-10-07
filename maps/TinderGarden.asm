@@ -49,6 +49,8 @@ TinderGarden_MapScriptHeader: ;todo something weird happens when I stand to the 
 TinderGardenPryceIsLate: ; pryce should not be here until after you have talked to slowpoke well guy
 	checkevent SLOWPOKE_WELL_MOVED_ASIDE
 	iffalse .PryceDisappears
+	checkevent EVENT_TALKED_TO_PRYCE_TINDER_GARDEN
+	iftrue .PryceDisappears
 	appear TINDER_GARDEN_PRYCE
 	endcallback
 	
@@ -690,6 +692,7 @@ PryceScript:
 	promptbutton
 	verbosegivetmhm TM_RETURN
 	setevent EVENT_GOT_RETURN_PRYCE
+	setevent EVENT_TALKED_TO_PRYCE_TINDER_GARDEN
 	jumpthisopenedtext
 
 PryceSprigText:

@@ -4,8 +4,8 @@ GoldenrodNetBallHouse_MapScriptHeader:
 	def_callbacks
 
 	def_warp_events
-	warp_event  2,  7, GOLDENROD_CITY, 19
-	warp_event  3,  7, GOLDENROD_CITY, 19
+	warp_event  2,  7, GOLDENROD_CITY, 17
+	warp_event  3,  7, GOLDENROD_CITY, 17
 
 	def_coord_events
 

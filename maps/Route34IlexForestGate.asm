@@ -11,13 +11,13 @@ Route34IlexForestGate_MapScriptHeader:
 	warp_event  5,  7, ILEX_FOREST, 1
 
 	def_coord_events
-	coord_event  4,  7, 0, Route34IlexForestGateCelebiEvent
+
 
 	def_bg_events
 
 	def_object_events
-    object_event  8,  4, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, EggEnthusiastGrannyScript, -1
-	pokemon_event  9,  4, MILTANK, -1, -1, PAL_NPC_BLUE, Route34IlexForestGateButterfreeText, -1
+    object_event  6,  4, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, EggEnthusiastGrannyScript, -1
+	pokemon_event  7,  4, MILTANK, -1, -1, PAL_NPC_RED, Route34IlexForestGateButterfreeText, -1
 	object_event  3,  4, SPRITE_PICNICKER, SPRITEMOVEDATA_WALK_UP_DOWN, 1, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route34IlexForestGateLassText, EVENT_ROUTE_34_ILEX_FOREST_GATE_LASS
 
 	object_const_def

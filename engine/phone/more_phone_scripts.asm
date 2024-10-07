@@ -1223,8 +1223,8 @@ IrwinRumorScript:
 	iftrue UnknownScript_0xa08e0
 	checkevent EVENT_FOUGHT_SNORLAX
 	iftrue UnknownScript_0xa08d8
-	checkevent EVENT_GOT_PASS_FROM_COPYCAT
-	iftrue UnknownScript_0xa08d0
+;	checkevent EVENT_GOT_PASS_FROM_COPYCAT
+;	iftrue UnknownScript_0xa08d0
 	checkflag ENGINE_SOULBADGE
 	iftrue UnknownScript_0xa08f0
 	checkflag EVENT_BEAT_ELITE_FOUR

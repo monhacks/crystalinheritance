@@ -1,6 +1,6 @@
 GoldenrodPokecomCenter1F_MapScriptHeader:
 	def_scene_scripts
-	scene_script GoldenrodPokecomCenter1FTrigger 	
+
 
 	def_callbacks
 
@@ -32,7 +32,7 @@ GoldenrodPokecomCenter1F_MapScriptHeader:
 	bg_event 24,  3, BGEVENT_ITEM + RARE_CANDY, EVENT_GOLDENROD_POKECOM_CENTER_1F_HIDDEN_RARE_CANDY
 
 	def_object_events
-	object_event  5, 12, SPRITE_LANNA, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1 -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, PokecomLannaScript, EVENT_TALKED_TO_LANNA_POKECOM
+	object_event  5, 12, SPRITE_KURT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PokecomKurtScript, EVENT_GOT_BASEMENT_KEY
 	object_event  7,  7, SPRITE_BOWING_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodPokecenter1FNurseScript, -1
 	object_event  1,  9, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, MapNameNPC1Script, -1
 	object_event  9, 10, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, MapNameNPC2Script, -1
@@ -40,23 +40,21 @@ GoldenrodPokecomCenter1F_MapScriptHeader:
 	object_event 16,  8, SPRITE_LINK_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, WonderTradeReceptionistScript, -1
 
 	object_const_def
-	const_def POKECOM_LANNA
+	const POKECOM_KURT
 
 
-GoldenrodPokecomCenter1FTrigger:
-	sdefer .PokecomLannaScript
-	end
 
-
-PokecomLannaScript:
-	showemote EMOTE_SHOCK, POKECOM_LANNA, 10
-	applymovement POKECOM_LANNA, PokecomLannaMovesToYou
+PokecomKurtScript:
+	faceplayer
 	opentext
-	writetext LannaIsABigFanText
+	writetext KurtHasSomeFansText
 	waitbutton
 	closetext
-	giveitem BASEMENT_KEY
-	setscene $1
+	checkevent EVENT_GOT_BASEMENT_KEY
+	iftrue .end
+	givekeyitem BASEMENT_KEY
+	setevent EVENT_GOT_BASEMENT_KEY
+.end
 	end
 
 GoldenrodPokecenter1FNurseScript:
@@ -241,60 +239,56 @@ WonderTradeForGSBallPichuText2:
 	line "it carefully."
 	done
 
-PokecomLannaScript:
-	end
-
-LannaIsABigFanText:
-    text "Lanna: Excuse me,"
-    line "are you the one"
-    cont "who drove out the"
-    cont "Ilex Loggers?"
+KurtHasSomeFansText:
+    text "<PLAYER> - "
+	line "our fans in the"
+	cont "city have found"
+	cont "me. They say"
+	cont "that there is"
+	cont "a secret path"
+	cont "on the magnet"
+	cont "tracks we can"
+	cont "use to get"
+	cont "closer to Ec-"
+	cont "ruteak."
 	
-    para "... Don't answer"
-    line "that, actually."
+	para "They heard about"
+	line "our driving out"
+	cont "the loggers in"
+	cont "Ilex, and they"
+	cont "think we have"
+	cont "similar goals."
 	
-	para "It's just nice to"
-	line "see someone who"
-	cont "isn't checking"
-	cont "their Radio for"
-	cont "Whitney's latest"
-	cont "show."
-
-    para "Allow me to"
-    line "introduce myself."
-
-    para "My name is Lanna."
-    line "I run a subve-"
-	cont "rseive literary"
-	cont "magazine, with"
-	cont "...hands-on"
-	cont "literary cri-"
-	cont "ticism."
-
-	para "Let's just say "
-	line "our editing pro-"
-	cont "cess extends well" 
-	cont "beyond the "
-	cont "printed word."
-
-    para "..."
-
-    para "I see. So you"
-    line "need to get to"
-    cont "Ecruteak City,"
-    cont "but your path is"
-    cont "blocked."
+	para "In this city,"
+	line "many view Silph's"
+	cont "broadcast of"
+	cont "Whitney's show, "
+	cont "ReArming Voice."
 	
-    para "Well, I might be"
-    line "able to help."
-
-    para "But you'll have"
-    line "to help me first."
+	para "She cultivates"
+	line "a parasocial re-"
+	cont "lationship with"
+	cont "her broadcast."
 	
-    para "I'm planning an"
-    line "operation in the"
-    cont "Goldenrod"
-    cont "Underground."
+	para "She convinces "
+	line "them that their"
+	cont "families and ne-"
+	cont "ighbors aren't"
+	cont "like them."
+
+	para "So, our 'fans'"
+	line "would like our"
+	cont "help stopping"
+	cont "her broadcast."
+
+	para "They've requested"
+	line "our help in the"
+	cont "Goldenrod Under-"
+	cont "ground, where "
+	cont "there's an old"
+	cont "access tunnel"
+	cont "underneath the"
+	cont "Radio Tower."
 	
     para "Meet me there."
     done

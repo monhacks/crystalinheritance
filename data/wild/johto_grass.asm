@@ -311,29 +311,29 @@
 	def_grass_wildmons NATIONAL_PARK
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
-	wildmon 22, NIDORINO
-	wildmon 23, NIDORINA
-	wildmon 24, SUNFLORA
-	wildmon 25, BUTTERFREE
-	wildmon 20, BEEDRILL
-	wildmon 22, SUNFLORA
-	wildmon 22, PINSIR
+	wildmon 16, NIDORINO
+	wildmon 17, NIDORINA
+	wildmon 18, SUNFLORA
+	wildmon 18, BUTTERFREE
+	wildmon 16, BEEDRILL
+	wildmon 15, SUNFLORA
+	wildmon 19, PINSIR
 	; day
-	wildmon 22, NIDORINO
-	wildmon 23, NIDORINA
-	wildmon 24, SUNFLORA
-	wildmon 25, BUTTERFREE
-	wildmon 20, BEEDRILL
-	wildmon 22, SUNFLORA
-	wildmon 22, PINSIR
+	wildmon 16, NIDORINO
+	wildmon 17, NIDORINA
+	wildmon 18, SUNFLORA
+	wildmon 18, BUTTERFREE
+	wildmon 16, BEEDRILL
+	wildmon 15, SUNFLORA
+	wildmon 19, PINSIR
 	; nite
-	wildmon 22, NIDORINO
-	wildmon 23, NIDORINA
-	wildmon 24, SUNFLORA
-	wildmon 25, BUTTERFREE
-	wildmon 20, BEEDRILL
-	wildmon 22, SUNFLORA
-	wildmon 22, PINSIR
+	wildmon 16, NIDORINO
+	wildmon 17, NIDORINA
+	wildmon 18, SUNFLORA
+	wildmon 18, BUTTERFREE
+	wildmon 16, BEEDRILL
+	wildmon 15, SUNFLORA
+	wildmon 19, PINSIR
 	end_grass_wildmons
 
 	def_grass_wildmons RUINS_OF_ALPH_OUTSIDE

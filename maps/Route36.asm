@@ -26,14 +26,14 @@ Route36_MapScriptHeader:
 	def_object_events
 	object_event 53,  6, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ArthurScript, -1
 	fruittree_event 25,  4, FRUITTREE_ROUTE_36, WHT_APRICORN, PAL_NPC_SILVER ; USED TO BE A BERRY TREE
-	object_event 36, 13, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route36KurtScript, EVENT_BEAT_FALKNER
+	object_event 36, 13, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route36KurtScript, EVENT_GOT_BASEMENT_KEY
 	pokemon_event 39,  9, BRONZONG, -1, -1, PAL_NPC_BLUE, Route36BronzongText, -1
 	object_event 24,  7, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route36MatronScript, -1
-	object_event 39, 10, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route36Scientist1Text, -1
-	object_event 40,  9, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route36Scientist2Text, -1
+	object_event 39, 10, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route36Scientist1Text, -1
+	object_event 40,  9, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route36Scientist2Text, -1
 	object_event 31, 13, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerSchoolboyRoute36, -1 ; ALAN1
 	object_event 34,  3, SPRITE_FIREBREATHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerFirebreatherRoute36, -1 ; BURT
-	object_event 23, 14, SPRITE_PICNICKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerPicnickerRoute36, -1 ; GINA1
+	object_event 23, 14, SPRITE_PICNICKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerPicnickerRoute36, EVENT_BEAT_PICNICKER_GINA ; GINA1
 
 
 	object_const_def
@@ -109,6 +109,12 @@ Route36KurtText:
 	para "We'll have to find"
 	line "another way"
 	cont "around."
+	
+	para "I have some, eh,"
+	line "associates in "
+	cont "the city."
+	para "I bet they can"
+	line "can help."
 	done
 
 Route36BronzongText:

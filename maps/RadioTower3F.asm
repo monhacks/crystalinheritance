@@ -6,24 +6,22 @@ RadioTower3F_MapScriptHeader:
 
 	def_warp_events
 	warp_event  0,  0, RADIO_TOWER_2F, 1
-	warp_event 17,  0, RADIO_TOWER_4F, 4
+	warp_event 17,  0, RADIO_TOWER_4F, 2
 
 	def_coord_events
 
 	def_bg_events
 	bg_event  3,  0, BGEVENT_JUMPTEXT, RadioTower3FPersonnelSignText
 	bg_event  9,  0, BGEVENT_JUMPTEXT, RadioTower3FPokemonMusicSignText
-	bg_event 14,  0, BGEVENT_UP, CardKeySlotScript
+	bg_event 14,  0, BGEVENT_UP, CardKeySlotScript ; INACCESSIBLE
 
     def_object_events
-    object_event  2,  3, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerCooltrainerMWriter, -1
-    object_event  6,  3, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerCooltrainerMLightUp, -1
-    object_event  9,  3, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerBeautyCharm, -1
-    object_event 14,  5, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerCooltrainerMEndurance, -1
+    object_event  2,  3, SPRITE_ACE_TRAINER_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 2, TrainerCooltrainerMWriter, -1
+    object_event  6,  3, SPRITE_ACE_TRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 2, TrainerCooltrainerMLightUp, -1
+    object_event  9,  3, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_GENERICTRAINER, 4, TrainerBeautyCharm, -1
+    object_event 14,  5, SPRITE_ACE_TRAINER_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 3, TrainerCooltrainerMEndurance, -1
 
 CardKeyShutterCallback:
-;	changeblock 14, 2, $2a
-;	changeblock 14, 4, $1
 	endcallback
 
 RadioTower3FCardKeySlotText: ; keep
@@ -73,6 +71,7 @@ TrainerBeautyCharm:
     para "That's why I'm"
     line "here, to prove"
     cont "that anyone can"
+
     cont "do it!"
     done
 
@@ -136,3 +135,7 @@ CooltrainerMEnduranceBeatenText:
     cont "mad that her show"
     cont "was cut short."
     done
+
+
+CardKeySlotScript::
+	end

@@ -1,6 +1,6 @@
 GoldenrodCity_MapScriptHeader:
 	def_scene_scripts
-	scene_script GoldenrodCityTrigger0
+
 
 	def_callbacks
 	callback MAPCALLBACK_NEWMAP, GoldenrodCityFlyPointAndFloria
@@ -16,10 +16,10 @@ GoldenrodCity_MapScriptHeader:
 	warp_event 19,  7, GOLDENROD_NAME_RATER, 1
 	warp_event 28, 27, GOLDENROD_DEPT_STORE_1F, 1
 	warp_event 18, 21, GOLDENROD_GAME_CORNER, 1
-	warp_event  9, 15, RADIO_TOWER_1F, 1 ; hole
+	warp_event  9, 15, RADIO_TOWER_1F, 1 ; CHECK
 	warp_event 23,  1, ROUTE_35_GOLDENROD_GATE, 3
-	warp_event 13,  5, UNDERGROUND_PATH_SWITCH_ROOM_ENTRANCES, 8
-	warp_event 13, 29, UNDERGROUND_PATH_SWITCH_ROOM_ENTRANCES, 5
+	warp_event 13,  5, UNDERGROUND_PATH_SWITCH_ROOM_ENTRANCES, 5
+	warp_event 13, 29, UNDERGROUND_PATH_SWITCH_ROOM_ENTRANCES, 2
 	warp_event 18, 27, GOLDENROD_POKECOM_CENTER_1F, 2
 	warp_event 30, 15, GOLDENROD_MUSEUM_1F, 2
 	warp_event 37, 19, GOLDENROD_NET_BALL_HOUSE, 1
@@ -27,7 +27,7 @@ GoldenrodCity_MapScriptHeader:
 	warp_event 13, 21, GOLDENROD_HP_UP_HOUSE, 1
 
 	def_coord_events
-	coord_event  9, 15, 1, GoldenrodCityPanUpScript
+
 
 	def_bg_events
 	bg_event 14, 14, BGEVENT_JUMPTEXT, GoldenrodCityStationSignText
@@ -42,11 +42,11 @@ GoldenrodCity_MapScriptHeader:
 	bg_event 14, 30, BGEVENT_JUMPTEXT, GoldenrodCityUndergroundSignSouthText
 	bg_event 20, 27, BGEVENT_JUMPTEXT, PokeComCenterSignText
 	bg_event 34,  6, BGEVENT_JUMPTEXT, GoldenrodCityFlowerShopSignText
-	bg_event 27, 15, BGEVENT_JUMPTEXT, GoldenrodMuseumSignText
+
 
 	def_object_events
 	object_event 16, 22, SPRITE_POKEFAN_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MoveTutor, -1 ; no changes
-	object_event 28,  8, SPRITE_CUTE_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodCityGymLassText, -1 ; done
+	object_event 27,  8, SPRITE_CUTE_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodCityGymLassText, -1 ; done
 	object_event 38, 24, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodCityBeautyText, -1 ; done
 	object_event 11, 18, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodCityPokefanMText, -1 ; done
 	object_event 38, 17, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 2, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodCityYoungster1Text, -1 ; done
@@ -55,7 +55,7 @@ GoldenrodCity_MapScriptHeader:
 	object_event 25, 17, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GoldenrodCityYoungster2Script, -1 ; no changes
 	object_event 20, 10, SPRITE_LASS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodCityLassText, -1 ; done
 	object_event 15, 27, SPRITE_GRAMPS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodCityGrampsText, -1 ; done
-
+	object_event  9, 16, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 1, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodCityOfficerText, EVENT_FOUGHT_RADIO_TOWER_RIVAL ; done
 
 	object_const_def
 
@@ -150,16 +150,6 @@ GoldenrodCityYoungster2Script:
 	iftrue_jumpopenedtext GoldenrodCityYoungster2Text
 	jumpopenedtext GoldenrodCityYoungsterDayText
 
-GoldenrodCityPanUpMovementData:
-	step_up
-	step_up
-	step_up
-	step_up
-	step_up
-	step_up
-	step_up
-	step_end
-
 GoldenrodCityPokefanMText:
 	text "I heard that"
 	line "Goldenrod used to"
@@ -245,6 +235,7 @@ GoldenrodCityLassText:
 	para "But sometimes"
 	line "she's out of her"
 	cont "depth."
+	done
 
 
 GoldenrodCityGrampsText:
@@ -254,24 +245,29 @@ GoldenrodCityGrampsText:
 	para "I'm so proud."
 	done
 
+GoldenrodCityOfficerText:
+	text "Badge access"
+	line "only."
+	done
+
 GoldenrodCityGymLassText:
 	text "Want to do a fun"
 	line "experiment?"
 
 	para "Take a quote "
-	line "from Whitney’s"
+	line "from Whitney's"
 	cont "show and ask a"
 	cont "friend if she "
 	cont "said it, or if "
 	cont "Giovanni said it."
 	
-	para "You’d be surprised"	
+	para "You'd be surprised"	
 	line "how often they"
 	cont "get it wrong."
 	done
 
 GoldenrodCityBeautyText:
-	text "“I wonder what this"
+	text "I wonder what this"
 	line "town was like a "
 	cont "long time ago."
 	done

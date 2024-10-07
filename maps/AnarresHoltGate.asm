@@ -117,26 +117,6 @@ AnarresHoltGateTammyScript:
 AnarresHoltGateHollisScript:
 	end
 
-AnarresHoltGateNPCScript:
-	jumptextfaceplayer AnarresHoltGateNPCText
-
-AnarresHoltGateNPCText:
-	text "When the Hisuians"
-	line "visited, they"
-	cont "brought the most"
-	cont "incredible"
-	cont "#mon!"
-
-	para "I saw one that"
-	line "looked like a"
-	cont "Voltorb, but made"
-	cont "of wood!"
-
-	para "I wonder what"
-	line "other amazing"
-	cont "#MON exist in"
-	cont "far-off regions?"
-	done
 
 TammyExitMovement:
 	step_right
@@ -145,3 +125,76 @@ TammyExitMovement:
 	step_right
 	step_right
 	step_end
+	
+	
+AnarresHoltGateNPCScript:
+    faceplayer
+    opentext
+    checkevent EVENT_GOT_MYSTIC_WATER_ANARRES
+    iftrue .AlreadyGotItem
+    writetext AnarresHoltGateNPCText
+    promptbutton
+    verbosegiveitem MYSTIC_WATER
+    iffalse .BagFull
+    setevent EVENT_GOT_MYSTIC_WATER_ANARRES
+    writetext AnarresHoltGateNPCAfterText
+    waitbutton
+    closetext
+    end
+
+.AlreadyGotItem:
+    writetext AnarresHoltGateNPCRepeatText
+    waitbutton
+    closetext
+    end
+
+.BagFull:
+    writetext AnarresHoltGateNPCBagFullText
+    waitbutton
+    closetext
+    end
+
+AnarresHoltGateNPCText:
+    text "When the Hisuians"
+    line "visited, they"
+    cont "brought the most"
+    cont "incredible"
+    cont "#mon!"
+    para "I saw one that"
+    line "looked like a"
+    cont "Voltorb, but made"
+    cont "of wood!"
+    para "I wonder what"
+    line "other mystical"
+    cont "#mon exist in"
+    cont "far-off regions?"
+    para "Oh! Speaking of"
+    line "mystical things,"
+    cont "take this!"
+    done
+
+AnarresHoltGateNPCAfterText:
+    text "That Mystic Water"
+    line "will power up"
+    cont "Water-type moves."
+    para "Maybe it'll help"
+    line "you discover some"
+    cont "mystical #mon!"
+    done
+
+AnarresHoltGateNPCRepeatText:
+    text "I hope that Mystic"
+    line "Water helps you"
+    cont "on your journey!"
+    para "Keep an eye out"
+    line "for mysterious"
+    cont "#mon!"
+    done
+
+AnarresHoltGateNPCBagFullText:
+    text "Oh! Your Bag is"
+    line "full. Make some"
+    cont "room and come"
+    cont "back for this"
+    cont "Mystic Water!"
+    done
