@@ -27,7 +27,6 @@ Route43_MapScriptHeader:
 	object_event  4, 16, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerFisherMarvin, -1
 	object_event  8, 10, SPRITE_PICNICKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerPicnickerTiffany1, -1
 	object_event 13, 40, SPRITE_CAMPER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerCamperSpencer, -1
-	object_event  8, 32, SPRITE_BREEDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBreederJody, -1
 	object_event 11, 24, SPRITE_CUTE_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSrandjrIvyandamy1, -1
 	object_event 11, 25, SPRITE_CUTE_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSrandjrIvyandamy2, -1
 	cuttree_event  2, 28, EVENT_ROUTE_43_CUT_TREE
@@ -63,8 +62,6 @@ Route43SightseerfScript:
 	faceplayer
 	checkevent EVENT_BEAT_SIGHTSEERF_LENIE
 	iftrue .Beaten
-	checkevent EVENT_BEAT_BREEDER_JODY
-	iffalse_jumptext .IntroText
 	checkevent EVENT_BEAT_SR_AND_JR_IVY_AND_AMY
 	iffalse_jumptext .IntroText
 	checkevent EVENT_BEAT_CAMPER_SPENCER
@@ -177,20 +174,6 @@ Route43SightseerfScript:
 	para "please be careful"
 	line "if you give it to"
 	cont "a #mon."
-	done
-
-GenericTrainerBreederJody:
-	generictrainer BREEDER, JODY, EVENT_BEAT_BREEDER_JODY, BreederJodySeenText, BreederJodyBeatenText
-
-	text "A baby #mon"
-	line "can sometimes"
-
-	para "inherit a move"
-	line "from its father,"
-
-	para "even one that it"
-	line "wouldn't normally"
-	cont "learn."
 	done
 
 GenericTrainerSrandjrIvyandamy1:
@@ -571,16 +554,6 @@ PicnickerTiffanyClefairyText:
 	text "Isn't my Clefairy"
 	line "just the most"
 	cont "adorable thing?"
-	done
-
-BreederJodySeenText:
-	text "I bred my #mon"
-	line "so they know"
-	cont "special moves!"
-	done
-
-BreederJodyBeatenText:
-	text "I lost anyway!"
 	done
 
 SrandjrIvyandamy1SeenText:

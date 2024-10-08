@@ -5,9 +5,9 @@ NPCTrades:
 	db $EE, $EE, $EE, HIDDEN_ABILITY | NAT_SATK_UP_ATK_DOWN,  FEMALE, DUSK_BALL,   SITRUS_BERRY
 	dw 37460
 	rawchar "Mike@@@@", $00
-; NPC_TRADE_KYLE in Violet City
-	rawchar 0, POLIWAG,    VOLTORB,    "Mimic@@@@@@"
-	db $EE, $EE, $EE, HIDDEN_ABILITY | NAT_SPD_UP_DEF_DOWN,   MALE,   DECI_BALL, PERSIM_BERRY
+; NPC_TRADE_KYLE in Second Class Cabin 
+	rawchar 0, GASTLY,    MR__MIME,    "Pagliacci@@" ; Pagliacci
+	db $EE, $EE, $EE, HIDDEN_ABILITY | NAT_SATK_UP_ATK_DOWN,   MALE,   JEZE_BALL,   PERSIM_BERRY
 	dw 48926
 	rawchar "Kyle@@@@", $00
 ; NPC_TRADE_TIM in Olivine City

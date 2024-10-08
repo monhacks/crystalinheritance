@@ -24,10 +24,10 @@ RouteKajo_MapScriptHeader: ; trainer parties, check warps
     bg_event 56, 28, BGEVENT_ITEM + NUGGET, EVENT_ROUTE_KAJO_HIDDEN_NUGGET
     bg_event 16, 29, BGEVENT_READ, RouteKajoPetroglyph1
     bg_event 24, 27, BGEVENT_READ, RouteKajoPetroglyph2
-    bg_event  8, 11, BGEVENT_READ, RouteKajoPetroglyph3
+    bg_event 36, 17, BGEVENT_READ, RouteKajoPetroglyph3
     bg_event  8, 21, BGEVENT_READ, RouteKajoPetroglyph4
     bg_event  8, 32, BGEVENT_READ, RouteKajoSignpost
-    bg_event 21, 21, BGEVENT_READ, RouteKajoCabinSign ; todo
+    bg_event 21, 21, BGEVENT_READ, RouteKajoCabinSign
 
     
 	def_object_events
@@ -42,7 +42,11 @@ RouteKajo_MapScriptHeader: ; trainer parties, check warps
     object_event 42, 15, SPRITE_BREEDER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, TrainerBreederJodyScript, -1;
     object_event 57,  6, SPRITE_POKEFAN_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, TrainerPokefan_MRobertScript, -1;
     object_event 54, 17, SPRITE_SCHOOLGIRL, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, TrainerSchoolgirlFaithScript, -1;
-
+	itemball_event 22, 34, REVIVE, 1, EVENT_KAJO_REVIVE2 ;ok
+	itemball_event 22, 34, SUPER_POTION, 1, EVENT_KAJO_POTION2 ;ok
+	itemball_event 22, 34, ETHER, 1, EVENT_KAJO_ETHER ;ok
+	itemball_event 22, 34, ELIXIR, 1, EVENT_KAJO_ELIXIR ;ok
+	tmhmball_event 50,  1, TM_STEEL_WING, EVENT_GOT_TM47_STEEL_WING ; ok 
 
 	object_const_def
 	const KAJO_SCHOOLGIRL
@@ -203,8 +207,12 @@ BreederJodySeenText:
     done
 
 BreederJodyBeatenText:
-    text "You've got a"
-    line "golden team!"
+    text "Lots of people"
+	line "are hiking. I"
+	cont "even saw a"
+	cont "little girl"
+	cont "headed up to"
+	cont "the peak."
     done
 
 Pokefan_MRobertSeenText:
@@ -267,3 +275,9 @@ KajoFeraligatrText:
 	text "Feraligatr:"
 	line "Snarl..."
 	done
+
+RouteKajoCabinSign:
+    text "Cozy Cabin"
+	para "Weary travelers"
+	line "welcome"	
+    done

@@ -22,7 +22,6 @@ Route42_MapScriptHeader:
 
 	def_object_events
 	object_event 40, 10, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerFisherTully1, -1
-	object_event 51,  9, SPRITE_HIKER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerHikerBenjamin, -1
 	object_event 47,  8, SPRITE_POKEMANIAC, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerPokemaniacShane, -1
 	object_event  2,  8, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route42OfficerText, EVENT_BEAT_JASMINE
 	object_event  2,  9, SPRITE_OFFICER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route42OfficerText, EVENT_BEAT_JASMINE
@@ -148,16 +147,6 @@ UnknownScript_0x1a930d:
 UnknownScript_0x1a9311:
 	jumpstd packfullm
 
-GenericTrainerHikerBenjamin:
-	generictrainer HIKER, BENJAMIN, EVENT_BEAT_HIKER_BENJAMIN, HikerBenjaminSeenText, HikerBenjaminBeatenText
-
-	text "Losing feels in-"
-	line "significant if you"
-
-	para "look up at the big"
-	line "sky!"
-	done
-
 GenericTrainerPokemaniacShane:
 	generictrainer POKEMANIAC, SHANE, EVENT_BEAT_POKEMANIAC_SHANE, PokemaniacShaneSeenText, PokemaniacShaneBeatenText
 
@@ -193,16 +182,6 @@ FisherTullyAfterBattleText:
 
 	para "That's the best"
 	line "part of fishing!"
-	done
-
-HikerBenjaminSeenText:
-	text "Ah, it's good to"
-	line "be outside!"
-	cont "I feel so free!"
-	done
-
-HikerBenjaminBeatenText:
-	text "Gahahah!"
 	done
 
 PokemaniacShaneSeenText:
