@@ -3281,7 +3281,7 @@ SECTION "_ElmText2", ROMX
 _ElmText2::
 	text "You will get"
 	line "your very first"
-	cont "#mon."
+	cont "#mon partner."
 	
 	para "Your dad's first"
 	line "was an ornery"
@@ -3300,24 +3300,35 @@ _ElmText4::
 
 SECTION "_ElmText5", ROMX
 _ElmText5::
-	text "I know that the"
-	line "drought makes"
-	cont "it less festive."
+	text "Ah, this drought..."
+	line "It's been tough on"
+	cont "everyone, hasn't it?"
+
+	para "But you know, back"
+	line "in my day, we had"
+	cont "our share of hard"
+	cont "times too."
+
+	para "What got us through"
+	line "was coming togeth-"
+	cont "er, sharing tales,"
+	cont "and remembering"
+	cont "what's important."
+
+	para "That's why this"
+	line "ceremony matters."
 	
-	para "I can't help but"
-	line "feel the drought"
-	cont "is related to"
-	cont "the destruction"
-	cont "nearby."
-	
-	para "But that's why"
-	line "we must do the"
-    cont "ritual!"
-	
-	para "To recommit our-"
-	line "selves to live"
-	cont "in harmony with"
-	cont "#mon!"
+	para "It's not just"
+	line "tradition, it's..."
+
+	para "Well, it's a re-"
+	line "minder. Of how we"
+	cont "and #mon are"
+	cont "all connected."
+
+	para "Who knows? Our"
+	line "stories might just"
+	cont "bring some rain."
 	prompt
 
 SECTION "_ElmText6", ROMX
@@ -3333,18 +3344,12 @@ _ElmText7::
 
 if !DEF(DEBUG)
 	para "Your very own"
-	line "#mon story is"
-	cont "about to unfold."
+	line "story is about"
+	cont "to unfold."
 
 	para "You'll face fun"
 	line "times and tough"
 	cont "challenges."
-
-	para "A world of dreams"
-	line "and adventures"
-
-	para "with #mon"
-	line "awaits! Let's go!"
 endc
 
 	para "I'll be seeing you"

@@ -214,16 +214,18 @@ KurtLetsBegin:
 	done
 	
 KurtLetsBegin2:	
-	text "Ilex, we take"
-	line "this tree to"
-	cont "honor the rest."
+	text "Ilex, we honor"
+	line "this tree, symbol"
+	cont "of life's cycles."
+
+	para "Cleanse our spir-"
+	line "its as leaves fall"
+	cont "and new buds form."
 	
-	para "Please cleanse"
-	line "us of impurities"
-	cont "in ourselves and"
-	cont "our relationship"
-	cont "with the rest of"
-	cont "nature."
+	para "May we grow anew"
+	line "with nature's rhy-"
+	cont "thms, forever ent-"
+	cont "wined."
 	done
 
 TGOakBeginMovement:
@@ -696,33 +698,39 @@ PryceScript:
 	jumpthisopenedtext
 
 PryceSprigText:
-	text "Ah, <PLAYER>,"
-	line "Johto's been a"
-	cont "bit gloomy"
-	cont "lately."
+	text "Gym Leaders have"
+	line "lost their flame."
 
-	para "Even some Gym"
-	line "Leaders seem to"
-	cont "have lost their"
-	cont "spark!"
-
-	para "But fear not!"
-	line "I'm on a grand"
-	cont "quest to reignite"
-	cont "their passions!"
-
-	para "This little sprig"
-	line "from this sacred"
-	cont "blossom tree-"
-
-	para "It's more than"
-	line "just a twig,"
-	cont "it's hope!"
-
-	para "It'll remind them"
-	line "of the heritage"
-	cont "they're meant"
-	cont "to uphold!"
+	para "I seek to re-"
+	line "kindle their fire"
+	cont "through wisdom."
+	
+	para "Do you know why"
+	line "we perform the"
+	cont "ceremony at the"
+	cont "blossom trees?"
+	
+	para "Once a year, the"
+	line "fruits emerge and"
+	cont "leaves turn red,"
+	cont "as if the tree"
+	cont "is going down in"
+	cont "flames."
+	
+	para "The tree propa-"
+	line "gates itself as"
+	cont "the fruits and"
+	cont "leaves fall to"
+	cont "the ground."
+	
+	para "The next genera-"
+	line "tion of saplings"
+	cont "can rise amidst"
+	cont "their inheritance"
+	cont "of fallen leaves,"
+	cont "like a phoenix"
+	cont "rising up from"
+	cont "the ashes."
 	done
 
 PrycePokemonText:
