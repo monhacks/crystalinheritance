@@ -9932,7 +9932,7 @@ VeteranMGroup:
 ; ================
 
 	; VETERANM
-	db "Matthew@"
+	db "Matthew@" ; MATT
 	db TRAINERTYPE_ITEM | TRAINERTYPE_MOVES
 	; party
 	db 32, FERALIGATR, KINGS_ROCK

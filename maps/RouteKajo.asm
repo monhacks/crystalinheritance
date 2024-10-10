@@ -22,12 +22,12 @@ RouteKajo_MapScriptHeader: ; trainer parties, check warps
     bg_event  3,  5, BGEVENT_ITEM + FULL_RESTORE, EVENT_ROUTE_KAJO_HIDDEN_FULL_RESTORE
     bg_event 46, 12, BGEVENT_ITEM + REVIVE, EVENT_ROUTE_KAJO_HIDDEN_REVIVE
     bg_event 56, 28, BGEVENT_ITEM + NUGGET, EVENT_ROUTE_KAJO_HIDDEN_NUGGET
-    bg_event 16, 29, BGEVENT_READ, RouteKajoPetroglyph1
-    bg_event 24, 27, BGEVENT_READ, RouteKajoPetroglyph2
-    bg_event 36, 17, BGEVENT_READ, RouteKajoPetroglyph3
-    bg_event  8, 21, BGEVENT_READ, RouteKajoPetroglyph4
-    bg_event  8, 32, BGEVENT_READ, RouteKajoSignpost
-    bg_event 21, 21, BGEVENT_READ, RouteKajoCabinSign
+    bg_event 16, 29, BGEVENT_JUMPTEXT, RouteKajoPetroglyph1
+    bg_event 24, 27, BGEVENT_JUMPTEXT, RouteKajoPetroglyph2
+    bg_event 36, 17, BGEVENT_JUMPTEXT, RouteKajoPetroglyph3
+    bg_event  8, 21, BGEVENT_JUMPTEXT, RouteKajoPetroglyph4
+    bg_event  8, 32, BGEVENT_JUMPTEXT, RouteKajoSignpost
+    bg_event 21, 21, BGEVENT_JUMPTEXT, RouteKajoCabinSign
 
     
 	def_object_events
@@ -37,11 +37,12 @@ RouteKajo_MapScriptHeader: ; trainer parties, check warps
     object_event 19, 27, SPRITE_HIKER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, TrainerHikerBenjaminScript, -1;
     object_event 35, 18, SPRITE_HIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, TrainerHikerErikScript, -1;
     object_event 27, 13, SPRITE_HIKER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, TrainerHikerMichaelScript, -1;
-    object_event  7, 8, SPRITE_VETERAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, TrainerVeteran_MMatthewScript, -1;
+    object_event  7, 8, SPRITE_VETERAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, TrainerVeteran_MMatthewScript, -1;
 	pokemon_event  6, 8, FERALIGATR, -1, -1, PAL_NPC_BLUE, KajoFeraligatrText, -1	;
     object_event 42, 15, SPRITE_BREEDER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, TrainerBreederJodyScript, -1;
     object_event 57,  6, SPRITE_POKEFAN_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, TrainerPokefan_MRobertScript, -1;
     object_event 54, 17, SPRITE_SCHOOLGIRL, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, TrainerSchoolgirlFaithScript, -1;
+	; NEED TO PLACE THESE?
 	itemball_event 22, 34, REVIVE, 1, EVENT_KAJO_REVIVE2 ;ok
 	itemball_event 22, 34, SUPER_POTION, 1, EVENT_KAJO_POTION2 ;ok
 	itemball_event 22, 34, ETHER, 1, EVENT_KAJO_ETHER ;ok
@@ -68,7 +69,7 @@ TrainerCamperBarryScript:
     done
 
 TrainerPicnickerTiffanyScript:
-    generictrainer PICNICKER, TIFFANY, EVENT_BEAT_PICNICKER_TIFFANY, PicnickerTiffanySeenText, PicnickerTiffanyBeatenText
+    generictrainer PICNICKER, TIFFANY1, EVENT_BEAT_PICNICKER_TIFFANY, PicnickerTiffanySeenText, PicnickerTiffanyBeatenText
 
     text "My #mon are"
     line "tired. We've been"
@@ -103,7 +104,7 @@ TrainerHikerMichaelScript:
     done
 
 TrainerVeteran_MMatthewScript:
-    generictrainer VETERAN_M, MATTHEW, EVENT_BEAT_VETERAN_M_MATTHEW, Veteran_MMatthewSeenText, Veteran_MMatthewBeatenText
+    generictrainer VETERANM, MATT, EVENT_BEAT_VETERANM_MATT, Veteran_MMatthewSeenText, Veteran_MMatthewBeatenText
 
     text "I'm just giving"
     line "you a hard time."
@@ -122,7 +123,7 @@ TrainerBreederJodyScript:
     done
 
 TrainerPokefan_MRobertScript:
-    generictrainer POKEFAN_M, ROBERT, EVENT_BEAT_POKEFAN_M_ROBERT, Pokefan_MRobertSeenText, Pokefan_MRobertBeatenText
+    generictrainer POKEFANM, ROBERT, EVENT_BEAT_POKEFANM_ROBERT, Pokefan_MRobertSeenText, Pokefan_MRobertBeatenText
 
     text "I didn't realize"
     line "how out of shape"

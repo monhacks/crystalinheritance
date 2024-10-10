@@ -17,7 +17,7 @@ KajoCabin_MapScriptHeader: ;	def_scene_scripts
 
 	def_object_events
     object_event 2, 3, SPRITE_SCHOOLGIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, KajoCabinSchoolgirlScript, EVENT_VISITED_NAVEL_ROCK ; should be disappeared until you talk to her dad
-    object_event 5, 3, SPRITE_POKEFANM, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, KajoCabinDadScript, EVENT_TALKED_TO_LOST_KAJO_GIRL ; 	
+    object_event 5, 3, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, KajoCabinDadScript, EVENT_TALKED_TO_LOST_KAJO_GIRL ; 	
 
 
 	object_const_def
