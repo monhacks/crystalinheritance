@@ -268,7 +268,7 @@ ENDM
 	map_const SECOND_CLASS_CABIN,						   6,  3 ; 4 GAME CORNER
 	map_const KAJO_CABIN,                                  4,  4 ; SHARE ONE OF THE HOUSE DATAS?
 	map_const UNDERGROUND_RADIO_TOWER,                    20, 5 ; TUNNEL
-
+;	map_const ROUTE_KAJO_RUINS_OF_ALPH_GATE, 			   5,  4 ; 
 
 	newgroup                                                     ; 13
 	map_const CAPITAL_CULL_GATE,                           4, 4, ; SPROUT TOWER

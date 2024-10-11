@@ -16,31 +16,36 @@ Route32RuinsOfAlphGate_MapScriptHeader:
 	def_object_events
 	object_event  5,  2, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route32RuinsOfAlphGateOfficerText, -1
 	object_event  8,  2, SPRITE_HIKER, SPRITEMOVEDATA_WALK_UP_DOWN, 1, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route32RuinsOfAlphGatePokefanMText, -1
-	object_event  1,  6, SPRITE_CAMPER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route32RuinsOfAlphGateYoungsterText, -1
+	object_event  1,  6, SPRITE_KURT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route32RuinsOfAlphGateKurtText, EVENT_BEAT_FALKNER
 
 Route32RuinsOfAlphGateOfficerText:
 	text "Ruins of Alph"
 
-	para "A Look-and-Touch"
-	line "Tourist Site"
+	para "Connect with"
+	line "your history!"
 
-	para "Try the sliding"
-	line "stone panels!"
 	done
 
 Route32RuinsOfAlphGatePokefanMText:
-	text "You're studying"
-	line "the ruins?"
-
-	para "I see a scientist"
-	line "in the making."
+	text "If I had one"
+	line "wish, it would"
+	cont "be for a big"
+	cont "raincloud."
+	
+	para "The ponds in"
+	line "Violet are near-"
+	cont "ly dried up!"
 	done
 
-Route32RuinsOfAlphGateYoungsterText:
-	text "There are drawings"
-	line "on stone panels."
-
-	para "I tried moving"
-	line "them. I wonder"
-	cont "what they are."
+Route32RuinsOfAlphGateKurtText:
+	text "Well, our plan"
+	line "to go around"
+	cont "has come to a"
+	cont "screeching halt"
+	cont "due to that"
+	cont "excavation."
+	
+	para "We have to get"
+	line "them to pause"
+	cont "to let us past."
 	done

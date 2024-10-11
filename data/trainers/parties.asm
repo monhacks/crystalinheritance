@@ -1603,20 +1603,22 @@ YoungsterGroup:
 ; ================
 
 	; YOUNGSTER
-	db "Albert@"
+	db "Albert@" ; ROUTE 32
 	db TRAINERTYPE_NORMAL
 	; party
-	db 6, MEOWTH
-	db 8, ZUBAT
+	db 26, FURRET
+	db 28, GOLBAT
 	db -1 ; end
 
 ; ================
 
 	; YOUNGSTER
-	db "Gordon@"
+	db "Gordon@" ; ROUTE 32
 	db TRAINERTYPE_NORMAL
 	; party
-	db 10, WOOPER
+	db 22, BAYLEEF
+	db 22, QUILAVA
+	db 22, CROCONAW
 	db -1 ; end
 
 ; ================
@@ -1934,11 +1936,13 @@ CamperGroup:
 
 ; ================
 
-	; CAMPER
+	; CAMPER ; route 32
 	db "Lloyd@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 56, NIDOKING
+	db 24, ARBOK
+	db 26, WEEPINBELL
+	db 28, PIDGEOTTO
 	db -1 ; end
 
 ; ================
@@ -2522,7 +2526,7 @@ FisherGroup:
 ; ================
 
 	; FISHER
-	db "Ralph@"
+	db "Ralph@" ; ALPH
 	db TRAINERTYPE_NORMAL
 	; party
 	db 7, CHINCHOU
@@ -2574,10 +2578,12 @@ FisherGroup:
 ; ================
 
 	; FISHER
-	db "Tully@"
+	db "Tully@" ; ROUTE 32
 	db TRAINERTYPE_NORMAL
 	; party
-	db 30, QWILFISH
+	db 25, STARYU
+	db 25, SLOWPOKE
+	db 28, LANTURN	
 	db -1 ; end
 
 ; ================
@@ -2652,16 +2658,16 @@ FisherGroup:
 
 ; ================
 
-	; FISHER
+	; FISHER ; route 32
 	db "Justin@"
 	db TRAINERTYPE_MOVES
 	; party
-	db 38, QWILFISH
+	db 26, QWILFISH
 		db WATERFALL, TAKE_DOWN, PIN_MISSILE, ROLLOUT
-	db 38, GYARADOS
+	db 25, GYARADOS
 		db WATERFALL, DRAGON_PULSE, DRAGON_RAGE, RAIN_DANCE
-	db 42, OCTILLERY
-		db PSYBEAM, AURORA_BEAM, OCTAZOOKA, HYPER_BEAM
+	db 27, OCTILLERY
+		db PSYBEAM, AURORA_BEAM, OCTAZOOKA, FLAMETHROWER
 	db -1 ; end
 
 ; ================
@@ -2687,11 +2693,11 @@ FisherGroup:
 ; ================
 
 	; FISHER
-	db "Henry@"
+	db "Henry@" ; ROUTE 32
 	db TRAINERTYPE_NORMAL
 	; party
-	db 8, POLIWAG
-	db 8, POLIWAG
+	db 25, POLITOED
+	db 27, TENTACRUEL
 	db -1 ; end
 
 ; ================
@@ -3060,12 +3066,11 @@ BirdKeeperGroup:
 ; ================
 
 	; BIRD_KEEPER
-	db "Peter@"
+	db "Peter@" ; ROUTE 32
 	db TRAINERTYPE_NORMAL
 	; party
-	db 6, PIDGEY
-	db 6, PIDGEY
-	db 8, PIDGEY
+	db 28, SKARMORY
+	db 28, GLIGAR
 	db -1 ; end
 
 ; ================
@@ -9432,10 +9437,12 @@ CooltrainerMGroup:
 	db "Finch@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_EVS | TRAINERTYPE_DVS | TRAINERTYPE_PERSONALITY | TRAINERTYPE_MOVES
 	; party
-	db 8, GEODUDE, AIR_BALLOON, 12, $DD, $DD, $DD, ABIL_GEODUDE_STURDY | NAT_DEF_UP_SPD_DOWN, MALE
-		db TACKLE, DEFENSE_CURL, MUD_SLAP, ROLLOUT
-	db 9, FLAAFFY, AIR_BALLOON, 12, $DD, $DD, $DD, ABIL_FLAAFFY_STATIC | NAT_SATK_UP_SDEF_DOWN, MALE
-		db TACKLE, THUNDER_WAVE, THUNDERSHOCK, MUD_SLAP
+	db 30, MAGNEMITE, AIR_BALLOON, 0, $DD, $DD, $DD, ABIL_MAGNETON_STATIC | NAT_SATK_UP_SDEF_DOWN, MALE
+		db FLASH_CANNON, THUNDERBOLT, THUNDER_WAVE, NO_MOVE
+	db 30, MAGCARGO, AIR_BALLOON, 0, $DD, $DD, $DD, ABIL_MAGCARGO_FLAME_BODY | NAT_DEF_UP_SPD_DOWN, MALE
+		db SCALD, EMBER, ROCK_THROW, NO_MOVE
+	db 30, AMPHAROS, AIR_BALLOON, 0, $DD, $DD, $DD, ABIL_AMPHAROS_STATIC | NAT_SATK_UP_SDEF_DOWN, MALE
+		db FIRE_PUNCH, THUNDER_WAVE, THUNDERPUNCH, NO_MOVE
 	db -1 ; end
 
 ; ================
@@ -9444,10 +9451,12 @@ CooltrainerMGroup:
 	db "Petrie@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_EVS | TRAINERTYPE_DVS | TRAINERTYPE_PERSONALITY | TRAINERTYPE_MOVES
 	; party
-	db 11, WEEPINBELL, MIRACLE_SEED, 20, $EE, $EE, $EE, ABIL_WEEPINBELL_CHLOROPHYLL | NAT_ATK_UP_SATK_DOWN, MALE
-		db VINE_WHIP, GROWTH, WRAP, SLEEP_POWDER
-	db 11, ZUBAT, MIRACLE_SEED, 20, $EE, $EE, $EE, ABIL_ZUBAT_INNER_FOCUS | NAT_SATK_UP_SDEF_DOWN, MALE
-		db GUST, ABSORB, ASTONISH, BITE
+	db 30, MAGCARGO, AIR_BALLOON, 0, $DD, $DD, $DD, ABIL_MAGCARGO_FLAME_BODY | NAT_DEF_UP_SPD_DOWN, MALE
+		db SCALD, EMBER, ROCK_THROW, NO_MOVE
+	db 30, MAGNETON, AIR_BALLOON, 0, $DD, $DD, $DD, ABIL_MAGNETON_STATIC | NAT_SATK_UP_SDEF_DOWN, MALE
+		db FLASH_CANNON, THUNDERBOLT, THUNDER_WAVE, NO_MOVE
+	db 30, WEEZING, AIR_BALLOON, 0, $DD, $DD, $DD, ABIL_WEEZING_NEUTRALIZING_GAS | NAT_SATK_UP_SDEF_DOWN, MALE
+		db SLUDGE_BOMB, FLAMETHROWER, SMOKESCREEN, NO_MOVE
 	db -1 ; end
 
 ; ================

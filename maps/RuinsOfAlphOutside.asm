@@ -8,16 +8,16 @@ RuinsOfAlphOutside_MapScriptHeader:
 	def_warp_events ; these are probably wrong
 	warp_event  4, 13, RUINS_OF_ALPH_HO_OH_CHAMBER, 1 ; last chamber
 	warp_event 18, 39, RUINS_OF_ALPH_KABUTO_CHAMBER, 1 ; first chamber
-	warp_event  8, 25, RUINS_OF_ALPH_OMANYTE_CHAMBER, 1
-	warp_event 16, 13, RUINS_OF_ALPH_AERODACTYL_CHAMBER, 1
-	warp_event  8, 33, UNION_CAVE_B1F_NORTH, 1
-	warp_event  3,  5, ROUTE_36_RUINS_OF_ALPH_GATE, 3
-	warp_event 15, 26, ROUTE_32_RUINS_OF_ALPH_GATE, 1
-	warp_event 15, 27, ROUTE_32_RUINS_OF_ALPH_GATE, 2
+	warp_event  8, 25, RUINS_OF_ALPH_OMANYTE_CHAMBER, 1 ; second chamber? 
+	warp_event 16, 13, RUINS_OF_ALPH_AERODACTYL_CHAMBER, 1 ; third chamber?
+	warp_event  8, 33, UNION_CAVE_B1F_NORTH, 1 ; ok 
+	warp_event  3,  5, ROUTE_36_RUINS_OF_ALPH_GATE, 3 ; blocked 
+	warp_event 15, 26, ROUTE_32_RUINS_OF_ALPH_GATE, 1 ; ok 
+	warp_event 15, 27, ROUTE_32_RUINS_OF_ALPH_GATE, 2 ; ok 
 	warp_event 11, 41, TINDER_GARDEN, 3
 	warp_event 12, 41, TINDER_GARDEN, 4
-;	warp_event  6, 26, ROUTE_KAJO_RUINS_OF_ALPH_GATE, 1
-;	warp_event  6, 27, ROUTE_KAJO_RUINS_OF_ALPH_GATE, 2
+	warp_event  6, 26, ROUTE_KAJO, 8
+	warp_event  6, 27, ROUTE_KAJO, 9
 
 	def_coord_events
 
@@ -29,12 +29,13 @@ RuinsOfAlphOutside_MapScriptHeader:
 
 	def_object_events
 	object_event 13, 17, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, RuinsOfAlphNorthScientistScript, -1
-	object_event 12, 23, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, RuinsOfAlphOutsideScientist1Script, EVENT_BEAT_FALKNER
-	object_event 13, 23, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, RuinsOfAlphOutsideScientist2Script, EVENT_BEAT_FALKNER 
+	object_event 12, 23, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, RuinsOfAlphOutsideScientist1Script, EVENT_BEAT_FALKNER ; OK
+	object_event 13, 23, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, RuinsOfAlphOutsideScientist2Script, EVENT_BEAT_FALKNER ; OK
+	object_event 13, 25, SPRITE_SCIENTIST, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, RuinsOfAlphOutsideScientist3Script, EVENT_BEAT_FALKNER ; OK
 	object_event 11, 39, SPRITE_SCHOOLGIRL, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerSchoolgirlEliza, -1;
 	object_event 12, 38, SPRITE_SCHOOLGIRL, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerSchoolgirlMolly, -1;
 	object_event  8, 36, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, RuinsOfAlphTeacherScript, -1 ; SHOULD HEAL YOU
-	object_event 14, 36, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerFisherRalph, -1 
+	object_event 14, 36, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerFisherRalph, -1 ; 
 	smashrock_event  9, 34
 	smashrock_event 15, 36
 	smashrock_event  8, 13
@@ -153,8 +154,7 @@ RuinsOfAlphScientist2Text:
 	
 	para "How else do you"
 	line "explain the"
-	cont "similarities in"
-	cont "their texts?"
+	cont "similarities?"
 	done
 
 RuinsOfAlphOutsideScientist1Script:
@@ -173,6 +173,26 @@ RuinsOfAlphScientist1Text:
 	cont "digging up?"
 	done
 
+RuinsOfAlphOutsideScientist3Script:
+	jumptext RuinsOfAlphScientist3Text
+
+RuinsOfAlphScientist3Text:
+	text "We discovered"
+	line "a Bronzong in"
+	cont "buried in the"
+	cont "ground!"
+	
+	para "Falkner wants"
+	line "to put it at"
+	cont "the top of his"
+	cont "tower to perform"
+	cont "a Rain Dance to"
+	cont "alleviate the"
+	cont "drought."
+	
+	done
+
+
 RuinsOfAlphNorthScientistScript:
 	jumptext RuinsOfAlphNorthScientistText
 	
@@ -182,7 +202,7 @@ RuinsOfAlphNorthScientistText:
 	cont "caverns north of"
 	cont "Mahogany."
 	
-	para "I hear that if"
+	para "Some say if"
 	line "you stare at"
 	cont "the shattered"
 	cont "mosaic for long"
@@ -191,9 +211,10 @@ RuinsOfAlphNorthScientistText:
 	done
 
 RuinsOfAlphSignText:
-	text "Ruins of Alph."
-	line "Inner chamber "
-	cont "closed due to "
+	text "Ruins of Alph"
+	
+	para "Inner chamber "
+	line "closed due to "
 	cont "unstable sites."
 	done
 	

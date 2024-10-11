@@ -9,8 +9,8 @@ RouteKajo_MapScriptHeader: ; trainer parties, check warps
     warp_event 6, 33, GOLDENROD_MAGNET_TRAIN_STATION, 5
     warp_event 41, 5, KAJO_ACQUIFER, 1
     warp_event 48, 13, KAJO_ACQUIFER, 1 
-	warp_event 58, 30, MAGNET_TRAIN_TUNNEL, 1
-	warp_event 58, 31, MAGNET_TRAIN_TUNNEL, 2
+	warp_event 55, 30, MAGNET_TRAIN_TUNNEL, 1
+	warp_event 55, 31, MAGNET_TRAIN_TUNNEL, 2
     warp_event 23, 19, KAJO_CABIN, 1
     warp_event 55, 18, RUINS_OF_ALPH_OUTSIDE, 1
     warp_event 55, 19, RUINS_OF_ALPH_OUTSIDE, 2
@@ -43,10 +43,10 @@ RouteKajo_MapScriptHeader: ; trainer parties, check warps
     object_event 57,  6, SPRITE_POKEFAN_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, TrainerPokefan_MRobertScript, -1;
     object_event 54, 17, SPRITE_SCHOOLGIRL, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, TrainerSchoolgirlFaithScript, -1;
 	; NEED TO PLACE THESE?
-	itemball_event 22, 34, REVIVE, 1, EVENT_KAJO_REVIVE2 ;ok
-	itemball_event 22, 34, SUPER_POTION, 1, EVENT_KAJO_POTION2 ;ok
-	itemball_event 22, 34, ETHER, 1, EVENT_KAJO_ETHER ;ok
-	itemball_event 22, 34, ELIXIR, 1, EVENT_KAJO_ELIXIR ;ok
+	itemball_event  7, 27, REVIVE, 1, EVENT_KAJO_REVIVE2 ;ok
+	itemball_event 41, 24, SUPER_POTION, 1, EVENT_KAJO_POTION2 ;ok
+	itemball_event 32,  6, ETHER, 1, EVENT_KAJO_ETHER ;ok
+	itemball_event 33, 15, ELIXIR, 1, EVENT_KAJO_ELIXIR ;ok
 	tmhmball_event 50,  1, TM_STEEL_WING, EVENT_GOT_TM47_STEEL_WING ; ok 
 
 	object_const_def

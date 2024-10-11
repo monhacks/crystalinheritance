@@ -4,7 +4,7 @@ RadioTower5F_MapScriptHeader:
 	def_callbacks
 
 	def_warp_events
-	warp_event 12,  0, RADIO_TOWER_4F, 3
+	warp_event 12, 0, RADIO_TOWER_4F, 3
 	warp_event 17, 7, GOLDENROD_MAGNET_TRAIN_STATION, 3
 
 	def_coord_events
@@ -44,7 +44,7 @@ WhitneyScriptRadioTower5F:
     reloadmapafterbattle
 	opentext
 	writetext WhitneyAttractText
-	givetmhm TM_ATTRACT
+	verbosegivetmhm TM_ATTRACT
 	waitbutton
 	closetext
     applymovement RADIOTOWER_WHITNEY, WhitneyMoveAsideMovement

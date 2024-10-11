@@ -1,166 +1,119 @@
-Route32_MapScriptHeader:
+Route32_MapScriptHeader: ; convert all to generictrainers, freida to give venoshock; some of the trainers further south should be engineers upset that their work keeps getting wrecked
 	def_scene_scripts
 
-	def_callbacks
-	callback MAPCALLBACK_NEWMAP, Route32FlyPoint
-	callback MAPCALLBACK_OBJECTS, Route32Frieda
+	def_callbacks,
+	callback MAPCALLBACK_NEWMAP, Route32FlyPoint ; ok 
 
 	def_warp_events
-	warp_event 11, 73, ROUTE_32_POKECENTER_1F, 1
-	warp_event  4,  2, ROUTE_32_RUINS_OF_ALPH_GATE, 3
-	warp_event  4,  3, ROUTE_32_RUINS_OF_ALPH_GATE, 4
-	warp_event  6, 79, UNION_CAVE_1F, 4
-	warp_event  4, 24, HIDDEN_TREE_GROTTO, 1
+	warp_event 11, 73, ROUTE_32_POKECENTER_1F, 1 ; ok 
+	warp_event  4,  2, ROUTE_32_RUINS_OF_ALPH_GATE, 3 ; ok 
+	warp_event  4,  3, ROUTE_32_RUINS_OF_ALPH_GATE, 4 ; ok 
+
 
 	def_coord_events
-	coord_event 18,  8, 0, Route32CooltrainerMStopsYou
-	coord_event 10, 24, 1, Route32LyraIntroducesHiddenGrottoes1
-	coord_event 11, 24, 1, Route32LyraIntroducesHiddenGrottoes2
-	coord_event 12, 24, 1, Route32LyraIntroducesHiddenGrottoes3
-	coord_event 13, 24, 1, Route32LyraIntroducesHiddenGrottoes4
-	coord_event  7, 71, 2, Route32WannaBuyASlowpokeTailScript
+
 
 	def_bg_events
 	bg_event 13,  5, BGEVENT_JUMPTEXT, Route32SignText
 	bg_event  9,  1, BGEVENT_JUMPTEXT, Route32RuinsSignText
-	bg_event 10, 84, BGEVENT_JUMPTEXT, Route32UnionCaveSignText
-	bg_event  8, 10, BGEVENT_ITEM + SUPER_POTION, EVENT_ROUTE_32_HIDDEN_SUPER_POTION_2
-	bg_event 18, 49, BGEVENT_ITEM + SILVER_LEAF, EVENT_ROUTE_32_HIDDEN_GOLD_LEAF
-	bg_event  8, 80, BGEVENT_ITEM + GREAT_BALL, EVENT_ROUTE_32_HIDDEN_GREAT_BALL_2
+	bg_event  6, 80, BGEVENT_JUMPTEXT, Route32UnionCaveSignText
+	bg_event  8, 10, BGEVENT_ITEM + SUPER_POTION, EVENT_ROUTE_32_HIDDEN_SUPER_POTION_2;
+	bg_event  4, 41, BGEVENT_ITEM + SILVER_LEAF, EVENT_ROUTE_32_HIDDEN_GOLD_LEAF
+	bg_event 13, 84, BGEVENT_ITEM + GREAT_BALL, EVENT_ROUTE_32_HIDDEN_GREAT_BALL_2 ; ok 
 
 	def_object_events
-	object_event 19,  8, SPRITE_ACE_TRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route32CooltrainermPetrieScript, -1
-	object_event  7, 70, SPRITE_FAT_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, SlowpokeTailSalesmanScript, EVENT_SLOWPOKE_WELL_ROCKETS
-	object_event 12, 67, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, FriedaScript, EVENT_ROUTE_32_FRIEDA_OF_FRIDAY
-	object_event 13, 29, SPRITE_LYRA, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LYRA_ROUTE_32
-	object_event  8, 49, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerFisherJustin, -1
-	object_event 12, 56, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerFisherRalph1, -1
-	object_event  6, 48, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerFisherHenry, -1
-	object_event 16, 18, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerYoungsterAlbert, -1
-	object_event  4, 63, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerYoungsterGordon, -1
-	object_event  3, 45, SPRITE_CAMPER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerCamperRoland, -1
-	object_event 11, 82, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBird_keeperPeter, -1
-	itemball_event  6, 53, GREAT_BALL, 1, EVENT_ROUTE_32_GREAT_BALL
-	object_event 15, 13, SPRITE_FAT_GUY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route32RoarTMGuyScript, -1
-	itemball_event  6, 32, REPEL, 1, EVENT_ROUTE_32_REPEL
+	object_event 19,  8, SPRITE_ACE_TRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route32CooltrainermPetrieScript, EVENT_FOUGHT_AIR_BALLOON_ROUTE_32 
+	object_event 16, 18, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerYoungsterAlbert, -1 ; OK 
+	object_event  4, 36, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerYoungsterGordon, -1 ; bayleef, etc OK 
+	object_event 11, 45, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerFisherJustin, -1 ; OK 
+	object_event  9, 49, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerFisherHenry, -1 ; OK 
+	object_event 13, 56, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerFisherTully, -1 ; new fisher, add SCRIPT 
+	object_event  4, 66, SPRITE_CAMPER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerCamperLloyd, -1 ; renamed to lloyd
+	object_event 12, 67, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, FriedaScript, -1 ; venoshock
+	object_event  6, 68, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBird_keeperPeter, -1 ; OK 
+	object_event 10, 84, SPRITE_BAKER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route32SlowpokeTailScript, -1 ; todo 
+	smashrock_event 6, 82
+	smashrock_event 7, 83
+	itemball_event 6, 83, GEODE, 5, EVENT_ROUTE_32_REPEL
+	itemball_event 10, 14, BUB_BALL, 5, EVENT_ROUTE_32_GREAT_BALL
 	cuttree_event 10, 19, EVENT_ROUTE_32_CUT_TREE
-	cuttree_event -1, 29, EVENT_MAGNET_TUNNEL_EAST_CUT_TREE
-	cuttree_event 23, 32, EVENT_CHERRYGROVE_BAY_CUT_TREE
 
 	object_const_def
-	const ROUTE32_COOLTRAINER_M
-	const ROUTE32_FISHER4
-	const ROUTE32_FRIEDA
-	const ROUTE32_LYRA
+	ROUTE32_COOLTRAINER_M
 
 Route32FlyPoint:
 	setflag ENGINE_FLYPOINT_UNION_CAVE
 	endcallback
 
-Route32Frieda:
-	readvar VAR_WEEKDAY
-	ifequal FRIDAY, .FriedaAppears
-	disappear ROUTE32_FRIEDA
-	endcallback
-
-.FriedaAppears:
-	appear ROUTE32_FRIEDA
-	endcallback
-
-Route32CooltrainermPetrieScript:
+Route32CooltrainermPetrieScript: ; revise, "if you go get my X from the pokecenter I'll battle you!"
 	faceplayer
-Route32CooltrainerMTrigger:
-	checkevent EVENT_GOT_MIRACLE_SEED_FROM_ROUTE_32_LEADER
-	iftrue_jumptext .AfterText2
-	checkevent EVENT_BEAT_COOLTRAINERM_PETRIE
-	iftrue .Beaten
-	checkevent EVENT_BEAT_CAMPER_ROLAND
-	iffalse_jumptext .IntroText
-	checkevent EVENT_BEAT_FISHER_JUSTIN
-	iffalse_jumptext .IntroText
-	checkevent EVENT_BEAT_FISHER_RALPH
-	iffalse_jumptext .IntroText
-	checkevent EVENT_BEAT_FISHER_HENRY
-	iffalse_jumptext .IntroText
-	checkevent EVENT_BEAT_YOUNGSTER_ALBERT
-	iffalse_jumptext .IntroText
-	checkevent EVENT_BEAT_YOUNGSTER_GORDON
-	iffalse_jumptext .IntroText
-	checkevent EVENT_BEAT_BIRD_KEEPER_PETER
-	iffalse_jumptext .IntroText
 	opentext
+	checkevent EVENT_GOT_MIRACLE_SEED_FROM_ROUTE_32_LEADER
+	iftrue .GotAirBalloons
+	checkitem SLOWPOKETAIL
+	iffalse .WannaGetMeText
 	writetext .QuestionText
 	yesorno
 	iffalse_jumpopenedtext .RefusedText
 	writetext .SeenText
 	waitbutton
 	closetext
-	winlosstext .BeatenText, 0
+	takeitem SLOWPOKETAIL
+	setevent EVENT_FOUGHT_AIR_BALLOON_ROUTE_32
+	winlosstext .BeatenText, .LossText
 	setlasttalked ROUTE32_COOLTRAINER_M
-	loadtrainer COOLTRAINERM, PETRIE
+	loadtrainer COOLTRAINERM, PETRIE 
 	startbattle
-	reloadmapafterbattle
 	setevent EVENT_BEAT_COOLTRAINERM_PETRIE
 .Beaten:
 	opentext
 	writetext .AfterText1
 	promptbutton
-	verbosegiveitem MIRACLE_SEED
+	verbosegiveitem AIR_BALLOON, 3 
 	iffalse_endtext
 	setevent EVENT_GOT_MIRACLE_SEED_FROM_ROUTE_32_LEADER
-.GotMiracleSeed:
+.GotAirBalloons:
 	jumpthisopenedtext
 
 .AfterText2:
-	text "Your experiences"
-	line "in Violet City"
-
-	para "should be useful"
-	line "for your journey."
+	text "Maybe I'll"
+	line "be a pop star"
+	cont "in Goldenrod."
 	done
 
-.IntroText:
-	text "You have some good"
-	line "#mon there."
-
-	para "It must be from"
-	line "the training you"
-
-	para "gave them around"
-	line "Violet City."
-
-	para "You should have no"
-	line "trouble beating"
-
-	para "all the trainers"
-	line "on this route."
-
-	para "If you can do"
-	line "that, I'll face you"
-	cont "myself."
-	done
 
 .QuestionText:
-	text "It looks like you"
-	line "beat everyone else"
-	cont "here."
-
-	para "Your training at"
-	line "the Gym must have"
-
-	para "been especially"
-	line "helpful."
-
-	para "I, too, have a"
-	line "Zephyr Badge."
-
-	para "Will you battle"
-	line "with me?"
+	text "I'm so low since"
+	cont "being rejected"
+	cont "by Falkner."
+	
+	para "The only thing"
+	line "that would raise"
+	cont "them is a tasty"
+	cont "SlowpokeTail..."
+	
+	para "Oh! I smell it!"
+	
+	para "I feel invigor-"
+	line "ated already!"
+	
+	para "Please let me"
+	line "have it."
+	
+	para "Let me battle"
+	line "you. If I lose,"
+	cont "I'll just give"
+	cont "up my dream of"
+	cont "being a flying"
+	cont "type trainer."
 	done
 
 .RefusedText:
-	text "So you would ra-"
-	line "ther journey on…"
+	text "I understand..."
+	
+	para "I wouldn't want"
+	line "to part with it"
+	cont "either."
 	done
 
 .SeenText:
@@ -173,261 +126,62 @@ Route32CooltrainerMTrigger:
 	done
 
 .BeatenText:
-	text "My team was up-"
-	line "rooted!"
+	text "I'm so deflated!"
+	done
+	
+.LossText:
+	text "Hah!"
+	
+	para "I knew I could"
+	line "do it!"
+	
+	para "Falkner, here"
+	line "I come!"	
 	done
 
 .AfterText1:
-	text "Your training was"
-	line "superior to mine."
-
-	para "As a souvenir of"
-	line "our battle, take"
-	cont "this."
-
-	para "It increases the"
-	line "power of Grass-"
-	cont "type moves."
+	text "Maybe Falkner"
+	line "was right."
+	
+	para "Time for me to"
+	line "hang it up."
+	
+	para "Maybe you can"
+	line "use these better"
+	cont "than me."
 	done
 
-Route32CooltrainerMStopsYou:
-	turnobject ROUTE32_COOLTRAINER_M, LEFT
-	turnobject PLAYER, RIGHT
-	showtext Route32CooltrainerMText_WhatsTheHurry
-	follow PLAYER, ROUTE32_COOLTRAINER_M
-	applymovement PLAYER, Movement_Route32CooltrainerMPushesYouBackToViolet
-	stopfollow
-	turnobject PLAYER, DOWN
-	scall Route32CooltrainerMTrigger
-	applymovement ROUTE32_COOLTRAINER_M, Movement_Route32CooltrainerMReset
-	turnobject ROUTE32_COOLTRAINER_M, LEFT
-	end
-
-Route32LyraIntroducesHiddenGrottoes1:
-	scall Route32LyraIntroducesHiddenGrottoesIntroScript
-	applymovement ROUTE32_LYRA, Route32LyraIntroducesHiddenGrottoes_Left3
-	scall Route32LyraIntroducesHiddenGrottoesMainScript
-	applymovement ROUTE32_LYRA, Route32LyraIntroducesHiddenGrottoes_Left5
-	sjump Route32LyraIntroducesHiddenGrottoesOutroScript
-
-Route32LyraIntroducesHiddenGrottoes2:
-	scall Route32LyraIntroducesHiddenGrottoesIntroScript
-	applymovement ROUTE32_LYRA, Route32LyraIntroducesHiddenGrottoes_Left2
-	scall Route32LyraIntroducesHiddenGrottoesMainScript
-	applymovement ROUTE32_LYRA, Route32LyraIntroducesHiddenGrottoes_Left6
-	sjump Route32LyraIntroducesHiddenGrottoesOutroScript
-
-Route32LyraIntroducesHiddenGrottoes3:
-	scall Route32LyraIntroducesHiddenGrottoesIntroScript
-	applymovement ROUTE32_LYRA, Route32LyraIntroducesHiddenGrottoes_Left1
-	scall Route32LyraIntroducesHiddenGrottoesMainScript
-	applymovement ROUTE32_LYRA, Route32LyraIntroducesHiddenGrottoes_Left7
-	sjump Route32LyraIntroducesHiddenGrottoesOutroScript
-
-Route32LyraIntroducesHiddenGrottoes4:
-	scall Route32LyraIntroducesHiddenGrottoesIntroScript
-	scall Route32LyraIntroducesHiddenGrottoesMainScript
-	applymovement ROUTE32_LYRA, Route32LyraIntroducesHiddenGrottoes_Left8
-	sjump Route32LyraIntroducesHiddenGrottoesOutroScript
-
-Route32LyraIntroducesHiddenGrottoes_Left8:
-	step_left
-Route32LyraIntroducesHiddenGrottoes_Left7:
-	step_left
-Route32LyraIntroducesHiddenGrottoes_Left6:
-	step_left
-Route32LyraIntroducesHiddenGrottoes_Left5:
-	step_left
-	step_left
-Route32LyraIntroducesHiddenGrottoes_Left3:
-	step_left
-Route32LyraIntroducesHiddenGrottoes_Left2:
-	step_left
-Route32LyraIntroducesHiddenGrottoes_Left1:
-	step_left
-	step_end
-
-Route32LyraIntroducesHiddenGrottoesIntroScript:
-	applymovement ROUTE32_LYRA, .StepUpMovement
-	showemote EMOTE_SHOCK, ROUTE32_LYRA, 15
-	special Special_FadeOutMusic
-	pause 15
-	applymovement ROUTE32_LYRA, .StepUpMovement
-	end
-
-.StepUpMovement:
-	step_up
-	step_up
-	step_end
-
-Route32LyraIntroducesHiddenGrottoesMainScript:
-	turnobject ROUTE32_LYRA, UP
-	playmusic MUSIC_LYRA_ENCOUNTER_HGSS
-	opentext
-	writetext .GreetingText
-	promptbutton
-	checkegg
-	iftrue .HaveEgg
-	writetext .NoEggText
-	sjump .Continue
-.HaveEgg
-	writetext .HaveEggText
-.Continue
-	waitbutton
-	closetext
-	playsound SFX_SANDSTORM
-	waitsfx
-	showemote EMOTE_SHOCK, ROUTE32_LYRA, 15
-	applymovement ROUTE32_LYRA, .LookAroundMovement
-	showtext .QuestionText
-	follow ROUTE32_LYRA, PLAYER
-	end
-
-.GreetingText:
-	text "<PLAYER>!"
-	line "Hi there!"
+.WannaGetMeText:
+	text "I wanted to be"
+	line "a trainer in"
+	cont "Falkner's Gym."
+	
+	para "But he said my"
+	line "#mon weren't"
+	cont "real flying-"
+	cont "types!"
+	
+	para "I came here to"
+	line "get some comfort"
+	cont "food - a tasty"
+	cont "SlowpokeTail."
+	
+	para "But the vendor"
+	line "is so far away."
+	
+	para "If you go to"
+	line "get me one, it"
+	cont "would raise my"
+	cont "spirits!"
+	
+	para "I heard you can"
+	line "get one at the"
+	cont "end of this"
+	cont "route."
 	done
 
-.NoEggText:
-	text "Prof.Elm said his"
-	line "aide was deliver-"
-	cont "ing an Egg to you."
-
-	para "Be sure to carry"
-	line "it. I'm curious"
-
-	para "what #mon it"
-	line "could be!"
-	done
-
-.HaveEggText:
-	text "Oh good! You're"
-	line "carrying that Egg"
-
-	para "just like Prof."
-	line "Elm asked."
-
-	para "I'm so curious"
-	line "what #mon it"
-	cont "could be!"
-	done
-
-.QuestionText:
-	text "<PLAYER>, did you"
-	line "hear that?"
-
-	para "It came from some-"
-	line "where nearby…"
-	done
-
-.LookAroundMovement:
-	turn_head_right
-	step_sleep_8
-	step_sleep_8
-	step_sleep_8
-	turn_head_left
-	step_sleep_8
-	step_sleep_8
-	step_sleep_8
-	turn_head_up
-	step_end
-
-Route32LyraIntroducesHiddenGrottoesOutroScript:
-	stopfollow
-	turnobject ROUTE32_LYRA, UP
-	showemote EMOTE_SHOCK, ROUTE32_LYRA, 15
-	pause 7
-	follow ROUTE32_LYRA, PLAYER
-	applyonemovement ROUTE32_LYRA, slow_step_up
-	stopfollow
-	turnobject PLAYER, UP
-	pause 15
-	turnobject ROUTE32_LYRA, DOWN
-	showtext .GrottoText
-	applymovement ROUTE32_LYRA, .LeaveMovement1
-	turnobject PLAYER, DOWN
-	applymovement ROUTE32_LYRA, .LeaveMovement2
-	disappear ROUTE32_LYRA
-	setscene $2
-	playmusic MUSIC_ROUTE_30
-	end
-
-.GrottoText:
-	text "Here it is!"
-	line "There's a gap in"
-	cont "the trees!"
-
-	para "I've heard of these"
-	line "places before."
-
-	para "It's a Hidden"
-	line "Grotto!"
-
-	para "Hidden Grottoes"
-	line "are found among"
-	cont "trees and cliff-"
-	cont "sides."
-
-	para "Some amazing #-"
-	line "mon might be"
-	cont "hiding in there!"
-
-	para "I wish I had time"
-	line "to look around,"
-
-	para "but I have things"
-	line "to do."
-
-	para "<PLAYER>, keep an"
-	line "eye out for more"
-	cont "Hidden Grottoes!"
-	done
-
-.LeaveMovement1:
-	step_left
-	step_down
-	step_end
-
-.LeaveMovement2:
-	step_down
-	step_down
-	step_down
-	step_down
-	step_down
-	step_end
-
-Route32WannaBuyASlowpokeTailScript:
-	turnobject ROUTE32_FISHER4, DOWN
-	turnobject PLAYER, UP
-	sjump _OfferToSellSlowpokeTail
-
-SlowpokeTailSalesmanScript:
-	faceplayer
-_OfferToSellSlowpokeTail:
-	setscene $3
-	opentext
-	writetext Text_MillionDollarSlowpokeTail
-	yesorno
-	iffalse .refused
-	jumpopenedtext Text_ThoughtKidsWereLoaded
-
-.refused
-	jumpopenedtext Text_RefusedToBuySlowpokeTail
-
-Route32RoarTMGuyScript:
-	faceplayer
-	opentext
-	checkevent EVENT_GOT_TM05_ROAR
-	iftrue .AlreadyHaveRoar
-	writetext Text_RoarIntro
-	promptbutton
-	verbosegivetmhm TM_ROAR
-	setevent EVENT_GOT_TM05_ROAR
-.AlreadyHaveRoar:
-	jumpopenedtext Text_RoarOutro
-
-GenericTrainerCamperRoland:
-	generictrainer CAMPER, ROLAND, EVENT_BEAT_CAMPER_ROLAND, CamperRolandSeenText, CamperRolandBeatenText
+GenericTrainerCamperLloyd:
+	generictrainer CAMPER, LLOYD, EVENT_BEAT_CAMPER_LLOYD, CamperLloydSeenText, CamperLloydBeatenText
 
 	text "If you don't want"
 	line "to battle, just"
@@ -444,108 +198,6 @@ GenericTrainerFisherJustin:
 	line "mon is the same."
 	done
 
-TrainerFisherRalph1:
-	trainer FISHER, RALPH1, EVENT_BEAT_FISHER_RALPH, FisherRalph1SeenText, FisherRalph1BeatenText, 0, .Script
-
-.Script:
-	loadvar VAR_CALLERID, PHONE_FISHER_RALPH
-	opentext
-	checkflag ENGINE_RALPH_READY_FOR_REMATCH
-	iftrue .Rematch
-	checkflag ENGINE_FISH_SWARM
-	iftrue .Swarm
-	checkcellnum PHONE_FISHER_RALPH
-	iftrue .NumberAccepted
-	checkevent EVENT_RALPH_ASKED_FOR_PHONE_NUMBER
-	iftrue .AskAgain
-	writetext FisherRalphAfterText
-	promptbutton
-	setevent EVENT_RALPH_ASKED_FOR_PHONE_NUMBER
-	callstd asknumber1m
-	sjump .AskForNumber
-
-.AskAgain:
-	callstd asknumber2m
-.AskForNumber:
-	askforphonenumber PHONE_FISHER_RALPH
-	ifequal $1, .PhoneFull
-	ifequal $2, .NumberDeclined
-	gettrainername FISHER, RALPH1, $0
-	callstd registerednumberm
-	jumpstd numberacceptedm
-
-.Rematch:
-	callstd rematchm
-	winlosstext FisherRalph1BeatenText, 0
-	readmem wRalphFightCount
-	ifequal 4, .Fight4
-	ifequal 3, .Fight3
-	ifequal 2, .Fight2
-	ifequal 1, .Fight1
-	ifequal 0, .LoadFight0
-.Fight4:
-	checkevent EVENT_RESTORED_POWER_TO_KANTO
-	iftrue .LoadFight4
-.Fight3:
-	checkevent EVENT_BEAT_ELITE_FOUR
-	iftrue .LoadFight3
-.Fight2:
-	checkflag ENGINE_FLYPOINT_LAKE_OF_RAGE
-	iftrue .LoadFight2
-.Fight1:
-	checkflag ENGINE_FLYPOINT_ECRUTEAK
-	iftrue .LoadFight1
-.LoadFight0:
-	loadtrainer FISHER, RALPH1
-	startbattle
-	reloadmapafterbattle
-	loadmem wRalphFightCount, 1
-	clearflag ENGINE_RALPH_READY_FOR_REMATCH
-	end
-
-.LoadFight1:
-	loadtrainer FISHER, RALPH2
-	startbattle
-	reloadmapafterbattle
-	loadmem wRalphFightCount, 2
-	clearflag ENGINE_RALPH_READY_FOR_REMATCH
-	end
-
-.LoadFight2:
-	loadtrainer FISHER, RALPH3
-	startbattle
-	reloadmapafterbattle
-	loadmem wRalphFightCount, 3
-	clearflag ENGINE_RALPH_READY_FOR_REMATCH
-	end
-
-.LoadFight3:
-	loadtrainer FISHER, RALPH4
-	startbattle
-	reloadmapafterbattle
-	loadmem wRalphFightCount, 4
-	clearflag ENGINE_RALPH_READY_FOR_REMATCH
-	end
-
-.LoadFight4:
-	loadtrainer FISHER, RALPH5
-	startbattle
-	reloadmapafterbattle
-	clearflag ENGINE_RALPH_READY_FOR_REMATCH
-	end
-
-.Swarm:
-	jumpopenedtext FisherRalphSwarmText
-
-.NumberAccepted:
-	jumpstd numberacceptedm
-
-.NumberDeclined:
-	jumpstd numberdeclinedm
-
-.PhoneFull:
-	jumpstd phonefullm
-
 GenericTrainerFisherHenry:
 	generictrainer FISHER, HENRY, EVENT_BEAT_FISHER_HENRY, FisherHenrySeenText, FisherHenryBeatenText
 
@@ -556,16 +208,26 @@ GenericTrainerFisherHenry:
 	line "raised ones."
 	done
 
+GenericTrainerFisherTully:
+	generictrainer FISHER, TULLY, EVENT_BEAT_FISHER_TULLY, FisherTullySeenText, FisherTullyBeatenText
+
+	text "There's a lot"
+	line "more poison-type"
+	cont "#mon with the"
+	cont "mine open."
+	done
+
 GenericTrainerYoungsterAlbert:
 	generictrainer YOUNGSTER, ALBERT, EVENT_BEAT_YOUNGSTER_ALBERT, YoungsterAlbertSeenText, YoungsterAlbertBeatenText
 
 	text "I'm going to try"
 	line "to be the best"
 	cont "with my favorites."
-
-	para "I'm not using the"
-	line "same tough #mon"
-	cont "as everyone else."
+	
+	para "Also, my favorite"
+	line "#mon are"
+	cont "Snorlax and"
+	cont "Zapdos."
 	done
 
 GenericTrainerYoungsterGordon:
@@ -578,16 +240,14 @@ GenericTrainerYoungsterGordon:
 GenericTrainerBird_keeperPeter:
 	generictrainer BIRD_KEEPER, PETER, EVENT_BEAT_BIRD_KEEPER_PETER, Bird_keeperPeterSeenText, Bird_keeperPeterBeatenText
 
-	text "I should train"
-	line "again at the Gym"
-	cont "in Violet City."
+	text "I need to tell"
+	line "Falkner about"
+	cont "these #mon."
 	done
 
 FriedaScript:
 	checkevent EVENT_GOT_POISON_BARB_FROM_FRIEDA
 	iftrue_jumptextfaceplayer FriedaFridayText
-	readvar VAR_WEEKDAY
-	ifnotequal FRIDAY, .NotFriday
 	faceplayer
 	opentext
 	checkevent EVENT_MET_FRIEDA_OF_FRIDAY
@@ -598,79 +258,11 @@ FriedaScript:
 .MetFrieda:
 	writetext FriedaGivesGiftText
 	promptbutton
-	verbosegiveitem POISON_BARB
+	verbosegivetmhm TM_VENOSHOCK ; 
 	iffalse_endtext
 	setevent EVENT_GOT_POISON_BARB_FROM_FRIEDA
 	jumpopenedtext FriedaGaveGiftText
 
-.NotFriday:
-	jumptextfaceplayer FriedaNotFridayText
-
-Movement_Route32CooltrainerMPushesYouBackToViolet:
-	step_up
-	step_up
-	step_end
-
-Movement_Route32CooltrainerMReset:
-	step_down
-	step_right
-	step_end
-
-Route32CooltrainerMText_WhatsTheHurry:
-	text "Wait up!"
-	line "What's the hurry?"
-	done
-
-Route32CooltrainerMText_AideIsWaiting:
-	text "<PLAYER>, right?"
-	line "Some guy wearing"
-
-	para "glasses was look-"
-	line "ing for you."
-
-	para "See for yourself."
-	line "He's waiting for"
-
-	para "you at the #mon"
-	line "Center."
-	done
-
-Route32CooltrainerMText_VioletGym:
-	text "Have you gone to"
-	line "the #mon Gym?"
-
-	para "You can test your"
-	line "#mon and your-"
-	cont "self there."
-
-	para "It's a rite of"
-	line "passage for all"
-	cont "trainers!"
-	done
-
-Text_MillionDollarSlowpokeTail:
-	text "How would you like"
-	line "to have this"
-
-	para "tasty, nutritious"
-	line "SlowpokeTail?"
-
-	para "For you right now,"
-	line "just ¥10,000,000!"
-
-	para "You'll want this!"
-	done
-
-Text_ThoughtKidsWereLoaded:
-	text "Tch! I thought"
-	line "kids these days"
-	cont "were loaded…"
-	done
-
-Text_RefusedToBuySlowpokeTail:
-	text "You don't want it?"
-	line "Then scram. Shoo!"
-	done
 
 FisherJustinSeenText:
 	text "Whoa!"
@@ -683,61 +275,18 @@ FisherJustinBeatenText:
 	text "Sploosh!"
 	done
 
-FisherRalph1SeenText:
-	text "I'm really good at"
-	line "both fishing and"
-	cont "#mon."
-
-	para "I'm not about to"
-	line "lose to any kid!"
-	done
-
-FisherRalph1BeatenText:
-	text "Tch! I tried to"
-	line "rush things…"
-	done
-
-FisherRalphAfterText:
-	text "Fishing is a life-"
-	line "long passion."
-
-	para "#mon are life-"
-	line "long friends!"
-	done
-
-FisherRalphSwarmText:
-	text "One, two, three…"
-	line "Muahahaha, what a"
-
-	para "great haul!"
-	line "I'm done! Go ahead"
-
-	para "and catch as many"
-	line "as you can, kid!"
-	done
-
 FisherHenrySeenText:
 	text "My #mon?"
 	line "Freshly caught!"
 	done
 
 FisherHenryBeatenText:
-	text "Splash?"
+	text "Well, you're"
+	line "a pin in my"
+	cont "side."
 	done
 
 YoungsterAlbertSeenText:
-	text "I haven't seen you"
-	line "around before."
-
-	para "So you think you"
-	line "are pretty tough?"
-	done
-
-YoungsterAlbertBeatenText:
-	text "You're strong!"
-	done
-
-YoungsterGordonSeenText:
 	text "I found some good"
 	line "#mon in the"
 	cont "grass!"
@@ -746,26 +295,48 @@ YoungsterGordonSeenText:
 	line "it for me!"
 	done
 
-YoungsterGordonBeatenText:
-	text "Darn. I thought I"
-	line "could win."
+YoungsterAlbertBeatenText:
+	text "You're strong!"
 	done
 
-CamperRolandSeenText:
+YoungsterGordonSeenText:
+	text "I'm helping a"
+	line "professor with"
+	cont "his research!"
+	
+	para "Jealous?"
+	done
+
+YoungsterGordonBeatenText:
+	text "I didn't think"
+	line "that through."
+	done
+
+FisherTullySeenText:
+	text "I've fished all"
+	line "over Johto!"
+	done
+
+FisherTullyBeatenText:
+	text "I haven't won"
+	line "all over."
+	done
+
+CamperLloydSeenText:
 	text "That glance…"
 	line "It's intriguing."
 	done
 
-CamperRolandBeatenText:
+CamperLloydBeatenText:
 	text "Hmmm. This is"
 	line "disappointing."
 	done
 
 Bird_keeperPeterSeenText:
-	text "That Badge! It's"
-	line "from Violet City!"
-
-	para "You beat Falkner?"
+	text "I'm going to"
+	line "show Falkner"
+	cont "how bird #mon"
+	cont "can win!"
 	done
 
 Bird_keeperPeterBeatenText:
@@ -773,52 +344,24 @@ Bird_keeperPeterBeatenText:
 	line "weaknesses are."
 	done
 
-Text_RoarIntro:
-	text "WROOOOAR!"
-	line "PEOPLE RUN WHEN I"
-
-	para "ROAR! BUT YOU"
-	line "CAME LOOKING!"
-
-	para "THAT PLEASES ME!"
-	line "NOW TAKE THIS!"
-	done
-
-Text_RoarOutro:
-	text "WROOOAR!"
-	line "IT'S ROAR!"
-
-	para "EVEN POKéMON RUN"
-	line "FROM A GOOD ROAR!"
-	done
-
 MeetFriedaText:
-	text "Frieda: Yahoo!"
-	line "It's Friday!"
-
-	para "I'm Frieda of"
+	text "I'm Frieda of"
 	line "Friday!"
 
 	para "Nice to meet you!"
 	done
 
 FriedaGivesGiftText:
-	text "Here's a Poison"
-	line "Barb for you!"
+	text "I love poison-"
+	line "type #mon."
+
+	para "This is my"
+	line "favorite move."
 	done
 
 FriedaGaveGiftText:
-	text "Frieda: Give it to"
-	line "a #mon that has"
-	cont "Poison-type moves."
+	text "It's wicked!"
 
-	para "Oh!"
-
-	para "It's wicked!"
-
-	para "You'll be shocked"
-	line "how good it makes"
-	cont "Poison moves!"
 	done
 
 FriedaFridayText:
@@ -832,13 +375,6 @@ FriedaFridayText:
 	line "it's great too?"
 	done
 
-FriedaNotFridayText:
-	text "Frieda: Isn't it"
-	line "Friday today?"
-
-	para "It's so boring"
-	line "when it's not!"
-	done
 
 Route32SignText:
 	text "Route 32"
@@ -853,6 +389,44 @@ Route32RuinsSignText:
 	done
 
 Route32UnionCaveSignText:
-	text "Union Cave"
-	line "Ahead"
+	text "Union Cave:"
+	
+	para "Absolutely no"
+	line "trespassing!"
+	
+	para "-Silph Mining"
+
 	done
+
+Route32SlowpokeTailScript:
+	faceplayer
+	opentext
+	writetext Route32AmenitiesText
+	verbosegiveitem SLOWPOKETAIL
+	iffalse_endtext
+	closetext
+	done
+
+Route32AmenitiesText:
+	text "I used to work"
+	line "for evil Team Ro-"
+	cont "cket, but now"
+	cont "I work for Silph!"
+	
+	para "I make lunch for"
+	line "all the miners."
+	
+	para "Believe it or"
+	line "not, it isn't"
+	cont "from a Slowpoke"
+	cont "at all - "
+	
+	para "It's actually a"
+	line "slimy, pinkish"
+	cont "fungus that only"
+	cont "resembles its"
+	cont "namesake."	
+	
+	para "Here, try one."
+	done	
+	

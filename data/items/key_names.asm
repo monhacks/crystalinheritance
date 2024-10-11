@@ -24,7 +24,7 @@ KeyItemNames::
 	li "Blue Card"
 	li "OrangeTicket"
 	li "MysticTicket"
-	li "Old Sea Map"
+	li "Pumice Harp" ; "Old Sea Map"
 	li "Shiny Charm"
 	li "Oval Charm"
 	li "Catch Charm"

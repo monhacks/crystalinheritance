@@ -1,4 +1,4 @@
-RuinsOfAlphOmanyteChamber_MapScriptHeader:
+RuinsOfAlphOmanyteChamber_MapScriptHeader: ; bronzong puzzle
 	def_scene_scripts
 	scene_script RuinsofAlphOmanyteChamberTrigger0
 
@@ -8,8 +8,6 @@ RuinsOfAlphOmanyteChamber_MapScriptHeader:
 	def_warp_events
 	warp_event  3,  9, RUINS_OF_ALPH_OUTSIDE, 3
 	warp_event  4,  9, RUINS_OF_ALPH_OUTSIDE, 3
-	warp_event  3,  3, RUINS_OF_ALPH_INNER_CHAMBER, 6
-	warp_event  4,  3, RUINS_OF_ALPH_INNER_CHAMBER, 7
 	warp_event  4,  0, RUINS_OF_ALPH_OMANYTE_ITEM_ROOM, 1
 
 	def_coord_events
@@ -26,35 +24,26 @@ RuinsOfAlphOmanyteChamber_MapScriptHeader:
 
 RuinsofAlphOmanyteChamberTrigger0:
 	special SpecialOmanyteChamber
-	checkevent EVENT_WALL_OPENED_IN_OMANYTE_CHAMBER
+	checkevent EVENT_SOLVED_OMANYTE_PUZZLE
 	iffalse .End
 	sdefer RuinsOfAlphOmanyteChamberWallOpenScript
 .End
 	end
 
 RuinsofAlphOmanyteChamberHiddenDoorsCallback:
-	checkevent EVENT_WALL_OPENED_IN_OMANYTE_CHAMBER
+	checkevent EVENT_SOLVED_OMANYTE_PUZZLE
 	iftrue .WallOpen
 	changeblock 4, 0, $24
 .WallOpen:
 	checkevent EVENT_SOLVED_OMANYTE_PUZZLE
 	iffalse .FloorClosed
 	endcallback
-
 .FloorClosed:
 	changeblock 2, 2, $1
 	changeblock 4, 2, $2
 	endcallback
 
 RuinsOfAlphOmanyteChamberWallOpenScript:
-	pause 30
-	earthquake 30
-	showemote EMOTE_SHOCK, PLAYER, 20
-	pause 30
-	playsound SFX_STRENGTH
-	changeblock 4, 0, $25
-	reloadmappart
-	earthquake 50
 	setscene $1
 	endtext
 
@@ -67,22 +56,19 @@ MapRuinsofAlphOmanyteChamberSignpost2Script:
 	end
 
 .PuzzleComplete:
-	setevent EVENT_RUINS_OF_ALPH_INNER_CHAMBER_TOURISTS
 	setevent EVENT_SOLVED_OMANYTE_PUZZLE
-	setflag ENGINE_UNLOCKED_UNOWNS_K_TO_Q
-	setmapscene RUINS_OF_ALPH_INNER_CHAMBER, $1
 	earthquake 30
 	showemote EMOTE_SHOCK, PLAYER, 15
+	applyonemovement PLAYER, step_down	
 	changeblock 2, 2, $14
 	changeblock 4, 2, $15
+	changeblock 4, 0, $25
 	reloadmappart
 	playsound SFX_STRENGTH
 	earthquake 80
-	applyonemovement PLAYER, skyfall_top
 	playsound SFX_KINESIS
 	waitsfx
 	pause 20
-	warpcheck
 	end
 
 MapRuinsofAlphOmanyteChamberSignpost3Script:
@@ -110,7 +96,7 @@ MapRuinsofAlphOmanyteChamberSignpost4Script:
 
 RuinsOfAlphOmanyteChamberDescriptionText:
 	text "Its tones"
-	line "resonance with"
+	line "resonate with"
 	
 	para "incipient"
 	line "raindrops."

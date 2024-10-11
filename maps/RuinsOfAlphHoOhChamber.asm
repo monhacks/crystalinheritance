@@ -78,11 +78,10 @@ MapRuinsofAlphHoOhChamberSignpost2Script:
 	reloadmappart
 	playsound SFX_STRENGTH
 	earthquake 80
-	applyonemovement PLAYER, skyfall_top
+	applyonemovement PLAYER, step_down
 	playsound SFX_KINESIS
 	waitsfx
 	pause 20
-	warpcheck
 	end
 
 MapRuinsofAlphHoOhChamberSignpost3Script:

@@ -611,7 +611,7 @@ NUM_APRICORNS EQU const_value - 1
 	const BLUE_CARD    ; 14
 	const ORANGETICKET ; 15
 	const MYSTICTICKET ; 16
-	const OLD_SEA_MAP  ; 17
+	const PUMICE_HARP  ; 17
 	const SHINY_CHARM  ; 18
 	const OVAL_CHARM   ; 19
 	const CATCH_CHARM  ; 1a
