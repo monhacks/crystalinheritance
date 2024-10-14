@@ -17,27 +17,20 @@ VioletMart_MapScriptHeader:
 	object_event  5,  2, SPRITE_ACE_TRAINER_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletMartCooltrainerMText, -1
 
 VioletMartGrannyText:
-	text "When you first"
-	line "catch a #mon,"
-	cont "it may be weak."
-
-	para "But it will even-"
-	line "tually grow to be"
-	cont "strong."
-
-	para "It's important to"
-	line "treat #mon with"
-	cont "love."
+	text "The tower can see"
+	line "for miles away."
+	
+	para "Until the rain"
+	line "dance, Falkner"
+	cont "blows all clouds"
+	cont "over our city"
+	cont "with his bird"
+	cont "#mon."
 	done
 
 VioletMartCooltrainerMText:
-	text "#mon can hold"
-	line "items like Potion"
-	cont "and Antidote."
-
-	para "But they don't"
-	line "appear to know how"
-
-	para "to use man-made"
-	line "items."
+	text "Without rain the"
+	line "sprout tower was"
+	cont "getting too"
+	cont "wobbly."
 	done

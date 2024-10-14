@@ -12,15 +12,37 @@ VioletNicknameSpeechHouse_MapScriptHeader:
 	def_bg_events
 
 	def_object_events
-	object_event  2,  3, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletNicknameSpeechHouseTeacherText, -1
+	object_event  2,  3, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, jumptextfaceplayer, VioletNicknameSpeechHouseTeacherScript, -1
 	object_event  6,  4, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletNicknameSpeechHouseLassText, -1
-	object_event  5,  2, SPRITE_EEVEE, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, VioletNicknameSpeechHouseBirdScript, -1
-	object_event  0,  2, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, (1 << EVE) | (1 << NITE), PAL_NPC_PURPLE, OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletNicknameSpeechHouseGrampsText, -1
+	pokemon_event  6,  2, TANGELA, -1, -1, PAL_NPC_GREEN, TangelaVioletText, -1
+	object_event  0,  2, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletNicknameSpeechHouseGrampsText, -1
 
-VioletNicknameSpeechHouseBirdScript:
+VioletNicknameSpeechHouseTeacherScript: 
+	checkevent EVENT_GOT_GIGA_DRAIN ; 
+	iftrue_jumptextfaceplayer VioletCity_GotGigaDrain
 	faceplayer
-	showcrytext VioletNicknameSpeechHouseBirdText, EEVEE
-	end
+	opentext
+	writetext VioletCityGiveGigaDrainText
+	promptbutton
+	verbosegivetmhm TM_GIGA_DRAIN
+	setevent EVENT_GOT_GIGA_DRAIN
+	jumpthisopenedtext
+
+VioletCity_GotGigaDrain:
+	text "If you get thir-"
+	line "sty, you can use"
+	cont "that TM."
+	done
+	
+VioletCityGiveGigaDrainText:
+	text "The shorelines"
+	line "in town recede"
+	cont "more each day."
+	
+	para "That's why we use"
+	line "this TM to get"
+	cont "enough water."
+	done
 
 VioletNicknameSpeechHouseTeacherText:
 	text "She uses the names"
@@ -33,8 +55,9 @@ VioletNicknameSpeechHouseTeacherText:
 	done
 
 VioletNicknameSpeechHouseLassText:
-	text "I call my Eevee"
-	line "Strawberry!"
+	text "My Tangela gets"
+	line "water from the"
+	cont "mud!"
 	done
 
 VioletNicknameSpeechHouseGrampsText:
@@ -48,6 +71,6 @@ VioletNicknameSpeechHouseGrampsText:
 	line "Flying-type Gym."
 	done
 
-VioletNicknameSpeechHouseBirdText:
-	text "Strawberry: Eevee!"
+TangelaVioletText:
+	text "Tangela: La!"
 	done

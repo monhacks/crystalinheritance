@@ -25,13 +25,12 @@ Route36RuinsOfAlphGateOfficerText:
 	done
 
 Route36RuinsOfAlphGateGrampsText:
-	text "Did you see that"
-	line "strange tree in"
-	cont "the road?"
-
-	para "That may explain"
-	line "why fewer people"
-
-	para "are visiting the"
-	line "Ruins of Alph."
+	text "I heard that"
+	line "Falkner had a"
+	cont "change of heart."
+	
+	para "Still, they could"
+	line "have at least"
+	cont "restored the path"
+	cont "to Ecruteak."
 	done

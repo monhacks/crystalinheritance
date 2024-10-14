@@ -84,12 +84,12 @@ FalknerGroup:
 	db "Falkner@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_EVS | TRAINERTYPE_MOVES
 	; party
-	db 11, PIDGEY, NO_ITEM, 16
-		db TACKLE, GUST, MUD_SLAP, ROOST
-	db 11, PIDGEY, NO_ITEM, 16
-		db TACKLE, HYPNOSIS, CONFUSION, ROOST
-	db 13, PIDGEOTTO, PECHA_BERRY, 16
-		db GUST, MUD_SLAP, QUICK_ATTACK, ROOST
+	db 30, MANTINE, DAMP_ROCK, 16
+		db RAIN_DANCE, WATER_PULSE, HURRICANE, ROOST
+	db 30, GLISCOR, NO_ITEM, 16
+		db U_TURN, AERIAL_ACE, EARTHQUAKE, TOXIC
+	db 36, PIDGEOT, NO_ITEM, 16
+		db AERIAL_ACE, MUD_SLAP, ROOST, HURRICANE
 	db -1 ; end
 
 ; ================
@@ -2971,56 +2971,54 @@ BirdKeeperGroup:
 
 ; ================
 
-	; BIRD_KEEPER
+	; BIRD_KEEPER ; violet tower
 	db "Rod@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 7, PIDGEY
-	db 8, PIDGEY
+	db 27, PIDGEOTTO
+	db 30, PIDGEOTTO
 	db -1 ; end
 
 ; ================
 
-	; BIRD_KEEPER
+	; BIRD_KEEPER ; violet tower 
 	db "Abe@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 9, PIDGEY
+	db 28, FARFETCH_D
+	db 28, GOLBAT
 	db -1 ; end
 
 ; ================
 
-	; BIRD_KEEPER
+	; BIRD_KEEPER ; VIOLET TOWER 
 	db "Theo@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 17, PIDGEY
-	db 16, PIDGEY
-	db 19, PIDGEOTTO
-	db 17, PIDGEY
-	db 16, PIDGEY
+	db 25, XATU
+	db 25, SKIPLOOM
+	db 25, GLIGAR
 	db -1 ; end
 
 ; ================
 
-	; BIRD_KEEPER
+	; BIRD_KEEPER ; VIOLET TOWER 
 	db "Toby@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 16, PIDGEOTTO
-	db 17, PIDGEOTTO
-	db 18, PIDGEOTTO
+	db 29, GYARADOS
+	db 28, GLIGAR
 	db -1 ; end
 
 ; ================
 
-	; BIRD_KEEPER
+	; BIRD_KEEPER ; VIOLET TOWER 
 	db "Denis@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 18, PIDGEY
-	db 20, PIDGEOTTO
-	db 18, FARFETCH_D
+	db 28, MURKROW
+	db 25, MANTINE
+	db 30, SKARMORY
 	db -1 ; end
 
 ; ================
@@ -6216,7 +6214,7 @@ SageGroup:
 ; ================
 
 	; SAGE
-	db "Chow@"
+	db "Chow@" ; used 
 	db TRAINERTYPE_NORMAL
 	; party
 	db 8, ROWLET
@@ -6227,7 +6225,7 @@ SageGroup:
 ; ================
 
 	; SAGE
-	db "Nico@"
+	db "Nico@" ; used 
 	db TRAINERTYPE_NORMAL
 	; party
 	db 10, JIGGLYPUFF
@@ -6246,11 +6244,11 @@ SageGroup:
 ; ================
 
 	; SAGE
-	db "Troy@"
+	db "Troy@" ; ACADEMY 
 	db TRAINERTYPE_NORMAL
 	; party
-	db 7, WEEPINBELL
-	db 7, GASTLY
+	db 27, WEEPINBELL
+	db 27, MURKROW
 	db -1 ; end
 
 ; ================
@@ -6277,23 +6275,23 @@ SageGroup:
 
 ; ================
 
-	; SAGE
+	; SAGE ; ACADEMY ; ACADEMY
 	db "Edmond@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 3, WEEPINBELL
-	db 3, PIDGEY
-	db 3, WEEPINBELL
+	db 23, WEEPINBELL
+	db 25, BAYLEEF
+	db 27, GLOOM
 	db -1 ; end
 
 ; ================
 
-	; SAGE
+	; SAGE ; ACADEMY
 	db "Neal@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 6, WEEPINBELL
-	db 6, PIDGEY
+	db 24, SUNFLORA
+	db 28, MURKROW
 	db -1 ; end
 
 ; ================
@@ -6418,13 +6416,13 @@ ElderGroup:
 ; ================================
 ; ================
 
-	; ELDER
+	; ELDER ; ACADEMY
 	db "Li@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 7, PIDGEY
-	db 7, GASTLY
-	db 10, WEEPINBELL
+	db 27, VICTREEBEL
+	db 25, SUDOWOODO
+	db 30, HONCHKROW
 	db -1 ; end
 
 ; ================

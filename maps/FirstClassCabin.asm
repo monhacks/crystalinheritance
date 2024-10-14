@@ -68,14 +68,13 @@ CabinGentlemanReadMailText:
 	done
 	
 FirstClassCabinTeacherText:
-	text "I hear some"
-	line "static outside..."
+	text "I heard static"
+	line "further down the"
+	cont "tunnel..."
 	
-	para "Are you worried?"
-
 	para "What if the train"
-	line "attracts some"
-	cont "#mon?"
+	line "attracts mische-"
+	cont "vous #mon?"
 	done
 
 FirstClassCabinGentleman2Text:

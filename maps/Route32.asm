@@ -38,6 +38,7 @@ Route32_MapScriptHeader: ; convert all to generictrainers, freida to give venosh
 	itemball_event 10, 14, BUB_BALL, 5, EVENT_ROUTE_32_GREAT_BALL
 	cuttree_event 10, 19, EVENT_ROUTE_32_CUT_TREE
 
+
 	object_const_def
 	ROUTE32_COOLTRAINER_M
 
@@ -416,17 +417,7 @@ Route32AmenitiesText:
 	para "I make lunch for"
 	line "all the miners."
 	
-	para "Believe it or"
-	line "not, it isn't"
-	cont "from a Slowpoke"
-	cont "at all - "
-	
-	para "It's actually a"
-	line "slimy, pinkish"
-	cont "fungus that only"
-	cont "resembles its"
-	cont "namesake."	
-	
-	para "Here, try one."
+	para "There's lots of"
+	line "extras - try it!"
 	done	
 	

@@ -2,7 +2,6 @@ Route37_MapScriptHeader:
 	def_scene_scripts
 
 	def_callbacks
-	callback MAPCALLBACK_OBJECTS, SunnyCallback
 
 	def_warp_events
 
@@ -13,28 +12,18 @@ Route37_MapScriptHeader:
 	bg_event  4,  2, BGEVENT_ITEM + ETHER, EVENT_ROUTE_37_HIDDEN_ETHER
 
 	def_object_events
-	object_event 16,  8, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SunnyScript, EVENT_ROUTE_37_SUNNY_OF_SUNDAY
+	object_event 16,  8, SPRITE_ENGINEER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, SunnyScript, -1 ; ok 
 	object_event  6, 12, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerTwinsToriandtil1, -1
 	object_event  7, 12, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerTwinsToriandtil2, -1
 	object_event 14, 11, SPRITE_PSYCHIC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerPsychicGreg, -1
 	object_event  4,  6, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBeautyCallie, -1
 	object_event  9,  6, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBeautyCassandra, -1
-	fruittree_event 13,  5, FRUITTREE_ROUTE_37_1, PNK_APRICORN, PAL_NPC_RED
-	fruittree_event 16,  5, FRUITTREE_ROUTE_37_2, PNK_APRICORN, PAL_NPC_RED
-	fruittree_event 15,  7, FRUITTREE_ROUTE_37_3, PNK_APRICORN, PAL_NPC_RED
+	fruittree_event 13,  5, FRUITTREE_ROUTE_37_1, TOUGH_LEAVES, PAL_NPC_GREEN
+	fruittree_event 16,  5, FRUITTREE_ROUTE_37_2, WHT_APRICORN, PAL_NPC_SILVER
+	fruittree_event 11, 11, FRUITTREE_ROUTE_37_3, SHORE_FOAM, PAL_NPC_BLUE
 
 	object_const_def
-	const ROUTE37_SUNNY
 
-SunnyCallback:
-	readvar VAR_WEEKDAY
-	ifequal SUNDAY, .SunnyAppears
-	disappear ROUTE37_SUNNY
-	endcallback
-
-.SunnyAppears:
-	appear ROUTE37_SUNNY
-	endcallback
 
 GenericTrainerTwinsToriandtil1:
 	generictrainer TWINS, ANNANDANNE1, EVENT_BEAT_TWINS_ANN_AND_ANNE, TwinsToriandtil1SeenText, TwinsToriandtil1BeatenText
@@ -66,38 +55,59 @@ GenericTrainerPsychicGreg:
 SunnyScript:
 	faceplayer
 	opentext
-	checkevent EVENT_GOT_MAGNET_FROM_SUNNY
-	iftrue SunnySundayScript
-	readvar VAR_WEEKDAY
-	ifnotequal SUNDAY, SunnyNotSundayScript
+	checkevent EVENT_GOT_ZAP_CANNON
+	iftrue .AlreadyGotTM
 	checkevent EVENT_MET_SUNNY_OF_SUNDAY
 	iftrue .MetSunny
 	writetext MeetSunnyText
 	promptbutton
 	setevent EVENT_MET_SUNNY_OF_SUNDAY
 .MetSunny:
-	checkflag ENGINE_PLAYER_IS_FEMALE
-	iftrue .Kris
-	writetext SunnyGivesGiftText1
+	writetext SunnyGivesGiftText
 	promptbutton
-	sjump .next
-.Kris:
-	writetext SunnyGivesGiftText2
-	promptbutton
-.next
-	verbosegiveitem MAGNET
-	iffalse SunnyDoneScript
-	setevent EVENT_GOT_MAGNET_FROM_SUNNY
+	verbosegivetmhm TM_ZAP_CANNON
+	iffalse .BagFull
+	setevent EVENT_GOT_ZAP_CANNON
 	jumpopenedtext SunnyGaveGiftText
 
-SunnySundayScript:
+.AlreadyGotTM:
 	writetext SunnySundayText
 	waitbutton
-SunnyDoneScript:
+.BagFull:
 	endtext
 
-SunnyNotSundayScript:
-	jumpopenedtext SunnyNotSundayText
+MeetSunnyText:
+	text "Sunny: Who are"
+	line "you?"
+
+	para "I'm Sunny of"
+	line "Sunday."
+	done
+
+SunnyGivesGiftText:
+	text "I got this from"
+	line "someone in Kanto."
+	
+	para "Maybe they should"
+	line "use it to start"
+	cont "the Magnet train"
+	cont "again."
+	done
+
+SunnyGaveGiftText:
+	text "Sunny: That"
+	line "technique may"
+	cont "not hit often,"
+	cont "but when it does,"
+	cont "it's wicked!"
+	done
+
+SunnySundayText:
+	text "Sunny: I'm Sunny"
+	line "of Sunday."
+
+	done
+
 
 GenericTrainerBeautyCallie:
 	generictrainer BEAUTY, CALLIE, EVENT_BEAT_BEAUTY_CALLIE, BeautyCallieSeenText, BeautyCallieBeatenText
@@ -148,65 +158,6 @@ PsychicGregBeatenText:
 	line "pretty sad…"
 	done
 
-MeetSunnyText:
-	text "Sunny: Hi!"
-
-	para "I'm Sunny of Sun-"
-	line "day, meaning it's"
-	cont "Sunday today!"
-	done
-
-SunnyGivesGiftText1:
-	text "I was told to give"
-	line "you this if I saw"
-	cont "you!"
-	done
-
-SunnyGivesGiftText2:
-	text "I was told to give"
-	line "you this if I saw"
-	cont "you!"
-	done
-
-SunnyGaveGiftText:
-	text "Sunny: That thing…"
-
-	para "Um…"
-
-	para "…What was it now…"
-
-	para "…"
-
-	para "Oh! I remember"
-	line "now!"
-
-	para "A #mon that"
-	line "knows Electric"
-
-	para "moves should hold"
-	line "it."
-
-	para "My sis Monica said"
-	line "it powers up"
-	cont "Electric moves!"
-	done
-
-SunnySundayText:
-	text "Sunny: My sisters"
-	line "and brothers are"
-	cont "Monica, Tuscany,"
-	cont "Wesley, Arthur,"
-	cont "Frieda and Santos."
-
-	para "They're all older"
-	line "than me!"
-	done
-
-SunnyNotSundayText:
-	text "Sunny: Isn't today"
-	line "Sunday?"
-	cont "Um… I forgot!"
-	done
 
 BeautyCallieSeenText:
 	text "Oh, you're a cute"
