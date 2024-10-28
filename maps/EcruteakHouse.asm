@@ -1,8 +1,8 @@
-EcruteakHouse_MapScriptHeader:
+EcruteakHouse_MapScriptHeader: ; use moving of sages to solve the passage problem 
 	def_scene_scripts
 
 	def_callbacks
-
+	callback MAPCALLBACK_OBJECTS, EcruteakHouseInitializeSages
 
 	def_warp_events
 	warp_event  4, 17, ECRUTEAK_CITY, 3
@@ -20,150 +20,49 @@ EcruteakHouse_MapScriptHeader:
 	object_event  4,  6, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakTinTowerEntranceSageScript, -1
 	object_event  5,  6, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakTinTowerEntranceSageScript, -1
 	object_event  6,  9, SPRITE_SAGE, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakTinTowerEntranceWanderingSageScript, -1
-	object_event  3, 11, SPRITE_GRAMPS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakTinTowerEntranceGrampsText, -1
+	object_event  3, 11, SPRITE_GRAMPS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakTinTowerEntranceGrampsText, -1 ; ok 
 
 	object_const_def
 	const ECRUTEAKHOUSE_SAGE1
 	const ECRUTEAKHOUSE_SAGE2
 
+EcruteakHouseInitializeSages:
+	checkevent EVENT_BEAT_KIMONO_GIRL_AKARI
+	checkscene
+	iftrue .Skip
+	moveobject ECRUTEAKHOUSE_SAGE1, 3, 7
+	moveobject ECRUTEAKHOUSE_SAGE2, 6, 7
+.Skip:
+	endcallback
+
 
 EcruteakTinTowerEntranceSageScript:
 	faceplayer
 	opentext
+	checkevent EVENT_BEAT_KIMONO_GIRL_AKARI
+	iftrue_jumpopenedtext EcruteakTinTowerEntranceSageText_BeatKimonoGirls
 	jumpopenedtext EcruteakTinTowerEntranceSageText
 
-.CheckForClearBell:
-	checkevent EVENT_KOJI_ALLOWS_YOU_PASSAGE_TO_TIN_TOWER
-	iftrue_jumpopenedtext EcruteakTinTowerEntranceSageText_PleaseDoGoOn
-	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
-	iftrue_jumpopenedtext EcruteakTinTowerEntranceSageText_HeardClearBell
-	checkkeyitem CLEAR_BELL
-	iftrue .RingClearBell
-	jumpopenedtext EcruteakTinTowerEntranceSageText_NoClearBell
-
-.RingClearBell:
-	writetext EcruteakTinTowerEntranceSageText_HearsClearBell
-	waitbutton
-	closetext
-	setscene $1
-	setevent EVENT_RANG_CLEAR_BELL_2
-	clearevent EVENT_RANG_CLEAR_BELL_1
-	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
-	end
 
 EcruteakTinTowerEntranceWanderingSageScript:
-	checkevent EVENT_GOT_CLEAR_BELL
-	iftrue_jumptextfaceplayer EcruteakTinTowerEntranceWanderingSageText_GotClearBell
 	jumptextfaceplayer EcruteakTinTowerEntranceWanderingSageText
-
-EcruteakTinTowerEntranceSageBlocksLeftMovement:
-	fix_facing
-	run_step_left
-	remove_fixed_facing
-	turn_head_down
-	step_end
-
-EcruteakTinTowerEntranceSageBlocksRightMovement:
-	fix_facing
-	run_step_right
-	remove_fixed_facing
-	turn_head_down
-	step_end
 
 EcruteakTinTowerEntranceSageText:
 	text "Bell Tower is off"
 	line "limits to anyone"
 
-	para "without Ecruteak"
-	line "Gym's Badge."
-
-	para "Sorry, but you'll"
-	line "have to leave."
+	para "without a bless-"
+	line "ing from the Kim-"
+	cont "ono Girls."
 	done
 
-EcruteakTinTowerEntranceSageText_GotFogBadge:
-	text "Bell Tower is off"
-	line "limits to anyone"
-
-	para "without Ecruteak"
-	line "Gym's Badge."
-
-	para "Ah!"
-
-	para "Ecruteak's Gym"
-	line "Badge! Please, go"
-	cont "right through."
+EcruteakTinTowerEntranceSageText_BeatKimonoGirls:
+	text "The Kimono Girls"
+	line "said you would"
+	cont "come. Please, "
+	cont "pass through."
 	done
 
-EcruteakTinTowerEntranceSageText_NoClearBell:
-	text "A momentous event"
-	line "has occurred."
-
-	para "I beg your pardon,"
-	line "but I must ask you"
-	cont "to leave."
-
-	para "…What soothes the"
-	line "soul…"
-
-	para "The Wise Trio say"
-	line "things that are so"
-
-	para "very difficult to"
-	line "understand…"
-	done
-
-EcruteakTinTowerEntranceSageText_HearsClearBell:
-	text "A momentous event"
-	line "has occurred."
-
-	para "I beg your pardon,"
-	line "but I must ask you"
-	cont "to leave."
-
-	para "………………"
-
-	para "Ah!"
-
-	para "The sound of that"
-	line "Clear Bell!"
-
-	para "It… It's sublime!"
-
-	para "I've never heard"
-	line "so beautiful a"
-	cont "sound before!"
-
-	para "That bell's chime"
-	line "is indicative of"
-	cont "the bearer's soul."
-
-	para "You…"
-
-	para "You may be able to"
-	line "make it through"
-	cont "Bell Tower."
-
-	para "Please, do go on."
-	done
-
-EcruteakTinTowerEntranceSageText_PleaseDoGoOn:
-	text "Please, do go on."
-	done
-
-EcruteakTinTowerEntranceSageText_HeardClearBell:
-	text "That bell's chime"
-	line "is indicative of"
-	cont "the bearer's soul."
-
-	para "You…"
-
-	para "You may be able to"
-	line "make it through"
-	cont "Bell Tower."
-
-	para "Please, do go on."
-	done
 
 EcruteakTinTowerEntranceWanderingSageText:
 	text "The Bell Tower"
@@ -177,21 +76,14 @@ EcruteakTinTowerEntranceWanderingSageText:
 	cont "see it."
 	done
 
-EcruteakTinTowerEntranceWanderingSageText_GotClearBell:
-	text "The Bell Tower"
-	line "shook! A #mon"
-
-	para "must have returned"
-	line "to the top!"
-	done
-
 EcruteakTinTowerEntranceGrampsText:
-	text "Two towers…"
-	line "Two #mon…"
-
-	para "But when one"
-	line "burned down, both"
-
-	para "#mon flew away,"
-	line "never to return."
+	text "To reach the top"
+	line "of the tower, you"
+	cont "will need a heart"
+	cont "that sees clearly."
+	
+	para "Ho-Oh only recogn-"
+	line "izes those whose"
+	cont "heart aspires to"
+	cont "love."
 	done

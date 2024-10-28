@@ -146,21 +146,19 @@ HH_KurtExplains:
 
 HH_HollisPinecos:
 	text "Hollis: Steel?"
-	line "Pineco becomes"
-	cont "a steel type"
-	cont "when it evolves,"
-	cont "but they're a"
-	cont "problem before"
-	cont "that!"
+
+	line "The Hisuians had"
+	cont "some of those,"
+	cont "but they weren't"
+	cont "a problem."
 	
-	para "The Hisuians"
-	line "said that there"
-	cont "were some steel"
-	cont "types brought"
-	cont "in through the"
-	cont "port west of the"
-	cont "Capital."
-	
+	para "Oh, but they did"
+	line "say that some"
+	cont "steel types were"
+	cont "being brought in"
+	cont "through the West-"
+	cont "ern port."
+
 	para "I wish I could"
 	line "stay and chat"
 	cont "more, but I am"

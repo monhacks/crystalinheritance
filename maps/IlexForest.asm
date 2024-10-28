@@ -357,7 +357,12 @@ KurtText2:
 	text "Your steel types"
 	line "are abominations!"
 	
-	para "They cut down so"
+	para "Azalea got by"
+	line "without Steels un-"
+	cont "til now, and we"
+	cont "don't need them!"
+	
+	para "You cut down so"
 	line "many trees.  Just"
 	cont "look at what"
 	cont "you've dug up!"
@@ -428,21 +433,32 @@ PlayerMovesToShrine:
 	
 KurtExplainsGSBallText:
 	text "Only recently were"
-	line "steel types used"
-	cont "widely in Johto."
+	line "steel types disc-"
+	cont "overed in Johto."
 	
+	para "Skarmory and Forr-"
+	line "etress were so"
+	cont "rare, and magne-"
+	cont "mite migrated from"
+	cont "Kanto as stowaways"
+	cont "in Olivine ships."
+	
+	para "Now, Silph uses"
+	line "steel types for"
+	cont "everything!"
+	
+	para "Just look at what"
+	line "Steel types do to"
+	cont "the forest!"
+	
+	para "They nearly"
+	cont "destroyed this"
+	cont "artifact..."
+		
 	para "I wish we could"
 	line "go back in time"
 	cont "and make it so"
 	cont "they never were."
-	
-	para "Just look at what"
-	line "Steel types do to"
-	cont "the forest! They"
-	cont "cut near the shr-"
-	cont "ine, and nearly"
-	cont "destroyed this"
-	cont "artifact..."
 	done
 	
 KurtExplainsGSBallText2:

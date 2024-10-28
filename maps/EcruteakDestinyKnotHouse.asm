@@ -1,4 +1,4 @@
-EcruteakDestinyKnotHouse_MapScriptHeader:
+EcruteakDestinyKnotHouse_MapScriptHeader: ; herbalist, part of trade quest 
 	def_scene_scripts
 
 	def_callbacks
@@ -13,71 +13,92 @@ EcruteakDestinyKnotHouse_MapScriptHeader:
 	bg_event  2,  1, BGEVENT_JUMPSTD, radio2
 
 	def_object_events
-	object_event  5,  4, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakDestinyKnotHouseCooltrainerFScript, -1
-	object_event  2,  3, SPRITE_RICH_BOY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, trade, NPC_TRADE_HARI, -1
+	object_event  5,  4, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, HerbalistWifeText, -1
+	object_event  2,  3, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakBlueMailScript, -1
 
-EcruteakDestinyKnotHouseCooltrainerFScript:
-	checkevent EVENT_GOT_DESTINY_KNOT_FROM_ECRUTEAK
-	iftrue_jumptextfaceplayer .Text4
+EcruteakBlueMailScript: 
+	checkevent EVENT_GOT_LITEBLUEMAIL ;;TO ADD
+	iftrue_jumptextfaceplayer GiveLiteBlueMailText
+	checkevent EVENT_GAVE_BIG_MUSHROOM
+	iftrue_jumptextfaceplayer GiveLiteBlueMailText
 	faceplayer
-	opentext
-	writetext .Text1
-	promptbutton
-	special SpecialBeastsCheck
-	iffalse_jumpopenedtext .Text2
-	special SpecialBirdsCheck
-	iffalse_jumpopenedtext .Text2
-	special SpecialDuoCheck
-	iffalse_jumpopenedtext .Text2
-	writetext .Text3
-	verbosegiveitem DESTINY_KNOT
+	opentext	
+	writetext NeedABigMushroomText
+	waitbutton
+	checkitem BIG_MUSHROOM
+	iffalse NoBigMushroom
+	writetext Text_BigMushroomQuestion ;;
+	yesorno
+	iffalse BigMushroomRefused
+	takeitem BIG_MUSHROOM
+	jumpopenedtext TextReadingTheTeaLeaves
+	verbosegiveitem LITEBLUEMAIL
 	iffalse_endtext
-	setevent EVENT_GOT_DESTINY_KNOT_FROM_ECRUTEAK
-	jumpthisopenedtext
+	setevent EVENT_GOT_LITEBLUEMAIL 
+	jumpopenedtext GiveLiteBlueMailText 
 
-.Text4:
-	text "The red string of"
-	line "fate ties you to"
 
-	para "the legendary"
-	line "#mon…"
-
-	para "Are you some kind"
-	line "of Chosen One?"
+HerbalistWifeText:
+	text "My husband's tea"
+	line "is popular with"
+	cont "young lovers."
+	
+	para "They want to see"
+	line "if they will end"
+	cont "up together."
 	done
 
-.Text1:
-	text "Two mighty bird"
-	line "#mon of Johto,"
 
-	para "each guarding a"
-	line "trio of legendary"
-	cont "#mon."
+NeedABigMushroomText:
+	text "Have you come to"
+	line "have your fortune"
+	cont "told? I can read"
+	cont "the tea leaves, so"
+	cont "to speak."
 
-	para "Legends within"
-	line "legends…"
+	para "The only thing I"
+	line "need is a Big"
+	cont "Mushroom."
 	done
 
-.Text2:
-	text "What if a trainer"
-	line "were to catch all"
-	cont "of them?"
-
-	para "What an unlikely"
-	line "destiny!"
+NoBigMushroom:
+	text "Oh, you don't have"
+	line "one? Please come"
+	cont "back."
 	done
 
-.Text3:
-	text "What? You've seen"
-	line "them? And you even"
-	cont "caught them?!"
+Text_BigMushroomQuestion:
+	text "Oh! That's a Tiny-"
+	line "Mushroom! I can"
+	cont "show you your"
+	cont "future, if you"
+	cont "just give it to me."
+	done
 
-	para "Let me see your"
-	line "#dex… Wow!"
+BigMushroomRefused:
+	text "No? Well, you won't"
+	line "have any corres-"
+	cont "pondence with the"
+	cont "future then."
+	done
 
-	para "It must have been"
-	line "your destiny."
+TextReadingTheTeaLeaves:
+	text "Some hot water,"
+	line "some Toe Of"
+	cont "Politoed, some"
+	cont "Moss of Zubat,"
+	cont "and it looks nice"
+	cont "and blue..."
 
-	para "Here, you should"
-	line "have this."
+	para "Oh? It's blank."
+	done
+
+GiveLiteBlueMailText:
+	text "The spirits have"
+	line "spoken! Your"
+	cont "future is"
+	cont "undecided!"
+
+	para "Who will you"
+	line "correspond with?"
 	done

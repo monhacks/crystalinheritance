@@ -13,47 +13,95 @@ EcruteakCherishBallHouse_MapScriptHeader:
 	bg_event  2,  1, BGEVENT_JUMPSTD, radio2
 
 	def_object_events
-	object_event  2,  3, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakCherishBallHouseGrampsScript, -1
-	object_event  5,  4, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakCherishBallHouseGrannyText, -1
+	object_event  2,  3, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldLeafMotherText, -1
+	object_event  5,  4, SPRITE_RICH_BOY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakBlueMailScript, -1
 
-EcruteakCherishBallHouseGrampsScript:
-	checkevent EVENT_GOT_CHERISH_BALL_FROM_ECRUTEAK
-	iftrue_jumptextfaceplayer .Text2
+EcruteakBlueMailScript: 
+	checkevent EVENT_GOT_GOLD_LEAF ;;TO ADD
+	iftrue_jumptextfaceplayer GiveGoldLeafText
+	checkevent EVENT_GAVE_LITEBLUEMAIL
+	iftrue_jumptextfaceplayer GiveGoldLeafText
 	faceplayer
-	opentext
-	writetext .Text1
-	promptbutton
-	verbosegiveitem CHERISH_BALL
+	opentext	
+	writetext NeedALiteBlueMailText
+	waitbutton
+	checkitem LITEBLUEMAIL
+	iffalse NoLiteBlueMail
+	writetext Text_LiteBlueMailQuestion ;;
+	yesorno
+	iffalse LiteBlueMailRefused
+	takeitem LITEBLUEMAIL
+	jumpopenedtext TextHeresTheGoldLeaf
+	verbosegiveitem GOLD_LEAF
 	iffalse_endtext
-	setevent EVENT_GOT_CHERISH_BALL_FROM_ECRUTEAK
-	jumpthisopenedtext
+	setevent EVENT_GOT_GOLD_LEAF 
+	jumpopenedtext GiveGoldLeafText 
 
-.Text2:
-	text "I will always"
-	line "cherish the time"
 
-	para "I spent with"
-	line "#mon."
+GoldLeafMotherText: 
+	text "Why does my son"
+	line "insist on being"
+	cont "so... pedestrian"
+	cont "about our status?"
+
+	para "That charming girl"
+	line "of his could be"
+	cont "summering in"
+	cont "Kalos instead of"
+	cont "withering in"
+	cont "Olivine."
 	done
 
-.Text1:
-	text "I've lived a long"
-	line "life, and I have"
 
-	para "memories that I"
-	line "will cherish for-"
-	cont "ever."
+NeedALiteBlueMailText:
+	text "I simply cannot"
+	line "express my love on"
+	cont "Gold Leaf!"
 
-	para "Take this and make"
-	line "a new memory to"
-	cont "cherish."
+	para "How is my beloved"
+	line "to know I'm more"
+	cont "than my trust fund"
+	cont "when my letters"
+	cont "look like they're"
+	cont "written on golden"
+	cont "nuggets?"
 	done
 
-EcruteakCherishBallHouseGrannyText:
-	text "Fashions change"
-	line "over the years,"
+NoLiteBlueMail:
+	text "Would you consider"
+	line "a trade? A sheet"
+	cont "of gold leaf for"
+	cont "plain stationary."
+	done
 
-	para "but Ecruteak re-"
-	line "mains as trad-"
-	cont "itional as ever."
+
+Text_LiteBlueMailQuestion:
+	text "Willickers! Is"
+	line "that LiteBlue-"
+	cont "Mail? How"
+	cont "ordinary! I simply"
+	cont "must have it."
+	done
+
+LiteBlueMailRefused:
+	text "You refuse? How"
+	line "peculiar..."
+	cont "It's 24-Karat"
+	cont "Gold Leaf."
+	done
+
+TextHeresTheGoldLeaf:
+	text "Splendid! Do take"
+	line "this - careful!"
+	cont "It would be an"
+	cont "heirloom in YOUR"
+	cont "family!"
+	done
+
+GiveGoldLeafText:
+	text "Perfect! Now to"
+	line "write a properly"
+	cont "common letter."
+	para "I hope she makes"
+	line "haste in reply!"
 	done

@@ -3,7 +3,6 @@ BellchimeTrail_MapScriptHeader:
 	scene_script BellchimeTrailStepDownTrigger
 
 	def_callbacks
-	callback MAPCALLBACK_OBJECTS, SetupValerieMorningWalkCallback
 
 	def_warp_events
 	warp_event  4,  4, WISE_TRIOS_ROOM, 1
@@ -17,10 +16,11 @@ BellchimeTrail_MapScriptHeader:
 	bg_event 22, 12, BGEVENT_JUMPTEXT, TinTowerSignText
 
 	def_object_events
-	object_event 16,  6, SPRITE_VALERIE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BellchimeTrailValerieScript, EVENT_VALERIE_BELLCHIME_TRAIL
+	object_event 14,  4, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BellchimeTrailEmiScript, -1
+	object_event 21, 10, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, BellchimeBlockerText, EVENT_BEAT_MORTY_GYM ;
 
 	object_const_def
-	const BELLCHIMETRAIL_VALERIE
+	
 
 BellchimeTrailStepDownTrigger:
 	sdefer .Script
@@ -35,23 +35,6 @@ BellchimeTrailStepDownTrigger:
 .Done
 	setscene $1
 	end
-
-SetupValerieMorningWalkCallback:
-	checkevent EVENT_FOUGHT_SUICUNE
-	iffalse .Disappear
-	checkevent EVENT_BEAT_VALERIE
-	iffalse .Appear
-	checkflag ENGINE_VALERIE_MORNING_WALK
-	iftrue .Disappear
-	checktime 1 << MORN
-	iffalse .Disappear
-.Appear:
-	appear BELLCHIMETRAIL_VALERIE
-	endcallback
-
-.Disappear:
-	disappear BELLCHIMETRAIL_VALERIE
-	endcallback
 
 BellchimeTrailPanUpTrigger:
 	playsound SFX_EXIT_BUILDING
@@ -83,235 +66,177 @@ TinTowerSignText:
 	cont "roost here."
 	done
 
-BellchimeTrailValerieScript:
+BellchimeTrailEmiScript:
 	faceplayer
 	opentext
-	checkevent EVENT_BEAT_VALERIE
-	iftrue .Rematch
-	checkevent EVENT_LISTENED_TO_VALERIE
-	iftrue .Listened
-	writetext .IntroText
+	checkevent EVENT_BEAT_KIMONO_GIRL_EMI
+	iftrue .AskToTimeTravel
+	writetext KimonoGirlEmiIntroText
 	waitbutton
-	setevent EVENT_LISTENED_TO_VALERIE
-.Listened:
-	writetext .BattleText
+	writetext EmiBattleText
 	yesorno
-	iffalse_jumpopenedtext .RefusedText
-	writetext .AcceptedText
+	iffalse_jumpopenedtext EmiRefusedText
+	writetext EmiAcceptedText
 	waitbutton
 	closetext
-	winlosstext .BeatenText, 0
-	setlasttalked BELLCHIMETRAIL_VALERIE
+	winlosstext EmiBeatenText, 0
 	loadtrainer VALERIE, 1
 	startbattle
 	reloadmapafterbattle
-	setevent EVENT_BEAT_VALERIE
+	setevent EVENT_BEAT_KIMONO_GIRL_EMI
 	opentext
-	writetext .RewardText
+	writetext KimonoGirlEmiRewardText
 	promptbutton
-	verbosegivetmhm TM_DAZZLINGLEAM
-	setevent EVENT_GOT_TM49_DAZZLINGLEAM_FROM_VALERIE
-	writetext .FarewellText
-.Depart
+	verbosegiveitem ODD_SOUVENIR ; hisui stone
+	writetext EmiHealsYouText
+	playmusic MUSIC_HEAL
+	special HealParty
+	special SaveMusic	
+	writetext EmiHealedPokemonText	; 
+.AskToTimeTravel:
+	writetext BellchimeTrailAskToTimeTravelText
+	yesorno
+	iffalse_jumpopenedtext BellChimeTrailNoTimeTravelText
+	writetext BellChimeTrailYesTimeTravelText
 	waitbutton
 	closetext
-	readvar VAR_FACING
-	ifnotequal RIGHT, .SkipGoAround
-	applymovement BELLCHIMETRAIL_VALERIE, .ValerieGoesAroundMovement
-.SkipGoAround
-	applymovement BELLCHIMETRAIL_VALERIE, .ValerieDepartsMovement
-	disappear BELLCHIMETRAIL_VALERIE
-	clearevent EVENT_VALERIE_ECRUTEAK_CITY
-	setflag ENGINE_VALERIE_MORNING_WALK
+	playsound SFX_WARP_TO
+	special FadeOutPalettes
+	waitsfx
+	warp EMPERORS_GARDEN, 28, 28
 	end
 
-.Rematch:
-	writetext .RematchText
-	waitbutton
-	closetext
-	winlosstext .RematchBeatenText, 0
-	setlasttalked BELLCHIMETRAIL_VALERIE
-	readvar VAR_BADGES
-	ifequal 16, .Battle3
-	checkevent EVENT_BEAT_ELITE_FOUR
-	iftrue .Battle2
-	loadtrainer VALERIE, 1
-	startbattle
-	reloadmapafterbattle
-	sjump .AfterRematch
+KimonoGirlEmiIntroText:
+	text "I sensed your"
+	line "arrival when"
+	cont "you arrived."
 
-.Battle2:
-	loadtrainer VALERIE, 2
-	startbattle
-	reloadmapafterbattle
-	sjump .AfterRematch
+	para "You have come"
+	line "very far, "
 
-.Battle3:
-	loadtrainer VALERIE, 3
-	startbattle
-	reloadmapafterbattle
-	sjump .AfterRematch
+	para "looking for a"
+	line "way to save"
+	cont "your heritage."
+	
+	para "You have already"
+	line "brought people"
+	cont "together in"
+	cont "Goldenrod and"
+	
+	para "calmed the"
+	line "gales in"
+	cont "Violet, and now"
+	
+	para "you seek the"
+	line "blossom tree"
+	cont "here…"
+	
+	para "Hahaha, so many"
+	line "similarities!"
 
-.AfterRematch:
-	opentext
-	writetext .RematchFarewellText
-	sjump .Depart
+	para "Eh, you want to"
+	line "know the ending"
+	cont "of the story?"
 
-.IntroText:
-	text "If it isn't the"
-	line "trainer who faced"
-	cont "Suicune…"
-
-	para "I am Valerie."
-	line "I come to this"
-
-	para "trail to be"
-	line "captivated by its"
-	cont "beauty."
-
-	para "Today I was for-"
-	line "tunate enough to"
-
-	para "witness your"
-	line "battle with a"
-	cont "legend…"
-
-	para "I would love to"
-	line "contend with one"
-
-	para "who caught the eye"
-	line "of a legendary"
-	cont "#mon."
+	para "I'll tell you if"
+	line "you can beat"
+	cont "me!"
 	done
 
-.BattleText:
-	text "Valerie: I train"
-	line "the elusive Fairy"
-	cont "type."
+EmiBattleText:
+	text "Eh, you want to"
+	line "know the ending"
+	cont "of the story?"
 
-	para "They appear frail"
-	line "and delicate, but"
-	cont "they are strong."
-
-	para "Will you battle"
-	line "with me?"
+	para "I'll tell you if"
+	line "you can beat"
+	cont "me!"
 	done
 
-.RefusedText:
-	text "Valerie: Alas…"
+EmiRefusedText:
+	text "You refuse?"
+	
+	para "You can't run"
+	line "from destiny"
+	cont "forever!"
 	done
 
-.AcceptedText:
-	text "Valerie: I hope"
-	line "our battle will"
+EmiAcceptedText:
+	text "Face your fate!"
 
-	para "prove entertaining"
-	line "to you."
+EmiBeatenText:
+	text "So the legends"
+	line "are true."
+	
+	para "Allow me to ex-"
+	line "plain the rest"
+	cont "of the story"
+	cont "of these towers."
 	done
 
-.BeatenText:
-	text "I hope the sun is"
-	line "shining tomorrow…"
 
-	para "That would be"
-	line "reason enough to"
-	cont "smile."
-	done
-
-.RewardText:
-	text "Valerie: Yes… that"
-	line "was a fine battle."
-
-	para "I shall reward you"
-	line "for this great"
-	cont "victory."
-
-	para "Please consider"
-	line "this as a personal"
-	cont "gift from me."
-	done
-
-.FarewellText:
-	text "Valerie: Oh? My,"
-	line "what a curious"
-	cont "feeling…"
-
-	para "I can't seem to"
-	line "recall which move"
-
-	para "is contained in"
-	line "that TM."
-
-	para "I hope you might"
-	line "forgive me."
-
-	para "That was truly a"
-	line "captivating"
-	cont "battle."
-
-	para "I might just be"
-	line "captivated by you."
-
-	para "Until we meet"
-	line "again, farewell."
-	done
-
-.RematchText:
-	text "Valerie: Oh, if it"
-	line "isn't my young"
-	cont "trainer…"
-
-	para "It is lovely to"
-	line "meet you again"
+KimonoGirlEmiRewardText:
+	text "The infamous"
+	line "lightning"
+	cont "strike…"
+	
+	para "It struck the"
+	line "Brass tower just"
+	cont "as the emperor"
+	cont "raised his"
+	cont "hands…"
+	
+	para "But few know"
+	line "of the other"
+	cont "figure there"
+	cont "that day…"
+	
+	para "Standing in the"
+	line "shadows was"
+	cont "someone with"
+	cont "hair like"
+	cont "spring leaves…"
+	
+	para "After those"
+	line "events, visit-"
+	cont "ors from Hisui"
+	cont "stopped coming."
+	
+	para "Some of the only"
+	line "evidence we"
+	cont "have is in"
+	cont "unique stones"
 	cont "like this."
-
-	para "Then I suppose you"
-	line "have earned your-"
-
-	para "self the right to"
-	line "a battle."
-
-	para "The elusive Fairy"
-	line "may appear frail"
-
-	para "as the breeze and"
-	line "delicate as a"
-
-	para "bloom, but it is"
-	line "strong."
 	done
 
-.RematchBeatenText:
-	text "I hope that you"
-	line "will find things"
-
-	para "worth smiling"
-	line "about tomorrow…"
+EmiHealsYouText:
+	text "Please, let me"
+	line "heal your #mon."
 	done
 
-.RematchFarewellText:
-	text "That was truly a"
-	line "captivating"
-	cont "battle."
+EmiHealedPokemonText:
 
-	para "I might just be"
-	line "captivated by you."
 
-	para "Until we meet"
-	line "again, farewell."
+
+BellchimeTrailAskToTimeTravelText:
+
+
+BellChimeTrailNoTimeTravelText:
+
+
+BellChimeTrailYesTimeTravelText:
+
+
+
+BellchimeBlockerText:
+	text "The tower is off-"
+	line "limits to those"
+	cont "without a Clear"
+	cont "Bell..."
+	
+	para "If Morty returns"
+	line "to his duty, he"
+	cont "may test if you"
+	cont "are worthy to"
+	cont "hold it."
 	done
-
-.ValerieGoesAroundMovement:
-	step_down
-	step_left
-	step_end
-
-.ValerieDepartsMovement:
-	step_left
-	step_left
-	step_left
-	step_up
-	step_up
-	step_left
-	step_left
-	step_end

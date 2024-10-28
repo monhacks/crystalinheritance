@@ -40,7 +40,7 @@ Route32_MapScriptHeader: ; convert all to generictrainers, freida to give venosh
 
 
 	object_const_def
-	ROUTE32_COOLTRAINER_M
+
 
 Route32FlyPoint:
 	setflag ENGINE_FLYPOINT_UNION_CAVE
@@ -62,7 +62,6 @@ Route32CooltrainermPetrieScript: ; revise, "if you go get my X from the pokecent
 	takeitem SLOWPOKETAIL
 	setevent EVENT_FOUGHT_AIR_BALLOON_ROUTE_32
 	winlosstext .BeatenText, .LossText
-	setlasttalked ROUTE32_COOLTRAINER_M
 	loadtrainer COOLTRAINERM, PETRIE 
 	startbattle
 	setevent EVENT_BEAT_COOLTRAINERM_PETRIE

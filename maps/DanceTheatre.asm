@@ -2,6 +2,7 @@ DanceTheatre_MapScriptHeader:
 	def_scene_scripts
 
 	def_callbacks
+	callback MAPCALLBACK_OBJECTS, TheatreFinaleCallback
 
 	def_warp_events
 	warp_event  5, 13, ECRUTEAK_CITY, 8
@@ -10,269 +11,288 @@ DanceTheatre_MapScriptHeader:
 	def_coord_events
 
 	def_bg_events
-	bg_event  5,  6, BGEVENT_UP, MapDanceTheatreSignpost1Script
-	bg_event  6,  6, BGEVENT_UP, MapDanceTheatreSignpost1Script
+
 
 	def_object_events
-	object_event  0,  2, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_SPINCOUNTERCLOCKWISE, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerKimono_girlNaoko, -1
-	object_event  2,  1, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerKimono_girlSayo, -1
-	object_event  6,  2, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerKimono_girlZuki, -1
-	object_event  9,  1, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerKimono_girlKuni, -1
-	object_event 11,  2, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_SPINCLOCKWISE, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerKimono_girlMiki, -1
-	object_event  7, 10, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DanceTheaterSurfGuy, -1
-	pokemon_event  6,  8, RHYDON, -1, -1, PAL_NPC_BROWN, RhydonText, -1
-	object_event 10, 10, SPRITE_ACE_TRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, DanceTheatreCooltrainerMText, -1
-	object_event  3,  6, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, DanceTheatreGrannyText, -1
-	object_event  1, 10, SPRITE_LADY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, DanceTheatreLadyText, -1
+	object_event  5,  9, SPRITE_OSTENE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DanceTheatreOstene2Script, EVENT_BEAT_MEJIMI ; end 
+	object_event  6,  9, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, DanceTheatreKimono2Script, EVENT_BEAT_MEJIMI ; end
+
+	object_event  2,  1, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerKimono_girlNaoko, -1 ; LEAFEON, kimono girl 3 -- DONE 
+	object_event  3,  1, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerKimono_girlSayo, -1 ; FLAREON, kimono girl 1 -- DONE 
+	object_event  4,  1, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerKimono_girlZuki, -1 ; ESPEON, kimono girl 2 -- DONE 
+	object_event  6,  1, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerKimono_girlIzumi, -1 ; VAPOREON, kimono girl 4  -- DONE
+	object_event  7,  1, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerKimono_girlKuni, -1 ; GLACEON, kimono girl 4 -- DONE
+	object_event  8,  1, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerKimono_girlMiki, -1 ; UMBREON kimono girl 5 -- DONE 
+	object_event 10,  1, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerKimono_girlAkari, -1 ; JOLTEON  kimono girl 1 -- DONE 
+	
+	object_event  3, 10, SPRITE_OSTENE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, DanceTheatreOstene1Text, EVENT_BEAT_RIVAL_ROUTE_42;
+	pokemon_event  4, 10, PORYGON_Z, -1, -1, PAL_NPC_RED, PorygonZText, EVENT_BEAT_RIVAL_ROUTE_42;
+
+	object_event 10,  8, SPRITE_KURT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, DanceTheatreKurtText, EVENT_BEAT_BELLCHIME_KIMONO ; 
+	object_event  1, 10, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, DanceTheatreSilphText, EVENT_BEAT_RIVAL_ROUTE_42 ; SILPH 
+	object_event  3,  8, SPRITE_LADY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, DanceTheatreNPC1Text, EVENT_BEAT_RIVAL_ROUTE_42
+	object_event  8, 10, SPRITE_LADY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, DanceTheatreNPC2Text, EVENT_BEAT_RIVAL_ROUTE_42
+
+	object_const_def
+	const THEATRE_OSTENE_1
+	const THEATRE_KIMONO_GIRL
+
+TheatreFinaleCallback: ; pryce should not be here until after you have talked to slowpoke well guy
+	checkevent EVENT_BEAT_RIVAL_ROUTE_42
+	iffalse .NoNegotiation
+	disappear THEATRE_OSTENE
+	disappear THEATRE_KIMONO_GIRL
+.NoNegotiation:
+	endcallback
+
+PorygonZText:
+	text "Porygon-Z:"
+	line "Zoop zoop!"
+	done
+
+DanceTheatreOstene2Script:
+	end
+
+DanceTheatreKimono2Script:
+	end 
+
+DanceTheatreOstene1Text:
+	text "Ostene: Oh, hi… "
+	line "isn’t this show"
+	cont "boring?"
+	
+	para "It needs to be"
+	line "brought back "
+	cont "to life."
+	done
+
+DanceTheatreSilphText:
+	text "We at Silph"
+	line "think Ostene"
+	cont "can draw some"
+	cont "big crowds."
+	done
+	
+DanceTheatreKurtText:
+	text "<PLAYER> - "
+	line "maybe the Kimono"
+	cont "girls have an"
+	cont "idea how to go"
+	cont "back in time."
+	
+	para "You should see"
+	line "if they will"
+	cont "help us!"
+	done
+
+DanceTheatreNPC1Text:
+	text "This show is so"
+	line "immersive!"
+	done
 
 GenericTrainerKimono_girlNaoko:
-	generictrainer KIMONO_GIRL_1, NAOKO, EVENT_BEAT_KIMONO_GIRL_NAOKO, Kimono_girlNaokoSeenText, Kimono_girlNaokoBeatenText
+	generictrainer KIMONO_GIRL_3, NAOKO, EVENT_BEAT_KIMONO_GIRL_NAOKO, Kimono_girl_1NaokoSeenText, Kimono_girl_1NaokoBeatenText
 
-	text "I enjoyed that"
-	line "bout. I would like"
-	cont "to see you again."
+	text "The hero of old"
+	line "hailed from"
+	cont "Azalea town."
+	para "The hero united"
+	line "the town during"
+	cont "a time when the"
+	cont "forest was"
+	cont "threatened."
+	para "Say… you are"
+	line "from Azalea,"
+	cont "no?"
+	done
+Kimono_girl_1NaokoSeenText:
+	text "Our story starts"
+	line "deep in the"
+	cont "forest, long"
+	cont "ago!"
+	done
+
+Kimono_girl_1NaokoBeatenText:
+	text "Much like our"
+	line "hero, you have a"
+	cont "balance with"
+	cont "your #mon."
 	done
 
 GenericTrainerKimono_girlSayo:
-	generictrainer KIMONO_GIRL_2, SAYO, EVENT_BEAT_KIMONO_GIRL_SAYO, Kimono_girlSayoSeenText, Kimono_girlSayoBeatenText
+	generictrainer KIMONO_GIRL_1, SAYO, EVENT_BEAT_KIMONO_GIRL_SAYO, Kimono_girl_1SayoSeenText, Kimono_girl_1SayoBeatenText
 
-	text "Rhythm is impor-"
-	line "tant for both"
+	text "When the nearby"
+	line "town of Gauld-"
+	cont "enrod was cast"
+	cont "into pieces by"
+	cont "the power-"
+	cont "hungry emperor,"
 
-	para "dancing and #-"
-	line "mon."
+	para "the hero showed"
+	line "them their"
+	cont "similar needs."
+	done
+
+Kimono_girl_1SayoSeenText:
+	text "Trial by fire!"
+	done
+
+Kimono_girl_1SayoBeatenText:
+	text "Your strength"
+	line "comes from"
+	cont "trusting your"
+	cont "#mon."
 	done
 
 GenericTrainerKimono_girlZuki:
-	generictrainer KIMONO_GIRL_3, ZUKI, EVENT_BEAT_KIMONO_GIRL_ZUKI, Kimono_girlZukiSeenText, Kimono_girlZukiBeatenText
+generictrainer KIMONO_GIRL_2, ZUKI, EVENT_BEAT_KIMONO_GIRL_ZUKI, Kimono_girl_1ZukiSeenText, Kimono_girl_1ZukiBeatenText
 
-	text "I put a different"
-	line "flower in my bar-"
-	cont "rette every month."
+	text "The hero slipped"
+	line "into the Western"
+	cont "Capital, and"
+	para "learned of the"
+	line "emperor's plans"
+	cont "without his"
+	cont "knowing."
+	para "At that time,"
+	line "the towers were"
+	cont "still home to"
+	para "Lugia and Ho-Oh,"
+	line "but Ho-Oh was"
+	cont "growing restless"
+	para "from the emper-"
+	line "or's drumbeat"
+	cont "of war."
+	done
+
+Kimono_girl_1ZukiSeenText:
+	text "Stay one step"
+	line "ahead!"
+	done
+
+Kimono_girl_1ZukiBeatenText:
+	text "You knew my"
+	line "plans, just like"
+	cont "the hero."
+	done
+
+GenericTrainerKimono_girlIzumi:
+	generictrainer KIMONO_GIRL_4, IZUMI, EVENT_BEAT_KIMONO_GIRL_IZUMI, Kimono_girl_1IzumiSeenText, Kimono_girl_1IzumiBeatenText
+	text "At that time, a"
+	line "harsh storm kept"
+	cont "boats out of"
+	cont "the harbor."
+	para "Now, the emperor"
+	line "could only"
+	cont "expand to the"
+	cont "east."
+	done
+
+Kimono_girl_1IzumiSeenText:
+	text "Strike like a"
+	line "hurricane!"
+	done
+
+Kimono_girl_1IzumiBeatenText:
+	text "Blown away, as"
+	line "the port was…"
 	done
 
 GenericTrainerKimono_girlKuni:
-	generictrainer KIMONO_GIRL_4, KUNI, EVENT_BEAT_KIMONO_GIRL_KUNI, Kimono_girlKuniSeenText, Kimono_girlKuniBeatenText
+	generictrainer KIMONO_GIRL_4, KUNI, EVENT_BEAT_KIMONO_GIRL_KUNI, Kimono_girl_1KuniSeenText, Kimono_girl_1KuniBeatenText
 
-	text "I trained a lot,"
-	line "so I thought I was"
-
-	para "a capable trainer."
-	line "I guess I'm not."
+	text "The hero met"
+	line "made a coalition"
+	para "north of the"
+	line "Lake of Rage to"
+	cont "organize"
+	cont "against the"
+	cont "emperor."
 	done
 
-GenericTrainerKimono_girlMiki:
-	generictrainer KIMONO_GIRL_5, MIKI, EVENT_BEAT_KIMONO_GIRL_MIKI, Kimono_girlMikiSeenText, Kimono_girlMikiBeatenText
-
-	text "I can keep dancing"
-	line "because there are"
-
-	para "people who enjoy"
-	line "what I do."
-
-	para "My #mon keep my"
-	line "spirits up too."
+Kimono_girl_1KuniSeenText:
+	text "Crystallize the"
+	line "plan!"
 	done
 
-DanceTheaterSurfGuy:
-	faceplayer
-	opentext
-	writetext SurfGuyNeverLeftAScratchText
-	promptbutton
-	checkevent EVENT_GOT_HM03_SURF
-	iftrue_jumpopenedtext SurfGuyElegantKimonoGirlsText
-	checkevent EVENT_BEAT_KIMONO_GIRL_NAOKO
-	iffalse .KimonoGirlsUndefeated
-	checkevent EVENT_BEAT_KIMONO_GIRL_SAYO
-	iffalse .KimonoGirlsUndefeated
-	checkevent EVENT_BEAT_KIMONO_GIRL_ZUKI
-	iffalse .KimonoGirlsUndefeated
-	checkevent EVENT_BEAT_KIMONO_GIRL_KUNI
-	iffalse .KimonoGirlsUndefeated
-	checkevent EVENT_BEAT_KIMONO_GIRL_MIKI
-	iffalse .KimonoGirlsUndefeated
-	writetext SurfGuyLikeADanceText
-	promptbutton
-	verbosegivetmhm HM_SURF
-	setevent EVENT_GOT_HM03_SURF
-	jumpthisopenedtext
+Kimono_girl_1KuniBeatenText:
+	text "Though they move"
+	line "slowly, glaciers"
+	cont "use their size"
+	cont "to carve away"
+	cont "mountains."
+	done
+	
+GenericTrainerKimono_gir1Miki:
+	generictrainer KIMONO_GIRL_5, MIKI, EVENT_BEAT_KIMONO_GIRL_MIKI, Kimono_girl_1MikiSeenText, Kimono_girl_1MikiBeatenText
+	text "Back then, Mount"
+	line "Mortar's volcan-"
+	cont "ic activity was"
 
-	text "That's Surf."
+	para "a lightningrod"
+	line "for the emper-"
+	cont "or's self-"
+	cont "aggrandizing."
 
-	para "It's a move that"
-	line "lets #mon swim"
-	cont "across water."
+	para "So the emperor's"
+	line "reach was cut"
+	cont "off from the"
+
+	para "south, the west,"
+	line "and the east."
 	done
 
-.KimonoGirlsUndefeated:
-	checkflag ENGINE_PLAYER_IS_FEMALE
-	iftrue_jumpopenedtext SurfGuyLassieGiftText
-	jumpthisopenedtext
-
-SurfGuyLadGiftText:
-	text "Lad! If you can"
-	line "defeat all the"
-
-	para "Kimono Girls, I'll"
-	line "give you a gift."
+Kimono_girl_1MikiSeenText:
+	text "Strike in the"
+	line "dark!"
 	done
 
-MapDanceTheatreSignpost1Script:
-	jumptext DanceTheatreFancyPanelText
-
-Kimono_girlNaokoSeenText:
-	text "You have lovely"
-	line "#mon. May I see"
-	cont "them in battle?"
+Kimono_girl_1MikiBeatenText:
+	text "Deep in the"
+	line "caves of Mount"
+	cont "Mortar, the"
+	cont "emperor's"
+	cont "forces were"
+	cont "foiled."
 	done
 
-Kimono_girlNaokoBeatenText:
-	text "Oh, you are very"
-	line "strong."
+GenericTrainerKimono_girlAkari:
+generictrainer KIMONO_GIRL_1, AKARI, EVENT_BEAT_KIMONO_GIRL_AKARI, Kimono_girl_1AkariSeenText, Kimono_girl_1AkariBeatenText
+
+	text "Flames filled"
+	line "the tower,"
+	cont "undoing the"
+	cont "emperor's work."
+	para "The legendary"
+	line "#mon refuse"
+	cont "to put it out."
+	para "Your #mon are"
+	line "so strong, you"
+	cont "should visit"
+	para "the bell tower"
+	line "to find out"
+	cont "why…"
 	done
 
-Kimono_girlSayoSeenText:
-	text "I always dance"
-	line "with my #mon."
-
-	para "Of course, I also"
-	line "train them."
+Kimono_girl_1AkariSeenText:
+	text "Impressive to"
+	line "have made it"
+	cont "this far. Do"
+	cont "you know the"
+	cont "ending of the"
+	cont "story?"
 	done
 
-Kimono_girlSayoBeatenText:
-	text "Oh, so close!"
-	line "I almost had you."
-	done
-
-Kimono_girlZukiSeenText:
-	text "Isn't my barrette"
-	line "pretty?"
-
-	para "Oh. A #mon"
-	line "battle?"
-	done
-
-Kimono_girlZukiBeatenText:
-	text "I don't have any"
-	line "#mon left…"
-	done
-
-Kimono_girlKuniSeenText:
-	text "Oh, you're a cute"
-	line "trainer. Would you"
-	cont "like to battle?"
-	done
-
-Kimono_girlKuniBeatenText:
-	text "You're stronger"
-	line "than you look."
-	done
-
-Kimono_girlMikiSeenText:
-	text "Do you like my"
-	line "dancing? I'm good"
-	cont "at #mon too."
-	done
-
-Kimono_girlMikiBeatenText:
-	text "Ooh, you're good"
-	line "at #mon too."
-	done
-
-SurfGuyNeverLeftAScratchText:
-	text "Not only are the"
-	line "Kimono Girls great"
-
-	para "dancers, they're"
-	line "also skilled at"
-	cont "#mon."
-
-	para "I always challenge"
-	line "them, but I've"
-
-	para "never even left a"
-	line "scratch…"
-	done
-
-SurfGuyLassieGiftText:
-	text "Lassie, if you can"
-	line "defeat all the"
-
-	para "Kimono Girls, I'll"
-	line "give you a gift."
-	done
-
-SurfGuyLikeADanceText:
-	text "The way you bat-"
-	line "tled, it was like"
-	cont "watching a dance."
-
-	para "It was a rare"
-	line "treat to see!"
-
-	para "I want you to have"
-	line "this. Don't worry"
-	cont "--take it!"
-	done
-
-SurfGuyElegantKimonoGirlsText:
-	text "I wish my #mon"
-	line "were as elegant as"
-	cont "the Kimono Girls."
-	done
-
-RhydonText:
-	text "Rhydon: Gugooh"
-	line "gugogooh!"
-	done
-
-DanceTheatreCooltrainerMText:
-	text "That man's always"
-	line "with his Rhydon."
-
-	para "Says he wants a"
-	line "#mon that can"
-	cont "Surf and dance."
-
-	para "Is he trying to"
-	line "make a synchro-"
-	cont "nized swimming"
-	cont "#mon?"
-	done
-
-DanceTheatreGrannyText:
-	text "The Kimono Girls"
-	line "are so beautiful…"
-
-	para "But they have to"
-	line "go through rigor-"
-	cont "ous training."
-
-	para "And they have to"
-	line "learn to follow"
-
-	para "customs before ap-"
-	line "pearing in public."
-
-	para "But if you love"
-	line "something, any-"
-	cont "thing is possible."
-	done
-
-DanceTheatreLadyText:
-	text "Eevee can evolve"
-	line "into Leafeon, Gla-"
-	cont "ceon, or Sylveon,"
-
-	para "but none of the"
-	line "Kimono Girls use"
-	cont "those #mon."
-
-	para "I wonder why?"
-	done
-
-DanceTheatreFancyPanelText:
-	text "It's a fancy panel"
-	line "that's decorated"
-	cont "with flowers."
+Kimono_girl_1AkariBeatenText:
+	text "Crash,"
+	line "lightning!"
+	
+	para "Your bond with"
+	line "you #mon is"
+	line "so strong, you"
+	cont "should visit"
+	para "the Bell Tower."
+	line "Emi will see"
+	cont "you there."
 	done

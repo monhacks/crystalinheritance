@@ -592,19 +592,23 @@ KRIS EQU __trainer_class__
 	const REBECCA
 	const DORIS
 
-	trainerclass KIMONO_GIRL_1 ; 3d
-	const NAOKO
+	trainerclass KIMONO_GIRL_1 ; 3d, red 
+	const SAYO ; flareon 
+	const AKARI ; JOLTEON 
 
-	trainerclass KIMONO_GIRL_2 ; 3e
-	const SAYO
+	trainerclass KIMONO_GIRL_2 ; 3e, purple? 
+	const ZUKI ; ESPEON 
+	const EMI ; SYLVEON 
 
-	trainerclass KIMONO_GIRL_3 ; 3f
-	const ZUKI
+	trainerclass KIMONO_GIRL_3 ; 3f, green 
+	const NAOKO ; leafeon 
 
-	trainerclass KIMONO_GIRL_4 ; 40
-	const KUNI
+	trainerclass KIMONO_GIRL_4 ; 40, blue 
+	const IZUMI ; glaceon 
+	const KUNI ; vaporeon 
 
-	trainerclass KIMONO_GIRL_5 ; 41
+
+	trainerclass KIMONO_GIRL_5 ; 41, brown / orange 
 	const MIKI
 
 	trainerclass ELDER ; 42

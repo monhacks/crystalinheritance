@@ -13,31 +13,121 @@ EcruteakLugiaSpeechHouse_MapScriptHeader:
 	bg_event  2,  1, BGEVENT_JUMPSTD, radio2
 
 	def_object_events
-	object_event  2,  3, SPRITE_GRAMPS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakLugiaSpeechHouseGrampsText, -1
-	object_event  5,  4, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakLugiaSpeechHouseYoungsterText, -1
+	object_event  2,  3, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakLugiaSpeechHouseGrampsText, -1
+	object_event  2,  4, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakLugiaSpeechHouseYoungsterText, -1
+	object_event  5,  3, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, jumptextfaceplayer, EcruteakPokefanFScript, -1
 
 EcruteakLugiaSpeechHouseGrampsText:
-	text "This happened when"
-	line "I was young."
-
-	para "The sky suddenly"
-	line "turned black. A"
-
-	para "giant flying #-"
-	line "mon was blocking"
-	cont "out the sun."
-
-	para "I wonder what that"
-	line "#mon was?"
-
-	para "It was like a bird"
-	line "and a dragon."
+	text "Back in my day,"
+	line "this town was a"
+	cont "haven of remem-"
+	cont "berance."
+	
+	para "We gathered to"
+	line "honor our ance-"
+	cont "stors!"
 	done
 
 EcruteakLugiaSpeechHouseYoungsterText:
-	text "Is there really a"
-	line "#mon that big?"
+	text "We can't live"
+	line "in the past for-"
+	cont "ever! We're shap-"
+	cont "ing our future"
+	cont "while honoring"
+	cont "the past!"	
+	done
 
-	para "If it exists, it"
-	line "must be powerful."
+
+EcruteakDreamEaterScript:
+	faceplayer
+	opentext
+	checkevent EVENT_LISTENED_TO_DREAM_EATER_INTRO
+	iftrue EcruteakTutorDreamEaterScript
+	writetext Text_DreamEaterIntro
+	waitbutton
+	setevent EVENT_LISTENED_TO_DREAM_EATER_INTRO
+EcruteakTutorDreamEaterScript:
+	writetext Text_EcruteakTutorDreamEater ;;
+	waitbutton
+	checkitem SILVER_LEAF
+	iffalse .NoSilverLeaf
+	writetext Text_EcruteakTutorQuestion ;;
+	yesorno
+	iffalse .TutorRefused
+	setval DREAM_EATER
+	writetext ClearText
+	special Special_MoveTutor
+	ifequal $0, .TeachMove
+.TutorRefused
+	jumpopenedtext Text_EcruteakTutorRefused ;; 
+
+.NoSilverLeaf
+	jumpopenedtext Text_EcruteakTutorNoSilverLeaf
+
+.TeachMove
+	takeitem SILVER_LEAF
+	jumpopenedtext Text_EcruteakTutorTaught ;;
+	
+Text_DreamEaterIntro: 
+	text "I had a dream that"
+	line "I could be a"
+	cont "Kimono Girl."
+
+	para "But I slept my"
+	line "youth away."
+	
+	para "Now, my dreams"
+	line "are eaten each"
+	cont "time I walk by"
+	cont "the theatre,"
+	
+	para "when I see my"
+	cont "peers dancing."
+
+	para "You have one too,"
+	line "don't you?"
+	done
+
+Text_EcruteakTutorDreamEater:
+	text "Dreams have"
+	line "flavors, you know."
+
+	para "Some are sweet"
+	line "like cotton candy,"
+
+	para "Others sharp like"
+	line "winter stars."
+
+	para "Even bitter dreams"
+	line "can restore what"
+	cont "time has taken."
+
+	para "Shall I show you"
+	line "how to eat yours?"
+	
+	para "All it takes is"
+	line "one Silver Leaf."
+	done
+
+Text_EcruteakTutorNoSilverLeaf:
+	text "You don't have"
+	line "a Silver Leaf."
+	done
+
+Text_EcruteakTutorQuestion:
+	text "Should I teach"
+	line "your #mon"
+	cont "Dream Eater?"
+	done
+
+Text_EcruteakTutorRefused:
+	text "Alright then."
+	done
+
+Text_EcruteakTutorTaught:
+	text "There you go!"
+	
+	para "May your dream"
+	line "be your rivals'"
+	cont "nightmare."
 	done

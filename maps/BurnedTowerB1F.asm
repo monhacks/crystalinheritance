@@ -1,4 +1,4 @@
-BurnedTowerB1F_MapScriptHeader:
+BurnedTowerB1F_MapScriptHeader: ; this map is not used 
 	def_scene_scripts
 
 	def_callbacks

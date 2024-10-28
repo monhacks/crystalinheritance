@@ -9,18 +9,18 @@ Route37_MapScriptHeader:
 
 	def_bg_events
 	bg_event  5,  3, BGEVENT_JUMPTEXT, Route37SignText
-	bg_event  4,  2, BGEVENT_ITEM + ETHER, EVENT_ROUTE_37_HIDDEN_ETHER
+	bg_event  4,  2, BGEVENT_ITEM + MAX_ETHER, EVENT_ROUTE_37_HIDDEN_ETHER
 
 	def_object_events
 	object_event 16,  8, SPRITE_ENGINEER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, SunnyScript, -1 ; ok 
-	object_event  6, 12, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerTwinsToriandtil1, -1
-	object_event  7, 12, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerTwinsToriandtil2, -1
-	object_event 14, 11, SPRITE_PSYCHIC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerPsychicGreg, -1
-	object_event  4,  6, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBeautyCallie, -1
-	object_event  9,  6, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBeautyCassandra, -1
-	fruittree_event 13,  5, FRUITTREE_ROUTE_37_1, TOUGH_LEAVES, PAL_NPC_GREEN
-	fruittree_event 16,  5, FRUITTREE_ROUTE_37_2, WHT_APRICORN, PAL_NPC_SILVER
-	fruittree_event 11, 11, FRUITTREE_ROUTE_37_3, SHORE_FOAM, PAL_NPC_BLUE
+	object_event  6, 12, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerTwinsToriandtil1, -1; ok 
+	object_event  7, 12, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerTwinsToriandtil2, -1; ok  
+	object_event 14, 11, SPRITE_PSYCHIC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerPsychicGreg, -1 ; OK 
+	object_event  4,  6, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBeautyCallie, -1 ; OK 
+	object_event  9,  6, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBeautyCassandra, -1 ; OK 
+	fruittree_event 13,  5, FRUITTREE_ROUTE_37_1, TOUGH_LEAVES, PAL_NPC_GREEN ; ok 
+	fruittree_event 16,  5, FRUITTREE_ROUTE_37_2, WHT_APRICORN, PAL_NPC_SILVER ; ok 
+	fruittree_event 13, 11, FRUITTREE_ROUTE_37_3, SHORE_FOAM, PAL_NPC_BLUE;  ok 
 
 	object_const_def
 
@@ -28,7 +28,7 @@ Route37_MapScriptHeader:
 GenericTrainerTwinsToriandtil1:
 	generictrainer TWINS, ANNANDANNE1, EVENT_BEAT_TWINS_ANN_AND_ANNE, TwinsToriandtil1SeenText, TwinsToriandtil1BeatenText
 
-	text "Til: I can tell"
+	text "Lea: I can tell"
 	line "what my sister and"
 
 	para "my #mon are"
@@ -38,7 +38,7 @@ GenericTrainerTwinsToriandtil1:
 GenericTrainerTwinsToriandtil2:
 	generictrainer TWINS, ANNANDANNE2, EVENT_BEAT_TWINS_ANN_AND_ANNE, TwinsToriandtil2SeenText, TwinsToriandtil2BeatenText
 
-	text "Tori: We share the"
+	text "Leah: We share the"
 	line "same feelings as"
 	cont "our #mon."
 	done
@@ -46,10 +46,10 @@ GenericTrainerTwinsToriandtil2:
 GenericTrainerPsychicGreg:
 	generictrainer PSYCHIC_T, GREG, EVENT_BEAT_PSYCHIC_GREG, PsychicGregSeenText, PsychicGregBeatenText
 
-	text "Putting #mon to"
-	line "sleep or paralyz-"
-	cont "ing them are good"
-	cont "battle techniques."
+	text "Zzz..."
+	
+	para "Perfect time for"
+	line "a nap."
 	done
 
 SunnyScript:
@@ -112,77 +112,79 @@ SunnySundayText:
 GenericTrainerBeautyCallie:
 	generictrainer BEAUTY, CALLIE, EVENT_BEAT_BEAUTY_CALLIE, BeautyCallieSeenText, BeautyCallieBeatenText
 
-	text "Wow, you're cute"
-	line "and skilled too!"
+	text "You rung my bell!"
 	done
 
 GenericTrainerBeautyCassandra:
 	generictrainer BEAUTY, CASSANDRA, EVENT_BEAT_BEAUTY_CASSANDRA, BeautyCassandraSeenText, BeautyCassandraBeatenText
 
-	text "People like you"
-	line "are skilled even"
-
-	para "though they're"
-	line "young…"
+	text "You kicked my"
+	line "Brass."
 	done
 
 TwinsToriandtil1SeenText:
-	text "Til: Tori and I"
-	line "are in this to-"
-	cont "gether!"
+	text "Lea: Go, my"
+	line "#mon!"
+	
+	para "Leah: Goh, my"
+	line "#mon!"
 	done
 
 TwinsToriandtil1BeatenText:
 TwinsToriandtil2BeatenText:
-	text "Til & Tori: Nnn… A"
-	line "little too strong."
+	text "Lea: No, they"
+	line "are down..."
+	
+	para "Leah: Noh, they"
+	line "are down..."
 	done
 
+
 TwinsToriandtil2SeenText:
-	text "Tori: Til and I"
-	line "are in this to-"
-	cont "gether!"
+	text "Lea: Go, my"
+	line "#mon!"
+	
+	para "Leah: Goh, my"
+	line "#mon
 	done
 
 PsychicGregSeenText:
-	text "#mon can't do a"
-	line "thing if they are"
-	cont "asleep."
-
-	para "I'll show you how"
-	line "scary that is!"
+	text "I like to come"
+	line "here when it's"
+	cont "hard to sleep."
 	done
 
 PsychicGregBeatenText:
-	text "I lost. That's"
-	line "pretty sad…"
+	text "Zzz..."
+	
+	para "Perfect time for"
+	line "a nap."
 	done
 
 
 BeautyCallieSeenText:
-	text "Oh, you're a cute"
-	line "little trainer!"
-
-	para "Why don't you"
-	line "battle me?"
+	text "Do you know"
+	line "where the Bell"
+	cont "Tower is?"
 	done
 
 BeautyCallieBeatenText:
-	text "You're good…"
+	text "You rung my bell!"
 	done
 
 BeautyCassandraSeenText:
-	text "Hey hey there,"
-	line "you young trainer!"
-
-	para "Won't you battle"
-	line "with me?"
+	text "I want to visit"
+	line "the Burned Tower!"
 	done
 
 BeautyCassandraBeatenText:
-	text "Wow, you're strong…"
+	text "Buried in ash."
 	done
 
 Route37SignText:
 	text "Route 37"
+	
+	para "Visit Ecruteak"
+	line "city, experience"
+	cont "Johto Culture!"
 	done

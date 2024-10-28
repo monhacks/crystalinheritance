@@ -46,7 +46,7 @@ AnarresHouseMushroomScript:
 	writetext Text_MintLeafQuestion ;;
 	yesorno
 	iffalse MintLeafRefused
-	takeitem SILVER_LEAF
+	takeitem MINT_LEAF
 	verbosegiveitem TINYMUSHROOM
 	iffalse_endtext
 	setevent EVENT_GOT_TINYMUSHROOM 

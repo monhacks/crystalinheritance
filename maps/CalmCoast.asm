@@ -188,20 +188,20 @@ CalmCoastKurtText:
 	cont "was playing with"
 	cont "an apricorn and"
 	cont "accidentally caught"
-	cont "a Cyndaquil he "
-	cont "named Landyquac."
+	cont "a Cyndaquil."
+	
+	para "The apricorn had"
+	line "a soft glow in"
+	cont "his hands with the"
+	cont "#mon inside!"
 
-	para "His first #mon!"
-	line "We took it to"
-	cont "Goldenrod all the"
-	cont "time to get"
-	cont "haircuts."
-	
-	para "We had so much"
-	line "time ahead of us"
-	cont "back then."
+	para "I'll never for-"
+	line "get his beaming"
+	cont "face. We had so"
+	cont "much time ahead"
+	cont "of us."
 	done
-	
+
 CalmCoastDartrixText:
 	text "Dartrix:"
 	line "...hoo!"

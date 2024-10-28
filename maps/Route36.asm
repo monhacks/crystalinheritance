@@ -34,7 +34,8 @@ Route36_MapScriptHeader:
 	object_event 31, 13, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerSchoolboyRoute36, -1 ; ALAN1
 	object_event 34,  3, SPRITE_FIREBREATHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerFirebreatherRoute36, -1 ; BURT
 	object_event 23, 14, SPRITE_PICNICKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerPicnickerRoute36, EVENT_BEAT_PICNICKER_GINA ; GINA1
-
+	object_event 40, 4, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletImmigrantTextRoute36, -1
+	object_event 40, 5, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletImmigrantTextRoute36, -1
 
 	object_const_def
 	const ROUTE_36_BRONZONG
@@ -323,4 +324,11 @@ NoTimeTravelTextRoute36:
 	
 YesTimeTravelTextRoute36:
 	text "Time to go!"
+	done
+
+VioletImmigrantTextRoute36:
+	text "Entrance into"
+	line "Violet City is"
+	cont "limited due to"
+	cont "the drought."
 	done

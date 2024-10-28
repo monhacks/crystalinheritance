@@ -4,11 +4,11 @@ EcruteakCity_MapScriptHeader:
 	def_callbacks
 	callback MAPCALLBACK_NEWMAP, EcruteakCityFlyPoint
 
-	def_warp_events
+	def_warp_events ; need to block from each side 
 	warp_event 35, 26, ROUTE_42_ECRUTEAK_GATE, 1
 	warp_event 35, 27, ROUTE_42_ECRUTEAK_GATE, 2
 	warp_event 23, 11, ECRUTEAK_HOUSE, 1
-	warp_event 17, 11, ECRUTEAK_SHRINE_OUTSIDE, 3
+	warp_event 17, 11, ECRUTEAK_SHRINE_OUTSIDE, 3 
 	warp_event 18, 11, ECRUTEAK_SHRINE_OUTSIDE, 4
 	warp_event 23, 27, ECRUTEAK_POKECENTER_1F, 1
 	warp_event  5, 21, ECRUTEAK_LUGIA_SPEECH_HOUSE, 1
@@ -31,22 +31,26 @@ EcruteakCity_MapScriptHeader:
 	bg_event 21, 21, BGEVENT_JUMPTEXT, EcruteakDanceTheaterSignText
 	bg_event  2, 10, BGEVENT_JUMPTEXT, BurnedTowerSignText
 	bg_event 25, 14, BGEVENT_ITEM + HYPER_POTION, EVENT_ECRUTEAK_CITY_HIDDEN_HYPER_POTION
-	bg_event 15, 11, BGEVENT_JUMPTEXT, EcruteakShrineSignText
 	bg_event 21, 11, BGEVENT_JUMPTEXT, EcruteakBarrierStationSignText
 	bg_event 33, 16, BGEVENT_ITEM + RARE_CANDY, EVENT_ECRUTEAK_CITY_HIDDEN_RARE_CANDY
 	bg_event  1, 17, BGEVENT_ITEM + ULTRA_BALL, EVENT_ECRUTEAK_CITY_HIDDEN_ULTRA_BALL
 	bg_event  6,  6, BGEVENT_ITEM + ETHER, EVENT_ECRUTEAK_CITY_HIDDEN_ETHER
 
 	def_object_events
-	object_event 20, 15, SPRITE_GRAMPS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakCityGramps1Text, -1
-	object_event 20, 21, SPRITE_GRAMPS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakCityGramps2Text, -1
-	object_event 19, 26, SPRITE_CUTE_GIRL, SPRITEMOVEDATA_WALK_UP_DOWN, 1, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakCityLass1Text, -1
-	object_event  3,  9, SPRITE_CUTE_GIRL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, EcruteakCityLass2Script, -1
+	object_event 34, 26, SPRITE_HIKER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakCityHikersText, EVENT_BEAT_CHUCK ; done
+	object_event 34, 27, SPRITE_HIKER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakCityHikersText, EVENT_BEAT_CHUCK ; done
+	
+	object_event 1, 18, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakCityFarmersText, EVENT_BEAT_CHUCK ; done
+	object_event 1, 19, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakCityFarmersText, EVENT_BEAT_CHUCK ; done
+	
+	object_event 24, 22, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakCityGramps1Text, -1 ; done
+	object_event 20, 21, SPRITE_GRAMPS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakCityGramps2Text, -1 ; ok e
+	object_event  3,  9, SPRITE_CUTE_GIRL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, EcruteakCityLass2Script, -1 ; don e
 	object_event  9, 22, SPRITE_FISHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakCityFisherScript, -1
-	object_event 11, 16, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakCityYoungsterText, -1
-	object_event  3,  7, SPRITE_GRAMPS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakCityGramps3Text, EVENT_ECRUTEAK_CITY_GRAMPS
-	object_event 11, 11, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, (1 << EVE) | (1 << NITE), 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakCityHexManiacText, -1
-	object_event 11, 11, SPRITE_SIGHTSEER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, (1 << MORN) | (1 << DAY), 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakCitySightseerMText, -1
+	object_event 11, 16, SPRITE_FISHER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakCityYoungsterText, -1
+	object_event  3,  7, SPRITE_GRAMPS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakCityGramps3Text, EVENT_ECRUTEAK_CITY_GRAMPS ; keep
+	object_event 11, 11, SPRITE_CUTE_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakCityCuteGirlText, -1
+	; what is this? 
 	object_event 15,  9, SPRITE_BIG_SNORLAX, SPRITEMOVEDATA_ARCH_TREE_LEFT, 0, 0, -1, -1, PAL_NPC_TREE, OBJECTTYPE_COMMAND, end, NULL, -1
 	object_event 16,  9, SPRITE_BIG_SNORLAX, SPRITEMOVEDATA_ARCH_TREE_DOWN, 0, 0, -1, -1, PAL_NPC_TREE, OBJECTTYPE_COMMAND, end, NULL, -1
 	object_event 19,  9, SPRITE_BIG_SNORLAX, SPRITEMOVEDATA_ARCH_TREE_UP, 0, 0, -1, -1, PAL_NPC_TREE, OBJECTTYPE_COMMAND, end, NULL, -1
@@ -57,8 +61,6 @@ EcruteakCityFlyPoint:
 	endcallback
 
 EcruteakCityLass2Script:
-	checkevent EVENT_RELEASED_THE_BEASTS
-	iftrue_jumptextfaceplayer EcruteakCityLass2Text_ReleasedBeasts
 	jumptextfaceplayer EcruteakCityLass2Text
 
 EcruteakCityFisherScript:
@@ -73,26 +75,12 @@ EcruteakCityGramps1Text:
 	done
 
 EcruteakCityGramps2Text:
-	text "Ah, child."
-	line "Have you learned"
-
-	para "to dance like the"
-	line "Kimono Girls?"
-
-	para "If you go to their"
-	line "Dance Theater, an"
-
-	para "odd old man will"
-	line "give you something"
-	cont "nice, I hear."
-	done
-
-EcruteakCityLass1Text:
-	text "I'm going to get"
-	line "my #mon blessed"
-
-	para "at the shrine."
-	line "Care to join me?"
+	text "This city used to"
+	line "breathe tradition."
+	
+	para "Even Morty acts"
+	line "insincere about"
+	cont "the history."	
 	done
 
 EcruteakCityHexManiacText:
@@ -100,58 +88,31 @@ EcruteakCityHexManiacText:
 	line "haunt this place…"
 	done
 
-EcruteakCitySightseerMText:
-	text "Ecruteak has such"
-	line "an incredible"
-	cont "history."
 
-	para "Smeargle and I"
-	line "traveled here to"
-	cont "draw it."
-	done
-
-;EcruteakCitySmeargleText:
-;	text "Smeargle: Smeer!"
-;	done
-;
 EcruteakCityLass2Text:
-	text "The tower that"
-	line "used to be here…"
-
-	para "My grandma told me"
-	line "it used to be much"
-	cont "taller."
+	text "Tin Tower is so"
+	line "majestic!"
+	
+	para "Imagine building"
+	line "it, so long ago."
 	done
 
-EcruteakCityLass2Text_ReleasedBeasts:
-	text "Three big #mon"
-	line "ran off in differ-"
-	cont "ent directions."
-	cont "What were they?"
-	done
 
 EcruteakCityFisherText:
-	text "I heard a rumor"
-	line "about Olivine"
-	cont "Lighthouse."
+	text "I heard Silph is"
+	line "interested in ac-"
+	cont "quiring the Dance"
+	cont "Theatre."
 	done
 
-EcruteakCityFisherText_JasmineReturned:
-	text "The #mon at"
-	line "Olivine Lighthouse"
-	cont "has been cured."
-
-	para "Boats can safely"
-	line "sail out to sea at"
-	cont "night again."
-	done
 
 EcruteakCityYoungsterText:
-	text "I hear #mon are"
-	line "rampaging at the"
-
-	para "Lake of Rage. I'd"
-	line "like to see that."
+	text "We used to get"
+	line "our water from"
+	cont "the Lake of Rage."
+	
+	para "But now, we get"
+	line "it from Olivine."	
 	done
 
 EcruteakCityGramps3Text:
@@ -175,12 +136,6 @@ EcruteakCityGramps3Text:
 
 	para "down by Ecruteak"
 	line "Gym Leaders."
-
-	para "Me?"
-
-	para "I was a trainer"
-	line "way back when."
-	cont "Hohoho!"
 	done
 
 EcruteakCitySignText:
@@ -194,10 +149,10 @@ EcruteakCitySignText:
 EcruteakGymSignText:
 	text "Ecruteak City"
 	line "#mon Gym"
-	cont "Leader: Morty"
+	cont "Leader: None"
 
-	para "The Mystic Seer of"
-	line "the Future"
+	para "Danger: fall"
+	line "hazards inside"
 	done
 
 EcruteakDanceTheaterSignText:
@@ -211,17 +166,23 @@ BurnedTowerSignText:
 	para "It was destroyed"
 	line "by a mysterious"
 	cont "fire."
-
-	para "Please stay away,"
-	line "as it is unsafe."
 	done
 
-EcruteakShrineSignText:
-	text "Ecruteak Shrine"
+EcruteakCityCuteGirlText:
+	text "Oh, I just love"
+	line "how retro this"
+	cont "place is!"
+	
+	para "It's great how"
+	cont "the shrine is so"
+	cont "tourist-friendly."
 
-	para "“Life is a lamp-"
-	line "flame before a"
-	cont "wind.”"
+	para "The sages even do"
+	line "photo ops."
+	
+	para "Really brings the"
+	cont "quaint culture "
+	cont "into our century!"
 	done
 
 EcruteakBarrierStationSignText:
@@ -230,4 +191,26 @@ EcruteakBarrierStationSignText:
 
 	para "No Trespassing by"
 	line "the Unworthy"
+	done
+
+EcruteakCityFarmersText:
+	text "Sorry, MooMoo"
+	line "Farms is dealing"
+	cont "with a lost cow."
+	
+	para "They don't want"
+	line "anyone to inter-"
+	cont "fere with the"
+	cont "rescue."
+	done
+	
+EcruteakCityHikersText:
+	text "Mount Mortar is"
+	line "showing signs of"
+	cont "seismic activity."
+	
+	para "We recommend that"
+	line "all unnecessary"
+	cont "travel is post-"
+	cont "poned."
 	done

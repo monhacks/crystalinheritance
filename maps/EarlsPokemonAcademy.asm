@@ -14,11 +14,12 @@ EarlsPokemonAcademy_MapScriptHeader:
 	def_bg_events
 
 	def_object_events
-	object_event  5, 12, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, jumptextfaceplayer, AcademyNPC1Text, -1
+	object_event  5, 12, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, AcademyNPC1Text, -1
 	object_event  1, 10, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerSageEdmond, -1
 	object_event  6,  8, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerSageTroy, -1
 	object_event  1,  6, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerSageNeal, -1
-	object_event  4,  3, SPRITE_ELDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 3, GenericTrainerElderLi, -1
+	object_event  4,  3, SPRITE_ELDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerElderLi, -1
+	object_event  7,  15, SPRITE_KURT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, AcademyKurtText, EVENT_BEAT_FALKNER
 
 	object_const_def
 
@@ -147,3 +148,35 @@ ElderLiBeatenText:
 	line "power elevates"
 	cont "all, not just self."
 	done
+	
+AcademyKurtText: ; need to ask the player if htey want to hear a story
+	text "This was your"
+	line "dad's school."
+	
+	para "After class, we"
+	line "walked around the"
+	cont "ponds, your dad"
+	cont "walking side by"
+	cont "side with his"
+	cont "partner, holding"
+	cont "his apricorn."
+	
+	para "#seals were"
+	line "pretty new back"
+	cont "then, so we dec-"
+	cont "orated it with"
+	
+	para "vibrant colors."
+	line "Each scrape and"
+	cont "chip in the coat"
+	cont "was a memory of"
+	cont "an adventure."
+	
+	para "At nights, I'd"
+	line "find him under"
+	cont "the covers, the"
+	cont "glow of his ap-"
+	cont "ricorn giving"
+	cont "him away."
+	done
+

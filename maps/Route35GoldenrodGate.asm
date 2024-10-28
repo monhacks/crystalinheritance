@@ -179,3 +179,52 @@ Route35GoldenrodGateFisherText:
 	para "Science sure is"
 	line "amazing."
 	done
+
+KurtGoldenrodGateScript:
+	faceplayer
+	opentext
+	writetext HearAStory_2Text
+	yesorno
+	iffalse DontHearHearStory2
+	writetext KurtGoldenrodGateText
+	closetext
+	end
+	
+DontHearHearStory2:
+	writetext SomeOtherTime_2Text
+	closetext
+	end
+
+HearAStory_2Text:
+	text "<PLAYER>, would"
+	line "you like to hear"
+	cont "another story"
+	cont "about your dad?"
+	done
+
+SomeOtherTime_2Text:
+	text "Some other time."
+	done
+
+KurtGoldenrodGateText:
+	text "Underground, we'd"
+	line "come for haircuts."
+	
+	para "The trip from"
+	line "Azalea was so"
+	line "long. He would"
+	cont "hold his apricorn"
+	cont "all the way, its"
+	cont "glow visible in"
+	cont "his hands."
+	
+	para "At the haircut, "
+	line "Cyndaquil's flame"
+	cont "grew and shrank"
+	cont "in the mirror,"
+	
+	para "and your dad lau-"
+	line "ghed every time"
+	cont "the barber had to"
+	cont "work around it."
+	done
