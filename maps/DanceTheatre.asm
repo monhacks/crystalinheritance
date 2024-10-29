@@ -17,13 +17,14 @@ DanceTheatre_MapScriptHeader:
 	object_event  5,  9, SPRITE_OSTENE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DanceTheatreOstene2Script, EVENT_BEAT_MEJIMI ; end 
 	object_event  6,  9, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, DanceTheatreKimono2Script, EVENT_BEAT_MEJIMI ; end
 
-	object_event  2,  1, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerKimono_girlNaoko, -1 ; LEAFEON, kimono girl 3 -- DONE 
-	object_event  3,  1, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerKimono_girlSayo, -1 ; FLAREON, kimono girl 1 -- DONE 
-	object_event  4,  1, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerKimono_girlZuki, -1 ; ESPEON, kimono girl 2 -- DONE 
-	object_event  6,  1, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerKimono_girlIzumi, -1 ; VAPOREON, kimono girl 4  -- DONE
-	object_event  7,  1, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerKimono_girlKuni, -1 ; GLACEON, kimono girl 4 -- DONE
-	object_event  8,  1, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerKimono_girlMiki, -1 ; UMBREON kimono girl 5 -- DONE 
-	object_event 10,  1, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerKimono_girlAkari, -1 ; JOLTEON  kimono girl 1 -- DONE 
+	object_event  0,  3, SPRITE_ELDER, PRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TheatreElderScript, EVENT_BEAT_RIVAL_ROUTE_42
+	object_event  2,  1, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerKimono_girlNaoko, EVENT_BEAT_RIVAL_ROUTE_42 ; LEAFEON, kimono girl 3 -- DONE 
+	object_event  3,  1, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerKimono_girlSayo, EVENT_BEAT_RIVAL_ROUTE_42 ; FLAREON, kimono girl 1 -- DONE 
+	object_event  4,  1, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerKimono_girlZuki, EVENT_BEAT_RIVAL_ROUTE_42 ; ESPEON, kimono girl 2 -- DONE 
+	object_event  6,  1, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerKimono_girlIzumi, EVENT_BEAT_RIVAL_ROUTE_42 ; VAPOREON, kimono girl 4  -- DONE
+	object_event  7,  1, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerKimono_girlKuni, EVENT_BEAT_RIVAL_ROUTE_42 ; GLACEON, kimono girl 4 -- DONE
+	object_event  8,  1, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerKimono_girlMiki, EVENT_BEAT_RIVAL_ROUTE_42 ; UMBREON kimono girl 5 -- DONE 
+	object_event 10,  1, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerKimono_girlAkari, EVENT_BEAT_RIVAL_ROUTE_42 ; JOLTEON  kimono girl 1 -- DONE 
 	
 	object_event  3, 10, SPRITE_OSTENE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, DanceTheatreOstene1Text, EVENT_BEAT_RIVAL_ROUTE_42;
 	pokemon_event  4, 10, PORYGON_Z, -1, -1, PAL_NPC_RED, PorygonZText, EVENT_BEAT_RIVAL_ROUTE_42;
@@ -36,6 +37,7 @@ DanceTheatre_MapScriptHeader:
 	object_const_def
 	const THEATRE_OSTENE_1
 	const THEATRE_KIMONO_GIRL
+	const THEATRE_ELDER
 
 TheatreFinaleCallback: ; pryce should not be here until after you have talked to slowpoke well guy
 	checkevent EVENT_BEAT_RIVAL_ROUTE_42
@@ -296,3 +298,59 @@ Kimono_girl_1AkariBeatenText:
 	line "Emi will see"
 	cont "you there."
 	done
+
+TheatreElderScript:
+	faceplayer
+	opentext
+	checkevent EVENT_BEAT_KIMONO_GIRL_AKARI
+	iftrue_jumpopenedtext TheatreElderThanksYou
+	writetext TheatreElderExplainsText
+	clearevent EVENT_BEAT_KIMONO_GIRL_NAOKO
+	clearevent EVENT_BEAT_KIMONO_GIRL_SAYO
+	clearevent EVENT_BEAT_KIMONO_GIRL_ZUKI
+	clearevent EVENT_BEAT_KIMONO_GIRL_IZUMI
+	clearevent EVENT_BEAT_KIMONO_GIRL_KUNI
+	clearevent EVENT_BEAT_KIMONO_GIRL_MIKI
+	closetext
+	applymovement THEATRE_ELDER, TheatreElderMovesBackMovement
+	disappear THEATRE_ELDER
+	end
+
+
+TheatreElderThanksYou:
+	text "Congratulations!"
+	
+	para "The final Kimono"
+	line "girl will see you"
+	cont "at the Bellchime"
+	cont "Trail."
+	done
+	
+TheatreElderExplainsText:
+	text "We have a very"
+	line "immersive dance"
+	cont "these days."
+	
+	para "The Kimono Girls"
+	line "battle you back"
+	cont "to back, "
+	
+	para "delivering the "
+	line "story of how a"
+	cont "young child kept"
+	cont "Johto from being"
+	cont "ruled by an evil"
+	cont "emperor!"
+	done
+
+TheatreElderMovesBackMovement:
+	step_right
+	step_right
+	step_right
+	step_right
+	step_right
+	step_right
+	step_right
+	step_right
+	step_right
+	step_end

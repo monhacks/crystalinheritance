@@ -145,7 +145,7 @@ TwinsToriandtil2SeenText:
 	line "#mon!"
 	
 	para "Leah: Goh, my"
-	line "#mon
+	line "#mon!"
 	done
 
 PsychicGregSeenText:

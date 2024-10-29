@@ -17,7 +17,7 @@ BurnedTower1F_MapScriptHeader:
 	bg_event 11, 11, BGEVENT_ITEM + ULTRA_BALL, EVENT_BURNED_TOWER_1F_HIDDEN_ULTRA_BALL
 
 	def_object_events
-	object_event  4, 6, SPRITE_MORTY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT 0, BurnedTower1FMortyScript, EVENT_BURNED_TOWER_MORTY
+	object_event  4, 6, SPRITE_MORTY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BurnedTower1FMortyScript, EVENT_BURNED_TOWER_MORTY
 
 	smashrock_event 13, 4
 	itemball_event 13,  1, HP_UP, 1, EVENT_BURNED_TOWER_1F_HP_UP
@@ -38,13 +38,14 @@ BurnedTower1FMortyScript:
 	opentext
 	writetext Morty1FIntroText
 	checkpoke RAIKOU
-	iftrue MortyReturns
+	iftrue .MortyReturns
 	checkpoke SUICUNE
-	iftrue MortyReturns
+	iftrue .MortyReturns
 	checkpoke ENTEI
-	iftrue MortyReturns
+	iftrue .MortyReturns ; need to write this 
 	jumpopenedtext Text_MortyMorose ;; 
-	
+		
+
 Morty1FIntroText:
 	text "Oh, have you come"
 	line "for my badge? I'm"
@@ -69,7 +70,7 @@ Text_MortyMorose:
 	cont "one."
 	done
 
-	MortyReturns:
+.MortyReturns:
 	setevent EVENT_BURNED_TOWER_MORTY
 	clearevent EVENT_MORTY_GYM 
 	showemote EMOTE_SHOCK, BURNED_TOWER_1F_MORTY, 15
