@@ -22,7 +22,7 @@ BurnedTower1F_MapScriptHeader:
 	smashrock_event 13, 4
 	itemball_event 13,  1, HP_UP, 1, EVENT_BURNED_TOWER_1F_HP_UP
 
-	object_event 12,  3, SPRITE_FIREBREATHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerFirebreatherWalt, -1
+	object_event 12,  3, SPRITE_FIREBREATHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerFirebreatherLyle, -1
 	object_event  0,  6, SPRITE_FIREBREATHER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerFirebreatherBill, -1
 
 	object_event  7, 7, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, BurnedTower1FScientistText, EVENT_BURNED_TOWER_MORTY
@@ -31,7 +31,7 @@ BurnedTower1F_MapScriptHeader:
 
 
 	object_const_def
-	BURNED_TOWER_1F_MORTY
+	const BURNED_TOWER_1F_MORTY
 
 BurnedTower1FMortyScript:
 	faceplayer
@@ -109,8 +109,6 @@ Text_MortyMorose:
 	done
 
 
-	
-	
 BurnedTower1FScientistText:
 	text "The three are only"
 	line "'legendary' in"
@@ -135,8 +133,8 @@ BurnedTower1FSageText:
 	cont "can control them!"
 	done
 	
-GenericTrainerFirebreatherWalt:
-	generictrainer FIREBREATHER, WALT, EVENT_BEAT_FIREBREATHER_WALT, FirebreatherWaltSeenText, FirebreatherWaltBeatenText
+GenericTrainerFirebreatherLyle:
+	generictrainer FIREBREATHER, LYLE, EVENT_BEAT_FIREBREATHER_LYLE, FirebreatherLyleSeenText, FirebreatherLyleBeatenText
 
 	text "Are you looking"
 	line "for the legend-"
@@ -150,11 +148,11 @@ GenericTrainerFirebreatherBill:
 	line "for items."
 	done
 
-FirebreatherWaltSeenText:
+FirebreatherLyleSeenText:
 	text "Boo!"
 	done
 
-FirebreatherWaltBeatenText:
+FirebreatherLyleBeatenText:
 	text "Now you scared"
 	line "me..."
 	done

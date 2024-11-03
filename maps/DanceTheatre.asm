@@ -60,7 +60,7 @@ DanceTheatreKimono2Script:
 
 DanceTheatreOstene1Text:
 	text "Ostene: Oh, hi… "
-	line "isn’t this show"
+	line "isn't this show"
 	cont "boring?"
 	
 	para "It needs to be"
@@ -148,7 +148,7 @@ Kimono_girl_1SayoBeatenText:
 	done
 
 GenericTrainerKimono_girlZuki:
-generictrainer KIMONO_GIRL_2, ZUKI, EVENT_BEAT_KIMONO_GIRL_ZUKI, Kimono_girl_1ZukiSeenText, Kimono_girl_1ZukiBeatenText
+	generictrainer KIMONO_GIRL_2, ZUKI, EVENT_BEAT_KIMONO_GIRL_ZUKI, Kimono_girl_1ZukiSeenText, Kimono_girl_1ZukiBeatenText
 
 	text "The hero slipped"
 	line "into the Western"
@@ -260,7 +260,7 @@ Kimono_girl_1MikiBeatenText:
 	done
 
 GenericTrainerKimono_girlAkari:
-generictrainer KIMONO_GIRL_1, AKARI, EVENT_BEAT_KIMONO_GIRL_AKARI, Kimono_girl_1AkariSeenText, Kimono_girl_1AkariBeatenText
+	generictrainer KIMONO_GIRL_1, AKARI, EVENT_BEAT_KIMONO_GIRL_AKARI, Kimono_girl_1AkariSeenText, Kimono_girl_1AkariBeatenText
 
 	text "Flames filled"
 	line "the tower,"

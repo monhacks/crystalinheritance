@@ -23,11 +23,6 @@ WiseTriosRoom_MapScriptHeader:
 	object_const_def
 
 
-
-Sage1: “Have you come to learn about our history? Most people prefer to visit the Kimono girls.”
-Sage2: “We have but one of the two towers left. We must guard it day and night.”
-Sage3: “You look very familiar. Maybe I saw you at the theatre?”
-
 WiseTriosRoomText1:
 	text "Very few have"
 	line "come this far"

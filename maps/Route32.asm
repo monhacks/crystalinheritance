@@ -1,8 +1,8 @@
 Route32_MapScriptHeader: ; convert all to generictrainers, freida to give venoshock; some of the trainers further south should be engineers upset that their work keeps getting wrecked
 	def_scene_scripts
 
-	def_callbacks,
-	callback MAPCALLBACK_NEWMAP, Route32FlyPoint ; ok 
+	def_callbacks
+
 
 	def_warp_events
 	warp_event 11, 73, ROUTE_32_POKECENTER_1F, 1 ; ok 
@@ -42,9 +42,7 @@ Route32_MapScriptHeader: ; convert all to generictrainers, freida to give venosh
 	object_const_def
 
 
-Route32FlyPoint:
-	setflag ENGINE_FLYPOINT_UNION_CAVE
-	endcallback
+
 
 Route32CooltrainermPetrieScript: ; revise, "if you go get my X from the pokecenter I'll battle you!"
 	faceplayer

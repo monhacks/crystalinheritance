@@ -2,6 +2,7 @@ Route32PokeCenter1F_MapScriptHeader: ; revise dialogue
 	def_scene_scripts
 
 	def_callbacks
+	callback MAPCALLBACK_NEWMAP, Route32FlyPoint ; ok 
 
 	def_warp_events
 	warp_event  5,  7, ROUTE_32, 1
@@ -17,6 +18,9 @@ Route32PokeCenter1F_MapScriptHeader: ; revise dialogue
 	object_event  3,  4, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route32Pokecenter1FEngineerText, -1
 	object_event  8,  2, SPRITE_HIKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route32Pokecenter1HikerText, -1
 
+Route32FlyPoint:
+	setflag ENGINE_FLYPOINT_UNION_CAVE
+	endcallback
 
 PokemonJournalKurtScript:
 	setflag ENGINE_READ_KURT_JOURNAL

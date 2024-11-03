@@ -1,4 +1,4 @@
-CianwoodCityPhotoStudio_MapScriptHeader:
+CianwoodCityCianwoodPhotoStudio_MapScriptHeader:
 	def_scene_scripts
 
 	def_callbacks
@@ -12,23 +12,23 @@ CianwoodCityPhotoStudio_MapScriptHeader:
 	def_bg_events
 
 	def_object_events
-	object_event  2,  3, SPRITE_FISHING_GURU, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CianwoodPhotoStudioFishingGuruScript, -1
+	object_event  2,  3, SPRITE_FISHING_GURU, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CianwoodCianwoodPhotoStudioFishingGuruScript, -1
 
-CianwoodPhotoStudioFishingGuruScript:
+CianwoodCianwoodPhotoStudioFishingGuruScript:
 	faceplayer
 	opentext
 	checkflag ENGINE_DAILY_PHOTOGRAPH
-	iftrue_jumpopenedtext PhotoStudioAlreadyDoneText
-	writetext PhotoStudioGreetingText
+	iftrue_jumpopenedtext CianwoodPhotoStudioAlreadyDoneText
+	writetext CianwoodPhotoStudioGreetingText
 	yesorno
-	iffalse_jumpopenedtext PhotoStudioRefusedText
-	writetext PhotoStudioWhichMonText
+	iffalse_jumpopenedtext CianwoodPhotoStudioRefusedText
+	writetext CianwoodPhotoStudioWhichMonText
 	promptbutton
-	special Special_CianwoodPhotograph
+	special Special_CianwoodCianwoodPhotograph
 	ifequal $0, .NoPicture
 	ifequal $1, .EggPicture
 	setflag ENGINE_DAILY_PHOTOGRAPH
-	writetext PhotoStudioHoldStillText
+	writetext CianwoodPhotoStudioHoldStillText
 	waitbutton
 	closetext
 	special FadeOutPalettes
@@ -44,7 +44,7 @@ CianwoodPhotoStudioFishingGuruScript:
 	waitsfx
 	closepokepic
 	opentext
-	writetext PhotoStudioPrestoText
+	writetext CianwoodPhotoStudioPrestoText
 	special PlayCurMonCry
 	waitbutton
 	jumpthisopenedtext
@@ -53,14 +53,14 @@ CianwoodPhotoStudioFishingGuruScript:
 	done
 
 .NoPicture:
-	jumpopenedtext PhotoStudioNoPictureText
+	jumpopenedtext CianwoodPhotoStudioNoPictureText
 
 .EggPicture:
-	jumpopenedtext PhotoStudioEggPictureText
+	jumpopenedtext CianwoodPhotoStudioEggPictureText
 
-PhotoStudioGreetingText:
+CianwoodPhotoStudioGreetingText:
 	text "I am Cameron"
-	line "the Photographer."
+	line "the CianwoodPhotographer."
 
 	para "You have magnifi-"
 	line "cent #mon with"
@@ -70,7 +70,7 @@ PhotoStudioGreetingText:
 	line "for a souvenir?"
 	done
 
-PhotoStudioWhichMonText:
+CianwoodPhotoStudioWhichMonText:
 	text "OK! Big smile now!"
 
 	para "Which #mon"
@@ -78,12 +78,12 @@ PhotoStudioWhichMonText:
 	cont "graph?"
 	done
 
-PhotoStudioHoldStillText:
+CianwoodPhotoStudioHoldStillText:
 	text "All righty. Hold"
 	line "still for a bit."
 	done
 
-PhotoStudioPrestoText:
+CianwoodPhotoStudioPrestoText:
 	text "Presto! All done."
 
 	para "Your "
@@ -91,7 +91,7 @@ PhotoStudioPrestoText:
 	line "looks happier!"
 	done
 
-PhotoStudioAlreadyDoneText:
+CianwoodPhotoStudioAlreadyDoneText:
 	text "I've already taken"
 	line "a photo for you"
 	cont "today."
@@ -100,7 +100,7 @@ PhotoStudioAlreadyDoneText:
 	line "tomorrow."
 	done
 
-PhotoStudioRefusedText:
+CianwoodPhotoStudioRefusedText:
 	text "Oh, that's too"
 	line "bad. I thought it"
 
@@ -108,12 +108,12 @@ PhotoStudioRefusedText:
 	line "memento…"
 	done
 
-PhotoStudioNoPictureText:
+CianwoodPhotoStudioNoPictureText:
 	text "Oh, no picture?"
 	line "Come again, OK?"
 	done
 
-PhotoStudioEggPictureText:
+CianwoodPhotoStudioEggPictureText:
 	text "An Egg? My talent"
 	line "is worth more…"
 	done

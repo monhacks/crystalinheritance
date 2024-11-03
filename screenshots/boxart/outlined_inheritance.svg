@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <filter id="outline">
+            <feMorphology in="SourceAlpha" result="thick" operator="dilate" radius="2"/>
+            <feFlood flood-color="black"/>
+            <feComposite in2="thick" operator="in"/>
+            <feMerge>
+                <feMergeNode/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+    
+    <text x="50%" y="50%" 
+          text-anchor="middle" 
+          dominant-baseline="middle"
+          font-family="Magneto"
+          font-size="100"
+          fill="orange"
+          filter="url(#outline)">
+        Inheritance
+    </text>
+</svg>

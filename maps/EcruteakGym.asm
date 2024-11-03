@@ -40,8 +40,9 @@ EcruteakGym_MapScriptHeader:
 	bg_event  6, 15, BGEVENT_READ, EcruteakGymStatue
 
 	def_object_events
-	object_event  5,  1, SPRITE_MORTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakGymMortyScript, EVENT_MORTY_GYM  ; 
+	object_event  5,  1, SPRITE_MORTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakGymMortyScript, -1 ; inaccessible until you show morty something good  ; 
 	object_event  5, 14, SPRITE_PRYCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakGymPryceScript, EVENT_BURNED_TOWER_MORTY
+	pokemon_event  6, 27, MAMOSWINE, -1, -1, PAL_NPC_BLUE, EcruteakMamoswineText, EVENT_BURNED_TOWER_MORTY
 	strengthboulder_event 4, 12
 	strengthboulder_event 4, 8
 
@@ -158,4 +159,8 @@ MortyText_ShadowBallSpeech:
 	
 	para "looked beyond"
 	line "your fears?"
+	done
+
+EcruteakMamoswineText:
+	text "Mamooo!"
 	done
