@@ -524,3 +524,17 @@ ENDM
 	map_attributes ClastsCradle2F, CLASTS_CRADLE_2F, $9, 0
 	map_attributes ClastsCradle1F, CLASTS_CRADLE_1F, $9, 0
 	map_attributes ClastsCradleB1F, CLASTS_CRADLE_B1F, $9, 0
+
+	map_attributes DebugRoom, DEBUG_ROOM, $0, 0
+	
+	map_attributes KimonoCabin, KIMONO_CABIN, $0, 0
+	
+	map_attributes KimonoCabin1, KIMONO_CABIN_1, $19, 0
+	
+	map_attributes KimonoCabin2, KIMONO_CABIN_2, $33, 0
+
+	map_attributes KimonoCabin3, KIMONO_CABIN_3, $0, 0
+	
+	map_attributes KimonoCabin4, KIMONO_CABIN_4, $19, 0
+	
+	map_attributes KimonoCabin5, KIMONO_CABIN_5, $0, 0

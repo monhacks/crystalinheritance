@@ -1031,3 +1031,32 @@ ClastsCradleB1F_BlockData:
 SECTION "EnteisCavern_BlockData", ROMX
 EnteisCavern_BlockData:
 	INCBIN "maps/EnteisCavern.ablk.lz"
+;;;
+
+SECTION "DebugRoom_BlockData", ROMX
+DebugRoom_BlockData:
+	INCBIN "maps/DebugRoom.ablk.lz"
+	
+SECTION "KimonoCabin_BlockData", ROMX
+KimonoCabin_BlockData:
+	INCBIN "maps/KimonoCabin.ablk.lz"
+	
+SECTION "KimonoCabin1_BlockData", ROMX
+KimonoCabin1_BlockData:
+	INCBIN "maps/KimonoCabin1.ablk.lz"
+
+SECTION "KimonoCabin2_BlockData", ROMX
+KimonoCabin2_BlockData:
+	INCBIN "maps/KimonoCabin2.ablk.lz"
+
+SECTION "KimonoCabin3_BlockData", ROMX
+KimonoCabin3_BlockData:
+	INCBIN "maps/KimonoCabin3.ablk.lz"
+
+SECTION "KimonoCabin4_BlockData", ROMX
+KimonoCabin4_BlockData:
+	INCBIN "maps/KimonoCabin4.ablk.lz"
+
+SECTION "KimonoCabin5_BlockData", ROMX
+KimonoCabin5_BlockData:
+	INCBIN "maps/KimonoCabin5.ablk.lz"
