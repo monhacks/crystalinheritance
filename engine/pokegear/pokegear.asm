@@ -2122,17 +2122,17 @@ FlyMap:
 
 ; visited and its flypoint enabled
 	push af
-	ld c, SPAWN_ANARRES_SP ; TODO SHOULD BE HOLLYS HOLT, USED TO BE INDIGO PLATEAU THEN WAS LAKE OF RAGE
+	ld c, SPAWN_ANARRES ; TODO SHOULD BE HOLLYS HOLT, USED TO BE INDIGO PLATEAU THEN WAS LAKE OF RAGE
 	call HasVisitedSpawn
 	and a
 	jr z, .NoKanto
 ; Kanto's map is only loaded if we've visited Indigo Plateau
 
 ; Flypoints begin at Pallet Town...
-	ld a, FLY_ANARRES_SP
+	ld a, FLY_ANARRES_TOWN
 	ld [wStartFlypoint], a
 ; ...and end at Indigo Plateau
-	ld a, FLY_TIMELESS_TAPESTRY_SP
+	ld a, FLY_TIMELESS_TAPESTRY
 	ld [wEndFlypoint], a
 ; Because Indigo Plateau is the first flypoint the player
 

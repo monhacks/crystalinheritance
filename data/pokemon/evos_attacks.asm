@@ -3219,7 +3219,7 @@ YanmegaEvosAttacks:
 	db 27, SUPERSONIC ; Uproar → Supersonic
 	db 30, PURSUIT
 	db 33, ANCIENTPOWER
-	db 38, SLASH ; Feint → Slash
+	db 38, DRAGONBREATH ; Feint → Slash
 	db 43, WING_ATTACK ; Slash → Wing Attack
 	db 46, SCREECH
 	db 49, U_TURN

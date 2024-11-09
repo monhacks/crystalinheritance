@@ -17,7 +17,7 @@ SproutTower1F_MapScriptHeader:
 
 	def_object_events
 	object_event  5, 12, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBirdKeeperRod, -1
-	object_event  10, 12, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerSageAbe, -1
+	object_event  10, 12, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBirdKeeperAbe, -1
 
 
 

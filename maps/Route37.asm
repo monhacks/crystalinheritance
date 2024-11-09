@@ -12,7 +12,7 @@ Route37_MapScriptHeader:
 	bg_event  4,  2, BGEVENT_ITEM + MAX_ETHER, EVENT_ROUTE_37_HIDDEN_ETHER
 
 	def_object_events
-	object_event 16,  8, SPRITE_ENGINEER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, SunnyScript, -1 ; ok 
+	object_event 16,  8, SPRITE_ENGINEER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route37ZapCannonScript, -1 ; ok 
 	object_event  6, 12, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerTwinsToriandtil1, -1; ok 
 	object_event  7, 12, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerTwinsToriandtil2, -1; ok  
 	object_event 14, 11, SPRITE_PSYCHIC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerPsychicGreg, -1 ; OK 
@@ -52,29 +52,32 @@ GenericTrainerPsychicGreg:
 	line "a nap."
 	done
 
-SunnyScript:
+Route37ZapCannonScript:
 	faceplayer
 	opentext
-	checkevent EVENT_GOT_ZAP_CANNON
-	iftrue .AlreadyGotTM
-	checkevent EVENT_MET_SUNNY_OF_SUNDAY
-	iftrue .MetSunny
+	checkevent EVENT_LISTENED_TO_ZAP_CANNON_INTRO
+	iftrue Route37TutorZapCannonScript
 	writetext MeetSunnyText
-	promptbutton
-	setevent EVENT_MET_SUNNY_OF_SUNDAY
-.MetSunny:
-	writetext SunnyGivesGiftText
-	promptbutton
-	verbosegivetmhm TM_ZAP_CANNON
-	iffalse .BagFull
-	setevent EVENT_GOT_ZAP_CANNON
-	jumpopenedtext SunnyGaveGiftText
-
-.AlreadyGotTM:
-	writetext SunnySundayText
 	waitbutton
-.BagFull:
-	endtext
+	setevent EVENT_LISTENED_TO_ZAP_CANNON_INTRO
+Route37TutorZapCannonScript:
+	writetext SunnyGivesGiftText ;;
+	writetext Text_Route37TutorQuestion ;;
+	yesorno
+	iffalse .TutorRefused
+	setval ZAP_CANNON
+	writetext ClearText
+	special Special_MoveTutor
+	ifequal $0, .TeachMove
+.TutorRefused
+	jumpopenedtext Text_Route37TutorRefused ;; 
+
+.NoSilverLeaf
+	jumpopenedtext Text_Route37TutorNoSilverLeaf
+
+.TeachMove
+	jumpopenedtext Text_Route37TutorTaught ;;
+
 
 MeetSunnyText:
 	text "Sunny: Who are"
@@ -85,16 +88,29 @@ MeetSunnyText:
 	done
 
 SunnyGivesGiftText:
-	text "I got this from"
-	line "someone in Kanto."
+	text "I learned this"
+	line "technique from"
+	cont "when I worked on"
+	cont "the Magnet Train."
 	
-	para "Maybe they should"
-	line "use it to start"
-	cont "the Magnet train"
-	cont "again."
+	para "Maybe it would"
+	line "be useful for"
+	cont "restarting the"
+	cont "train, now?"
+	done
+	
+Text_Route37TutorQuestion:
+	text "Would you like"
+	line "me to teach a"
+	cont "#mon Zap"
+	cont "Cannon?"
 	done
 
-SunnyGaveGiftText:
+Text_Route37TutorRefused:
+	text "Suit yourself."
+	done
+
+Text_Route37TutorTaught:
 	text "Sunny: That"
 	line "technique may"
 	cont "not hit often,"
@@ -105,7 +121,6 @@ SunnyGaveGiftText:
 SunnySundayText:
 	text "Sunny: I'm Sunny"
 	line "of Sunday."
-
 	done
 
 

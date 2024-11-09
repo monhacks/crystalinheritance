@@ -12,9 +12,9 @@ CianwoodCityCianwoodPhotoStudio_MapScriptHeader:
 	def_bg_events
 
 	def_object_events
-	object_event  2,  3, SPRITE_FISHING_GURU, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CianwoodCianwoodPhotoStudioFishingGuruScript, -1
+	object_event  2,  3, SPRITE_FISHING_GURU, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CianwoodPhotoStudioFishingGuruScript, -1
 
-CianwoodCianwoodPhotoStudioFishingGuruScript:
+CianwoodPhotoStudioFishingGuruScript:
 	faceplayer
 	opentext
 	checkflag ENGINE_DAILY_PHOTOGRAPH
@@ -24,7 +24,7 @@ CianwoodCianwoodPhotoStudioFishingGuruScript:
 	iffalse_jumpopenedtext CianwoodPhotoStudioRefusedText
 	writetext CianwoodPhotoStudioWhichMonText
 	promptbutton
-	special Special_CianwoodCianwoodPhotograph
+	special Special_CianwoodPhotograph
 	ifequal $0, .NoPicture
 	ifequal $1, .EggPicture
 	setflag ENGINE_DAILY_PHOTOGRAPH

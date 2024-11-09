@@ -846,6 +846,7 @@ KRIS EQU __trainer_class__
 	const LANG
 	const HUGO
 	const HOWARD
+	const DWG
 
 	trainerclass TEACHER ; 58
 	const COLETTE

@@ -91,7 +91,6 @@ BedText2:
 	done
 
 AnarresDormsKurtScript: ; will this work?....
-	clearevent EVENT_BEAT_HOLLIS
 	faceplayer
 	opentext
 	writetext KurtAnarresDormsText

@@ -72,7 +72,7 @@ GenericTrainerBirdKeeperToby:
     done
 
 GenericTrainerBirdKeeperDennis:
-    generictrainer BIRD_KEEPER, DENNIS, EVENT_BEAT_BIRD_KEEPER_DENNIS, BirdKeeperDennisSeenText, BirdKeeperDennisBeatenText
+    generictrainer BIRD_KEEPER, DENIS, EVENT_BEAT_BIRD_KEEPER_DENNIS, BirdKeeperDennisSeenText, BirdKeeperDennisBeatenText
 
     text "We're building a"
     line "tower to the sky"
@@ -189,7 +189,7 @@ FalknerAfterText:
 	
 	
 GenericTrainerAceTrainerFinch:
-    generictrainer COOLTRAINERM, FINCH, EENT_BEAT_COOLTRAINERM_FINCH, CooltrainerMFinchSeenText, CooltrainerMFinchBeatenText
+    generictrainer COOLTRAINERM, FINCH, EVENT_BEAT_COOLTRAINERM_FINCH, CooltrainerMFinchSeenText, CooltrainerMFinchBeatenText
 
     text "My dream, popped"
 	line "like an overfull"

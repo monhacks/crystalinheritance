@@ -42,34 +42,9 @@ BurnedTower1FMortyScript:
 	checkpoke SUICUNE
 	iftrue .MortyReturns
 	checkpoke ENTEI
-	iftrue .MortyReturns ; need to write this 
+	iftrue .MortyReturns ;
 	jumpopenedtext Text_MortyMorose ;; 
 		
-
-Morty1FIntroText:
-	text "Oh, have you come"
-	line "for my badge? I'm"
-	cont "afraid the gym"
-	cont "is closed now."
-
-	para "People used to"
-	line "come here to honor"
-	cont "their ancestors,"
-	cont "find peace..."
-
-	para "I need something"
-	line "more dramatic to"
-	cont "draw them back -"
-	cont "a legendary"
-	cont "#mon would do."
-	done
-
-Text_MortyMorose:
-	text "I'll have to keep"
-	line "studying to find"
-	cont "one."
-	done
-
 .MortyReturns:
 	setevent EVENT_BURNED_TOWER_MORTY
 	clearevent EVENT_MORTY_GYM 
@@ -107,6 +82,32 @@ Text_MortyMorose:
 	para "I will return"
 	cont "to my Gym."
 	done
+
+Morty1FIntroText:
+	text "Oh, have you come"
+	line "for my badge? I'm"
+	cont "afraid the gym"
+	cont "is closed now."
+
+	para "People used to"
+	line "come here to honor"
+	cont "their ancestors,"
+	cont "find peace..."
+
+	para "I need something"
+	line "more dramatic to"
+	cont "draw them back -"
+	cont "a legendary"
+	cont "#mon would do."
+	done
+
+Text_MortyMorose:
+	text "I'll have to keep"
+	line "studying to find"
+	cont "one."
+	done
+
+
 
 
 BurnedTower1FScientistText:
