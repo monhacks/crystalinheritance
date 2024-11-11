@@ -12,6 +12,7 @@ AzaleaGym_MapScriptHeader: ;removed benny josh amy+may trainers
 	def_bg_events
 	bg_event  3, 13, BGEVENT_READ, AzaleaGymStatue
 	bg_event  6, 13, BGEVENT_READ, AzaleaGymStatue
+	bg_event  0, 1, BGEVENT_READ, DebugRoomPortal
 
 	def_object_events
 	object_event  5,  7, SPRITE_BUGSY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AzaleaGymBugsyScript, -1
@@ -24,6 +25,32 @@ AzaleaGymStatue:
 	jumpstd gymstatue1
 .Beaten:
 	jumpstd gymstatue2
+
+DebugRoomPortal:
+	opentext
+	writetext AskWarpDebugText
+	yesorno
+	iffalse_jumpopenedtext NoWarpText
+	writetext WarpingDebugText
+	waitbutton
+	closetext
+	playsound SFX_WARP_TO
+	special FadeOutPalettes
+	waitsfx
+	warp DEBUG_ROOM, 5, 3
+	end
+
+AskWarpDebugText:
+	text "To Debug Room?"
+	done
+	
+NoWarpText:
+	text "No warping."
+	done
+
+WarpingDebugText:
+	text "Warping..."
+	done
 
 AzaleaGymBugsyScript:
 	checkevent EVENT_BEAT_BUGSY

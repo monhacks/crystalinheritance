@@ -4460,8 +4460,8 @@ DratiniEvosAttacks:
 	db 1, LEER
 	db 5, THUNDER_WAVE
 	db 11, AQUA_JET ; Twister → egg move
-	db 15, DRAGON_RAGE
-	db 21, HEADBUTT ; Slam → tutor move
+	db 15, HEADBUTT
+	db 21, DRAGON_RAGE ; Slam → tutor move
 	db 25, AGILITY
 	db 31, DRAGONBREATH ; Dragon Tail → GSC TM move
 	db 35, AQUA_TAIL

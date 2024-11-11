@@ -6,7 +6,7 @@ DebugRoom_MapScriptHeader: ; should be like  "BurnedTowerB1F_MapScriptHeader"
 
 
 	def_warp_events
-
+	warp_event  9, 0, AZALEA_TOWN, 5
 
 
 	def_coord_events
@@ -25,6 +25,8 @@ DebugRoom_MapScriptHeader: ; should be like  "BurnedTowerB1F_MapScriptHeader"
 	object_event  5,  8, SPRITE_BREEDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE,  OBJECTTYPE_SCRIPT, 0, Breeder4Script, -1 ; gives lots of mons
 	object_event  4,  8, SPRITE_BREEDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE,  OBJECTTYPE_SCRIPT, 0, Breeder5Script, -1 ; gives lots of mons
 	object_event  3,  8, SPRITE_BREEDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE,  OBJECTTYPE_SCRIPT, 0, Breeder6Script, -1 ; gives lots of mons
+	object_event  2,  8, SPRITE_BREEDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE,  OBJECTTYPE_SCRIPT, 0, Breeder7Script, -1 ; gives lots of mons
+	object_event  1,  8, SPRITE_BREEDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE,  OBJECTTYPE_SCRIPT, 0, Breeder8Script, -1 ; gives lots of mons
 	object_event  6,  4, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE,  OBJECTTYPE_SCRIPT, 0, DebugWonderTradeScript, -1 ; wonder trade
 	object_event  3,  3, SPRITE_PSYCHIC_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE,  OBJECTTYPE_SCRIPT, 0, DebugTimeTravelerScript, -1 ; wonder trade
 	
@@ -96,7 +98,7 @@ endr
 	giveitem BIG_NUGGET, 99
 	giveitem SILVER_LEAF, 99
 	giveitem GOLD_LEAF, 99
-	giveitem ODD_SOUVENIR, 10
+	giveitem ODD_SOUVENIR, 99
 	; max money
 	givemoney $0, 1000000
 	givemoney $0, 1000000
@@ -129,8 +131,6 @@ endr
 	setflag ENGINE_VOLCANOBADGE
 	setflag ENGINE_EARTHBADGE
 	; fly anywhere
-	setflag ENGINE_FLYPOINT_NEW_BARK
-	setflag ENGINE_FLYPOINT_CHERRYGROVE
 	setflag ENGINE_FLYPOINT_VIOLET
 	setflag ENGINE_FLYPOINT_UNION_CAVE
 	setflag ENGINE_FLYPOINT_AZALEA
@@ -138,25 +138,19 @@ endr
 	setflag ENGINE_FLYPOINT_ECRUTEAK
 	setflag ENGINE_FLYPOINT_OLIVINE
 	setflag ENGINE_FLYPOINT_CIANWOOD
-	setflag ENGINE_FLYPOINT_YELLOW_FOREST
 	setflag ENGINE_FLYPOINT_MAHOGANY
 	setflag ENGINE_FLYPOINT_LAKE_OF_RAGE
-	setflag ENGINE_FLYPOINT_BLACKTHORN
-	setflag ENGINE_FLYPOINT_SILVER_CAVE
-	setflag ENGINE_FLYPOINT_INDIGO_PLATEAU
-	setflag ENGINE_FLYPOINT_PALLET
-	setflag ENGINE_FLYPOINT_VIRIDIAN
-	setflag ENGINE_FLYPOINT_PEWTER
-	setflag ENGINE_FLYPOINT_MT_MOON
-	setflag ENGINE_FLYPOINT_CERULEAN
-	setflag ENGINE_FLYPOINT_CERULEAN_CAPE
-	setflag ENGINE_FLYPOINT_VERMILION
-	setflag ENGINE_FLYPOINT_CELADON
-	setflag ENGINE_FLYPOINT_ROCK_TUNNEL
-	setflag ENGINE_FLYPOINT_LAVENDER
-	setflag ENGINE_FLYPOINT_FUCHSIA
-	setflag ENGINE_FLYPOINT_SAFFRON
-	setflag ENGINE_FLYPOINT_CINNABAR
+; TODO ADD THE OLD JOHTO ONES 
+	setflag ENGINE_FLYPOINT_ANARRES_TOWN
+	setflag ENGINE_FLYPOINT_GAULDENROD
+	setflag ENGINE_FLYPOINT_WESTERN_CAPITAL
+	setflag ENGINE_FLYPOINT_TRADERS_LANDING
+	setflag ENGINE_FLYPOINT_SHELTERED_SHORES
+	setflag ENGINE_FLYPOINT_CIANWOOD_COVE
+	setflag ENGINE_FLYPOINT_TRANQUIL_TARN
+	setflag ENGINE_FLYPOINT_EERIE_HAMLET
+	setflag ENGINE_FLYPOINT_SULFUR_STY
+	setflag ENGINE_FLYPOINT_TIMELESS_TAPESTRY
 	setflag ENGINE_HAVE_SHINY_CHARM
 	callasm FillPokedex
 	closetext
@@ -237,31 +231,71 @@ dwgDebugScript:
 
 
 DWGIntroText:
-Oh! You made it to the debug room. I hope you're enjoying the game! You can talk to the patrons below to get a solid team, wonder trade, or get all the base forms of pokemon. The generator to the left has all the items and flags if you want them. The computer next to me works to access your boxes.  If you ever encounter issues, you can contact me on reddit, u/dwg6m9. 
+	text "Oh! You made it"
+	line "to the debug"
+	cont "room."
+	para "I hope you're"
+	line "enjoying the"
+	cont "game!"
+	para "You can talk to"
+	line "the patrons"
+	cont "below to get a"
+	cont "solid team,"
+	para "wonder trade,"
+	line "or get all the"
+	cont "base forms of"
+	cont "#mon."
+	para "The generator"
+	line "to the left has"
+	cont "all the items"
+	para "and flags if"
+	line "you want them."
+	para "The computer"
+	line "next to me"
+	cont "works to access"
+	cont "your boxes."
+	para "If you ever"
+	line "encounter"
+	cont "issues, you can"
+	para "contact me on"
+	line "reddit,"
+	cont "u/dwg6m9."
+	done
 
-DWGQuestionText: 
-I could use a break from writing code. Want to battle?
+DWGQuestionText:
+	text "I could use a"
+	line "break from"
+	cont "writing code."
+	para "Want to battle?"
+	done
 
 DWGRefusedText:
-Sigh... OK, back to work for me. 
+	text "Sigh... OK,"
+	line "back to work"
+	cont "for me."
+	done
 
 DWGSeenText:
-Here we go!
+	text "Here we go!"
+	done
 
 DWGWinText:
-Wow! Nice team!
+	text "Wow! Nice team!"
+	done
 
 DWGLossText:
-gg
+	text "gg"
+	done
 
 DWGTextAfter1:
-Thanks for playing!
-
+	text "Thanks for"
+	line "playing!"
+	done
 
 
 DebugCPU2:
 	opentext
-	special PokemonCenterPC ; per engine/events/std_scripts.asm this is how it should be done. 
+	special PokemonCenterPC
 	endtext
 	end
 
@@ -389,18 +423,156 @@ Breeder5Script:
 	givepoke DUNSPARCE, 5
 	closetext
 	end
+
+Breeder6Script:
+	opentext
+	writetext BreederQuestionText
+	yesorno
+	iffalse_jumpopenedtext BreederSayNoText
+	writetext BreederText	
+	; a buncha mons
+	givepoke GILGAR, 5
+	givepoke SNUBBULL, 5	
+	givepoke QWILFISH, 5	
+	givepoke SHUCKLE, 5	
+	givepoke HERACROSS, 5	
+	givepoke SNEASEL, 5	
+	givepoke TEDDIURSA, 5	
+	givepoke MAGCARGO, 5	
+	givepoke PILOSWINE, 5	
+	givepoke CORSOLA, 5	
+	givepoke OCTILLERY, 5	
+	givepoke MANTINE, 5	
+	givepoke SKARMORY, 5	
+	givepoke HOUNDOUR, 5	
+	givepoke DONPHAN, 5	
+	givepoke STANTLER, 5	
+	givepoke MILTANK, 5	
+	givepoke GROTLE, 5	
+	givepoke MONFERNO, 5
+	givepoke PRINPLUP, 5
+	closetext
+	end
 	
+Breeder7Script:
+	opentext
+	writetext BreederQuestionText
+	yesorno
+	iffalse_jumpopenedtext BreederSayNoText
+	writetext BreederText	
+	; a buncha mons
+	givepoke STARAVIA, 5
+	givepoke LUXIO, 5	
+	givepoke ROSELIA, 5	
+	givepoke RAMPARDOS, 5	
+	givepoke BASTIODON, 5	
+	givepoke VESPIQUEN, 5	
+	givepoke AMBIPOM, 5	
+	givepoke DRIFBLIM, 5	
+	givepoke LOPUNNY, 5	
+	givepoke SKUNTANK, 5	
+	givepoke BRONZOR, 5	
+	givepoke SPIRITOMB, 5	
+	givepoke GABITE, 5	
+	givepoke LUCARIO, 5	
+	givepoke HIPPOWDON, 5	
+	givepoke DRAPION, 5	
+	givepoke TOXICROAK, 5	
+	givepoke SNOVER, 5	
+	givepoke DUSCLOPS, 5
+	givepoke FROSLASS, 5
+	closetext
+	end
+	
+Breeder8Script:
+	opentext
+	writetext BreederQuestionText
+	yesorno
+	iffalse_jumpopenedtext BreederSayNoText
+	writetext BreederText	
+	; a buncha mons
+	givepoke ROTOM, 5
+	givepoke H__AVALUGG, 5	
+	givepoke BASCULEGION, 5	
+	givepoke H__BRAVIARY, 5	
+	givepoke KIRLIA, 5	
+	givepoke H__SLIGGOO, 5	
+	givepoke H__ZOROARK, 5	
+	givepoke DRATINI, 5	
+	givepoke LARVITAR, 5	
+	givepoke RAIKOU, 5	
+	givepoke ENTEI, 5	
+	givepoke SUICUNE, 5	
+	givepoke HEATRAN, 5	
+	givepoke LUGIA, 5	
+	givepoke HO__OH, 5	
+	givepoke CELEBI, 5	
+	closetext
+	end
 
 
 BreederQuestionText:
-text "Hi! I've bred a lot of #mon. You can have them. But make sure your current box is empty, otherwise your game may crash. Is your current box empty?"
+	text "Hi! I've bred a "
+	line "lotta #mon."
+
+	para "You can have"
+	line "them. But make"
+	cont "sure your curr-"
+	cont"ent box is empty,"
+	
+	para "otherwise it may"
+	line "crash the game."
+	
+	para "The computer in"
+	line "this room can be"
+	cont "used to change"
+	cont "the box."
+	
+	para "Is your current"
+	line "box empty?"
+	done
 
 BreederSayNoText:
-text "If you come back with your current box empty, I can give you some."
+	text "If you come back"
+	line "with your current"
+	cont "box empty, I can"
+	cont "give you some."
 
 BreederText:
-text "Here you go! 20 #mon, injected to your current box."
+	text "Here you go!"
+	done
 
-
-
-;	givepoke GROWLITHE, 5
+DebugWonderTradeScript: ; TODO FIX THIS 
+	opentext
+	writetext WonderTradeIntroText
+	waitbutton
+	writetext WonderTradeExplanationText
+	promptbutton
+	special WonderTrade
+	iffalse .done
+	playmusic MUSIC_POKECOM_CENTER
+	writetext WonderTradeCompleteText
+	playsound SFX_DEX_FANFARE_80_109
+	waitsfx
+	jumpopenedtext WonderTradeGoodbyeText
+	
+WonderTradeIntroText:
+	text "I can wonder"
+	line "trade with you!"
+	done
+	
+WonderTradeExplanationText:
+	text "Get a random"
+	line "#mon traded to"
+	cont "you."
+	done
+	
+WonderTradeCompleteText:
+	text "It was a suc-"
+	line "cess!"
+	done
+	
+WonderTradeGoodbyeText:
+	text "Thanks for wonder"
+	line "trading!"
+	done

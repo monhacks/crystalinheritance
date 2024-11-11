@@ -10,6 +10,8 @@ HollysHolt_MapScriptHeader:
 	warp_event  7, 45, ANARRES_HOLT_GATE, 4
 	warp_event  4,  6, HOLT_COAST_GATE, 1
 	warp_event  5,  6, HOLT_COAST_GATE, 2
+	warp_event  24,  46, KIMONO_CABIN, 1
+	warp_event  25,  46, KIMONO_CABIN, 1
 
 	
 	def_coord_events
