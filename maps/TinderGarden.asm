@@ -638,6 +638,7 @@ TinderGardenRivalBattleScript1:
 	turnobject TINDER_GARDEN_RIVAL, LEFT
 	opentext
 	writetext TGRivalGoodbyeText
+	writetext TGKurtDismissesText
 	promptbutton
 	closetext
 	applymovement TINDER_GARDEN_RIVAL, TGRivalLeavesMovement
@@ -756,8 +757,6 @@ PrycePokemonText:
 	cont "your bond!"
 	done
 
-
-
 TGKurtScript:
 	faceplayer
 	opentext
@@ -789,6 +788,9 @@ CharcoalCuttingText:
 	cont "forest is so"
 	cont "thin, we can't"
 	cont "make Charcoal."
+	
+	para "How will we go"
+	line "on?"
 	done
 
 TGKurtFirstPokemonText:
@@ -817,18 +819,29 @@ TGRivalChallengeText:
 	cont "have #mon,"
 	cont "let's battle!"
 	
-	para "I'll show you"
-	line "all what I"
-	cont "can do!"
+	para "I'll show you,"
+	line "your gramps, and"
+	cont "this whole town"
+	cont "that I'm capable!"
 	done
 
 TGRivalLoseText:
 	text "Showed you."
+	
+	para "Oh, and Kurt, I"
+	line "heard that jab"
+	cont "about losing this"
+	cont "#mon."
 	done
 
 TGRivalWinText:
 	text "I'm only going"
 	line "to get stronger."
+	
+	para "Oh, and Kurt, I"
+	line "heard that jab"
+	cont "about losing this"
+	cont "#mon."
 	done
 
 TGRivalText_YouWon:
@@ -860,13 +873,40 @@ TGRivalGoodbyeText:
 	
 	para "I'm saying good-"
 	line "bye to this"
-	cont "backwater."
+	cont "backwater, where"
+	
+	para "no one apprecia-"
+	line "tes my skills -"
+	
+	para "My invention could"
+	line "have saved our"
+	cont "village!"
 
-	para "Maybe there are"
-	line "some strong"
-	cont "#mon on"
-	cont "Route 33."
 	done
+
+TGKurtDismissesText:
+	text "Kurt: <RIVAL>,"
+	line "I told you!"
+	
+	para "The forest is"
+	line "too sensitive!"
+	
+	para "It needs to stay"
+	line "under my guidance."
+
+	para "I won't hear any"
+	line "more about this."
+
+	text "HOLLIS: Of course"
+	line "I see. That's why"
+	cont "it's important for"
+	cont "the most experi-"
+	cont "enced members of"
+	cont "the village to"
+	cont "take action. We"
+	cont "can't afford any"
+	cont "mistakes."
+
 
 PlayerMovesForRivalBattle:
 	step_left

@@ -3491,7 +3491,6 @@ SneaselEvosAttacks:
 	db 8, QUICK_ATTACK
 	db 10, FEINT_ATTACK
 	db 14, ICE_SHARD ; Icy Wind → Ice Shard
-	db 16, FURY_STRIKES ; Fury Swipes → similar move
 	db 20, AGILITY
 	db 22, METAL_CLAW
 	db 25, HONE_CLAWS
@@ -4520,13 +4519,12 @@ DragoniteEvosAttacks:
 LarvitarEvosAttacks:
 	db EVOLVE_LEVEL, 30, PUPITAR
 	db 0 ; no more evolutions
-	db 1, TACKLE ; Sw/Sh move
+	db 1, DIG 
 	db 1, BITE
-	db 1, LEER
-	db 5, SANDSTORM
 	db 10, SCREECH
-	db 14, RAGE ; Chip Away → event move
-	db 19, ROCK_SLIDE
+	db 16, RAGE ; Chip Away → event move
+	db 19, SANDSTORM
+	db 21, ROCK_SLIDE
 	db 23, SCARY_FACE
 	db 28, THRASH
 	db 32, DARK_PULSE

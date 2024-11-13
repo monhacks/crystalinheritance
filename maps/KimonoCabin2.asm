@@ -38,8 +38,6 @@ KimonoCabin2_MapScriptHeader: ; should be like  "BurnedTowerB1F_MapScriptHeader"
 	itemball_event  3, 7, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_15
 	itemball_event  4, 3, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_16
 
-	itemball_event  8, 9, REPEL, 1, EVENT_KIMONO_CABIN_REPEL
-
 	object_const_def
 	const KIMONO_CABIN_2_KIMONO_GIRL
 
@@ -47,19 +45,17 @@ KimonoCabin2_MapScriptHeader: ; should be like  "BurnedTowerB1F_MapScriptHeader"
 KimonoCabin2RepelScript:
 	faceplayer
 	opentext
+	checkevent EVENT_KIMONO_CABIN_LARVITAR
+	iftrue_jumpopenedtext GladThatsOverText
 	checkevent EVENT_TALKED_TO_KIMONO_2_2
 	iftrue CheckRepelCounterScript2 ; should be 100 minus X
 	checkevent EVENT_TALKED_TO_KIMONO_2_1
 	iftrue CheckRepelCounterScript1 ; should be 100 steps
 	writetext Kimono2ExplainsTheGameText
+	verbosegiveitem REPEL
 	closetext
 	applymovement KIMONO_CABIN_2_KIMONO_GIRL, KimonoCabin2KimonoGirlMoves1
-	setevent EVENT_TALKED_TO_KIMONO_2
-	
-	
-	
-	
-	applymovement KIMONO_CABIN_2_KIMONO_GIRL, KimonoCabin2KimonoGirlMoves
+	setevent EVENT_TALKED_TO_KIMONO_2_1
 	end
 	
 
@@ -68,24 +64,28 @@ Kimono2ExplainsTheGameText:
 	line "berries all"
 	cont "over this"
 	cont "clearing to"
+
 	para "attract that"
-	line "ornery"
-	cont "hedgehog."
+	line "ornery hedgehog."
+
 	para "If you step on"
 	line "every blade of"
 	cont "grass once and"
+
 	para "pick up all the"
 	line "berries, then"
 	cont "the hedgehog"
+
 	para "will be corner-"
 	line "ed in the"
 	cont "middle."
+
 	para "OK, I'll go"
 	line "wait in the"
 	cont "middle to"
 	cont "ambush!"
 	
-	para "You start that"
+	para "You start this"
 	line "repel right now,"
 	cont "OK?"
 	done
@@ -95,7 +95,30 @@ KimonoCabin2KimonoGirlMoves1:
 	turn_head_down
 	step_end
 
-KimonoCabin2KimonoGirlMoves:
+
+
+CheckRepelCounterScript1: ; checks that you have 99 steps remaining on repel. 
+	writetext Check99StepsText
+	writetext CheckYourStepsText
+	readmem wRepelEffect
+	ifequal 99, KimonoCabin2Moves2
+	writetext TryAgainText
+	end
+
+KimonoCabin2Moves2:
+	writetext KimonoCabin2ExplainsSecondTime
+	applymovement KIMONO_CABIN_2_KIMONO_GIRL, KimonoCabin2KimonoGirlMoves2
+	end
+
+KimonoCabin2ExplainsSecondTime:
+	text "OK, go pick up"
+	line "all those berries"
+	cont "and meet me with"
+	cont "at least __ steps"
+	cont "left on the repel!"
+	done
+
+KimonoCabin2KimonoGirlMoves2:
 	step_up
 	step_left
 	step_up
@@ -105,23 +128,112 @@ KimonoCabin2KimonoGirlMoves:
 	step_end
 
 CheckRepelCounterScript2:
+	checkevent EVENT_KIMONO_CABIN_POMEG_1
+	iffalse_jumpopenedtext NotAllBerriesText
+	checkevent EVENT_KIMONO_CABIN_POMEG_2
+	iffalse_jumpopenedtext NotAllBerriesText
+	checkevent EVENT_KIMONO_CABIN_POMEG_3
+	iffalse_jumpopenedtext NotAllBerriesText
+	checkevent EVENT_KIMONO_CABIN_POMEG_4
+	iffalse_jumpopenedtext NotAllBerriesText
+	checkevent EVENT_KIMONO_CABIN_POMEG_5
+	iffalse_jumpopenedtext NotAllBerriesText
+	checkevent EVENT_KIMONO_CABIN_POMEG_6
+	iffalse_jumpopenedtext NotAllBerriesText
+	checkevent EVENT_KIMONO_CABIN_POMEG_7
+	iffalse_jumpopenedtext NotAllBerriesText
+	checkevent EVENT_KIMONO_CABIN_POMEG_8
+	iffalse_jumpopenedtext NotAllBerriesText
+	checkevent EVENT_KIMONO_CABIN_POMEG_9
+	iffalse_jumpopenedtext NotAllBerriesText
+	checkevent EVENT_KIMONO_CABIN_POMEG_10
+	iffalse_jumpopenedtext NotAllBerriesText
+	checkevent EVENT_KIMONO_CABIN_POMEG_11
+	iffalse_jumpopenedtext NotAllBerriesText
+	checkevent EVENT_KIMONO_CABIN_POMEG_12
+	iffalse_jumpopenedtext NotAllBerriesText
+	checkevent EVENT_KIMONO_CABIN_POMEG_13
+	iffalse_jumpopenedtext NotAllBerriesText
+	checkevent EVENT_KIMONO_CABIN_POMEG_14
+	iffalse_jumpopenedtext NotAllBerriesText
+	checkevent EVENT_KIMONO_CABIN_POMEG_15
+	iffalse_jumpopenedtext NotAllBerriesText
+	checkevent EVENT_KIMONO_CABIN_POMEG_16
+	iffalse_jumpopenedtext NotAllBerriesText
 	writetext CheckYourStepsText
+	readmem wInverseBattleScore
+	ifgreater 1, HedgeHogInteraction ; load the battle with the larvitar
+	writetext NotEnoughRepelStepsLeft
+	end
+
+
+Check99StepsText:
+	text "My Repel should"
+	line "have 99 steps..."
 	
-	
+	para "Let me check."
+	done
 	
 CheckYourStepsText:
 	text "How's that repel?"
-	line "You have taken"
-
-
+	para "There's "
 	
-	para "caught "
 	text_decimal wRepelEffect, 1, 3
 	text " steps"
-	line "of #mon."
+	line "remaining."
+	done
 
+TryAgainText:
+	text "Oh, you don't"
+	line "have the right"
+	cont "amount of Repel"
+	cont "remaining."
 	
+	para "Go back to the"
+	line "cabin, and we can"
+	cont "try again."
+	done
+
+NotAllBerriesText:
+	text "You don't have all"
+	line "the berries!"
 	
-	ifgreater 20, .HereYouGo ; greater, not greater or equal to
-.UhOh
-	jumpopenedtext ProfOaksAide1UhOhText
+	para "Here's a hint - "
+	
+	para "We will flush the"
+	line "hedgehog to the"
+	cont "middle, so you"
+	cont "should try to"
+	cont "step on each spot"
+	cont "just one time!"
+	done
+
+NotEnoughRepelStepsLeft:
+	text "Oh, there isn't"
+	line "enough steps"
+	cont "left on the repel."
+	done
+
+HedgeHogInteraction:
+	writetext HeresThatOrneryHedgehog
+	earthquake 30
+	showemote EMOTE_SHOCK, PLAYER, 20
+	pause 30
+	loadwildmon LARVITAR, 15
+	startbattle
+	setevent EVENT_KIMONO_CABIN_LARVITAR
+	reloadmapafterbattle
+	writetext GladThatsOverText
+	end
+
+GladThatsOverText:
+	text "Nice job dealing"
+	line "with that ornery"
+	cont "creature."
+	
+	para "It would have eat-"
+	line "en all the dirt"
+	cont "from the garden"
+	cont "if we didn't deal"
+	cont "with it!"
+	done

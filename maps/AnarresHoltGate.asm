@@ -72,14 +72,17 @@ TammyDialogue1:
 
 HollisDialogue1:
 	text "HOLLIS: Of course"
-	line "I see. That's why"
-	cont "it's important for"
-	cont "the most experi-"
-	cont "enced members of"
-	cont "the village to"
-	cont "take action. We"
-	cont "can't afford any"
-	cont "mistakes."
+	line "I see. But -- "
+
+
+	para "The forest is"
+	line "too sensitive!"
+	
+	para "It needs to stay"
+	line "under my guidance."
+	
+	para "We can't afford"
+	line "any mistakes."
 	done
 
 TammyDialogue2:

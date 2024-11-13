@@ -34,7 +34,7 @@ KimonoCabin1_MapScriptHeader: ; should be like  "BurnedTowerB1F_MapScriptHeader"
 	object_const_def
 	const KIMONO_CABIN_1_DRATINI ;  
 	
-SlowpokeWellSlowbro:
+KimonoCabin1Dratini:
 	faceplayer
 	cry DRATINI
 	pause 15

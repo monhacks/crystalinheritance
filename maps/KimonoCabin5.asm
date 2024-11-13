@@ -22,3 +22,12 @@ KimonoCabin5_MapScriptHeader: ; should be like  "BurnedTowerB1F_MapScriptHeader"
 
 
 	object_const_def
+
+
+
+
+
+
+
+
+;	givepoke EEVEE, NO_FORM, 5, LUM_BERRY, LOVE_BALL, GROWTH
