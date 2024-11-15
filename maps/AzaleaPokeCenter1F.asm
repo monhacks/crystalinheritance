@@ -54,26 +54,55 @@ PokemonJournalBugsyScript:
 	done
 
 AzaleaPokeCenter1FCooltrainermScript:
-	checktime (1 << EVE) | (1 << NITE)
-	iftrue_jumptextfaceplayer .NiteText
-	jumpthistextfaceplayer
+	faceplayer
+	opentext
+	writetext PearlForToughLeavesText ;;
+	waitbutton
+	checkitem BIG_PEARL
+	iffalse .NoBigPearl
+	writetext PearlForToughLeavesQuestionText ;;
+	yesorno
+	iffalse .NoBigPearl
+	takeitem BIG_PEARL
+	giveapricorn TOUGH_LEAVES
+	jumpopenedtext PearlForToughLeavesEndText ;;
 
-	text "For a guy who"
-	line "makes # Balls,"
+.NoBigPearl
+	jumpopenedtext NoPearlForToughLeavesText ;;
 
-	para "Kurt isn't much of"
-	line "a trainer."
+PearlForToughLeavesText:
+	text "Hey, did you know"
+	line "raking leaves is"
+	cont "fun? Heh, leaves"
+	cont "in Ilex Forest"
+	cont "are some of the"
+	cont "toughest in the"
+	cont "whole world."
 
-	para "He does have a"
-	line "#mon, but he"
-
-	para "doesn't use it"
-	line "much."
+	para "Way better than"
+	line "a grimy big pearl."
 	done
 
-.NiteText:
-	text "Kurt and Prof.Oak"
-	line "are old friends."
+PearlForToughLeavesQuestionText:
+	text "Why, if I was you,"
+	line "I'd trade a big"
+	cont "pearl for a few of"
+	para "these withered-, "
+	line "I mean verdant, "
+	cont "leaves."
+	done
+
+PearlForToughLeavesEndText:
+	text "Come back any"
+	line "time."
+	done
+
+NoPearlForToughLeavesText:
+	text "Oh, I thought you"
+	line "had a big pearl"
+	
+	para "You can fish one "
+	line "up anywhere."
 	done
 
 AzaleaPokeCenter1FGentlemanText:
@@ -96,7 +125,7 @@ AzaleaPokeCenter1FSightseermText:
 	para "Seems like just"
 	line "yesterday, he"
 	cont "lost his dad's"
-	cont "Farfetchd."
+	cont "Farfetch'd."
 	done
 
 AzaleaPokeCenter1FPokefanScript: 

@@ -301,8 +301,8 @@ UltraBallDesc:
 	next "rate of success.@"
 
 MasterBallDesc:
-	db   "The best Ball. It"
-	next "never misses.@"
+	db   "Absolute apricorn"
+	next "apotheosis.@" 
 
 SafariBallDesc:
 	db   "The Safari Game"
@@ -506,8 +506,8 @@ SodaPopDesc:
 	next "HP by 50.@"
 
 LemonadeDesc:
-	db   "Quenches thirst"
-	next "instantly.@"
+	db   "Perfect for after"
+	next "a park day.@"
 
 MoomooMilkDesc:
 	db   "Restores #mon"
@@ -853,8 +853,8 @@ BerserkGeneDesc:
 	next "causes confusion.@"
 
 LightBallDesc:
-	db   "Great for"
-	next "adolescents.@"
+	db   "For adolescents"
+	next "to be spunkier.@"
 
 StickDesc:
 	db   "An ordinary stick."
@@ -1045,7 +1045,7 @@ MulchDesc:
 	next "for Berry trees.@"
 
 SweetHoneyDesc:
-	db   "An energy boost"
+	db   "For more energy"
 	next "to focus.@"
 
 EvioliteDesc:
@@ -1097,24 +1097,24 @@ BigNuggetDesc:
 	next "Sell very high.@"
 
 TinyMushroomDesc:
-	db   "Looks tasty. A"
-	next "chef's delight.@"
+	db   "Umami! For an"
+	next "experienced chef.@"
 
 BigMushroomDesc:
-	db   "A rare mushroom."
-	next "Sell high.@"
+	db   "For better tea-"
+	next "leaf divination.@"
 
 BalmMushroomDesc:
 	db   "A rare mushroom."
 	next "Sell very high.@"
 
 PearlDesc:
-	db   "A beautiful pearl."
-	next "Fisher's dream.@"
+	db   "For attracting"
+	next "clams.@"
 
 BigPearlDesc:
-	db   "A big, beautiful"
-	next "pearl. Sell high.@"
+	db   "Spherical; trade"
+	next "with bohemians.@"
 
 PearlStringDesc:
 	db   "Big, shiny pearls."
@@ -1129,8 +1129,8 @@ StarPieceDesc:
 	next "Sell very high.@"
 
 BrickPieceDesc:
-	db   "Ancient"
-	next "artifact.@"
+	db   "For history"
+	next "enthusiasts.@"
 
 RareBoneDesc:
 	db   "A rare bone for"
@@ -1141,7 +1141,7 @@ SilverLeafDesc:
 	next "love these.@"
 
 GoldLeafDesc:
-	db   "Adds a dignif-"
+	db   "For a dignif-"
 	next "ied sheen.@"
 
 SlowpokeTailDesc:
@@ -1158,7 +1158,7 @@ DomeFossilDesc:
 	next "#mon shell.@"
 
 OldAmberDesc:
-	db   "Proof of"
+	db   "For a proof of"
 	next "life.@"
 
 FlowerMailDesc:
@@ -1166,12 +1166,12 @@ FlowerMailDesc:
 	next "(Hold)@"
 
 SurfMailDesc:
-	db   "Lapras-print Mail."
-	next "(Hold)@"
+	db   "For remembering"
+	next "the sea.@"
 
 LiteBlueMailDesc:
-	db   "Dratini-print"
-	next "Mail. (Hold)@"
+	db   "A blank canvas"
+	next "for young love.@"
 
 PortraitMailDesc:
 	db   "Mail featuring the"

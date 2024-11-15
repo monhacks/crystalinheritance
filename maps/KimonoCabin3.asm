@@ -16,22 +16,31 @@ KimonoCabin3_MapScriptHeader: ; should be like  "BurnedTowerB1F_MapScriptHeader"
 	warp_event  3, 24, KIMONO_CABIN_3, 3
 	warp_event  4, 24, KIMONO_CABIN_3, 3
 	warp_event  5, 24, KIMONO_CABIN_3, 3
-	warp_event  6, 24, KIMONO_CABIN_3, 3
-	warp_event  6, 25, KIMONO_CABIN_3, 3
+
 	
 	warp_event  4, 22, KIMONO_CABIN_3, 3
 	warp_event  5, 22, KIMONO_CABIN_3, 3
 	warp_event  6, 22, KIMONO_CABIN_3, 3
 	warp_event  7, 22, KIMONO_CABIN_3, 3
 	
-	warp_event  8, 26, KIMONO_CABIN_3, 3
-	warp_event  9, 26, KIMONO_CABIN_3, 3
 	warp_event  10, 26, KIMONO_CABIN_3, 3
 	warp_event  11, 26, KIMONO_CABIN_3, 3	
 
 	warp_event  8, 24, KIMONO_CABIN_3, 3
 	warp_event  9, 24, KIMONO_CABIN_3, 3
 	warp_event 11, 24, KIMONO_CABIN_3, 3
+	;;;
+	warp_event 12, 27, KIMONO_CABIN_3, 3
+	warp_event 13, 27, KIMONO_CABIN_3, 3
+	warp_event 14, 27, KIMONO_CABIN_3, 3
+
+	warp_event 13, 22, KIMONO_CABIN_3, 3
+	warp_event 13, 23, KIMONO_CABIN_3, 3
+	warp_event 14, 23, KIMONO_CABIN_3, 3
+	warp_event 15, 24, KIMONO_CABIN_3, 3
+	warp_event 15, 25, KIMONO_CABIN_3, 3
+	warp_event 17, 26, KIMONO_CABIN_3, 3
+	warp_event 17, 27, KIMONO_CABIN_3, 3
 	
 	def_coord_events
 
@@ -42,7 +51,7 @@ KimonoCabin3_MapScriptHeader: ; should be like  "BurnedTowerB1F_MapScriptHeader"
 
 
 	def_object_events
-	object_event  5, 26, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN,  OBJECTTYPE_COMMAND, jumptextfaceplayer, KimonoCabin3GameExplainText, EVENT_KIMONO_CABIN_SNEASEL
+	object_event  5, 26, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN,  OBJECTTYPE_COMMAND, jumptextfaceplayer, KimonoCabin3GameExplainText, EVENT_KIMONO_CABIN_SNEASEL
 	strengthboulder_event 4, 25
 	strengthboulder_event 2, 24
 	strengthboulder_event 10, 24
@@ -64,7 +73,7 @@ KimonoCabin3_MapScriptHeader: ; should be like  "BurnedTowerB1F_MapScriptHeader"
 	const KIMONO_CABIN_3_SNEASEL ;  
 	
 KimonoCabin3GameExplainText:
-	text "We're in the attic. I can hear that creature raking its claws from all the way over here. Now, there's a bunch of junk, so if it's in your way, just push it off the rafters. Oh yeah, I painted the rafters black so that they would blend in from below. Sorry about that. Anyway, please make your way over there and deal with that gremlin!"
+	text "Samari: We're in the attic. I can hear that creature raking its claws from all the way over here. Now, there's a bunch of junk, so if it's in your way, just push it off the rafters. Oh yeah, I painted the rafters black so that they would blend in from below. Sorry about that. Anyway, please make your way over there and deal with that gremlin!"
 	
 
 KimonoCabin3Sneasel:

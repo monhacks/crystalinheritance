@@ -23,6 +23,7 @@ HollysHolt_MapScriptHeader:
 	bg_event 21, 41, BGEVENT_ITEM + SILVERPOWDER, EVENT_HOLLYS_HOLT_HIDDEN_SILVERPOWDER ;ok
 	bg_event 16,  2, BGEVENT_ITEM + REVIVAL_HERB, EVENT_HOLLYS_HOLT_HIDDEN_REVIVAL_HERB ;ok
 	bg_event 10, 24, BGEVENT_READ, HollysHoltShrineScript 
+	bg_event 23, 43, BGEVENT_JUMPTEXT, HH_Sign3Text
 
 	def_object_events
 	object_event  9, 25, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, HollysHoltKurtScript, -1;EVENT_BEAT_HOLLIS ;todo add this 
@@ -444,3 +445,6 @@ HH_Hollis_Leaves:
 	step_left
 	step_end
 	
+HH_Sign3Text:
+	text "Curious Cabin"
+	done
