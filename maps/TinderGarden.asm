@@ -638,7 +638,7 @@ TinderGardenRivalBattleScript1:
 	turnobject TINDER_GARDEN_RIVAL, LEFT
 	opentext
 	writetext TGRivalGoodbyeText
-	writetext TGKurtDismissesText
+;	writetext TGKurtDismissesText
 	promptbutton
 	closetext
 	applymovement TINDER_GARDEN_RIVAL, TGRivalLeavesMovement
@@ -657,6 +657,7 @@ TinderGardenRivalBattleScript1:
 	setscene $2 ; when this was $0 I got stuck in a loop constantly doing the scene
 	setmapscene AZALEA_TOWN, $1 ;now the people shouldn't stop you
 	setmapscene ILEX_FOREST, $1 ;ready for the fight at Ilex Forest
+	clearevent EVENT_KURTS_HOUSE_NOTEBOOK
 	setevent EVENT_ILEX_FOREST_RIVAL
 	playmapmusic
 	end
@@ -828,7 +829,7 @@ TGRivalChallengeText:
 TGRivalLoseText:
 	text "Showed you."
 	
-	para "Oh, and Kurt, I"
+	para "Oh, Kurt, I"
 	line "heard that jab"
 	cont "about losing this"
 	cont "#mon."
@@ -838,7 +839,7 @@ TGRivalWinText:
 	text "I'm only going"
 	line "to get stronger."
 	
-	para "Oh, and Kurt, I"
+	para "Oh, Kurt, I"
 	line "heard that jab"
 	cont "about losing this"
 	cont "#mon."
@@ -865,47 +866,38 @@ TGRivalText_YouLost:
 	done
 
 TGRivalGoodbyeText:
-	text "Now that I have"
-	line "my own #mon"
-	cont "I think I can"
-	cont "take care of my-"
-	cont "self."
+	text "With my own"
+	line "#mon, I can"
+	cont "take care of"
+	cont "myself."
 	
-	para "I'm saying good-"
-	line "bye to this"
-	cont "backwater, where"
-	
-	para "no one apprecia-"
-	line "tes my skills -"
+	para "I'm leaving - "
+	line "no one here app-"
+	cont "reciates me!"
 	
 	para "My invention could"
-	line "have saved our"
-	cont "village!"
-
+	line "have saved us, if"
+	cont "you, Kurt, hadn't"
+	cont "sabotaged me."
+	
+	para "Who put you in"
+	line "charge, anyway?"
 	done
 
-TGKurtDismissesText:
-	text "Kurt: <RIVAL>,"
-	line "I told you!"
-	
-	para "The forest is"
-	line "too sensitive!"
-	
-	para "It needs to stay"
-	line "under my guidance."
+;TGKurtDismissesText:
+;	text "Kurt: <RIVAL>,"
+;	line "I told you!"
+;	
+;	para "The forest is"
+;	line "too sensitive!"
+;	
+;	para "It needs to stay"
+;	line "under my guidance."
+;
+;	para "I won't hear any"
+;	line "more about this."
+;	done
 
-	para "I won't hear any"
-	line "more about this."
-
-	text "HOLLIS: Of course"
-	line "I see. That's why"
-	cont "it's important for"
-	cont "the most experi-"
-	cont "enced members of"
-	cont "the village to"
-	cont "take action. We"
-	cont "can't afford any"
-	cont "mistakes."
 
 
 PlayerMovesForRivalBattle:

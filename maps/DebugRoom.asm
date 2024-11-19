@@ -28,7 +28,7 @@ DebugRoom_MapScriptHeader: ; should be like  "BurnedTowerB1F_MapScriptHeader"
 	object_event  2,  8, SPRITE_BREEDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE,  OBJECTTYPE_SCRIPT, 0, Breeder7Script, -1 ; gives lots of mons
 	object_event  1,  8, SPRITE_BREEDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE,  OBJECTTYPE_SCRIPT, 0, Breeder8Script, -1 ; gives lots of mons
 	object_event  6,  4, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE,  OBJECTTYPE_SCRIPT, 0, DebugWonderTradeScript, -1 ; wonder trade
-	object_event  3,  3, SPRITE_PSYCHIC_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE,  OBJECTTYPE_SCRIPT, 0, DebugTimeTravelerScript, -1 ; wonder trade
+;	object_event  3,  3, SPRITE_PSYCHIC, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE,  OBJECTTYPE_SCRIPT, 0, DebugTimeTravelerScript, -1 ; wonder trade
 	
 	object_const_def
 	const DEBUG_DWG
@@ -61,11 +61,17 @@ for x, NUM_TMS + NUM_HMS
 	givetmhm x
 endr
 	; useful items
-for x, POKE_BALL, CHERISH_BALL + 1
-if x != PARK_BALL && x != SAFARI_BALL
-	giveitem x, 99
-endc
-endr
+	giveitem MASTER_BALL, 99
+	giveitem GEODE, 99;
+	giveitem JEZE_BALL, 99;
+	giveitem HERB_BALL, 99;
+	giveitem BUB_BALL, 99;
+	giveitem DECI_BALL, 99;
+	giveapricorn FIXED_CHARGE, 5
+	giveapricorn SHORE_FOAM, 5
+	giveapricorn RADIANT_OPAL, 5
+	giveapricorn HOLLOW_ROCK, 5
+	giveapricorn TOUGH_LEAVES, 5
 	giveitem MAX_POTION, 99
 	giveitem FULL_RESTORE, 99
 	giveitem MAX_REVIVE, 99
@@ -431,7 +437,7 @@ Breeder6Script:
 	iffalse_jumpopenedtext BreederSayNoText
 	writetext BreederText	
 	; a buncha mons
-	givepoke GILGAR, 5
+	givepoke GLIGAR, 5
 	givepoke SNUBBULL, 5	
 	givepoke QWILFISH, 5	
 	givepoke SHUCKLE, 5	
@@ -505,7 +511,7 @@ Breeder8Script:
 	givepoke SUICUNE, 5	
 	givepoke HEATRAN, 5	
 	givepoke LUGIA, 5	
-	givepoke HO__OH, 5	
+	givepoke HO_OH, 5	
 	givepoke CELEBI, 5	
 	closetext
 	end
@@ -544,35 +550,37 @@ BreederText:
 
 DebugWonderTradeScript: ; TODO FIX THIS 
 	opentext
-	writetext WonderTradeIntroText
+	writetext DebugWonderTradeIntroText
 	waitbutton
-	writetext WonderTradeExplanationText
+	writetext DebugWonderTradeExplanationText
 	promptbutton
 	special WonderTrade
 	iffalse .done
 	playmusic MUSIC_POKECOM_CENTER
-	writetext WonderTradeCompleteText
+	writetext DebugWonderTradeCompleteText
 	playsound SFX_DEX_FANFARE_80_109
 	waitsfx
-	jumpopenedtext WonderTradeGoodbyeText
+	jumpopenedtext DebugWonderTradeGoodbyeText
 	
-WonderTradeIntroText:
+.done
+	jumpopenedtext DebugWonderTradeGoodbyeText
+	
+DebugWonderTradeIntroText:
 	text "I can wonder"
 	line "trade with you!"
 	done
 	
-WonderTradeExplanationText:
+DebugWonderTradeExplanationText:
 	text "Get a random"
 	line "#mon traded to"
 	cont "you."
 	done
 	
-WonderTradeCompleteText:
+DebugWonderTradeCompleteText:
 	text "It was a suc-"
 	line "cess!"
 	done
 	
-WonderTradeGoodbyeText:
-	text "Thanks for wonder"
-	line "trading!"
+DebugWonderTradeGoodbyeText:
+	text "See ya!"
 	done

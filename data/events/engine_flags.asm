@@ -82,7 +82,7 @@ EngineFlags:
 	engine_flag wUnlockedUnowns, 7 ; 8
 
 	; fly
-	engine_flag wVisitedSpawns, 0  ; your house
+	engine_flag wVisitedSpawns, 0  ; 
 	engine_flag wVisitedSpawns, 1  ; ANARRES
 	engine_flag wVisitedSpawns, 2  ; GAULDENROD
 	engine_flag wVisitedSpawns, 3  ; STADIUM
@@ -92,8 +92,8 @@ EngineFlags:
 	engine_flag wVisitedSpawns, 7  ; CIANWOOD COVE
 	engine_flag wVisitedSpawns, 8  ; TRANQUIL_TARN
 	engine_flag wVisitedSpawns, 9  ; ERRIE HAMLET
-	engine_flag wVisitedSpawns, 10 ; saffron
-	engine_flag wVisitedSpawns, 11 ; celadon
+	engine_flag wVisitedSpawns, 10 ; SULFUR_STY
+	engine_flag wVisitedSpawns, 11 ; TIMELESS_TAPESTRY
 	engine_flag wVisitedSpawns, 12 ; fuchsia
 	engine_flag wVisitedSpawns, 13 ; cinnabar
 	engine_flag wVisitedSpawns, 14 ; indigo plateau

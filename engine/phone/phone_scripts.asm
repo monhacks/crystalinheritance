@@ -1562,7 +1562,7 @@ UnknownScript_0xbdaa2:
 	farsjump PhoneScript_FoundItem_Male
 
 TullyPhoneScript1:
-	gettrainername FISHER, TULLY1, $0
+	gettrainername FISHER, TULLY, $0
 	checkflag ENGINE_TULLY_READY_FOR_REMATCH
 	iftrue UnknownScript_0xbdad5
 	farscall PhoneScript_AnswerPhone_Male
@@ -1587,7 +1587,7 @@ UnknownScript_0xbdadc:
 	farsjump TullyHurryScript
 
 TullyPhoneScript2:
-	gettrainername FISHER, TULLY1, $0
+	gettrainername FISHER, TULLY, $0
 	farscall PhoneScript_GreetPhone_Male
 	checkflag ENGINE_TULLY_READY_FOR_REMATCH
 	iftrue UnknownScript_0xbdb1b

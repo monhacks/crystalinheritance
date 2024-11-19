@@ -412,7 +412,6 @@ GauldenrodBobeshScene: ; todo, make
     showtext CindyText5
     showtext BobeshText5
     showtext CindyText6
-    showtext BobeshText6
     applymovement GAULDENROD_BRIGADER, BrigaderTakesCindy
     applymovement GAULDENROD_MATRON, CindyTakenAway
     disappear GAULDENROD_MATRON
@@ -443,21 +442,23 @@ BobeshText1:
 
 BrigaderText2:
     text "Brigader: General"
-    line "Bobesh. This"
-    cont "woman harboring"
+    line "Bobesh. She"
+    cont "is harboring"
     cont "the anarchist"
     cont "Amos."
     done
 
 CindyText2:
-    text "Cindy: Lies!"
+    text "Cindy: No!"
     done
 
 BobeshText2:
     text "Bobesh: Such"
     line "claims against"
     cont "a respected"
-    cont "matron. Tell me,"
+    cont "matriarch."
+	
+	para "Tell me,"
     cont "how is your"
     cont "husband?"
     done
@@ -495,15 +496,17 @@ BobeshText4:
     cont "husband's silence"
     cont "damns you both."
 	
-    para "Cindy. Johto"
+    para "Cindy- Johto"
     line "faces threats."
 	
     para "We can't allow"
-    line "division. Amos"
-    cont "and his kind"
-    cont "weaken us when"
-    cont "we must stand"
-    cont "united."
+    line "division."
+	
+	para "I'm in charge of"
+	line "this city, and "
+	cont "I'll make sure"
+	cont "we don't fall"
+	cont "to the brutes."
     done
 
 CindyText5:
@@ -514,21 +517,16 @@ BobeshText5:
     text "Bobesh: Brigader!"
     line "Take her away"
     cont "to the stadium."
-    cont "She will submit"
-    cont "to my Levi, or"
-    cont "be returned to"
-    cont "a state of"
+    para "She will submit"
+    line "to Levi, or be"
+	
+    para "returned to a"
+    line "a state of"
     cont "nature."
     done
 
 CindyText6:
     text "Cindy: No!"
-	line "Please!"
-    done
-
-BobeshText6:
-    text "Bobesh: We'll"
-    line "see about that."
     done
 
 PlayerMovesToWatchScene:

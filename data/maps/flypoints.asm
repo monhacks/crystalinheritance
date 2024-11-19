@@ -1,4 +1,4 @@
-Flypoints:
+Flypoints: ; ENGINE_FLYPOINT_... 
 	; landmark, spawn point
 	db VIOLET_CITY,      SPAWN_VIOLET
 	db UNION_CAVE,       SPAWN_UNION_CAVE

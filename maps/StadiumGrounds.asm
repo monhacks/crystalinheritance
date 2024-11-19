@@ -171,51 +171,43 @@ SandraExitMovement:
 
 BobeshIntroText:
 	text "Bobesh: Eh? Who"
-	line "are you, and how"
-	cont "did you get past"
-	cont "the guards?"
+	line "are you?"
 	
 	para "No matter."
 
 	para "I am General"
 	line "Bobesh, sent by"
 	cont "the emperor to"
-	cont "bring order to"
-	cont "this chaotic town."
+	cont "bring order by"
+	cont "my strength."
 
-	para "In nature, life"
-	line "is nasty, brut-"
-	cont "ish, and short."
-	cont "Only a strong"
-	cont "ruler can provide"
-	cont "true peace."
+	para "These are trying"
+	line "times for Johto."
 
 	para "This woman - she"
 	line "naively believes"
 	cont "all #mon have"
 	cont "equal value."
+	
+	para "When I take over"
+	line "the tower, my"
+	cont "#mon will"
+	cont "control the"
+	cont "narrative."
+	
+	para "People will asp-"
+	line "ire to our"
+	cont "strength."
 
-	para "But without a"
-	line "hierarchy, without"
-	cont "stronger #mon"
-	cont "to aspire to, we'd"
-	cont "remain in a state"
-	cont "of anarchy."
+	para "You're here to"
+	line "help? Fool!"
 
-	para "You're here to aid"
-	line "her misguided"
-	cont "cause? Fool."
+	para "This Toxicroak"
+	line "will show her"
+	cont "futility ."
 
-	para "This Toxicroak,"
-	line "from Hisui,"
-	cont "will show the"
-	cont "futility of her"
-	cont "weak ideals."
-
-	para "Her Fairy types"
-	line "stand no chance."
-	cont "She'll surrender"
-	cont "the tower, and"
+	para "She'll surrender"
+	line "the tower, and"
 	cont "order will "
 	cont "prevail!"
 	done
@@ -234,33 +226,24 @@ SandraThankYouText:
 	para "But I pack a few"
 	line "psychic techniques"
 	cont "and could have"
-	cont "handled myself"
-	cont "easily."
-	
-	para "Still, it was"
-	line "dazzling to"
-	cont "witness."
+	cont "handled myself."
 	
 	para "Oh, and I see"
 	line "that my friends"
 	cont "have made some"
-	cont "renovations to"
-	cont "the acquifer be-"
-	cont "neath us."
+	cont "renovations."
 	done
 
 SandraNegotiateText:
 	text "Now, let's go"
-	line "negotiate with"
-	cont "Mr. Bobesh."
+	line "negotiate."
 	done
 
 BobeshBattleText:
 	text "Grr, I thought"
 	line "that feral Toxi-"
 	cont "croak would rip"
-	cont "you both to"
-	cont "shreds." 
+	cont "you to shreds."
 
 	para "And whoa- where"
 	line "did that water"

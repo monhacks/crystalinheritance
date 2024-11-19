@@ -14,7 +14,7 @@ KimonoCabin_MapScriptHeader: ; these people have all fled Capital for fear of lo
 
 
 	def_bg_events
-
+	bg_event  0, 0, BGEVENT_JUMPTEXT, KimonoCabinBookshelfText
 
 
 	def_object_events ; sprites: cute_girl, lass, ace_trainer_f, matron, granny
@@ -46,18 +46,19 @@ KimonoCabin_MapScriptHeader: ; these people have all fled Capital for fear of lo
 	; there is going to be a big event soon. The emperor is destroying books, and the only way
 	; to preserve knowledge and wisdom is to etch it into stone. 
 
-	object_event  7,  3, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptext, KimonoCabinShijiNotebook1, -1
-	object_event  8,  4, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptext, KimonoCabinSamariaNotebook1, -1
+	object_event  7,  3, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptext, KimonoCabinShijiNotebook1, EVENT_VISITED_TIMELESS_TAPESTRY
+	object_event  8,  4, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptext, KimonoCabinSamariaNotebook1, EVENT_VISITED_TIMELESS_TAPESTRY
 
-	object_event  3,  5, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptext, KimonoCabinPiperNotebook1, -1
-	object_event  7,  3, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptext, KimonoCabinVeraNotebook1, -1
+	object_event  3,  5, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptext, KimonoCabinPiperNotebook1, EVENT_VISITED_TIMELESS_TAPESTRY
+	object_event  4,  6, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptext, KimonoCabinVeraNotebook1, EVENT_VISITED_TIMELESS_TAPESTRY
 
-	object_event  4,  2, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptext, KimonoCabinMorpheaNotebook1, -1
+	object_event  2,  2, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptext, KimonoCabinMorpheaNotebook1, EVENT_VISITED_TIMELESS_TAPESTRY
 
 	object_const_def
 
 
 KimonoCabin1Script:
+	faceplayer
 	opentext
 	checkevent EVENT_KIMONO_CABIN_DRATINI
 	iftrue_jumpopenedtext Kimono1HelpedText
@@ -74,31 +75,68 @@ KimonoCabin1Script:
 	end
 
 Kimono1HelpedText:
-	text "Vera: Hey cool trainer! Thanks for your help. My grandma Shiji is proud that I can rock smash now. 
+	text "Vera: Hey cool"
+	line "trainer!"
+	cont "Thanks for your"
+	cont "help."
+	para "Great-grandma"
+	line "Shiji is proud"
+	cont "that I can"
+	cont "rock smash now."
 	done
 	
 Kimono1AskHelpText:
-	text "Vera: Hi! My name is Vera Mecti but you can call me Vera. Um, are you from Anarres? Can you tell me if it gets more fun here? My great-grandma Shiji made us move here, and now I have chores. 
-	For instance I have to go down to fuh-reezing cellar to clear rocks. And there's a big scary worm just writhing around. Would you help me? Pleeease?"
-	
-	
+	text "Vera: Hi! My"
+	line "name is Vera"
+	cont "Mecti but you"
+	para "can call me"
+	line "Vera. Um, are"
+	cont "you from"
+	cont "Anarres?"
+	para "Can you tell me"
+	line "if it gets more"
+	cont "fun here?"
+	para "My great-"
+	line "grandma Shiji"
+	cont "made us move"
+	cont "here, and now"
+	para "I have chores."
+	para "For instance I"
+	line "have to go down"
+	para "to fuh-reezing"
+	line "cellar to clear"
+	cont "rocks."
+	para "And there's a"
+	line "big scary worm"
+	cont "just writhing"
+	cont "around."
+	para "Would you help"
+	line "me? Pleeease?"
 	done
 
 Kimono1DeclinedText:
-	text "Vera: Oh brother...  I'm never gonna make it here.
+	text "Vera: Oh"
+	line "brother... I'm"
+	cont "never gonna"
+	cont "make it here."
 	done
-	
+
 Kimono1ThanksForHelpingText:
-	text "Vera: Thanks! Here, I'll show you the way. 
-	
+	text "Vera: Thanks!"
+	line "Here, I'll show"
+	cont "you the way."
 	done
 	
+
 KimonoCabin2Script:
+	faceplayer
 	opentext
 	checkevent EVENT_KIMONO_CABIN_LARVITAR
 	iftrue_jumpopenedtext Kimono2HelpedText
 	checkevent EVENT_BEAT_HOLLIS
-	ifflase_jumpopenedtext Kimono2NotStrongEnoughText
+	iffalse_jumpopenedtext Kimono2NotStrongEnoughText
+	checkevent EVENT_KIMONO_CABIN_DRATINI
+	iffalse_jumpopenedtext Kimono2NotStrongEnoughText
 	writetext Kimono2AskHelpText
 	yesorno
 	iffalse_jumpopenedtext Kimono2DeclinedText
@@ -130,48 +168,118 @@ KimonoCabin2Script:
 	warp KIMONO_CABIN_2,  8, 11
 	end
 
-Kimono2HelpedText: ; piper
-	text "Piper: Thanks for your help out there. I wasn't sure about that natural method grandma Shiji told me about. Maybe people can learn, after all.
+Kimono2HelpedText:
+	text "Piper: Thanks"
+	line "for your help"
+	cont "out there."
+	para "I wasn't sure"
+	line "about that"
+	cont "natural method"
+	para "grandma Shiji"
+	line "told me about."
+	para "Maybe people"
+	line "can learn,"
+	cont "after all."
 	done
-
-
-	; trying to use a natural method to coax the hedgehog out
-	; had just about to be promoted into the clan, now she needs to prove herself again 
-	; cynical, wants to let the world burn and live in this perfect harmony 
-
+	
 Kimono2NotStrongEnoughText:
-	text "Piper: It's so unfair. My dancing was about to get me promoted, but now I'm here thanks to that dumb emperor and his supporters. Why does grandma Shiji even bother with her notes? 
-	Hey, tell you what. I'm setting up a garden, but have to coax this weird hedgehog out of the ground. 
-	I would show you how, but you don't look like you could handle it. 
-	
+	text "Piper: It's so"
+	line "unfair. My"
+	cont "dancing was"
+	para "about to get me"
+	line "promoted, but"
+	cont "now I'm here"
+	para "thanks to that"
+	line "dumb emperor"
+	cont "and his"
+	cont "supporters."
+	para "Why does"
+	line "grandma Shiji"
+	cont "even bother"
+	cont "with her notes?"
+	para "Hey, tell you"
+	line "what. I'm"
+	cont "setting up a"
+	cont "garden, but"
+	para "have to coax"
+	line "this weird"
+	cont "hedgehog out"
+	cont "of the ground."
+	para "I would show"
+	line "you how, but"
+	cont "you don't look"
+	para "like you could"
+	line "handle it."
 	done
 	
-
 Kimono2AskHelpText:
-	text "Piper: It's so unfair. My dancing was about to get me promoted, but now I'm here thanks to that dumb emperor and his supporters. Why does grandma Shiji even bother with her notes? 
-	Hey, tell you what. I'm setting up a garden, but have to coax this weird hedgehog out of the ground. 
-	If I can teach you, an outsider, how to use Shiji's natural method, then maybe there will be hope for others.
-	
+	text "Piper: It's so"
+	line "unfair. My"
+	cont "dancing was"
+	para "about to get me"
+	line "promoted, but"
+	cont "now I'm here"
+	para "thanks to that"
+	line "dumb emperor"
+	cont "and his"
+	cont "supporters."
+	para "Why does"
+	line "grandma Shiji"
+	cont "even bother"
+	cont "with her notes?"
+	para "Hey, tell you"
+	line "what. I'm"
+	cont "setting up a"
+	cont "garden, but"
+	para "have to coax"
+	line "this weird"
+	cont "hedgehog out"
+	cont "of the ground."
+	para "If I can teach"
+	line "you, an out-"
+	cont "sider, how to"
+	para "use Shiji's"
+	line "natural method,"
+	para "then maybe"
+	line "there will be"
+	cont "hope for"
+	cont "others."
 	done
 
 Kimono2DeclinedText:
-	text "No? Figures, enjoy living under the emperor's boots. We'll still be here, living off the land. 
+	text "Piper: No?"
+	line "Figures, enjoy"
+	cont "living under"
+	para "the emperor's"
+	line "boots. We'll"
+	cont "still be here,"
+	para "living off the"
+	line "land."
+	done
 	
+Kimono2ThanksForHelpingText:
+	text "Piper: OK,"
+	line "Great! I'll"
+	cont "show you the"
+	cont "way to the"
+	cont "garden."
+	para "Don't screw"
+	line "this up, OK?"
 	done
 
-Kimono2ThanksForHelpingText:
-	text "OK, Great! I'll show you the way to the garden. 
-	Don't screw this up, OK?
-	done
 
 
 	
 KimonoCabin3Script: ; samaria 
+	faceplayer
 	opentext
 	checkevent EVENT_KIMONO_CABIN_SNEASEL
 	iftrue_jumpopenedtext Kimono3HelpedText
 	checkevent EVENT_BEAT_BOBESH_STADIUM
-	ifflase_jumpopenedtext Kimono3NotStrongEnoughText
+	iffalse_jumpopenedtext Kimono3NotStrongEnoughText
+	checkevent EVENT_KIMONO_CABIN_LARVITAR
+	iffalse_jumpopenedtext Kimono3NotStrongEnoughText
+	checkevent EVENT_KIMONO_CABIN_LARVITAR
 	writetext Kimono3AskHelpText
 	yesorno
 	iffalse_jumpopenedtext Kimono3DeclinedText
@@ -189,31 +297,85 @@ KimonoCabin3Script: ; samaria
 	; 
 
 Kimono3HelpedText:
-	text "Samaria: Oh, Player! Good to see you. Thanks again for your help in the attic. 
+	text "Samaria: Oh,"
+	line "Good to see"
+	cont "you."
+	para "Thanks again"
+	line "for your help"
+	cont "in the attic."
 	done
 
 Kimono3NotStrongEnoughText:
-	text "Samaria: Oh, hello. Welcome to our cabin. Sorry if we smell, my daughter Piper keeps taking all the hot water. Say, I stashed some soaps in the attic, but I hear something scratching around up there. Oh, you look pretty green... I doubt you could help.
+	text "Samaria: Oh,"
+	line "hello. Welcome"
+	cont "to our cabin."
+	para "Sorry if we"
+	line "smell, my"
+	cont "daughter Piper"
+	para "keeps taking"
+	line "all the hot"
+	cont "water."
+	para "Say, I stashed"
+	line "some soaps in"
+	cont "the attic, but"
+	para "I hear some-"
+	line "thing scratch-"
+	cont "ing around up"
+	cont "there."
+	para "Oh, you look"
+	line "pretty green..."
+	para "I doubt you"
+	line "could help."
+	done
 	
-
 Kimono3AskHelpText:
-	text "Samaria: Oh, hello. Welcome to our cabin. Sorry if we smell, my daughter Piper keeps taking all the hot water. Say, I stashed some soaps in the attic, but I hear something scratching around up there. You look brave - would you help me see what's up there?
-
+	text "Samaria: Oh,"
+	line "hello. Welcome"
+	cont "to our cabin."
+	para "Sorry if we"
+	line "smell, my"
+	cont "daughter Piper"
+	para "keeps taking"
+	line "all the hot"
+	cont "water."
+	para "Say, I stashed"
+	line "some soaps in"
+	cont "the attic, but"
+	para "I hear some-"
+	line "thing scratch-"
+	cont "ing around up"
+	cont "there."
+	para "You look brave"
+	line "- would you"
+	cont "help me see"
+	cont "what's up"
+	cont "there?"
+	done
+	
 Kimono3DeclinedText:
-	text "Samaria: No? Well, I suppose we can always 
+	text "Samaria: No?"
+	line "Well, I suppose"
+	cont "we can always"
+	done
 
 Kimono3ThanksForHelpingText:
-	text "Samari: Thanks! I'll take you up there now. 
+	text "Samaria:"
+	line "Thanks! I'll"
+	cont "take you up"
+	cont "there now."
 	done
 
 
 
 KimonoCabin4Script: ; shiji 
+	faceplayer
 	opentext
 	checkevent EVENT_KIMONO_CABIN_LAPRAS
 	iftrue_jumpopenedtext Kimono4HelpedText
 	checkevent EVENT_BEAT_REI
-	ifflase_jumpopenedtext Kimono4NotStrongEnoughText
+	iffalse_jumpopenedtext Kimono4NotStrongEnoughText
+	checkevent EVENT_KIMONO_CABIN_SNEASEL
+	iffalse_jumpopenedtext Kimono4NotStrongEnoughText
 	writetext Kimono4AskHelpText
 	yesorno
 	iffalse_jumpopenedtext Kimono4DeclinedText
@@ -235,48 +397,93 @@ KimonoCabin4Script: ; shiji
 	; optimistic that a better world is possible, unwilling to give up on people
 
 Kimono4HelpedText:
-	text "Oh Darling!"
-	
-	para "Thanks again for"
-	line "your help in the"
-	cont "garden."
-
-	para "When you get old and grey like me, make sure you teach someone else, hear?
-
+	text "Shiji: Darling!"
+	para "Thanks again"
+	line "for your help"
+	cont "in the garden."
+	para "When you get"
+	line "old and grey"
+	cont "like me, make"
+	cont "sure you teach"
+	cont "someone else,"
+	cont "hear?"
 	done
 
 Kimono4NotStrongEnoughText:
-	Shiji: Oh Darling! A visitor! I knew we would have some soon enough. 
-	Have you come to learn how to work with nature? 
-	I'm setting up a garden, but I'm not strong enough to move the landscaping around. 
-	Oh, but you don't look strong enough... maybe this whole move was a bad idea. 
-
-	
+	text "Shiji: Darling!"
+	line "A visitor!"
+	para "I knew we would"
+	line "have some soon"
+	cont "enough."
+	para "Have you come"
+	line "to learn how to"
+	cont "work with"
+	cont "nature?"
+	para "I'm setting up"
+	line "a garden, but"
+	cont "I'm not strong"
+	para "enough to move"
+	line "the landscaping"
+	cont "around."
+	para "Oh, but you"
+	line "don't look"
+	cont "strong enough"
+	cont "..."
+	para "maybe this"
+	line "whole move was"
+	cont "a bad idea."
+	done
 
 Kimono4AskHelpText:
-	Shiji: Oh Darling! A visitor! I knew we would have some soon enough. 
-	Have you come to learn how to work with nature? 
-	I'm setting up a garden, but I'm not strong enough to move the landscaping around. 
-	I can teach you some landscaping to attract rare pokemon. 
-	
-	
+	text "Oh Darling! A"
+	line "visitor!"
+	para "I knew we would"
+	line "have some soon"
+	cont "enough."
+	para "Have you come"
+	line "to learn how to"
+	cont "work with"
+	cont "nature?"
+	para "I'm setting up"
+	line "a garden, but"
+	cont "I'm not strong"
+	para "enough to move"
+	line "the landscaping"
+	cont "around."
+	para "I can teach you"
+	line "some landscap-"
+	cont "ing to attract"
+	cont "rare #mon."
 	done
 
 Kimono4DeclinedText:
-	Shiji: really? That is quite sad... maybe the last garden in Johto has already been tilled. 
-
+	text "Really? That is"
+	line "quite sad..."
+	para "maybe the last"
+	line "garden in Johto"
+	cont "has already"
+	cont "been tilled."
+	done
 
 Kimono4ThanksForHelpingText:
-	Shiji: wonderful! You won't regret it. Please come with me!
+	text "Wonderful! You"
+	line "won't regret"
+	cont "it."
+	para "Please come"
+	line "with me!"
+	done
 
 
 
 KimonoCabin5Script: ; todo check that all others have been done
+	faceplayer
 	opentext
 	checkevent EVENT_KIMONO_CABIN_EEVEE
 	iftrue_jumpopenedtext Kimono5HelpedText
 	checkevent EVENT_BEAT_KENSEY_DOCKS
-	ifflase_jumpopenedtext Kimono5NotStrongEnoughText
+	iffalse_jumpopenedtext Kimono5NotStrongEnoughText
+	checkevent EVENT_KIMONO_CABIN_LAPRAS
+	iffalse_jumpopenedtext Kimono5NotStrongEnoughText
 	writetext Kimono5AskHelpText
 	yesorno
 	iffalse_jumpopenedtext Kimono5DeclinedText
@@ -284,6 +491,7 @@ KimonoCabin5Script: ; todo check that all others have been done
 	waitbutton
 	closetext
 	; clear events for the warps
+	setevent EVENT_KIMONO_CABIN_5_GRANNY
 	playsound SFX_WARP_TO
 	special FadeOutPalettes
 	waitsfx
@@ -295,23 +503,83 @@ KimonoCabin5Script: ; todo check that all others have been done
 	; she finds herself as a young child and with her own great-great-grandmother, learning how to make her own path
 
 Kimono5HelpedText:
-Morphea: Oh, child. Thank you again for your help. We will be leaving this cabin very soon... my great-grandson Amos tells me that the time is nigh to inscribe our knowledge across Johto. Others like us are already started. 
+	text "Morphea:"
+	line "Thank you again"
+	cont "for your help."
+	para "We will be"
+	line "leaving this"
+	cont "cabin very"
+	cont "soon..."
+	para "my great-"
+	line "grandson Amos"
+	cont "tells me that"
+	cont "the time is"
+	cont "nigh to"
+	para "inscribe our"
+	line "knowledge"
+	cont "across Johto."
+	para "Others like us"
+	line "are already"
+	cont "started."
+	done
 
 Kimono5NotStrongEnoughText:
-Morphea: 
-Oh, child... stay still, my eyes are so bad. The only time I see clearly is in my dreams. Every night, I dream that I am adrift in the winds of fate... 
-But who has time for dreams when my family still has such strife?
+	text "Morphea:"
+	line "stay still, my"
+	cont "eyes are so"
+	cont "bad."
+	para "The only time I"
+	line "see clearly is"
+	cont "in my dreams."
+	para "Every night, I"
+	line "dream that I am"
+	cont "adrift in the"
+	cont "winds of fate"
+	cont "..."
+	para "But who has"
+	line "time for dreams"
+	cont "when my family"
+	cont "still has such"
+	cont "strife?"
+	done
 	
-
 Kimono5AskHelpText:
-Oh, child... stay still, my eyes are so bad. The only time I see clearly is in my dreams. Every night, I dream that I am adrift in the winds of fate... Do you think you can help me interpret it? 
+	text "Morphea:"
+	line "Stay still, my"
+	cont "eyes are so"
+	cont "bad."
+	para "The only time I"
+	line "see clearly is"
+	cont "in my dreams."
+	para "Every night, I"
+	line "dream that I am"
+	cont "adrift in the"
+	cont "winds of fate"
+	cont "..."
+	para "Do you think"
+	line "you can help me"
+	cont "interpret it?"
+	done
 
 Kimono5DeclinedText:
-Who can blame you... we can't force anyone to choose any path, I suppose. 
-
+	text "Morphea: Who "
+	line  "could blame"
+	cont "you... we can't"
+	cont "force anyone to"
+	cont "choose any"
+	cont "path, I"
+	cont "suppose."
+	done
 
 Kimono5ThanksForHelpingText:
-Oh, thank you... Here, rest your hand on my head as I drift off...
+	text "Morphea: "
+	line "Oh, thank you."
+
+	para "Here, rest your"
+	line "hand on my head"
+	cont "as I drift"
+	cont "off..."
+	done
 
 
 KimonoCabinShijiNotebook1:
@@ -415,4 +683,14 @@ KimonoCabinMorpheaNotebook1:
 	cont "as the capital."
 	done
 
+KimonoCabinBookshelfText:
+	text "There's a lot"
+	line "of books..."
 	
+	para "Sewing with silk,"
+	
+	para "Apricorn craft,"
+	
+	para "Dancing without"
+	line "timekeeping..."
+	done

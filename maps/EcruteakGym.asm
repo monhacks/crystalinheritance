@@ -36,8 +36,7 @@ EcruteakGym_MapScriptHeader:
 	def_coord_events
 
 	def_bg_events
-	bg_event  3, 15, BGEVENT_READ, EcruteakGymStatue
-	bg_event  6, 15, BGEVENT_READ, EcruteakGymStatue
+
 
 	def_object_events
 	object_event  5,  1, SPRITE_MORTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakGymMortyScript, -1 ; inaccessible until you show morty something good  ; 
@@ -61,7 +60,7 @@ EcruteakGymMortyScript:
 	loadtrainer MORTY, 1
 	startbattle
 	reloadmapafterbattle
-	setevent EVENT_BEAT_MORTY
+	setevent EVENT_BEAT_MORTY_GYM
 	opentext
 	writetext Text_ReceivedFogBadge
 	playsound SFX_GET_BADGE

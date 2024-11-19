@@ -19,6 +19,7 @@ KimonoCabin1_MapScriptHeader: ; should be like  "BurnedTowerB1F_MapScriptHeader"
 
 	def_object_events
 	object_event  5,  0, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, DRATINI, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, KimonoCabin1Dratini, EVENT_KIMONO_CABIN_DRATINI
+	object_event  19, 18, SPRITE_CUTE_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE,  OBJECTTYPE_SCRIPT, 0, KimonoCabin11Script, -1 ; "Vera" , revise dialogue to be a scared little girl
 	tmhmball_event  18, 19, TM_ROCK_SMASH, EVENT_UNION_CAVE_B1F_NORTH_X_DEFEND ;brick break, disappears if you already have it
 	smashrock_event 18, 10
 	smashrock_event 13, 5
@@ -29,7 +30,7 @@ KimonoCabin1_MapScriptHeader: ; should be like  "BurnedTowerB1F_MapScriptHeader"
 	smashrock_event  3, 11
 	smashrock_event  11, 11
 	itemball_event  4, 0, SITRUS_BERRY, 1, EVENT_KIMONO_CABIN_SITRUS
-
+	itemball_event  4, 1, FAST_BALL, 5, EVENT_KIMONO_CABIN_FAST_BALLS
 
 	object_const_def
 	const KIMONO_CABIN_1_DRATINI ;  
@@ -45,3 +46,63 @@ KimonoCabin1Dratini:
 	reloadmapafterbattle
 	end
 
+KimonoCabin11Script:
+	opentext
+	checkevent EVENT_KIMONO_CABIN_DRATINI
+	iftrue Kimono11HelpingScript
+	writetext Kimono11ThanksForHelpingText
+	waitbutton
+	closetext
+	end
+
+Kimono11HelpingScript:
+	checkevent EVENT_KIMONO_GAVE_VITAMINS
+	iftrue_jumpopenedtext Kimono11HelpedText
+	writetext Kimono11HelpedTextWithVitamins
+	verbosegiveitem CARBOS
+	setevent EVENT_KIMONO_GAVE_VITAMINS
+	closetext
+	end
+
+Kimono11ThanksForHelpingText:
+	text "Vera: Um, the"
+	line "scary worm is in"
+	cont "here somewhere."
+
+	para "Oh, my mom said"
+	line "I should learn to"
+	cont "smash rocks. "
+
+	para "But I don't "
+	line "know how yet."
+	done
+
+Kimono11HelpedText:
+	text "You did it! That"
+	line "worm was probably"
+	cont "just uncomfy here"
+	cont "in the cellar."
+	
+	para "And now I know"
+	line "how to smash"
+	cont "rocks!"
+	
+	para "Thank you!"
+	done
+
+Kimono11HelpedTextWithVitamins:
+	text "You did it! That"
+	line "worm was probably"
+	cont "just uncomfy here"
+	cont "in the cellar."
+	
+	para "And now I know"
+	line "how to smash"
+	cont "rocks!"
+	
+	para "Take this candy,"
+	line "it always gives"
+	cont "me a sugar high."
+	
+	para "Thank you!"
+	done

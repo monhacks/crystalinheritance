@@ -64,54 +64,41 @@ HollisExitMovement:
 	step_end
 
 TammyDialogue1:
-	text "TAMMY: Hollis,"
+	text "Tammy: Hollis,"
 	line "don't you see? The"
 	cont "Pineco are getting"
 	cont "worse and worse."
 	done
 
 HollisDialogue1:
-	text "HOLLIS: Of course"
+	text "Hollis: Of course"
 	line "I see. But -- "
-
 
 	para "The forest is"
 	line "too sensitive!"
-	
-	para "It needs to stay"
-	line "under my guidance."
 	
 	para "We can't afford"
 	line "any mistakes."
 	done
 
 TammyDialogue2:
-	text "TAMMY: The mistake"
+	text "Tammy: The mistake"
 	line "you're making is"
-	cont "holing up in your"
-	cont "tower. It's OK to"
-	cont "admit you made an"
-	cont "error. It would"
-	cont "prove you are"
-	cont "human, just like"
-	cont "the rest of us."
+	cont "not adapting!"
+
+	para "Just admit your"
+	line "mistake. You're"
+	cont "human, like the"
+	cont "rest of us."
 	done
 
 HollisDialogue2:
 	text "HOLLIS: Such"
-	line "disrespect! I"
-	cont "won't hear any"
-	cont "more of this!"
+	line "disrespect!"
 	done
 
 TammyDialogue3:
-	text "TAMMY: I'm trying"
-	line "to help you. I'm"
-	cont "trying to show"
-	cont "you that we can"
-	cont "all work together"
-	cont "to restore the"
-	cont "forest!"
+	text "Tammy: Urrg!"
 	done
 
 AnarresHoltGateTammyScript:

@@ -38,7 +38,7 @@ AnarresTown_MapScriptHeader:
 
 
 AnarresTownFlypointCallback:
-	setflag ENGINE_FLYPOINT_ANARRES 
+	setflag ENGINE_FLYPOINT_ANARRES_TOWN
 	endcallback
 
 

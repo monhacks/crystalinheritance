@@ -19,6 +19,7 @@ AzaleaPokeCenter1F_MapScriptHeader:
 	object_event  8,  4, SPRITE_ACE_TRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AzaleaPokeCenter1FCooltrainermScript, -1
 	object_event 11,  6, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, AzaleaPokeCenter1FGentlemanText, -1
 	object_event  8,  1, SPRITE_SIGHTSEER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, AzaleaPokeCenter1FSightseermText, -1
+	object_event 12,  6, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, IlexExcelsiorV4Script, -1
 
 	object_const_def
 	const AZALEA_POKECENTER_1F_MINTY
@@ -165,5 +166,196 @@ GiveMintLeafText: ;;
 	cont "wants to freshen"
 	cont "their breath."
 	done
+
+;;;;;;;;;;;;;;;;;
+
+IlexExcelsiorV4Script:
+	opentext
+	writetext WeirdTextAzaleaCenter
+	closetext
+	unowntypeface
+	showtext IlexExcelsiorV4Text
+	restoretypeface
+	special MapCallbackSprites_LoadUsedSpritesGFX
+	end
+
+WeirdTextAzaleaCenter:
+	text "Hm? What's this"
+	line "weird pamphlet?"
+	done
+
+IlexExcelsiorV4Text:
+	text "Ilex Excelsior"
+	
+	para "When the tree"
+	line "rings, will"
+	cont "you answer"
+	
+	para "Fourth Edition"
+
+	para "Silph has no"
+	line "right to trees"
+	
+	para "sabotage their"
+	line "equipment"
+	
+	done
+	
+;;;;;;;;;;;;;;;;;
+
+IlexExcelsiorV3Script:
+	opentext
+	writetext WeirdTextGoldenrodCenter
+	closetext
+	unowntypeface
+	showtext IlexExcelsiorV3Text
+	restoretypeface
+	special MapCallbackSprites_LoadUsedSpritesGFX
+	end
+
+WeirdTextGoldenrodCenter:
+	text "Hm? What's this"
+	line "weird pamphlet?"
+	done
+
+IlexExcelsiorV3Text:
+	text "Ilex Excelsior"
+	
+	para "When the tree"
+	line "rings, will"
+	cont "you answer"
+	
+	para "Third Edition"
+
+	para "Stop the high"
+	line "frequency radio"
+	cont "by going low"	
+	done
+	
+;;;;;;;;;;;;;
+
+
+IlexExcelsiorV2Script:
+	opentext
+	writetext WeirdTextOlivineCenter
+	closetext
+	unowntypeface
+	showtext IlexExcelsiorV2Text
+	restoretypeface
+	special MapCallbackSprites_LoadUsedSpritesGFX
+	end
+
+WeirdTextEcruteakCenter:
+	text "Hm? What's this"
+	line "weird pamphlet?"
+	done
+
+IlexExcelsiorV2Text:
+	text "Ilex Excelsior"
+	
+	para "When the tree"
+	line "rings, will"
+	cont "you answer"
+	
+	para "Second Edition"
+
+	para "The Desal Plant"
+	line "poisons minds"
+	
+	para "remove parts"
+	line "from basement"
+	done
+
+;;;;;;;;;;;;;;;;;;
+
+IlexExcelsiorV1Script:
+	opentext
+	writetext WeirdTextEcruteakCenter
+	closetext
+	unowntypeface
+	showtext IlexExcelsiorV1Text
+	restoretypeface
+	special MapCallbackSprites_LoadUsedSpritesGFX
+	end
+
+WeirdTextOlivineCenter:
+	text "Hm? What's this"
+	line "weird pamphlet?"
+	done
+
+IlexExcelsiorV1Text:
+	text "Ilex Excelsior"
+	
+	para "When the tree"
+	line "rings, will"
+	cont "you answer"
+	
+	para "First Edition"
+
+	para "If we lose the"
+	line "theatre we lose"
+	cont "our history"
+	done
+
+;;;;;;;;;;;;;;;;;;
+
+IlexExcelsiorV6Script:
+	opentext
+	writetext WeirdTextAzaleaCenter
+	closetext
+	unowntypeface
+	showtext IlexExcelsiorV6Text
+	restoretypeface
+	special MapCallbackSprites_LoadUsedSpritesGFX
+	end
+
+WeirdTextOlivineCenter:
+	text "Hm? What's this"
+	line "weird pamphlet?"
+	done
+
+IlexExcelsiorV6Text:
+	text "Ilex Excelsior"
+	
+	para "When the tree"
+	line "rings, will"
+	cont "you answer"
+	
+	para "Sixth Edition"
+
+	para "Falkner tower"
+	line "clouds views"
+	done
 	
 
+;;;;;;;;;;;;;;;;;;
+
+IlexExcelsiorV7Script:
+	opentext
+	writetext WeirdTextMahoganyCenter
+	closetext
+	unowntypeface
+	showtext IlexExcelsiorV7Text
+	restoretypeface
+	special MapCallbackSprites_LoadUsedSpritesGFX
+	end
+
+WeirdTextMahoganyCenter:
+	text "Hm? What's this"
+	line "weird pamphlet?"
+	done
+
+IlexExcelsiorV7Text:
+	text "Ilex Excelsior"
+	
+	para "When the tree"
+	line "rings, will"
+	cont "you answer"
+	
+	para "Seventh Edition"
+
+	para "starting over"
+	line "when filled "
+	cont "with rage"
+	done
+	

@@ -176,11 +176,9 @@ Route35NationalParkGateOfficerScript:
 Route35NationalParkGate_NoContestToday:
 	jumpthistextfaceplayer
 
-	text "We hold Contests"
-	line "regularly in the"
-
-	para "park. You should"
-	line "give it a shot."
+	text "There's a strict"
+	line "no-campfire law"
+	cont "for the drought."
 	done
 
 Route35NationalParkGatePlayerApproachOfficer1Movement:

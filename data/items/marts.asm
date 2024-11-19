@@ -206,20 +206,19 @@ OlivineMart:
 	db ANTIDOTE
 	db PARALYZEHEAL
 	db AWAKENING
-	db MAX_REPEL
+	db ABILITY_CAP 
 	db MAX_REPEL
 	db RARE_CANDY
 	db -1
 
 WesternCapitalMonMart:
-	db 1 ; # items
+	db 6 ; # items
 	db PROTECTOR
 	db ELECTIRIZER
 	db MAGMARIZER
 	db RAZOR_FANG
 	db RAZOR_CLAW
 	db METAL_COAT
-	db ODD_SOUVENIR
 	db -1
 
 WesternCapitalPrepMart:
@@ -293,12 +292,11 @@ AnarresMart:
 	db -1
 
 GauldenrodMart1: ; normal items
-	db 9 ; # items
+	db 8 ; # items
 	db RARE_CANDY
 	db MAX_REPEL
-	db GREAT_BALL
+	db POKE_BALL
 	db ESCAPE_ROPE
-	db DUSK_BALL
 	db SUPER_POTION
 	db HEAL_POWDER
 	db ENERGYPOWDER
@@ -341,31 +339,30 @@ TradersLandingMart_Items:
 	db -1
 
 SinjohCrossroadsMart:
-	db 8 ; # items
-	db ULTRA_BALL
-	db REPEAT_BALL
-	db SUPER_POTION
+	db 7 ; # items
+	db RARE_CANDY
+	db MAX_REPEL
 	db HYPER_POTION
+	db FULL_HEAL
 	db REVIVE
-	db PARALYZEHEAL
-	db AWAKENING
-	db BURN_HEAL
+	db ODD_SOUVENIR
+	db POKE_BALL
 	db -1
 
 EerieHamletMart:
-	db 12 ; # items
-	db POTION
-	db SUPER_POTION
+	db 11 ; # items
+	db RARE_CANDY
+	db MAX_REPEL
 	db HYPER_POTION
-	db MAX_POTION
-	db ANTIDOTE
-	db BURN_HEAL
-	db ICE_HEAL
-	db AWAKENING
-	db PARALYZEHEAL
 	db FULL_HEAL
 	db REVIVE
-	db MAX_REVIVE
+	db JEZE_BALL
+	db BUB_BALL
+	db DECI_BALL
+	db HERB_BALL
+	db FAST_BALL
+	db GEODE
+	db LOVE_BALL
 	db -1
 
 WesternCapitalMart2:

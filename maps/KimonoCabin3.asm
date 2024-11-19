@@ -37,10 +37,65 @@ KimonoCabin3_MapScriptHeader: ; should be like  "BurnedTowerB1F_MapScriptHeader"
 	warp_event 13, 22, KIMONO_CABIN_3, 3
 	warp_event 13, 23, KIMONO_CABIN_3, 3
 	warp_event 14, 23, KIMONO_CABIN_3, 3
+	warp_event 15, 23, KIMONO_CABIN_3, 3
 	warp_event 15, 24, KIMONO_CABIN_3, 3
 	warp_event 15, 25, KIMONO_CABIN_3, 3
 	warp_event 17, 26, KIMONO_CABIN_3, 3
 	warp_event 17, 27, KIMONO_CABIN_3, 3
+	
+	warp_event  5, 15, KIMONO_CABIN_3, 4
+	warp_event  5, 14, KIMONO_CABIN_3, 4
+	
+	warp_event  3, 12, KIMONO_CABIN_3, 4
+	warp_event  3, 13, KIMONO_CABIN_3, 4
+	
+	warp_event  0, 4, KIMONO_CABIN_3, 4
+	warp_event  0, 5, KIMONO_CABIN_3, 4
+	warp_event  0, 8, KIMONO_CABIN_3, 4
+	warp_event  0, 9, KIMONO_CABIN_3, 4	
+	
+	warp_event  2, 6, KIMONO_CABIN_3, 4
+	warp_event  2, 7, KIMONO_CABIN_3, 4	
+
+	warp_event  4, 9, KIMONO_CABIN_3, 4
+	warp_event  5, 9, KIMONO_CABIN_3, 4
+	warp_event  6, 9, KIMONO_CABIN_3, 4
+	
+	warp_event  6, 6, KIMONO_CABIN_3, 4
+	warp_event  6, 7, KIMONO_CABIN_3, 4
+	warp_event  6, 8, KIMONO_CABIN_3, 4
+	
+	warp_event  4, 3, KIMONO_CABIN_3, 4
+	warp_event  5, 3, KIMONO_CABIN_3, 4
+	
+	warp_event  8, 0, KIMONO_CABIN_3, 4
+	warp_event  9, 0, KIMONO_CABIN_3, 4
+
+	warp_event  8, 8, KIMONO_CABIN_3, 4
+	warp_event  9, 8, KIMONO_CABIN_3, 4
+	warp_event 10, 8, KIMONO_CABIN_3, 4
+	warp_event 11, 8, KIMONO_CABIN_3, 4
+	
+	warp_event  15, 2, KIMONO_CABIN_3, 4
+	warp_event  15, 3, KIMONO_CABIN_3, 4	
+	
+	warp_event  16, 4, KIMONO_CABIN_3, 4
+	warp_event  17, 4, KIMONO_CABIN_3, 4	
+	
+	warp_event  19, 6, KIMONO_CABIN_3, 4
+	warp_event  19, 7, KIMONO_CABIN_3, 4	
+	
+	warp_event  14, 10, KIMONO_CABIN_3, 4
+	warp_event  15, 10, KIMONO_CABIN_3, 4	
+	
+	warp_event  10, 13, KIMONO_CABIN_3, 4
+	warp_event  11, 13, KIMONO_CABIN_3, 4	
+
+	warp_event  10, 11, KIMONO_CABIN_3, 4
+	warp_event  10, 10, KIMONO_CABIN_3, 4		
+
+	warp_event  14,  6, KIMONO_CABIN_3, 4
+	warp_event  15,  6, KIMONO_CABIN_3, 4		
 	
 	def_coord_events
 
@@ -51,7 +106,7 @@ KimonoCabin3_MapScriptHeader: ; should be like  "BurnedTowerB1F_MapScriptHeader"
 
 
 	def_object_events
-	object_event  5, 26, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN,  OBJECTTYPE_COMMAND, jumptextfaceplayer, KimonoCabin3GameExplainText, EVENT_KIMONO_CABIN_SNEASEL
+	object_event  5, 26, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN,  OBJECTTYPE_SCRIPT, 0, KimonoCabin33Script, EVENT_KIMONO_CABIN_SNEASEL
 	strengthboulder_event 4, 25
 	strengthboulder_event 2, 24
 	strengthboulder_event 10, 24
@@ -68,17 +123,43 @@ KimonoCabin3_MapScriptHeader: ; should be like  "BurnedTowerB1F_MapScriptHeader"
 	strengthboulder_event  8, 10	
 
 	object_event  9,  4, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, SNEASEL, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, KimonoCabin3Sneasel, EVENT_KIMONO_CABIN_SNEASEL
+	tmhmball_event 24, 33, TM_DARK_PULSE, EVENT_KIMONO_CABIN_TM_DARK_PULSE
+	
 
 	object_const_def
 	const KIMONO_CABIN_3_SNEASEL ;  
 	
-KimonoCabin3GameExplainText:
-	text "Samari: We're in the attic. I can hear that creature raking its claws from all the way over here. Now, there's a bunch of junk, so if it's in your way, just push it off the rafters. Oh yeah, I painted the rafters black so that they would blend in from below. Sorry about that. Anyway, please make your way over there and deal with that gremlin!"
+KimonoCabin33Script:
+	faceplayer
+	opentext
+	checkevent EVENT_KIMONO_CABIN_3_JEZEBALLS
+	iftrue_jumpopenedtext KimonoCabin3Explains1Text
+	writetext KimonoCabin3GivesJezeballs
+	verbosegiveitem JEZE_BALL, 5
+	writetext KimonoCabin3Explains1Text
+
+KimonoCabin3GivesJezeballs:
+	text "Samaria: Whatever"
+	line "is up here must"
+	cont "love the dark."
+	
+	para "Take these."
+	done
+	
+KimonoCabin3Explains1Text:
+	text "There's so many"
+	line "holes in the"
+	cont "attic rafters - "
+	
+	para "Try not to fall"
+	line "thru, and don't"
+	cont "mind the clutter."
+	done
+
 	
 
 KimonoCabin3Sneasel:
-	faceplayer
-	cry DRATINI
+	cry SNEASEL
 	pause 15
 	loadwildmon SNEASEL, 19
 	startbattle
@@ -86,4 +167,3 @@ KimonoCabin3Sneasel:
 	setevent EVENT_KIMONO_CABIN_SNEASEL
 	reloadmapafterbattle
 	end
-

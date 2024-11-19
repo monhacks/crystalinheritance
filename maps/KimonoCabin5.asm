@@ -6,7 +6,8 @@ KimonoCabin5_MapScriptHeader: ; should be like  "BurnedTowerB1F_MapScriptHeader"
 
 
 	def_warp_events
-
+	warp_event  8, 17, KIMONO_CABIN, 1
+	warp_event  9, 17, KIMONO_CABIN, 1
 
 
 	def_coord_events
@@ -14,145 +15,186 @@ KimonoCabin5_MapScriptHeader: ; should be like  "BurnedTowerB1F_MapScriptHeader"
 
 
 
-
-
 	def_bg_events
-	bg_event 0,  0, BGEVENT_READ, KimonoCabin5Switch1Script
-	bg_event 0,  0, BGEVENT_READ, KimonoCabin5Switch2Script
-	bg_event 0,  0, BGEVENT_READ, KimonoCabin5Switch3Script
-	bg_event 0,  0, BGEVENT_READ, KimonoCabin5Switch4Script
+	bg_event 8,  1, BGEVENT_READ, KimonoCabin5Switch1Script
+	bg_event 0,  3, BGEVENT_READ, KimonoCabin5Switch2Script
+	bg_event 0,  11, BGEVENT_READ, KimonoCabin5Switch3Script
+	bg_event 16,  17, BGEVENT_READ, KimonoCabin5Switch4Script
 
 	
-
-
 	def_object_events
-	object_event  0, 0, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED,  OBJECTTYPE_SCRIPT, 0, KimonoCabin4Script, -1
-	object_event  0,  0, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED,  OBJECTTYPE_SCRIPT, 0, KimonoCabin5Lass, -1
-
+	object_event 16,  6, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED,  OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_KIMONO_CABIN_5_GRANNY
+	object_event 17,  0, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED,  OBJECTTYPE_SCRIPT, 0, KimonoCabin5Lass, -1
+	object_event  9, 16, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED,  OBJECTTYPE_SCRIPT, 0, KimonoCabin55Script, -1
+	pokemon_event   6, 18, EEVEE, -1, -1, PAL_NPC_BROWN, KimonoEeveeText, -1
+	tmhmball_event 24, 33, TM_SUBSTITUTE, EVENT_KIMONO_TM_SUBSTITUTE
 
 	object_const_def
-	const KIMONO_CABIN_4_GRANNY
-	const KIMONO_CABIN_4_LAPRAS
+	const KIMONO_CABIN_5_GRANNY1
+	const KIMONO_CABIN_5_KIMONO_GIRL
 
-KimonoCabin4Lapras:
-	faceplayer
-	cry LAPRAS
-	pause 15
-	loadwildmon LAPRAS, 30
-	startbattle
-	disappear KIMONO_CABIN_4_LAPRAS
-	setevent EVENT_KIMONO_4_LAPRAS
-	reloadmapafterbattle
-	end
-
-KimonoCabin4Script:
+KimonoCabin55Script:
 	faceplayer
 	opentext
-	checkevent EVENT_EXPLAINED_SUDOKU
-	iftrue CheckSudokuSolved
-	writetext ExplainSudokuText
-	setevent EVENT_EXPLAINED_SUDOKU
+;	checkevent EVENT_KIMONO_CABIN_EEVEE
+;	iftrue KimonoCabin5ThankYou
+	writetext KimonoCabin5ExplainText
 	end
 	
 	
-CheckSudokuSolved:
-	checkevent EVENT_KC4_11
-	iffalse_jumpopenedtext SudokuNotSolvedText
-	...
-	writetext TheGardenLooksBeautifulText
-	closetext
-	checkevent EVENT_KIMONO_4_LAPRAS
-	iftrue_jumpopenedtext WhatABeautifulSpecimenThatWasText
-	checkevent EVENT_KIMONO_CABIN_4_GAVE_BUB_BALL
-	iftrue_jumpopenedtext GoCatchThatLaprasText
-	appear KIMONO_CABIN_4_LAPRAS
-	writetext LaprasIsHereText
-	verbosegiveitem BUB_BALL
-	setevent EVENT_KIMONO_CABIN_4_GAVE_BUB_BALL
-	closetext
+KimonoCabin5ExplainText:
+	text "Morphea: I am"
+	line "haunted by this"
+	cont "dream all night."
+	
+	para "I'm adrift, out"
+	line "of control."
+	
+	para "I think I hear"
+	line "someone crying,"
+	cont "but from where?"
+	
+	para "What does it"
+	line "mean?"
+	done
+	
+;KimonoCabin5ThankYou:
+;	text "Morphea: Thank"
+;	line "you. You have"
+;	cont "been so kind to"
+;	cont "my family."
+;	
+;	para "I hope your"
+;	line "family grows"
+;	cont "as strong as"
+;	cont "ours."
+;	done
+
+KimonoCabin5Lass:
+	faceplayer
+	appear KIMONO_CABIN_5_GRANNY1
+	applymovement KIMONO_CABIN_5_GRANNY1, KimonoCabin5GrannyToLassMovement
+	opentext
+	writetext KimonoCabin5GrannyText1
+	writetext KimonoCabin5LassText1
+	applymovement KIMONO_CABIN_5_KIMONO_GIRL, KimonoCabin5KimonoSpins
+	writetext KimonoCabin5LassText2
+	givepoke EEVEE, NO_FORM, 5, LUM_BERRY, LOVE_BALL, GROWTH
+	setevent EVENT_KIMONO_CABIN_EEVEE
+	playsound SFX_WARP_TO
+	special FadeOutPalettes
+	waitsfx
+	warp KIMONO_CABIN_5,  3, 4
+	end
+
+KimonoCabin5GrannyToLassMovement:
+	step_up
+	step_up
+	step_up
+	step_up
+	step_end
+
+KimonoCabin5KimonoSpins:
+	turn_head_down
+	turn_head_right
+	turn_head_up
+	turn_head_left
+	turn_head_down
+
+KimonoCabin5Switch1Script:
+	opentext
+	writetext PressSwitchTextKimono5
+	yesorno
+	iffalse_jumpopenedtext DontSwitchKimono5
+	writetext WhoWouldntKimono5
+	changeblock 6, 0, $4D	
+	end
+	
+KimonoCabin5Switch2Script:
+	opentext
+	writetext PressSwitchTextKimono5
+	yesorno
+	iffalse_jumpopenedtext DontSwitchKimono5
+	writetext WhoWouldntKimono5
+	changeblock 6, 2, $4D	
+	end
+	
+KimonoCabin5Switch3Script:
+	opentext
+	writetext PressSwitchTextKimono5
+	yesorno
+	iffalse_jumpopenedtext DontSwitchKimono5
+	writetext WhoWouldntKimono5
+	changeblock 6, 4, $4B
+	end
+	
+KimonoCabin5Switch4Script:
+	opentext
+	writetext PressSwitchTextKimono5
+	yesorno
+	iffalse_jumpopenedtext DontSwitchKimono5
+	writetext WhoWouldntKimono5
+	changeblock 8, 4, $5D	
+	end
+	
+
+PressSwitchTextKimono5:
+	text "A switch!"
+	line "Press it?"
 	done
 
-
-
-
+DontSwitchKimono5:
+	text "Left it alone."
+	done
 	
+WhoWouldntKimono5:
+	text "Who wouldn't?"
+	done
 
-
-
-
-ExplainSudokuText:
-	text "Sudo: This garden will be a marvel, drawing rare #mon far and wide! I started decorating, but now I'm too weak to finish. I have a vision... each of the four rows has all four colors of stone, each column has all four colors, and each 2x2 grid has all four colors. 
-
-
-SudokuNotSolvedText:
-	text "Sudoki: The garden isn't up to my standards. It needs one stone of each color in every row, column, and in each of the 2x2 squares."
-
-TheGardenLooksBeautifulText:
-	text "Sudoki: good heavens! What a gorgeous garden."
+KimonoCabin5GrannyText1:
+	text "Morphea: That-"
+	line "that's me, as"
+	cont "a young woman!"
 	
-LaprasIsHereText:
-	text "Look! A beautiful Lapras. You're a competent trainer, you might find a use for this."
+	para "That kimono, I"
+	line "remember it from"
+	cont "the last tryout."
 
-WhatABeautifulSpecimenThatWasText:
-	text "Why, it's not every day you get to see a #mon as graceful as that."
+	para "The mud on the"
+	line "hem-I tripped"
+	cont "on the way to"
+	cont "the theatre."
+	
+	para "I trained with"
+	line "my parents so"
+	cont "much for it!"
+	done
+	
+KimonoCabin5LassText1:
+	text "Young Morphea:"
+	line "But Morphea - "
+	
+	para "We succeeded."
+	line "The greatest gift"
+	cont "we inherited was"
+	cont "perseverance and"
+	cont "adaptability. "
+	
+	para "With a simple"
+	line "modification, "
+	cont "no one noticed."
+	done
+	
+KimonoCabin5LassText2:
+	text "Young Morphea:"
+	line "<PLAYER> - take"
+	cont "this as thanks."
 
-GoCatchThatLaprasText:
-	text "What are you waiting for? A chance like this doesn't come around every day."
-
-Switch11Script:
-	opentext
-	writetext ChooseAStoneColorText
-	promptbutton
-	loadmenu StoneColorMenuHeader
-	verticalmenu
-	closewindow
-	ifequal 1, .RedStone11
-	ifequal 2, .BrownStone11
-	ifequal 3, .GreenStone11
-	ifequal 4, .BlueStone11
-	jumptext NoChangeToStoneText
-
-.RedStone11:
-	changeblock 0, 0, $00
-	setevent EVENT_KC4_11
-	waitbutton
-	closetext
-	end
-
-.BrownStone11:
-	changeblock 0, 0, $00
-	writetext SetTheColorText
-	waitbutton
-	closetext
-	end
-
-.GreenStone11:
-	changeblock 0, 0, $00
-	waitbutton
-	closetext
-	end
-
-.GreenStone11:
-	changeblock 0, 0, $00
-	waitbutton
-	closetext
-	end
-
-
-StoneColorMenuHeader:
-	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 0, 15, TEXTBOX_Y - 1
-	dw MenuData
-	db 1 ; default option
-
-MenuData:
-	db STATICMENU_CURSOR ; flags
-	db 5 ; items
-	db "RED@"
-	db "BROWN@"
-	db "GREEN@"
-	db "BLUE@"
-	db "CANCEL@"
-
-
-;	givepoke EEVEE, NO_FORM, 5, LUM_BERRY, LOVE_BALL, GROWTH
+	para "How will you"
+	line "adapt? Who will"
+	cont "you grow to be?"
+	done
+	
+KimonoEeveeText:
+	text "Squee!"
+	done

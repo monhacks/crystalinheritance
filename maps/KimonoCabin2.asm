@@ -38,6 +38,8 @@ KimonoCabin2_MapScriptHeader: ; should be like  "BurnedTowerB1F_MapScriptHeader"
 	itemball_event  3, 7, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_15
 	itemball_event  4, 3, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_16
 
+
+
 	object_const_def
 	const KIMONO_CABIN_2_KIMONO_GIRL
 
@@ -46,7 +48,7 @@ KimonoCabin2RepelScript:
 	faceplayer
 	opentext
 	checkevent EVENT_KIMONO_CABIN_LARVITAR
-	iftrue_jumpopenedtext GladThatsOverText
+	iftrue_jumpopenedtext Kimono2GladThatsOverText
 	checkevent EVENT_TALKED_TO_KIMONO_2_2
 	iftrue CheckRepelCounterScript2 ; should be 100 minus X
 	checkevent EVENT_TALKED_TO_KIMONO_2_1
@@ -161,7 +163,7 @@ CheckRepelCounterScript2:
 	checkevent EVENT_KIMONO_CABIN_POMEG_16
 	iffalse_jumpopenedtext NotAllBerriesText
 	writetext CheckYourStepsText
-	readmem wInverseBattleScore
+	readmem wRepelEffect
 	ifgreater 1, HedgeHogInteraction ; load the battle with the larvitar
 	writetext NotEnoughRepelStepsLeft
 	end
@@ -209,13 +211,17 @@ NotAllBerriesText:
 	done
 
 NotEnoughRepelStepsLeft:
-	text "Oh, there isn't"
-	line "enough steps"
-	cont "left on the repel."
+	text "Oh, there's not"
+	line "enough steps."
+
+	para "Meet me at the"
+	line "cabin again, so"
+	cont "we can try over."
 	done
 
 HedgeHogInteraction:
 	writetext HeresThatOrneryHedgehog
+	verbosegiveitem GEODE, 5
 	earthquake 30
 	showemote EMOTE_SHOCK, PLAYER, 20
 	pause 30
@@ -223,10 +229,26 @@ HedgeHogInteraction:
 	startbattle
 	setevent EVENT_KIMONO_CABIN_LARVITAR
 	reloadmapafterbattle
-	writetext GladThatsOverText
+	opentext
+	writetext Kimono2GladThatsOverText
+	writetext Kimono2TakeThisAsThanks
+	verbosegiveitem CHOICE_SCARF
+	closetext
 	end
 
-GladThatsOverText:
+HeresThatOrneryHedgehog:
+	text "We've followed the"
+	line "recipe exactly..."
+	
+	para "That hedgehog will"
+	line "be here any moment."
+	
+	para "Take these, they"
+	line "will help you"
+	cont "catch it!"
+	done
+
+Kimono2GladThatsOverText:
 	text "Nice job dealing"
 	line "with that ornery"
 	cont "creature."
@@ -236,4 +258,13 @@ GladThatsOverText:
 	cont "from the garden"
 	cont "if we didn't deal"
 	cont "with it!"
+	done
+
+Kimono2TakeThisAsThanks:
+	text "Take this as"
+	line "thanks."
+	
+	para "I knit it myself,"
+	line "as I had cellar"
+	cont "duty before Vera."
 	done

@@ -679,15 +679,12 @@ RuinsOfAlphText:
 GotTheUnownReport:
 	text "Ah, <PLAYER>!"
 	line "Great work."
-	cont "The Unown Report"
-	cont "will do great."
 	
-	para "Now we can ask"
-	line "Celebi for help"
-	cont "traveling back"
+	para "Let's ask Celebi"
+	line "to take us back"
 	cont "in time to stop"
-	cont "Steel types from"
-	cont "taking over."
+	cont "steel types from"
+	cont "entering Azalea."
 	
 	para "I'll inscribe"
 	line "the ball with"

@@ -2129,7 +2129,7 @@ FlyMap:
 ; Kanto's map is only loaded if we've visited Indigo Plateau
 
 ; Flypoints begin at Pallet Town...
-	ld a, FLY_ANARRES_TOWN
+	ld a, FLY_ANARRES;_TOWN  ; ANARRES_TOWN
 	ld [wStartFlypoint], a
 ; ...and end at Indigo Plateau
 	ld a, FLY_TIMELESS_TAPESTRY

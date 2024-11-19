@@ -1,4 +1,4 @@
-KimonoCabin4_MapScriptHeader: ;sudoku
+KimonoCabin4_MapScriptHeader: ;REVISE THE TEXT 
 	def_scene_scripts
 
 
@@ -6,38 +6,38 @@ KimonoCabin4_MapScriptHeader: ;sudoku
 
 
 	def_warp_events
-
-
+	warp_event  6, 11, KIMONO_CABIN, 1
+	warp_event  7, 11, KIMONO_CABIN, 1
 
 	def_coord_events
 
 
 
 	def_bg_events
-	bg_event 0,  0, BGEVENT_READ, Switch11Script
+	bg_event 0,  0, BGEVENT_READ, Switch00Script
+;	bg_event 16,  1, BGEVENT_READ, Switch01Script
+;	bg_event 16,  1, BGEVENT_READ, Switch02Script
+;	bg_event 16,  1, BGEVENT_READ, Switch03Script
+	
+;	bg_event 16,  1, BGEVENT_READ, Switch10Script
+;	bg_event 16,  1, BGEVENT_READ, Switch11Script
 ;	bg_event 16,  1, BGEVENT_READ, Switch12Script
 ;	bg_event 16,  1, BGEVENT_READ, Switch13Script
-;	bg_event 16,  1, BGEVENT_READ, Switch14Script
 	
+;	bg_event 16,  1, BGEVENT_READ, Switch20Script
 ;	bg_event 16,  1, BGEVENT_READ, Switch21Script
 ;	bg_event 16,  1, BGEVENT_READ, Switch22Script
 ;	bg_event 16,  1, BGEVENT_READ, Switch23Script
-;	bg_event 16,  1, BGEVENT_READ, Switch24Script
 	
+;	bg_event 16,  1, BGEVENT_READ, Switch30Script
 ;	bg_event 16,  1, BGEVENT_READ, Switch31Script
 ;	bg_event 16,  1, BGEVENT_READ, Switch32Script
 ;	bg_event 16,  1, BGEVENT_READ, Switch33Script
-;	bg_event 16,  1, BGEVENT_READ, Switch34Script
-	
-;	bg_event 16,  1, BGEVENT_READ, Switch41Script
-;	bg_event 16,  1, BGEVENT_READ, Switch42Script
-;	bg_event 16,  1, BGEVENT_READ, Switch43Script
-;	bg_event 16,  1, BGEVENT_READ, Switch44Script
 	
 
 
 	def_object_events
-	object_event  0, 0, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED,  OBJECTTYPE_SCRIPT, 0, KimonoCabin4Script, -1
+	object_event  0, 0, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED,  OBJECTTYPE_SCRIPT, 0, KimonoCabin44Script, -1
 	object_event  0,  0, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, LAPRAS, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, KimonoCabin4Lapras, EVENT_KIMONO_4_LAPRAS
 
 
@@ -45,110 +45,47 @@ KimonoCabin4_MapScriptHeader: ;sudoku
 	const KIMONO_CABIN_4_GRANNY
 	const KIMONO_CABIN_4_LAPRAS
 
-KimonoCabin4Lapras:
-	faceplayer
-	cry LAPRAS
-	pause 15
-	loadwildmon LAPRAS, 30
-	startbattle
-	disappear KIMONO_CABIN_4_LAPRAS
-	setevent EVENT_KIMONO_4_LAPRAS
-	reloadmapafterbattle
-	end
 
-KimonoCabin4Script:
-	faceplayer
-	opentext
-	checkevent EVENT_EXPLAINED_SUDOKU
-	iftrue CheckSudokuSolved
-	writetext ExplainSudokuText
-	setevent EVENT_EXPLAINED_SUDOKU
-	end
-	
-	
-CheckSudokuSolved:
-	checkevent EVENT_KC4_11
-	iffalse_jumpopenedtext SudokuNotSolvedText
-	...
-	writetext TheGardenLooksBeautifulText
-	closetext
-	checkevent EVENT_KIMONO_4_LAPRAS
-	iftrue_jumpopenedtext WhatABeautifulSpecimenThatWasText
-	checkevent EVENT_KIMONO_CABIN_4_GAVE_BUB_BALL
-	iftrue_jumpopenedtext GoCatchThatLaprasText
-	appear KIMONO_CABIN_4_LAPRAS
-	writetext LaprasIsHereText
-	verbosegiveitem BUB_BALL
-	setevent EVENT_KIMONO_CABIN_4_GAVE_BUB_BALL
-	closetext
-	done
-
-
-
-
-	
-
-
-
-
-ExplainSudokuText:
-	text "Sudo: This garden will be a marvel, drawing rare #mon far and wide! I started decorating, but now I'm too weak to finish. I have a vision... each of the four rows has all four colors of stone, each column has all four colors, and each 2x2 grid has all four colors. 
-
-
-SudokuNotSolvedText:
-	text "Sudoki: The garden isn't up to my standards. It needs one stone of each color in every row, column, and in each of the 2x2 squares."
-
-TheGardenLooksBeautifulText:
-	text "Sudoki: good heavens! What a gorgeous garden."
-	
-LaprasIsHereText:
-	text "Look! A beautiful Lapras. You're a competent trainer, you might find a use for this."
-
-WhatABeautifulSpecimenThatWasText:
-	text "Why, it's not every day you get to see a #mon as graceful as that."
-
-GoCatchThatLaprasText:
-	text "What are you waiting for? A chance like this doesn't come around every day."
-
-Switch11Script:
+Switch00Script:
 	opentext
 	writetext ChooseAStoneColorText
 	promptbutton
 	loadmenu StoneColorMenuHeader
 	verticalmenu
 	closewindow
-	ifequal 1, .RedStone11
-	ifequal 2, .BrownStone11
-	ifequal 3, .GreenStone11
-	ifequal 4, .BlueStone11
+	ifequal 1, .RedStone00
+	ifequal 2, .BrownStone00
+	ifequal 3, .GreenStone00
+	ifequal 4, .BlueStone00
 	jumptext NoChangeToStoneText
 
-.RedStone11:
-	changeblock 0, 0, $00
-	setevent EVENT_KC4_11
+.RedStone00:
+	changeblock 0, 0, $86
+	setevent EVENT_KC4_00
 	waitbutton
 	closetext
 	end
 
-.BrownStone11:
-	changeblock 0, 0, $00
-	writetext SetTheColorText
+.BrownStone00:
+	changeblock 0, 0, $5A
+	clearevent EVENT_KC4_00
 	waitbutton
 	closetext
 	end
 
-.GreenStone11:
-	changeblock 0, 0, $00
+.GreenStone00:
+	changeblock 0, 0, $87
+	clearevent EVENT_KC4_00
 	waitbutton
 	closetext
 	end
 
-.GreenStone11:
-	changeblock 0, 0, $00
+.BlueStone00:
+	changeblock 0, 0, $59
+	clearevent EVENT_KC4_00
 	waitbutton
 	closetext
 	end
-
 
 StoneColorMenuHeader:
 	db MENU_BACKUP_TILES ; flags
@@ -164,3 +101,120 @@ MenuData:
 	db "GREEN@"
 	db "BLUE@"
 	db "CANCEL@"
+
+ChooseAStoneColorText:	
+	text "Which color?"
+	done
+
+KimonoCabin4Lapras:
+	faceplayer
+	cry LAPRAS
+	pause 15
+	loadwildmon LAPRAS, 30
+	startbattle
+	disappear KIMONO_CABIN_4_LAPRAS
+	setevent EVENT_KIMONO_4_LAPRAS
+	reloadmapafterbattle
+	end
+
+KimonoCabin44Script:
+	faceplayer
+	opentext
+	checkevent KIMONO_CABIN_4_LAPRAS 
+	iftrue_jumpopenedtext WhatABeautifulSpecimenThatWasText
+	checkevent EVENT_EXPLAINED_SUDOKU
+	iftrue CheckSudokuSolved
+	writetext ExplainSudokuText
+	setevent EVENT_EXPLAINED_SUDOKU
+	end
+	
+	
+CheckSudokuSolved: ; should give you a bub ball 
+	checkevent EVENT_KC4_00
+	iffalse_jumpopenedtext SudokuNotSolvedText
+	; sudoku puzzle solved from here 
+	writetext TheGardenLooksBeautifulText
+	closetext
+	checkevent EVENT_KIMONO_4_LAPRAS
+	iftrue_jumpopenedtext WhatABeautifulSpecimenThatWasText
+	checkevent EVENT_KIMONO_CABIN_4_GAVE_BUB_BALL
+	iftrue_jumpopenedtext GoCatchThatLaprasText
+	appear KIMONO_CABIN_4_LAPRAS
+	writetext LaprasIsHereText
+	verbosegiveitem BUB_BALL, 5
+	writetext Kimono4OddSouvenirText
+	verbosegiveitem ODD_SOUVENIR
+	setevent EVENT_KIMONO_CABIN_4_GAVE_BUB_BALL
+	closetext
+	done
+
+
+ExplainSudokuText:
+	text "Shiji: This will"
+	line "be a marvel, like"
+	cont "the ones of my"
+	cont "youth!"
+	
+	para "#mon will come"
+	line "far and wide."
+	
+	para "Oh, but I don't"
+	line "have the strength"
+	cont "I used to."
+	
+	para "The method:"
+	
+	para "Each column, row"
+	line "and 2x2 plot "
+	cont "needs one stone"
+	cont "of each color."	
+	done
+
+SudokuNotSolvedText:
+	text "Shiji: It isn't"
+	line "up to snuff."
+
+	para "One of each color"
+	line "per row, column,"
+	cont "and 2x2 plot."
+	
+	para "Try again, the "
+	line "next generations"
+	cont "are counting on"
+	cont "you to learn!"
+	done
+	
+TheGardenLooksBeautifulText:
+	text "Shiji: Heavens!"
+	line "It's gorgeous."
+	done
+	
+LaprasIsHereText:
+	text "Oh, a Lapras."
+	line "You're a trainer,"
+	cont "Can you use this?"
+
+Kimono4OddSouvenirText:
+	text "Oh, and I should"
+	line "give you this as"
+	cont "thanks. It was"
+	cont "given to me by"
+	cont "a distant friend."
+	done
+
+WhatABeautifulSpecimenThatWasText:
+	text "It's not every "
+	line "day you can see"
+	cont "a #mon as"
+	cont "graceful as that."
+
+GoCatchThatLaprasText:
+	text "What's the holdup?"
+	line "Fate waits for"
+	cont "no one."
+	done
+
+NoChangeToStoneText:
+	text "No change."
+	done
+	

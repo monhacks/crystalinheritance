@@ -446,5 +446,9 @@ HH_Hollis_Leaves:
 	step_end
 	
 HH_Sign3Text:
-	text "Curious Cabin"
+	text "Just a cozy cabin"
+
+	para "No fugitives or"
+	line "runaways here!"
+
 	done

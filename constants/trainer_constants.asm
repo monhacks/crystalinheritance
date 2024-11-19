@@ -233,7 +233,7 @@ KRIS EQU __trainer_class__
 	const RALPH3
 	const RALPH4
 	const RALPH5
-	const TULLY1
+	const TULLY
 	const TULLY2
 	const TULLY3
 	const TULLY4

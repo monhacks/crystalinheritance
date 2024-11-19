@@ -17,10 +17,8 @@ LakeOfRage_MapScriptHeader:
 	bg_event  4,  4, BGEVENT_ITEM + RARE_CANDY, EVENT_LAKE_OF_RAGE_HIDDEN_RARE_CANDY
 	bg_event 35,  5, BGEVENT_ITEM + MAX_POTION, EVENT_LAKE_OF_RAGE_HIDDEN_MAX_POTION
 	bg_event 11, 28, BGEVENT_ITEM + FULL_RESTORE, EVENT_LAKE_OF_RAGE_HIDDEN_FULL_RESTORE
-	bg_event 10, 27, BGEVENT_JUMPSTD, treegrotto, HIDDENGROTTO_LAKE_OF_RAGE
-	bg_event 11, 27, BGEVENT_JUMPSTD, treegrotto, HIDDENGROTTO_LAKE_OF_RAGE
 
-	def_object_events ; add the gyarados back?
+	def_object_events
 	object_event  4,  4, SPRITE_POKEMANIAC, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, WesleyScript, -1
 	object_event 20, 29, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, LakeOfRageEngineerText, -1
 	object_event  4, 15, SPRITE_ACE_TRAINER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerCooltrainermAaron, -1
@@ -32,12 +30,6 @@ LakeOfRage_MapScriptHeader:
 	object_event 25, 29, SPRITE_BATTLE_GIRL, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, LakeOfRageCooltrainerFText, -1
 	itemball_event 13,  2, ELIXIR, 1, EVENT_LAKE_OF_RAGE_ELIXIR
 	itemball_event  7, 10, MAX_REVIVE, 1, EVENT_LAKE_OF_RAGE_MAX_REVIVE
-	tmhmball_event 35,  2, TM_SUBSTITUTE, EVENT_LAKE_OF_RAGE_TM_SUBSTITUTE
-	cuttree_event 18,  9, EVENT_LAKE_OF_RAGE_CUT_TREE_1
-	cuttree_event 11, 12, EVENT_LAKE_OF_RAGE_CUT_TREE_2
-	cuttree_event  5, 14, EVENT_LAKE_OF_RAGE_CUT_TREE_3
-	cuttree_event  6, 21, EVENT_LAKE_OF_RAGE_CUT_TREE_4
-	cuttree_event 23,  4, EVENT_LAKE_OF_RAGE_CUT_TREE_5
 
 	object_const_def
 	const LAKEOFRAGE_WESLEY
@@ -68,38 +60,6 @@ LakeOfRageEngineerText:
 	cont "project."
 	done
 
-;LakeOfRageRedGyaradosScript:
-;	opentext
-;	writetext .GyaradosText
-;	cry GYARADOS
-;	pause 15
-;	closetext
-;	loadwildmon GYARADOS, 35
-;	loadvar VAR_BATTLETYPE, BATTLETYPE_RED_GYARADOS
-;	startbattle
-;	ifequal $1, .Continue
-;	disappear LAKEOFRAGE_RED_GYARADOS
-;.Continue:
-;	reloadmapafterbattle
-;	opentext
-;	givekeyitem RED_SCALE
-;	waitsfx
-;	writetext .RedScaleText
-;	playsound SFX_ITEM
-;	waitsfx
-;	keyitemnotify
-;	closetext
-;	appear LAKEOFRAGE_LANCE
-;	end
-;
-;.GyaradosText:
-;	text "Gyarados: Gyashaa!"
-;	done
-;
-;.RedScaleText:
-;	text "<PLAYER> obtained a"
-;	line "Red Scale."
-;	done
 
 WesleyScript:
 	checkevent EVENT_GOT_BLACK_BELT_FROM_WESLEY

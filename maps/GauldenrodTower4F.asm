@@ -88,7 +88,7 @@ GauldenrodTower4FSandraScript:
 	end
 
 SandraIntroText:
-	text "My child. Why"
+	text "Sandra: Why"
 	line "have you come"
 	cont "to me?"
 	
@@ -126,9 +126,7 @@ SandraWinText:
 	done
 
 SandraAfterText:
-	text "Please, take this"
-	line "badge as a sign"
-	cont "of my respect."
+	text "Take this."
 	
 	para "With my blessing"
 	line "you can use the"
@@ -181,8 +179,8 @@ SandraAgreementText:
 	done
 
 AmosText:
-	text "AMOS: Excuse me,"
-	line "Have you seen"
+	text "Amos: Excuse me,"
+	line "have you seen"
 	cont "Sandra?"
 	
 	para "..."
@@ -194,7 +192,7 @@ AmosText:
 	cont "the stadium?"
 
 	para "Then I was just a"
-	line "little too late..."
+	line "little too late."
 
 	para "Say, you look"
 	line "familiar."
@@ -204,11 +202,6 @@ AmosText:
 	cont "Town, interrupting"
 	cont "my conversation"
 	cont "with Hollis."
-	
-	para "I hope they are"
-	line "doing OK. It's"
-	cont "hard to get any"
-	cont "intel these days."
 	
 	para "..."
 

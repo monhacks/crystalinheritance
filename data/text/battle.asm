@@ -1728,12 +1728,10 @@ Rival1_2FinalPkmnText: ; new
 	cont "this time!"
 	prompt
 
-Rival1_3FinalPkmnText:
-	text "Out of despera-"
-	line "tion, weak people"
-
-	para "sometimes do OK"
-	line "at fighting back."
+Rival1_3FinalPkmnText: ; new 
+	text "I'm good enough"
+	line "to get out of"
+	cont "this bad spot."
 	prompt
 
 Rival1_4FinalPkmnText:
@@ -2025,8 +2023,8 @@ KenseyFinalPkmnText:
 	prompt
 	
 BobeshFinalPkmnText:
-	text "Grr, now I won't"
-	line "hold back!"
+	text "I'm not holding"
+	line "back any more!"
 	prompt
 
 ReiFinalPkmnText:

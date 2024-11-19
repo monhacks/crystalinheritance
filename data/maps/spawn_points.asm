@@ -8,7 +8,7 @@ SpawnPoints:
 ; entries correspond to SPAWN_* constants, ALSO USED IN CONSTANTS/MAP_DATA_CONSTANTS
 	table_width 4, SpawnPoints
 
-	spawn KURTS_HOUSE,                 7,  1 ; 
+	spawn KURTS_HOUSE,                 7,  1 ;  "YOUR HOUSE"
 
 	spawn ANARRES_TOWN,               17, 10 ;
 	spawn GAULDENROD,                 18, 28

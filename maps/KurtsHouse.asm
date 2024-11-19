@@ -24,11 +24,14 @@ KurtsHouse_MapScriptHeader: ; todo add the ability to make apricorns here at the
 
 	def_object_events
 	object_event    6,  3, SPRITE_KURT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KurtHouseScript, EVENT_KURTS_HOUSE_KURT_0 ;
+	object_event  7,  3, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, IlexExcelsiorV5Script, EVENT_KURTS_HOUSE_NOTEBOOK
 	pokemon_event  14,  4, SHUCKLE, -1, -1, PAL_NPC_RED, KurtsHouseShuckleText, -1
+
 ; kurt is at the celebi shrine if you visit later
 
 	object_const_def
 	const KURTSHOUSE_KURT
+	const KURTSHOUSE_NOTEBOOK
 	
 KurtsHouseIntroTrigger:
 	sdefer KurtsHouseScript1
@@ -37,6 +40,8 @@ KurtsHouseIntroTrigger:
 
 KurtsHouseScript1:
 	playmusic MUSIC_PROF_OAK
+	disappear KURTSHOUSE_NOTEBOOK
+	setevent EVENT_KURTS_HOUSE_NOTEBOOK
 	applymovement PLAYER, .kurts_house_player_moves_down
 	applymovement KURTSHOUSE_KURT, .kurt_walks_to_you
 	sjump KurtHouseEventScript
@@ -333,7 +338,7 @@ endr
 	setevent EVENT_BEAT_FALKNER
 	setevent EVENT_BEAT_BUGSY
 	setevent EVENT_BEAT_WHITNEY
-	setevent EVENT_BEAT_MORTY
+	setevent EVENT_BEAT_MORTY_GYM
 	setevent EVENT_BEAT_CHUCK
 	setevent EVENT_BEAT_JASMINE
 	setevent EVENT_BEAT_PRYCE
@@ -574,3 +579,37 @@ ShuckieOTName:
 ShuckieOTIDAndCaughtGender:
 	bigdw KIRK_SHUCKIE_ID
 	db MALE
+
+
+IlexExcelsiorV5Script:
+	opentext
+	writetext WeirdTextKurtsHouse
+	closetext
+	unowntypeface
+	showtext IlexExcelsiorV5Text
+	restoretypeface
+	special MapCallbackSprites_LoadUsedSpritesGFX
+	end
+
+WeirdTextKurtsHouse:
+	text "Hm? What's this"
+	line "weird pamphlet?"
+	
+	para "It's scattered"
+	line "all over."
+
+	para "Trying to read..."
+	done
+
+IlexExcelsiorV5Text:
+	text "Ilex Excelsior"
+	
+	para "When the tree"
+	line "rings, will"
+	cont "you answer"
+	
+	para "Fifth Edition"
+
+	para "We must save"
+	line "union cave"
+	done

@@ -72,8 +72,6 @@ Route37TutorZapCannonScript:
 .TutorRefused
 	jumpopenedtext Text_Route37TutorRefused ;; 
 
-.NoSilverLeaf
-	jumpopenedtext Text_Route37TutorNoSilverLeaf
 
 .TeachMove
 	jumpopenedtext Text_Route37TutorTaught ;;

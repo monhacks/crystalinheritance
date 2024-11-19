@@ -72,7 +72,7 @@ GenericTrainerBirdKeeperToby:
     done
 
 GenericTrainerBirdKeeperDennis:
-    generictrainer BIRD_KEEPER, DENIS, EVENT_BEAT_BIRD_KEEPER_DENNIS, BirdKeeperDennisSeenText, BirdKeeperDennisBeatenText
+    generictrainer BIRD_KEEPER, DENIS, EVENT_BEAT_BIRD_KEEPER_DENIS, BirdKeeperDennisSeenText, BirdKeeperDennisBeatenText
 
     text "We're building a"
     line "tower to the sky"
