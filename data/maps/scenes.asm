@@ -57,10 +57,10 @@ MapScenes::
 ;	scene_var BATTLE_FACTORY_BATTLE_ROOM,             wAlways0SceneID
 ;	scene_var BATTLE_FACTORY_HALLWAY,                 wAlways0SceneID
 	scene_var GAULDENROD,                             wGauldenrodSceneID
-;	scene_var GOLDENROD_POKECOM_CENTER,               wGoldenrodPokecomCenterSceneID
+;	scene_var GOLDENROD_POKECOM_CENTER,               wGoldenrodPokecomCenterSceneID ; 
 	scene_var RADIO_TOWER_1F,                         wRadioTower1FSceneID ; YellowForestSceneID
-;	scene_var VERMILION_CITY,                         wVermilionCitySceneID
-;	scene_var VERMILION_PORT,                         wVermilionPortSceneID
+	scene_var EMPERORS_GARDEN,                        wEmperorsGardenSceneID ;wVermilionCitySceneID
+	scene_var TIN_TOWER_OLD_3F,                       wTinTowerOld3FSceneID ;wVermilionPortSceneID
 ;	scene_var VICTORY_ROAD_2F,                        wVictoryRoad2FSceneID
 ;	scene_var TRADE_CENTER,                           wTradeCenterSceneID
 ;	scene_var TRAINER_HOUSE_B1F,                      wAlways0SceneID

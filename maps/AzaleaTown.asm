@@ -397,7 +397,7 @@ PokemonMemoriesNPCScript:
     closetext
     end
 
-AzaleaUsedToBeATrainerText:
+AzaleaUsedToBeATrainerText: ; works
 	text "Ah, a trainer!"
 	
 	para "I used to be"
@@ -409,6 +409,7 @@ AzaleaUsedToBeATrainerText:
 	cont "my favorites,"
 	cont "I'll pass them"
 	cont "down to you."
+	done
 
 AskForTeddiursaText:
     text "Can you show me"

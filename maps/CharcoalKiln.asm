@@ -9,7 +9,7 @@ CharcoalKiln_MapScriptHeader:
 	warp_event  4,  7, AZALEA_TOWN, 2
 
 	def_coord_events
-;	coord_event  3, 7, 1, CharcoalKilnGettingReadyScript	
+
 	
 	def_bg_events
 	bg_event  1,  3, BGEVENT_JUMPTEXT, CharcoalKilnStillText

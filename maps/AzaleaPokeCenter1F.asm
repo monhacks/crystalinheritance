@@ -19,7 +19,7 @@ AzaleaPokeCenter1F_MapScriptHeader:
 	object_event  8,  4, SPRITE_ACE_TRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AzaleaPokeCenter1FCooltrainermScript, -1
 	object_event 11,  6, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, AzaleaPokeCenter1FGentlemanText, -1
 	object_event  8,  1, SPRITE_SIGHTSEER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, AzaleaPokeCenter1FSightseermText, -1
-	object_event 12,  6, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, IlexExcelsiorV4Script, -1
+	object_event  9,  6, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, IlexExcelsiorV4Script, -1
 
 	object_const_def
 	const AZALEA_POKECENTER_1F_MINTY
@@ -245,7 +245,7 @@ IlexExcelsiorV2Script:
 	special MapCallbackSprites_LoadUsedSpritesGFX
 	end
 
-WeirdTextEcruteakCenter:
+WeirdTextOlivineCenter:
 	text "Hm? What's this"
 	line "weird pamphlet?"
 	done
@@ -278,7 +278,7 @@ IlexExcelsiorV1Script:
 	special MapCallbackSprites_LoadUsedSpritesGFX
 	end
 
-WeirdTextOlivineCenter:
+WeirdTextEcruteakCenter:
 	text "Hm? What's this"
 	line "weird pamphlet?"
 	done
@@ -301,7 +301,7 @@ IlexExcelsiorV1Text:
 
 IlexExcelsiorV6Script:
 	opentext
-	writetext WeirdTextAzaleaCenter
+	writetext WeirdTextVioletCenter
 	closetext
 	unowntypeface
 	showtext IlexExcelsiorV6Text
@@ -309,7 +309,7 @@ IlexExcelsiorV6Script:
 	special MapCallbackSprites_LoadUsedSpritesGFX
 	end
 
-WeirdTextOlivineCenter:
+WeirdTextVioletCenter:
 	text "Hm? What's this"
 	line "weird pamphlet?"
 	done

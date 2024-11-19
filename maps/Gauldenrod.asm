@@ -1,4 +1,4 @@
-Gauldenrod_MapScriptHeader: ; TODO: ADD A WANTED POSTER FOR AMOS
+Gauldenrod_MapScriptHeader: 
 	def_scene_scripts
 
 	def_callbacks

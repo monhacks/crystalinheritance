@@ -40,6 +40,7 @@ KurtsHouseIntroTrigger:
 
 KurtsHouseScript1:
 	playmusic MUSIC_PROF_OAK
+	pause 30
 	disappear KURTSHOUSE_NOTEBOOK
 	setevent EVENT_KURTS_HOUSE_NOTEBOOK
 	applymovement PLAYER, .kurts_house_player_moves_down

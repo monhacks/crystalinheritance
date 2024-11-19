@@ -3300,26 +3300,26 @@ _ElmText4::
 
 SECTION "_ElmText5", ROMX
 _ElmText5::
-	text "Ah, this drought..."
-	line "It's been tough on"
-	cont "everyone, hasn't it?"
+	text "Ah, this drought."
+	line "It's been tough,"
+	cont "hasn't it?"
 
-	para "But you know, back"
+	para "But you know, "
 	line "in my day, we had"
-	cont "our share of hard"
-	cont "times too."
+	cont "hard times too."
 
-	para "What got us through"
-	line "was coming togeth-"
-	cont "er, sharing tales,"
-	cont "and remembering"
-	cont "what's important."
+	para "What got us thr-"
+	line "ough was coming" 
+	cont "together, sharing"
+	cont "tales, and reme-"
+	cont "mbering the good"
+	cont "times."
 
 	para "That's why this"
 	line "ceremony matters."
 	
 	para "It's not just"
-	line "tradition, it's..."
+	line "tradition ..."
 
 	para "Well, it's a re-"
 	line "minder. Of how we"
@@ -3327,7 +3327,7 @@ _ElmText5::
 	cont "all connected."
 
 	para "Who knows? Our"
-	line "stories might just"
+	line "stories might"
 	cont "bring some rain."
 	prompt
 

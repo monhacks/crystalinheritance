@@ -151,10 +151,10 @@ SpriteAnimOAMData:
 
 .OAMData_MagnetTrainRed:
 	db 4
-	dsprite -1,  0, -1,  0, $00, $0 | PRIORITY
-	dsprite -1,  0,  0,  0, $01, $0 | PRIORITY
-	dsprite  0,  0, -1,  0, $02, $0 | PRIORITY
-	dsprite  0,  0,  0,  0, $03, $0 | PRIORITY
+	dsprite -1,  0, -1,  0, $00, $2 | PRIORITY
+	dsprite -1,  0,  0,  0, $01, $2 | PRIORITY
+	dsprite  0,  0, -1,  0, $02, $2 | PRIORITY
+	dsprite  0,  0,  0,  0, $03, $2 | PRIORITY
 
 .OAMData_PartyMonWithMail1:
 	db 4
@@ -298,17 +298,17 @@ SpriteAnimOAMData:
 
 .OAMData_BlueWalk:
 	db 4
-	dsprite -1,  0, -1,  0, $00, $1
-	dsprite -1,  0,  0,  0, $01, $1
-	dsprite  0,  0, -1,  0, $02, $1
-	dsprite  0,  0,  0,  0, $03, $1
+	dsprite -1,  0, -1,  0, $00, $2
+	dsprite -1,  0,  0,  0, $01, $2
+	dsprite  0,  0, -1,  0, $02, $2
+	dsprite  0,  0,  0,  0, $03, $2
 
 .OAMData_MagnetTrainBlue:
 	db 4
-	dsprite -1,  0, -1,  0, $00, $1 | PRIORITY
-	dsprite -1,  0,  0,  0, $01, $1 | PRIORITY
-	dsprite  0,  0, -1,  0, $02, $1 | PRIORITY
-	dsprite  0,  0,  0,  0, $03, $1 | PRIORITY
+	dsprite -1,  0, -1,  0, $00, $2 | PRIORITY
+	dsprite -1,  0,  0,  0, $01, $2 | PRIORITY
+	dsprite  0,  0, -1,  0, $02, $2 | PRIORITY
+	dsprite  0,  0,  0,  0, $03, $2 | PRIORITY
 
 .OAMData_IntroSuicune1:
 	db 36

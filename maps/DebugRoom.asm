@@ -21,14 +21,8 @@ DebugRoom_MapScriptHeader: ; should be like  "BurnedTowerB1F_MapScriptHeader"
 	object_event  4,  3, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE,  OBJECTTYPE_SCRIPT, 0, dwgDebugScript, -1
 	object_event  2,  3, SPRITE_TAMER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE,  OBJECTTYPE_SCRIPT, 0, Breeder1Script, EVENT_KURT_HEARS_LOGGERS
 	object_event  7,  8, SPRITE_BREEDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE,  OBJECTTYPE_SCRIPT, 0, Breeder2Script, -1 ; gives lots of mons
-	object_event  6,  8, SPRITE_BREEDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE,  OBJECTTYPE_SCRIPT, 0, Breeder3Script, -1 ; gives lots of mons
-	object_event  5,  8, SPRITE_BREEDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE,  OBJECTTYPE_SCRIPT, 0, Breeder4Script, -1 ; gives lots of mons
 	object_event  4,  8, SPRITE_BREEDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE,  OBJECTTYPE_SCRIPT, 0, Breeder5Script, -1 ; gives lots of mons
-	object_event  3,  8, SPRITE_BREEDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE,  OBJECTTYPE_SCRIPT, 0, Breeder6Script, -1 ; gives lots of mons
-	object_event  2,  8, SPRITE_BREEDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE,  OBJECTTYPE_SCRIPT, 0, Breeder7Script, -1 ; gives lots of mons
-	object_event  1,  8, SPRITE_BREEDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE,  OBJECTTYPE_SCRIPT, 0, Breeder8Script, -1 ; gives lots of mons
 	object_event  6,  4, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE,  OBJECTTYPE_SCRIPT, 0, DebugWonderTradeScript, -1 ; wonder trade
-;	object_event  3,  3, SPRITE_PSYCHIC, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE,  OBJECTTYPE_SCRIPT, 0, DebugTimeTravelerScript, -1 ; wonder trade
 	
 	object_const_def
 	const DEBUG_DWG
@@ -204,21 +198,29 @@ Breeder1Script:
 	end
 
 Breeder1QuestionText:
-	text "I can give you four #mon that will defeat everything. This might work in unintended ways if you already have a #mon." 
+	text "I have four "
+	line "#mon with"
+	cont "good movesets."
+	
+	para "It might work"
+	line "strangely if"
+	cont "you already have"
+	cont "a #mon."
+	done
 
 Breeder1Text:
-	text "Here's #mon"
-	line "to stomp the"
-	cont "game."
+	text "OK!"
 	done
 
 Breeder1SayNoText:
-	text "Just let me know if you change your mind."
+	text "No prob."
+	done
 
 dwgDebugScript:
 	faceplayer
 	opentext
 	writetext DWGIntroText
+	waitbutton
 	writetext DWGQuestionText
 	yesorno
 	iffalse_jumpopenedtext DWGRefusedText
@@ -310,6 +312,7 @@ DebugCPUText:
 	done
 
 Breeder2Script:
+	faceplayer
 	opentext
 	writetext BreederQuestionText
 	yesorno
@@ -336,17 +339,6 @@ Breeder2Script:
 	givepoke DIGLETT, 5	
 	givepoke MEOWTH, 5
 	givepoke MANKEY, 5
-	closetext
-	end
-
-
-Breeder3Script:
-	opentext
-	writetext BreederQuestionText
-	yesorno
-	iffalse_jumpopenedtext BreederSayNoText
-	writetext BreederText	
-	; a buncha mons
 	givepoke GROWLITHE, 5
 	givepoke POLIWAG, 5	
 	givepoke ABRA, 5	
@@ -367,16 +359,6 @@ Breeder3Script:
 	givepoke HITMONLEE, 5	
 	givepoke HITMONCHAN, 5
 	givepoke HITMONTOP, 5
-	closetext
-	end
-
-Breeder4Script:
-	opentext
-	writetext BreederQuestionText
-	yesorno
-	iffalse_jumpopenedtext BreederSayNoText
-	writetext BreederText	
-	; a buncha mons
 	givepoke WEEZING, 5
 	givepoke MR__MIME, 5	
 	givepoke RHYHORN, 5	
@@ -401,6 +383,7 @@ Breeder4Script:
 	end
 	
 Breeder5Script:
+	faceplayer
 	opentext
 	writetext BreederQuestionText
 	yesorno
@@ -427,16 +410,6 @@ Breeder5Script:
 	givepoke GIRAFARIG, 5	
 	givepoke PINECO, 5
 	givepoke DUNSPARCE, 5
-	closetext
-	end
-
-Breeder6Script:
-	opentext
-	writetext BreederQuestionText
-	yesorno
-	iffalse_jumpopenedtext BreederSayNoText
-	writetext BreederText	
-	; a buncha mons
 	givepoke GLIGAR, 5
 	givepoke SNUBBULL, 5	
 	givepoke QWILFISH, 5	
@@ -457,16 +430,6 @@ Breeder6Script:
 	givepoke GROTLE, 5	
 	givepoke MONFERNO, 5
 	givepoke PRINPLUP, 5
-	closetext
-	end
-	
-Breeder7Script:
-	opentext
-	writetext BreederQuestionText
-	yesorno
-	iffalse_jumpopenedtext BreederSayNoText
-	writetext BreederText	
-	; a buncha mons
 	givepoke STARAVIA, 5
 	givepoke LUXIO, 5	
 	givepoke ROSELIA, 5	
@@ -487,16 +450,6 @@ Breeder7Script:
 	givepoke SNOVER, 5	
 	givepoke DUSCLOPS, 5
 	givepoke FROSLASS, 5
-	closetext
-	end
-	
-Breeder8Script:
-	opentext
-	writetext BreederQuestionText
-	yesorno
-	iffalse_jumpopenedtext BreederSayNoText
-	writetext BreederText	
-	; a buncha mons
 	givepoke ROTOM, 5
 	givepoke H__AVALUGG, 5	
 	givepoke BASCULEGION, 5	
@@ -523,19 +476,10 @@ BreederQuestionText:
 
 	para "You can have"
 	line "them. But make"
-	cont "sure your curr-"
-	cont"ent box is empty,"
-	
-	para "otherwise it may"
-	line "crash the game."
-	
-	para "The computer in"
-	line "this room can be"
-	cont "used to change"
-	cont "the box."
-	
-	para "Is your current"
-	line "box empty?"
+	cont "sure you have"
+	cont "a few boxes"
+	cont "available in"
+	cont "the PC."
 	done
 
 BreederSayNoText:
@@ -543,12 +487,13 @@ BreederSayNoText:
 	line "with your current"
 	cont "box empty, I can"
 	cont "give you some."
+	done
 
 BreederText:
 	text "Here you go!"
 	done
 
-DebugWonderTradeScript: ; TODO FIX THIS 
+DebugWonderTradeScript: 
 	opentext
 	writetext DebugWonderTradeIntroText
 	waitbutton
@@ -565,6 +510,8 @@ DebugWonderTradeScript: ; TODO FIX THIS
 .done
 	jumpopenedtext DebugWonderTradeGoodbyeText
 	
+	
+
 DebugWonderTradeIntroText:
 	text "I can wonder"
 	line "trade with you!"

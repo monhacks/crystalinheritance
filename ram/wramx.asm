@@ -1108,8 +1108,8 @@ wTeamRocketBaseB3FSceneID:: db
 wTinTower1FSceneID:: db
 wTradeCenterSceneID:: db
 wUndergroundPathSwitchRoomEntrancesSceneID:: db
-wVermilionCitySceneID:: db
-wVermilionPortSceneID:: db
+wEmperorsGardenSceneID:: db ; vermillion city 
+wTinTowerOld3FSceneID:: db ; vermillion port
 wVictoryRoad2FSceneID:: db
 wVioletGymSceneID:: db
 wGauldenrodSceneID:: db ; willsroomsceneid

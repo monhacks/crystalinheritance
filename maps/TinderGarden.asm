@@ -590,6 +590,7 @@ TinderGardenRivalBattleScript1:
 	turnobject PLAYER, RIGHT
 	opentext
 	writetext TGRivalChallengeText
+	waitbutton
 	winlosstext TGRivalWinText, TGRivalLoseText
 	setlasttalked TINDER_GARDEN_RIVAL ; needed?
 	checkevent EVENT_GOT_OSHAWOTT
@@ -669,12 +670,8 @@ TGRivalBattleMove3:
 	step_end
 
 CelebiPokeBallText:
-	text "A gift"
-	line "#mon from"
-	cont "Celebi."
-	
-	para "Better just"
-	line "take one!"
+	text "A gift from"
+	line "Celebi."
 	done
 
 CelebiHeroText:
