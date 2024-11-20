@@ -3304,31 +3304,27 @@ _ElmText5::
 	line "It's been tough,"
 	cont "hasn't it?"
 
+	para "Folks are strug-"
+	line "gling. Some say"
+	para "the old ways"
+	line "don't matter..."
+	
 	para "But you know, "
 	line "in my day, we had"
 	cont "hard times too."
 
 	para "What got us thr-"
-	line "ough was coming" 
+	line "ough was coming"
 	cont "together, sharing"
-	cont "tales, and reme-"
-	cont "mbering the good"
-	cont "times."
+	para "tales, and reme-"
+	line "mbering our bond"
+	cont "with nature."
 
-	para "That's why this"
-	line "ceremony matters."
-	
-	para "It's not just"
-	line "tradition ..."
 
-	para "Well, it's a re-"
-	line "minder. Of how we"
-	cont "and #mon are"
-	cont "all connected."
-
-	para "Who knows? Our"
-	line "stories might"
-	cont "bring some rain."
+	para "Who knows? Maybe"
+	line "coming together"
+	cont "will even bring"
+	cont "some rain."
 	prompt
 
 SECTION "_ElmText6", ROMX
@@ -3342,18 +3338,30 @@ _ElmText7::
 	text "<PLAYER>, are you"
 	line "ready?"
 
-if !DEF(DEBUG)
-	para "Your very own"
-	line "story is about"
-	cont "to unfold."
+	para "This ceremony is"
+	line "the start of the"
+	cont "story of you!"
+	
+	para "But remember, you"
+	line "carry the hopes"
+	cont "and dreams of all"
+	cont "who came before."
 
-	para "You'll face fun"
-	line "times and tough"
-	cont "challenges."
-endc
+	para "The bond between"
+	line "us, #mon, and"
+	para "nature - that's"
+	line "your inheritance."
 
-	para "I'll be seeing you"
-	line "later!"
+	para "Cherish it, main-"
+	line "tain it, and let"
+	cont "it guide you."
+
+	para "Now go on,"
+	line "<PLAYER>."
+	
+	para "Make your own"
+	line "story. And make"
+	cont "us proud!"
 	done
 
 SECTION "_WarnVBAText", ROMX

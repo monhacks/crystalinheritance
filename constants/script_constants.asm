@@ -198,9 +198,9 @@ EMOTE_FROM_MEM EQU -1
 	const_def 1
 ; Apricorn trees come first, then Berry trees
 	const FRUITTREE_AZALEA_TOWN     ; 01 wht aprx
-	const FRUITTREE_ROUTE_37_1      ; 02
-	const FRUITTREE_ROUTE_37_2      ; 03
-	const FRUITTREE_ROUTE_37_3      ; 04
+	const FRUITTREE_ROUTE_37_1      ; 02 tough leaves 
+	const FRUITTREE_ROUTE_37_2      ; 03 wht apx 
+	const FRUITTREE_ROUTE_37_3      ; 04 shore foam 
 	const FRUITTREE_CALM_COAST_3      ; 05 PNK APRICORN
 	const FRUITTREE_MAGNET_TUNNEL      ; 06 FIXED CHARGE
 	const FRUITTREE_GAULDENROD      ; 07 radiant opal
@@ -213,9 +213,9 @@ FIRST_BERRY_TREE EQU const_value
 ;	const FRUITTREE_ROUTE_30_1      ; 
 ;	const FRUITTREE_ROUTE_30_2      ; 
 ;	const FRUITTREE_ROUTE_31        ; 
-	const FRUITTREE_VIOLET_CITY     ; 0c
-	const FRUITTREE_ROUTE_32_COAST  ; 0d
-	const FRUITTREE_ROUTE_33        ; 0e
+	const FRUITTREE_VIOLET_CITY     ; 0c pnk apricorn 
+	const FRUITTREE_ROUTE_33  ; 0d ; lum berry  
+	const FRUITTREE_UNUSED_2        ; 0e sitrus berry 
 	const FRUITTREE_ROUTE_35        ; 0f ; shore foam
 	const FRUITTREE_ROUTE_36        ; 10 ; WHT APRICORN
 	const FRUITTREE_ROUTE_38        ; 11
@@ -225,18 +225,18 @@ FIRST_BERRY_TREE EQU const_value
 	const FRUITTREE_ROUTE_45        ; 15
 	const FRUITTREE_ROUTE_46_1      ; 16
 	const FRUITTREE_ROUTE_46_2      ; 17
-	const FRUITTREE_ROUTE_27        ; 18
-	const FRUITTREE_ROUTE_26        ; 19
-	const FRUITTREE_ROUTE_8         ; 1a
-	const FRUITTREE_ROUTE_11        ; 1b
+	const FRUITTREE_EMPERORS_GARDEN_1        ; 18 wht apx 
+	const FRUITTREE_EMPERORS_GARDEN_2        ; 19 lum berry 
+	const FRUITTREE_EMPERORS_GARDEN_3         ; 1a sitrus 
+	const FRUITTREE_ROUTE_11        ; 1b ; unused 
 	const FRUITTREE_FUCHSIA_CITY    ; 1c
 	const FRUITTREE_PEWTER_CITY_1   ; 1d
 	const FRUITTREE_PEWTER_CITY_2   ; 1e
 	const FRUITTREE_ROUTE_2         ; 1f
 	const FRUITTREE_ROUTE_1         ; 20
 	const FRUITTREE_LUCKY_ISLAND    ; 21
-	const FRUITTREE_CALM_COAST_1 ; 22
-	const FRUITTREE_CALM_COAST_2        ; 23
+	const FRUITTREE_CALM_COAST_1 ; 22 sitrus  
+	const FRUITTREE_CALM_COAST_2        ; 23 lum  
 NUM_FRUIT_TREES EQU const_value - 1
 
 ; hidden grottoes

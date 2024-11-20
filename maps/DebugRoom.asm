@@ -99,6 +99,7 @@ endr
 	giveitem SILVER_LEAF, 99
 	giveitem GOLD_LEAF, 99
 	giveitem ODD_SOUVENIR, 99
+	giveitem BIG_PEARL, 99
 	; max money
 	givemoney $0, 1000000
 	givemoney $0, 1000000

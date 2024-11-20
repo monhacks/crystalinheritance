@@ -10996,6 +10996,20 @@ AdrinnaGroup:
 ; ================================
 ; ================
 
+	; ADRINNA garden
+	db "Adrinna@" ; todo: names, items
+	db TRAINERTYPE_ITEM | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
+	; party
+	db 30, FORRETRESS, FOCUS_SASH, "NAME@"
+		db SPIKES, EXPLOSION, U_TURN, NO_MOVE
+	db 27, LUXIO, FOCUS_SASH, "NAME@"
+		db ROAR, BITE, SPARK, NO_MOVE
+	db 27, ELECTABUZZ, NO_ITEM, "NAME@"
+		db THUNDERPUNCH, KARATE_CHOP, NO_MOVE, NO_MOVE
+	db 33, JOLTEON, NO_ITEM, "NAME@"
+		db THUNDERBOLT, DOUBLE_KICK, NO_MOVE, NO_MOVE
+	db -1 ; end
+
 	; Adrinna
 	db "Adrinna@"
 	db TRAINERTYPE_ITEM

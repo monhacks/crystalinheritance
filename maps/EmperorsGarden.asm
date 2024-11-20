@@ -39,13 +39,14 @@ EmperorsGarden_MapScriptHeader: ;	def_scene_scripts
 	fruittree_event  5, 24, FRUITTREE_EMPERORS_GARDEN_2, LUM_BERRY, PAL_NPC_RED
 	fruittree_event  6, 23, FRUITTREE_EMPERORS_GARDEN_3, SITRUS_BERRY, PAL_NPC_RED
 
-	object_event 	27, 28, SPRITE_KURT, SPRITEMOVEDATA_STANDING_RIGHT, 	0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumpfaceplayer, EG_KurtText, EVENT_EMPERORS_GARDEN_ADRINNA ;
+	object_event 	27, 28, SPRITE_KURT, SPRITEMOVEDATA_STANDING_RIGHT, 	0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, EG_KurtText, EVENT_EMPERORS_GARDEN_ADRINNA ;
 
 	itemball_event  27,  9, PROTEIN, 1, EVENT_EMPERORS_GARDEN_PROTEIN
 	itemball_event  21,  3, CALCIUM, 1, EVENT_EMPERORS_GARDEN_CALCIUM
 	itemball_event  13,  9, CARBOS, 1, EVENT_EMPERORS_GARDEN_CARBOS
-	tmhmball_event   2, 14, TM_SEED_BOMB, EVENT_EMPERORS_GARDEN_SEED_BOMB ;BULLDOZE
 
+	object_event	 2,	14, 	SPRITE_BRIGADER, SPRITEMOVEDATA_SPINRANDOM_FAST, 	0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, EG_SeedBombMT, -1 ;	
+	
 	object_const_def
 	const EMPERORS_GARDEN_MEJIMI
 	const EMPERORS_GARDEN_BOBESH
@@ -119,7 +120,18 @@ EmperorsGardenMejimiScene:
 	setevent EVENT_EMPERORS_GARDEN_MEJIMI
 	setscene $1
 	end
-	
+
+MejimiWalksInMovement:
+	step_right
+	step_right
+	step_right
+	step_right
+	step_right
+	step_right
+	turn_head_down
+	step_end
+
+
 EG_Text1:
 	text "Emperor Mejimi:"
 	line "Ah, my generals."
@@ -210,7 +222,7 @@ GeneralsLeaveMovement:
 
 EmperorsGardenBobeshScene:
 	showemote EMOTE_BOLT, EMPERORS_GARDEN_ADRINNA_2, 10
-	showtext EG_Bobesh_Text
+	showtext EG_Bobesh_Text1
 	closetext
 	applymovement EMPERORS_GARDEN_ADRINNA_2, AdrinnaMoves2
 	disappear EMPERORS_GARDEN_ADRINNA_2
@@ -279,6 +291,14 @@ EmperorsGardenKenseyScene:
 	setevent EVENT_EMPERORS_GARDEN_KENSEY
 	setscene $3
 	end	
+
+PlayerHidesFromKenseyMovement:
+	step_left
+	step_up
+	step_up
+	step_up
+	turn_head_right
+	step_end
 
 EG_Kensey_Text_1:
 	text "Adrinna: We"
@@ -351,12 +371,17 @@ AdrinnaMoves4:
 	step_down
 	step_end
 
-EmperorsGardenAdrinnaScene:
+EmperorsGardenAdrinnaScene: ; todo - revise 
 	showemote EMOTE_HAPPY, EMPERORS_GARDEN_ADRINNA_4, 10
 	turnobject EMPERORS_GARDEN_ADRINNA_4, DOWN
 	turnobject PLAYER, UP
 	showtext EG_AdrinnaText1
 	applymovement EMPERORS_GARDEN_ADRINNA_4, EG_AdrinnaMove3
+	loadtrainer ADRINNA, ADRINNA1 
+	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+	startbattle
+	dontrestartmapmusic
+	reloadmap	
 	showtext EG_AdrinnaText2
 	verbosegivekeyitem SILVER_WING
 	showtext EG_AdrinnaText3
@@ -380,15 +405,25 @@ EG_AdrinnaText1:
 	line "Hopefully just"
 	cont "enjoying the"
 	cont "garden, eh?"
-	para "Don't worry,"
-	line "I'm not going"
-	cont "to squash you."
+
+	para "This garden was"
+	line "shaped from dirt"
+	para "by the vision"
+	line "of an architect"
+	
+	para "I see the dirt"
+	line "on your nails - "
+	
+	para "show me, what"
+	line "is your vision?"
+
 	done
 
 EG_AdrinnaText2:
-	text "No, I'm going"
-	line "to give you a"
+	text "For entertaining"
+	line "me, I offer a"
 	cont "gift."
+	
 	para "Please accept"
 	line "it: I found it"
 	cont "on the ground"
@@ -400,4 +435,87 @@ EG_AdrinnaText3:
 	line "relax, maybe on"
 	cont "the beaches"
 	cont "west of here."
+	done
+
+
+EG_SeedBombMT:
+	faceplayer
+	opentext
+	checkevent EVENT_LISTENED_TO_SEED_BOMB_INTRO
+	iftrue EG_TutorSeedBombScript
+	writetext Text_SeedBombIntro
+	waitbutton
+	setevent EVENT_LISTENED_TO_SEED_BOMB_INTRO
+EG_TutorSeedBombScript:
+	writetext Text_EG_TutorSeedBomb ;;
+	waitbutton
+	checkitem SILVER_LEAF
+	iffalse .NoSilverLeaf
+	writetext Text_EG_TutorQuestion ;;
+	yesorno
+	iffalse .TutorRefused
+	setval SEED_BOMB
+	writetext ClearText
+	special Special_MoveTutor
+	ifequal $0, .TeachMove
+.TutorRefused
+	jumpopenedtext Text_EG_TutorRefused ;; 
+
+.NoSilverLeaf
+	jumpopenedtext Text_EG_TutorNoSilverLeaf
+
+.TeachMove
+	takeitem SILVER_LEAF
+	jumpopenedtext Text_EG_TutorTaught ;;
+	
+Text_SeedBombIntro:
+	text "Whoa, you almost"
+	line "blew me up!"
+	
+	para "Don't you see"
+	line "the spicy seeds"
+	cont "in my hands?"
+	
+	para "When Bobesh asked"
+	line "me to make some"
+	cont "SEED BOMBs for"
+	cont "the army,"
+	
+	para "I knew just what"
+	line "to do."
+	
+	para "These seeds will"
+	line "turn enemies into"
+	cont "ghosts!"
+	done
+	
+Text_EG_TutorSeedBomb:
+	text "Grass #mon"
+	line "use SEED BOMBs"
+	cont "in combat."
+	done
+
+Text_EG_TutorQuestion:
+	text "I could make"
+	line "your #mon"
+	para "seasoned in"
+	line "combat, for a"
+	cont "Silver Leaf."
+	done
+
+Text_EG_TutorNoSilverLeaf:
+	text "Oh, no Silver"
+	line "Leaf? This isn't"
+	cont "a charity!"
+	done
+
+Text_EG_TutorRefused:
+	text "Not everyone can"
+	line "handle the heat."
+	done
+
+Text_EG_TutorTaught:
+	text "There! Now you"
+	line "can used SEED"
+	cont "BOMBs like me!"
 	done

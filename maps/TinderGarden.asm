@@ -376,6 +376,7 @@ CyndaquilPokeBallScript:
 	writetext KurtGreatJobText
 	turnobject TINDER_GARDEN_KURT, RIGHT
 	writetext KurtDontLoseItText
+	waitbutton
 	turnobject TINDER_GARDEN_KURT, DOWN
 	closetext
 	setevent EVENT_KURT_HEARS_LOGGERS
@@ -701,35 +702,34 @@ PryceSprigText:
 	line "lost their flame."
 
 	para "I seek to re-"
-	line "kindle their fire"
-	cont "through wisdom."
+	line "kindle them!"
 	
 	para "Do you know why"
-	line "we perform the"
-	cont "ceremony at the"
+	line "we perform at"
 	cont "blossom trees?"
 	
 	para "Once a year, the"
 	line "fruits emerge and"
 	cont "leaves turn red,"
-	cont "as if the tree"
-	cont "is going down in"
+	
+	para "as if the tree"
+	line "is going down in"
 	cont "flames."
 	
 	para "The tree propa-"
 	line "gates itself as"
-	cont "the fruits and"
-	cont "leaves fall to"
+	para "the fruits and"
+	line "leaves fall to"
 	cont "the ground."
 	
 	para "The next genera-"
 	line "tion of saplings"
 	cont "can rise amidst"
-	cont "their inheritance"
-	cont "of fallen leaves,"
+	para "their inheritance"
+	line "of fallen leaves,"
 	cont "like a phoenix"
-	cont "rising up from"
-	cont "the ashes."
+	para "rising up from"
+	line "the ashes."
 	done
 
 PrycePokemonText:
@@ -806,9 +806,8 @@ RivalIndependentText:
 	text "I can't wait"
 	line "to be more ind-"
 	cont "ependent. No one"
-	cont "seems to apprec-"
-	cont "iate my inve-"
-	cont "ntions."
+	para "appreciates my"
+	line "ingenuity."
 	done
 
 TGRivalChallengeText:
@@ -864,36 +863,18 @@ TGRivalText_YouLost:
 
 TGRivalGoodbyeText:
 	text "With my own"
-	line "#mon, I can"
-	cont "take care of"
-	cont "myself."
-	
-	para "I'm leaving - "
-	line "no one here app-"
-	cont "reciates me!"
+	line "#mon, I'm"
+	cont "leaving."
 	
 	para "My invention could"
 	line "have saved us, if"
-	cont "you, Kurt, hadn't"
-	cont "sabotaged me."
+	para "you, Kurt, hadn't"
+	line "kept me down."
 	
 	para "Who put you in"
 	line "charge, anyway?"
-	done
 
-;TGKurtDismissesText:
-;	text "Kurt: <RIVAL>,"
-;	line "I told you!"
-;	
-;	para "The forest is"
-;	line "too sensitive!"
-;	
-;	para "It needs to stay"
-;	line "under my guidance."
-;
-;	para "I won't hear any"
-;	line "more about this."
-;	done
+	done
 
 
 
@@ -919,15 +900,13 @@ KurtThinksTheyreCuttingTreesText:
 	para "That's against"
 	line "the agreement!"
 	
-	para "<PLAYER>, We"
+	para "<PLAYER>, we"
 	line "need to stop them!"
 	
 	para "Now that you have"
-	line "a #mon to"
-	cont "help you, you can"
-	cont "catch a diverse"
-	cont "team in the areas"
-	cont "east of Azalea."
+	line "a #mon, you"
+	cont "can catch more"
+	cont "around Azaela."
 	
 	para "I will see"
 	line "you in Ilex"
@@ -955,12 +934,9 @@ TGTreeText:
 	
 	para "Its aromatic"
 	line "bark will att-"
-	cont "ract #mon"
-	cont "when it becomes"
-	cont "the shrine."
+	cont "ract #mon."
 	done
 
 CelebiScript:
-	faceplayer
 	end
 	

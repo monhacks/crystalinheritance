@@ -1071,8 +1071,12 @@ KRIS EQU __trainer_class__
 	trainerclass CAITLIN ; 82
 
 	trainerclass BOBESH ; 83 CANDELA
+	const BOBESH1
+	const BOBESH2
 
 	trainerclass ADRINNA ; 84 BLANCHE
+	const ADRINNA1
+	const ADRINNA2
 
 	trainerclass BARBEAU ; 85 SPARK_T
 
@@ -1097,6 +1101,8 @@ KRIS EQU __trainer_class__
 	trainerclass IMAKUNI ; 8f
 
 	trainerclass KENSEY ; 90 lawrence
+	const KENSEY1
+	const KENSEY2
 
 	trainerclass REI ; 91
 

@@ -105,7 +105,7 @@ StadiumGroundsBobeshScene:
 	waitbutton
 	closetext
 	winlosstext BobeshWinText, 0
-	loadtrainer BOBESH, 1
+	loadtrainer BOBESH, BOBESH1
 	startbattle
 	ifequal $1, .Continue2
 .Continue2:
