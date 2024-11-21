@@ -21,6 +21,7 @@ RadioTower2F_MapScriptHeader:
     object_event  8,  4, SPRITE_GENTLEMAN, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerGentlemanPreston, -1
     object_event 13,  4, SPRITE_GENTLEMAN, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerGentlemanEdward, -1
 
+    object_event 16,  6, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, RADIOTOWER_HyperVoiceMT, -1
 
 	object_const_def
 
@@ -121,3 +122,34 @@ GentlemanEdwardAfterText:
     text "Can't stop you"
     line "any more…"
     done
+	
+RADIOTOWER_HyperVoiceMT:
+	faceplayer
+	opentext
+	checkevent EVENT_LISTENED_TO_HYPER_VOICE_INTRO
+	iftrue RADIOTOWER_TutorHyperVoiceScript
+	writetext Text_HyperVoiceIntro
+	waitbutton
+	setevent EVENT_LISTENED_TO_HYPER_VOICE_INTRO
+RADIOTOWER_TutorHyperVoiceScript:
+	writetext Text_RADIOTOWER_TutorHyperVoice ;;
+	waitbutton
+	checkitem SILVER_LEAF
+	iffalse .NoSilverLeaf
+	writetext Text_RADIOTOWER_TutorQuestion ;;
+	yesorno
+	iffalse .TutorRefused
+	setval HYPER_VOICE
+	writetext ClearText
+	special Special_MoveTutor
+	ifequal $0, .TeachMove
+.TutorRefused
+	jumpopenedtext Text_RADIOTOWER_TutorRefused ;; 
+
+.NoSilverLeaf
+	jumpopenedtext Text_RADIOTOWER_TutorNoSilverLeaf
+
+.TeachMove
+	takeitem SILVER_LEAF
+	jumpopenedtext Text_RADIOTOWER_TutorTaught ;;
+	

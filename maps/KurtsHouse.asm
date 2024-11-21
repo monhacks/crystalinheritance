@@ -585,6 +585,7 @@ ShuckieOTIDAndCaughtGender:
 IlexExcelsiorV5Script:
 	opentext
 	writetext WeirdTextKurtsHouse
+	waitbutton
 	closetext
 	unowntypeface
 	showtext IlexExcelsiorV5Text

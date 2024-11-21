@@ -42,33 +42,32 @@ Marts:
 	dw BattleTowerMart3 ; unused
 	assert_table_length NUM_MARTS
 
-CherrygroveMart:
+CherrygroveMart:; UNUSED
 	db 1 ; # items
 	db POTION
 	db -1
 
-CherrygroveMartAfterDex:
+CherrygroveMartAfterDex: ; UNUSED
 	db 1 ; # items
 	db POTION
 	db -1
 	
-BlackthornMart:
+BlackthornMart:; UNUSED
 	db 1 ; # items
 	db POTION
 	db -1
 
 VioletMart:
-	db 10 ; # items
-	db POKE_BALL
-	db REPEAT_BALL
+	db 9 ; # items
+	db RARE_CANDY
 	db MAX_REPEL
+	db SUPER_POTION
+	db GREAT_BALL
 	db ESCAPE_ROPE
 	db ANTIDOTE
 	db PARALYZEHEAL
 	db AWAKENING
-	db X_ATTACK
-	db X_DEFEND
-	db X_SPEED
+	db SILVER_LEAF
 	db -1
 
 AzaleaMart: ;updated
@@ -278,7 +277,7 @@ TradersLandingMart:
 	db -1
 
 AnarresMart:
-	db 10 ; # items
+	db 9 ; # items
 	db RARE_CANDY
 	db MAX_REPEL
 	db CHERI_BERRY
@@ -288,7 +287,6 @@ AnarresMart:
 	db REVIVAL_HERB
 	db ORAN_BERRY 
 	db WHITE_HERB
-	db POKE_BALL
 	db -1
 
 GauldenrodMart1: ; normal items

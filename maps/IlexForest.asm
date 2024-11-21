@@ -45,7 +45,7 @@ IlexForest_MapScriptHeader:
 	tmhmball_event 13, 14, TM_SAFEGUARD, EVENT_ILEX_FOREST_ANTIDOTE
 	itemball_event 19, 16, SUPER_POTION, 1, EVENT_ILEX_FOREST_MULCH;OK
 	fruittree_event 10, 14, FRUITTREE_ILEX_FOREST, SHORE_FOAM, PAL_NPC_BLUE;OK
-	object_event 3, 8, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IlexOfficer2Script, EVENT_SANDRA_WARPED
+	object_event 3, 8, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, IlexOfficer2InvestigationText, EVENT_SANDRA_WARPED
 
 	object_const_def
 	const ILEX_FOREST_KURT
@@ -337,6 +337,11 @@ PlayerMovesBelowKurtMovement:
 KurtText1:
 	text "This place is"
 	line "sacred!"
+	
+	para "You very nearly"
+	line "destroyed this"
+	para "artifact under"
+	line "the shrine!"
 	done
 	
 CamdenMoves1:
@@ -432,16 +437,15 @@ PlayerMovesToShrine:
 
 	
 KurtExplainsGSBallText:
-	text "Only recently were"
-	line "steel types disc-"
-	cont "overed in Johto."
+	text "Only recently did"
+	line "steel types take"
+	cont "over Johto."
 	
-	para "Skarmory and Forr-"
+	para "Skarmory & Forr-"
 	line "etress were so"
-	cont "rare, and magne-"
-	cont "mite migrated from"
-	cont "Kanto as stowaways"
-	cont "in Olivine ships."
+	para "rare, and magne-"
+	line "mite kept near"
+	cont "Olivine Port."
 	
 	para "Now, Silph uses"
 	line "steel types for"
@@ -469,18 +473,19 @@ KurtExplainsGSBallText2:
 	
 	para "It just needs an"
 	line "inscription. If"
-	cont "I had a copy of"
-	cont "ancient writing,"
-	cont "I could restore"
-	cont "it."
+	para "I had a copy of"
+	line "ancient, holy"
+	cont "words, I could"
+	para "restore it to"
+	line "summon Celebi."
 	
 	para "<PLAYER>, you"
 	line "need to go to"
-	cont "the Ruins of"
-	cont "Alph, and then"
+	para "the Ruins of"
+	line "Alph, and then"
 	cont "we can summon"
-	cont "Celebi to go"
-	cont "back in time!"
+	para "Celebi to go"
+	line "back in time!"
 	done
 
 
@@ -817,12 +822,6 @@ IlexKurtBackToIt:
 	line "Are you there?"
 	done
 	
-
-IlexOfficer2Script:
-	opentext
-	writetext IlexOfficer2InvestigationText
-	promptbutton
-	closetext
 
 IlexOfficer2InvestigationText:
 	text "Sorry. Can't"

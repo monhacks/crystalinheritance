@@ -31,7 +31,7 @@ Gauldenrod_MapScriptHeader:
 
 	def_object_events
 	object_event  23, 30, SPRITE_BOBESH, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0,  OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_GAULDENROD_BOBESH
-	pokemon_event 24, 32, OCTILLERY, -1, -1, PAL_NPC_RED, ObjectEvent, EVENT_BEAT_HOLLIS ; DISAPPEARED UNTIL APPEARS
+	pokemon_event 24, 32, OCTILLERY, -1, -1, PAL_NPC_RED, ObjectEvent, EVENT_GAULDENROD_BOBESH ; DISAPPEARED UNTIL APPEARS
 	object_event  23, 33, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PURPLE,  OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_GAULDENROD_BOBESH
 	object_event  24, 33, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_GAULDENROD_BOBESH
 	object_event 31, 24, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GauldenrodNPC1Script, -1
@@ -46,10 +46,11 @@ Gauldenrod_MapScriptHeader:
 	object_event 13,  9, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 2, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GauldenrodNPC6Script, -1
 	object_event 19, 17, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GauldenrodNPC7Script, -1
 	object_event 12, 17, SPRITE_LASS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GauldenrodNPC8Script, -1
+
 	fruittree_event  36, 7, FRUITTREE_GAULDENROD, RADIANT_OPAL, PAL_NPC_RED
 	object_event 23, 4, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BrigaderScript, EVENT_GOT_HM04_STRENGTH
 	object_event 24, 4, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BrigaderScript, EVENT_GOT_HM04_STRENGTH
-	cuttree_event 21, 23, EVENT_HOLLYS_HOLT_CUT_TREE
+
 
 	object_const_def
 	const GAULDENROD_BOBESH
@@ -390,6 +391,7 @@ GauldenrodHisuiTraderNoThanksText:
 	done
 
 GauldenrodBobeshScene: ; todo, make 
+	clearevent EVENT_GAULDENROD_BOBESH
     showemote GAULDENROD_BRIGADER, EMOTE_BOLT, 10
     showtext BrigaderText1
     showtext CindyText1
@@ -411,7 +413,8 @@ GauldenrodBobeshScene: ; todo, make
     showtext BobeshText4
     showtext CindyText5
     showtext BobeshText5
-    showtext CindyText6
+    showtext CindyText6 ; crashed after this 
+	closetext
     applymovement GAULDENROD_BRIGADER, BrigaderTakesCindy
     applymovement GAULDENROD_MATRON, CindyTakenAway
     disappear GAULDENROD_MATRON

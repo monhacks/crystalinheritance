@@ -35,7 +35,7 @@ KimonoCabin1_MapScriptHeader: ; should be like  "BurnedTowerB1F_MapScriptHeader"
 	object_const_def
 	const KIMONO_CABIN_1_DRATINI ;  
 	
-KimonoCabin1Dratini:
+KimonoCabin1Dratini: ; TODO have vera give you the carbos and then warp you back at the end 
 	faceplayer
 	cry DRATINI
 	pause 15
@@ -43,6 +43,7 @@ KimonoCabin1Dratini:
 	startbattle
 	disappear KIMONO_CABIN_1_DRATINI
 	setevent EVENT_KIMONO_CABIN_DRATINI
+	clearevent EVENT_KIMONO_CABIN_MORPHEA_NOTEBOOK
 	reloadmapafterbattle
 	end
 

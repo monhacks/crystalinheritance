@@ -31,6 +31,9 @@ CalmCoastCottageDayCareManText:
 	line "egg, I wonder"
 	cont "what #mon will"
 	cont "come out?"
+	
+	para "Wouldn't that be"
+	line "a Hoot!"
 	done
 
 CalmCoastCottageChildScript:
@@ -39,8 +42,8 @@ CalmCoastCottageChildScript:
 CalmCoastCottageChildText:
 	text "Pidgey kept eat-"
 	line "ing our berries."
-	cont "So my parents"
-	cont "hired a kid"
+	para "So my parents"
+	line "hired a kid"
 	cont "from the city"
 	cont "to guard our"
 	cont "garden."
@@ -92,8 +95,8 @@ SchoolgirlShellBellScript:
 
 SchoolgirlIntroText:
 	text "Hi there! I love"
-	line "going on adventures"
-	cont "with my #mon."
+	line "adventures with"
+	cont "my #mon."
 
 	para "I always keep a"
 	line "little bell on"
@@ -113,8 +116,8 @@ SchoolgirlAfterText:
 
 	para "When your #mon"
 	line "holds it, they'll"
-	cont "recover a bit of"
-	cont "HP when they deal"
+	para "recover a bit of"
+	line "HP when they deal"
 	cont "damage in battle."
 
 	para "It's like they're"

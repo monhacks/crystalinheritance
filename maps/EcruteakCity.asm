@@ -14,7 +14,7 @@ EcruteakCity_MapScriptHeader:
 	warp_event  5, 21, ECRUTEAK_LUGIA_SPEECH_HOUSE, 1
 	warp_event 23, 21, DANCE_THEATRE, 1
 	warp_event 29, 21, ECRUTEAK_MART, 2
-	warp_event  6, 27, ECRUTEAK_GYM, 1
+	warp_event  7, 27, ECRUTEAK_GYM, 1
 	warp_event 13, 27, ECRUTEAK_ITEMFINDER_HOUSE, 1
 	warp_event  5, 17, VALERIES_HOUSE, 1
 	warp_event  5,  5, BURNED_TOWER_1F, 1
@@ -37,11 +37,11 @@ EcruteakCity_MapScriptHeader:
 	bg_event  6,  6, BGEVENT_ITEM + ETHER, EVENT_ECRUTEAK_CITY_HIDDEN_ETHER
 
 	def_object_events
-	object_event 34, 26, SPRITE_HIKER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakCityHikersText, EVENT_BEAT_CHUCK ; done
-	object_event 34, 27, SPRITE_HIKER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakCityHikersText, EVENT_BEAT_CHUCK ; done
+	object_event 34, 26, SPRITE_HIKER, SPRITEMOVEDATA_STANDING_LEFT, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakCityHikersText, EVENT_BEAT_CHUCK ; done
+	object_event 34, 27, SPRITE_HIKER, SPRITEMOVEDATA_STANDING_LEFT, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakCityHikersText, EVENT_BEAT_CHUCK ; done
 	
-	object_event 1, 18, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakCityFarmersText, EVENT_BEAT_CHUCK ; done
-	object_event 1, 19, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakCityFarmersText, EVENT_BEAT_CHUCK ; done
+	object_event 1, 18, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakCityFarmersText, EVENT_BEAT_CHUCK ; done
+	object_event 1, 19, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakCityFarmersText, EVENT_BEAT_CHUCK ; done
 	
 	object_event 24, 22, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakCityGramps1Text, -1 ; done
 	object_event 20, 21, SPRITE_GRAMPS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakCityGramps2Text, -1 ; ok e
@@ -174,14 +174,14 @@ EcruteakCityCuteGirlText:
 	cont "place is!"
 	
 	para "It's great how"
-	cont "the shrine is so"
+	line "the shrine is so"
 	cont "tourist-friendly."
 
 	para "The sages even do"
 	line "photo ops."
 	
 	para "Really brings the"
-	cont "quaint culture "
+	line "quaint culture "
 	cont "into our century!"
 	done
 

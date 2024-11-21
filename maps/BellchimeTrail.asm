@@ -133,14 +133,6 @@ KimonoGirlEmiIntroText:
 	
 	para "Hahaha, so many"
 	line "similarities!"
-
-	para "Eh, you want to"
-	line "know the ending"
-	cont "of the story?"
-
-	para "I'll tell you if"
-	line "you can beat"
-	cont "me!"
 	done
 
 EmiBattleText:

@@ -62,6 +62,8 @@ AnarresTower3FEvent:
 	reloadmapafterbattle ; is tammy still around? 
 	opentext
 	showemote EMOTE_HEART, ANARRES_TOWER_TAMMY, 10
+	applyonemovement ANARRES_TOWER_HOLLIS, step_down
+	turnobject ANARRES_TOWER_HOLLIS, LEFT
 	showtext TammyText2
 ;	waitbutton
 	showemote EMOTE_QUESTION, ANARRES_TOWER_HOLLIS, 10

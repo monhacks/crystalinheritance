@@ -104,9 +104,10 @@ VioletHisuiTraderScript:
 	db "CANCEL@"
 
 VioletHisuiTraderRememberText:
-	text "Heh, thanks for"
-	line "supporting small"
-	cont "business."
+	text "I really miss"
+	line "that #mon, but"
+	cont "I know it was"
+	cont "for the best."
 	done
 
 VioletHisuiTraderText:
@@ -117,12 +118,10 @@ VioletHisuiTraderText:
 	line "#mon from bad"
 	cont "situations, and"
 	cont "can't take care"
-	cont "of them all on"
-	cont "my own."
+	cont "of them all."
 	
-	text "Would you take"
+	para "Would you take"
 	line "one? Please?"
-	
 	done
 
 VioletHisuiTraderDusclopsText:

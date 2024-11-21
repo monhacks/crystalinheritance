@@ -16,7 +16,7 @@ EcruteakCherishBallHouse_MapScriptHeader:
 	object_event  2,  3, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldLeafMotherText, -1
 	object_event  5,  4, SPRITE_RICH_BOY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakGoldLeafScript, -1
 
-EcruteakGoldLeafScript: 
+EcruteakGoldLeafScript: ; this is just wrong 
 	checkevent EVENT_GOT_GOLD_LEAF ;;TO ADD
 	iftrue_jumptextfaceplayer GiveGoldLeafText
 	checkevent EVENT_GAVE_LITEBLUEMAIL

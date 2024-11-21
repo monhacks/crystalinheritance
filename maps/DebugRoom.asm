@@ -495,6 +495,7 @@ BreederText:
 	done
 
 DebugWonderTradeScript: 
+	faceplayer
 	opentext
 	writetext DebugWonderTradeIntroText
 	waitbutton

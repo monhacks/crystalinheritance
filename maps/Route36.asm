@@ -36,6 +36,7 @@ Route36_MapScriptHeader:
 	object_event 23, 14, SPRITE_PICNICKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerPicnickerRoute36, EVENT_BEAT_PICNICKER_GINA ; GINA1
 	object_event 40, 4, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletImmigrantTextRoute36, -1
 	object_event 40, 5, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletImmigrantTextRoute36, -1
+	object_event	 2,	14, 	SPRITE_FIREBREATHER, SPRITEMOVEDATA_SPINRANDOM_FAST, 	0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ROUTE36_SeismicTossMT, -1 ;	
 
 	object_const_def
 	const ROUTE_36_BRONZONG
@@ -331,4 +332,98 @@ VioletImmigrantTextRoute36:
 	line "Violet City is"
 	cont "limited due to"
 	cont "the drought."
+	done
+
+ROUTE36_SeismicTossMT:
+	faceplayer
+	opentext
+	checkevent EVENT_LISTENED_TO_SEISMIC_TOSS_INTRO
+	iftrue ROUTE36_TutorSeismicTossScript
+	writetext Text_SeismicTossIntro
+	waitbutton
+	setevent EVENT_LISTENED_TO_SEISMIC_TOSS_INTRO
+ROUTE36_TutorSeismicTossScript:
+	writetext Text_ROUTE36_TutorSeismicToss ;;
+	waitbutton
+	checkitem SILVER_LEAF
+	iffalse .NoSilverLeaf
+	writetext Text_ROUTE36_TutorQuestion ;;
+	yesorno
+	iffalse .TutorRefused
+	setval SEISMIC_TOSS
+	writetext ClearText
+	special Special_MoveTutor
+	ifequal $0, .TeachMove
+.TutorRefused
+	jumpopenedtext Text_ROUTE36_TutorRefused ;; 
+
+.NoSilverLeaf
+	jumpopenedtext Text_ROUTE36_TutorNoSilverLeaf
+
+.TeachMove
+	takeitem SILVER_LEAF
+	jumpopenedtext Text_ROUTE36_TutorTaught ;;
+	
+Text_SeismicTossIntro:
+	text "(Humming tune to"
+	line "'Hakuna Matata')"
+
+	para "Seismica-Tossa,"
+	line "What a wonderful"
+	cont "move!"
+	
+	para "Seismica-Tossa,"
+	line "When you can"
+	cont "not phaze!"
+	
+	para "It means no wo-"
+	line "rries for the"
+	cont "defense of your"
+	cont "foes,"
+	
+	para "It's a defense-"
+	line "proof, "
+	para "Move I'll teach"
+	line "to you,"
+	
+	para "Seismic-Tossa!"
+	done
+	
+Text_ROUTE36_TutorSeismicToss:
+	text "Seismic Toss. "
+	line "If you're worried"
+	cont "about your foe's"
+	cont "defenses,"
+	
+	para "This move will"
+	line "strike right"
+	cont "through them!"
+	
+Text_ROUTE36_TutorQuestion:
+	text "I'll tutor you,"
+	line "for a Silver"
+	cont "Leaf."
+	done
+
+Text_ROUTE36_TutorNoSilverLeaf:
+	text "Come back with"
+	line "a Silver Leaf."
+	done
+	
+Text_ROUTE36_TutorRefused:
+	text "No worries."
+	done
+
+Text_ROUTE36_TutorTaught:
+	text "It means no wo-"
+	line "rries for the"
+	cont "defense of your"
+	cont "foes,"
+	
+	para "It's a defense-"
+	line "proof, "
+	para "Move I'll teach"
+	line "to you,"
+	
+	para "Seismic-Tossa!"
 	done

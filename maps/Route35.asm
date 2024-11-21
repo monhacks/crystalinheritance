@@ -14,7 +14,7 @@ Route35_MapScriptHeader:
 	def_bg_events
 	bg_event  5,  7, BGEVENT_JUMPTEXT, Route35SignText
 	bg_event 15, 29, BGEVENT_JUMPTEXT, Route35SignText
-	bg_event  4, 11, BGEVENT_ITEM + NUGGET, EVENT_ROUTE_35_HIDDEN_NUGGET
+	bg_event  4, 12, BGEVENT_ITEM + NUGGET, EVENT_ROUTE_35_HIDDEN_NUGGET
 
 	def_object_events
 	object_event  8, 19, SPRITE_CAMPER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerCamperIvan, -1;
@@ -26,6 +26,7 @@ Route35_MapScriptHeader:
 	object_event  9, 10, SPRITE_JUGGLER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerJugglerIrwin, -1
 	fruittree_event  10, 26, FRUITTREE_ROUTE_35, SHORE_FOAM, PAL_NPC_BLUE
 	tmhmball_event 11, 11, TM_DRAIN_PUNCH, EVENT_GOT_TM_DRAIN_PUNCH
+	object_event	 4,	11, 	SPRITE_BREEDER, SPRITEMOVEDATA_STANDING_DOWN, 	0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ROUTE35_BodySlamMT, -1 ;	
 
 GenericTrainerCamperIvan:
 	generictrainer CAMPER, IVAN, EVENT_BEAT_CAMPER_IVAN, CamperIvanSeenText, CamperIvanBeatenText
@@ -185,4 +186,82 @@ JugglerIrwin1BeatenText:
 Route35SignText:
 	text "Route 35"
 	done
+	
+	
+ROUTE35_BodySlamMT:
+	faceplayer
+	opentext
+	checkevent EVENT_LISTENED_TO_BODY_SLAM_INTRO
+	iftrue ROUTE35_TutorBodySlamScript
+	writetext Text_BodySlamIntro
+	waitbutton
+	setevent EVENT_LISTENED_TO_BODY_SLAM_INTRO
+ROUTE35_TutorBodySlamScript:
+	writetext Text_ROUTE35_TutorBodySlam ;;
+	waitbutton
+	writetext Text_ROUTE35_TutorQuestion ;;
+	yesorno
+	iffalse .TutorRefused
+	setval BODY_SLAM
+	writetext ClearText
+	special Special_MoveTutor
+	ifequal $0, .TeachMove
+.TutorRefused
+	jumpopenedtext Text_ROUTE35_TutorRefused ;; 
+
+.TeachMove
+	jumpopenedtext Text_ROUTE35_TutorTaught ;;
+	
+Text_BodySlamIntro:
+	text "TUSCANY: Hi!"
+	line "I'm Tuscany of"
+	cont "Tuesday."
+		
+	para "Have you come"
+	line "to escape the"
+	cont "bustle of"
+	cont "Goldenrod?"
+	
+	para "My technique will"
+	line "leave your mind"
+	cont "and body still."
+	
+	para "It's a smother-"
+	line "ing BODY SLAM!"
+	done
+	
+
+Text_ROUTE35_TutorBodySlam:
+	text "My special relax-"
+	line "ation technique"
+	para "can be learned"
+	line "by some #mon,"
+	para "if you want your"
+	line "worries cocooned"
+	para "where they can't"
+	line "bother you."
+	done
+
+Text_ROUTE35_TutorQuestion:
+	text "Would you like"
+	line "me to teach it"
+	cont "to a #mon?"
+	done
+
+Text_ROUTE35_TutorRefused:
+	text "Just come find"
+	line "me when life"
+	para "is moving too"
+	line "fast!"
+	done
+
+
+Text_ROUTE35_TutorTaught:
+	text "There! Now you"
+	line "have the power"
+	para "to Body Slam"
+	line "your problems!"
+	done
+	
+	
 	

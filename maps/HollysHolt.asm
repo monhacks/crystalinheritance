@@ -3,7 +3,7 @@ HollysHolt_MapScriptHeader:
 	scene_script HollysHoltTrigger
 
 	def_callbacks
-
+; PINECOS 
 
 	def_warp_events 
 	warp_event  7, 44, ANARRES_HOLT_GATE, 3
@@ -24,6 +24,7 @@ HollysHolt_MapScriptHeader:
 	bg_event 16,  2, BGEVENT_ITEM + REVIVAL_HERB, EVENT_HOLLYS_HOLT_HIDDEN_REVIVAL_HERB ;ok
 	bg_event 10, 24, BGEVENT_READ, HollysHoltShrineScript 
 	bg_event 23, 43, BGEVENT_JUMPTEXT, HH_Sign3Text
+;	bg_event  0,  0, BGEVENT_READ, PinecoHeadbuttScript1  
 
 	def_object_events
 	object_event  9, 25, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, HollysHoltKurtScript, -1;EVENT_BEAT_HOLLIS ;todo add this 
@@ -452,3 +453,38 @@ HH_Sign3Text:
 	line "runaways here!"
 
 	done
+
+;PinecoHeadbuttScript1:
+;	ld d, HEADBUTT
+;	call CheckPartyMove
+;	jr c, NoHeadbutt
+;	showtext HeadbuttThisTreeText
+;	yesorno
+;	iffalse NoHeadbutt
+;	cry PINECO
+;	pause 15
+;	loadwildmon PINECO, 5
+;	startbattle
+;	changemapblock 0, 0, $00
+;	setevent EVENT_HOLT_PINECO_1
+;	reloadmapafterbattle
+;	end
+;	
+;NoHeadbutt
+;	showtext NotHeadbuttingText
+;	closetext
+;	end
+
+;HeadbuttThisTreeText:
+;	text "This pineco is"
+;	line "overwhelming the"
+;	cont "tree."
+;	
+;	para "Headbutt it?"
+;	done
+;
+;NotHeadbuttingText:
+;	text "Pineco dangles"
+;	line "precariously"
+;	cont "from a branch."
+;	done

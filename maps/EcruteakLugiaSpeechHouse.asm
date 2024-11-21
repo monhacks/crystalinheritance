@@ -82,7 +82,7 @@ Text_DreamEaterIntro:
 	cont "the theatre,"
 	
 	para "when I see my"
-	cont "peers dancing."
+	line "peers dancing."
 
 	para "You have one too,"
 	line "don't you?"

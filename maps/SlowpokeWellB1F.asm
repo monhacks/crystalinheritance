@@ -43,6 +43,7 @@ SlowpokeWellB1FGuardScript:
 	turnobject PLAYER, UP
 	applymovement SLOWPOKE_WELL_B1F_SCHOOLBOY, MovesAsideMovement
 	setevent SLOWPOKE_WELL_MOVED_ASIDE
+	clearevent EVENT_TALKED_TO_PRYCE_TINDER_GARDEN 
 	end
 
 .MovedAside:

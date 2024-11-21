@@ -5,7 +5,7 @@ SproutTower3F_MapScriptHeader:
 	callback MAPCALLBACK_OBJECTS, SproutTower3FTrainer
 
 	def_warp_events
-	warp_event  8, 14, SPROUT_TOWER_2F, 4
+	warp_event  8, 14, SPROUT_TOWER_2F, 2
 
 	def_coord_events
 

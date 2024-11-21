@@ -66,8 +66,8 @@ HollisExitMovement:
 TammyDialogue1:
 	text "Tammy: Hollis,"
 	line "don't you see? The"
-	cont "Pineco are getting"
-	cont "worse and worse."
+	cont "Pineco get worse"
+	cont "and worse."
 	done
 
 HollisDialogue1:
@@ -82,9 +82,9 @@ HollisDialogue1:
 	done
 
 TammyDialogue2:
-	text "Tammy: The mistake"
-	line "you're making is"
-	cont "not adapting!"
+	text "Tammy: The mist-"
+	line "ask is not"
+	cont "adapting!"
 
 	para "Just admit your"
 	line "mistake. You're"
@@ -93,7 +93,7 @@ TammyDialogue2:
 	done
 
 HollisDialogue2:
-	text "HOLLIS: Such"
+	text "Hollis: Such"
 	line "disrespect!"
 	done
 

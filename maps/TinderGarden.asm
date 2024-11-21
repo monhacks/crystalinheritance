@@ -3,7 +3,7 @@ TinderGarden_MapScriptHeader: ;todo something weird happens when I stand to the 
 	scene_script CelebiCeremonyIntroScript
 
 	def_callbacks
-	callback MAPCALLBACK_OBJECTS, TinderGardenPryceIsLate
+
 	
 	def_warp_events
 	warp_event  4, 17, AZALEA_TOWN, 9
@@ -45,18 +45,6 @@ TinderGarden_MapScriptHeader: ;todo something weird happens when I stand to the 
 	const TINDER_GARDEN_POKE_BALL3	
 	const TINDER_GARDEN_CELEBI
 	const TINDER_GARDEN_PRYCE
-
-TinderGardenPryceIsLate: ; pryce should not be here until after you have talked to slowpoke well guy
-	checkevent SLOWPOKE_WELL_MOVED_ASIDE
-	iffalse .PryceDisappears
-	checkevent EVENT_TALKED_TO_PRYCE_TINDER_GARDEN
-	iftrue .PryceDisappears
-	appear TINDER_GARDEN_PRYCE
-	endcallback
-	
-.PryceDisappears:
-	disappear TINDER_GARDEN_PRYCE
-	endcallback
 
 CelebiCeremonyIntroScript:
 	sdefer .Script
