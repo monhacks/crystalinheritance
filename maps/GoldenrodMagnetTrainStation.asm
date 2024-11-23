@@ -22,6 +22,8 @@ GoldenrodMagnetTrainStation_MapScriptHeader:
 	object_event  6, 13, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GoldenrodMagnetTrainStationCooltrainerf1Script, -1
 	object_event  7, 13, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GoldenrodMagnetTrainStationCooltrainerf2Script, -1
 	itemball_event 5,  2, MAGNET, 1, EVENT_MAGNET_TRAIN_MAGNET
+	object_event  6, 16, SPRITE_SCIENTIST, SPRITEMOVEDATA_WANDER, 2, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, MagnetTrainFixedChargeScript, -1
+
 
 	object_const_def
 	const STATION_GENTLEMAN
@@ -97,3 +99,58 @@ GoldenrodMagnetTrainStationCooltrainerf2Text:
     cont "unsafe."
     done
 	
+
+MagnetTrainFixedChargeScript:
+	faceplayer
+	opentext
+	writetext PearlForFixedChargeText ;;
+	waitbutton
+	checkitem BIG_PEARL
+	iffalse .NoBigPearl
+	writetext PearlForFixedChargeQuestionText ;;
+	yesorno
+	iffalse .NoBigPearl
+	takeitem BIG_PEARL
+	giveapricorn FIXED_CHARGE, 5 ; ez mode
+	jumpopenedtext PearlForFixedChargeEndText ;;
+
+.NoBigPearl
+	jumpopenedtext NoPearlForFixedChargeText ;;
+
+PearlForFixedChargeText:
+	text "What am I doing?"
+	line "I'm cleaning the"
+	cont "Magnet Train of"
+	
+	para "Fixed Charges."
+	line "Without me, the"
+	cont "magnetic fields"
+	para "between the train"
+	line "and the tracks"
+	cont "would be screened"
+	para "out, so the train"
+	line "would crash!"
+
+	done
+
+PearlForFixedChargeQuestionText:
+	text "I'm supposed to"
+	line "recycle them, "
+	para "but I would "
+	line "trade them for"
+	cont "a BIG PEARL."
+	done
+
+PearlForFixedChargeEndText:
+	text "<PLAYER> got 5"
+	line "FIXED CHARGE."
+	
+	para "Oh, your hair is"
+	line "standing up!"
+	done
+
+NoPearlForFixedChargeText:
+	text "You can find big"
+	line "pearls just by "
+	cont "fishing anywhere."
+	done

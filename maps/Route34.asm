@@ -35,6 +35,7 @@ Route34_MapScriptHeader:
 	itemball_event  7, 30, NUGGET, 1, EVENT_ROUTE_34_NUGGET
 	object_event 14, 18, SPRITE_DAYCARE_MON_1, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DayCareMon1Script, EVENT_DAYCARE_MON_1
 	object_event 17, 19, SPRITE_DAYCARE_MON_2, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DayCareMon2Script, EVENT_DAYCARE_MON_2
+	object_event  6,  9, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route34ShoreFoamScript, -1 ; apricorn trader 
 
 	object_const_def
 	const ROUTE34_RICH_BOY
@@ -449,4 +450,67 @@ PokefanmBrandonSeenText:
 PokefanmBrandonBeatenText:
     text "Suspicious indeed!"
     done
+
+
+Route34ShoreFoamScript:
+	faceplayer
+	opentext
+	writetext PearlForShoreFoamText ;;
+	waitbutton
+	checkitem BIG_PEARL
+	iffalse .NoBigPearl
+	writetext PearlForShoreFoamQuestionText ;;
+	yesorno
+	iffalse .NoBigPearl
+	takeitem BIG_PEARL
+	giveapricorn SHORE_FOAM, 5 ; ez mode
+	jumpopenedtext PearlForShoreFoamEndText ;;
+
+.NoBigPearl
+	jumpopenedtext NoPearlForShoreFoamText ;;
+
+PearlForShoreFoamText:
+	text "I've made an ama-"
+	line "zing discovery."
 	
+	para "The shore foam"
+	line "around here is"
+	cont "high in aquatic"
+	
+	para "protein, which"
+	line "allows it to be"
+	cont "whipped into a"
+	
+	para "sturdy structure,"
+	line "due to the energy"
+	cont "imparted on it"
+	cont "by the waves."
+	
+	para "It's just like"
+	line "homemade whipped"
+	cont "cream!"	
+	done
+
+PearlForShoreFoamQuestionText:
+	text "I've collected a"
+	line "few samples, if"
+	cont "you want some."
+	
+	para "All I ask is a"
+	line "BIG PEARL."
+	done
+
+PearlForShoreFoamEndText:
+	text "<PLAYER> got 5"
+	line "SHORE FOAM."
+	
+	para "Science is ever-"
+	line "ywhere, if you"
+	cont "look closely!"
+	done
+
+NoPearlForShoreFoamText:
+	text "You can find big"
+	line "pearls just by "
+	cont "fishing anywhere."
+	done

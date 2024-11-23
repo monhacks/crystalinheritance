@@ -48,6 +48,7 @@ RouteKajo_MapScriptHeader: ; trainer parties, check warps
 	itemball_event 32,  6, ETHER, 1, EVENT_KAJO_ETHER ;ok
 	itemball_event 33, 15, ELIXIR, 1, EVENT_KAJO_ELIXIR ;ok
 	tmhmball_event 50,  1, TM_STEEL_WING, EVENT_GOT_TM47_STEEL_WING ; ok 
+    object_event 16, 30, SPRITE_HIKER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, RouteKajoHollowRockScript, -1
 
 	object_const_def
 	const KAJO_SCHOOLGIRL
@@ -282,3 +283,70 @@ RouteKajoCabinSign:
 	para "Weary travelers"
 	line "welcome"	
     done
+
+RouteKajoHollowRockScript:
+	faceplayer
+	opentext
+	writetext PearlForHollowRockText ;;
+	waitbutton
+	checkitem BIG_PEARL
+	iffalse .NoBigPearl
+	writetext PearlForHollowRockQuestionText ;;
+	yesorno
+	iffalse .NoBigPearl
+	takeitem BIG_PEARL
+	giveapricorn GEODE, 5 ; ez mode
+	jumpopenedtext PearlForHollowRockEndText ;;
+
+.NoBigPearl
+	jumpopenedtext NoPearlForHollowRockText ;;
+
+PearlForHollowRockText:
+	text "Not many people"
+	line "know, but Johto"
+	cont "used to be very"
+	para "active, volcanic-"
+	line "ally speaking."
+	
+	para "The igneous rocks"
+	line "uncovered by the"
+	cont "railroad tunnel"
+	para "are irrefutable"
+	line "proof!"
+	
+	para "Take this Hollow"
+	line "Rock. It's proof"
+	cont "that geologic"
+	para "soup bubbled to"
+	line "the surface, and"
+	para "its dissolved gas"
+	line "made a perfect"
+	para "spherical cavity"
+	line "when it cooled."
+
+	done
+
+PearlForHollowRockQuestionText:
+	text "If I was a rock"
+	line "type #mon, I"
+	cont "would love to"
+	para "live in these."
+	line "I'll trade you"
+	cont "some of mine for"
+	cont "a BIG PEARL."	
+	done
+
+PearlForHollowRockEndText:
+	text "<PLAYER> got 5"
+	line "HOLLOW ROCK."
+	
+	para "The story of the"
+	line "Earth's past is"
+	cont "written in stone!"
+	done
+
+NoPearlForHollowRockText:
+	text "You can find big"
+	line "pearls just by "
+	cont "fishing anywhere."
+	done

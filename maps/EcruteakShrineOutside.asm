@@ -22,6 +22,8 @@ EcruteakShrineOutside_MapScriptHeader:
 	object_event  5,  4, SPRITE_FISHING_GURU, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, EcruteakPhotoStudioFishingGuruScript, -1
 	object_event  8, 10, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, pokemart, MARTTYPE_STANDARD, MART_ECRUTEAK_BATTLE, -1
 	object_event  6, 10, SPRITE_SCHOOLGIRL, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakShrineOutsideSchoolGirlText, -1
+	object_event  2,  4, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, EcruteakShrineRadiantOpalScript, -1 ; apricorn trader 
+
 
 EcruteakShrineOutsideTwinText: ;TODO FIX THIS
 	text "My #mon's"
@@ -157,4 +159,60 @@ EcruteakShrineOutsideSchoolGirlText:
 	line "and a cool battle"
 	cont "item to remember"
 	cont "my time here!"
+	done
+
+EcruteakShrineRadiantOpalScript:
+	faceplayer
+	opentext
+	writetext PearlForRadiantOpalText ;;
+	waitbutton
+	checkitem BIG_PEARL
+	iffalse .NoBigPearl
+	writetext PearlForRadiantOpalQuestionText ;;
+	yesorno
+	iffalse .NoBigPearl
+	takeitem BIG_PEARL
+	giveapricorn RADIANT_OPAL, 5 ; ez mode
+	jumpopenedtext PearlForRadiantOpalEndText ;;
+
+.NoBigPearl
+	jumpopenedtext NoPearlForRadiantOpalText ;;
+
+PearlForRadiantOpalText:
+	text "I practice the"
+	line "ancient art of"
+	cont "alchemy!"
+	
+	para "You know those"
+	line "machines at am-"
+	cont "usement parks"
+	para "that turn coins"
+	line "into tokens?"
+	
+	para "Same, but I turn"
+	line "BIG PEARLs into"
+	cont "Radiant Opals."
+	done
+
+PearlForRadiantOpalQuestionText:
+	text "Would you like"
+	line "me to do so, as"
+	cont "a souvenir of"
+	para "your time in "
+	line "Ecruteak?"
+	done
+
+PearlForRadiantOpalEndText:
+	text "<PLAYER> got 5"
+	line "RADIANT OPAL."
+	para "Enjoy your stay,"
+	line "and buy more "
+	cont "merchandise to"
+	para "support the"
+	line "temple!"
+	done
+
+NoPearlForRadiantOpalText:
+	text "Oh, you don't"
+	line "have any."
 	done

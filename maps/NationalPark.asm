@@ -34,6 +34,7 @@ NationalPark_MapScriptHeader:
 	itemball_event 37, 12, SHINY_STONE, 1, EVENT_NATIONAL_PARK_SHINY_STONE
 	itemball_event 37, 21, DESTINY_KNOT, 1, EVENT_NATIONAL_PARK_DESTINY_KNOT
 	tmhmball_event  3, 43, TM_DIG, EVENT_NATIONAL_PARK_TM_DIG
+    object_event 20, 44, SPRITE_POKEFAN_F, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, NationalParkWhtApricornScript, -1
 
 NationalParkTeacher1Script:
 	faceplayer
@@ -517,4 +518,51 @@ ThirstyCamperGivingBrickPieceText:
 	para "Looks like it was"
 	line "part of a stru-"
 	cont "cture long ago."
+	done
+
+;;;
+NationalParkWhtApricornScript:
+	faceplayer
+	opentext
+	writetext PearlForWhtApricornText ;;
+	waitbutton
+	checkitem BIG_PEARL
+	iffalse .NoBigPearl
+	writetext PearlForWhtApricornQuestionText ;;
+	yesorno
+	iffalse .NoBigPearl
+	takeitem BIG_PEARL
+	giveapricorn WHT_APRICORN, 5 ; ez mode
+	jumpopenedtext PearlForWhtApricornEndText ;;
+
+.NoBigPearl
+	jumpopenedtext NoPearlForWhtApricornText ;;
+
+PearlForWhtApricornText:
+	text "I wanted to make"
+	line "pearl jewelry, "
+	cont "but all I have"
+	para "are these white"
+	line "apricorns."
+	done
+
+PearlForWhtApricornQuestionText:
+	text "Do you have a"
+	line "big pearl? I'll"
+	cont "trade you!"
+	done
+
+PearlForWhtApricornEndText:
+	text "<PLAYER> got 5"
+	line "WHT APRICORN."
+	
+	para "Thanks! Now I "
+	line "can make my "
+	cont "jewelry!"
+	done
+
+NoPearlForWhtApricornText:
+	text "You can find big"
+	line "pearls just by "
+	cont "fishing anywhere."
 	done

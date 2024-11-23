@@ -153,3 +153,61 @@ RADIOTOWER_TutorHyperVoiceScript:
 	takeitem SILVER_LEAF
 	jumpopenedtext Text_RADIOTOWER_TutorTaught ;;
 	
+Text_HyperVoiceIntro:
+	text "Zieg: Finally!"
+	line "A NEW CRISIS!"
+	para "Do you know how"
+	line "many WEEKS I've"
+	para "talked up those"
+	line "Blackthorn separ-"
+	cont "atists?"
+	
+	para "Ratings were"
+	line "PLUMMETING!"
+	
+	para "Thank Arceus."
+	done
+
+
+Text_RADIOTOWER_TutorHyperVoice:
+	text "My producer says"
+	line "Zieg - just keep"
+	cont "talking. Higher"
+	
+	para "blood pressure,"
+	line "higher ratings."
+	
+	para "They don't even"
+	line "care what I say-"
+	para "just keep 'em "
+	line "through the ad"
+	cont "breaks."
+
+	para "It's a learned"
+	line "skill, using a"
+	cont "HYPER VOICE."
+	
+	para "I'll show you for"
+	line "a Silver Leaf."
+	done
+	
+Text_RADIOTOWER_TutorNoSilverLeaf:
+	text "Eh? No leaf,"
+	line "no dice."
+	done
+	
+Text_RADIOTOWER_TutorQuestion:
+	text "Whaddya say?"
+	line "Join the prest-"
+	cont "igious ranks of"
+	cont "talk radio?"
+	done
+
+Text_RADIOTOWER_TutorRefused:
+	text "Suit yourself."
+	done
+
+Text_RADIOTOWER_TutorTaught:
+	text "That hyper voice"
+	line "will break thru!"
+	done

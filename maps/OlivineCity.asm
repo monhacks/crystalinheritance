@@ -49,6 +49,9 @@ OlivineCity_MapScriptHeader:
 	smashrock_event 52, 23
 	smashrock_event 55, 26
 
+    object_event 19, 20, SPRITE_POKEFAN_F, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OlivineCityPnkApricornScript, -1
+
+
 	object_const_def
 	const OLIVINECITY_OLIVINE_RIVAL
 
@@ -401,4 +404,62 @@ OlivineCityPokeathlonDomeSignText:
 
 OlivineCityCafeSignText:
 	text "Olivine Café"
+	done
+
+;;;
+OlivineCityPnkApricornScript:
+	faceplayer
+	opentext
+	writetext PearlForPnkApricornText ;;
+	waitbutton
+	checkitem BIG_PEARL
+	iffalse .NoBigPearl
+	writetext PearlForPnkApricornQuestionText ;;
+	yesorno
+	iffalse .NoBigPearl
+	takeitem BIG_PEARL
+	giveapricorn PNK_APRICORN, 5 ; ez mode
+	jumpopenedtext PearlForPnkApricornEndText ;;
+
+.NoBigPearl
+	jumpopenedtext NoPearlForPnkApricornText ;;
+
+PearlForPnkApricornText:
+	text "I tried to grow"
+	line "a peach tree in"
+	cont "my backyard,"
+	
+	para "but it was a-"
+	line "useless Pink"
+	cont "Apricorn tree!"
+
+	para "I can't eat those."
+	line "I want to eat a"
+	cont "BIG Boba pearl."
+
+	done
+
+PearlForPnkApricornQuestionText:
+	text "Please trade me,"
+	line "I can't eat these"
+	cont "apricorns!"
+	
+	para "A big boba pearl"
+	line "sounds so good,"
+	cont "here on the dock."
+	done
+
+PearlForPnkApricornEndText:
+	text "<PLAYER> got 5"
+	line "PNK APRICORN."
+	
+	para "Thanks! Hey,"
+	line "this isn't a"
+	cont "boba pearl!"
+	done
+
+NoPearlForPnkApricornText:
+	text "You don't have"
+	line "it? Guess I'll"
+	cont "stay hungry."
 	done
