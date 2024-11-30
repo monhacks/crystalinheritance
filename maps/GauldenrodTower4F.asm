@@ -16,9 +16,11 @@ GauldenrodTower4F_MapScriptHeader:
 	def_object_events
 	object_event   5,  2, SPRITE_SANDRA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GauldenrodTower4FSandraScript, EVENT_BEAT_SANDRA
 	object_event  10,  2, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_SANDRA
-	object_event   1,  7, SPRITE_AMOS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_HOLLIS
+	object_event   1,  7, SPRITE_AMOS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_GAULDENROD_AMOS ; initialize this
 	pokemon_event  6,  2, CLEFAIRY, -1, -1, PAL_NPC_RED, GauldenrodClefairyText, EVENT_BEAT_SANDRA
+	object_event   1,  7, SPRITE_ADRINNA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_GAULDENROD_ADRINNA ; initialize this
 	tmhmball_event 5,  1, TM_ROOST, EVENT_TM_ROOST
+; new 
 
 
 	object_const_def
@@ -26,7 +28,7 @@ GauldenrodTower4F_MapScriptHeader:
 	const GAULDENRODTOWER4F_BRIGADER
 	const GAULDENRODTOWER4F_AMOS
 	const GAULDENRODTOWER4F_CLEFAIRY
-
+	const GAULDENRODTOWER4F_ADRINNA
 
 GauldenrodTower4FSandraScript:
 	faceplayer
@@ -65,7 +67,19 @@ GauldenrodTower4FSandraScript:
 	applymovement GAULDENRODTOWER4F_BRIGADER, BrigaderLeaveMovement2
 	pause 15
 	appear GAULDENRODTOWER4F_AMOS;, AmosMovement1
-	applymovement GAULDENRODTOWER4F_AMOS, AmosEnterMovement
+	applymovement GAULDENRODTOWER4F_AMOS, AmosEnterMovement1
+; inserting this 
+	showemote EMOTE_SHOCK, PLAYER, 15
+	applyonemovement GAULDENRODTOWER4F_ADRINNA, teleport_to ; APPEAR 
+	opentext
+	writetext AdrinnaGauldenrodTowerText
+	waitbutton
+	verbosegivetmhm HM_STRENGTH
+	closetext
+	applyonemovement GAULDENRODTOWER4F_ADRINNA, teleport_from ; APPEAR
+	disappear GAULDENRODTOWER4F_ADRINNA
+	applymovement GAULDENRODTOWER4F_AMOS, AmosEnterMovement2
+;;
 	turnobject PLAYER, LEFT
 	opentext
 	writetext AmosText
@@ -262,11 +276,14 @@ AmosMovement1:
 	step_left	
 	step_end
 
-AmosEnterMovement:
+AmosEnterMovement1:
 	step_up
 	step_up
 	step_up	
 	step_up
+	step_end
+
+AmosEnterMovement2:
 	step_up
 	step_right	
 	step_right
@@ -286,3 +303,35 @@ GauldenrodClefairyText:
 	text "Supernova:"
 	line "Shammoo!"
 	done
+
+AdrinnaGauldenrodTowerText:
+	text "Adrinna: So you're"
+	line "the one my bird-"
+	cont "ies are all"
+	cont "worked up over."
+
+	para "Don't be alarmed,"
+	line "I'm not here to"
+	cont "fight."
+
+	para "My name is Gen-"
+	line "eral Adrinna."
+	
+	para "What do you th-"
+	line "ink of Bobesh's"
+	cont "stadium?"
+	
+	para "Hm, do you ever"
+	line "see the strong-"
+	cont "est trainers"
+	cont "watching it?"
+	
+	para "You look like a"
+	line "strong trainer."
+	cont "This might be"
+	cont "of use to you."
+	done
+	
+	
+	
+	

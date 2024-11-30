@@ -139,38 +139,30 @@ StadiumBoxKurtScript:
 	end
 
 AdrinnaDialogueStadium:
-	text "<PLAYER>-"
-	line "I've been watching"
-	cont "you. I'm General"
-	cont "Adrinna."
-
-	para "Don't be alarmed,"
-	line "I'm not here to"
-	cont "fight."
-
-	para "Your victory over"
-	line "Bobesh was..."
+	text "Adrinna:"
+	line "Your victory over"
+	cont "Bobesh was..."
 	cont "extraordinary."
 
 	para "You achieved it"
 	line "through your own"
 	cont "merit, not relying"
-	cont "on those subpar"
-	cont "minds cowering"
+	para "on those subpar"
+	line "minds cowering"
 	cont "below."
 
 	para "I see in you the"
 	line "potential for"
 	cont "greatness,"
-	cont "unburdened by the"
-	cont "misguided ideal of"
+	para "unburdened by the"
+	line "misguided ideal of"
 	cont "self-sacrifice."
 
 	para "Remember, <PLAYER>:"
 	line "The world is full"
 	cont "of unrealized"
-	cont "potential, waiting"
-	cont "for those with the"
+	para "potential, waiting"
+	line "for those with the"
 	cont "will to seize it."
 
 	para "I'll be observing"

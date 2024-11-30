@@ -1620,9 +1620,9 @@ YoungsterGroup:
 	db "Warren@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 12, TANGELA
-	db 13, MAREEP
-	db 14, NATU
+	db 10, TANGELA
+	db 11, MAREEP
+	db 12, NATU
 	db -1 ; end
 
 ; ================
@@ -1631,9 +1631,9 @@ YoungsterGroup:
 	db "Jimmy@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 13, CYNDAQUIL
-	db 13, EKANS
-	db 10, DIGLETT
+	db 10, CYNDAQUIL
+	db 10, EKANS
+	db 12, DIGLETT
 	db -1 ; end
 
 ; ================
@@ -3286,9 +3286,9 @@ HikerGroup:
 	db "Parry@" ; union cave
 	db TRAINERTYPE_NORMAL
 	; party
+	db 4, GEODUDE
 	db 5, GEODUDE
-	db 6, GEODUDE
-	db 7, ONIX
+	db 6, ONIX
 	db -1 ; end
 
 ; ================
@@ -3321,7 +3321,7 @@ HikerGroup:
 	db "Russell@" ; union cave
 	db TRAINERTYPE_NORMAL
 	; party
-	db 6, ONIX
+	db 5, ONIX
 	db 6, RHYHORN
 	db 6, MACHOP
 	db -1 ; end
@@ -3332,9 +3332,9 @@ HikerGroup:
 	db "Phillip@" ; union cave
 	db TRAINERTYPE_NORMAL
 	; party
-	db 7, RHYHORN
-	db 7, MACHOP
-	db 8, WOOPER
+	db 4, RHYHORN
+	db 5, MACHOP
+	db 6, WOOPER
 	db -1 ; end
 
 ; ================
@@ -5368,8 +5368,8 @@ FirebreatherGroup:
 	db "Otis@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 8, MAGMAR
-	db 9, PONYTA
+	db 6, MAGMAR
+	db 7, PONYTA
 	db -1 ; end
 
 ; ================
@@ -5432,9 +5432,9 @@ FirebreatherGroup:
 	db "Ray@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 6, GROWLITHE
-	db 6, CYNDAQUIL
-	db 6, GRIMER
+	db 5, GROWLITHE
+	db 5, CYNDAQUIL
+	db 5, GRIMER
 	db -1 ; end
 
 ; ================
@@ -8350,8 +8350,8 @@ BattleGirlGroup:
 	db "Subaru@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 14, OSHAWOTT
-	db 16, DEWOTT
+	db 12, OSHAWOTT
+	db 14, DEWOTT
 	db -1 ; end
 
 ; ================
@@ -8360,8 +8360,8 @@ BattleGirlGroup:
 	db "Diane@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 14, MARILL
-	db 16, AZUMARILL
+	db 10, MARILL
+	db 12, AZUMARILL
 	db -1 ; end
 
 ; ================
@@ -8370,8 +8370,8 @@ BattleGirlGroup:
 	db "Kagami@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 13, POLIWAG
-	db 14, POLIWHIRL
+	db 11, POLIWAG
+	db 15, POLIWHIRL
 	db 15, POLIWRATH
 	db -1 ; end
 
@@ -9281,11 +9281,11 @@ CooltrainerMGroup:
 	db "Gaven@"
 	db TRAINERTYPE_MOVES
 	; party
-	db 13, FLAREON
+	db 12, FLAREON
 		db SUNNY_DAY, EMBER, QUICK_ATTACK, GROWTH
-	db 13, GLOOM
+	db 12, GLOOM
 		db GROWTH, ABSORB, POISONPOWDER, ACID
-	db 13, LUXIO
+	db 12, LUXIO
 		db THUNDER_WAVE, THUNDERSHOCK, BITE, NO_MOVE	
 	db -1 ; end
 

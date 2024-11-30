@@ -16,7 +16,7 @@ VioletPokeCenter1F_MapScriptHeader:
 	pc_nurse_event  5, 1
 	object_event  9,  4, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletPokeCenter1FGameboyKidText, -1
 	object_event  2,  4, SPRITE_GENTLEMAN, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletPokeCenter1FGentlemanText, -1
-
+	object_event  9,  6, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, IlexExcelsiorV6Script, -1
 
 	object_const_def
 
@@ -51,4 +51,33 @@ VioletPokeCenter1FGentlemanText:
 	cont "in the muck."
 	para "You should check"
 	line "for yourself."
+	done
+
+
+IlexExcelsiorV6Script:
+	opentext
+	writetext WeirdTextVioletCenter
+	closetext
+	unowntypeface
+	showtext IlexExcelsiorV6Text
+	restoretypeface
+	special MapCallbackSprites_LoadUsedSpritesGFX
+	end
+
+WeirdTextVioletCenter:
+	text "Hm? What's this"
+	line "weird pamphlet?"
+	done
+
+IlexExcelsiorV6Text:
+	text "Ilex Excelsior"
+	
+	para "When the tree"
+	line "rings, will"
+	cont "you answer"
+	
+	para "Sixth Edition"
+
+	para "Falkner tower"
+	line "clouds views"
 	done

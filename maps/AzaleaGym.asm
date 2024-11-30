@@ -55,29 +55,34 @@ WarpingDebugText:
 AzaleaGymBugsyScript:
 	checkevent EVENT_BEAT_BUGSY
 	iftrue_jumptextfaceplayer .AfterText
-	checkevent EVENT_SAW_KLEAVOR
-	iftrue .BattleBugsy
+	faceplayer
+	opentext
+	writetext BranchedEvoText
+	waitbutton
 	checkevent EVENT_BEAT_HOLLIS
 	iftrue .BattleBugsy
-	jumpthistextfaceplayer 
-		text "<PLAYER>."
-		line "I have an idea."
-		
-		para "Scyther's genes"
-		line "are similar to"
-		cont "Slowpoke's."
-		
-		para "Slowpoke has bra-"
-		line "nching evolution."
-		
-		para "I wonder if Scy-"
-		line "ther is the same?"
-		
-		para "No one takes my"
-		line "research serious-"
-		cont "ly, so I can't"
-		cont "get any progress."
-		done
+
+BranchedEvoText:	
+	text "<PLAYER>."
+	line "I have an idea."
+	
+	para "Scyther's genes"
+	line "are similar to"
+	cont "Slowpoke's."
+	
+	para "Slowpoke has bra-"
+	line "nching evolution."
+	
+	para "I wonder if Scy-"
+	line "ther is the same?"
+	
+	para "Ah, forget it."
+	line "Who would care?"
+	done
+
+.BugsyHasAnIdea:
+	showtextfaceplayer .BranchedText
+	
 
 .BattleBugsy:
 	showtextfaceplayer .SeenText
@@ -94,11 +99,6 @@ AzaleaGymBugsyScript:
 	playsound SFX_GET_BADGE
 	waitsfx
 	setflag ENGINE_HIVEBADGE
-	setmapscene AZALEA_TOWN, $1
-	setevent EVENT_BEAT_TWINS_AMY_AND_MAY
-	setevent EVENT_BEAT_BUG_CATCHER_BENNY
-	setevent EVENT_BEAT_BUG_CATCHER_AL
-	setevent EVENT_BEAT_BUG_CATCHER_JOSH
 	writethistext
 		text "Do you know the"
 		line "benefits of the"
@@ -142,7 +142,8 @@ AzaleaGymBugsyScript:
 	para "Incredible!" 
 	
 	para "I feel rejuven-"
-	line "ated by this."
+	line "ated, my resea-"
+	cont "rch was right!"
 	
 	para "I'm ready to be a"
 	line "Gym Leader again!"
@@ -153,15 +154,13 @@ AzaleaGymBugsyScript:
 .BeatenText:
 	text "Whoa, amazing!"
 
-	para "My research isn't"
-	line "complete yet."
+	para "I forgot the"
+	line "thrill of disc-"
+	cont "overy. I let my"
 	
-	para "I'm going to keep"
-	line "going until I"
-	cont "show everyone the"
-	cont "connection between"
-	cont "Bug #mon and"
-	cont "people."
+	para "own cynicism keep"
+	line "me from sharing"
+	cont "my talents."
 
 	para "Please - take"
 	line "this Badge."
@@ -176,42 +175,4 @@ AzaleaGymBugsyScript:
 
 	para "Study your favor-"
 	line "ites thoroughly."
-	done
-
-AzaleaGymGuyScript:
-	checkevent EVENT_BEAT_BUGSY
-	iftrue_jumptextfaceplayer .WinText
-	jumpthistextfaceplayer
-
-	text "Yo, challenger!"
-
-	para "Bugsy's young, but"
-	line "his knowledge of"
-
-	para "bug #mon is for"
-	line "real."
-
-	para "It's going to be"
-	line "tough without my"
-	cont "advice."
-
-	para "Let's see… Bug"
-	line "#mon don't like"
-	cont "fire."
-
-	para "Flying-type moves"
-	line "are super effec-"
-	cont "tive too."
-	done
-
-.WinText:
-	text "Well done! That"
-	line "was a great clash"
-
-	para "of talented young"
-	line "trainers."
-
-	para "With people like"
-	line "you, the future of"
-	cont "#mon is bright!"
 	done

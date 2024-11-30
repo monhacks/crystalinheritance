@@ -8,7 +8,7 @@ AnarresTower2F_MapScriptHeader: ; should be like  "BurnedTowerB1F_MapScriptHeade
 	def_warp_events
 	warp_event   1,  1, ANARRES_TOWER_1F, 3
 	warp_event  11,  1, ANARRES_TOWER_1F, 4
-	warp_event   7,  3, ANARRES_TOWER_3F, 1
+	warp_event   9,  9, ANARRES_TOWER_3F, 1
 
 	def_coord_events
 
@@ -18,7 +18,7 @@ AnarresTower2F_MapScriptHeader: ; should be like  "BurnedTowerB1F_MapScriptHeade
 	def_object_events
 	object_event  9,  0, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBugCatcherAl, -1
 	object_event  0,  3, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBugCatcherJosh, -1
-	object_event  5,  2, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBugCatcherKen, -1
+	object_event  3,  5, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerBugCatcherKen, -1
 	object_event  8,  5, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBugCatcherWayne, -1
 
 	object_const_def

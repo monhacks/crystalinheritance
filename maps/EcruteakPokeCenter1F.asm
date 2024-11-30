@@ -19,6 +19,8 @@ EcruteakPokeCenter1F_MapScriptHeader:
 
 	object_event 11,  8, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptext, EcruteakPokeCenter1fPokefan2Text, -1
 	object_event 10,  8, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptext, EcruteakPokeCenter1fElderText, -1
+	object_event  9,  6, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, IlexExcelsiorV1Script, -1
+
 
 	object_const_def
 
@@ -83,4 +85,34 @@ EcruteakPokeCenter1fElderText:
 	
 	para "It's a thin"
 	line "line!"
+	done
+
+
+IlexExcelsiorV1Script:
+	opentext
+	writetext WeirdTextEcruteakCenter
+	closetext
+	unowntypeface
+	showtext IlexExcelsiorV1Text
+	restoretypeface
+	special MapCallbackSprites_LoadUsedSpritesGFX
+	end
+
+WeirdTextEcruteakCenter:
+	text "Hm? What's this"
+	line "weird pamphlet?"
+	done
+
+IlexExcelsiorV1Text:
+	text "Ilex Excelsior"
+	
+	para "When the tree"
+	line "rings, will"
+	cont "you answer"
+	
+	para "First Edition"
+
+	para "If we lose the"
+	line "theatre we lose"
+	cont "our history"
 	done

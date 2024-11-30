@@ -18,6 +18,7 @@ OlivinePokeCenter1F_MapScriptHeader:
 	object_event  2,  6, SPRITE_FISHING_GURU, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumpstd, happinesschecknpc, -1
 	object_event  2,  3, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivinePokeCenter1FFisherText, -1
 	object_event 11,  6, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivinePokeCenter1FTeacherText, -1
+	object_event  9,  6, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, IlexExcelsiorV2Script, -1
 
 	object_const_def
 	const OLIVINEPOKECENTER1F_BEAUTY
@@ -119,4 +120,35 @@ OlivinePokeCenter1FTeacherText:
 	para "I heard him brag-"
 	line "ging about his"
 	cont "rare #mon."
+	done
+
+IlexExcelsiorV2Script:
+	opentext
+	writetext WeirdTextOlivineCenter
+	closetext
+	unowntypeface
+	showtext IlexExcelsiorV2Text
+	restoretypeface
+	special MapCallbackSprites_LoadUsedSpritesGFX
+	end
+
+WeirdTextOlivineCenter:
+	text "Hm? What's this"
+	line "weird pamphlet?"
+	done
+
+IlexExcelsiorV2Text:
+	text "Ilex Excelsior"
+	
+	para "When the tree"
+	line "rings, will"
+	cont "you answer"
+	
+	para "Second Edition"
+
+	para "The Desal Plant"
+	line "poisons minds"
+	
+	para "remove parts"
+	line "from basement"
 	done

@@ -38,6 +38,7 @@ GoldenrodPokecomCenter1F_MapScriptHeader:
 	object_event  9, 10, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, MapNameNPC2Script, -1
 	object_event  3, 12, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, MapNameNPC3Script, -1
 	object_event 16,  8, SPRITE_LINK_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, WonderTradeReceptionistScript, -1
+	object_event  9,  6, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, IlexExcelsiorV3Script, -1
 
 	object_const_def
 	const POKECOM_KURT
@@ -292,3 +293,33 @@ KurtHasSomeFansText:
 	
     para "Meet me there."
     done
+
+
+IlexExcelsiorV3Script:
+	opentext
+	writetext WeirdTextGoldenrodCenter
+	closetext
+	unowntypeface
+	showtext IlexExcelsiorV3Text
+	restoretypeface
+	special MapCallbackSprites_LoadUsedSpritesGFX
+	end
+
+WeirdTextGoldenrodCenter:
+	text "Hm? What's this"
+	line "weird pamphlet?"
+	done
+
+IlexExcelsiorV3Text:
+	text "Ilex Excelsior"
+	
+	para "When the tree"
+	line "rings, will"
+	cont "you answer"
+	
+	para "Third Edition"
+
+	para "Stop the high"
+	line "frequency radio"
+	cont "by going low"	
+	done

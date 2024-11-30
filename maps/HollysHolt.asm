@@ -31,6 +31,14 @@ HollysHolt_MapScriptHeader:
 	object_event  8, 25, SPRITE_HOLLIS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, HollysHoltHollisScript, EVENT_TALKED_TO_HOLLIS;todo add this
 	object_event 18, 38, SPRITE_TAMMY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, HollysHoltTammyScript, EVENT_TAMMY_HOLLYS_HOLT
 	object_event 19, 38, SPRITE_BREEDER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, HollysHoltNPC6Text, EVENT_TAMMY_HOLLYS_HOLT 
+
+
+	object_event   6, 18, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, PINECO, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, PinecoHeadbuttScript1, EVENT_HOLT_PINECO_1 ;;;;
+	object_event  29, 28, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, PINECO, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, PinecoHeadbuttScript1, EVENT_HOLT_PINECO_2 ;;;;
+	object_event   4, 40, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, PINECO, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, PinecoHeadbuttScript1, EVENT_HOLT_PINECO_3 ;;;;
+	
+	object_event  5,  3, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, SLOWBRO, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SlowpokeWellSlowbro, EVENT_SLOWPOKE_WELL_SLOWBRO	
+	
 	object_event  8, 16, SPRITE_BREEDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, HollysHoltNPC1Text, -1
 	object_event 23, 24, SPRITE_GRAMPS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, HollysHoltNPC2Script, -1  ; gives seed
 	object_event 16, 36, SPRITE_BREEDER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, HollysHoltNPC3Text, -1
@@ -40,14 +48,7 @@ HollysHolt_MapScriptHeader:
 	itemball_event 19, 16, REVIVAL_HERB, 1, EVENT_ILEX_FOREST_REVIVAL_HERB
 	tmhmball_event 24, 33, TM_X_SCISSOR, EVENT_GOT_TM_X_SCISSOR
 	cuttree_event 25, 5, EVENT_HOLLYS_HOLT_CUT_TREE
-	pokemon_event   6, 18, PINECO, -1, -1, PAL_NPC_BLUE, HollysHoltBagwormText, EVENT_BEAT_HOLLIS
-	pokemon_event  13, 11, PINECO, -1, -1, PAL_NPC_BLUE, HollysHoltBagwormText, EVENT_BEAT_HOLLIS
-	pokemon_event  29,  5, PINECO, -1, -1, PAL_NPC_BLUE, HollysHoltBagwormText, EVENT_BEAT_HOLLIS
-	pokemon_event  26, 14, PINECO, -1, -1, PAL_NPC_BLUE, HollysHoltBagwormText, EVENT_BEAT_HOLLIS
-	pokemon_event  29, 28, PINECO, -1, -1, PAL_NPC_BLUE, HollysHoltBagwormText, EVENT_BEAT_HOLLIS
-	pokemon_event  18, 37, PINECO, -1, -1, PAL_NPC_BLUE, HollysHoltBagwormText, -1
-	pokemon_event   3, 32, PINECO, -1, -1, PAL_NPC_BLUE, HollysHoltBagwormText, EVENT_BEAT_HOLLIS
-	pokemon_event   4, 40, PINECO, -1, -1, PAL_NPC_BLUE, HollysHoltBagwormText, EVENT_BEAT_HOLLIS
+	pokemon_event  18, 37, PINECO, -1, -1, PAL_NPC_BLUE, HollysHoltBagwormText, -1 ; by tammy  ;;;; 
 	fruittree_event  9,  8, FRUITTREE_HOLLYS_HOLT, TOUGH_LEAVES, PAL_NPC_GREEN
 
 	object_const_def
@@ -55,6 +56,9 @@ HollysHolt_MapScriptHeader:
 	const HOLLYS_HOLT_HOLLIS
 	const HOLLYS_HOLT_TAMMY
 	const HOLLYS_HOLT_SCHOOLGIRL
+	const HOLLYS_HOLT_PINECO_1
+	const HOLLYS_HOLT_PINECO_2
+	const HOLLYS_HOLT_PINECO_3
 
 HollysHoltTrigger:
 	sdefer HollysHoltScript1
@@ -454,37 +458,37 @@ HH_Sign3Text:
 
 	done
 
-;PinecoHeadbuttScript1:
-;	ld d, HEADBUTT
-;	call CheckPartyMove
-;	jr c, NoHeadbutt
-;	showtext HeadbuttThisTreeText
-;	yesorno
-;	iffalse NoHeadbutt
-;	cry PINECO
-;	pause 15
-;	loadwildmon PINECO, 5
-;	startbattle
-;	changemapblock 0, 0, $00
-;	setevent EVENT_HOLT_PINECO_1
-;	reloadmapafterbattle
-;	end
-;	
-;NoHeadbutt
-;	showtext NotHeadbuttingText
-;	closetext
-;	end
+PinecoHeadbuttScript1:
+	ld d, HEADBUTT
+	call CheckPartyMove
+	jr c, NoHeadbutt
+	showtext HeadbuttThisTreeText
+	yesorno
+	iffalse NoHeadbutt
+	cry PINECO
+	pause 15
+	loadwildmon PINECO, 5
+	startbattle
+	disappear HOLLYS_HOLT_PINECO_1
+	setevent EVENT_HOLT_PINECO_1
+	reloadmapafterbattle
+	end
+	
+NoHeadbutt:
+	showtext NotHeadbuttingText
+	closetext
+	end
 
-;HeadbuttThisTreeText:
-;	text "This pineco is"
-;	line "overwhelming the"
-;	cont "tree."
-;	
-;	para "Headbutt it?"
-;	done
-;
-;NotHeadbuttingText:
-;	text "Pineco dangles"
-;	line "precariously"
-;	cont "from a branch."
-;	done
+HeadbuttThisTreeText:
+	text "This pineco is"
+	line "overwhelming the"
+	cont "tree."
+	
+	para "Headbutt it?"
+	done
+
+NotHeadbuttingText:
+	text "Pineco dangles"
+	line "precariously"
+	cont "from a branch."
+	done

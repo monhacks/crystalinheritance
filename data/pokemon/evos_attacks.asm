@@ -3078,8 +3078,8 @@ WooperEvosAttacks:
 	db 1, LEER ; Tail Whip → similar move
 	db 5, MUD_SLAP ; Mud Sport → TM move
 	db 9, SCARY_FACE ; Mud Shot → event move
-	db 15, HEADBUTT ; Slam → tutor move
-	db 19, RECOVER ; Mud Bomb → egg move
+	db 15, RECOVER ; Slam → tutor move
+	db 19, HEADBUTT ; Mud Bomb → egg move
 	db 23, AMNESIA
 	db 29, BELLY_DRUM ; Yawn → event move
 	db 33, EARTHQUAKE
