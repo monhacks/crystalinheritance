@@ -3377,7 +3377,7 @@ HikerGroup:
 	; party
 	db 22, GEODUDE
 	db 25, GRAVELER
-	db 28, GOLEM
+	db 25, GOLEM
 	db -1 ; end
 
 ; ================

@@ -248,6 +248,7 @@ GenericTrainerOfficerMKeith:
 	done
 	
 IlexHealerScript:
+	faceplayer
 	opentext
 	writetext WantToHeal
 	waitbutton

@@ -65,8 +65,6 @@ MapRuinsofAlphOmanyteChamberSignpost2Script:
 	changeblock 4, 0, $25
 	reloadmappart
 	playsound SFX_STRENGTH
-	earthquake 80
-	playsound SFX_KINESIS
 	waitsfx
 	pause 20
 	end

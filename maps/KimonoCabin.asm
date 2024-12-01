@@ -175,8 +175,10 @@ Kimono2HelpedText:
 	para "I wasn't sure"
 	line "about that"
 	cont "natural method"
+
 	para "grandma Shiji"
 	line "told me about."
+
 	para "Maybe people"
 	line "can learn,"
 	cont "after all."
@@ -688,8 +690,7 @@ KimonoCabinBookshelfText:
 	line "of books..."
 	
 	para "Sewing with silk,"
-	
-	para "Apricorn craft,"
+	line "Apricorn craft,"
 	
 	para "Dancing apart"
 	line "from time..."

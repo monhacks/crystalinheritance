@@ -37,7 +37,6 @@ RuinsOfAlphOutside_MapScriptHeader:
 	object_event  8, 36, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, RuinsOfAlphTeacherScript, -1 ; SHOULD HEAL YOU
 	object_event 14, 36, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerFisherRalph, -1 ; 
 	smashrock_event  9, 34
-	smashrock_event 15, 36
 	smashrock_event  8, 13
 	smashrock_event  9, 13
 	smashrock_event  6,  6

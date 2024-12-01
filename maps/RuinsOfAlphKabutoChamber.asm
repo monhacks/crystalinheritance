@@ -72,8 +72,6 @@ MapRuinsofAlphKabutoChamberSignpost2Script:
 .PuzzleComplete:
 	setevent EVENT_WALL_OPENED_IN_KABUTO_CHAMBER ;no inner chamber so no EVENT_RUINS_OF_ALPH_INNER_CHAMBER_TOURISTS
 	setevent EVENT_SOLVED_KABUTO_PUZZLE
-;	setflag ENGINE_UNLOCKED_UNOWNS_A_TO_J
-;	setevent EVENT_RUINS_OF_ALPH_KABUTO_CHAMBER_RECEPTIONIST
 	earthquake 30
 	pause 15
 	showemote EMOTE_SHOCK, PLAYER, 15

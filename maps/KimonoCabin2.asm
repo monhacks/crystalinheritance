@@ -19,24 +19,34 @@ KimonoCabin2_MapScriptHeader: ; should be like  "BurnedTowerB1F_MapScriptHeader"
 
 
 	def_object_events
-	object_event  8, 7, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN,  OBJECTTYPE_SCRIPT, 0, KimonoCabin2RepelScript, -1
+	object_event  8, 7, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN,  OBJECTTYPE_SCRIPT, 0, KimonoCabin2RepelScript, -1
 
 	itemball_event 10, 7, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_1
-	itemball_event  7, 7, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_2
 	itemball_event 10, 4, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_3
+
 	itemball_event  9, 0, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_4
-	itemball_event  5, 5, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_5
+
+	itemball_event  7, 7, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_2
 	itemball_event  7, 2, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_6
-	itemball_event  4, 3, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_7
 	itemball_event  6, 0, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_8
-	itemball_event  1, 0, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_9
+
+
+	itemball_event  5, 5, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_5
+
+
+	itemball_event  4, 3, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_7
 	itemball_event  4, 1, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_10
-	itemball_event  0, 3, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_11
+
+	itemball_event  3, 7, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_15
+
 	itemball_event  2, 4, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_12
+
+	itemball_event  1, 0, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_9
+
+
+	itemball_event  0, 3, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_11
 	itemball_event  0, 5, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_13
 	itemball_event  0, 7, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_14
-	itemball_event  3, 7, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_15
-	itemball_event  4, 3, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_16
 
 
 

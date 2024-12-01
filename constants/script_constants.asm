@@ -240,7 +240,7 @@ FIRST_BERRY_TREE EQU const_value
 NUM_FRUIT_TREES EQU const_value - 1
 
 ; hidden grottoes
-; HiddenGrottoData indexes (see data/events/hidden_grottoes/grottoes.asm)
+; HiddenGrottoData indexes (see data/events/hidden_grottoes/grottoes.asm) 
 	const_def 1
 	const HIDDENGROTTO_ROUTE_32           ; 01
 	const HIDDENGROTTO_ILEX_FOREST        ; 02
