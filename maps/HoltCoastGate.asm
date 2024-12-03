@@ -1,5 +1,6 @@
 HoltCoastGate_MapScriptHeader:
 	def_scene_scripts
+	scene_script HoltCoastGateWarpScene
 
 	def_callbacks
 
@@ -15,6 +16,23 @@ HoltCoastGate_MapScriptHeader:
 
 	def_object_events
 	object_event 3, 4, SPRITE_VETERAN_F, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, HoltCoastGateNPCScript, -1
+
+
+AnarresHoltGateHollisScene: ; C.F. bellchimetrail.asm on polished crystal clean
+	playsound SFX_EXIT_BUILDING
+	applyonemovement PLAYER, hide_object
+	waitsfx
+	disappear PLAYER
+	pause 10
+	special Special_FadeOutMusic
+	special FadeOutPalettes
+	pause 15
+	disappear PLAYER
+	waitsfx
+	setscene $1
+	warp WESTERN_CAPITAL, 10, 23
+	end
+
 
 HoltCoastGateNPCScript:
 	jumptextfaceplayer HoltCoastGateNPCText

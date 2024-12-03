@@ -460,8 +460,8 @@ LoadFlowerMailGFX: ; draws the mail
 	hlcoord 2, 13
 	call Mail_Draw2x2Graphic
 	ld a, $3e ; little red flower, magcargo 
-	hlcoord 2, 3
-	call Mail_Draw2x2Graphic
+;	hlcoord 2, 3
+;	call Mail_Draw2x2Graphic
 	hlcoord 5, 11
 	call Mail_Draw2x2Graphic
 	hlcoord 8, 3
@@ -477,11 +477,11 @@ LoadFlowerMailGFX: ; draws the mail
 	call Mail_Draw2x2Graphic
 	hlcoord 11, 4 ; keep 
 	call Mail_Draw2x2Graphic
-	hlcoord 2, 11  ; keep 
+;	hlcoord 2, 11  ; keep 
+;	call Mail_Draw2x2Graphic
+	hlcoord 8, 10; keep 
 	call Mail_Draw2x2Graphic
-	hlcoord 8, 11; keep 
-	call Mail_Draw2x2Graphic
-	hlcoord 14, 11; keep 
+	hlcoord 14, 10; keep 
 	call Mail_Draw2x2Graphic
 	pop hl
 	jmp MailGFX_PlaceMessage
