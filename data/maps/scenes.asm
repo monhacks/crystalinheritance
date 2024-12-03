@@ -61,9 +61,9 @@ MapScenes::
 	scene_var RADIO_TOWER_1F,                         wRadioTower1FSceneID ; YellowForestSceneID
 	scene_var EMPERORS_GARDEN,                        wEmperorsGardenSceneID ;wVermilionCitySceneID
 	scene_var TIN_TOWER_OLD_3F,                       wTinTowerOld3FSceneID ;wVermilionPortSceneID
-;	scene_var VICTORY_ROAD_2F,                        wVictoryRoad2FSceneID
-;	scene_var TRADE_CENTER,                           wTradeCenterSceneID
-;	scene_var TRAINER_HOUSE_B1F,                      wAlways0SceneID
+	scene_var WESTERN_CAPITAL,                        wWesternCapitalSceneID ;wVictoryRoad2FSceneID
+	scene_var HOLT_COAST_GATE,                        wHoltCoastGateSceneID ;   wTradeCenterSceneID
+	scene_var ROUTE_35_GOLDENROD_GATE,                wRoute35GoldenrodGateSceneID ;       wAlways0SceneID
 ;	scene_var SAFFRON_TRAIN_STATION,                  wAlways0SceneID
 ;	scene_var SEAGALLOP_FERRY_NAVEL_GATE,             wSeagallopFerryNavelGateSceneID
 ;	scene_var SEAGALLOP_FERRY_SHAMOUTI_GATE,          wSeagallopFerryShamoutiGateSceneID

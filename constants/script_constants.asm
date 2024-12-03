@@ -202,7 +202,7 @@ EMOTE_FROM_MEM EQU -1
 	const FRUITTREE_ROUTE_37_2      ; 03 wht apx 
 	const FRUITTREE_ROUTE_37_3      ; 04 shore foam 
 	const FRUITTREE_CALM_COAST_3      ; 05 PNK APRICORN
-	const FRUITTREE_MAGNET_TUNNEL      ; 06 FIXED CHARGE
+	const FRUITTREE_MAGNET_TUNNEL      ; 06 FIXED CHARGE, todo
 	const FRUITTREE_GAULDENROD      ; 07 radiant opal
 	const FRUITTREE_ILEX_FOREST     ; 08 shore foam
 	const FRUITTREE_UNION_CAVE      ; 09 hollow rock

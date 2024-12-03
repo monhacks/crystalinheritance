@@ -256,7 +256,7 @@ endc
 	li "Mulch"
 	li "Sweet Honey"
 	li "Mint Leaf"
-	li "Flower Mail"
+	li "Snail Mail" ; flower mail 
 	li "Surf Mail"
 	li "LiteBlueMail"
 	

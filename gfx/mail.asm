@@ -66,7 +66,7 @@ PortraitMailLargePokeballGFX:
 INCBIN "gfx/mail/large_pokeball.1bpp"
 
 MailOddishGFX:
-INCBIN "gfx/mail/oddish.1bpp"
+INCBIN "gfx/mail/oddish.1bpp" ; hsliggoo 
 
 SurfLiteBlueMailLargeShapesGFX:
 INCBIN "gfx/mail/large_triangle.1bpp"
@@ -81,8 +81,8 @@ MailLargeCircleGFX:
 INCBIN "gfx/mail/large_circle.1bpp"
 
 FlowerMailFlowerGFX:
-INCBIN "gfx/mail/flower_1.1bpp"
-INCBIN "gfx/mail/flower_2.1bpp"
+INCBIN "gfx/mail/flower_1.1bpp" ; magcargo 
+INCBIN "gfx/mail/flower_2.1bpp" ; omanyte
 
 MusicMailLargeNoteGFX:
 INCBIN "gfx/mail/large_note.1bpp"

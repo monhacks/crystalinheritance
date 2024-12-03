@@ -2,7 +2,7 @@ SproutTower3F_MapScriptHeader:
 	def_scene_scripts
 
 	def_callbacks
-	callback MAPCALLBACK_OBJECTS, SproutTower3FTrainer
+
 
 	def_warp_events
 	warp_event  8, 14, SPROUT_TOWER_2F, 2
@@ -14,28 +14,13 @@ SproutTower3F_MapScriptHeader:
 
 
 	def_object_events
-	object_event 19,  8, SPRITE_ACE_TRAINER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerAceTrainerFinch, EVENT_PETRIE_IN_SPROUT_TOWER
 	object_event  9, 7, SPRITE_ELDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ElderHealsScript, EVENT_BEAT_FALKNER	
 	object_event  9, 7, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBirdKeeperToby, -1
 	object_event  6, 7, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBirdKeeperDennis, -1
 	object_event  5,  1, SPRITE_FALKNER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VioletGymFalknerScript, -1
 
 	object_const_def
-	const SPROUT_TOWER_TRAINER
 
-SproutTower3FTrainer:
-	checkevent EVENT_FOUGHT_AIR_BALLOON_ROUTE_32
-	iftrue .DoesHeAppear
-
-.HeDisappears:
-	disappear SPROUT_TOWER_TRAINER
-	endcallback
-
-.DoesHeAppear:
-	checkevent EVENT_GOT_MIRACLE_SEED_FROM_ROUTE_32_LEADER
-	iftrue .HeDisappears
-	appear SPROUT_TOWER_TRAINER
-	endcallback
 
 ElderHealsScript:
 	showtext ElderHealsText1
@@ -187,26 +172,3 @@ FalknerAfterText:
 	cont "lesson, trainer."
 	done
 	
-	
-GenericTrainerAceTrainerFinch:
-    generictrainer COOLTRAINERM, FINCH, EVENT_BEAT_COOLTRAINERM_FINCH, CooltrainerMFinchSeenText, CooltrainerMFinchBeatenText
-
-    text "My dream, popped"
-	line "like an overfull"
-	cont "balloon..."
-    done
-
-CooltrainerMFinchSeenText:
-	text "Remember me?"
-	
-	para "I did it! I "
-	line "showed Falkner"
-	cont "that I can be a"
-	cont "flying trainer!"
-	done
-	
-CooltrainerMFinchBeatenText:
-    text "My dream, popped"
-	line "like an overfull"
-	cont "balloon..."
-    done

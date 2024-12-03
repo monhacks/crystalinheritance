@@ -5,8 +5,8 @@ KajoCabin_MapScriptHeader: ;	def_scene_scripts
 
 
 	def_warp_events
-    warp_event 2, 7, ROUTE_KAJO, 7
     warp_event 3, 7, ROUTE_KAJO, 7
+    warp_event 4, 7, ROUTE_KAJO, 7
 
 	def_coord_events
 
@@ -16,12 +16,42 @@ KajoCabin_MapScriptHeader: ;	def_scene_scripts
 
 
 	def_object_events
-    object_event 2, 3, SPRITE_SCHOOLGIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, KajoCabinSchoolgirlScript, EVENT_KAJO_SCHOOLGIRL ; should be disappeared until you talk to her dad
-    object_event 5, 3, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, KajoCabinDadScript, -1 ; 	
-	object_event 1, 5, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KajoHealerScript, -1
+    object_event 2, 3, SPRITE_SCHOOLGIRL, 	SPRITEMOVEDATA_STANDING_RIGHT, 	0, 0, -1, -1, PAL_NPC_PURPLE, 	OBJECTTYPE_SCRIPT, 0, KajoCabinSchoolgirlScript, EVENT_KAJO_SCHOOLGIRL ; should be disappeared until you talk to her dad
+    object_event 5, 3, SPRITE_POKEFAN_M, 	SPRITEMOVEDATA_STANDING_LEFT, 	0, 0, -1, -1, PAL_NPC_PURPLE, 	OBJECTTYPE_SCRIPT, 0, KajoCabinDadScript, -1 ; 	
+	object_event 1, 5, SPRITE_MATRON, 		SPRITEMOVEDATA_STANDING_RIGHT, 	0, 0, -1, -1, 0, 				OBJECTTYPE_SCRIPT, 0, KaJoHealerScript, -1
+	object_event 25, 24, SPRITE_MATRON, 	SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IlexHealerScript, -1
+
 
 	object_const_def
 	
+
+KaJoHealerScript:
+	faceplayer
+	opentext
+	writetext KaJoWantToHeal
+	waitbutton
+	playmusic MUSIC_HEAL
+	special HealParty
+	special SaveMusic	
+	writetext KaJoHealedPokemon
+	waitbutton
+	closetext
+	playmusic MUSIC_NONE	
+	special RestoreMusic
+	end
+
+KaJoWantToHeal:
+	text "It's tough off"
+	line "the grid. We have"
+	cont "some healing"
+	cont "items to share."
+	done
+
+
+KaJoHealedPokemon:
+	text "Your #mon"
+	line "were healed!"
+	done
 
 KajoCabinDadScript:
     faceplayer
@@ -126,7 +156,11 @@ KajoCabinSchoolgirlText:
     line "with the baby"
     cont "Totodiles again!"
     done
-	
+
+
+
+
+
 KaJoApricornBenchScript:
 	opentext
 	writetext CheckForKaJoApricornsText
@@ -149,7 +183,7 @@ KaJoApricornBenchScript:
 	iftrue .GiveLoveBall
 	callasm .CheckHaveAnyKaJoApricorns
 	iftrue .AskKaJoApricorn
-	jumpopenedtext KurtsHouseKurtThatsALetdownText
+	jumpopenedtext KaJoThatsALetdownText
 
 .CheckHaveAnyKaJoApricorns:
 	xor a
@@ -163,10 +197,10 @@ endr
 	ret
 
 .AskKaJoApricorn:
-	writetext KurtsHouseKurtAskYouHaveAnKaJoApricornText
+	writetext KaJoAskYouHaveAnKaJoApricornText
 	promptbutton
 	special Special_SelectApricornForKurt
-	iffalse_jumpopenedtext KurtsHouseKurtThatsALetdownText
+	iffalse_jumpopenedtext KaJoThatsALetdownText
 	ifequal SHORE_FOAM, .Blu
 	ifequal FIXED_CHARGE, .Ylw
 	ifequal TOUGH_LEAVES, .Grn
@@ -200,16 +234,16 @@ endr
 .Pnk:
 	setevent EVENT_GAVE_KURT_PNK_APRICORN
 .GaveKurtKaJoApricorns:
-	writetext KurtsHouseKurtGetStartedText
+	writetext KaJoGetStartedText
 	waitbutton
 	closetext
 	sjump .KaJoApricornBenchScript2 ;Kurt1
 
 .ThatTurnedOutGreat:
-	jumpopenedtext KurtsHouseKurtTurnedOutGreatText
+	jumpopenedtext KaJoTurnedOutGreatText
 
 .GiveLevelBall:
-	writetext KurtsHouseKurtJustFinishedYourBallText
+	writetext KaJoJustFinishedYourBallText
 	promptbutton
 	verbosegiveitemvar JEZE_BALL, VAR_KURT_APRICORNS
 	iffalse_endtext
@@ -217,7 +251,7 @@ endr
 	sjump .ThatTurnedOutGreat
 
 .GiveLureBall:
-	writetext KurtsHouseKurtJustFinishedYourBallText
+	writetext KaJoJustFinishedYourBallText
 	promptbutton
 	verbosegiveitemvar BUB_BALL, VAR_KURT_APRICORNS
 	iffalse_endtext
@@ -225,7 +259,7 @@ endr
 	sjump .ThatTurnedOutGreat
 
 .GiveMoonBall:
-	writetext KurtsHouseKurtJustFinishedYourBallText
+	writetext KaJoJustFinishedYourBallText
 	promptbutton
 	verbosegiveitemvar DECI_BALL, VAR_KURT_APRICORNS
 	iffalse_endtext
@@ -233,7 +267,7 @@ endr
 	sjump .ThatTurnedOutGreat
 
 .GiveFriendBall:
-	writetext KurtsHouseKurtJustFinishedYourBallText
+	writetext KaJoJustFinishedYourBallText
 	promptbutton
 	verbosegiveitemvar HERB_BALL, VAR_KURT_APRICORNS
 	iffalse_endtext
@@ -241,7 +275,7 @@ endr
 	sjump .ThatTurnedOutGreat
 
 .GiveFastBall:
-	writetext KurtsHouseKurtJustFinishedYourBallText
+	writetext KaJoJustFinishedYourBallText
 	promptbutton
 	verbosegiveitemvar FAST_BALL, VAR_KURT_APRICORNS
 	iffalse_endtext
@@ -249,7 +283,7 @@ endr
 	sjump .ThatTurnedOutGreat
 
 .GiveHeavyBall:
-	writetext KurtsHouseKurtJustFinishedYourBallText
+	writetext KaJoJustFinishedYourBallText
 	promptbutton
 	verbosegiveitemvar GEODE, VAR_KURT_APRICORNS
 	iffalse_endtext
@@ -257,33 +291,33 @@ endr
 	sjump .ThatTurnedOutGreat
 
 .GiveLoveBall:
-	writetext KurtsHouseKurtJustFinishedYourBallText
+	writetext KaJoJustFinishedYourBallText
 	promptbutton
 	verbosegiveitemvar LOVE_BALL, VAR_KURT_APRICORNS
 	iffalse_endtext
 	clearevent EVENT_GAVE_KURT_PNK_APRICORN
 	sjump .ThatTurnedOutGreat
 
-KurtsHouseKurtGetStartedText:
+KaJoGetStartedText:
 	text "Time to work on"
 	line "this."
 	done
 
-KurtsHouseKurtJustFinishedYourBallText:
+KaJoJustFinishedYourBallText:
 	text "All done!"
 	done
 
-KurtsHouseKurtTurnedOutGreatText:
+KaJoTurnedOutGreatText:
 	text "Looks like a"
 	line "good one!"
 	done
 	
-KurtsHouseKurtThatsALetdownText:
+KaJoThatsALetdownText:
 	text "Too bad. Need"
 	line "to find some!"
 	done
 
-KurtsHouseKurtAskYouHaveAnKaJoApricornText:
+KaJoAskYouHaveAnKaJoApricornText:
 	text "Which one?"
 	done
 
@@ -292,30 +326,3 @@ CheckForKaJoApricornsText:
 	line "in the bag?"
 	done
 	
-KaJoHealerScript:
-	faceplayer
-	opentext
-	writetext KaJoWantToHeal
-	waitbutton
-	playmusic MUSIC_HEAL
-	special HealParty
-	special SaveMusic	
-	writetext KaJoHealedPokemon
-	waitbutton
-	closetext
-	playmusic MUSIC_NONE	
-	special RestoreMusic
-	end
-
-KaJoWantToHeal:
-	text "It's tough off"
-	line "the grid. We have"
-	cont "some healing"
-	cont "items to share."
-	done
-
-
-KaJoHealedPokemon:
-	text "Your #mon"
-	line "were healed!"
-	done

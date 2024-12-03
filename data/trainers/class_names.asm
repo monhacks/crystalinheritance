@@ -110,40 +110,40 @@ TrainerClassNames::
 	li "Executive"        ; PETREL
 	li "Executive"        ; ARCHER
 	li "Executive"        ; ARIANA
-	li "Boss"             ; GIOVANNI
+	li "Boss"             ; GIOVANNI UNUSED 
 	li "#mon Prof."       ; PROF_OAK
 	li "#mon Prof."       ; PROF_ELM
-	li "#mon Prof."       ; PROF_IVY
+	li "#mon Prof."       ; PROF_IVY UNUSED 
 	li "Mystery Man"      ; MYSTICALMAN
 	li "Karate King"      ; KARATE_KING
 	li "Silph"            ; Ostene / TOWERTYCOON
-	li "Jessie"           ; JESSIE_JAMES
-	li "Ex-Elite"         ; LORELEI
-	li "Ex-Elite"         ; AGATHA
-	li "Rock Hound"       ; STEVEN
-	li "Researcher"       ; CYNTHIA
+	li "Jessie"           ; JESSIE_JAMES UNUSED 
+	li "Ex-Elite"         ; LORELEI UNUSED 
+	li "Ex-Elite"         ; AGATHA UNUSED 
+	li "Rock Hound"       ; STEVEN UNUSED 
+	li "Researcher"       ; CYNTHIA UNUSED 
 	li "Johto"            ; Amos / INVER
 	li "<PK><MN> Trainer" ; CHERYL
 	li "<PK><MN> Trainer" ; RILEY
-	li "<PK><MN> Trainer" ; BUCK
+	li "Nomad" 			  ; formerly BUCK
 	li "<PK><MN> Trainer" ; MARLEY
 	li "<PK><MN> Trainer" ; MIRA
 	li "Anarres"          ; Lanna / ANABEL
-	li "Valet"            ; DARACH
-	li "Lady"             ; CAITLIN
+	li "Valet"            ; DARACH UNUSED 
+	li "Lady"             ; CAITLIN UNUSED 
 	li "General"          ; bobesh / CANDELA
 	li "General"          ; adrinna / BLANCHE
 	li "Elder"            ; barbeau / SPARK_T
-	li "Trainer"          ; FLANNERY
-	li "Sinnoh"           ; MAYLENE
-	li "Pilot"            ; SKYLA
-	li "Designer"         ; VALERIE
-	li "<PK><MN> Trainer" ; KUKUI
-	li "Surfer"           ; VICTOR
-	li "#Maniac"          ; BILL_T
+	li "Trainer"          ; FLANNERY UNUSED 
+	li "Sinnoh"           ; MAYLENE UNUSED
+	li "Pilot"            ; SKYLA UNUSED
+	li "Designer"         ; VALERIE UNUSED 
+	li "<PK><MN> Trainer" ; KUKUI UNUSED 
+	li "Scavenger"           ; VICTOR TODO CHANGE TO Scavenger with diver sprite 
+	li "#Maniac"          ; BILL_T UNUSED 
 	li "Anarres"          ; TAMMY (YELLOW), yup this is right
 	li "<PK><MN> Trainer" ; SILVER FROM WALKER rival
-	li "Student"          ; IMAKUNI
+	li "Student"          ; IMAKUNI, UNUSED 
 	li "General"          ; Kensey  / LAWRENCE
 	li "Shrine"           ; REI
 	assert_list_length NUM_TRAINER_CLASSES + 1

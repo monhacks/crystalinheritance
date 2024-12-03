@@ -297,7 +297,7 @@ SweetHoneyIcon::   INCBIN "gfx/items/sweet_honey.2bpp.lz"
 SECTION "Item Icons 14", ROMX
 
 MintLeafIcon::     INCBIN "gfx/items/mint_leaf.2bpp.lz"
-FlowerMailIcon::   INCBIN "gfx/items/flower_mail.2bpp.lz"
+FlowerMailIcon::   INCBIN "gfx/items/flower_mail.2bpp.lz" ; snail mail 
 SurfMailIcon::
 LiteBlueMailIcon:: INCBIN "gfx/items/mail.2bpp.lz"
 WhtApriconIcon::

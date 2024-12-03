@@ -22,13 +22,13 @@ Route32_MapScriptHeader: ; convert all to generictrainers, freida to give venosh
 	bg_event 13, 84, BGEVENT_ITEM + GREAT_BALL, EVENT_ROUTE_32_HIDDEN_GREAT_BALL_2 ; ok 
 
 	def_object_events
-	object_event 19,  8, SPRITE_ACE_TRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route32CooltrainermPetrieScript, EVENT_FOUGHT_AIR_BALLOON_ROUTE_32 
+	object_event 19,  8, SPRITE_ACE_TRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route32CooltrainermPetrieScript, -1 
 	object_event 16, 18, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerYoungsterAlbert, -1 ; OK 
-	object_event  4, 36, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerYoungsterGordon, -1 ; bayleef, etc OK 
+	object_event  4, 36, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerYoungsterGordon, -1 ; bayleef, etc OK 
 	object_event 11, 45, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerFisherJustin, -1 ; OK 
 	object_event  9, 49, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerFisherHenry, -1 ; OK 
-	object_event 13, 56, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerFisherTully, -1 ; new fisher, add SCRIPT 
-	object_event  4, 66, SPRITE_CAMPER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerCamperLloyd, -1 ; renamed to lloyd
+	object_event 13, 56, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerFisherTully, -1 ; new fisher, add SCRIPT 
+	object_event  4, 66, SPRITE_CAMPER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerCamperLloyd, -1 ; renamed to lloyd
 	object_event 12, 67, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, FriedaScript, -1 ; venoshock
 	object_event  6, 68, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBird_keeperPeter, -1 ; OK 
 	object_event 10, 84, SPRITE_BAKER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route32SlowpokeTailScript, -1 ; todo 
@@ -44,43 +44,35 @@ Route32_MapScriptHeader: ; convert all to generictrainers, freida to give venosh
 
 
 
-Route32CooltrainermPetrieScript: ; revise, "if you go get my X from the pokecenter I'll battle you!"
+Route32CooltrainermPetrieScript: ; fix 
 	faceplayer
 	opentext
-	checkevent EVENT_GOT_MIRACLE_SEED_FROM_ROUTE_32_LEADER
-	iftrue .GotAirBalloons
+	checkevent EVENT_GOT_AIR_BALLOONS_FROM_ROUTE_32_LEADER
+	iftrue_jumpopenedtext GotAirBalloonsText
 	checkitem SLOWPOKETAIL
-	iffalse .WannaGetMeText
-	writetext .QuestionText
-	yesorno
-	iffalse_jumpopenedtext .RefusedText
-	writetext .SeenText
-	waitbutton
-	closetext
-	takeitem SLOWPOKETAIL
-	setevent EVENT_FOUGHT_AIR_BALLOON_ROUTE_32
-	winlosstext .BeatenText, .LossText
+	iffalse_jumpopenedtext WannaGetMeText
+	showtext Route32QuestionText
+	winlosstext PetrieBeatenText, 0
 	loadtrainer COOLTRAINERM, PETRIE 
 	startbattle
+	reloadmapafterbattle	
 	setevent EVENT_BEAT_COOLTRAINERM_PETRIE
-.Beaten:
 	opentext
-	writetext .AfterText1
+	writetext PetrieAfterText
 	promptbutton
 	verbosegiveitem AIR_BALLOON, 3 
 	iffalse_endtext
-	setevent EVENT_GOT_MIRACLE_SEED_FROM_ROUTE_32_LEADER
-.GotAirBalloons:
+	setevent EVENT_GOT_AIR_BALLOONS_FROM_ROUTE_32_LEADER
 	jumpthisopenedtext
 
-.AfterText2:
+GotAirBalloonsText:
 	text "Maybe I'll"
 	line "be a pop star"
 	cont "in Goldenrod."
 	done
 
 
-.QuestionText:
+Route32QuestionText:
 	text "I'm so low since"
 	cont "being rejected"
 	cont "by Falkner."
@@ -95,23 +87,8 @@ Route32CooltrainermPetrieScript: ; revise, "if you go get my X from the pokecent
 	para "I feel invigor-"
 	line "ated already!"
 	
-	para "Please let me"
-	line "have it."
-	
-	para "Let me battle"
-	line "you. If I lose,"
-	cont "I'll just give"
-	cont "up my dream of"
-	cont "being a flying"
-	cont "type trainer."
-	done
-
-.RefusedText:
-	text "I understand..."
-	
-	para "I wouldn't want"
-	line "to part with it"
-	cont "either."
+	para "I'll battle you"
+	line "for it!"
 	done
 
 .SeenText:
@@ -123,21 +100,11 @@ Route32CooltrainermPetrieScript: ; revise, "if you go get my X from the pokecent
 	line "compare!"
 	done
 
-.BeatenText:
+PetrieBeatenText:
 	text "I'm so deflated!"
 	done
 	
-.LossText:
-	text "Hah!"
-	
-	para "I knew I could"
-	line "do it!"
-	
-	para "Falkner, here"
-	line "I come!"	
-	done
-
-.AfterText1:
+PetrieAfterText:
 	text "Maybe Falkner"
 	line "was right."
 	
@@ -149,7 +116,7 @@ Route32CooltrainermPetrieScript: ; revise, "if you go get my X from the pokecent
 	cont "than me."
 	done
 
-.WannaGetMeText:
+WannaGetMeText:
 	text "I wanted to be"
 	line "a trainer in"
 	cont "Falkner's Gym."
@@ -263,14 +230,13 @@ FriedaScript:
 
 
 FisherJustinSeenText:
-	text "Whoa!"
-
-	para "You made me lose"
-	line "that fish!"
+	text "You're scaring"
+	line "away the fish!"
 	done
 
 FisherJustinBeatenText:
-	text "Sploosh!"
+	text "The boardwalk is"
+	line "so squeaky."
 	done
 
 FisherHenrySeenText:
@@ -397,24 +363,33 @@ Route32UnionCaveSignText:
 	done
 
 Route32SlowpokeTailScript:
+	checkevent EVENT_GOT_SLOWPOKETAIL_ROUTE32
+	iftrue_jumptextfaceplayer Route32Slowpoketail2Text
 	faceplayer
 	opentext
 	writetext Route32AmenitiesText
+	promptbutton
 	verbosegiveitem SLOWPOKETAIL
 	iffalse_endtext
+	setevent EVENT_GOT_SLOWPOKETAIL_ROUTE32
 	closetext
+	end
+
+Route32Slowpoketail2Text:
+	text "Try it with a"
+	line "dab of ketchup,"
+	cont "or mustard."
 	done
 
 Route32AmenitiesText:
-	text "I used to work"
-	line "for evil Team Ro-"
-	cont "cket, but now"
-	cont "I work for Silph!"
+	text "I used to be a"
+	line "member of Team"
+	cont "Rocket. "
 	
-	para "I make lunch for"
-	line "all the miners."
+	para "I served my time"
+	line "and my skills"
+	cont "got me a job"
 	
-	para "There's lots of"
-	line "extras - try it!"
-	done	
-	
+	para "making lunch for"
+	line "Silph workers!"
+	done

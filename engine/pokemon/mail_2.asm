@@ -432,7 +432,7 @@ Mail_Place6TileRow:
 	jr nz, .loop
 	ret
 
-LoadFlowerMailGFX:
+LoadFlowerMailGFX: ; draws the mail 
 	push bc
 	ld hl, vTiles2 tile $31
 	ld de, FlowerMailBorderGFX
@@ -459,29 +459,29 @@ LoadFlowerMailGFX:
 	call Mail_Draw2x2Graphic
 	hlcoord 2, 13
 	call Mail_Draw2x2Graphic
-	ld a, $3e
-	hlcoord 2, 2
-	call Mail_Draw2x2Graphic
-	hlcoord 5, 3
-	call Mail_Draw2x2Graphic
-	hlcoord 10, 2
-	call Mail_Draw2x2Graphic
-	hlcoord 16, 3
+	ld a, $3e ; little red flower, magcargo 
+	hlcoord 2, 3
 	call Mail_Draw2x2Graphic
 	hlcoord 5, 11
 	call Mail_Draw2x2Graphic
-	hlcoord 16, 10
+	hlcoord 8, 3
 	call Mail_Draw2x2Graphic
-	ld a, $42
-	hlcoord 3, 4
+	hlcoord 11, 11
 	call Mail_Draw2x2Graphic
-	hlcoord 12, 3
+	hlcoord 14, 3
 	call Mail_Draw2x2Graphic
-	hlcoord 14, 2
+;	hlcoord 16, 10
+;	call Mail_Draw2x2Graphic
+	ld a, $42 ; little orange flower or omanyte 
+	hlcoord 5, 4 ; new 
 	call Mail_Draw2x2Graphic
-	hlcoord 2, 10
+	hlcoord 11, 4 ; keep 
 	call Mail_Draw2x2Graphic
-	hlcoord 14, 11
+	hlcoord 2, 11  ; keep 
+	call Mail_Draw2x2Graphic
+	hlcoord 8, 11; keep 
+	call Mail_Draw2x2Graphic
+	hlcoord 14, 11; keep 
 	call Mail_Draw2x2Graphic
 	pop hl
 	jmp MailGFX_PlaceMessage

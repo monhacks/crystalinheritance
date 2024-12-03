@@ -54,37 +54,13 @@ WarpingDebugText:
 
 AzaleaGymBugsyScript:
 	checkevent EVENT_BEAT_BUGSY
-	iftrue_jumptextfaceplayer .AfterText
+	iftrue_jumptextfaceplayer AfterTextBugsy
 	faceplayer
 	opentext
 	writetext BranchedEvoText
 	waitbutton
 	checkevent EVENT_BEAT_HOLLIS
-	iftrue .BattleBugsy
-
-BranchedEvoText:	
-	text "<PLAYER>."
-	line "I have an idea."
-	
-	para "Scyther's genes"
-	line "are similar to"
-	cont "Slowpoke's."
-	
-	para "Slowpoke has bra-"
-	line "nching evolution."
-	
-	para "I wonder if Scy-"
-	line "ther is the same?"
-	
-	para "Ah, forget it."
-	line "Who would care?"
-	done
-
-.BugsyHasAnIdea:
-	showtextfaceplayer .BranchedText
-	
-
-.BattleBugsy:
+	iffalse_jumptextfaceplayer EndTextBugsy
 	showtextfaceplayer .SeenText
 	winlosstext .BeatenText, 0
 	loadtrainer BUGSY, 1
@@ -166,7 +142,7 @@ BranchedEvoText:
 	line "this Badge."
 	done
 
-.AfterText:
+AfterTextBugsy:
 	text "Bug #mon are"
 	line "deep. There are"
 
@@ -175,4 +151,25 @@ BranchedEvoText:
 
 	para "Study your favor-"
 	line "ites thoroughly."
+	done
+
+
+BranchedEvoText:	
+	text "<PLAYER>."
+	line "I have an idea."
+	
+	para "Scyther's genes"
+	line "are similar to"
+	cont "Slowpoke's."
+	
+	para "Slowpoke has bra-"
+	line "nching evolution."
+	
+	para "I wonder if Scy-"
+	line "ther is the same?"
+	done
+
+EndTextBugsy:
+	para "Ah, forget it."
+	line "Who would care?"
 	done

@@ -1829,10 +1829,10 @@ endc
 MailPals:
 if !DEF(MONOCHROME)
 ; FLOWER MAIL
-	RGB 20, 31, 11
-	RGB 31, 19, 00
-	RGB 31, 10, 09
-	RGB 00, 00, 00
+	RGB 25, 25, 31 ; background 
+	RGB 31, 10, 09 ; border and flower1 ( magcargo ) , nice red 
+	RGB 10, 10, 31 ; flower2 (omanyte), blue? 
+	RGB 05, 05, 05 ; black, color of the text and hsliggoo, dark grey 
 ; SURF MAIL
 	RGB 15, 20, 31
 	RGB 30, 26, 00

@@ -244,7 +244,7 @@ ItemDescriptions:
 	dw MulchDesc
 	dw SweetHoneyDesc
 	dw MintLeafDesc
-	dw FlowerMailDesc
+	dw FlowerMailDesc ; snail mail 
 	dw SurfMailDesc
 	dw LiteBlueMailDesc
 	dw PortraitMailDesc ; shouldn't be able to access this. 
@@ -1161,8 +1161,8 @@ OldAmberDesc:
 	db   "For a proof of"
 	next "life.@"
 
-FlowerMailDesc:
-	db   "Flower-print Mail."
+FlowerMailDesc: ; snail mail 
+	db   "Snail-print Mail."
 	next "(Hold)@"
 
 SurfMailDesc:

@@ -281,7 +281,7 @@ ItemNameOrder:
 	db NAM_SWEET_HONEY
 	db NAM_MINT_LEAF
 
-	db NAM_FLOWER_MAIL
+	db NAM_FLOWER_MAIL ; snail mail 
 	db NAM_SURF_MAIL
 	db NAM_LITEBLUEMAIL
 

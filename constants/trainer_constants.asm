@@ -49,6 +49,19 @@ KRIS EQU __trainer_class__
 	trainerclass CLAIR ; a
 
 	trainerclass KURT ; 92
+	const KURT1 ; HOLLIS , rowlet pikachu teddiursa cyndaquil gastly lv 9 
+	const KURT2 ; SANDRA , oshawott yanma chikorita skiploom snubbul lv 14 
+	const KURT3 ; WHITNEY , clefairy pinsir nidorina mareep sunflora lv 17 
+	const KURT4 ; FALKNER , hitmontop magmar dratini electabuzz magnemite lv 21 
+	const KURT5 ; REI , stantler growlithe poliwhirl dugtrio grimer lv 24 
+	const KURT6 ; SAMSARA , eevee skarmory misdreavus dunsparce togetic lv 26
+	const KURT7 ; BARBEAU , grotle gligar girafarig tauros slowpoke lv 29
+	const KURT8 ; JASMINE , persian froslass drifblim seadra shuckle lv 33
+	const KURT9 ; PRYCE , tauros houndour miltank muk corsola lv 36 
+	const KURT10 ; SINJOH , donphan azumarill bastiodon lopunny kirlia lv 40 
+	const KURT11 ; AMOS , starvia drapion roselia lucario hbraviary lv 43 
+	const KURT12 ; whispering way , nidoking nidoqueen yanmega ursaring snorlax lv 46 
+	const KURT13 ; TOP OF TIN TOWER , umbreon celebi heracross ursaluna wyrdeer kleavor 
 
 	trainerclass MEJIMI ; 93
 
