@@ -57,7 +57,7 @@ TrainerClassAttributes:
 	dw CONTEXT_USE + SWITCH_SOMETIMES
 
 ; Clair
-	db FULL_HEAL, MAX_POTION ; items
+	db 0, 0 ; items
 	db 25 ; base reward
 	dw AI_BASIC + AI_SETUP + AI_TYPES + AI_SMART + AI_OPPORTUNIST + AI_AGGRESSIVE + AI_CAUTIOUS + AI_STATUS + AI_RISKY
 	dw CONTEXT_USE + SWITCH_SOMETIMES
@@ -75,7 +75,7 @@ TrainerClassAttributes:
 	dw CONTEXT_USE + SWITCH_SOMETIMES
 
 ; Bruno
-	db MAX_POTION, 0 ; items
+	db 0, 0 ; items
 	db 25 ; base reward
 	dw AI_BASIC + AI_SETUP + AI_TYPES + AI_SMART + AI_OPPORTUNIST + AI_AGGRESSIVE + AI_CAUTIOUS + AI_STATUS + AI_RISKY
 	dw CONTEXT_USE + SWITCH_SOMETIMES
@@ -93,7 +93,7 @@ TrainerClassAttributes:
 	dw CONTEXT_USE + SWITCH_SOMETIMES
 
 ; Brock
-	db MAX_POTION, 0 ; items
+	db 0, 0 ; items
 	db 25 ; base reward
 	dw AI_BASIC + AI_SETUP + AI_TYPES + AI_SMART + AI_OPPORTUNIST + AI_AGGRESSIVE + AI_CAUTIOUS + AI_STATUS + AI_RISKY
 	dw CONTEXT_USE + SWITCH_SOMETIMES
@@ -105,25 +105,25 @@ TrainerClassAttributes:
 	dw CONTEXT_USE + SWITCH_RARELY
 
 ; Lt Surge
-	db MAX_POTION, 0 ; items
+	db 0, 0 ; items
 	db 25 ; base reward
 	dw AI_BASIC + AI_SETUP + AI_TYPES + AI_SMART + AI_OPPORTUNIST + AI_AGGRESSIVE + AI_CAUTIOUS + AI_STATUS + AI_RISKY
 	dw CONTEXT_USE + SWITCH_SOMETIMES
 
 ; Erika
-	db MAX_POTION, 0 ; items
+	db 0, 0 ; items
 	db 25 ; base reward
 	dw AI_BASIC + AI_SETUP + AI_TYPES + AI_SMART + AI_OPPORTUNIST + AI_AGGRESSIVE + AI_CAUTIOUS + AI_STATUS + AI_RISKY
 	dw CONTEXT_USE + SWITCH_SOMETIMES
 
 ; Janine
-	db FULL_HEAL, FULL_RESTORE ; items
+	db 0, 0 ; items
 	db 25 ; base reward
 	dw AI_BASIC + AI_SETUP + AI_TYPES + AI_SMART + AI_OPPORTUNIST + AI_AGGRESSIVE + AI_CAUTIOUS + AI_STATUS + AI_RISKY
 	dw CONTEXT_USE + SWITCH_SOMETIMES
 
 ; Sabrina
-	db MAX_POTION, 0 ; items
+	db 0, 0 ; items
 	db 25 ; base reward
 	dw AI_BASIC + AI_SETUP + AI_TYPES + AI_SMART + AI_OPPORTUNIST + AI_AGGRESSIVE + AI_CAUTIOUS + AI_STATUS + AI_RISKY
 	dw CONTEXT_USE + SWITCH_SOMETIMES
@@ -141,13 +141,13 @@ TrainerClassAttributes:
 	dw CONTEXT_USE + SWITCH_SOMETIMES
 
 ; Red
-	db FULL_RESTORE, FULL_RESTORE ; items
+	db 0, 0 ; items
 	db 25 ; base reward
 	dw AI_BASIC + AI_SETUP + AI_TYPES + AI_SMART + AI_OPPORTUNIST + AI_AGGRESSIVE + AI_CAUTIOUS + AI_STATUS + AI_RISKY
 	dw CONTEXT_USE + SWITCH_SOMETIMES
 
 ; Leaf
-	db FULL_RESTORE, FULL_RESTORE ; items
+	db 0, 0 ; items
 	db 25 ; base reward
 	dw AI_BASIC + AI_SETUP + AI_TYPES + AI_SMART + AI_OPPORTUNIST + AI_AGGRESSIVE + AI_CAUTIOUS + AI_STATUS + AI_RISKY
 	dw CONTEXT_USE + SWITCH_SOMETIMES
@@ -273,7 +273,7 @@ TrainerClassAttributes:
 	dw CONTEXT_USE + SWITCH_SOMETIMES
 
 ; Pokemaniac
-	db X_SPEED, 0 ; items
+	db 0, 0 ; items
 	db 13 ; base reward
 	dw AI_BASIC + AI_SETUP + AI_OFFENSIVE + AI_AGGRESSIVE + AI_STATUS
 	dw CONTEXT_USE + SWITCH_SOMETIMES
@@ -393,19 +393,19 @@ TrainerClassAttributes:
 	dw CONTEXT_USE + SWITCH_SOMETIMES
 
 ; Elder
-	db SUPER_POTION, 0 ; items
+	db 0, 0 ; items
 	db 10 ; base reward
 	dw AI_BASIC + AI_SETUP + AI_TYPES + AI_SMART + AI_OPPORTUNIST + AI_AGGRESSIVE + AI_CAUTIOUS + AI_STATUS + AI_RISKY
 	dw CONTEXT_USE + SWITCH_SOMETIMES
 
 ; Sr and Jr
-	db LEMONADE, 0 ; items
+	db 0, 0 ; items
 	db 16 ; base reward
 	dw AI_BASIC + AI_TYPES + AI_OPPORTUNIST + AI_CAUTIOUS + AI_STATUS
 	dw CONTEXT_USE + SWITCH_OFTEN
 
 ; Couple
-	db LEMONADE, 0 ; items
+	db 0, 0 ; items
 	db 18 ; base reward
 	dw AI_BASIC + AI_TYPES + AI_OPPORTUNIST + AI_CAUTIOUS + AI_STATUS
 	dw CONTEXT_USE + SWITCH_OFTEN
@@ -417,19 +417,19 @@ TrainerClassAttributes:
 	dw CONTEXT_USE + SWITCH_SOMETIMES
 
 ; Rich Boy
-	db MAX_POTION, 0 ; items
+	db 0, 0 ; items
 	db 50 ; base reward
 	dw AI_BASIC + AI_TYPES + AI_OPPORTUNIST + AI_CAUTIOUS + AI_STATUS
 	dw CONTEXT_USE + SWITCH_SOMETIMES
 
 ; Lady
-	db MAX_POTION, 0 ; items
+	db 0, 0 ; items
 	db 50 ; base reward
 	dw AI_BASIC + AI_TYPES + AI_OPPORTUNIST + AI_CAUTIOUS + AI_STATUS
 	dw CONTEXT_USE + SWITCH_SOMETIMES
 
 ; Breeder
-	db SUPER_POTION, 0 ; items
+	db 0, 0 ; items
 	db 16 ; base reward
 	dw AI_BASIC + AI_SETUP + AI_TYPES + AI_CAUTIOUS + AI_STATUS
 	dw CONTEXT_USE + SWITCH_RARELY
@@ -441,7 +441,7 @@ TrainerClassAttributes:
 	dw CONTEXT_USE + SWITCH_SOMETIMES
 
 ; Cowgirl
-	db MOOMOO_MILK, 0 ; items
+	db 0, 0 ; items
 	db 14 ; base reward
 	dw AI_BASIC + AI_OFFENSIVE + AI_OPPORTUNIST + AI_STATUS + AI_RISKY
 	dw CONTEXT_USE + SWITCH_SOMETIMES
@@ -477,13 +477,13 @@ TrainerClassAttributes:
 	dw CONTEXT_USE + SWITCH_SOMETIMES
 
 ; Scientist
-	db FULL_HEAL, 0 ; items
+	db 0, 0 ; items
 	db 25 ; base reward
 	dw AI_BASIC + AI_SETUP + AI_TYPES + AI_SMART + AI_OPPORTUNIST + AI_CAUTIOUS + AI_STATUS + AI_RISKY
 	dw CONTEXT_USE + SWITCH_SOMETIMES
 
 ; Rocket Scientist
-	db FULL_HEAL, 0 ; items
+	db 0, 0 ; items
 	db 25 ; base reward
 	dw AI_BASIC + AI_SETUP + AI_TYPES + AI_SMART + AI_OPPORTUNIST + AI_CAUTIOUS + AI_STATUS + AI_RISKY
 	dw CONTEXT_USE + SWITCH_SOMETIMES
@@ -501,13 +501,13 @@ TrainerClassAttributes:
 	dw CONTEXT_USE + SWITCH_SOMETIMES
 
 ; Blackbelt T
-	db FRESH_WATER, 0 ; items
+	db 0, 0 ; items
 	db 6 ; base reward
 	dw AI_BASIC + AI_OFFENSIVE + AI_STATUS + AI_RISKY
 	dw CONTEXT_USE + SWITCH_SOMETIMES
 
 ; Battle Girl
-	db FRESH_WATER, 0 ; items
+	db 0, 0 ; items
 	db 6 ; base reward
 	dw AI_BASIC + AI_OFFENSIVE + AI_STATUS + AI_RISKY
 	dw CONTEXT_USE + SWITCH_SOMETIMES
@@ -837,7 +837,7 @@ TrainerClassAttributes:
 	dw CONTEXT_USE + SWITCH_RARELY
 
 ; Bill T
-	db X_SPEED, 0 ; items
+	db 0, 0 ; items
 	db 24 ; base reward
 	dw AI_BASIC + AI_SETUP + AI_TYPES + AI_SMART + AI_OPPORTUNIST + AI_AGGRESSIVE + AI_CAUTIOUS + AI_STATUS + AI_RISKY
 	dw CONTEXT_USE + SWITCH_SOMETIMES
@@ -855,7 +855,7 @@ TrainerClassAttributes:
 	dw CONTEXT_USE + SWITCH_SOMETIMES
 
 ; Imakuni
-	db AWAKENING, 0 ; items
+	db 0, 0 ; items
 	db 20 ; base reward
 	dw AI_BASIC + AI_SETUP + AI_TYPES + AI_SMART + AI_OPPORTUNIST + AI_CAUTIOUS + AI_STATUS + AI_RISKY
 	dw CONTEXT_USE + SWITCH_SOMETIMES
@@ -867,7 +867,7 @@ TrainerClassAttributes:
 	dw CONTEXT_USE + SWITCH_SOMETIMES
 
 ; Rei
-	db FULL_HEAL, 0 ; items
+	db 0, 0 ; items
 	db 20 ; base reward
 	dw AI_BASIC + AI_SETUP + AI_TYPES + AI_SMART + AI_OPPORTUNIST + AI_AGGRESSIVE + AI_CAUTIOUS + AI_STATUS + AI_RISKY
 	dw CONTEXT_USE + SWITCH_SOMETIMES

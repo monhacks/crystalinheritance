@@ -26,10 +26,10 @@ EcruteakGoldLeafScript: ; this is just wrong
 	writetext NeedALiteBlueMailText
 	waitbutton
 	checkitem LITEBLUEMAIL
-	iffalse NoLiteBlueMail
+	iffalse_jumpopenedtext NoLiteBlueMailText
 	writetext Text_LiteBlueMailQuestion ;;
 	yesorno
-	iffalse LiteBlueMailRefused
+	iffalse_jumpopenedtext LiteBlueMailRefused
 	takeitem LITEBLUEMAIL
 	jumpopenedtext TextHeresTheGoldLeaf
 	verbosegiveitem GOLD_LEAF
@@ -61,17 +61,16 @@ NeedALiteBlueMailText:
 	para "How is my beloved"
 	line "to know I'm more"
 	cont "than my trust fund"
-	cont "when my letters"
-	cont "look like they're"
+	para "when my letters"
+	line "look like they're"
 	cont "written on golden"
 	cont "nuggets?"
 	done
 
-NoLiteBlueMail:
-	text "Would you consider"
-	line "a trade? A sheet"
-	cont "of gold leaf for"
-	cont "plain stationary."
+NoLiteBlueMailText:
+	text "If you find some"
+	line "plain stationary,"
+	cont "come see me."
 	done
 
 

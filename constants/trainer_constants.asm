@@ -1071,7 +1071,7 @@ KRIS EQU __trainer_class__
 
 	trainerclass RILEY ; 7c
 
-	trainerclass BUCK ; 7d
+	trainerclass NOMAD_M ; 7d ; FORMERLY BUCK 
 
 	trainerclass MARLEY ; 7e
 
@@ -1081,7 +1081,7 @@ KRIS EQU __trainer_class__
 
 	trainerclass DARACH ; 81
 
-	trainerclass CAITLIN ; 82
+	trainerclass NOMAD_F ; 82 ; FORMERLY CAITLIN 
 
 	trainerclass BOBESH ; 83 CANDELA
 	const BOBESH1

@@ -31,9 +31,9 @@ Gauldenrod_MapScriptHeader:
 
 	def_object_events
 	object_event  23, 30, SPRITE_BOBESH, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0,  OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_GAULDENROD_BOBESH
-	pokemon_event 24, 32, OCTILLERY, -1, -1, PAL_NPC_RED, ObjectEvent, EVENT_GAULDENROD_BOBESH ; DISAPPEARED UNTIL APPEARS
-	object_event  23, 33, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PURPLE,  OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_GAULDENROD_BOBESH
-	object_event  24, 33, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_GAULDENROD_BOBESH
+	pokemon_event 24, 32, OCTILLERY, -1, -1, PAL_NPC_RED, ObjectEvent, EVENT_GAULDENROD_OCTILLERY; DISAPPEARED UNTIL APPEARS
+	object_event  23, 33, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PURPLE,  OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_GAULDENROD_BRIGADER_CINDY
+	object_event  24, 33, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_GAULDENROD_BRIGADER_CINDY
 	object_event 31, 24, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GauldenrodNPC1Script, -1
 	object_event 34, 20, SPRITE_FIREBREATHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GauldenrodHisuiTraderScript, -1
 	mart_clerk_event  27, 25, MARTTYPE_STANDARD, MART_GAULDENROD_1	
@@ -62,9 +62,13 @@ GauldenrodNPC1Script:
 	jumptextfaceplayer GauldenrodNPC1Text
 
 GauldenrodNPC1Text:
-	text "We can buy so many"
-	line "items now! So"
-	cont "convenient."
+	text "Have you tried"
+	line "the new #-"
+	cont "balls?"
+	
+	para "They're so much"
+	line "more convenient"
+	cont "than apricorns."
 	done
 
 GauldenrodBerrySalesmanScript:
@@ -415,15 +419,19 @@ GauldenrodBobeshScene: ; todo, make
     showtext BobeshText5
     showtext CindyText6 ; crashed after this 
 	closetext
-    applymovement GAULDENROD_BRIGADER, BrigaderTakesCindy
-    applymovement GAULDENROD_MATRON, CindyTakenAway
+
+	special Special_FadeBlackQuickly
+	special Special_ReloadSpritesNoPalettes
     disappear GAULDENROD_MATRON
     disappear GAULDENROD_BRIGADER
 	disappear GAULDENROD_OCTILLERY
-    applymovement GAULDENROD_BOBESH, BobeshWalksAway
 	disappear GAULDENROD_BOBESH
-	setscene $1
 	setevent EVENT_GAULDENROD_BOBESH
+	setevent EVENT_GAULDENROD_OCTILLERY
+	setevent EVENT_GAULDENROD_BRIGADER_CINDY
+	pause 10
+	special Special_FadeInQuickly
+	setscene $1
     end
 
 BrigaderText1:

@@ -1098,8 +1098,8 @@ wRuinsOfAlphKabutoChamberSceneID:: db
 wRuinsOfAlphOmanyteChamberSceneID:: db
 wRuinsOfAlphOutsideSceneID:: db
 wRuinsOfAlphResearchCenterSceneID:: db
-wSeagallopFerryNavelGateSceneID:: db
-wSeagallopFerryShamoutiGateSceneID:: db
+wHoltCoastGateSceneID:: db ; wSeagallopFerryNavelGateSceneID:: db
+wRoute35GoldenrodGateSceneID:: db ; wSeagallopFerryShamoutiGateSceneID:: db
 wSeagallopFerryVermilionGateSceneID:: db
 wShamoutiHotelRestaurantSceneID:: db
 wSproutTower3FSceneID:: db
@@ -1110,7 +1110,7 @@ wTradeCenterSceneID:: db
 wUndergroundPathSwitchRoomEntrancesSceneID:: db
 wEmperorsGardenSceneID:: db ; vermillion city 
 wTinTowerOld3FSceneID:: db ; vermillion port
-wVictoryRoad2FSceneID:: db
+wWesternCapitalSceneID:: db ; wVictoryRoad2FSceneID:: db
 wVioletGymSceneID:: db
 wGauldenrodSceneID:: db ; willsroomsceneid
 wUnusedYetSceneID:: db ; wisetrios

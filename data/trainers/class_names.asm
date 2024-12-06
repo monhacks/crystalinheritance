@@ -17,7 +17,7 @@ TrainerClassNames::
 	li "Elder"            ; Sandra (KAREN)
 	li "Champion"         ; CHAMPION
 	li "Leader"           ; BROCK
-	li "Edler"            ; Samsara, replace misty
+	li "Chronicler"        ; Samsara, replace misty
 	li "Leader"           ; LT_SURGE
 	li "Leader"           ; ERIKA
 	li "Leader"           ; JANINE
@@ -76,8 +76,8 @@ TrainerClassNames::
 	li "Baker"            ; BAKER
 	li "Cowgirl"          ; COWGIRL
 	li "Sailor"           ; SAILOR
-	li "Swimmer"          ; SWIMMERM
-	li "Swimmer"          ; SWIMMERF
+	li "Scavenger"        ; SWIMMERM
+	li "Scavenger"        ; SWIMMERF
 	li "Burglar"          ; BURGLAR
 	li "Agent"            ; PI
 	li "Scientist"        ; SCIENTIST
@@ -130,7 +130,7 @@ TrainerClassNames::
 	li "<PK><MN> Trainer" ; MIRA
 	li "Anarres"          ; Lanna / ANABEL
 	li "Valet"            ; DARACH UNUSED 
-	li "Lady"             ; CAITLIN UNUSED 
+	li "Nomad"            ; formerly CAITLIN 
 	li "General"          ; bobesh / CANDELA
 	li "General"          ; adrinna / BLANCHE
 	li "Elder"            ; barbeau / SPARK_T
@@ -145,5 +145,5 @@ TrainerClassNames::
 	li "<PK><MN> Trainer" ; SILVER FROM WALKER rival
 	li "Student"          ; IMAKUNI, UNUSED 
 	li "General"          ; Kensey  / LAWRENCE
-	li "Shrine"           ; REI
+	li "Chronicler"       ; REI (emi)
 	assert_list_length NUM_TRAINER_CLASSES + 1

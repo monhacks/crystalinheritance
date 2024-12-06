@@ -16,7 +16,7 @@ BellchimeTrail_MapScriptHeader:
 	bg_event 22, 12, BGEVENT_JUMPTEXT, TinTowerSignText
 
 	def_object_events
-	object_event 14,  4, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BellchimeTrailEmiScript, -1
+	object_event 14,  4, SPRITE_REI, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BellchimeTrailEmiScript, -1
 	object_event 21, 10, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, BellchimeBlockerText, EVENT_BEAT_MORTY_GYM ;
 
 	object_const_def
@@ -80,7 +80,7 @@ BellchimeTrailEmiScript:
 	waitbutton
 	closetext
 	winlosstext EmiBeatenText, 0
-	loadtrainer VALERIE, 1
+	loadtrainer REI, 1 ; kimono keeper emi has a unique trainer sprite
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_KIMONO_GIRL_EMI

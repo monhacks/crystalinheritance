@@ -18,7 +18,7 @@ HoltCoastGate_MapScriptHeader:
 	object_event 3, 4, SPRITE_VETERAN_F, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, HoltCoastGateNPCScript, -1
 
 
-AnarresHoltGateHollisScene: ; C.F. bellchimetrail.asm on polished crystal clean
+HoltCoastGateWarpScene: ; C.F. bellchimetrail.asm on polished crystal clean
 	playsound SFX_EXIT_BUILDING
 	applyonemovement PLAYER, hide_object
 	waitsfx

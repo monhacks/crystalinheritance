@@ -62,11 +62,11 @@ MapScenes::
 	scene_var EMPERORS_GARDEN,                        wEmperorsGardenSceneID ;wVermilionCitySceneID
 	scene_var TIN_TOWER_OLD_3F,                       wTinTowerOld3FSceneID ;wVermilionPortSceneID
 	scene_var WESTERN_CAPITAL,                        wWesternCapitalSceneID ;wVictoryRoad2FSceneID
-	scene_var HOLT_COAST_GATE,                        wHoltCoastGateSceneID ;   wTradeCenterSceneID
-	scene_var ROUTE_35_GOLDENROD_GATE,                wRoute35GoldenrodGateSceneID ;       wAlways0SceneID
+;	scene_var HOLT_COAST_GATE,                        wHoltCoastGateSceneID ;   wTradeCenterSceneID
+;	scene_var ROUTE_35_GOLDENROD_GATE,                wRoute35GoldenrodGateSceneID ;       wAlways0SceneID
 ;	scene_var SAFFRON_TRAIN_STATION,                  wAlways0SceneID
-;	scene_var SEAGALLOP_FERRY_NAVEL_GATE,             wSeagallopFerryNavelGateSceneID
-;	scene_var SEAGALLOP_FERRY_SHAMOUTI_GATE,          wSeagallopFerryShamoutiGateSceneID
+	scene_var HOLT_COAST_GATE,             			  wHoltCoastGateSceneID; wSeagallopFerryNavelGateSceneID
+	scene_var ROUTE_35_GOLDENROD_GATE,          	  wRoute35GoldenrodGateSceneID ; wSeagallopFerryShamoutiGateSceneID
 ;	scene_var SEAGALLOP_FERRY_VERMILION_GATE,         wSeagallopFerryVermilionGateSceneID
 ;	scene_var SHAMOUTI_HOTEL_RESTAURANT,              wShamoutiHotelRestaurantSceneID
 ;	scene_var ROUTE_47,                               wRoute47SceneID
