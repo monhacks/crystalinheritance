@@ -457,7 +457,7 @@ KurtExplainsGSBallText:
 	cont "the forest!"
 	
 	para "They nearly"
-	cont "destroyed this"
+	line "destroyed this"
 	cont "artifact..."
 		
 	para "I wish we could"

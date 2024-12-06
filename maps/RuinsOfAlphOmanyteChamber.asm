@@ -64,6 +64,7 @@ MapRuinsofAlphOmanyteChamberSignpost2Script:
 	changeblock 4, 2, $15
 	changeblock 4, 0, $25
 	reloadmappart
+	pause 30
 	playsound SFX_STRENGTH
 	waitsfx
 	pause 20

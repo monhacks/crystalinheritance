@@ -312,15 +312,23 @@ MeetFriedaText:
 	text "I'm Frieda of"
 	line "Friday!"
 
-	para "Nice to meet you!"
+	para "There's a saying:"
+	line "When the going is"
+	cont "tough, the tough"
+	cont "get going."
+	
 	done
 
 FriedaGivesGiftText:
-	text "I love poison-"
-	line "type #mon."
-
-	para "This is my"
-	line "favorite move."
+	text "But sometimes,"
+	line "when the going"
+	cont "gets tough, it"
+	para "all goes downhill!"
+	line "That's Venoshock!"
+	
+	para "2x damage if your"
+	line "foe is poisoned."
+	
 	done
 
 FriedaGaveGiftText:
@@ -329,14 +337,10 @@ FriedaGaveGiftText:
 	done
 
 FriedaFridayText:
-	text "Frieda: Hiya! What"
-	line "day do you like?"
-
-	para "I love Friday. No"
-	line "doubt about it!"
-
-	para "Don't you think"
-	line "it's great too?"
+	text "Frieda: Veno-"
+	line "shock, to kick"
+	para "your opponent wh-"
+	line "en they're down!"
 	done
 
 

@@ -19,11 +19,11 @@ WesternCapital_MapScriptHeader: ;	def_scene_scripts
 
 
 	def_object_events
-	object_event 11, 21, SPRITE_MEJIMI, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_PROLOGUE_MEJIMI ; need to put all these in the event flags file
-	object_event  9, 24, SPRITE_ADRINNA, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_PROLOGUE_ADRINNA ; disappeared at start
-	object_event  9, 24, SPRITE_KENSEY, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_PROLOGUE_KENSEY; disappeared at start
-	object_event  9, 24, SPRITE_BOBESH, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_PROLOGUE_BOBESH; disappeared at start
-	object_event  9, 24, SPRITE_SAMSARA, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_PROLOGUE_SAMSARA; disappeared at start
+	object_event 11, 21, SPRITE_MEJIMI, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_PROLOGUE_MEJIMI ; need to put all these in the event flags file
+	object_event  9, 27, SPRITE_ADRINNA, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_PROLOGUE_ADRINNA ; disappeared at start
+	object_event  9, 27, SPRITE_KENSEY, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_PROLOGUE_KENSEY; disappeared at start
+	object_event  9, 27, SPRITE_BOBESH, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_PROLOGUE_BOBESH; disappeared at start
+	object_event  9, 27, SPRITE_SAMSARA, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_PROLOGUE_SAMSARA; disappeared at start
 	pokemon_event  10, 19, LUGIA, -1, -1, PAL_NPC_BLUE, WC_pkmn_text, EVENT_PROLOGUE_MEJIMI ; by tammy  ;;;; 
 	pokemon_event  12, 19, HO_OH, -1, -1, PAL_NPC_RED, WC_pkmn_text, EVENT_PROLOGUE_MEJIMI ; by tammy  ;;;; 
 
@@ -55,6 +55,12 @@ WesternCapitalCemeteryScene: ; SOME OF THIS C.F. MRPOKEMONSHOUSE.ASM IN POLISHED
     appear WESTERN_CAPITAL_ADRINNA
     waitsfx
     applymovement WESTERN_CAPITAL_ADRINNA, WC_AdrinnaMovement1
+	
+	refreshscreen
+	trainerpic ADRINNA
+	waitbutton
+	closepokepic
+	
 	applyonemovement WESTERN_CAPITAL_MEJIMI, step_left
 	turnobject WESTERN_CAPITAL_MEJIMI, UP
 	showemote WESTERN_CAPITAL_MEJIMI, WESTERN_CAPITAL_MEJIMI, 15
@@ -68,6 +74,12 @@ WesternCapitalCemeteryScene: ; SOME OF THIS C.F. MRPOKEMONSHOUSE.ASM IN POLISHED
     appear WESTERN_CAPITAL_KENSEY
     waitsfx
     applymovement WESTERN_CAPITAL_KENSEY, WC_KenseyMovement1
+	
+	refreshscreen
+	trainerpic KENSEY
+	waitbutton
+	closepokepic
+	
 	turnobject WESTERN_CAPITAL_MEJIMI, LEFT
 	turnobject WESTERN_CAPITAL_ADRINNA, LEFT
 
@@ -92,6 +104,12 @@ WesternCapitalCemeteryScene: ; SOME OF THIS C.F. MRPOKEMONSHOUSE.ASM IN POLISHED
     appear WESTERN_CAPITAL_BOBESH
     waitsfx
     applymovement WESTERN_CAPITAL_BOBESH, WC_BobeshMovement1
+	
+	refreshscreen
+	trainerpic BOBESH
+	waitbutton
+	closepokepic
+	
 	turnobject WESTERN_CAPITAL_MEJIMI, LEFT
 
 	opentext
@@ -146,7 +164,7 @@ WesternCapitalCemeteryScene: ; SOME OF THIS C.F. MRPOKEMONSHOUSE.ASM IN POLISHED
 	waitbutton
 	closetext	
 
-	applymovement WESTERN_CAPITAL_MEJIMI, step_left
+	applyonemovement WESTERN_CAPITAL_MEJIMI, step_left
 	
 	opentext
 	writetext Prologue_Text10 ; how dare you 
@@ -222,7 +240,7 @@ Prologue_Text3:
 	para "Kensey: their"
 	line "#balls are..."
 	para "Barbaric! But"
-	cont "incredible."
+	line "incredible."
 	para "We must produce"
 	line "our own."
 	
@@ -359,6 +377,9 @@ WC_AdrinnaMovement1:
 	step_up
 	step_up
 	step_up
+	step_up
+	step_up
+	step_up
 	step_right
 	turn_head_down
 	step_end
@@ -366,15 +387,27 @@ WC_AdrinnaMovement1:
 WC_KenseyMovement1:
 	step_up
 	step_up
+	step_up
+	step_up
+	step_up
+	step_up	
 	turn_head_right
 	step_end
 
 WC_KenseyMovement2:
 	step_down
 	step_down
+	step_down
+	step_down
+	step_down	
+	step_down
 	step_end
 
 WC_BobeshMovement1:
+	step_up
+	step_up
+	step_up
+	step_up
 	step_up
 	step_up
 	turn_head_right
@@ -383,9 +416,16 @@ WC_BobeshMovement1:
 WC_BobeshMovement2:
 	step_down
 	step_down
+	step_down
+	step_down	
+	step_down
+	step_down
 	step_end
 	
 WC_SamsaraMovement1:
+	step_up
+	step_up
+	step_up
 	step_up
 	step_up
 	step_end

@@ -901,7 +901,7 @@ HollisGroup:
 		db CURSE, WATER_GUN, RAIN_DANCE, REST
 	db 13, ARIADOS, NO_ITEM, 20
 		db SCARY_FACE, POISON_STING, BUG_BITE, BATON_PASS
-	db 15, KLEAVOR, METAL_COAT, 20
+	db 14, KLEAVOR, METAL_COAT, 20
 		db CUT, FOCUS_ENERGY, QUICK_ATTACK, LEER
 	db -1 ; end
 
@@ -1933,9 +1933,9 @@ CamperGroup:
 	db "Lloyd@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 24, ARBOK
-	db 26, WEEPINBELL
-	db 28, PIDGEOTTO
+	db 22, ARBOK
+	db 23, WEEPINBELL
+	db 26, PIDGEOTTO
 	db -1 ; end
 
 ; ================
@@ -2574,9 +2574,9 @@ FisherGroup:
 	db "Tully@" ; ROUTE 32
 	db TRAINERTYPE_NORMAL
 	; party
-	db 25, STARYU
-	db 25, SLOWPOKE
-	db 28, LANTURN	
+	db 22, STARYU
+	db 23, SLOWPOKE
+	db 26, LANTURN	
 	db -1 ; end
 
 ; ================
@@ -2619,9 +2619,9 @@ FisherGroup:
 	db "Wilton@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 34, QWILFISH
-	db 34, OCTILLERY
-	db 36, GYARADOS
+	db 22, QWILFISH
+	db 24, OCTILLERY
+	db 26, GYARADOS
 	db -1 ; end
 
 ; ================
@@ -2689,8 +2689,8 @@ FisherGroup:
 	db "Henry@" ; ROUTE 32
 	db TRAINERTYPE_NORMAL
 	; party
-	db 25, POLITOED
-	db 27, TENTACRUEL
+	db 22, POLITOED
+	db 24, TENTACRUEL
 	db -1 ; end
 
 ; ================
@@ -3060,8 +3060,8 @@ BirdKeeperGroup:
 	db "Peter@" ; ROUTE 32
 	db TRAINERTYPE_NORMAL
 	; party
-	db 28, SKARMORY
-	db 28, GLIGAR
+	db 25, SKARMORY
+	db 25, GLIGAR
 	db -1 ; end
 
 ; ================
@@ -8515,9 +8515,9 @@ EngineerGroup:
 	db "Smith@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 4, MAGNEMITE
-	db 5, MAGNEMITE
-	db 6, MAGNEMITE	
+	db 2, MAGNEMITE
+	db 3, MAGNEMITE
+	db 4, MAGNEMITE	
 	db -1 ; end
 	
 ; ================

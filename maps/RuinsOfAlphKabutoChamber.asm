@@ -90,6 +90,7 @@ MapRuinsofAlphKabutoChamberSignpost2Script:
 	changeblock 2, 2, $14
 	changeblock 4, 2, $15
 	reloadmappart
+	pause 30
 	applymovement RUINS_SCIENTIST, RuinsScientistMovesToYou
 	opentext
 	writetext Scientist_TakeThisReport ;todo need to add an unown report to the key items

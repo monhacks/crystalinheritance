@@ -63,6 +63,7 @@ AnarresTower3FEvent:
 	opentext
 	showemote EMOTE_HEART, ANARRES_TOWER_TAMMY, 10
 	applyonemovement ANARRES_TOWER_HOLLIS, step_down
+	turnobject PLAYER, DOWN
 	turnobject ANARRES_TOWER_HOLLIS, LEFT
 	showtext TammyText2
 ;	waitbutton

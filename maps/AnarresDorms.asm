@@ -19,25 +19,25 @@ AnarresDorms_MapScriptHeader:
 	bg_event  0,  5, BGEVENT_READ, AnarresDormsBed 
 
 	def_object_events
-	object_event 2, 1, SPRITE_KURT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, jumptextfaceplayer, AnarresDormsKurtScript, -1 ;
-	object_event 5, 2, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, AnarresDormsNPC1Text, -1 ;
+	object_event 2, 1, SPRITE_KURT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AnarresDormsKurtScript, -1 ;
+;	object_event 5, 2, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, AnarresDormsNPC1Text, -1 ;
 	object_event 5, 3, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, AnarresDormsNPC2Text, -1 ;
 	object_event 3, 3, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, AnarresDormsNPC3Text, -1 ;
 	
 	object_const_def
 	
 
-AnarresDormsNPC1Text:
-	text "I heard that"
-	line "someone made a"
-	cont "way to tutor new"
-	cont "techniques."
-	
-	para "I remember the"
-	line "old days, when"
-	cont "bug types had no"
-	cont "STAB coverage."
-	done
+;AnarresDormsNPC1Text:
+;	text "I heard that"
+;	line "someone made a"
+;	cont "way to tutor new"
+;	cont "techniques."
+;	
+;	para "I remember the"
+;	line "old days, when"
+;	cont "bug types had no"
+;	cont "STAB coverage."
+;	done
 	
 AnarresDormsNPC2Text:
 	text "The Pineco are"
@@ -94,22 +94,57 @@ AnarresDormsKurtScript: ; will this work?....
 	faceplayer
 	opentext
 	writetext KurtAnarresDormsText
+	yesorno
+	iffalse .AnarresKurtPC
+	winlosstext AnarresKurtBattleText, AnarresKurtBattleText
+	loadtrainer KURT, 1 
+	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+	startbattle
+	reloadmapafterbattle
+	opentext
+	jumpopenedtext AnarresKurtBattleText2
+
+
+
+
+	
+.AnarresKurtPC
+	KurAnarresDormsText2
 	promptbutton
 	special PokemonCenterPC ; per engine/events/std_scripts.asm this is how it should be done. 
 	endtext
 	end
 
 KurtAnarresDormsText:
-	text "<PLAYER>."
-	line "This is where"
-	cont "anyone can have"
-	cont "a rest."
+	text "<PLAYER>, these"
+	line "dorms are a good"
+	cont "place to rest."
 	
-	para "Also, if you"
-	line "need me to run"
-	cont "quick back to our"
-	cont "time to access a"
-	cont "PC, I can. Just"
-	cont "let me know what"
-	cont "you need."
+	para "I can run back to"
+	line "our time for a PC"
+	cont "if you need."
+	
+	para "Oh! I found some"
+	line "neat #mon in"
+	cont "the wild areas"
+	cont "around here."
+
+	para "Want to battle?"
+	done
+	
+KurAnarresDormsText2:
+	text "I can run back"
+	line "to manage your"
+	cont "party."
+	done
+
+AnarresKurtBattleText:
+	text "You're becoming"
+	line "quite a trainer!"
+	done
+
+AnarresKurtBattleText2:
+	text "We can battle as"
+	line "many times as"
+	cont "you like."
 	done

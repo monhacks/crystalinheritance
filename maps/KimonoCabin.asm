@@ -429,9 +429,10 @@ Kimono4NotStrongEnoughText:
 	cont "around."
 	para "Oh, but you"
 	line "don't look"
-	cont "strong enough"
-	cont "..."
-	para "maybe this"
+	cont "strong enough."
+	para "..."
+	line "..."
+	para "Maybe this"
 	line "whole move was"
 	cont "a bad idea."
 	done

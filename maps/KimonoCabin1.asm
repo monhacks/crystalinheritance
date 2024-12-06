@@ -19,7 +19,7 @@ KimonoCabin1_MapScriptHeader: ; should be like  "BurnedTowerB1F_MapScriptHeader"
 
 	def_object_events
 	object_event  5,  0, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, DRATINI, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, KimonoCabin1Dratini, EVENT_KIMONO_CABIN_DRATINI
-	object_event  19, 18, SPRITE_CUTE_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE,  OBJECTTYPE_SCRIPT, 0, KimonoCabin11Script, -1 ; "Vera" , revise dialogue to be a scared little girl
+	object_event  19, 18, SPRITE_SCHOOLGIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE,  OBJECTTYPE_SCRIPT, 0, KimonoCabin11Script, -1 ; "Vera" , revise dialogue to be a scared little girl
 	tmhmball_event  18, 19, TM_ROCK_SMASH, EVENT_UNION_CAVE_B1F_NORTH_X_DEFEND ;brick break, disappears if you already have it
 	smashrock_event 18, 10
 	smashrock_event 13, 5
@@ -74,8 +74,8 @@ Kimono11ThanksForHelpingText:
 	line "I should learn to"
 	cont "smash rocks. "
 
-	para "But I don't "
-	line "know how yet."
+	para "But I don't know"
+	line "how yet."
 	done
 
 Kimono11HelpedText:

@@ -50,13 +50,27 @@ ENDM
 	special_bg_pal tileset,  TILESET_SAFARI_ZONE,         PAL_TIMEOFDAY, SafariZonePalette
 	special_bg_pal tileset,  TILESET_RUINS_OF_ALPH,       PAL_SINGLE,    RuinsPalette
 	special_bg_pal tileset,  TILESET_ALPH_WORD_ROOM,      PAL_SINGLE,    RuinsPalette
-;	special_bg_pal map, 	 HOLLYS_HOLT, 				  PAL_SINGLE,    SepiaForestPalette ; LOOKS REALLY BAD...
+
 	special_bg_pal landmark, ANARRES_TOWN, 				  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; looks OK.
 	special_bg_pal landmark, CALM_COAST, 				  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; looks OK.
 	special_bg_pal landmark, GAULDENROD, 				  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; looks OK.	
 	special_bg_pal landmark, SERENE_SPRINGS,			  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; looks OK.	
 	special_bg_pal landmark, STADIUM,			          PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; looks OK.	
 	special_bg_pal landmark, STADIUM_GROUNDS,			  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; looks OK.	
+	special_bg_pal landmark, WESTERN_CAPITAL,			  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; looks OK.	
+	special_bg_pal landmark, EMPERORS_GARDEN,			  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; looks OK.	
+	special_bg_pal landmark, CATTLE_CULL,				  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; looks OK.	
+	special_bg_pal landmark, TRADERS_LANDING,		      PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; looks OK.		
+	special_bg_pal landmark, CIANWOOD_COVE,		          PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; looks OK.		
+	special_bg_pal landmark, SHELTERED_SHORES,		      PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; looks OK.		
+	special_bg_pal landmark, ARDUOUS_ANCHORAGE,		      PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; looks OK.		
+	special_bg_pal landmark, TRANQUIL_TARN,		      	  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; looks OK.		
+	special_bg_pal landmark, SINJOH_CAMP,		      	  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; looks OK.		
+	special_bg_pal landmark, EMPIRES_REACH,		      	  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; looks OK.		
+	special_bg_pal landmark, EERIE_HAMLET,		      	  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; looks OK.		
+	special_bg_pal landmark, SULFUR_STY,		      	  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; looks OK.		
+	special_bg_pal landmark, TIMELESs_TAPESTRY,		  	  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; looks OK.		
+
 	special_bg_pal overcast, (unused),                    PAL_TIMEOFDAY, OvercastBGPalette
 	db 0 ; end
 

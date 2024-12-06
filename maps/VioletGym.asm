@@ -11,28 +11,20 @@ VioletGym_MapScriptHeader:
 	def_coord_events
 
 	def_bg_events
-;	bg_event  3, 13, BGEVENT_READ, VioletGymStatue
-;	bg_event  6, 13, BGEVENT_READ, VioletGymStatue
+
 
 	def_object_events
-	object_event  4,  2, SPRITE_PRYCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletGymPryceText, EVENT_BEAT_FALKNER ; NEW 
+	object_event  4,  2, SPRITE_PRYCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletGymPryceText, EVENT_BEAT_FALKNER  
 
 	object_const_def
 
 VioletGymPryceText:
 	text "Johto's Gyms once"
 	line "shared wisdom like"
-	cont "trees share fruit."
+	cont "fruitful trees."
 
 	para "Now Falkner hides"
-	line "behind walls, his"
-	cont "weather machines"
-	cont "a smokescreen."
-
-	para "He mystifies with"
-	line "technology, when"
-	cont "he should illumin-"
-	cont "ate with knowledge."
+	line "behind walls."
 
 	para "A Gym's strength"
 	line "lies in nurturing"
@@ -40,7 +32,13 @@ VioletGymPryceText:
 	cont "baffling them."
 
 	para "I hoped to remind"
-	line "him, but his tower"
-	cont "stands between us."
+	line "him, but he would"
+	cont "rather rule over"
+	para "sand than admit"
+	line "his mistakes."
+	
+	para "Doesn't he know,"
+	line "sand makes a bad"
+	cont "foundation."
 
 	done

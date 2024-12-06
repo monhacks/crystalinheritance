@@ -16,9 +16,9 @@ AnarresHoltGate_MapScriptHeader: ; todo add a wram flag ?
 	def_bg_events
 
 	def_object_events
-	object_event 3, 4, SPRITE_TAMMY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AnarresHoltGateTammyScript, EVENT_ANARRES_HOLT_GATE
+	object_event 3, 4, SPRITE_TAMMY, SPRITEMOVEDATA_STSANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AnarresHoltGateTammyScript, EVENT_ANARRES_HOLT_GATE
 	object_event 4, 4, SPRITE_HOLLIS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AnarresHoltGateHollisScript, EVENT_ANARRES_HOLT_GATE
-	object_event 3, 6, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AnarresHoltGateNPCScript, -1
+	object_event 3, 6, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_STANDING_LEFT, 1, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AnarresHoltGateNPCScript, -1
 
 	object_const_def
 	const ANARRESHOLTGATE_TAMMY
@@ -34,15 +34,19 @@ AnarresHoltGateHollisScene:
 	writetext TammyDialogue2
 	waitbutton
 	closetext
+
 	applymovement ANARRESHOLTGATE_HOLLIS, HollisTurnDown
+
 	opentext
 	writetext HollisDialogue2
 	waitbutton
 	closetext
+	pause 10 
+	
 	applymovement ANARRESHOLTGATE_HOLLIS, HollisExitMovement
-	turnobject ANARRESHOLTGATE_TAMMY, RIGHT
 	disappear ANARRESHOLTGATE_HOLLIS
 	pause 15
+
 	opentext
 	writetext TammyDialogue3
 	waitbutton
@@ -83,7 +87,7 @@ HollisDialogue1:
 
 TammyDialogue2:
 	text "Tammy: The mist-"
-	line "ask is not"
+	line "ake is not"
 	cont "adapting!"
 
 	para "Just admit your"

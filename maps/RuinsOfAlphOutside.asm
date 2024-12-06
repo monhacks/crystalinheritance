@@ -41,7 +41,6 @@ RuinsOfAlphOutside_MapScriptHeader:
 	smashrock_event  9, 13
 	smashrock_event  6,  6
 	smashrock_event  7,  6 
-	tmhmball_event   5, 38, TM_HIDDEN_POWER, EVENT_GOT_TM10_HIDDEN_POWER
 
 	object_const_def
 
@@ -193,6 +192,7 @@ RuinsOfAlphScientist3Text:
 
 
 RuinsOfAlphNorthScientistScript:
+	faceplayer
 	jumptext RuinsOfAlphNorthScientistText
 	
 RuinsOfAlphNorthScientistText:

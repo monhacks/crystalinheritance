@@ -19,7 +19,7 @@ KimonoCabin2_MapScriptHeader: ; should be like  "BurnedTowerB1F_MapScriptHeader"
 
 
 	def_object_events
-	object_event  8, 7, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN,  OBJECTTYPE_SCRIPT, 0, KimonoCabin2RepelScript, -1
+	object_event  8, 6, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN,  OBJECTTYPE_SCRIPT, 0, KimonoCabin2RepelScript, -1
 
 	itemball_event 10, 7, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_1
 	itemball_event 10, 4, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_3
@@ -190,7 +190,7 @@ CheckYourStepsText:
 	text "How's that repel?"
 	para "There's "
 	
-	text_decimal wRepelEffect, 1, 3
+	text_decimal wRepelEffect, 2, 5 ; these values seem to be lal over the place ?
 	text " steps"
 	line "remaining."
 	done
