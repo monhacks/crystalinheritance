@@ -86,6 +86,7 @@ ENDM
 	map_const SLOWPOKE_WELL_ENTRANCE,                      8,  9 ; 29
 	map_const SLOWPOKE_WELL_B1F,                          10,  9 ; 30
 	map_const SLOWPOKE_WELL_B2F,                          10,  9 ; 31
+	map_const SLOWPOKE_WELL_B3F,                          10,  9 ; 31	
 	map_const OLIVINE_LIGHTHOUSE_1F,                      10,  9 ; 32
 	map_const OLIVINE_LIGHTHOUSE_2F,                      10,  9 ; 33
 	map_const OLIVINE_LIGHTHOUSE_3F,                      10,  9 ; 34
@@ -133,12 +134,14 @@ ENDM
 	map_const VALERIES_HOUSE,                              4,  4 ; 14
 	map_const ECRUTEAK_CHERISH_BALL_HOUSE,                 4,  4 ; 15
 	map_const ECRUTEAK_DESTINY_KNOT_HOUSE,                 4,  4 ; 16
+	map_const DANCE_THEATRE_2F,                            6,  7 ; c.f. dance theatre, but different 
 
 
 	newgroup                                                     ;  5 anarres town and surrounding
 	map_const HOLLYS_HOLT, 								  17, 24 ;  1 forest
 	map_const ANARRES_TOWN,                               20,  9 ;  2 johto traditional
 	map_const MISTY_BASIN,                                10,  9 ;  3 cave 
+	map_const MISTY_BASIN_B1F,                            10,  9 ;  3 cave 
 	map_const ANARRES_DORMS,                               4,  3 ;  4 johto house
 	map_const ANARRES_STOCKROOM,                           6,  4 ;  5 traditional hosue
 	map_const ANARRES_TOWER_1F,                            6,  6 ;  6 sprout tower

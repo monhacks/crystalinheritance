@@ -652,7 +652,7 @@ BattleAnim_UnderCurse:
 	anim_wait 40
 	anim_ret
 
-BattleAnim_InWhirlpool:
+BattleAnim_InWhirlpool: ; NOT NEEDED ANY MORE? 
 	anim_1gfx ANIM_GFX_WIND
 	anim_bgeffect ANIM_BG_WHIRLPOOL, $0, $0, $0
 	anim_sound 0, 1, SFX_SURF

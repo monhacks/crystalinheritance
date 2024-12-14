@@ -6,75 +6,19 @@ SlowpokeWellB1F_MapScriptHeader:
 	def_warp_events ;todo not warping me to b1f
 	warp_event 17, 15, SLOWPOKE_WELL_ENTRANCE, 2
 	warp_event  7, 11, SLOWPOKE_WELL_B2F, 1
-	warp_event 13,  1, UNION_CAVE_B1F_SOUTH, 3
+	warp_event 13,  1, 
 
 	def_coord_events
 
 	def_bg_events
 
 	def_object_events
-	object_event 13, 2, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, SlowpokeWellB1FGuardScript, SLOWPOKE_WELL_MOVED_ASIDE
-	strengthboulder_event  12, 2
-	strengthboulder_event  14, 2
-	strengthboulder_event  3, 2	
 	itemball_event 10,  3, SUPER_POTION, 1, EVENT_SLOWPOKE_WELL_B1F_SUPER_POTION
 	object_event  5,  4, SPRITE_BAKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SlowpokeWellB1FRolloutScript, -1 ;todo make this cost a silver leaf
+	object_event  13, 3, SPRITE_SCIENTIST, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, SlowpokeWellB1FText, -1  
 
 	object_const_def
-	const SLOWPOKE_WELL_B1F_SCHOOLBOY ;fixed?
 
-SlowpokeWellB1FGuardScript:
-	faceplayer
-	opentext
-	checkevent SLOWPOKE_WELL_MOVED_ASIDE
-	iftrue .MovedAside
-	checkevent EVENT_LOGGERS_ILEX_FOREST
-	iftrue .MovesAside
-	writetext SlowpokeWellImGuardingText
-	waitbutton
-	closetext
-	end 
-	
-.MovesAside:
-	writetext SlowpokeWellMovesAsideText
-	waitbutton
-	closetext
-	applyonemovement PLAYER, step_down
-	turnobject PLAYER, UP
-	applymovement SLOWPOKE_WELL_B1F_SCHOOLBOY, MovesAsideMovement
-	setevent SLOWPOKE_WELL_MOVED_ASIDE
-	clearevent EVENT_TALKED_TO_PRYCE_TINDER_GARDEN 
-	end
-
-.MovedAside:
-	writetext SlowpokeWellMovesAsideText
-	waitbutton
-	closetext
-	end
-
-SlowpokeWellImGuardingText:
-	text "The miners in Un-"
-	line "ion cave want to"
-	cont "expand to Slowpoke"
-	cont "well. I won't let"
-	cont "anyone do that!"
-	done
-
-MovesAsideMovement:
-	step_down
-	step_right
-	turn_head_left
-	step_end
-
-SlowpokeWellMovesAsideText:
-	text "Oh, you stopped"
-	line "the clear-cutters"
-	cont "in Ilex?"
-	
-	para "That's cool. If"
-	line "you want to pass,"
-	cont "you can."
-	done
 
 SlowpokeWellB1FRolloutScript:
 	faceplayer
@@ -161,5 +105,28 @@ Text_RolloutTutorTaught:
 	cont "is great. Once"
 	cont "you start, it's"
 	cont "hard to stop!"
+	done
+
+
+SlowpokeWellB1FText:
+	text "Water carved this"
+	line "cave! One tiny"
+	cont "change in the"
+
+	para "past; a shifted"
+	line "rock, a different"
+	cont "current - would"
+
+	para "have opened new"
+	line "chambers."
+	
+	para "I wonder what sec-"
+	line "rets these walls"
+	cont "hide... just bec-"
+
+	para "ause water chose"
+	line "one path over"
+	cont "another."
+	
 	done
 

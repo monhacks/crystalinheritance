@@ -70,6 +70,7 @@ GauldenrodTower4FSandraScript:
 	applymovement GAULDENRODTOWER4F_AMOS, AmosEnterMovement1
 ; inserting this 
 	showemote EMOTE_SHOCK, PLAYER, 15
+	appear GAULDENRODTOWER4F_ADRINNA
 	applyonemovement GAULDENRODTOWER4F_ADRINNA, teleport_to ; APPEAR 
 	opentext
 	writetext AdrinnaGauldenrodTowerText

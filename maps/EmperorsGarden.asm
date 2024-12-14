@@ -85,6 +85,12 @@ EG_KurtText:
 	done
 
 EmperorsGardenMejimiScene:
+	;MOVING CAMERA
+	applyonemovement PLAYER, hide_object
+	waitsfx
+	applymovement PLAYER, EG_PanDownMovement ; to add 
+	pause 10 
+	; START SCENE
 	applymovement EMPERORS_GARDEN_MEJIMI, MejimiWalksInMovement
 	refreshscreen
 	trainerpic MEJIMI
@@ -119,6 +125,11 @@ EmperorsGardenMejimiScene:
 	disappear EMPERORS_GARDEN_ADRINNA
 	setevent EVENT_EMPERORS_GARDEN_MEJIMI
 	setscene $1
+	pause 10
+	special Special_FadeOutMusic
+	special FadeOutPalettes
+	pause 15
+	warpfacing LEFT, EMPERORS_GARDEN, 28, 28
 	end
 
 MejimiWalksInMovement:
@@ -294,6 +305,8 @@ EmperorsGardenKenseyScene:
 
 PlayerHidesFromKenseyMovement:
 	step_left
+	step_left
+	step_left
 	step_up
 	step_up
 	step_up
@@ -353,16 +366,15 @@ EG_FamiliarSmellText:
 AdrinnaMoves3:
 	step_down
 	step_down
+	step_end
+
+AdrinnaMoves4:
 	step_down
 	step_down	
 	step_down
 	step_left
 	step_left
 	step_left
-	turn_head_down
-	step_end
-
-AdrinnaMoves4:
 	step_down
 	step_down	
 	step_down
@@ -377,6 +389,7 @@ EmperorsGardenAdrinnaScene: ; todo - revise
 	turnobject PLAYER, UP
 	showtext EG_AdrinnaText1
 	applymovement EMPERORS_GARDEN_ADRINNA_4, EG_AdrinnaMove3
+	winlosstext AdrinnaWinText, AdrinnaLossText
 	loadtrainer ADRINNA, ADRINNA1 
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
@@ -388,7 +401,7 @@ EmperorsGardenAdrinnaScene: ; todo - revise
 	applyonemovement EMPERORS_GARDEN_ADRINNA_4, teleport_from
 	disappear EMPERORS_GARDEN_ADRINNA_4
 	setevent EVENT_EMPERORS_GARDEN_ADRINNA
-	setscene $0
+	setscene $4 ; no more scenes 
 	end
 
 EG_AdrinnaMove3:
@@ -519,3 +532,22 @@ Text_EG_TutorTaught:
 	line "can used SEED"
 	cont "BOMBs like me!"
 	done
+
+AdrinnaWinText:
+	text "You put a new"
+	line "style on #mon"
+	cont "battling."
+	done
+	
+AdrinnaLossText:
+	text "I can tell you"
+	line "are pushing your-"
+	cont "self. Keep at it."
+	done
+
+EG_PanDownMovement:
+	step_down
+	step_down
+	step_down
+	step_down
+	step_end

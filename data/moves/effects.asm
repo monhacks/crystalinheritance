@@ -579,6 +579,7 @@ SpeedDownHit:
 IcyWind:
 BubbleBeam:
 Bulldoze:
+Whirlpool:
 	checkobedience
 	usedmovetext
 	doturn
@@ -1239,7 +1240,7 @@ Trap:
 Wrap:
 Bind:
 FireSpin:
-Whirlpool:
+;Whirlpool:
 	checkobedience
 	usedmovetext
 	doturn

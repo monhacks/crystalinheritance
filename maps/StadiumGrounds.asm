@@ -23,12 +23,16 @@ StadiumGrounds_MapScriptHeader: ; todo make everything happen once you talk to B
 	object_event 31,  9, SPRITE_BOBESH, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumGroundsBobeshScript, EVENT_BEAT_BOBESH_STADIUM
 	object_event 32,  10, SPRITE_SANDRA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumGroundsSandraScript, EVENT_BEAT_BOBESH_STADIUM
 	pokemon_event  30, 10, TOXICROAK, -1, -1, PAL_NPC_BLUE, ToxicroakChallengeText, EVENT_BEAT_BOBESH_STADIUM
-	object_event 46, 28, SPRITE_SANDRA, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumGroundsSandra2Script, EVENT_NO_EVENT	
+	object_event 46, 28, SPRITE_SANDRA, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumGroundsSandra2Script, EVENT_STADIUM_GROUNDS_SANDRA	
 	object_event 48, 18, SPRITE_BRIGADER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader8, EVENT_BEAT_BOBESH_STADIUM
 	object_event 48,  9, SPRITE_BRIGADER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader9, EVENT_BEAT_BOBESH_STADIUM
 	object_event 42,  5, SPRITE_BRIGADER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader10, EVENT_BEAT_BOBESH_STADIUM
 	object_event 34, 37, SPRITE_BRIGADER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader11, EVENT_BEAT_BOBESH_STADIUM
 	object_event  7,  9, SPRITE_BRIGADER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader12, EVENT_BEAT_BOBESH_STADIUM
+	object_event  6,  7, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader6, EVENT_BEAT_BOBESH_STADIUM ; todo- place in south 
+	object_event  9,  7, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader7, EVENT_BEAT_BOBESH_STADIUM ; todo - place in south 
+
+
 	tmhmball_event 53, 35, TM_FLAME_CHARGE, EVENT_BURNED_TOWER_B1F_TM_FLAME_CHARGE
 	itemball_event 14,  8, BLACK_BELT, 1, EVENT_GOT_BLACK_BELT_FROM_WESLEY
 
@@ -91,7 +95,8 @@ StadiumGroundsBobeshScene:
 	opentext
 	turnobject STADIUMGROUNDS_SANDRA, DOWN
 	opentext
-	writetext SandraThankYouText
+	writetext 
+	pause 10
 	verbosegivetmhm TM_DAZZLINGLEAM
 	waitbutton
 	special HealParty
@@ -378,9 +383,9 @@ Text_StadiumSign1:
 	done
 	
 Text_StadiumSign2:
-	text "Battle Tower:"
-	
-	para "Coming soon"
+	text "Stadium brought"
+	line "to you by"
+	cont "Emperor Mejimi"
 	done
 
 SandraInvitesToBoxText:
@@ -487,3 +492,42 @@ SandraWalkToBobeshMovement:
 	step_up
 	step_end
 
+
+GenericTrainerBrigader6:
+	generictrainer BRIGADER, 6, EVENT_BEAT_ROCKET_GRUNTM_6, Brigader6SeenText, Brigader6BeatenText
+
+	text "Want to know a"
+	line "secret? Sometimes"
+	cont "we inflict a"
+	cont "fighter's #MON"
+	cont "with status before"
+	cont "they have to"
+	cont "battle."
+	done
+
+Brigader6SeenText:
+	text "Focus, tightening…"
+	done
+
+Brigader6BeatenText:
+	text "Mind blown."
+	done
+
+GenericTrainerBrigader7:
+	generictrainer BRIGADER, 7, EVENT_BEAT_ROCKET_GRUNTM_7, Brigader7SeenText, Brigader7BeatenText
+
+	text "There used to be"
+	line "Slugma here,"
+	cont "before we drained"
+	cont "these hot springs."
+	done
+
+Brigader7SeenText:
+	text "Begone!"
+	done
+
+Brigader7BeatenText:
+	text "I need to alert"
+	line "the stadium"
+	cont "brigade."
+	done

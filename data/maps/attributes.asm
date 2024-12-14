@@ -211,6 +211,7 @@ ENDM
 	map_attributes SlowpokeWellEntrance, SLOWPOKE_WELL_ENTRANCE, $9, 0
 	map_attributes SlowpokeWellB1F, SLOWPOKE_WELL_B1F, $9, 0
 	map_attributes SlowpokeWellB2F, SLOWPOKE_WELL_B2F, $9, 0
+	map_attributes SlowpokeWellB3F, SLOWPOKE_WELL_B3F, $9, 0
 	map_attributes OlivineLighthouse1F, OLIVINE_LIGHTHOUSE_1F, $0, 0
 	map_attributes OlivineLighthouse2F, OLIVINE_LIGHTHOUSE_2F, $0, 0
 	map_attributes OlivineLighthouse3F, OLIVINE_LIGHTHOUSE_3F, $0, 0
@@ -258,6 +259,7 @@ ENDM
 	map_attributes EcruteakPokeCenter1F, ECRUTEAK_POKECENTER_1F, $0, 0
 	map_attributes EcruteakLugiaSpeechHouse, ECRUTEAK_LUGIA_SPEECH_HOUSE, $0, 0
 	map_attributes DanceTheatre, DANCE_THEATRE, $0, 0
+	map_attributes DanceTheatre2F, DANCE_THEATRE_2F, $0, 0
 	map_attributes EcruteakMart, ECRUTEAK_MART, $0, 0
 	map_attributes EcruteakGym, ECRUTEAK_GYM, $0, 0
 	map_attributes EcruteakItemfinderHouse, ECRUTEAK_ITEMFINDER_HOUSE, $0, 0
@@ -326,6 +328,7 @@ ENDM
 	map_attributes HollysHolt, HOLLYS_HOLT, $35, 0 ; start of anarres group
 	map_attributes AnarresTown, ANARRES_TOWN, $5, 0 
 	map_attributes MistyBasin, MISTY_BASIN, $9, 0
+	map_attributes MistyBasinB1F, MISTY_BASIN_B1F, $9, 0
 	map_attributes AnarresDorms, ANARRES_DORMS, $0, 0
 	map_attributes AnarresStockroom, ANARRES_STOCKROOM, $0, 0
 	map_attributes AnarresTower1F, ANARRES_TOWER_1F, $0, 0

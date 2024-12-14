@@ -166,7 +166,7 @@ ItemDescriptions:
 	dw GripClawDesc
 	dw LifeOrbDesc
 	dw LightClayDesc
-	dw MetronomeIDesc
+	dw RoyalBlessingDesc ;to become RoyalBlessing
 	dw MuscleBandDesc
 	dw ProtectPadsDesc
 	dw RockyHelmetDesc
@@ -920,9 +920,9 @@ LightClayDesc:
 	db   "Extends duration"
 	next "of barrier moves.@"
 
-MetronomeIDesc:
-	db   "Powers up moves"
-	next "used again. (Hold)@"
+RoyalBlessingDesc:
+	db   "Proof of"
+	next "pedigree.@"
 
 ProtectPadsDesc:
 	db   "Protects from"

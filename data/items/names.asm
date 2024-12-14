@@ -178,7 +178,7 @@ endc
 	li "Grip Claw"
 	li "Life Orb"
 	li "Light Clay"
-	li "Metronome"
+	li "Royal Blessing" ;"Metronome"
 	li "Muscle Band"
 	li "Protect Pads"
 	li "Rocky Helmet"

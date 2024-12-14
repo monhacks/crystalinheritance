@@ -622,10 +622,14 @@ OutrageDescription:
 	next "and confuses user.@"
 
 FireSpinDescription:
-WhirlpoolDescription:
 WrapDescription:
 	db   "Traps the foe for"
 	next "2-5 turns.@"
+
+WhirlpoolDescription:
+
+	db   "Summons a vortex"
+	next "to slow a foe.@"
 
 TrickRoomDescription:
 	db   "Slow #mon move"

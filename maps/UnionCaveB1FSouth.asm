@@ -6,7 +6,7 @@ UnionCaveB1FSouth_MapScriptHeader:
 	def_warp_events
 	warp_event  3,  5, UNION_CAVE_1F, 2 ;ok
 	warp_event 17,  3, UNION_CAVE_B2F, 1
-	warp_event  7, 33, SLOWPOKE_WELL_B1F, 3
+	warp_event  7, 33, SLOWPOKE_WELL_B2F, 2
 
 	def_coord_events
 

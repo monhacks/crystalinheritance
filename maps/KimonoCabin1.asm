@@ -27,7 +27,6 @@ KimonoCabin1_MapScriptHeader: ; should be like  "BurnedTowerB1F_MapScriptHeader"
 	smashrock_event  7, 10
 	smashrock_event  3, 6
 	smashrock_event  9, 17
-	smashrock_event  3, 11
 	smashrock_event  11, 11
 	itemball_event  4, 0, SITRUS_BERRY, 1, EVENT_KIMONO_CABIN_SITRUS
 	itemball_event  4, 1, FAST_BALL, 5, EVENT_KIMONO_CABIN_FAST_BALLS

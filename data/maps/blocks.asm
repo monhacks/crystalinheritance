@@ -221,6 +221,10 @@ SECTION "SlowpokeWellB2F_BlockData", ROMX
 SlowpokeWellB2F_BlockData:
 	INCBIN "maps/SlowpokeWellB2F.ablk.lz"
 
+SECTION "SlowpokeWellB3F_BlockData", ROMX
+SlowpokeWellB2F_BlockData:
+	INCBIN "maps/SlowpokeWellB3F.ablk.lz"
+
 SECTION "IlexForest_BlockData", ROMX
 IlexForest_BlockData:
 	INCBIN "maps/IlexForest.ablk.lz"
@@ -358,6 +362,10 @@ SECTION "DanceTheatre_BlockData", ROMX
 DanceTheatre_BlockData:
 WesternCapitalDanceTheatre_BlockData:
 	INCBIN "maps/DanceTheatre.ablk.lz"
+	
+SECTION "DanceTheatre2F_BlockData", ROMX
+DanceTheatre2F_BlockData:
+	INCBIN "maps/DanceTheatre2F.ablk.lz"
 
 SECTION "WiseTriosRoom_BlockData", ROMX
 WiseTriosRoom_BlockData:
@@ -635,6 +643,10 @@ AnarresTown_BlockData:
 SECTION "MistyBasin_BlockData", ROMX
 MistyBasin_BlockData:
 	INCBIN "maps/MistyBasin.ablk.lz"
+	
+SECTION "MistyBasinB1F_BlockData", ROMX
+MistyBasin_BlockData:
+	INCBIN "maps/MistyBasinB1F.ablk.lz"
 
 SECTION "AnarresDorms_BlockData", ROMX
 AnarresDorms_BlockData:

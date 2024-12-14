@@ -5,7 +5,7 @@ SproutTower3F_MapScriptHeader:
 
 
 	def_warp_events
-	warp_event  8, 14, SPROUT_TOWER_2F, 2
+	warp_event  7, 15, SPROUT_TOWER_2F, 2
 
 	def_coord_events
 
@@ -15,8 +15,7 @@ SproutTower3F_MapScriptHeader:
 
 	def_object_events
 	object_event  9, 7, SPRITE_ELDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ElderHealsScript, EVENT_BEAT_FALKNER	
-	object_event  9, 7, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBirdKeeperToby, -1
-	object_event  6, 7, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBirdKeeperDennis, -1
+	object_event  6, 7, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBirdKeeperToby, -1
 	object_event  5,  1, SPRITE_FALKNER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VioletGymFalknerScript, -1
 
 	object_const_def
@@ -56,15 +55,6 @@ GenericTrainerBirdKeeperToby:
     cont "Sky Attack."
     done
 
-GenericTrainerBirdKeeperDennis:
-    generictrainer BIRD_KEEPER, DENIS, EVENT_BEAT_BIRD_KEEPER_DENIS, BirdKeeperDennisSeenText, BirdKeeperDennisBeatenText
-
-    text "We're building a"
-    line "tower to the sky"
-    cont "to direct clouds"
-    cont "to Violet City."
-    done
-
 BirdKeeperTobySeenText:
     text "You want to"
     line "challenge Falkner?"
@@ -78,16 +68,6 @@ BirdKeeperTobyBeatenText:
     cont "Sky Attack."
     done
 
-BirdKeeperDennisSeenText:
-    text "I've been with"
-    line "Falkner since he"
-    cont "started this"
-    cont "project!"
-    done
-
-BirdKeeperDennisBeatenText:
-    text "Ouch, my wings!"
-    done
 
 VioletGymFalknerScript:
 	faceplayer

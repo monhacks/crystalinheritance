@@ -12,8 +12,8 @@ RouteKajo_MapScriptHeader: ; trainer parties, check warps
 	warp_event 55, 30, MAGNET_TRAIN_TUNNEL, 1
 	warp_event 55, 31, MAGNET_TRAIN_TUNNEL, 2
     warp_event 23, 19, KAJO_CABIN, 1
-    warp_event 55, 18, RUINS_OF_ALPH_OUTSIDE, 1
-    warp_event 55, 19, RUINS_OF_ALPH_OUTSIDE, 2
+    warp_event 55, 18, RUINS_OF_ALPH_OUTSIDE, 11
+    warp_event 55, 19, RUINS_OF_ALPH_OUTSIDE, 12
 
     def_coord_events ; done
 

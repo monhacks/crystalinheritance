@@ -451,14 +451,14 @@ ShamoutiMart2:
 	db -1
 
 BattleTowerMart1:
-	db 9 ; # items
+	db 8 ; # items
 	db CHOICE_BAND,  48
 	db CHOICE_SCARF, 48
 	db CHOICE_SPECS, 48
 	db EXPERT_BELT,  32
 	db MUSCLE_BAND,  32
 	db WISE_GLASSES, 32
-	db METRONOME_I,  32
+;	db METRONOME_I,  32
 	db BINDING_BAND, 32
 	db GRIP_CLAW,    32
 	db -1

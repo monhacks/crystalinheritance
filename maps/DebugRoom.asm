@@ -7,6 +7,7 @@ DebugRoom_MapScriptHeader: ; should be like  "BurnedTowerB1F_MapScriptHeader"
 
 	def_warp_events
 	warp_event  9, 0, AZALEA_TOWN, 5
+	warp_event  1, 8, HOLLYS_HOLT, 7 ; SHOULD WARP YOU TO START THE ILEX SCENE 
 
 
 	def_coord_events

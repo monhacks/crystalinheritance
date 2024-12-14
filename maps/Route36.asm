@@ -8,8 +8,7 @@ Route36_MapScriptHeader:
 	warp_event 22,  9, ROUTE_36_NATIONAL_PARK_GATE, 4
 	warp_event 51, 13, ROUTE_36_RUINS_OF_ALPH_GATE, 1
 	warp_event 52, 13, ROUTE_36_RUINS_OF_ALPH_GATE, 2
-	warp_event 61,  8, ROUTE_36_VIOLET_GATE, 1
-	warp_event 61,  9, ROUTE_36_VIOLET_GATE, 2
+
 
 	def_coord_events
 
@@ -17,15 +16,15 @@ Route36_MapScriptHeader:
 	def_bg_events
 	bg_event 33,  1, BGEVENT_JUMPTEXT, Route36TrainerTips2Text
 	bg_event 49, 11, BGEVENT_JUMPTEXT, RuinsOfAlphNorthSignText
-	bg_event 59,  7, BGEVENT_JUMPTEXT, Route36SignText
+	bg_event 54,  8, BGEVENT_JUMPTEXT, Route36SignText
 	bg_event 25,  7, BGEVENT_JUMPTEXT, Route36TrainerTips1Text
 	bg_event 22,  3, BGEVENT_READ, Route36TreeScript
 	bg_event 23,  3, BGEVENT_READ, Route36TreeScript
 
 	
 	def_object_events
-	object_event  5,  3, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, BRONZONG, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route36BronzongScript, EVENT_ROUTE_36_BRONZONG
-	object_event 26, 14, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ArthurScript, -1
+	object_event  39,  9, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, BRONZONG, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route36BronzongScript, EVENT_ROUTE_36_BRONZONG
+	object_event 44, 7, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ArthurScript, -1
 	fruittree_event 25,  4, FRUITTREE_ROUTE_36, WHT_APRICORN, PAL_NPC_SILVER ; USED TO BE A BERRY TREE
 	object_event 36, 13, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route36KurtScript, EVENT_GOT_BASEMENT_KEY
 	object_event 24,  7, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route36MatronScript, -1
@@ -34,9 +33,9 @@ Route36_MapScriptHeader:
 	object_event 31, 13, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerSchoolboyRoute36, -1 ; ALAN1
 	object_event 34,  3, SPRITE_FIREBREATHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerFirebreatherRoute36, -1 ; BURT
 	object_event 23, 14, SPRITE_PICNICKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerPicnickerRoute36, EVENT_BEAT_PICNICKER_GINA ; GINA1
-	object_event 40, 4, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletImmigrantTextRoute36, -1
-	object_event 40, 5, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletImmigrantTextRoute36, -1
-	object_event	 2,	14, 	SPRITE_FIREBREATHER, SPRITEMOVEDATA_SPINRANDOM_FAST, 	0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ROUTE36_SeismicTossMT, -1 ;	
+	object_event 58, 8, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletImmigrantTextRoute36, -1
+	object_event 58, 9, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletImmigrantTextRoute36, -1
+	object_event 27, 14, 	SPRITE_FIREBREATHER, SPRITEMOVEDATA_SPINRANDOM_FAST, 	0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ROUTE36_SeismicTossMT, -1 ;	
 
 	object_const_def
 	const ROUTE_36_BRONZONG

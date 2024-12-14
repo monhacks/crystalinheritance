@@ -68,6 +68,7 @@ SECTION "New Bark Scripts", ROMX
 INCLUDE "maps/HollysHolt.asm"
 INCLUDE "maps/AnarresTown.asm"
 INCLUDE "maps/MistyBasin.asm"
+INCLUDE "maps/MistyBasinB1Fslo.asm"
 INCLUDE "maps/AnarresHouse.asm"
 INCLUDE "maps/AnarresTower1F.asm"
 INCLUDE "maps/AnarresTower2F.asm"
@@ -216,6 +217,7 @@ SECTION "Slowpoke Well Scripts", ROMX
 INCLUDE "maps/SlowpokeWellEntrance.asm"
 INCLUDE "maps/SlowpokeWellB1F.asm"
 INCLUDE "maps/SlowpokeWellB2F.asm"
+INCLUDE "maps/SlowpokeWellB3F.asm"
 
 
 SECTION "Ilex Forest Scripts", ROMX
@@ -319,7 +321,6 @@ INCLUDE "maps/EcruteakLugiaSpeechHouse.asm"
 INCLUDE "maps/DanceTheatre.asm"
 INCLUDE "maps/WiseTriosRoom.asm"
 
-
 SECTION "Ecruteak Scripts 2", ROMX
 
 INCLUDE "maps/EcruteakShrineOutside.asm"
@@ -328,7 +329,7 @@ INCLUDE "maps/EcruteakCherishBallHouse.asm"
 INCLUDE "maps/EcruteakDestinyKnotHouse.asm"
 INCLUDE "maps/ValeriesHouse.asm"
 INCLUDE "maps/BellchimeTrail.asm"
-
+INCLUDE "maps/DanceTheatre2F.asm"
 
 SECTION "Tin Tower Scripts", ROMX
 

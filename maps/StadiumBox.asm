@@ -42,6 +42,7 @@ StadiumBoxAdrinna:
 	applymovement STADIUMBOX_SANDRA, StadiumBoxSandraWalksToPlayer
 	appear STADIUMBOX_KURT
 	applymovement STADIUMBOX_KURT, StadiumBoxKurtWalksToPlayer
+	turnobject PLAYER, DOWN
 	opentext
 	writetext KurtDialogue
 	waitbutton

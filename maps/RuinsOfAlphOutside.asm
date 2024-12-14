@@ -18,6 +18,7 @@ RuinsOfAlphOutside_MapScriptHeader:
 	warp_event 12, 41, TINDER_GARDEN, 4
 	warp_event  6, 26, ROUTE_KAJO, 8
 	warp_event  6, 27, ROUTE_KAJO, 9
+	warp_event 19, 17, RUINS_OF_ALPH_RESEARCH_CENTER, 1 ; 
 
 	def_coord_events
 
@@ -29,18 +30,15 @@ RuinsOfAlphOutside_MapScriptHeader:
 
 	def_object_events
 	object_event 13, 17, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, RuinsOfAlphNorthScientistScript, -1
-	object_event 12, 23, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, RuinsOfAlphOutsideScientist1Script, EVENT_BEAT_FALKNER ; OK
-	object_event 13, 23, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, RuinsOfAlphOutsideScientist2Script, EVENT_BEAT_FALKNER ; OK
-	object_event 13, 25, SPRITE_SCIENTIST, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, RuinsOfAlphOutsideScientist3Script, EVENT_BEAT_FALKNER ; OK
+	object_event 12, 21, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, RuinsOfAlphOutsideScientist1Script, -1 ; OK
+	object_event 13, 21, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, RuinsOfAlphOutsideScientist2Script, -1 ; OK
+	object_event 13, 25, SPRITE_SCIENTIST, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, RuinsOfAlphOutsideScientist3Script, -1 ; OK
 	object_event 11, 39, SPRITE_SCHOOLGIRL, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerSchoolgirlEliza, -1;
 	object_event 12, 38, SPRITE_SCHOOLGIRL, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerSchoolgirlMolly, -1;
 	object_event  8, 36, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, RuinsOfAlphTeacherScript, -1 ; SHOULD HEAL YOU
 	object_event 14, 36, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerFisherRalph, -1 ; 
 	smashrock_event  9, 34
-	smashrock_event  8, 13
-	smashrock_event  9, 13
-	smashrock_event  6,  6
-	smashrock_event  7,  6 
+
 
 	object_const_def
 
@@ -196,16 +194,11 @@ RuinsOfAlphNorthScientistScript:
 	jumptext RuinsOfAlphNorthScientistText
 	
 RuinsOfAlphNorthScientistText:
-	text "We heard a"
-	line "report of more"
-	cont "caverns north of"
-	cont "Mahogany."
-	
-	para "Some say if"
+	text "Some say if"
 	line "you stare at"
 	cont "the shattered"
-	cont "mosaic for long"
-	cont "enough, you can"
+	para "mosaic for long"
+	line "enough, you can"
 	cont "see a story."
 	done
 

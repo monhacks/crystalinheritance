@@ -103,7 +103,7 @@ BellchimeTrailEmiScript:
 	playsound SFX_WARP_TO
 	special FadeOutPalettes
 	waitsfx
-	warp EMPERORS_GARDEN, 28, 28
+	warpfacing LEFT, EMPERORS_GARDEN, 28, 28
 	end
 
 KimonoGirlEmiIntroText:
@@ -155,6 +155,7 @@ EmiRefusedText:
 
 EmiAcceptedText:
 	text "Face your fate!"
+	done
 
 EmiBeatenText:
 	text "So the legends"
@@ -187,7 +188,7 @@ KimonoGirlEmiRewardText:
 	line "shadows was"
 	cont "someone with"
 	cont "hair like"
-	cont "spring leaves…"
+	cont "spring leaves."
 	
 	para "After those"
 	line "events, visit-"
@@ -207,17 +208,26 @@ EmiHealsYouText:
 	done
 
 EmiHealedPokemonText:
-
+	text "Chronicler Emi"
+	line "healed your"
+	cont "#mon."
+	done
 
 
 BellchimeTrailAskToTimeTravelText:
-
+	text "Would you like to"
+	line "see for yourself?"
+	done
 
 BellChimeTrailNoTimeTravelText:
-
+	text "Come see me when"
+	line "you're ready."
+	done
 
 BellChimeTrailYesTimeTravelText:
-
+	text "Very good. I will"
+	line "pray to Celebi..."
+	done
 
 
 BellchimeBlockerText:

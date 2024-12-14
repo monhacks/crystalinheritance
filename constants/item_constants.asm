@@ -197,7 +197,7 @@
 	const GRIP_CLAW    ; a4
 	const LIFE_ORB     ; a5
 	const LIGHT_CLAY   ; a6
-	const METRONOME_I  ; a7
+	const ROYAL_BLESSING  ; a7 ; METRONOME 
 	const MUSCLE_BAND  ; a8
 	const PROTECT_PADS ; a9
 	const ROCKY_HELMET ; aa

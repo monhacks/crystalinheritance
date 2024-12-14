@@ -16,8 +16,8 @@ EcruteakDestinyKnotHouse_MapScriptHeader: ; herbalist, part of trade quest
 	object_event  5,  4, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, HerbalistWifeText, -1
 	object_event  2,  3, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakBlueMailScript, -1
 
-EcruteakBlueMailScript: 
-	checkevent EVENT_GOT_LITEBLUEMAIL ;;TO ADD
+EcruteakBlueMailScript: ; revised to match the anarres house format 
+	checkevent EVENT_GOT_LITEBLUEMAIL
 	iftrue_jumptextfaceplayer GiveLiteBlueMailText
 	checkevent EVENT_GAVE_BIG_MUSHROOM
 	iftrue_jumptextfaceplayer GiveLiteBlueMailText
@@ -31,8 +31,8 @@ EcruteakBlueMailScript:
 	yesorno
 	iffalse BigMushroomRefused
 	takeitem BIG_MUSHROOM
-	jumpopenedtext TextReadingTheTeaLeaves
 	verbosegiveitem LITEBLUEMAIL
+	jumpopenedtext TextReadingTheTeaLeaves
 	iffalse_endtext
 	setevent EVENT_GOT_LITEBLUEMAIL 
 	jumpopenedtext GiveLiteBlueMailText 

@@ -206,14 +206,22 @@ KurtLetsBegin2:
 	line "this tree, symbol"
 	cont "of life's cycles."
 
-	para "Cleanse our spir-"
-	line "its as leaves fall"
-	cont "and new buds form."
+	para "Yearly, your fruit"
+	line "and leaves go red,"
 	
-	para "May we grow anew"
-	line "with nature's rhy-"
-	cont "thms, forever ent-"
-	cont "wined."
+	para "as if going down"
+	line "in flames. But - "
+	
+	para "These leaves and"
+	line "fruit enrich soil,"
+
+	para "So the next gene-"
+	line "ration can rise"
+	cont "in an inheritance"
+	
+	para "of fallen leaves"
+	line "like a phoenix"
+	cont "from the ashes."
 	done
 
 TGOakBeginMovement:
@@ -686,59 +694,40 @@ PryceScript:
 	jumpthisopenedtext
 
 PryceSprigText:
-	text "Gym Leaders have"
-	line "lost their flame."
+	text "You might have not-"
+	line "iced, gym leaders"
+	cont "have abandoned"
+	cont "their posts."
 
-	para "I seek to re-"
-	line "kindle them!"
+	para "They're cynical, or"
+	line "vain, or worse!"
 	
-	para "Do you know why"
-	line "we perform at"
-	cont "blossom trees?"
+	para "I'm taking a sprig"
+	line "of this tree, and"
+	cont "maybe that will"
 	
-	para "Once a year, the"
-	line "fruits emerge and"
-	cont "leaves turn red,"
+	para "remind them that"
+	line "if they don't fos-"
+	cont "ter their towns,"
 	
-	para "as if the tree"
-	line "is going down in"
-	cont "flames."
-	
-	para "The tree propa-"
-	line "gates itself as"
-	para "the fruits and"
-	line "leaves fall to"
-	cont "the ground."
-	
-	para "The next genera-"
-	line "tion of saplings"
-	cont "can rise amidst"
-	para "their inheritance"
-	line "of fallen leaves,"
-	cont "like a phoenix"
-	para "rising up from"
-	line "the ashes."
+	para "then their towns"
+	line "will wither up!"
 	done
 
 PrycePokemonText:
 	text "Oh, <PLAYER>!"
 	line "Look at you now!"
 
-	para "Your very own"
-	line "#MON partner!"
-	cont "What a moment!"
-
 	para "Forgive my"
-	line "tardiness, I"
-	cont "got caught up"
-	cont "in memories."
+	line "tardiness, I was"
+	cont "caught up with an-"
+	cont "other gym leader."
 
-	para "This reminds me"
-	line "of my first"
-	cont "adventure!"
+	para "Your very own"
+	line "#mon partner!"
 
-	para "Here's a special"
-	line "TM. It grows"
+	para "This gift is for"
+	line "you. This TM grows"
 	cont "stronger with"
 	cont "your bond!"
 	done

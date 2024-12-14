@@ -3631,9 +3631,9 @@ BrigaderGroup:
 	db "Smith@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 13, PIDGEOTTO
-	db 14, VOLTORB
+	db 13, MACHOP
 	db 14, GROWLITHE
+	db 15, NIDORINO
 	db -1 ; end
 
 ; ================
@@ -3642,9 +3642,9 @@ BrigaderGroup:
 	db "Johnson@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 15, PIDGEOTTO
-	db 15, MAGMAR
-	db 15, ELECTABUZZ
+	db 15, EKANS
+	db 15, NIDORINA
+	db 15, NIDORINO
 	db -1 ; end
 
 ; ================
@@ -3653,9 +3653,9 @@ BrigaderGroup:
 	db "Brown@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 14, STARAVIA
-	db 15, GOLBAT
-	db 16, FARFETCH_D
+	db 14, MANKEY
+	db 15, MACHOP
+	db 18, GROWLITHE
 	db -1 ; end
 
 ; ================
@@ -3664,8 +3664,8 @@ BrigaderGroup:
 	db "Miller@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 14, NIDORINA
-	db 28, NIDORINO
+	db 14, MACHOP
+	db 18, HOUNDOUR
 	db -1 ; end
 
 ; ================
@@ -3674,9 +3674,9 @@ BrigaderGroup:
 	db "Davis@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 13, VOLTORB
-	db 13, ELECTRODE
-	db 13, JOLTEON
+	db 13, MANKEY
+	db 13, SNEASEL
+	db 13, MACHOP
 	db -1 ; end
 
 ; ================
@@ -3685,8 +3685,9 @@ BrigaderGroup:
 	db "Garcia@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 18, KADABRA
-	db 18, STARYU
+	db 12, HITMONCHAN
+	db 14, VULPIX
+	db 14, PONYTA	
 	db -1 ; end
 
 ; ================
@@ -3695,8 +3696,12 @@ BrigaderGroup:
 	db "Zhang@" ; SERENE SPRINGS
 	db TRAINERTYPE_NORMAL
 	; party
-	db 18, SEADRA
-	db 16, OCTILLERY
+	db 12, GROWLITHE
+	db 12, PONYTA	
+	db 12, HOUNDOUR		
+	db 12, MAGMAR		
+	db 12, OCTILLERY
+	db 12, SUNFLORA
 	db -1 ; end
 
 ; ================
@@ -3705,8 +3710,8 @@ BrigaderGroup:
 	db "Patel@" ; START STADIUM GROUNDS
 	db TRAINERTYPE_NORMAL
 	; party
-	db 18, HITMONLEE
-	db 18, HITMONCHAN
+	db 12, HITMONLEE
+	db 14, GROWLITHE
 	db -1 ; end
 
 ; ================
@@ -3715,7 +3720,7 @@ BrigaderGroup:
 	db "Manolete@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
 	; party
-	db 20, TAUROS, CHOICE_BAND, "Islero@"
+	db 18, TAUROS, CHOICE_BAND, "Islero@"
 		db THRASH, NO_MOVE, NO_MOVE, NO_MOVE
 	db -1 ; end	
 
@@ -3726,8 +3731,8 @@ BrigaderGroup:
 	db "Kim@" ; should be #10
 	db TRAINERTYPE_NORMAL
 	; party
-	db 15, MACHOP
-	db 20, MACHOP
+	db 14, MACHOP
+	db 16, HITMONTOP
 	db -1 ; end
 ; ================
 
@@ -3735,8 +3740,8 @@ BrigaderGroup:
 	db "Chen@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 18, POLIWHIRL
-	db 18, POLIWRATH
+	db 14, HERACROSS
+	db 14, MAGMAR
 	db -1 ; end
 
 ; ================ ; ABOVE ENDS THE STADIUM GROUNDERS
@@ -9480,14 +9485,14 @@ CooltrainerMGroup:
 	db "Finch@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_EVS | TRAINERTYPE_NICKNAME
 	; party
-	db 29, MAGNEMITE, AIR_BALLOON, 30, "Neody@"
-	db 26, MAGCARGO, AIR_BALLOON, 30, "Wasabi@"
+	db 25, MAGNETON, AIR_BALLOON, 16, "Neody@"
+	db 25, MAGCARGO, AIR_BALLOON, 16, "Wasabi@"
 	db -1 ; end
 
 ; ================
 
 	; COOLTRAINERM
-	db "Finch@" ; petrie in sprout tower 
+	db "Finch@" ; 
 	db TRAINERTYPE_ITEM | TRAINERTYPE_EVS | TRAINERTYPE_NICKNAME
 	; party
 	db 30, MAGNETON, AIR_BALLOON, 30, "Neody@"
@@ -10969,7 +10974,7 @@ BobeshGroup:
 	db 25, OCTILLERY, SCOPE_LENS, "Levi@"
 		db FLAMETHROWER, OCTAZOOKA, HYPER_BEAM, NO_MOVE
 	db 25, FLAREON, NO_ITEM, "Kotei@"
-		db SUNNY_DAY, FLAME_CHARGE, ROCK_SMASH, SMOKESCREEN
+		db SUNNY_DAY, FLAME_CHARGE, ROCK_SMASH, CLOSE_COMBAT
 	db 25, H__ARCANINE, NO_ITEM, "NAME@"
 		db SUNNY_DAY, FLAME_CHARGE, ROCK_SMASH, SMOKESCREEN
 	db -1 ; end

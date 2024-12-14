@@ -28,8 +28,7 @@ EcruteakHouse_MapScriptHeader: ; use moving of sages to solve the passage proble
 
 EcruteakHouseInitializeSages:
 	checkevent EVENT_BEAT_KIMONO_GIRL_AKARI
-	checkscene
-	iftrue .Skip
+	iffalse .Skip
 	moveobject ECRUTEAKHOUSE_SAGE1, 3, 7
 	moveobject ECRUTEAKHOUSE_SAGE2, 6, 7
 .Skip:
@@ -57,7 +56,7 @@ EcruteakTinTowerEntranceSageText:
 	done
 
 EcruteakTinTowerEntranceSageText_BeatKimonoGirls:
-	text "The Kimono Girls"
+	text "The Chronicler"
 	line "said you would"
 	cont "come. Please, "
 	cont "pass through."

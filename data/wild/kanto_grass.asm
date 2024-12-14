@@ -3,27 +3,27 @@
 	def_grass_wildmons HOLLYS_HOLT
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 ;	; morn
-	wildmon 8, PIDGEY
-	wildmon 9, ARIADOS
+	wildmon 9, PIDGEY
+	wildmon 6, ARIADOS
 	wildmon 7, GLOOM
-	wildmon 9, WEEPINBELL
-	wildmon 10, LEDIAN
+	wildmon 8, WEEPINBELL
+	wildmon 8, LEDIAN
 	wildmon 9, WEEPINBELL
 	wildmon 5, CYNDAQUIL
 ;	; day
-	wildmon 8, PIDGEY
-	wildmon 9, ARIADOS
+	wildmon 9, PIDGEY
+	wildmon 6, ARIADOS
 	wildmon 7, GLOOM
-	wildmon 9, WEEPINBELL
-	wildmon 10, LEDIAN
+	wildmon 8, WEEPINBELL
+	wildmon 8, LEDIAN
 	wildmon 9, WEEPINBELL
 	wildmon 5, CYNDAQUIL
 ;	; nite7
-	wildmon 8, PIDGEY
-	wildmon 9, ARIADOS
+	wildmon 9, PIDGEY
+	wildmon 6, ARIADOS
 	wildmon 7, GLOOM
-	wildmon 9, WEEPINBELL
-	wildmon 10, LEDIAN
+	wildmon 8, WEEPINBELL
+	wildmon 8, LEDIAN
 	wildmon 9, WEEPINBELL
 	wildmon 5, CYNDAQUIL
 	end_grass_wildmons
@@ -31,59 +31,86 @@
 	def_grass_wildmons MISTY_BASIN
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 ;	; morn
-	wildmon 10, ZUBAT
-	wildmon 11, ZUBAT
-	wildmon 12, ZUBAT
+	wildmon 8, ZUBAT
+	wildmon 7, ZUBAT
+	wildmon 6, ZUBAT
 	wildmon 8, ZUBAT
 	wildmon 5, SLOWPOKE
 	wildmon 6, SLOWPOKE
 	wildmon 7, SLOWPOKE
 ;	; day
-	wildmon 10, ZUBAT
-	wildmon 11, ZUBAT
-	wildmon 12, ZUBAT
+	wildmon 8, ZUBAT
+	wildmon 7, ZUBAT
+	wildmon 6, ZUBAT
 	wildmon 8, ZUBAT
 	wildmon 5, SLOWPOKE
 	wildmon 6, SLOWPOKE
 	wildmon 7, SLOWPOKE
 ;	; nite7
-	wildmon 10, ZUBAT
-	wildmon 11, ZUBAT
-	wildmon 12, ZUBAT
+	wildmon 8, ZUBAT
+	wildmon 7, ZUBAT
+	wildmon 6, ZUBAT
 	wildmon 8, ZUBAT
 	wildmon 5, SLOWPOKE
 	wildmon 6, SLOWPOKE
 	wildmon 7, SLOWPOKE
 	end_grass_wildmons
 
-; need to check for below this 08-20-24
+	def_grass_wildmons MISTY_BASIN_B1F
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
+;	; morn
+	wildmon 10, ZUBAT
+	wildmon 11, ZUBAT
+	wildmon 12, ZUBAT
+	wildmon 10, SLOWPOKE
+	wildmon 7, SLOWPOKE
+	wildmon 8, WOOPER
+	wildmon 9, WOOPER
+;	; day
+	wildmon 10, ZUBAT
+	wildmon 11, ZUBAT
+	wildmon 12, ZUBAT
+	wildmon 10, SLOWPOKE
+	wildmon 7, SLOWPOKE
+	wildmon 8, WOOPER
+	wildmon 9, WOOPER
+;	; nite7
+	wildmon 10, ZUBAT
+	wildmon 11, ZUBAT
+	wildmon 12, ZUBAT
+	wildmon 10, SLOWPOKE
+	wildmon 7, SLOWPOKE
+	wildmon 8, WOOPER
+	wildmon 9, WOOPER
+	end_grass_wildmons
+
 
 	def_grass_wildmons CALM_COAST
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 ;	; morn
 	wildmon 10, SNUBBULL
-	wildmon 10, MARILL
+	wildmon 11, MARILL
 	wildmon 10, PIDGEY
-	wildmon 10, MARILL
+	wildmon 12, MARILL
 	wildmon 10, SKIPLOOM
 	wildmon 10, OSHAWOTT
-	wildmon 10, OSHAWOTT
+	wildmon 12, OSHAWOTT
 ;	; day
 	wildmon 10, SNUBBULL
-	wildmon 10, MARILL
+	wildmon 11, MARILL
 	wildmon 10, PIDGEY
-	wildmon 10, MARILL
+	wildmon 12, MARILL
 	wildmon 10, SKIPLOOM
 	wildmon 10, OSHAWOTT
-	wildmon 10, OSHAWOTT
+	wildmon 12, OSHAWOTT
 ;	; nite
 	wildmon 10, SNUBBULL
-	wildmon 10, MARILL
+	wildmon 11, MARILL
 	wildmon 10, PIDGEY
-	wildmon 10, MARILL
+	wildmon 12, MARILL
 	wildmon 10, SKIPLOOM
 	wildmon 10, OSHAWOTT
-	wildmon 10, OSHAWOTT
+	wildmon 12, OSHAWOTT
 	end_grass_wildmons
 
 	def_grass_wildmons SERENE_SPRINGS

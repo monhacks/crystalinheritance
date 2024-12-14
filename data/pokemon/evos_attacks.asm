@@ -4655,7 +4655,7 @@ HeatranEvosAttacks: ;encounter at lv 50
 	db 55, FIRE_BLAST
 	db 60, FLASH_CANNON
 
-LugiaEvosAttacks: ;ENCOUUNTER AT LEVEL 45
+LugiaEvosAttacks: ;ENCOUUNTER AT LEVEL 40
 	db 0 ; no more evolutions
 	db 1, ROAR ; Whirlwind → similar move
 	db 1, GUST
@@ -4666,7 +4666,7 @@ LugiaEvosAttacks: ;ENCOUUNTER AT LEVEL 45
 	db 25, DRAGON_PULSE ; Aeroblast → TM move
 	db 30, AEROBLAST ; Punishment → Aeroblast
 	db 35, ANCIENTPOWER
-	db 40, SAFEGUARD
+	db 40, WHIRLPOOL
 	db 45, RECOVER
 	db 50, FUTURE_SIGHT
 	db 55, REFLECT ; Natural Gift → TM move

@@ -8,7 +8,7 @@
 	db LUM_BERRY ; item 2
 	dn GENDER_UNKNOWN, 15 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/lugia/front.dimensions"
-	abilities_for LUGIA, PRESSURE, PRESSURE, MULTISCALE
+	abilities_for LUGIA, DRIZZLE, DRIZZLE, DRIZZLE
 	db GROWTH_SLOW ; growth rate
 	dn EGG_NONE, EGG_NONE ; egg groups
 

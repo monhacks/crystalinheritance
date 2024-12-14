@@ -19,8 +19,7 @@ SereneSprings_MapScriptHeader:
 	object_event 11, 34, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader3, EVENT_BEAT_BOBESH_STADIUM
 	object_event  8, 22, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader4, EVENT_BEAT_BOBESH_STADIUM
 	object_event 11, 22, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader5, EVENT_BEAT_BOBESH_STADIUM
-	object_event  6,  7, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader6, EVENT_BEAT_BOBESH_STADIUM
-	object_event  9,  7, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader7, EVENT_BEAT_BOBESH_STADIUM
+
 	itemball_event 16, 30, ROCKY_HELMET, 1, EVENT_SERENE_SPRINGS_ROCKY_HELMET ;ok
 	itemball_event 3, 23, ELIXIR, 1, EVENT_SERENE_SPRINGS_ELIXIR ;ok
 
@@ -89,44 +88,6 @@ Brigader5BeatenText:
 	text "Lost my potential."
 	done
 
-GenericTrainerBrigader6:
-	generictrainer BRIGADER, 6, EVENT_BEAT_ROCKET_GRUNTM_6, Brigader6SeenText, Brigader6BeatenText
-
-	text "Want to know a"
-	line "secret? Sometimes"
-	cont "we inflict a"
-	cont "fighter's #MON"
-	cont "with status before"
-	cont "they have to"
-	cont "battle."
-	done
-
-Brigader6SeenText:
-	text "Focus, tightening…"
-	done
-
-Brigader6BeatenText:
-	text "Mind blown."
-	done
-
-GenericTrainerBrigader7:
-	generictrainer BRIGADER, 7, EVENT_BEAT_ROCKET_GRUNTM_7, Brigader7SeenText, Brigader7BeatenText
-
-	text "There used to be"
-	line "Slugma here,"
-	cont "before we drained"
-	cont "these hot springs."
-	done
-
-Brigader7SeenText:
-	text "Begone!"
-	done
-
-Brigader7BeatenText:
-	text "I need to alert"
-	line "the stadium"
-	cont "brigade."
-	done
 
 StadiumHotSpringsReceptionistScript:
 	faceplayer

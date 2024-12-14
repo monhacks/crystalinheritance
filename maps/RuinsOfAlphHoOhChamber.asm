@@ -75,6 +75,7 @@ MapRuinsofAlphHoOhChamberSignpost2Script:
 	showemote EMOTE_SHOCK, PLAYER, 15
 	changeblock 2, 2, $14
 	changeblock 4, 2, $15
+	changeblock 4, 0, $25
 	reloadmappart
 	playsound SFX_STRENGTH
 	earthquake 80

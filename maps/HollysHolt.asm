@@ -12,7 +12,7 @@ HollysHolt_MapScriptHeader:
 	warp_event  5,  6, HOLT_COAST_GATE, 2
 	warp_event  24,  46, KIMONO_CABIN, 1
 	warp_event  25,  46, KIMONO_CABIN, 1
-
+	warp_event  10,  25, DEBUG_ROOM, 2 ; UNUSED 
 	
 	def_coord_events
 
@@ -459,13 +459,11 @@ HH_Sign3Text:
 	done
 
 PinecoHeadbuttScript1:
-	
-	ld d, HEADBUTT
-	call CheckPartyMove
-	jr c, NoHeadbutt
+	farcall TryHeadbuttOW
+	iffalse_jumpopenedtext NotHeadbuttingText
 	showtext HeadbuttThisTreeText
 	yesorno
-	iffalse NoHeadbutt
+	iffalse_jumpopenedtext NotHeadbuttingText
 	cry PINECO
 	pause 15
 	loadwildmon PINECO, 5
@@ -475,10 +473,7 @@ PinecoHeadbuttScript1:
 	reloadmapafterbattle
 	end
 	
-NoHeadbutt:
-	showtext NotHeadbuttingText
-	closetext
-	end
+
 
 HeadbuttThisTreeText:
 	text "This pineco is"
