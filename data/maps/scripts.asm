@@ -68,7 +68,7 @@ SECTION "New Bark Scripts", ROMX
 INCLUDE "maps/HollysHolt.asm"
 INCLUDE "maps/AnarresTown.asm"
 INCLUDE "maps/MistyBasin.asm"
-INCLUDE "maps/MistyBasinB1Fslo.asm"
+INCLUDE "maps/MistyBasinB1F.asm"
 INCLUDE "maps/AnarresHouse.asm"
 INCLUDE "maps/AnarresTower1F.asm"
 INCLUDE "maps/AnarresTower2F.asm"

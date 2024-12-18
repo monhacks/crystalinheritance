@@ -3,6 +3,7 @@ EcruteakGym_MapScriptHeader:
 
 
 	def_callbacks
+	callback MAPCALLBACK_STONETABLE, EcruteakGymBoulders
 
 	def_warp_events
 	warp_event  4, 17, ECRUTEAK_CITY, 10
@@ -22,7 +23,6 @@ EcruteakGym_MapScriptHeader:
 	warp_event  6,  11, ECRUTEAK_GYM, 3			
 	warp_event  6,  9, ECRUTEAK_GYM, 3			
 	warp_event  6,  8, ECRUTEAK_GYM, 3			
-
 	warp_event  4,  4, ECRUTEAK_GYM, 3			
 	warp_event  4,  5, ECRUTEAK_GYM, 3			
 	warp_event  4,  6, ECRUTEAK_GYM, 3			
@@ -39,14 +39,38 @@ EcruteakGym_MapScriptHeader:
 
 
 	def_object_events
+	strengthboulder_event 7, 11, EVENT_ECRUTEAK_BOULDER_1
+	strengthboulder_event 3, 8, EVENT_ECRUTEAK_BOULDER_2 
+	object_event  2, 15, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakGymBouldersResetScript, -1 ;  todo 
 	object_event  5,  1, SPRITE_MORTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakGymMortyScript, -1 ; inaccessible until you show morty something good  ; 
 	object_event  5, 14, SPRITE_PRYCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakGymPryceScript, EVENT_BURNED_TOWER_MORTY
 	pokemon_event  6, 27, MAMOSWINE, -1, -1, PAL_NPC_BLUE, EcruteakMamoswineText, EVENT_BURNED_TOWER_MORTY
-	strengthboulder_event 4, 12
-	strengthboulder_event 4, 8
+
 
 	object_const_def
+	const ECRUTEAK_GYM_BOULDER1
+	const ECRUTEAK_GYM_BOULDER2	
+	
+StadiumUndergroundBoulders:
+	usestonetable .BoulderTable
+	endcallback
 
+.BoulderTable:
+	stonetable 26, 	ECRUTEAK_GYM_BOULDER1, .Disappear1
+	stonetable 8, 	ECRUTEAK_GYM_BOULDER2, .Disappear2
+	db -1 ; end
+
+.Disappear1:
+	disappear ECRUTEAK_GYM_BOULDER1
+	pause 30
+	playsound SFX_FORESIGHT
+	done
+	
+.Disappear2:
+	disappear ECRUTEAK_GYM_BOULDER2
+	pause 30
+	playsound SFX_FORESIGHT
+	done
 
 EcruteakGymMortyScript:
 	faceplayer
@@ -162,4 +186,20 @@ MortyText_ShadowBallSpeech:
 
 EcruteakMamoswineText:
 	text "Mamooo!"
+	done
+
+EcruteakGymBouldersResetScript:
+	faceplayer
+	showtext EG_ResettingBoulders
+	special Special_FadeBlackQuickly
+	clearevent EVENT_ECRUTEAK_BOULDER_1
+	clearevent EVENT_ECRUTEAK_BOULDER_2
+	reloadmap	
+	special Special_ReloadSpritesNoPalettes
+	special Special_FadeInQuickly
+	end
+
+EG_ResettingBoulders:
+	text "The boulders are"
+	line "now reset."
 	done

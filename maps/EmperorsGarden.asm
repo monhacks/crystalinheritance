@@ -17,7 +17,7 @@ EmperorsGarden_MapScriptHeader: ;	def_scene_scripts
 	coord_event  13, 14, 	3, EmperorsGardenAdrinnaScene;
 
 	def_bg_events
-; add some items to the top of the spines 
+
 
 
 	def_object_events

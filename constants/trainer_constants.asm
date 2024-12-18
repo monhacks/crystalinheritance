@@ -608,6 +608,7 @@ KRIS EQU __trainer_class__
 	trainerclass KIMONO_GIRL_1 ; 3d, red 
 	const SAYO ; flareon 
 	const AKARI ; JOLTEON 
+	const MASAKO ; wc fire 
 
 	trainerclass KIMONO_GIRL_2 ; 3e, purple? 
 	const ZUKI ; ESPEON 
@@ -619,10 +620,11 @@ KRIS EQU __trainer_class__
 	trainerclass KIMONO_GIRL_4 ; 40, blue 
 	const IZUMI ; glaceon 
 	const KUNI ; vaporeon 
-
+	const HARUKO ; wc water 
 
 	trainerclass KIMONO_GIRL_5 ; 41, brown / orange 
 	const MIKI
+	const TAMIKO ; wc electric 
 
 	trainerclass ELDER ; 42
 	const LI

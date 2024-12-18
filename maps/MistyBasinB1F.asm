@@ -1,4 +1,4 @@
-MistyBasin_MapScriptHeader: ; should be like  "BurnedTowerB1F_MapScriptHeader"
+MistyBasinB1F_MapScriptHeader: ; should be like  "BurnedTowerB1F_MapScriptHeader"
 	def_scene_scripts
 
 

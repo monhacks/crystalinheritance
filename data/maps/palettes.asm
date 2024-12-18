@@ -66,10 +66,10 @@ ENDM
 	special_bg_pal landmark, ARDUOUS_ANCHORAGE,		      PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; looks OK.		
 	special_bg_pal landmark, TRANQUIL_TARN,		      	  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; looks OK.		
 	special_bg_pal landmark, SINJOH_CAMP,		      	  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; looks OK.		
-	special_bg_pal landmark, EMPIRES_REACH,		      	  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; looks OK.		
+	special_bg_pal landmark, EMPIRES_EXTENT,		      	  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; looks OK.		
 	special_bg_pal landmark, EERIE_HAMLET,		      	  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; looks OK.		
 	special_bg_pal landmark, SULFUR_STY,		      	  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; looks OK.		
-	special_bg_pal landmark, TIMELESs_TAPESTRY,		  	  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; looks OK.		
+	special_bg_pal landmark, TIMELESS_TAPESTRY,		  	  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; looks OK.		
 
 	special_bg_pal overcast, (unused),                    PAL_TIMEOFDAY, OvercastBGPalette
 	db 0 ; end

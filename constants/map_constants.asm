@@ -112,8 +112,10 @@ ENDM
 	map_const WHIRL_ISLAND_SW,                            10,  9 ; 59
 	map_const WHIRL_ISLAND_CAVE,                          20, 45 ; 60
 	map_const WHIRL_ISLAND_SE,                             5,  9 ; 61
-	map_const WHIRL_ISLAND_B1F,                           20, 18 ; 62
-	map_const WHIRL_ISLAND_B2F,                           10, 18 ; 63
+	map_const WHIRL_ISLAND_1F,                            15, 15 
+	map_const WHIRL_ISLAND_B1F,                           20, 20 ; 62
+	map_const WHIRL_ISLAND_B2F,                           20, 18 ; 63
+	map_const WHIRL_ISLAND_B3F,                           10, 18 ; 
 	map_const WHIRL_ISLAND_LUGIA_CHAMBER,                 10,  9 ; 64
 
 
@@ -187,6 +189,14 @@ ENDM
 	map_const TIMELESS_TAPESTRY,                              11, 21 ; JOHTO_OVERCAST
 	map_const BRASS_TOWER_B1F,                                 6,  7 ; sprout tower
 	map_const BRASS_TOWER_1F,                                  6,  6 ; sprout tower
+;	map_const BRASS_TOWER_12F, ; htese are the puzzles
+;	map_const BRASS_TOWER_13F, 
+;	map_const BRASS_TOWER_14F, 
+;	map_const BRASS_TOWER_15F, 
+;	map_const BRASS_TOWER_16F, 
+;	map_const BRASS_TOWER_17F, 
+;	map_const BRASS_TOWER_18F, 
+;	map_const BRASS_TOWER_19F, 
 	map_const BRASS_TOWER_2F,                                  6,  6 ; sprout tower
 	map_const BRASS_TOWER_3F,                                  6,  6 ; sprout tower
 	map_const BRASS_TOWER_4F,                                  6,  6 ; sprout tower	
@@ -296,6 +306,9 @@ ENDM
 	map_const RUSALKA_RUINS_DARK_CABINS,                    5,  8 ; LIGHTHOUSE
 	map_const RUSALKA_RUINS_CAPTAIN,                        5,  6 ; lighthouse
 	map_const SEAFLUX_NEXUS,                               20, 14 ; cave
+;	map_const SEAFLUX_NEXUS_1F,                               	
+;	map_const SEAFLUX_NEXUS_B1F,                               	
+;	map_const SEAFLUX_NEXUS_B2F,                               	
 	map_const LANDING_DOCKS,                              10, 10 ; port
 	map_const ARDUOUS_ANCHORAGE,                          20, 17 ; johto overcast
 	

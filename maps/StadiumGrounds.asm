@@ -95,7 +95,7 @@ StadiumGroundsBobeshScene:
 	opentext
 	turnobject STADIUMGROUNDS_SANDRA, DOWN
 	opentext
-	writetext 
+	writetext SandraThankYouText
 	pause 10
 	verbosegivetmhm TM_DAZZLINGLEAM
 	waitbutton

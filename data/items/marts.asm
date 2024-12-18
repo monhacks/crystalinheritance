@@ -183,16 +183,16 @@ UndergroundMart:
 
 EcruteakMart:
 	db 11 ; # items
+	db RARE_CANDY
+	db MAX_REPEL
 	db POKE_BALL
 	db GREAT_BALL
 	db NEST_BALL
-	db RARE_CANDY
 	db SUPER_POTION
 	db ANTIDOTE
 	db PARALYZEHEAL
 	db AWAKENING
 	db BURN_HEAL
-	db MAX_REPEL
 	db REVIVE
 	db -1
 
@@ -210,7 +210,7 @@ OlivineMart:
 	db RARE_CANDY
 	db -1
 
-WesternCapitalMonMart:
+WesternCapitalMonMart: ; in the dance theatre
 	db 6 ; # items
 	db PROTECTOR
 	db ELECTIRIZER
@@ -222,13 +222,12 @@ WesternCapitalMonMart:
 
 WesternCapitalPrepMart:
 	db 7 ; # items
+	db RARE_CANDY
 	db FULL_RESTORE
 	db FULL_HEAL
-	db MAX_POTION
 	db REVIVE
 	db ULTRA_BALL
 	db MAX_ELIXIR
-	db RARE_CANDY
 	db PP_MAX	
 	db -1
 
@@ -238,17 +237,15 @@ MahoganyMart1:
 	db -1
 
 WesternCapitalMart:
-	db 10 ; # items
-	db RAGECANDYBAR
-	db AIR_BALLOON
-	db QUICK_CLAW
-	db KINGS_ROCK
+	db 8 ; # items
+	db RARE_CANDY
+	db MAX_REPEL
+	db POKE_BALL
 	db GREAT_BALL
 	db SUPER_POTION
 	db HYPER_POTION
-	db MAX_REPEL
+	db FULL_HEAL
 	db REVIVE
-	db RARE_CANDY
 	db -1
 
 WesternCapitalMart_TM:

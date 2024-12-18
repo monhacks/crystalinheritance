@@ -16,7 +16,7 @@ AnarresHoltGate_MapScriptHeader: ; todo add a wram flag ?
 	def_bg_events
 
 	def_object_events
-	object_event 3, 4, SPRITE_TAMMY, SPRITEMOVEDATA_STSANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AnarresHoltGateTammyScript, EVENT_ANARRES_HOLT_GATE
+	object_event 3, 4, SPRITE_TAMMY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AnarresHoltGateTammyScript, EVENT_ANARRES_HOLT_GATE
 	object_event 4, 4, SPRITE_HOLLIS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AnarresHoltGateHollisScript, EVENT_ANARRES_HOLT_GATE
 	object_event 3, 6, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_STANDING_LEFT, 1, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AnarresHoltGateNPCScript, -1
 

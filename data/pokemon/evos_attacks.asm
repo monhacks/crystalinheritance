@@ -4674,7 +4674,7 @@ LugiaEvosAttacks: ;ENCOUUNTER AT LEVEL 40
 	db 65, HURRICANE ; Sky Attack → new move
 	db 0 ; no more level-up moves
 
-HoOhEvosAttacks: ;ENCOUUNTER AT LEVEL 45
+HoOhEvosAttacks: ;ENCOUUNTER AT LEVEL 50
 	db 0 ; no more evolutions
 	db 1, ROAR ; Whirlwind → similar move
 	db 1, GUST
@@ -4683,12 +4683,12 @@ HoOhEvosAttacks: ;ENCOUUNTER AT LEVEL 45
 	db 15, SUNNY_DAY
 	db 20, FIRE_BLAST
 	db 25, SOLAR_BEAM ; Sacred Fire → Solar Beam
-	db 30, SACRED_FIRE ; Punishment → Sacred Fire
+	db 30, LIGHT_SCREEN ; Punishment → Sacred Fire
 	db 35, ANCIENTPOWER
 	db 40, SAFEGUARD
 	db 45, RECOVER
-	db 50, FUTURE_SIGHT
-	db 55, LIGHT_SCREEN ; Natural Gift → TM move
+	db 50, SACRED_FIRE
+	db 55, FUTURE_SIGHT
 	db 60, CALM_MIND
 	db 65, BRAVE_BIRD ; Sky Attack → Brave Bird
 	db 0 ; no more level-up moves

@@ -109,7 +109,7 @@ AnarresDormsKurtScript: ; will this work?....
 
 	
 .AnarresKurtPC
-	KurAnarresDormsText2
+	writetext KurAnarresDormsText2
 	promptbutton
 	special PokemonCenterPC ; per engine/events/std_scripts.asm this is how it should be done. 
 	endtext

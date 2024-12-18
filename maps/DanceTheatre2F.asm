@@ -1,4 +1,4 @@
-DanceTheatre_MapScriptHeader:
+DanceTheatre2F_MapScriptHeader:
 	def_scene_scripts
 
 	def_callbacks
@@ -13,7 +13,7 @@ DanceTheatre_MapScriptHeader:
 
 
 	def_object_events
-	object_event  0,  3, SPRITE_ELDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TheatreElderScript, EVENT_BEAT_RIVAL_ROUTE_42
+	object_event  0,  3, SPRITE_ELDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TheatreElderScript2F, EVENT_BEAT_RIVAL_ROUTE_42
 	object_event  2,  1, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerKimono_girlNaoko, EVENT_BEAT_RIVAL_ROUTE_42 ; LEAFEON, kimono girl 3 -- DONE 
 	object_event  3,  1, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerKimono_girlSayo, EVENT_BEAT_RIVAL_ROUTE_42 ; FLAREON, kimono girl 1 -- DONE 
 	object_event  4,  1, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerKimono_girlZuki, EVENT_BEAT_RIVAL_ROUTE_42 ; ESPEON, kimono girl 2 -- DONE 
@@ -22,11 +22,10 @@ DanceTheatre_MapScriptHeader:
 	object_event  8,  1, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerKimono_gir1Miki, EVENT_BEAT_RIVAL_ROUTE_42 ; UMBREON kimono girl 5 -- DONE 
 	object_event 10,  1, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerKimono_girlAkari, EVENT_BEAT_RIVAL_ROUTE_42 ; JOLTEON  kimono girl 1 -- DONE 
 	
-
-
 	object_const_def
 
-TheatreElderScript:
+
+TheatreElderScript2F:
 	faceplayer
 	opentext
 	writetext DanceTheatre2F_EndShowText
@@ -306,59 +305,3 @@ Kimono_girl_1AkariBeatenText:
 	line "to find out"
 	cont "why…"
 	done
-
-TheatreElderScript:
-	faceplayer
-	opentext
-	checkevent EVENT_BEAT_KIMONO_GIRL_AKARI
-	iftrue_jumpopenedtext TheatreElderThanksYou
-	writetext TheatreElderExplainsText
-	clearevent EVENT_BEAT_KIMONO_GIRL_NAOKO
-	clearevent EVENT_BEAT_KIMONO_GIRL_SAYO
-	clearevent EVENT_BEAT_KIMONO_GIRL_ZUKI
-	clearevent EVENT_BEAT_KIMONO_GIRL_IZUMI
-	clearevent EVENT_BEAT_KIMONO_GIRL_KUNI
-	clearevent EVENT_BEAT_KIMONO_GIRL_MIKI
-	closetext
-	applymovement THEATRE_ELDER, TheatreElderMovesBackMovement
-	disappear THEATRE_ELDER
-	end
-
-
-TheatreElderThanksYou:
-	text "Congratulations!"
-	
-	para "The final Kimono"
-	line "girl will see you"
-	cont "at the Bellchime"
-	cont "Trail."
-	done
-	
-TheatreElderExplainsText:
-	text "We have a very"
-	line "immersive dance"
-	cont "these days."
-	
-	para "The Kimono Girls"
-	line "battle you back"
-	cont "to back, "
-	
-	para "delivering the "
-	line "story of how a"
-	cont "young child kept"
-	cont "Johto from being"
-	cont "ruled by an evil"
-	cont "emperor!"
-	done
-
-TheatreElderMovesBackMovement:
-	step_right
-	step_right
-	step_right
-	step_right
-	step_right
-	step_right
-	step_right
-	step_right
-	step_right
-	step_end

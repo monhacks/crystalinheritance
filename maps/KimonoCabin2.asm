@@ -19,34 +19,35 @@ KimonoCabin2_MapScriptHeader: ; should be like  "BurnedTowerB1F_MapScriptHeader"
 
 
 	def_object_events
-	object_event  8, 6, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN,  OBJECTTYPE_SCRIPT, 0, KimonoCabin2RepelScript, -1
+	object_event  9, 11, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN,  OBJECTTYPE_SCRIPT, 0, KimonoCabin2RepelScript, EVENT_KIMONO_CABIN_2_REPEL_CHECK
+	object_event  1, 13, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN,  OBJECTTYPE_SCRIPT, 0, KimonoCabin2EndScript, -1
 
-	itemball_event 10, 7, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_1
-	itemball_event 10, 4, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_3
+	itemball_event 13, 1, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_1
+	itemball_event 13, 5, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_3
 
-	itemball_event  9, 0, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_4
+	itemball_event  7, 7, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_4
 
-	itemball_event  7, 7, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_2
-	itemball_event  7, 2, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_6
-	itemball_event  6, 0, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_8
-
-
-	itemball_event  5, 5, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_5
+	itemball_event  8, 9, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_2
+	itemball_event 10, 2, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_6
+	itemball_event  7, 0, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_8
 
 
-	itemball_event  4, 3, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_7
-	itemball_event  4, 1, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_10
-
-	itemball_event  3, 7, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_15
-
-	itemball_event  2, 4, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_12
-
-	itemball_event  1, 0, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_9
+	itemball_event  6, 5, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_5
 
 
-	itemball_event  0, 3, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_11
-	itemball_event  0, 5, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_13
-	itemball_event  0, 7, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_14
+	itemball_event  2, 6, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_7
+	itemball_event  2, 0, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_10
+
+	itemball_event  0, 4, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_15
+
+	itemball_event  3, 12, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_12
+
+	itemball_event  3, 4, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_9
+
+
+;	itemball_event  0, 3, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_11
+;	itemball_event  0, 5, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_13
+;	itemball_event  0, 7, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_14
 
 
 
@@ -57,10 +58,6 @@ KimonoCabin2_MapScriptHeader: ; should be like  "BurnedTowerB1F_MapScriptHeader"
 KimonoCabin2RepelScript:
 	faceplayer
 	opentext
-	checkevent EVENT_KIMONO_CABIN_LARVITAR
-	iftrue_jumpopenedtext Kimono2GladThatsOverText
-	checkevent EVENT_TALKED_TO_KIMONO_2_2
-	iftrue CheckRepelCounterScript2 ; should be 100 minus X
 	checkevent EVENT_TALKED_TO_KIMONO_2_1
 	iftrue CheckRepelCounterScript1 ; should be 100 steps
 	writetext Kimono2ExplainsTheGameText
@@ -70,6 +67,17 @@ KimonoCabin2RepelScript:
 	setevent EVENT_TALKED_TO_KIMONO_2_1
 	end
 	
+
+KimonoCabin2EndScript:
+	faceplayer
+	opentext
+	checkevent EVENT_KIMONO_CABIN_LARVITAR
+	iftrue_jumpopenedtext Kimono2GladThatsOverText
+	writetext CheckYourStepsText
+	readmem wRepelEffect
+	ifgreater 30, HedgeHogInteraction ; 70 steps to the hedgehog
+	writetext NotEnoughRepelStepsLeft
+	end
 
 Kimono2ExplainsTheGameText:
 	text "I have placed"
@@ -103,8 +111,8 @@ Kimono2ExplainsTheGameText:
 	done
 	
 KimonoCabin2KimonoGirlMoves1:
-	step_up
-	turn_head_down
+	step_right
+	turn_head_left
 	step_end
 
 
@@ -119,7 +127,9 @@ CheckRepelCounterScript1: ; checks that you have 99 steps remaining on repel.
 
 KimonoCabin2Moves2:
 	writetext KimonoCabin2ExplainsSecondTime
+	closetext
 	applymovement KIMONO_CABIN_2_KIMONO_GIRL, KimonoCabin2KimonoGirlMoves2
+	disappear KIMONO_CABIN_2_KIMONO_GIRL
 	end
 
 KimonoCabin2ExplainsSecondTime:
@@ -131,12 +141,22 @@ KimonoCabin2ExplainsSecondTime:
 	done
 
 KimonoCabin2KimonoGirlMoves2:
+	step_right
+	step_down
+	step_down
+	step_right
+	step_right
+	step_up
+	step_up
+	step_up
 	step_up
 	step_left
 	step_up
-	step_left
-	step_left
-	turn_head_down
+	step_up
+	step_right
+	step_up
+	step_up
+
 	step_end
 
 CheckRepelCounterScript2:

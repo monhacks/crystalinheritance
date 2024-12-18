@@ -6,7 +6,7 @@ SlowpokeWellB1F_MapScriptHeader:
 	def_warp_events ;todo not warping me to b1f
 	warp_event 17, 15, SLOWPOKE_WELL_ENTRANCE, 2
 	warp_event  7, 11, SLOWPOKE_WELL_B2F, 1
-	warp_event 13,  1, 
+
 
 	def_coord_events
 
@@ -113,7 +113,7 @@ SlowpokeWellB1FText:
 	line "cave! One tiny"
 	cont "change in the"
 
-	para "past; a shifted"
+	para "past: a shifted"
 	line "rock, a different"
 	cont "current - would"
 

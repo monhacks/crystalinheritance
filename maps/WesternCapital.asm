@@ -1,4 +1,4 @@
-WesternCapital_MapScriptHeader: ;	def_scene_scripts
+WesternCapital_MapScriptHeader: 
 	def_scene_scripts
 	scene_script WesternCapitalCemeteryScene
 
@@ -8,7 +8,12 @@ WesternCapital_MapScriptHeader: ;	def_scene_scripts
 	def_warp_events
 	warp_event 17, 11, EMPERORS_GARDEN, 1
 	warp_event 18, 11, EMPERORS_GARDEN, 2
-
+	warp_event 0, 0, WESTERN_CAPITAL_CEMETERY, 1
+	warp_event 0, 0, WESTERN_CAPITAL_DANCE_THEATRE, 1
+	warp_event 0, 0, WESTERN_CAPITAL_DORMS, 1
+	warp_event 0, 0, WESTERN_CAPITAL_STOCKROOM, 1	
+	warp_event 0, 0, WESTERN_CAPITAL_CEMETERY, 3
+	warp_event 0, 0, WESTERN_CAPITAL_CEMETERY, 4
 
 	def_coord_events
 
@@ -26,6 +31,12 @@ WesternCapital_MapScriptHeader: ;	def_scene_scripts
 	object_event  9, 27, SPRITE_SAMSARA, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_PROLOGUE_SAMSARA; disappeared at start
 	pokemon_event  10, 19, LUGIA, -1, -1, PAL_NPC_BLUE, WC_pkmn_text, EVENT_PROLOGUE_MEJIMI ; by tammy  ;;;; 
 	pokemon_event  12, 19, HO_OH, -1, -1, PAL_NPC_RED, WC_pkmn_text, EVENT_PROLOGUE_MEJIMI ; by tammy  ;;;; 
+	object_event 0, 0, SPRITE_FISHER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, WesternCapitalNPC1Text, EVENT_WESTERN_CAPITAL_CIVILIAN ; done
+	object_event 0, 0, SPRITE_FISHER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, WesternCapitalHisuiText1, EVENT_WESTERN_CAPITAL_CIVILIAN ; done
+	object_event 0, 0, SPRITE_BEAUTY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, WesternCapitalNPC2Text EVENT_WESTERN_CAPITAL_CIVILIAN ; done
+	object_event 0, 0, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, WesternCapitalNPC3Text, EVENT_WESTERN_CAPITAL_CIVILIAN ; done
+	object_event 0, 0, SPRITE_SAGE, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, WesternCapitalNPC4Text, EVENT_WESTERN_CAPITAL_CIVILIAN ; done
+	object_event 0, 0, SPRITE_GRANNY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, WesternCapitalNPC5Text, EVENT_WESTERN_CAPITAL_CIVILIAN ; done
 
 	object_const_def
 	const WESTERN_CAPITAL_MEJIMI
@@ -429,3 +440,49 @@ WC_SamsaraMovement1:
 	step_up
 	step_up
 	step_end
+
+WesternCapitalNPC1Text:
+	text "We couldn't have"
+	line "built the East"
+	cont "Tower without"
+	
+	para "help from the"
+	line "Hisuians."
+	done
+
+WesternCapitalHisuiText1: 
+	text "My blessing will"
+	line "attract #mon"
+	cont "to protect the"
+	cont "tower."
+	done
+
+WesternCapitalNPC2Text:
+	text "The towers are"
+	line "so tall!"
+	
+	para "Hail Emperor"
+	line "Mejimi!"
+	done
+
+WesternCapitalNPC3Text:
+	text "The metal in our"
+	line "towers lets them"
+	cont "stand taller than"
+	cont "others in Johto."
+	done
+
+WesternCapitalNPC4Text:
+	text "The outsiders at"
+	line "Trader's Landing"
+	cont "claim to have"
+	para "towers even taller"
+	cont "than these!"
+	done
+
+WesternCapitalNPC5Text:
+	text "The moat protects"
+	line "us in case of an"
+	cont "ambush by the"
+	cont "outsiders."
+	done
