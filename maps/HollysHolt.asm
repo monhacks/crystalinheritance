@@ -24,7 +24,7 @@ HollysHolt_MapScriptHeader:
 	bg_event 16,  2, BGEVENT_ITEM + REVIVAL_HERB, EVENT_HOLLYS_HOLT_HIDDEN_REVIVAL_HERB ;ok
 	bg_event 10, 24, BGEVENT_READ, HollysHoltShrineScript 
 	bg_event 23, 43, BGEVENT_JUMPTEXT, HH_Sign3Text
-;	bg_event  0,  0, BGEVENT_READ, PinecoHeadbuttScript1  
+
 
 	def_object_events
 	object_event  9, 25, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, HollysHoltKurtScript, -1;EVENT_BEAT_HOLLIS ;todo add this 
@@ -33,9 +33,9 @@ HollysHolt_MapScriptHeader:
 	object_event 17, 37, SPRITE_BREEDER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, HollysHoltNPC6Text, EVENT_TAMMY_HOLLYS_HOLT 
 
 
-	object_event   6, 18, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, PINECO, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, PinecoHeadbuttScript1, EVENT_HOLT_PINECO_1 ;;;;
-	object_event  29, 28, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, PINECO, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, PinecoHeadbuttScript1, EVENT_HOLT_PINECO_2 ;;;;
-	object_event   4, 40, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, PINECO, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, PinecoHeadbuttScript1, EVENT_HOLT_PINECO_3 ;;;;
+	object_event   6, 18, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, PINECO, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, PinecoHeadbuttScript1, EVENT_BEAT_HOLLIS ;;;;
+	object_event  29, 28, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, PINECO, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, PinecoHeadbuttScript1, EVENT_BEAT_HOLLIS ;;;;
+	object_event   4, 40, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, PINECO, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, PinecoHeadbuttScript1, EVENT_BEAT_HOLLIS ;;;;
 	
 	object_event  5,  3, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, SLOWBRO, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SlowpokeWellSlowbro, EVENT_SLOWPOKE_WELL_SLOWBRO	
 	
@@ -459,32 +459,10 @@ HH_Sign3Text:
 	done
 
 PinecoHeadbuttScript1:
-	farcall TryHeadbuttOW
-	iffalse_jumpopenedtext NotHeadbuttingText
-	showtext HeadbuttThisTreeText
-	yesorno
-	iffalse_jumpopenedtext NotHeadbuttingText
-	cry PINECO
-	pause 15
-	loadwildmon PINECO, 5
-	startbattle
-	disappear HOLLYS_HOLT_PINECO_1
-	setevent EVENT_HOLT_PINECO_1
-	reloadmapafterbattle
-	end
+	jumpthisopenedtext
 	
-
-
-HeadbuttThisTreeText:
-	text "This pineco is"
-	line "overwhelming the"
-	cont "tree."
+	text "The tree is infe-"
+	line "sted with hundr-"
+	cont "eds of Pineco."
+	done
 	
-	para "Headbutt it?"
-	done
-
-NotHeadbuttingText:
-	text "Pineco dangles"
-	line "precariously"
-	cont "from a branch."
-	done

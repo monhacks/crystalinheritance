@@ -1,12 +1,11 @@
 WesternCapitalDorms_MapScriptHeader: ;	def_scene_scripts
-WesternCapitalDorms_MapScriptHeader:
 	def_scene_scripts
 
 	def_callbacks
 
 	def_warp_events
-	warp_event  4,  7, WesternCapital, 5
-	warp_event  5,  7, WesternCapital, 5
+	warp_event  4,  7, WESTERN_CAPITAL, 5
+	warp_event  5,  7, WESTERN_CAPITAL, 5
 
 	def_coord_events
 

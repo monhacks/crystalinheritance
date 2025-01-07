@@ -16,7 +16,7 @@ BrassTower13F_MapScriptHeader:
 
 
 	def_bg_events
-	bg_event 2, 8, BrassTower13FSwitchScript
+	bg_event 2, 8, BGEVENT_READ, BrassTower13FSwitchScript  ;  cf warehouse entrance basement key .... 
 
 
 	def_object_events
@@ -37,16 +37,26 @@ BrassTowerGuardText:
 
 BrassTower13FSwitchScript:
 	checkevent EVENT_BRASS_TOWER_RIGHT_GUARD
-	iftrue .AskSwitchToLeft
+	iftrue AskSwitchToLeft
 	opentext
 	writetext SwitchSpiritsText
 	yesorno
 	iffalse_jumpopenedtext NotSwitchingText
 	clearevent EVENT_BRASS_TOWER_RIGHT_GUARD
 	setevent EVENT_BRASS_TOWER_LEFT_GUARD
-	;fade to black, reload map
 	reloadmap
-	
+	endtext
+
+AskSwitchToLeft:
+	opentext
+	writetext SwitchSpiritsText
+	yesorno
+	iffalse_jumpopenedtext NotSwitchingText
+	setevent EVENT_BRASS_TOWER_RIGHT_GUARD
+	clearevent EVENT_BRASS_TOWER_LEFT_GUARD
+	reloadmap
+	endtext
+
 BrassTower13FUnownScript:
 	showtext BrassTowerUnownText
 	cry UNOWN
@@ -63,3 +73,12 @@ BrassTowerUnownText:
 	line "ects an aura on"
 	cont "the tower!"
 	done
+
+SwitchSpiritsText:
+	text "Change spirits?"
+	done
+
+NotSwitchingText:
+	text "Unchanged."
+	done
+

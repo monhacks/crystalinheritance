@@ -413,7 +413,7 @@ ENDM
 	map_attributes BrassTower16F, BRASS_TOWER_16F, $0, 0
 	map_attributes BrassTower17F, BRASS_TOWER_17F, $0, 0
 	map_attributes BrassTower18F, BRASS_TOWER_18F, $0, 0
-	map_attributes BrassTower18F, BRASS_TOWER_19F, $0, 0	
+	map_attributes BrassTower19F, BRASS_TOWER_19F, $0, 0	
 	map_attributes BrassTower2F, BRASS_TOWER_2F, $0, 0
 	map_attributes BrassTower3F, BRASS_TOWER_3F, $0, 0
 	map_attributes BrassTower4F, BRASS_TOWER_4F, $0, 0

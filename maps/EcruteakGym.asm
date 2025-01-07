@@ -51,7 +51,7 @@ EcruteakGym_MapScriptHeader:
 	const ECRUTEAK_GYM_BOULDER1
 	const ECRUTEAK_GYM_BOULDER2	
 	
-StadiumUndergroundBoulders:
+EcruteakGymBoulders:
 	usestonetable .BoulderTable
 	endcallback
 

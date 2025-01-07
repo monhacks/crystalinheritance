@@ -139,6 +139,11 @@ WhitneyRadioText:
 	para "Now, with Silph,"
 	line "he is an award-"
 	cont "winning inventor!"
+	
+	para "He just might be"
+	line "the one to save"
+	cont "us from this "
+	cont "drought."
 
     para "Just another ex-"
 	line "ample of how the"

@@ -234,38 +234,31 @@ KurtThankYouText:
     done
 
 KurtAfterHealText:
-    text "These trainers"
-	line "all have some"
-	cont "reason to opp-"
-	cont "ose letting Silph"
-	cont "and Whitney take"
-	cont "over their city."
-
-	para "Whitney beams her"
-	line "show into so "
-	cont "many receptive"
-	cont "antennas."
-
-    para "She makes people"
-	line "believe that"
-	cont "their interest in"
-	cont "her is more imp-"
-	cont "ortant than their"
-	cont "real family! More"
-	cont "than their real"
-	cont "heritage!"
+    text "These trainers,"
+	line "eh, we have a"
+	cont "common cause."
 	
-    para "We'll shut off the"
-    line "Radio Tower power."
+	para "We're going to"
+	line "take out the"
+	cont "power here."
+	
+	para "We're going to"
+	line "take Whitney's"
+	cont "show off the air"
+	para "and then sneak"
+	line "out of the city"
+	cont "through the pass"
+	cont "to the East."
 
-    para "We will sneak"
-	line "through, defeat"
-	cont "her, and then"
-	cont "we can approach"
-	cont "Ecruteak from"
-	cont "the other side"
-	cont "by climbing over"
-	cont "the rocky pass."
+    para "Her show..."
+	line "It makes people"
+	cont "think their fan-"
+	cont "dom of Whitney"
+	
+	para "is more import-"
+	line "ant than their"
+	cont "family or heri-"
+	cont "tage!"
 
     para "Are you ready?"
 
@@ -305,4 +298,3 @@ UndergroundKurtMoves:
 	step_up
 	step_end
 	
-

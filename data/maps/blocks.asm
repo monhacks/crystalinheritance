@@ -817,6 +817,38 @@ BrassTowerB1F_BlockData:
 SECTION "BrassTower1F_BlockData", ROMX
 BrassTower1F_BlockData:
 	INCBIN "maps/BrassTower1F.ablk.lz"
+	
+SECTION "BrassTower12F_BlockData", ROMX
+BrassTower12F_BlockData:
+	INCBIN "maps/BrassTower12F.ablk.lz"
+
+SECTION "BrassTower13F_BlockData", ROMX
+BrassTower13F_BlockData:
+	INCBIN "maps/BrassTower13F.ablk.lz"
+
+SECTION "BrassTower14F_BlockData", ROMX
+BrassTower14F_BlockData:
+	INCBIN "maps/BrassTower14F.ablk.lz"
+
+SECTION "BrassTower15F_BlockData", ROMX
+BrassTower15F_BlockData:
+	INCBIN "maps/BrassTower15F.ablk.lz"
+	
+SECTION "BrassTower16F_BlockData", ROMX
+BrassTower16F_BlockData:
+	INCBIN "maps/BrassTower16F.ablk.lz"
+	
+SECTION "BrassTower17F_BlockData", ROMX
+BrassTower17F_BlockData:
+	INCBIN "maps/BrassTower17F.ablk.lz"
+	
+SECTION "BrassTower18F_BlockData", ROMX
+BrassTower18F_BlockData:
+	INCBIN "maps/BrassTower18F.ablk.lz"
+	
+SECTION "BrassTower19F_BlockData", ROMX
+BrassTower19F_BlockData:
+	INCBIN "maps/BrassTower19F.ablk.lz"
 
 SECTION "BrassTower2F_BlockData", ROMX
 BrassTower2F_BlockData:

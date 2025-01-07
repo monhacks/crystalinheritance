@@ -87,11 +87,8 @@ Kimono1HelpedText:
 	
 Kimono1AskHelpText:
 	text "Vera: Hi! My"
-	line "name is Vera"
-	cont "Mecti but you"
-	para "can call me"
-	line "Vera. Um, are"
-	cont "you from"
+	line "name is Vera."
+	cont "Are you from"
 	cont "Anarres?"
 	para "Can you tell me"
 	line "if it gets more"

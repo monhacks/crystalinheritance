@@ -1,5 +1,6 @@
 Route35GoldenrodGate_MapScriptHeader:
 	def_scene_scripts
+	scene_script WhitneyRadioShowScript
 
 	def_callbacks
 
@@ -17,6 +18,30 @@ Route35GoldenrodGate_MapScriptHeader:
 	object_event  0,  4, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, RandyScript, -1
 	object_event  6,  4, SPRITE_BREEDER, SPRITEMOVEDATA_WALK_UP_DOWN, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route35GoldenrodGatePokefanFScript, -1
 	object_event  3,  2, SPRITE_SCIENTIST, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route35GoldenrodGateFisherText, -1
+
+WhitneyRadioShowScript:
+	showtext WhitneyRadioShowText
+	end
+
+WhitneyRadioShowText:
+	text "Radio broadcast:"
+	line "Whitney's show is"
+	cont "taking charge!"
+	
+	para "ReArming Voice"
+	line "is new this week"
+	cont "with a very"
+	
+	para "special guest,"
+	line "<RIVAL>."
+	
+	para "Listen in, and"
+	line "remember - "
+	
+	para "stomp or get"
+	line "stomped!"
+	done
+
 
 RandyScript:
 	faceplayer

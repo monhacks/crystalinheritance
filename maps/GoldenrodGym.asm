@@ -87,21 +87,9 @@ BeautyVictoriaBeatenText:
 PryceScriptGoldenrod:
     faceplayer
     opentext
-    checkevent EVENT_GAVE_FACADE
-    iftrue .AlreadyGaveTM
     writetext PryceText
-    promptbutton
-    verbosegivetmhm TM_FACADE
-    iffalse .NoRoom
-    setevent EVENT_GAVE_FACADE
-    jumpthisopenedtext PryceAfterText
-.AlreadyGaveTM
-    writetext PryceAfterText
-    waitbutton
     closetext
     end
-.NoRoom
-    jumpthisopenedtext PryceNoRoomText
 
 PryceText:
     text "Pryce: <PLAYER>…"
@@ -115,17 +103,6 @@ PryceText:
     line "confront Whitney,"
     cont "but she is in the"
     cont "Radio Tower."
-    para "Her gym trainers"
-    line "are still"
-    cont "grinding away,"
-    cont "though."
-    para "They seem to"
-    line "think her cute"
-    cont "demeanor was just"
-    cont "a Facade."
-	para "For your trouble,"
-	line "please take this"
-	cont "TM."
     done
 
 PryceAfterText:
@@ -150,7 +127,6 @@ WhitneyScript:
     promptbutton
     verbosegivetmhm TM_FACADE
     setevent EVENT_GAVE_FACADE
-    jumpthisopenedtext WhitneyAfterText
 .AlreadyGaveTMWhitney
     writetext WhitneyAfterText
     waitbutton

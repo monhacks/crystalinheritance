@@ -33,7 +33,7 @@ WesternCapital_MapScriptHeader:
 	pokemon_event  12, 19, HO_OH, -1, -1, PAL_NPC_RED, WC_pkmn_text, EVENT_PROLOGUE_MEJIMI ; by tammy  ;;;; 
 	object_event 0, 0, SPRITE_FISHER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, WesternCapitalNPC1Text, EVENT_WESTERN_CAPITAL_CIVILIAN ; done
 	object_event 0, 0, SPRITE_FISHER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, WesternCapitalHisuiText1, EVENT_WESTERN_CAPITAL_CIVILIAN ; done
-	object_event 0, 0, SPRITE_BEAUTY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, WesternCapitalNPC2Text EVENT_WESTERN_CAPITAL_CIVILIAN ; done
+	object_event 0, 0, SPRITE_BEAUTY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, WesternCapitalNPC2Text, EVENT_WESTERN_CAPITAL_CIVILIAN ; done
 	object_event 0, 0, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, WesternCapitalNPC3Text, EVENT_WESTERN_CAPITAL_CIVILIAN ; done
 	object_event 0, 0, SPRITE_SAGE, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, WesternCapitalNPC4Text, EVENT_WESTERN_CAPITAL_CIVILIAN ; done
 	object_event 0, 0, SPRITE_GRANNY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, WesternCapitalNPC5Text, EVENT_WESTERN_CAPITAL_CIVILIAN ; done

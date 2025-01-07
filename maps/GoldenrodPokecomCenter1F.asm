@@ -242,34 +242,23 @@ WonderTradeForGSBallPichuText2:
 
 KurtHasSomeFansText:
     text "<PLAYER> - "
-	line "our fans in the"
-	cont "city have found"
-	cont "me. They say"
-	cont "that there is"
-	cont "a secret path"
-	cont "on the magnet"
-	cont "tracks we can"
-	cont "use to get"
-	cont "closer to Ec-"
-	cont "ruteak."
+	line "I can't tell you"
+	cont "all the details."
 	
-	para "They heard about"
-	line "our driving out"
-	cont "the loggers in"
-	cont "Ilex, and they"
-	cont "think we have"
-	cont "similar goals."
+	para "But I have some"
+	line "contacts here."
 	
-	para "In this city,"
-	line "many view Silph's"
-	cont "broadcast of"
-	cont "Whitney's show, "
-	cont "ReArming Voice."
+	para "They can get us"
+	line "east of the city"
+	cont "if we help them."
+	
+	para "In Goldenrod,"
+	line "Whitney's show"
+	cont "is noxious!"
 	
 	para "She cultivates"
-	line "a parasocial re-"
-	cont "lationship with"
-	cont "her broadcast."
+	line "a parasocial"
+	cont "relationship,"
 	
 	para "She convinces "
 	line "them that their"
@@ -282,16 +271,9 @@ KurtHasSomeFansText:
 	cont "help stopping"
 	cont "her broadcast."
 
-	para "They've requested"
-	line "our help in the"
-	cont "Goldenrod Under-"
-	cont "ground, where "
-	cont "there's an old"
-	cont "access tunnel"
-	cont "underneath the"
-	cont "Radio Tower."
-	
-    para "Meet me there."
+	para "Meet me in the"
+	line "Goldenrod Under-"
+	cont "ground."
     done
 
 

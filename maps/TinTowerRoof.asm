@@ -12,7 +12,7 @@ TinTowerRoof_MapScriptHeader:
 	def_bg_events
 
 	def_object_events
-	object_event  7,  3, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, HO_OH, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TinTowerHoOh, EVENT_TIN_TOWER_ROOF_HO_OH
+	object_event  7,  3, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, HO_OH, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TinTowerHoOh, EVENT_FOUGHT_HO_OH
 	object_event  7,  4, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TinTowerRoofSilverScript, EVENT_BEAT_SILVER
 
 	object_const_def
@@ -35,7 +35,8 @@ TinTowerRoofHoOh:
 	endcallback
 
 TinTowerHoOh:
-	faceplayer
+	checkevent EVENT_BEAT_SILVER
+	iffalse_jumpopenedtext HoOhText
 	opentext
 	writetext HoOhText
 	cry HO_OH
@@ -64,9 +65,6 @@ TinTowerRoofSilverScript:
 	dontrestartmapmusic
 	reloadmap	
 	showtext SilverAfterBattleText
-	clearevent EVENT_TIN_TOWER_ROOF_HO_OH
-	appear TINTOWERROOF_HO_OH
-	showtext SilverLeavesRoofText
 	applyonemovement TINTOWERROOF_SILVER, teleport_from
 	disappear TINTOWERROOF_SILVER
 	setevent EVENT_BEAT_SILVER
@@ -132,3 +130,6 @@ SilverAfterBattleText:
 	cont "interweave again."
 	done
 	
+HoOhNotBeatSilverText:
+	text "Shaoooh!"
+	done

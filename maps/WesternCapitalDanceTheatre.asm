@@ -19,12 +19,9 @@ WesternCapitalDanceTheatre_MapScriptHeader: ;	def_scene_scripts
 	object_event  3,  1, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerKimono_girlMasako, EVENT_BEAT_ADRINNA_MOUNT_MORTAR ; 
 	object_event  3,  1, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerKimono_girlHaruko, EVENT_BEAT_ADRINNA_MOUNT_MORTAR ; FLAREON, kimono girl 1 -- DONE 
 	object_event  7,  1, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerKimono_girlTamiko, EVENT_BEAT_ADRINNA_MOUNT_MORTAR ; GLACEON, kimono girl 4 -- DONE
-
-
 	object_event  1, 10, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, WC_DanceTheatreNPC1Script, -1 ; SILPH 
 	object_event  7,  5, SPRITE_LADY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, WC_DanceTheatreNPC2Script, -1
-
-	object_event  9,  7, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, pokemart, MARTTYPE_STANDARD, MART_WESTERN_CAPITAL_MON, -1
+	object_event  9,  7, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, pokemart, MARTTYPE_STANDARD, MART_WESTERN_CAPITAL_MON,
 
 	object_const_def
 
@@ -63,11 +60,11 @@ WC_DanceTheatreNPC2Script:
 	iftrue_jumpopenedtext WC_DT_NPC2_Text1
 	checkevent EVENT_GOT_FLASH_CANNON
 	iftrue_jumpopenedtext GotFlashCannonText
-	checkevent EVENT_BEAT_KIMONO_MASAKO
+	checkevent EVENT_BEAT_KIMONO_GIRL_MASAKO
 	iffalse_jumpopenedtext WC_DT_NPC2_Text2
-	checkevent EVENT_BEAT_KIMONO_HARUKO
+	checkevent EVENT_BEAT_KIMONO_GIRL_HARUKO
 	iffalse_jumpopenedtext WC_DT_NPC2_Text2
-	checkevent EVENT_BEAT_KIMONO_TAMIKO
+	checkevent EVENT_BEAT_KIMONO_GIRL_TAMIKO
 	iffalse_jumpopenedtext WC_DT_NPC2_Text2
 	showtext WC_DT_NPC2_Text3
 	verbosegivetmhm TM_FLASH_CANNON
@@ -86,14 +83,13 @@ WC_DT_NPC2_Text3:
 	cont "you as thanks."
 	done
 	
-WC_DT_NPC2_Text2
+WC_DT_NPC2_Text2:
 	text "The Emperor's"
 	line "generals have"
 	cont "taken a heavy"
 	para "hand with the Ki-"
 	line "mono Theatre."
 	
-
 	para "I can't defeat"
 	line "even one!"
 	done
@@ -111,13 +107,8 @@ GotFlashCannonText:
 	cont "dancers!"
 	done
 
-Kimono1: With my kimono, I dance like tongues of fire! Sizzling. Watching a fire burn can be enchanting. Make sure you don’t get burned.  Monferno, Magmar, HArcanine
-Kimono2: With enough water, you could grow a whole new world. Ethereal. Remember – too much water, and any plant will drown.  Prinplup, Fegatr, Jynx
-Kimono3: Feel your hairs rise, compelled by the static charge! Magnificent conduction. When the lightning strikes, you must ground yourself. Luxio, Ebuzz, HElectrode
-
-
-GenericTrainerKimono_girlRed:
-	generictrainer KIMONO_GIRL_1, SAYO, EVENT_BEAT_KIMONO_GIRL_SAYO, Kimono_girl_1SayoSeenText, Kimono_girl_1SayoBeatenText
+GenericTrainerKimono_girlMasako:
+	generictrainer KIMONO_GIRL_1, MASAKO, EVENT_BEAT_KIMONO_GIRL_MASAKO, Kimono_girl_1MasakoSeenText, Kimono_girl_1MasakoBeatenText
 
 	text "A bonfire can be"
 	line "enchanting."
@@ -126,57 +117,65 @@ GenericTrainerKimono_girlRed:
 	line "burned."
 	done
 
-Kimono_girl_1SayoSeenText:
+Kimono_girl_1MasakoSeenText:
 	text "I dance like a"
 	line "tongue of fire!"
 	done
 
-Kimono_girl_1SayoBeatenText:
-	text "When the nearby"
-	line "town of Gauld-"
-	cont "enrod was cast"
-	cont "into pieces by"
-	cont "the power-"
-	cont "hungry emperor,"
-
-	para "the hero showed"
-	line "them their"
-	cont "similar needs."
+Kimono_girl_1MasakoBeatenText:
+	text "A bonfire can be"
+	line "enchanting."
+	
+	para "Don't get"
+	line "burned."
 	done
 
+GenericTrainerKimono_girlHaruko:
+	generictrainer KIMONO_GIRL_4, HARUKO, EVENT_BEAT_KIMONO_GIRL_HARUKO, Kimono_girl_1HarukoSeenText, Kimono_girl_1HarukoBeatenText
 
-GenericTrainerKimono_girlBlue:
-	generictrainer KIMONO_GIRL_4, IZUMI, EVENT_BEAT_KIMONO_GIRL_IZUMI, Kimono_girl_1IzumiSeenText, Kimono_girl_1IzumiBeatenText
-	text "At that time, a"
-	line "harsh storm kept"
-	cont "boats out of"
-	cont "the harbor."
-	para "Now, the emperor"
-	line "could only"
-	cont "expand to the"
-	cont "east."
+	text "Too much water,"
+	line "and any plant"
+	cont "would drown."
 	done
 
-Kimono_girl_1IzumiSeenText:
-	text "Strike like a"
-	line "hurricane!"
+Kimono_girl_1HarukoSeenText:
+	text "Could you grow"
+	line "a new world if"
+	cont "you had enough"
+	cont "water?"
 	done
 
-Kimono_girl_1IzumiBeatenText:
-	text "At that time, a"
-	line "harsh storm kept"
-	cont "boats out of"
-	cont "the harbor."
-	para "Now, the emperor"
-	line "could only"
-	cont "expand to the"
-	cont "east."
+Kimono_girl_1HarukoBeatenText:
+	text "Too much water,"
+	line "and any plant"
+	cont "would drown."
 	done
 
 
 
+GenericTrainerKimono_girlTamiko: ; BROWN 
+	generictrainer KIMONO_GIRL_5, TAMIKO, EVENT_BEAT_KIMONO_GIRL_TAMIKO, Kimono_girl_1TamikoSeenText, Kimono_girl_1TamikoBeatenText
 
-WC_DanceTheatreNPC1IntroText
+	text "When lightning"
+	line "strikes, ground"
+	cont "yourself."
+	done
+
+Kimono_girl_1TamikoSeenText:
+	text "The static comp-"
+	line "els your hairs"
+	cont "to stand at"
+	cont "attention!"
+	done
+
+Kimono_girl_1TamikoBeatenText:
+	text "When lightning"
+	line "strikes, ground"
+	cont "yourself."
+	done
+
+
+WC_DanceTheatreNPC1IntroText:
 	text "The Generals are"
 	line "frequent visitors"
 	cont "to the theatre."
@@ -201,46 +200,3 @@ WC_DanceTheatreNPC2Text:
 	cont "Girls went?"
 	done
 	
-
-
-GenericTrainerKimono_gir1Brown: ; BROWN 
-	generictrainer KIMONO_GIRL_5, MIKI, EVENT_BEAT_KIMONO_GIRL_MIKI, Kimono_girl_1MikiSeenText, Kimono_girl_1MikiBeatenText
-	text "Back then, Mount"
-	line "Mortar's volcan-"
-	cont "ic activity was"
-
-	para "a lightningrod"
-	line "for the emper-"
-	cont "or's self-"
-	cont "aggrandizing."
-
-	para "So the emperor's"
-	line "reach was cut"
-	cont "off from the"
-
-	para "south, the west,"
-	line "and the east."
-	done
-
-Kimono_girl_1MikiSeenText:
-	text "Strike in the"
-	line "dark!"
-	done
-
-Kimono_girl_1MikiBeatenText:
-	text "Back then, Mount"
-	line "Mortar's volcan-"
-	cont "ic activity was"
-
-	para "a lightningrod"
-	line "for the emper-"
-	cont "or's self-"
-	cont "aggrandizing."
-
-	para "So the emperor's"
-	line "reach was cut"
-	cont "off from the"
-
-	para "south, the west,"
-	line "and the east."
-	done

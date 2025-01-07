@@ -81,21 +81,13 @@ WhitneyIntroText:
     cont "weren't taken"
     cont "seriously."
 	
-    para "So I started my"
-    line "own gym. That got"
-    cont "me attention, and"
-    cont "now I'm an"
-    cont "inspiration to the"
-    cont "cuties who want to"
-    cont "hit a defense-"
-    cont "curl-boosted"
-    cont "5-turn rollout."
+    para "Now, I'm an"
+    cont "inspiration!"
     done
 
 KurtConfrontationText:
     text "Kurt: Whitney."
-    line "Your radio show is"
-    cont "inflammatory."
+    line "Your show..."
     para "It brings out"
 	line "the worst in"
 	cont "people."
@@ -113,30 +105,17 @@ WhitneyResponseText:
 
     para "Do you know why"
 	line "no one comes to"
-	cont "your ceremony"
-	cont "anymore?"
+	cont "the ceremony?"
 	
-    para "Because your"
-	line "idealized his-"
-	cont "tory of Johto is"
-	cont "boring."
+    para "Because it"
+	line "is boring."
 
-	para "Blah blah, "
-	line "people lived in"
-	cont "perfect harmony"
-	cont "with #mon,"
+	para "Blah blah,"
+	line "perfect harmony,"
     cont "yadda yadda."
 	
-	para "People want a"
+	para "People want"
 	line "conflict."
-	
-	para "People want to"
-	line "cheer for some-"
-	cont "thing."
-	
-	para "People want to"
-	line "see someone come"
-	cont "up."
 	
 	para "People want to"
 	line "channel someone"
@@ -152,9 +131,9 @@ WhitneyBeatenText:
     cont "lose."
 	
     para "All those"
-    line "friendships"
+    line "relationships"
     cont "because of how"
-    cont "I never tried"
+    cont "I never wanted"
 	cont "to see the good"
 	cont "in anyone else."
     done
@@ -168,9 +147,7 @@ WhitneyAttractText:
 	para "You reminded me"
 	line "that as a gym"
 	cont "leader, I should"
-	cont "uplift others,"
-	cont "not exalt my-"
-	cont "self."
+	cont "uplift others."
 	done
 	
 WhitneyAfterBattleText:
@@ -192,18 +169,14 @@ KurtFinalText:
 	
 	para "People like her"
 	line "can't change."
-
-	para "Anyway - "
 	
     para "Take that fire"
     line "ladder, and then"
     cont "we can take the"
-    cont "mountain path to"
-    cont "the East."
+    cont "mountain path."
 	
 	para "I'll heal your"
-	line "party before we"
-	cont "embark."
+	line "party."
     done
 
 KurtEnterMovement:
