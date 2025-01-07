@@ -186,8 +186,8 @@ CalmCoastKurtText:
 	para "Once, on the way"
 	line "back to Azalea, he"
 	cont "was playing with"
-	cont "an apricorn and"
-	cont "accidentally caught"
+	para "an apricorn and"
+	line "caught"
 	cont "a Cyndaquil."
 	
 	para "The apricorn had"

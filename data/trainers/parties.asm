@@ -455,23 +455,157 @@ KurtGroup: ;TODO
 ; ================================
 ; ================
 
-	; WILL
+	; KURT1 ; rowlet pikachu teddiursa cyndaquil gastly lv 9 
+	db "Kurt@"
+	db TRAINERTYPE_NORMAL
+	; party
+	db 7, ROWLET
+	db 8, PIKACHU
+	db 9, TEDDIURSA
+	db 8, CYNDAQUIL
+	db 6, GASTLY
+	db -1 ; end
+
+	; KURT2  SANDRA
+	db "Kurt@"
+	db TRAINERTYPE_NORMAL
+	; party
+	db 14, OSHAWOTT
+	db 13, YANMA
+	db 10, CHIKORITA
+	db 12, SKIPLOOM
+	db 14, SNUBBULL
+	db -1 ; end
+
+	; KURT3 WHITNEY
+	db "Kurt@"
+	db TRAINERTYPE_NORMAL
+	; party
+	db 17, CLEFAIRY
+	db 15, PINSIR
+	db 16, NIDORINA
+	db 14, MAREEP
+	db 18, SUNFLORA
+	db -1 ; end
+	
+	; KURT4 FALKNER 
+	db "Kurt@"
+	db TRAINERTYPE_NORMAL
+	; party
+	db 20, HITMONTOP
+	db 16, MAGMAR
+	db 17, DRATINI
+	db 16, ELECTABUZZ
+	db 21, MAGNEMITE
+	db -1 ; end
+
+	; KURT5 REI
+	db "Kurt@"
+	db TRAINERTYPE_NORMAL
+	; party
+	db 18, STANTLER
+	db 21, GROWLITHE
+	db 21, POLIWHIRL
+	db 20, DUGTRIO
+	db 24, GRIMER
+	db -1 ; end
+
+	; KURT6 SAMSARA
+	db "Kurt@"
+	db TRAINERTYPE_NORMAL
+	; party
+	db 26, EEVEE
+	db 21, SKARMORY
+	db 23, MISDREAVUS
+	db 22, DUNSPARCE
+	db 25, TOGETIC
+	db -1 ; end
+
+	; KURT7 BARBEAU 
+	db "Kurt@"
+	db TRAINERTYPE_NORMAL
+	; party
+	db 26, GROTLE
+	db 29, GLIGAR
+	db 27, GIRAFARIG
+	db 25, TAUROS
+	db 29, SLOWPOKE
+	db -1 ; end
+	
+	; KURT8 ; JASMINE
+	db "Kurt@"
+	db TRAINERTYPE_NORMAL
+	; party
+	db 30, PERSIAN
+	db 27, FROSLASS
+	db 27, DRIFBLIM
+	db 30, SEADRA
+	db 33, SHUCKLE
+	db -1 ; end
+	
+	; KURT9 ; PRYCE
+	db "Kurt@"
+	db TRAINERTYPE_NORMAL
+	; party
+	db 30, TAUROS
+	db 36, HOUNDOUR
+	db 33, MILTANK
+	db 34, MUK
+	db 36, CORSOLA
+	db -1 ; end
+
+	; KURT10 ; SINJOH
+	db "Kurt@"
+	db TRAINERTYPE_NORMAL
+	; party
+	db 37, DONPHAN
+	db 37, AZUMARILL
+	db 33, BASTIODON
+	db 35, LOPUNNY
+	db 40, KIRLIA
+	db -1 ; end
+
+	; KURT11 ; AMOS
+	db "Kurt@"
+	db TRAINERTYPE_NORMAL
+	; party
+	db 35, STARAVIA
+	db 38, DRAPION
+	db 43, ROSELIA
+	db 40, LUCARIO
+	db 43, H__BRAVIARY
+	db -1 ; end
+	
+	; KURT12 ; whispering WAY 
+	db "Kurt@"
+	db TRAINERTYPE_NORMAL
+	; party
+	db 46, NIDOKING
+	db 44, NIDOQUEEN
+	db 44, YANMEGA
+	db 45, URSARING
+	db 46, SNORLAX
+	db -1 ; end
+	
+	; KURT13 ; TIN TOWER, final battle 
 	db "Kurt@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_EVS | TRAINERTYPE_MOVES
 	; party
-	db 48, XATU, TWISTEDSPOON, 144
-		db QUICK_ATTACK, CONFUSE_RAY, RECOVER, PSYCHIC_M
-	db 49, JYNX, BRIGHTPOWDER, 144
-		db NASTY_PLOT, DRAIN_KISS, ICE_BEAM, PSYCHIC_M
-	db 50, EXEGGUTOR, MIRACLE_SEED, 144
-		db REFLECT, LEECH_SEED, SEED_BOMB, PSYCHIC_M
-	db 50, ALAKAZAM, LUM_BERRY, 144
-		db CALM_MIND, RECOVER, LIGHT_SCREEN, PSYCHIC_M
-	db 49, SLOWBRO, SITRUS_BERRY, 144
-		db SURF, CALM_MIND, BODY_SLAM, PSYCHIC_M
-	db 51, XATU, LEFTOVERS, 144
-		db QUICK_ATTACK, CONFUSE_RAY, PSYCHIC_M, FUTURE_SIGHT
+	db 50, HERACROSS, SCOPE_LENS, 40
+		db MEGAHORN, SWORDS_DANCE, CLOSE_COMBAT, EARTHQUAKE
+	db 51, UMBREON, LEFTOVERS, 40
+		db RECOVER, CURSE, SUCKER_PUNCH, TOXIC
+	db 52, URSALUNA, FLAME_ORB, 40
+		db EARTHQUAKE, FACADE, REST, SNORE
+	db 53, WYRDEER, WIDE_LENS, 40
+		db NASTY_PLOT, ZEN_HEADBUTT, HI_JUMP_KICK, BODY_SLAM
+	db 54, KLEAVOR, CHOICE_SCARF, 40
+		db ROCK_SLIDE, U_TURN, HEADBUTT, SWORDS_DANCE
+	db 55, CELEBI, LEFTOVERS, 40
+		db CALM_MIND, PSYCHIC_M, ENERGY_BALL, RECOVER
 	db -1 ; end
+
+;	const KURT13 ; TOP OF TIN TOWER , umbreon celebi heracross ursaluna wyrdeer kleavor 
 
 ; ================
 ; ================================
@@ -480,7 +614,7 @@ MejimiGroup:
 ; ================================
 ; ================
 
-	; KOGA
+	; MEJIMI
 	db "Mejimi@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_EVS | TRAINERTYPE_MOVES
 	; party

@@ -25,10 +25,10 @@ WesternCapital_MapScriptHeader:
 
 	def_object_events
 	object_event 11, 21, SPRITE_MEJIMI, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_PROLOGUE_MEJIMI ; need to put all these in the event flags file
-	object_event  9, 27, SPRITE_ADRINNA, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_PROLOGUE_ADRINNA ; disappeared at start
-	object_event  9, 27, SPRITE_KENSEY, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_PROLOGUE_KENSEY; disappeared at start
-	object_event  9, 27, SPRITE_BOBESH, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_PROLOGUE_BOBESH; disappeared at start
-	object_event  9, 27, SPRITE_SAMSARA, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_PROLOGUE_SAMSARA; disappeared at start
+	object_event  9, 28, SPRITE_ADRINNA, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_PROLOGUE_ADRINNA ; disappeared at start
+	object_event  9, 28, SPRITE_KENSEY, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_PROLOGUE_KENSEY; disappeared at start
+	object_event  9, 28, SPRITE_BOBESH, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_PROLOGUE_BOBESH; disappeared at start
+	object_event  9, 28, SPRITE_SAMSARA, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_PROLOGUE_SAMSARA; disappeared at start
 	pokemon_event  10, 19, LUGIA, -1, -1, PAL_NPC_BLUE, WC_pkmn_text, EVENT_PROLOGUE_MEJIMI ; by tammy  ;;;; 
 	pokemon_event  12, 19, HO_OH, -1, -1, PAL_NPC_RED, WC_pkmn_text, EVENT_PROLOGUE_MEJIMI ; by tammy  ;;;; 
 	object_event 0, 0, SPRITE_FISHER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, WesternCapitalNPC1Text, EVENT_WESTERN_CAPITAL_CIVILIAN ; done
@@ -313,7 +313,7 @@ Prologue_Text6:
 	done
 
 Prologue_Text7:
-	text "Adrinna: now,"
+	text "Adrinna: Now,"
 	line "that evoked an"
 	cont "Aeroblast or"
 	cont "Sacred Fire!"
@@ -391,6 +391,7 @@ WC_AdrinnaMovement1:
 	step_up
 	step_up
 	step_up
+	step_up
 	step_right
 	turn_head_down
 	step_end
@@ -401,11 +402,13 @@ WC_KenseyMovement1:
 	step_up
 	step_up
 	step_up
+	step_up
 	step_up	
 	turn_head_right
 	step_end
 
 WC_KenseyMovement2:
+	step_down
 	step_down
 	step_down
 	step_down
@@ -421,10 +424,12 @@ WC_BobeshMovement1:
 	step_up
 	step_up
 	step_up
+	step_up
 	turn_head_right
 	step_end
 
 WC_BobeshMovement2:
+	step_down
 	step_down
 	step_down
 	step_down
@@ -434,6 +439,7 @@ WC_BobeshMovement2:
 	step_end
 	
 WC_SamsaraMovement1:
+	step_up
 	step_up
 	step_up
 	step_up

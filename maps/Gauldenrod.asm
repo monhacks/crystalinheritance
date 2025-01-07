@@ -238,6 +238,7 @@ BrigaderScript:
 GauldenrodBrigaderText:
 	text "Stay out of"
 	line "trouble."
+	done
 
 GauldenrodTunnelSign:
 	jumptext GauldenrodTunnelSignText
@@ -246,6 +247,7 @@ GauldenrodTunnelSignText:
 	text "Just a humble"
 	line "abode, nothing"
 	cont "to see here."
+	done
 	
 GauldenrodNoFishingSign:
 	jumptext GauldenrodNoFishingSignText
@@ -253,7 +255,7 @@ GauldenrodNoFishingSign:
 GauldenrodNoFishingSignText:
 	text "Posted: No"
 	line "Fishing!"
-	
+	done
 	
 GauldenrodHisuiTraderScript:
 	faceplayer
@@ -408,7 +410,7 @@ GauldenrodBobeshScene: ; todo, make
     showtext BobeshText1
     showtext BrigaderText2
     showtext CindyText2
-    applymovement BOBESH, BobeshMovesToCindy
+    applymovement GAULDENROD_BOBESH, BobeshMovesToCindy
     turnobject GAULDENROD_MATRON, LEFT
     showtext BobeshText2
     showtext CindyText3
@@ -424,10 +426,10 @@ GauldenrodBobeshScene: ; todo, make
 	special Special_ReloadSpritesNoPalettes
     disappear GAULDENROD_MATRON
     disappear GAULDENROD_BRIGADER
-	disappear GAULDENROD_OCTILLERY
+	disappear GAULDENROD_OCTILLERY ; FLAREON 
 	disappear GAULDENROD_BOBESH
 	setevent EVENT_GAULDENROD_BOBESH
-	setevent EVENT_GAULDENROD_OCTILLERY
+	setevent EVENT_GAULDENROD_FLAREON
 	setevent EVENT_GAULDENROD_BRIGADER_CINDY
 	clearevent EVENT_GAULDENROD_CIVILIANS
 	pause 10
@@ -472,13 +474,13 @@ BobeshText2:
     cont "matriarch."
 	
 	para "Tell me,"
-    cont "how is your"
+    line "how is your"
     cont "husband?"
     done
 
 CindyText3:
     text "Cindy: He"
-    cont "still gardens."
+    line "still gardens."
 	
 	para "By the tower."
     done
