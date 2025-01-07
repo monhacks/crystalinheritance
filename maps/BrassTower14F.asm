@@ -1,4 +1,4 @@
-BrassTower1F_MapScriptHeader: 
+BrassTower14F_MapScriptHeader: 
 	def_scene_scripts
 
 
@@ -6,8 +6,8 @@ BrassTower1F_MapScriptHeader:
 
 
 	def_warp_events
-
-
+	warp_event 2, 1, BRASS_TOWER_17F, 4
+	warp_event 0, 15, BRASS_TOWER_18F, 2
 
 	def_coord_events
 

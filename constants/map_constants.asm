@@ -188,15 +188,15 @@ ENDM
 	map_const WHISPERS_TAPESTRY_GATE,                          4,   4 ; sprout tower
 	map_const TIMELESS_TAPESTRY,                              11, 21 ; JOHTO_OVERCAST
 	map_const BRASS_TOWER_B1F,                                 6,  7 ; sprout tower
-	map_const BRASS_TOWER_1F,                                  6,  6 ; sprout tower
-;	map_const BRASS_TOWER_12F, ; htese are the puzzles
-;	map_const BRASS_TOWER_13F, 
-;	map_const BRASS_TOWER_14F, 
-;	map_const BRASS_TOWER_15F, 
-;	map_const BRASS_TOWER_16F, 
-;	map_const BRASS_TOWER_17F, 
-;	map_const BRASS_TOWER_18F, 
-;	map_const BRASS_TOWER_19F, 
+	map_const BRASS_TOWER_1F,                                   8,  8 ; sprout tower
+	map_const BRASS_TOWER_12F, 									8, 8 ; ; htese are the puzzles
+	map_const BRASS_TOWER_13F,                                  8, 8 ; 
+	map_const BRASS_TOWER_14F,                                  8, 8 
+	map_const BRASS_TOWER_15F,                                  8, 8 ; 
+	map_const BRASS_TOWER_16F,                                  8, 8 ; 
+	map_const BRASS_TOWER_17F,                                  8, 8 ; 
+	map_const BRASS_TOWER_18F,                                  8, 8 ; 
+	map_const BRASS_TOWER_19F,                                  8, 8 ; 
 	map_const BRASS_TOWER_2F,                                  6,  6 ; sprout tower
 	map_const BRASS_TOWER_3F,                                  6,  6 ; sprout tower
 	map_const BRASS_TOWER_4F,                                  6,  6 ; sprout tower	
@@ -306,9 +306,9 @@ ENDM
 	map_const RUSALKA_RUINS_DARK_CABINS,                    5,  8 ; LIGHTHOUSE
 	map_const RUSALKA_RUINS_CAPTAIN,                        5,  6 ; lighthouse
 	map_const SEAFLUX_NEXUS,                               20, 14 ; cave
-;	map_const SEAFLUX_NEXUS_1F,                               	
-;	map_const SEAFLUX_NEXUS_B1F,                               	
-;	map_const SEAFLUX_NEXUS_B2F,                               	
+	map_const SEAFLUX_NEXUS_B1F,           				   15, 15 ; cave                    	
+	map_const SEAFLUX_NEXUS_B2F,                           20, 20 ; cave 
+	map_const SEAFLUX_NEXUS_B3F,                           10, 18 ; cave                       	
 	map_const LANDING_DOCKS,                              10, 10 ; port
 	map_const ARDUOUS_ANCHORAGE,                          20, 17 ; johto overcast
 	

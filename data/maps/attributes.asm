@@ -406,6 +406,14 @@ ENDM
 
 	map_attributes BrassTowerB1F, BRASS_TOWER_B1F, $0, 0
 	map_attributes BrassTower1F, BRASS_TOWER_1F, $0, 0
+	map_attributes BrassTower12F, BRASS_TOWER_12F, $0, 0
+	map_attributes BrassTower13F, BRASS_TOWER_13F, $0, 0
+	map_attributes BrassTower14F, BRASS_TOWER_14F, $0, 0
+	map_attributes BrassTower15F, BRASS_TOWER_15F, $0, 0
+	map_attributes BrassTower16F, BRASS_TOWER_16F, $0, 0
+	map_attributes BrassTower17F, BRASS_TOWER_17F, $0, 0
+	map_attributes BrassTower18F, BRASS_TOWER_18F, $0, 0
+	map_attributes BrassTower18F, BRASS_TOWER_19F, $0, 0	
 	map_attributes BrassTower2F, BRASS_TOWER_2F, $0, 0
 	map_attributes BrassTower3F, BRASS_TOWER_3F, $0, 0
 	map_attributes BrassTower4F, BRASS_TOWER_4F, $0, 0
@@ -455,6 +463,9 @@ ENDM
 	map_attributes RusalkaRuinsDarkCabins, RUSALKA_RUINS_DARK_CABINS, $0, 0
 	map_attributes RusalkaRuinsCaptain, RUSALKA_RUINS_CAPTAIN, $0, 0
 	map_attributes SeafluxNexus, SEAFLUX_NEXUS, $9, 0
+	map_attributes SeafluxNexusB1F, SEAFLUX_NEXUS_B1F, $9, 0
+	map_attributes SeafluxNexusB2F, SEAFLUX_NEXUS_B2F, $9, 0
+	map_attributes SeafluxNexusB3F, SEAFLUX_NEXUS_B3F, $9, 0
 	map_attributes LandingDocks, LANDING_DOCKS, $A, 0 
 
 	map_attributes SlowpokeDreams, SLOWPOKE_DREAMS, $0, NORTH | SOUTH | WEST | EAST 

@@ -3231,6 +3231,8 @@ YanmegaEvosAttacks:
 UnownEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, HIDDEN_POWER
+	db 25, ANCIENTPOWER
+	db 50, PERISH_SONG
 	db 0 ; no more level-up moves
 
 GirafarigEvosAttacks:

@@ -917,6 +917,18 @@ RusalkaRuinsCaptain_BlockData:
 SECTION "SeafluxNexus_BlockData", ROMX
 SeafluxNexus_BlockData:
 	INCBIN "maps/SeafluxNexus.ablk.lz"
+	
+SECTION "SeafluxNexusB1F_BlockData", ROMX
+SeafluxNexusB1F_BlockData:
+	INCBIN "maps/SeafluxNexusB1F.ablk.lz"
+	
+SECTION "SeafluxNexusB2F_BlockData", ROMX
+SeafluxNexusB2F_BlockData:
+	INCBIN "maps/SeafluxNexusB2F.ablk.lz"
+	
+SECTION "SeafluxNexusB3F_BlockData", ROMX
+SeafluxNexusB3F_BlockData:
+	INCBIN "maps/SeafluxNexusB3F.ablk.lz"
 
 SECTION "LandingDocks_BlockData", ROMX
 LandingDocks_BlockData:

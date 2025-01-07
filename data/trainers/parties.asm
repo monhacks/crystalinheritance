@@ -6366,8 +6366,12 @@ KimonoGirl1Group:
 	db "Masako@"
 	db TRAINERTYPE_MOVES
 	; party
-	db 27, JOLTEON 
-		db THUNDERBOLT, LIGHT_SCREEN, DOUBLE_KICK, SWIFT
+	db 25, LUXIO 
+		db BITE, THUNDERSHOCK, THUNDER_WAVE, SWAGGER
+	db 27, ELECTABUZZ 
+		db THUNDERPUNCH, QUICK_ATTACK, LOW_KICK, LIGHT_SCREEN	
+	db 30, H__ELECTRODE 
+		db LEECH_SEED, ROLLOUT, VINE_WHIP, THUNDERBOLT
 	db -1 ; end
 
 ; ================
@@ -6430,6 +6434,18 @@ KimonoGirl4Group:
 	db 27, GLACEON 
 		db BARRIER, MIRROR_COAT, ICE_BEAM, SHADOW_BALL
 	db -1 ; end
+	
+	; KIMONO_GIRL_4
+	db "Haruko@"
+	db TRAINERTYPE_MOVES
+	; party
+	db 25, PRINPLUP 
+		db METAL_CLAW, BUBBLE_BEAM, CHARM, PECK
+	db 25, JYNX 
+		db ICE_PUNCH, CONFUSION, HYPNOSIS, REFLECT	
+	db 32, FERALIGATR 
+		db AQUA_JET, SWORDS_DANCE, SCARY_FACE, BITE
+	db -1 ; end
 
 ; ================
 ; ================================
@@ -6444,6 +6460,18 @@ KimonoGirl5Group:
 	; party
 	db 27, UMBREON 
 		db CURSE, CONFUSE_RAY, FEINT_ATTACK, HEALINGLIGHT
+	db -1 ; end
+	
+	; KIMONO_GIRL_5
+	db "Tamako@"
+	db TRAINERTYPE_MOVES
+	; party
+	db 25, MONFERNO 
+		db MACH_PUNCH, FLAME_CHARGE, NASTY_PLOT, SWIFT
+	db 27, MAGMAR 
+		db FIRE_PUNCH, SMOKESCREEN, CONFUSE_RAY, DOUBLE_EDGE	
+	db 30, H__ARCANINE 
+		db ROCK_THROW, FIRE_SPIN, ROAR, EXTREMESPEED
 	db -1 ; end
 
 ; ================
