@@ -33,4 +33,4 @@ Bird_keeperTheoSeenText:
 
 Bird_keeperTheoBeatenText:
 	text "Rounding error?"
-	
+	done

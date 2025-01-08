@@ -104,10 +104,6 @@ AnarresDormsKurtScript: ; will this work?....
 	opentext
 	jumpopenedtext AnarresKurtBattleText2
 
-
-
-
-	
 .AnarresKurtPC
 	writetext KurAnarresDormsText2
 	promptbutton

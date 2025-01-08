@@ -1628,7 +1628,7 @@ ClairFinalPkmnText:
 	cont "real fight begins!"
 	prompt
 
-KurtFinalPkmnText:
+KurtFinalPkmnText: ; new 
 	text "Down to this..."
 	line "I won't give up"
 	cont "on you, <PLAYER>!"
@@ -1734,17 +1734,17 @@ Rival1_3FinalPkmnText: ; new
 	cont "this bad spot."
 	prompt
 
-Rival1_4FinalPkmnText:
-	text "Hey, hey!"
-	line "Why so serious?"
+Rival1_4FinalPkmnText: ; new 
+	text "You think you"
+	line "are so clever?"
 	prompt
 
-Rival1_5FinalPkmnText:
-	text "I see. Seems like"
-	line "it wasn't just luck"
-
-	para "that's gotten you"
-	line "this far."
+Rival1_5FinalPkmnText:  ; new 
+	text "I'm not giving"
+	line "up now. I won't"
+	
+	para "lose to someone"
+	line "like you!"
 	prompt
 
 Rival2_1FinalPkmnText:

@@ -7,7 +7,7 @@ MistyBasin_MapScriptHeader: ; should be like  "BurnedTowerB1F_MapScriptHeader"
 
 	def_warp_events
 	warp_event  17, 15, ANARRES_TOWN, 8
-	warp_event  0, 0, MISTY_BASIN_B1F, 1
+	warp_event  13, 9, MISTY_BASIN_B1F, 1
 
 	def_coord_events
 

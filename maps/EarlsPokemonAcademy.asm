@@ -19,7 +19,7 @@ EarlsPokemonAcademy_MapScriptHeader:
 	object_event  6,  8, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerSageTroy, -1
 	object_event  1,  6, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerSageNeal, -1
 	object_event  4,  3, SPRITE_ELDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerElderLi, -1
-	object_event  6,  14, SPRITE_KURT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, AcademyKurtText, EVENT_BEAT_FALKNER
+	object_event  6,  14, SPRITE_KURT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AcademyKurtScript, EVENT_BEAT_FALKNER
 
 	object_const_def
 
@@ -147,6 +147,51 @@ ElderLiBeatenText:
 	para "Show him that true"
 	line "power elevates"
 	cont "all, not just self."
+	done
+
+
+AcademyKurtScript: ; will this work?....
+	faceplayer
+	opentext
+	writetext KurtHearAStoryQuestion
+	yesorno
+	iffalse .AskToBattle
+	writetext AcademyKurtText
+	waitbutton
+.AskToBattle
+	writetext EarlKurtBattleQuestion
+	yesorno
+	iffalse_jumpopenedtext KurtEarlDeclineText
+	winlosstext EarlKurtBattleText, EarlKurtBattleText
+	loadtrainer KURT, 4 
+	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+	startbattle
+	reloadmapafterbattle
+	opentext
+	jumpopenedtext EarlKurtText2
+
+KurtHearAStoryQuestion:
+	text "Would you like"
+	line "to hear a story?"
+	done
+
+EarlKurtBattleQuestion:
+	text "Say, how about a"
+	line "battle with some"
+	cont "#mon I found?"
+	done
+
+KurtEarlDeclineText:
+	text "Some other time."
+	done
+
+EarlKurtBattleText:
+	text "You've learned!"
+	done
+
+EarlKurtText2:
+	text "You'll be a"
+	line "master one day."
 	done
 	
 AcademyKurtText: ; need to ask the player if htey want to hear a story

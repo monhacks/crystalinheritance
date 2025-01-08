@@ -71,12 +71,24 @@ GauldenrodBedText2:
 	line "restored!"
 	done
 
-GauldenrodDormsKurtScript:
+GauldenrodDormsKurtScript: ; will this work?....
 	faceplayer
 	opentext
 	writetext KurtGauldenrodDormsText
+	yesorno
+	iffalse .GauldenrodKurtPC
+	winlosstext GauldenrodKurtBattleText, GauldenrodKurtBattleText
+	loadtrainer KURT, 2 
+	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+	startbattle
+	reloadmapafterbattle
+	opentext
+	jumpopenedtext GauldenrodKurtBattleText2
+
+.GauldenrodKurtPC
+	writetext KurtGauldenrodDormsText2
 	promptbutton
-	special PokemonCenterPC
+	special PokemonCenterPC ; per engine/events/std_scripts.asm this is how it should be done. 
 	endtext
 	end
 
@@ -103,4 +115,19 @@ KurtGauldenrodDormsText:
 	cont "PC, I can. Just"
 	cont "let me know what"
 	cont "you need."
+	done
+
+GauldenrodKurtBattleText:
+	text "You're getting to"
+	line "be so strong!"
+	done
+
+GauldenrodKurtBattleText2:
+	text "Just let me know"
+	line "what you need."
+	done
+
+KurtGauldenrodDormsText2:
+	text "Just let me know"
+	line "what you need."
 	done

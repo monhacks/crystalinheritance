@@ -42,7 +42,18 @@ Route36_MapScriptHeader:
 
 
 Route36KurtScript:
-	jumptextfaceplayer Route36KurtText
+	faceplayer
+	opentext
+	writetext Route36KurtText
+	yesorno
+	iffalse_jumpopenedtext Route36KurtText2
+	winlosstext Route36KurtBattleText, Route36KurtBattleText
+	loadtrainer KURT, 3
+	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+	startbattle
+	reloadmapafterbattle
+	opentext
+	jumpopenedtext Route36KurtText2
 
 Route36MatronScript:
 	faceplayer
@@ -116,7 +127,26 @@ Route36KurtText:
 	cont "the city."
 	para "I bet they can"
 	line "can help."
+	
+	para "Oh, I have some"
+	line "#mon from"
+	cont "around here."
+	
+	para "Want to battle?"
 	done
+
+Route36KurtText2:
+	text "Let's go into"
+	line "Goldenrod to get"
+	cont "a way around."
+	done
+
+Route36KurtBattleText:
+	text "Your #mon"
+	line "are so bonded"
+	cont "to you."
+	done
+
 
 Route36BronzongScript:
 	cry BRONZONG
