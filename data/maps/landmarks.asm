@@ -6,13 +6,13 @@ ENDM
 Landmarks:
 	table_width 4, Landmarks
 	landmark   0,   0, SpecialMapName
+	landmark  76, 140, AzaleaTownName
 	landmark  92,  76, VioletCityName
 	landmark  94,  74, SproutTowerName
 	landmark  84,  92, RuinsOfAlphName
 	landmark  92, 108, Route32Name
 	landmark  92, 140, UnionCaveName
 	landmark  84, 140, Route33Name
-	landmark  76, 140, AzaleaTownName
 	landmark  76, 130, TinderGardenName
 	landmark  84, 132, SlowpokeWellName
 	landmark  60, 140, IlexForestName

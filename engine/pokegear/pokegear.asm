@@ -106,14 +106,14 @@ Pokegear_LoadGFX:
 	ld a, [wMapNumber]
 	ld c, a
 	call GetWorldMapLocation
-	ld hl, FastShipGFX
-	cp CIANWOOD_CITY ; removed 
-	jr z, .load_alt_sprite
-	ld hl, SinjohRuinsArrowGFX
-	cp CIANWOOD_CITY
-	jr z, .load_alt_sprite
-	cp CIANWOOD_CITY
-	jr z, .load_alt_sprite
+;	ld hl, FastShipGFX ; removed these lines 01-08-24 
+;	cp CIANWOOD_CITY ; removed 
+;	jr z, .load_alt_sprite
+;	ld hl, SinjohRuinsArrowGFX
+;	cp CIANWOOD_CITY
+;	jr z, .load_alt_sprite
+;	cp CIANWOOD_CITY
+;	jr z, .load_alt_sprite
 	farcall GetPlayerIcon
 	ldh a, [rSVBK]
 	push af
@@ -627,7 +627,7 @@ CheckSkipFarawayIsland:
 PokegearMap_InitPlayerIcon:
 	push af
 	depixel 0, 0
-	ld b, SPRITE_ANIM_INDEX_RED_WALK
+	ld b, SPRITE_ANIM_INDEX_BLUE_WALK ; maybe this will work? 
 	ld a, [wPlayerGender]
 	bit 0, a
 	jr z, .got_gender
@@ -717,15 +717,15 @@ TownMap_ConvertLineBreakCharacters:
 	ret
 
 TownMap_GetJohtoLandmarkLimits:
-	lb de, LAKE_OF_RAGE, AZALEA_TOWN
+	lb de, LAKE_OF_RAGE, AZALEA_TOWN ; USED TO BE AZALEA TOWN 
 	ret
 
-TownMap_GetKantoLandmarkLimits: ; wil need to update these for the old johto map
-	lb de, BRASS_TOWER, HOLLYS_HOLT
-	ld a, [wStatusFlags]
-	bit 6, a
-	ret z
-	ld e, TINDER_GARDEN ; ANARRES TOWN
+TownMap_GetKantoLandmarkLimits: ; will need to update these for the old johto map
+	lb de, TIMELESS_TAPESTRY, HOLLYS_HOLT ; ??
+;	ld a, [wStatusFlags]
+;	bit 6, a
+;	ret z
+;	ld e, TINDER_GARDEN ; ANARRES TOWN ?? 
 	ret
 
 TownMap_GetOrangeLandmarkLimits:
@@ -1663,8 +1663,8 @@ _TownMap:
 	call DelayFrame
 
 	ld a, [wTownMapPlayerIconLandmark]
-	cp SHAMOUTI_LANDMARK
-	jr nc, .orange
+;	cp SHAMOUTI_LANDMARK
+;	jr nc, .orange
 	cp KANTO_LANDMARK
 	jr nc, .kanto
 	call TownMap_GetJohtoLandmarkLimits
@@ -2092,12 +2092,12 @@ FlyMap:
 ; Note that .NoKanto should be modified in tandem with this branch
 	push af
 ; Start from New Bark Town
-	ld a, FLY_VIOLET
+	ld a, FLY_AZALEA
 	ld [wTownMapPlayerIconLandmark], a
 ; Flypoints begin at New Bark Town...
 	ld [wStartFlypoint], a
 ; ..and end at Silver Cave
-	ld a, FLY_LAKE_OF_RAGE
+	ld a, FLY_LAKE_OF_RAGE  
 	ld [wEndFlypoint], a
 ; Fill out the map
 	call FillJohtoMap
@@ -2110,16 +2110,12 @@ FlyMap:
 
 .KantoFlyMap:
 ; The event that there are no flypoints enabled in a map is not
-
 ; accounted for. As a result, if you attempt to select a flypoint
 ; when there are none enabled, the game will crash. Additionally,
-
 ; the flypoint selection has a default starting point that
 ; can be flown to even if none are enabled
-
 ; To prevent both of these things from happening when the player
 ; enters Kanto, fly access is restricted until Indigo Plateau is
-
 ; visited and its flypoint enabled
 	push af
 	ld c, SPAWN_ANARRES ; TODO SHOULD BE HOLLYS HOLT, USED TO BE INDIGO PLATEAU THEN WAS LAKE OF RAGE
@@ -2131,13 +2127,13 @@ FlyMap:
 ; Flypoints begin at Pallet Town...
 	ld a, FLY_ANARRES;_TOWN  ; ANARRES_TOWN
 	ld [wStartFlypoint], a
+	ld [wTownMapPlayerIconLandmark], a ; DEFAULT FIRST PLACE 
 ; ...and end at Indigo Plateau
-	ld a, FLY_TIMELESS_TAPESTRY
+	ld a, FLY_TIMELESS_TAPESTRY 
 	ld [wEndFlypoint], a
 ; Because Indigo Plateau is the first flypoint the player
-
 ; visits, it's made the default flypoint
-	ld [wTownMapPlayerIconLandmark], a
+
 ; Fill out the map
 	call FillKantoMap
 	call TownMapBubble
@@ -2149,7 +2145,6 @@ FlyMap:
 
 .NoKanto:
 ; If Indigo Plateau hasn't been visited, we use Johto's map instead
-
 ; Start from New Bark Town
 	ld a, FLY_AZALEA
 	ld [wTownMapPlayerIconLandmark], a
@@ -2163,6 +2158,7 @@ FlyMap:
 	call TownMapBubble
 	call TownMapPals
 	call TownMapJohtoFlips
+
 .MapHud:
 	hlbgcoord 0, 0 ; BG Map 0
 	call TownMapBGUpdate
@@ -2486,8 +2482,8 @@ Pokedex_GetArea:
 ;	jr z, .FastShip
 ;	cp SINJOH_RUINS
 ;	jr z, .Sinjoh
-	cp LAKE_OF_RAGE
-	jr z, .Sinjoh
+;	cp LAKE_OF_RAGE
+;	jr z, .Sinjoh
 	farjp GetPlayerIcon
 
 .FastShip:
@@ -2703,7 +2699,7 @@ TownMapPlayerIcon:
 	call Request2bppInWRA6
 ; Animation/palette
 	depixel 0, 0
-	ld b, SPRITE_ANIM_INDEX_RED_WALK ; Male
+	ld b, SPRITE_ANIM_INDEX_BLUE_WALK ; Male
 	ld a, [wPlayerGender]
 	bit 0, a
 	jr z, .got_gender

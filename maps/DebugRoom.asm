@@ -7,7 +7,7 @@ DebugRoom_MapScriptHeader: ; should be like  "BurnedTowerB1F_MapScriptHeader"
 
 	def_warp_events
 	warp_event  9, 0, AZALEA_TOWN, 5
-	warp_event  1, 8, HOLLYS_HOLT, 7 ; SHOULD WARP YOU TO START THE ILEX SCENE 
+	warp_event  1, 8, ANARRES_TOWN, 7 ;
 
 
 	def_coord_events
@@ -134,10 +134,10 @@ endr
 	setflag ENGINE_VOLCANOBADGE
 	setflag ENGINE_EARTHBADGE
 	; fly anywhere
-	setflag ENGINE_FLYPOINT_VIOLET
-	setflag ENGINE_FLYPOINT_UNION_CAVE
 	setflag ENGINE_FLYPOINT_AZALEA
 	setflag ENGINE_FLYPOINT_GOLDENROD
+	setflag ENGINE_FLYPOINT_VIOLET
+	setflag ENGINE_FLYPOINT_UNION_CAVE
 	setflag ENGINE_FLYPOINT_ECRUTEAK
 	setflag ENGINE_FLYPOINT_OLIVINE
 	setflag ENGINE_FLYPOINT_CIANWOOD
@@ -161,6 +161,7 @@ endr
 
 
 Breeder1Script:
+	faceplayer
 	opentext
 	writetext Breeder1QuestionText
 	yesorno
@@ -176,6 +177,7 @@ Breeder1Script:
 	givepoke H__SAMUROTT, NO_FORM, 100, LEFTOVERS
 	givepoke H__DECIDUEYE, NO_FORM, 100, LEFTOVERS
 	givepoke ALAKAZAM, NO_FORM, 100, LEFTOVERS
+	givepoke PIDGEY, NO_FORM, 5, NO_ITEM
 	loadmem wPartyMon2Moves+0, SURF
 	loadmem wPartyMon2Moves+1, CRUNCH
 	loadmem wPartyMon2Moves+2, STRENGTH

@@ -21,7 +21,7 @@ EnterMapSpawnPoint:
 	ld a, [hli]
 	ld [wYCoord], a
 	ld a, [wDefaultSpawnpoint]
-	; don't spawn on top of Archer
+	; don't spawn on top of Archer --- ; ok, so lines here should be ok to keep commented out.... but not sure what's going on exactly 
 ;	cp SPAWN_YELLOW_FOREST
 ;	jr nz, .not_yellow_forest
 ;	eventflagcheck EVENT_CLEARED_YELLOW_FOREST

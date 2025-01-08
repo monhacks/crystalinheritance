@@ -2,13 +2,13 @@
 	const_def
 	const SPECIAL_MAP        ; 00
 ; Johto landmarks. updated 04.01.24
+	const AZALEA_TOWN        ; 07
 	const VIOLET_CITY        ; 01
 	const SPROUT_TOWER       ; 02
 	const RUINS_OF_ALPH      ; 03
 	const ROUTE_32           ; 04
 	const UNION_CAVE         ; 05
 	const ROUTE_33           ; 06
-	const AZALEA_TOWN        ; 07
 	const TINDER_GARDEN		 ; 08
 	const SLOWPOKE_WELL      ; 09
 	const ILEX_FOREST        ; 10

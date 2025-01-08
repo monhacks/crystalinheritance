@@ -7,6 +7,7 @@ KurtsHouse_MapScriptHeader: ; todo add the ability to make apricorns here at the
 	def_warp_events
 	warp_event  3,  7, AZALEA_TOWN, 4
 	warp_event  4,  7, AZALEA_TOWN, 4
+;	warp_event 11,  3, KURTS_HOUSE_B1F
 	
 	def_coord_events
 

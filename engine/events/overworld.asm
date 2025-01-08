@@ -737,7 +737,7 @@ FlyFunction:
 	special UpdateTimePals
 	callasm PrepareOverworldMove
 	scall FieldMovePokepicScript
-	callasm FlyFromAnim
+	callasm FlyFromAnim ; engine/events/field_moves.asm
 	farscall Script_AbortBugContest
 	special WarpToSpawnPoint
 	callasm SkipUpdateMapSprites

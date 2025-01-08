@@ -21,13 +21,13 @@ SpawnPoints:
 	spawn SULFUR_STY,                 47, 24
 	spawn TIMELESS_TAPESTRY,           3,  6
 
-	spawn VIOLET_CITY,                31, 30
-	spawn ROUTE_32,                   11, 74
 	spawn AZALEA_TOWN,                15, 10
-	spawn CIANWOOD_CITY,              23, 44
 	spawn GOLDENROD_CITY,             18, 28
-	spawn OLIVINE_CITY,               13, 18
+	spawn VIOLET_CITY,                31, 30
+	spawn ROUTE_32,                   11, 74 ; UNION CAVE 
 	spawn ECRUTEAK_CITY,              23, 28
+	spawn CIANWOOD_CITY,              23, 44
+	spawn OLIVINE_CITY,               13, 18
 	spawn MAHOGANY_TOWN,              15, 14
 	spawn LAKE_OF_RAGE,               21, 29
 

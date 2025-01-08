@@ -81,36 +81,36 @@ EngineFlags:
 	engine_flag wUnlockedUnowns, 6 ; 7
 	engine_flag wUnlockedUnowns, 7 ; 8
 
-	; fly
-	engine_flag wVisitedSpawns, 0  ; 
+	; fly ; matching constants/engine_flags.asm 
+	engine_flag wVisitedSpawns, 0  ; KURTS HOUSE 
 	engine_flag wVisitedSpawns, 1  ; ANARRES
 	engine_flag wVisitedSpawns, 2  ; GAULDENROD
-	engine_flag wVisitedSpawns, 3  ; STADIUM
-	engine_flag wVisitedSpawns, 4  ; WESTERN CAPITAL
-	engine_flag wVisitedSpawns, 5  ; TRADERS LANDING
-	engine_flag wVisitedSpawns, 6  ; SHELTERED SHORES
-	engine_flag wVisitedSpawns, 7  ; CIANWOOD COVE
-	engine_flag wVisitedSpawns, 8  ; TRANQUIL_TARN
-	engine_flag wVisitedSpawns, 9  ; ERRIE HAMLET
-	engine_flag wVisitedSpawns, 10 ; SULFUR_STY
-	engine_flag wVisitedSpawns, 11 ; TIMELESS_TAPESTRY
-	engine_flag wVisitedSpawns, 12 ; fuchsia
-	engine_flag wVisitedSpawns, 13 ; cinnabar
-	engine_flag wVisitedSpawns, 14 ; indigo plateau
-	engine_flag wVisitedSpawns, 15 ; new bark
-	engine_flag wVisitedSpawns, 16 ; cherrygrove
-	engine_flag wVisitedSpawns, 17 ; violet
-	engine_flag wVisitedSpawns, 18 ; union cave
-	engine_flag wVisitedSpawns, 19 ; azalea
-	engine_flag wVisitedSpawns, 20 ; cianwood
-	engine_flag wVisitedSpawns, 21 ; goldenrod
-	engine_flag wVisitedSpawns, 22 ; olivine
-	engine_flag wVisitedSpawns, 23 ; ecruteak
-	engine_flag wVisitedSpawns, 24 ; mahogany
-	engine_flag wVisitedSpawns, 25 ; yellow forest
-	engine_flag wVisitedSpawns, 26 ; lake of rage
-	engine_flag wVisitedSpawns, 27 ; blackthorn
-	engine_flag wVisitedSpawns, 28 ; silver cave
+	engine_flag wVisitedSpawns, 3  ; WESTERN_CAPITAL
+	engine_flag wVisitedSpawns, 4  ; TRADERS_LANDING
+	engine_flag wVisitedSpawns, 5  ; SHELTERED_SHORES
+	engine_flag wVisitedSpawns, 6  ; CIANWOOD_COVE
+	engine_flag wVisitedSpawns, 7  ; TRANQUIL_TARN
+	engine_flag wVisitedSpawns, 8  ; EERIE_HAMLET
+	engine_flag wVisitedSpawns, 9  ; SULFUR_STY
+	engine_flag wVisitedSpawns, 10 ; TIMELESS_TAPESTRY ; END HISTORIC 
+	engine_flag wVisitedSpawns, 11 ; AZALEA_TOWN 
+	engine_flag wVisitedSpawns, 12 ; GOLDENROD_CITY 
+	engine_flag wVisitedSpawns, 13 ; VIOLET_CITY 
+	engine_flag wVisitedSpawns, 14 ; ROUTE_32 ; UNION_CAVE EAST ENTRACE
+	engine_flag wVisitedSpawns, 15 ; ECRUTEAK_CITY 
+	engine_flag wVisitedSpawns, 16 ; CIANWOOD_CITY 
+	engine_flag wVisitedSpawns, 17 ; OLIVINE_CITY 
+	engine_flag wVisitedSpawns, 18 ; MAHOGANY_TOWN 
+	engine_flag wVisitedSpawns, 19 ; LAKE_OF_RAGE 
+	engine_flag wVisitedSpawns, 20 ; unused1 
+	engine_flag wVisitedSpawns, 21 ; unused2 
+	engine_flag wVisitedSpawns, 22 ; unused3
+	engine_flag wVisitedSpawns, 23 ; unused4
+	engine_flag wVisitedSpawns, 24 ; unused5
+	engine_flag wVisitedSpawns, 25 ; unused6
+	engine_flag wVisitedSpawns, 26 ; unused7
+	engine_flag wVisitedSpawns, 27 ; unused8
+	engine_flag wVisitedSpawns, 28 ; unused9
 
 
 	engine_flag wLuckyNumberShowFlag, 0 ; lucky number show
