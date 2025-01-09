@@ -71,7 +71,7 @@ ReiSpriteGFX::              INCBIN "gfx/sprites/rei.2bpp.lz"
 GiovanniSpriteGFX::            INCBIN "gfx/sprites/giovanni.2bpp.lz"
 CherylSpriteGFX::              INCBIN "gfx/sprites/cheryl.2bpp.lz"
 RileySpriteGFX::               INCBIN "gfx/sprites/riley.2bpp.lz"
-BuckSpriteGFX::                INCBIN "gfx/sprites/buck.2bpp.lz"
+NomadMSpriteGFX::                INCBIN "gfx/sprites/nomad_m.2bpp.lz" ; nomad_m
 MarleySpriteGFX::              INCBIN "gfx/sprites/marley.2bpp.lz"
 MiraSpriteGFX::                INCBIN "gfx/sprites/mira.2bpp.lz"
 
@@ -80,11 +80,11 @@ SECTION "Overworld Sprites 4", ROMX
 
 LannaSpriteGFX::              INCBIN "gfx/sprites/lanna.2bpp.lz"
 FlannerySpriteGFX::            INCBIN "gfx/sprites/flannery.2bpp.lz"
-KannaSpriteGFX::             INCBIN "gfx/sprites/kanna.2bpp.lz"
+KannaSpriteGFX::             INCBIN "gfx/sprites/kanna.2bpp.lz" 
 SkylaSpriteGFX::               INCBIN "gfx/sprites/skyla.2bpp.lz"
 ValerieSpriteGFX::             INCBIN "gfx/sprites/valerie.2bpp.lz"
 KukuiSpriteGFX::               INCBIN "gfx/sprites/kukui.2bpp.lz"
-CaitlinSpriteGFX::             INCBIN "gfx/sprites/caitlin.2bpp.lz"
+NomadFSpriteGFX::             INCBIN "gfx/sprites/nomad_f.2bpp.lz" ; uses kanna 
 DarachSpriteGFX::              INCBIN "gfx/sprites/darach.2bpp.lz"
 StevenSpriteGFX::              INCBIN "gfx/sprites/steven.2bpp.lz"
 CynthiaSpriteGFX::             INCBIN "gfx/sprites/cynthia.2bpp.lz"

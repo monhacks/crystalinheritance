@@ -1074,6 +1074,14 @@ KRIS EQU __trainer_class__
 	trainerclass RILEY ; 7c
 
 	trainerclass NOMAD_M ; 7d ; FORMERLY BUCK 
+	const NOMAD_M_JOEL
+	const NOMAD_M_GLENN
+	const NOMAD_M_DALE
+	const NOMAD_M_JACOB
+	const NOMAD_M_AIDEN
+	const NOMAD_M_DAN
+	const NOMAD_M_TEDDY
+	const NOMAD_M_TYRONE 
 
 	trainerclass MARLEY ; 7e
 
@@ -1084,6 +1092,15 @@ KRIS EQU __trainer_class__
 	trainerclass DARACH ; 81
 
 	trainerclass NOMAD_F ; 82 ; FORMERLY CAITLIN 
+	const NOMAD_F_REINA
+	const NOMAD_F_ALINA
+	const NOMAD_F_MARLENE
+	const NOMAD_F_RIN
+	const NOMAD_F_COLETTE
+	const NOMAD_F_HILLARY
+	const NOMAD_F_SHIRLEY
+	const NOMAD_F_KATHRYN
+	const NOMAD_F_CLARICE
 
 	trainerclass BOBESH ; 83 CANDELA
 	const BOBESH1

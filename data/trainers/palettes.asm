@@ -129,12 +129,12 @@ CynthiaPalette:          INCLUDE "gfx/trainers/cynthia.pal"
 AmosPalette:             INCLUDE "gfx/trainers/amos.pal" ; plum?
 CherylPalette:           INCLUDE "gfx/trainers/cheryl.pal"
 RileyPalette:            INCLUDE "gfx/trainers/riley.pal"
-BuckPalette:             INCLUDE "gfx/trainers/buck.pal"
+NomadMPalette:             INCLUDE "gfx/trainers/nomad_m.pal"
 MarleyPalette:           INCLUDE "gfx/trainers/marley.pal"
 MiraPalette:             INCLUDE "gfx/trainers/mira.pal"
 LannaPalette:            INCLUDE "gfx/trainers/lanna.pal" ; yellow light
 DarachPalette:           INCLUDE "gfx/trainers/darach.pal"
-CaitlinPalette:          INCLUDE "gfx/trainers/caitlin.pal"
+NomadFPalette:          INCLUDE "gfx/trainers/nomad_f.pal"
 BobeshPalette:           INCLUDE "gfx/trainers/bobesh.pal" ; red
 AdrinnaPalette:          INCLUDE "gfx/trainers/adrinna.pal" ; yellow, dark
 BarbeauPalette:          INCLUDE "gfx/trainers/barbeau.pal" ; blue

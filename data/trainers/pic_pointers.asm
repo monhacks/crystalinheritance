@@ -125,12 +125,12 @@ TrainerPicPointers::
 	dba AmosPic
 	dba CherylPic
 	dba RileyPic
-	dba BuckPic
+	dba NomadMPic
 	dba MarleyPic
 	dba MiraPic
 	dba LannaPic
 	dba DarachPic
-	dba CaitlinPic
+	dba NomadFPic
 	dba BobeshPic
 	dba AdrinnaPic
 	dba BarbeauPic

@@ -127,12 +127,12 @@ TrainerGroups:
 	dba AmosGroup
 	dba CherylGroup
 	dba RileyGroup
-	dba BuckGroup
+	dba NomadMGroup
 	dba MarleyGroup
 	dba MiraGroup
 	dba LannaGroup
 	dba DarachGroup
-	dba CaitlinGroup
+	dba NomadFGroup
 	dba BobeshGroup
 	dba AdrinnaGroup
 	dba BarbeauGroup

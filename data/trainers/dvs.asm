@@ -127,12 +127,12 @@ TrainerClassDVsAndPersonality:
 	db  48, PERFECT_DVS,   ABILITY_1 | QUIRKY, MALE   ; inver/AMOS
 	db  30, $EE, $EE, $EE, ABILITY_1 | QUIRKY, FEMALE ; cheryl
 	db  30, $EE, $EE, $EE, ABILITY_1 | QUIRKY, MALE   ; riley
-	db  30, $EE, $EE, $EE, ABILITY_1 | QUIRKY, MALE   ; buck
+	db  16, $DD, $DD, $DD, ABILITY_1 | QUIRKY, MALE   ; buck---NOMAD_M
 	db  30, $EE, $EE, $EE, ABILITY_1 | QUIRKY, FEMALE ; marley
 	db  30, $EE, $EE, $EE, ABILITY_1 | QUIRKY, FEMALE ; mira
 	db  30, $EE, $EE, $EE, ABILITY_1 | QUIRKY, FEMALE ; anabel-LANNA
 	db  48, PERFECT_DVS,   ABILITY_1 | QUIRKY, MALE   ; darach
-	db  48, PERFECT_DVS,   ABILITY_1 | QUIRKY, FEMALE ; caitlin
+	db  16, $DD, $DD, $DD, ABILITY_1 | QUIRKY, FEMALE ; caitlin--NOMAD_F
 	db  48, PERFECT_DVS,   ABILITY_1 | LONELY, FEMALE ; candela/BOBESH
 	db  48, PERFECT_DVS,   ABILITY_1 | QUIRKY, FEMALE ; blanche/ADRINNA
 	db  48, PERFECT_DVS,   ABILITY_1 | QUIRKY, MALE   ; spark/BOBESH

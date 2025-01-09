@@ -62,7 +62,7 @@
 	const SPRITE_GIOVANNI ; 3a
 	const SPRITE_CHERYL ; 3b
 	const SPRITE_RILEY ; 3c
-	const SPRITE_BUCK ; 3d
+	const SPRITE_NOMAD_M ; 3d
 	const SPRITE_MARLEY ; 3e
 	const SPRITE_MIRA ; 3f
 	const SPRITE_LANNA ; 40
@@ -71,7 +71,7 @@
 	const SPRITE_SKYLA ; 43
 	const SPRITE_VALERIE ; 44
 	const SPRITE_KUKUI ; 45
-	const SPRITE_CAITLIN ; 46
+	const SPRITE_NOMAD_F ; 46
 	const SPRITE_DARACH ; 47
 	const SPRITE_STEVEN ; 48
 	const SPRITE_CYNTHIA ; 49
