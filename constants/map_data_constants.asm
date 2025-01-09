@@ -105,10 +105,10 @@ SPAWN_N_A EQU -1
 	const_def
 ; johto
 JOHTO_FLYPOINT EQU const_value
-	const FLY_VIOLET
-	const FLY_UNION_CAVE
 	const FLY_AZALEA
 	const FLY_GOLDENROD
+	const FLY_VIOLET
+	const FLY_UNION_CAVE
 	const FLY_ECRUTEAK
 	const FLY_OLIVINE
 	const FLY_CIANWOOD
