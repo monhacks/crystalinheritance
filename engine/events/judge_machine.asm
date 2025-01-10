@@ -9,12 +9,12 @@ JUDGE_BORDER_TILE     EQU $13
 JUDGE_BLANK_TILE      EQU $64
 JUDGE_WHITE_TILE      EQU $6d
 
-JudgeMachine:
-; Check that the machine is activated
-	ld hl, wStatusFlags3
-	bit 0, [hl] ; ENGINE_JUDGE_MACHINE
-	ld hl, NewsMachineOffText
-	jr z, .done
+JudgeMachine: ; commenting out lines 14 to 17 to see if that makes it work. 
+;; Check that the machine is activated
+;	ld hl, wStatusFlags3
+;	bit 0, [hl] ; ENGINE_JUDGE_MACHINE
+;	ld hl, NewsMachineOffText
+;	jr z, .done
 ; Introduce machine
 	ld hl, NewsMachineIntroText
 .continue

@@ -16,16 +16,15 @@ AnarresHoltGate_MapScriptHeader: ; todo add a wram flag ?
 	def_bg_events
 
 	def_object_events
-	object_event 3, 3, SPRITE_TAMMY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AnarresHoltGateTammyScript, EVENT_ANARRES_HOLT_GATE
-	object_event 4, 3, SPRITE_HOLLIS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AnarresHoltGateHollisScript, EVENT_ANARRES_HOLT_GATE
-	object_event 3, 6, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_STANDING_LEFT, 1, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AnarresHoltGateNPCScript, -1
+	object_event 3, 2, SPRITE_TAMMY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AnarresHoltGateTammyScript, EVENT_ANARRES_HOLT_GATE
+	object_event 4, 2, SPRITE_HOLLIS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AnarresHoltGateHollisScript, EVENT_ANARRES_HOLT_GATE
+	object_event 3, 7, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_STANDING_LEFT, 1, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AnarresHoltGateNPCScript, -1
 
 	object_const_def
 	const ANARRESHOLTGATE_TAMMY
 	const ANARRESHOLTGATE_HOLLIS
 
 AnarresHoltGateHollisScene:
-	pause 15
 	opentext
 	writetext TammyDialogue1
 	waitbutton
@@ -41,16 +40,15 @@ AnarresHoltGateHollisScene:
 	writetext HollisDialogue2
 	waitbutton
 	closetext
-	pause 10 
 	
 	applymovement ANARRESHOLTGATE_HOLLIS, HollisExitMovement
 	disappear ANARRESHOLTGATE_HOLLIS
-	pause 15
 
 	opentext
 	writetext TammyDialogue3
 	waitbutton
 	closetext
+
 	applymovement ANARRESHOLTGATE_TAMMY, TammyExitMovement
 	disappear ANARRESHOLTGATE_TAMMY
 	setevent EVENT_ANARRES_HOLT_GATE

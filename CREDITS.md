@@ -1,13 +1,75 @@
 # Credits
 
-Pokémon Polished Crystal would never have been finished without the help of many more people than just me. Please let me know if I've failed to credit anyone or if you don't want your work being used.
+The vision for Crystal Inheritance was a game that took place in Johto with modern mechanics. The most natural base for this was Polished Crystal. This game would not be possible without the developers of Polished Crystal. Credits for Polished Crystal are located at the end of this document. 
 
-> **Morimoto:** Actually, at that time we had very few programmers. That wasn't just the case for Gold and Silver but for Red and Green as well. There were only about four programmers.
->
-> **Iwata:** That's really a tiny number. Making a game on that scale with so few programmers would be unthinkable these days.
->
-> — "[Iwata Asks – Pokémon HeartGold Version & SoulSilver Version](https://www.nintendo.co.uk/Iwata-Asks/Iwata-Asks-Pokemon-HeartGold-Version-SoulSilver-Version/Iwata-Asks-Pokemon-HeartGold-Version-SoulSilver-Version/3-Just-Being-President-Was-A-Waste-/3-Just-Being-President-Was-A-Waste--225951.html)"
+## Crystal Inheritance Credits
 
+## Pokemon Front and Back sprites
+
+Many sprites were adapted to the Gen 2 format. Credits are for the original source. If you believe your work was used and is not credited, please let me know by reddit DM: u/dwg6m9
+
+Front Sprites
+
+* Azure Keys: Dewott, Samurott, Spiritomb
+* E-SY (From PiaCRT Deviantart): Monferno, Infernape, Prinplup, Roserade, Hippowdon, Heatran, Grotle, Empoleon, Bronzor, Bronzong, Skuntank, Staraptor
+* Fokkos92: Ursaluna
+* Hellfire0raptor: Sneasler
+* Rowlet: Matdemo
+* H__Braviary: Pokets3
+* Nuukie: Wyrdeer, Roselia, Drifblim, Lopunny, Toxicroak, Snover, Abomasnow, Froslass, Kirlia, Gardevoir, Gallade
+* Pokewilds: Kleavor, Torterra, Staravia, Luxio, Luxray, Rampardos, Bastiodon, Ambipom, Gabite, Garchomp, Lucario, Drapion, Dusclops, Dusknoir, Rotom, Vespiquen, Dartrix, Decidueye, Oshawott
+* DWG: H__Electrode, H__Avalugg
+* Sour Crystal: Quilava, Butterfree, Pidgeotto, Sunflora, Dragonite, Celebi, Xatu
+* utytft: H__Typlosion, H__Decidueye, H__Samurott, H__Arcanine, Overqwil, Basculegion, H__Sliggoo, H__Goodra, H__Zoroark
+
+
+Back Sprites if different from above: 
+
+* LennyOliviera: H__Arcanine (adapted by dwg)
+* Azure Keys: Dewott, Lucario
+* PKMNTrainerRick: Ursaluna, Sneasler, H__Braviary, H__Typlosion, H__Zoroark, H__Goodra, Overqwil, H__Samurott, H__Sliggoo
+* RiseOfReina: Basculegion
+* DWG: Skuntank
+* Sirwhibbles: Rowlet
+* Theymadememakethisac: H__Decidueye
+* utytft: Decidueye
+
+
+## Pokemon Menu icons
+
+* Azure Keys: Dewott, Samurott, Drapion, Lucario, Roserade, Roselia, Drifblim, Toxicroak, Froslass, Gardevoir, Gallade, Oshawott
+* DWG: H__Arcanine, Hippowdon, Heatran, Grotle, Sneasler, Overqwil, Basculegion, H__Avalugg, Skuntank
+* Pokewilds: wyrdeer, hgoodra, hzoroark, hsliggoo, spiritomb, jumpluff, monferno, infernape, prinplup, bastiodon, gabite, garchomp, rotom, dusclops, dusknoir, rampardos, ambipom, empoleon, lopunny, snover, abomasnow, hbraviary, htyphlosion, hsamurott, kleavor, luxio, luxray, helectrode, rowlet, hdecidueye, skiploom, stantler, staraptor, torterra, staravia, ursaluna, vespiquen
+
+## Trainer Sprites
+
+* Mejimi: Pokets3
+* Brigader sprite adapted from beta Falkner sprite 
+* Bronzeswagger for Samsara sprite 
+* Justinnuggets for scavenger (diver) trainer sprite 
+* Justin8964 for the Phoebe sprite (nomad female) and Hollis
+
+## Box Art
+
+* Assets adapted from Pokemon Trading Card Game art. 
+
+
+## Miscellaneous
+
+* Pret Pokecrystal discord
+* Ferropexola ("Johto Legends") 
+* r/PokemonROMhacks
+* Feedback at Crystal Inheritance Discord
+
+
+## Tools used
+
+* Piskel
+* MS Paint
+* GIMP 
+
+
+## Polished Crystal 3.0.0 Credits
 
 ## Code
 
@@ -75,7 +137,6 @@ Pokémon Polished Crystal would never have been finished without the help of man
 * Mmmmmm, bloodless, and Kuroko Aizawa for help with Valerie's sprite.
 * Kuroko Aizawa, bloodless, and metalflygon08 for help with Pikachu's sprites.
 * jpmac26 for editing the Pokémon Center signs and fixing a typo.
-
 
 ## Content
 

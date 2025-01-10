@@ -1,7 +1,7 @@
 	db  75, 123,  67,  95,  95,  85 ; 540 BST
 	;   hp  atk  def  spd  sat  sdf
 
-	db ELECTRIC, ELECTRIC ; type
+	db ELECTRIC, FIGHTING ; type
 	db 30 ; catch rate
 	db 199 ; base exp
 	db PERSIM_BERRY ; item 1
