@@ -828,11 +828,11 @@ _CGB_TrainerCard3: ; todo figure
 	call GetTrainerPalettePointer
 	call LoadPalette_White_Col1_Col2_Black
 
-	ld a, SAMSARA ; BLAINE
+	ld a, SANDRA ; BLAINE
 	call GetTrainerPalettePointer
 	call LoadPalette_White_Col1_Col2_Black
 
-	ld a, REI ; LT_SURGE
+	ld a, SAMSARA ; LT_SURGE
 	call GetTrainerPalettePointer
 	call LoadPalette_White_Col1_Col2_Black
 
@@ -854,46 +854,46 @@ _CGB_TrainerCard3: ; todo figure
 	ld c, 8 palettes
 	call LoadCPaletteBytesFromHLIntoDE
 
-	; HOLLIS
+	; HOLLIS -- GOOD 
 	hlcoord 3, 10, wAttrMap
 	lb bc, 3, 3
 	ld a, $2 ; 
 	call FillBoxWithByte
 
-	; SAMSARA
+	; SANDRA --- GOOD 
 	hlcoord 7, 10, wAttrMap
 	lb bc, 3, 3
 	ld a, $3
 	call FillBoxWithByte
 
-	; Misty / REI
+	; Misty / SAMSARA  -- TODO: UPDATE FACE 
 	hlcoord 11, 10, wAttrMap
 	lb bc, 3, 3
 	ld a, $4
 	call FillBoxWithByte
 
-	; Erika / BARBEAU
+	; Erika / this one is empty 
 	hlcoord 15, 10, wAttrMap
 	lb bc, 3, 3
 	ld a, $5
 	call FillBoxWithByte
 
-	; Janine / KANNA
+	; Janine / barbeau 
 	hlcoord 3, 13, wAttrMap
+	lb bc, 3, 3
+	ld a, $5
+	call FillBoxWithByte
+
+	; Brock / kanna 
+	hlcoord 7, 13, wAttrMap
 	lb bc, 3, 3
 	ld a, $6
 	call FillBoxWithByte
 
-	; Brock / AMOS
-	hlcoord 7, 13, wAttrMap
-	lb bc, 3, 3
-	ld a, $7
-	call FillBoxWithByte
-
-	; Blaine / NA
+	; Blaine / amos 
 	hlcoord 11, 13, wAttrMap
 	lb bc, 3, 3
-	ld a, $3
+	ld a, $7
 	call FillBoxWithByte
 
 	; Blue / NA

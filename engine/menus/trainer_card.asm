@@ -637,15 +637,15 @@ TrainerCard_JohtoBadgesOAM:
 
 	; Glacier Badge
 	db $80, $58, 6, 6, 6, 6
-	db $18, $18, $18, $18
-	db $18, $18, $18, $18
+	db $18, $20, $24, $20
+	db $18, $20, $24, $20
 
 	; Rising Badge
 	db $80, $78, 7, 7, 7, 7
-	db $1c, $1c, $1c, $1c
-	db $1c, $1c, $1c, $1c
+	db $1c, $20, $24, $20
+	db $1c, $20, $24, $20
 
-TrainerCard_KantoBadgesOAM: ; 072024 the badges aren't going to the right trainer, and trainers don't have the right palettes. 
+TrainerCard_KantoBadgesOAM: ; 
 ; Template OAM data for each badge on the trainer card.
 ; Format:
 	; y, x, palette1, palette2, palette3, palette4
@@ -654,45 +654,45 @@ TrainerCard_KantoBadgesOAM: ; 072024 the badges aren't going to the right traine
 
 	dw wKantoBadges ; the badges are in the right spots but not at the right trainer. 
 
-	; Boulder Badge
+	; Boulder Badge -- hollis -- looks good
 	db $68, $18, 0, 0, 0, 0
 	db $00, $20, $24, $20 | $80
 	db $00, $20, $24, $20 | $80
 
-	; Cascade Badge
+	; Cascade Badge -- sandra -- looks good 
 	db $68, $38, 1, 1, 1, 1
 	db $04, $20, $24, $20 | $80
 	db $04, $20, $24, $20 | $80
 
-	; Thunder Badge
+	; Thunder Badge -- samsara -- looks good 
 	db $68, $58, 2, 2, 2, 2
 	db $08, $20, $24, $20 | $80
 	db $08, $20, $24, $20 | $80
 
-	; Rainbow Badge
-	db $68, $78, 3, 3, 3, 3
+	; Rainbow Badge -- barbeau -- face not right color 
+	db $80, $18, 3, 3, 3, 3
 	db $0c, $20, $24, $20 | $80
 	db $0c, $20, $24, $20 | $80
 
-	; Soul Badge
-	db $80, $18, 4, 4, 4, 4
+	; Soul Badge -- kanna -- 
+	db $80, $38, 4, 4, 4, 4
 	db $10, $20, $24, $20 | $80
 	db $10, $20, $24, $20 | $80
 
-	; Marsh Badge
-	db $80, $38, 5, 5, 5, 5
+	; Marsh Badge -- amos 
+	db $80, $58, 5, 5, 5, 5
 	db $14, $20, $24, $20 | $80
 	db $14, $20, $24, $20 | $80
 
 	; Volcano Badge - unused
 	db $80, $58, 6, 6, 6, 6
-	db $18, $20, $24, $20 | $80
-	db $18, $20, $24, $20 | $80
+	db $18, $18, $18, $18 | $18
+	db $18, $18, $18, $18 | $18
 
 	; Earth Badge - unused
 	db $80, $78, 7, 7, 7, 7
-	db $1c, $20, $24, $20 | $80
-	db $1c | $80, $20, $24, $20 | $80
+	db $18, $18, $18, $18 | $18
+	db $18 | $18, $18, $18, $18 | $18
 
 CardBorderGFX:  INCBIN "gfx/trainer_card/border.2bpp.lz"
 CardDividerGFX: INCBIN "gfx/trainer_card/divider.2bpp"
