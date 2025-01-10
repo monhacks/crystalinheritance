@@ -14,6 +14,7 @@ WesternCapital_MapScriptHeader:
 	warp_event 0, 0, WESTERN_CAPITAL_STOCKROOM, 1	
 	warp_event 0, 0, WESTERN_CAPITAL_CEMETERY, 3
 	warp_event 0, 0, WESTERN_CAPITAL_CEMETERY, 4
+	warp_event 0, 0, TIN_TOWER_OLD_1, 1
 
 	def_coord_events
 
