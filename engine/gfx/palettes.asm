@@ -1390,10 +1390,10 @@ if !DEF(MONOCHROME)
 	RGB 31, 14, 18
 	RGB 24, 10, 24
 	RGB 00, 00, 00
-; Thunder Badge - phoenix rising
+; Thunder Badge - sun and moon 
 	RGB 31, 31, 31
-	RGB 31, 18, 14
 	RGB 31, 08, 02
+	RGB 15, 15, 15
 	RGB 00, 00, 00
 ; Rainbow Badge - crashing wave
 	RGB 31, 31, 31

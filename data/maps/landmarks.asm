@@ -64,7 +64,7 @@ Landmarks:
 	landmark  36, 108, SeaFluxNexusName ; ok
 	landmark  44,  100, ArduousAnchorageName ; 44, ?
 	landmark  44,  88, LandingDocksName
-	landmark 140,  52, TranquilTarnName ; ok
+	landmark 140,  56, TranquilTarnName ; ok
 	landmark 144,  44, GrottoedGlacierName ; ok
 	landmark 136,  44, EnigmaGlacierName ; ok
 	landmark 140,  44, SinjohCampName ; good
