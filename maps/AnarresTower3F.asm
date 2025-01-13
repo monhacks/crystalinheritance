@@ -279,9 +279,16 @@ HollisCongratulates:
 	para "You've proven"
 	line "yourself worthy."
 
+	para "I grant you the"
+	line "Growth badge."
+	
+	para "It symbolizes how"
+	line "a tree grows, one"
+	cont "ring over another"
+	para "towards the sky."
+
 	para "Please, accept"
-	line "this as a token"
-	cont "of my respect."
+	line "this HM."
 	done
 
 AnarresTowerTammyScript:

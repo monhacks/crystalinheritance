@@ -1,8 +1,8 @@
-UnionCaveB2F_MapScriptHeader:
+UnionCaveB2F_MapScriptHeader: ; todo: text 
 	def_scene_scripts
 
 	def_callbacks
-	callback MAPCALLBACK_OBJECTS, UnionCaveB2FLapras
+
 
 	def_warp_events
 	warp_event  5,  3, UNION_CAVE_B1F_SOUTH, 2
@@ -10,40 +10,47 @@ UnionCaveB2F_MapScriptHeader:
 	def_coord_events
 
 	def_bg_events
-	bg_event  4, 11, BGEVENT_ITEM + CALCIUM, EVENT_UNION_CAVE_B2F_HIDDEN_CALCIUM
-	bg_event  2, 25, BGEVENT_ITEM + ULTRA_BALL, EVENT_UNION_CAVE_B2F_HIDDEN_ULTRA_BALL
+	bg_event  12, 16, BGEVENT_ITEM + CALCIUM, EVENT_UNION_CAVE_B2F_HIDDEN_CALCIUM
+	bg_event  8, 28, BGEVENT_ITEM + ELIXIR, EVENT_UNION_CAVE_B2F_HIDDEN_ULTRA_BALL
 
 	def_object_events
-	object_event 11, 31, SPRITE_LAPRAS, SPRITEMOVEDATA_SWIM_AROUND, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, UnionCaveLapras, EVENT_UNION_CAVE_B2F_LAPRAS
-	object_event 15, 19, SPRITE_ACE_TRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerCooltrainermNick, -1
-	object_event  5, 13, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerCooltrainerfGwen, -1
-	object_event  3, 30, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerCooltrainerfEmma, -1
-	itemball_event 16,  2, ELIXIR, 1, EVENT_UNION_CAVE_B2F_ELIXIR
-	itemball_event 12, 19, HYPER_POTION, 1, EVENT_UNION_CAVE_B2F_HYPER_POTION
+	object_event  16, 29, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, BASTIODON, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, UnionCaveBastiodon, EVENT_UNION_CAVE_B2F_FOSSIL
+	object_event  17, 29, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, RAMPARDOS, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, UnionCaveRampardos, EVENT_UNION_CAVE_B2F_FOSSIL	
+
+;TODO change these to other trainers
+	object_event  5,  8, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 5, GenericTrainerScientistLinden, EVENT_BEAT_RUIN_MANIAC_GLYNN ; 'LOWELL ' REMATCH 
+	object_event  7,  6, SPRITE_FIREBREATHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerFirebreatherJay, EVENT_BEAT_RUIN_MANIAC_GLYNN ; 'ray rematch
+	object_event 12, 12, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerScientistOskar,EVENT_BEAT_RUIN_MANIAC_GLYNN	; PLACE 
+	object_event  4, 22, SPRITE_HIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerHikerTimothy, EVENT_BEAT_RUIN_MANIAC_GLYNN ; PLACE 
+	object_event 4, 30, SPRITE_FIREBREATHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerFirebreatherOleg, EVENT_BEAT_RUIN_MANIAC_GLYNN ; PLACE 
+	object_event 15, 29, SPRITE_HIKER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerRuin_maniacGlynn, EVENT_BEAT_RUIN_MANIAC_GLYNN; 'PETRY'
+
+	itemball_event 15, 25, GEODE, 5, EVENT_UNION_CAVE_B2F_ELIXIR ; 
+	itemball_event 14, 19, HYPER_POTION, 1, EVENT_UNION_CAVE_B2F_HYPER_POTION ; OK 
 
 	object_const_def
-	const UNIONCAVEB2F_LAPRAS
+	const UNIONCAVEB2F_BASTIODON
+	const UNIONCAVEB2F_RAMPARDOS
 
-UnionCaveB2FLapras:
-	checkflag ENGINE_UNION_CAVE_LAPRAS
-	iftrue .NoAppear
-	readvar VAR_WEEKDAY
-	ifequal FRIDAY, .Appear
-.NoAppear:
-	disappear UNIONCAVEB2F_LAPRAS
-	endcallback
-
-.Appear:
-	appear UNIONCAVEB2F_LAPRAS
-	endcallback
-
-UnionCaveLapras:
+UnionCaveBastiodon:
 	faceplayer
-	cry LAPRAS
-	loadwildmon LAPRAS, 25
+	cry BASTIODON
+	loadwildmon BASTIODON, 30
 	startbattle
-	disappear UNIONCAVEB2F_LAPRAS
-	setflag ENGINE_UNION_CAVE_LAPRAS
+	disappear UNIONCAVEB2F_BASTIODON
+	disappear UNIONCAVEB2F_RAMPARDOS
+	setevent EVENT_UNION_CAVE_B2F_FOSSIL
+	reloadmapafterbattle
+	end
+	
+UnionCaveRampardos:
+	faceplayer
+	cry RAMPARDOS
+	loadwildmon RAMPARDOS, 30
+	startbattle
+	disappear UNIONCAVEB2F_BASTIODON
+	disappear UNIONCAVEB2F_RAMPARDOS
+	setevent EVENT_UNION_CAVE_B2F_FOSSIL
 	reloadmapafterbattle
 	end
 

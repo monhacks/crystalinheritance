@@ -684,7 +684,7 @@ BattleCommand_checkobedience:
 	cp [hl]
 	ret z
 
-.obeylevel
+.obeylevel ; changed this 
 	; The maximum obedience level is constrained by owned badges:
 	ld hl, wJohtoBadges
 
@@ -695,26 +695,26 @@ BattleCommand_checkobedience:
 
 	; mineralbadge
 	bit MINERALBADGE, [hl]
-	ld a, 70
+	ld a, 100
 	jr nz, .getlevel
 
 	; fogbadge
 	bit FOGBADGE, [hl]
-	ld a, 50
+	ld a, 100
 	jr nz, .getlevel
 
 	; hivebadge
 	bit HIVEBADGE, [hl]
-	ld a, 30
+	ld a, 100
 	jr nz, .getlevel
 
 	; zephyrbadge
 	bit ZEPHYRBADGE, [hl]
-	ld a, 20
+	ld a, 100
 	jr nz, .getlevel
 
 	; no badges
-	ld a, 10
+	ld a, 100
 
 .getlevel
 ; c = obedience level

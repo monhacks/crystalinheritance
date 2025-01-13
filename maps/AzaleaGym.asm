@@ -76,17 +76,7 @@ AzaleaGymBugsyScript:
 	waitsfx
 	setflag ENGINE_HIVEBADGE
 	writethistext
-		text "Do you know the"
-		line "benefits of the"
-		cont "Hive Badge?"
-
-		para "If you have it,"
-		line "#mon up to <LV>30"
-
-		para "will obey you,"
-		line "even traded ones."
-
-		para "Here, I also want"
+		text "Here, I also want"
 		line "you to have this."
 		done
 	promptbutton

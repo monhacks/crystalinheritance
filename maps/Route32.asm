@@ -396,4 +396,11 @@ Route32AmenitiesText:
 	
 	para "making lunch for"
 	line "Silph workers!"
+	
+	para "They are getting"
+	line "so far into the"
+	cont "cave. I hear"
+	
+	para "that they will"
+	line "be on B2F soon."
 	done

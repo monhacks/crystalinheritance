@@ -3474,7 +3474,7 @@ HikerGroup:
 ; ================
 
 	; HIKER
-	db "Leonard@"
+	db "Leonard@" ; union cave 
 	db TRAINERTYPE_NORMAL
 	; party
 	db 7, RHYHORN
@@ -3505,7 +3505,7 @@ HikerGroup:
 
 ; ================
 
-	; HIKER
+	; HIKER ; kajo route 
 	db "Michael@"
 	db TRAINERTYPE_NORMAL
 	; party
@@ -3516,12 +3516,12 @@ HikerGroup:
 
 ; ================
 
-	; HIKER
-	db "Timothy@"
+	; HIKER ; timothy UNION CAVE B2F
+	db "Leonard@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 36, DUGTRIO
-	db 37, DUGTRIO
+	db 37, RHYHORN
+	db 40, DUGTRIO
 	db -1 ; end
 
 ; ================
@@ -5465,7 +5465,7 @@ RuinManiacGroup:
 
 ; ================
 
-	; RUIN_MANIAC
+	; RUIN_MANIAC ; UNION CAVE B1F NORTH 
 	db "Petry@"
 	db TRAINERTYPE_MOVES
 	; party
@@ -5477,12 +5477,14 @@ RuinManiacGroup:
 
 ; ================
 
-	; RUIN_MANIAC
-	db "Glyn@"
-	db TRAINERTYPE_NORMAL
+	; RUIN_MANIAC ; GLYNN  B2F UNION CAVE 
+	db "Petry@"
+	db TRAINERTYPE_ITEM | TRAINERTYPE_EVS | TRAINERTYPE_MOVES
 	; party
-	db 25, DUGTRIO
-	db 25, DUGTRIO
+	db 40, BASTIODON, LEFTOVERS, 40
+		db REST, MIRROR_COAT, IRON_HEAD, ROCK_SLIDE
+	db 40, RAMPARDOS, LIFE_ORB, 40
+		db ROCK_SLIDE, FIRE_PUNCH, ZEN_HEADBUTT, EARTHQUAKE
 	db -1 ; end
 
 ; ================
@@ -5588,20 +5590,23 @@ FirebreatherGroup:
 
 ; ================
 
-	; FIREBREATHER
-	db "Jay@"
+	; FIREBREATHER ; UNION CAVE B2F JAY 
+	db "Ray@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 26, MAGMAR
+	db 30, ARCANINE
+	db 36, TYPHLOSION
+	db 34, MUK
 	db -1 ; end
 
 ; ================
 
-	; FIREBREATHER
-	db "Oleg@"
+	; FIREBREATHER ; oleg  ;  B2F UNION CAVE 
+	db "Otis@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 26, WEEZING
+	db 40, RAPIDASH
+	db 36, MAGMORTAR
 	db -1 ; end
 
 ; ================
@@ -8067,7 +8072,7 @@ ScientistGroup:
 ; ================================
 ; ================
 
-	; SCIENTIST
+	; SCIENTIST ;union cave
 	db "Lowell@"
 	db TRAINERTYPE_NORMAL
 	; party
@@ -8078,7 +8083,7 @@ ScientistGroup:
 
 ; ================
 
-	; SCIENTIST
+	; SCIENTIST;union cave
 	db "Dennett@"
 	db TRAINERTYPE_NORMAL
 	; party
@@ -8089,22 +8094,24 @@ ScientistGroup:
 
 ; ================
 
-	; SCIENTIST
-	db "Linden@"
+	; SCIENTIST ; union cave b2f
+	db "Lowell@" ; LINDEN 
 	db TRAINERTYPE_NORMAL
 	; party
-	db 60, MAGMAR
+	db 34, MUK
+	db 35, VICTREEBEL
+	db 35, VILEPLUME	
 	db -1 ; end
 
 ; ================
 
-	; SCIENTIST
-	db "Oskar@"
+	; SCIENTIST ; oskar  union cave b2f 
+	db "Dennett@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 64, PORYGON2
-	db 62, NINETALES
-	db 60, MAGNEZONE
+	db 33, MAGNETRON
+	db 34, ELECTRODE
+	db 36, LANTURN	
 	db -1 ; end
 
 ; ================

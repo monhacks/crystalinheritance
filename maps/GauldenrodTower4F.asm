@@ -143,11 +143,17 @@ SandraWinText:
 SandraAfterText:
 	text "Take this."
 	
-	para "With my blessing"
+	para "It's the Sonder"
+	line "badge. It should"
+	cont "remind you that"
+	para "everyone deserves"
+	line "dignity."
+	
+	para "With its blessing"
 	line "you can use the"
 	cont "HM Strength."
 	
-	para "Also, please"
+	para "Lastly, please"
 	line "accept this Rain-"
 	cont "bow wing."
 	
