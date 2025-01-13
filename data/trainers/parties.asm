@@ -789,20 +789,18 @@ SamsaraGroup:
 
 	; Samsara
 	db "Samsara@"
-	db TRAINERTYPE_ITEM | TRAINERTYPE_EVS | TRAINERTYPE_MOVES
+	db TRAINERTYPE_ITEM | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
 	; party
-	db 61, CROCONAW, NO_ITEM, 176
-		db WATER_PULSE, DISABLE, CALM_MIND, PSYCHIC_M
-	db 60, QUAGSIRE, NO_ITEM, 176
-		db SCALD, CALM_MIND, EARTHQUAKE, RAIN_DANCE
-	db 62, LAPRAS, NO_ITEM, 176
-		db SURF, PERISH_SONG, BLIZZARD, RAIN_DANCE
-	db 60, FERALIGATR, NO_ITEM, 176
-		db DEFENSE_CURL, STOMP, PROTECT, CRABHAMMER
-	db 62, LANTURN, NO_ITEM, 176
-		db WATER_PULSE, THUNDERBOLT, ICE_BEAM, RECOVER
-	db 64, STARMIE, SITRUS_BERRY, 176
-		db SCALD, CONFUSE_RAY, RECOVER, ICE_BEAM
+	db 34, STANTLER, NO_ITEM, "Pallbearer@"
+		db HI_JUMP_KICK, HYPNOSIS, STOMP, U_TURN
+	db 30, GENGAR, NO_ITEM, "Te No Me@"
+		db SHADOW_CLAW, DESTINY_BOND, MEAN_LOOK, SUCKER_PUNCH
+	db 32, MISMAGIUS, NO_ITEM, "Sabrina@"
+		db THUNDER_WAVE, PSYCHIC_M, SHADOW_BALL, HEX
+	db 32, DUSKNOIR, NO_ITEM, "Yamaduta@"
+		db SHADOW_CLAW, WILL_O_WISP, CURSE, PAIN_SPLIT
+	db 36, H__TYPHLOSION, NO_ITEM, "Charon@"
+		db FLAMETHROWER, SHADOW_BALL, SWIFT, CALM_MIND
 	db -1 ; end
 
 ; ================
@@ -6374,7 +6372,7 @@ SageGroup:
 ; ================
 
 	; SAGE
-	db "Jin@"
+	db "Jin@" ;  ; tin tower old 3f
 	db TRAINERTYPE_NORMAL
 	; party
 	db 7, WEEPINBELL
@@ -6393,7 +6391,7 @@ SageGroup:
 ; ================
 
 	; SAGE
-	db "Jeffrey@"
+	db "Jeffrey@" ; tin tower old 3f
 	db TRAINERTYPE_NORMAL
 	; party
 	db 22, HAUNTER
@@ -6403,7 +6401,7 @@ SageGroup:
 ; ================
 
 	; SAGE
-	db "Ping@"
+	db "Ping@" ;  ; tin tower old 3f
 	db TRAINERTYPE_NORMAL
 	; party
 	db 17, GASTLY

@@ -18,16 +18,16 @@ TinTowerOld3F_MapScriptHeader: ;	def_scene_scripts
 
 
 	def_object_events
-	object_event  6, 10, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, HAUNTER, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AzaleaTownSlowpokeScript, EVENT_TIN_TOWER_OLD_HAUNTER_1
-	object_event  9, 10, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, HAUNTER, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AzaleaTownSlowpokeScript, EVENT_TIN_TOWER_OLD_HAUNTER_2
-	object_event  6, 7, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, HAUNTER, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AzaleaTownSlowpokeScript, EVENT_TIN_TOWER_OLD_HAUNTER_3
-	object_event  9, 7, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, HAUNTER, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AzaleaTownSlowpokeScript, EVENT_TIN_TOWER_OLD_HAUNTER_4
+	object_event  7, 7, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, HAUNTER, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AzaleaTownSlowpokeScript, EVENT_TIN_TOWER_OLD_HAUNTER_1
+	object_event  8, 7, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, HAUNTER, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AzaleaTownSlowpokeScript, EVENT_TIN_TOWER_OLD_HAUNTER_2
+	object_event  7, 6, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, HAUNTER, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AzaleaTownSlowpokeScript, EVENT_TIN_TOWER_OLD_HAUNTER_3
+	object_event  8, 6, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, HAUNTER, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AzaleaTownSlowpokeScript, EVENT_TIN_TOWER_OLD_HAUNTER_4
+	;TODO PARTIES - GHOSTS 
+	object_event  0, 0, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSageJeffrey, -1
+	object_event  0, 0, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSagePing, -1
+	object_event  0, 0, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSageJin, -1
 
-	object_event  0, 0, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSage___, -1
-	object_event  0, 0, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSage___, -1
-	object_event  0, 0, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSage___, -1
-
-	object_event  5,  1, SPRITE_SAMSARA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TinTower3FSamsaraScript, -1
+	object_event  5,  1, SPRITE_SAMSARA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TinTower3FSamsaraScript, -1 ; party is done 
 
 
 	object_const_def
@@ -37,7 +37,6 @@ TinTowerOld3F_MapScriptHeader: ;	def_scene_scripts
 	const TIN_TOWER_OLD_3F_HAUNTER_4
 
 TT3F_CW_Bottom_Trigger:
-	showemote EMOTE_SHOCK, PLAYER, 5
 	pause 5
 	appear TIN_TOWER_OLD_3F_HAUNTER_1
 	pause 5
@@ -55,7 +54,7 @@ TT3F_CW_Bottom_Trigger:
 	pause 5
 	disappear TIN_TOWER_OLD_3F_HAUNTER_4
 	pause 5
-	applymovment PLAYER, PlayerMovesClockwiseFromBottomMovement
+	applymovement PLAYER, PlayerMovesClockwiseFromBottomMovement
 	setscene $1
 	end
 
@@ -94,11 +93,11 @@ TinTower3FSamsaraScript:
 	faceplayer
 	checkevent EVENT_BEAT_SAMSARA
 	iftrue_jumpopenedtext BeatSamsaraText
-	checkevent EVENT_BEAT_SAGE_...
+	checkevent EVENT_BEAT_SAGE_JEFFREY
 	iffalse_jumpopenedtest TinTower3FStudyHarderText
-	checkevent EVENT_BEAT_SAGE_...
+	checkevent EVENT_BEAT_SAGE_PING
 	iffalse_jumpopenedtest TinTower3FStudyHarderText
-	checkevent EVENT_BEAT_SAGE_...
+	checkevent EVENT_BEAT_SAGE_JIN
 	iffalse_jumpopenedtest TinTower3FStudyHarderText
 	writetext SamsaraIntroText
 	waitbutton
