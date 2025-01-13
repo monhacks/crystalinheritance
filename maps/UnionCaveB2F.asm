@@ -11,22 +11,22 @@ UnionCaveB2F_MapScriptHeader: ; todo: text
 
 	def_bg_events
 	bg_event  12, 16, BGEVENT_ITEM + CALCIUM, EVENT_UNION_CAVE_B2F_HIDDEN_CALCIUM
-	bg_event  8, 28, BGEVENT_ITEM + ELIXIR, EVENT_UNION_CAVE_B2F_HIDDEN_ULTRA_BALL
+	bg_event  10, 29, BGEVENT_ITEM + ELIXIR, EVENT_UNION_CAVE_B2F_HIDDEN_ULTRA_BALL
 
 	def_object_events
 	object_event  16, 29, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, BASTIODON, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, UnionCaveBastiodon, EVENT_UNION_CAVE_B2F_FOSSIL
 	object_event  17, 29, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, RAMPARDOS, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, UnionCaveRampardos, EVENT_UNION_CAVE_B2F_FOSSIL	
 
 ;TODO change these to other trainers
-	object_event  5,  8, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 5, GenericTrainerScientistLinden, EVENT_BEAT_RUIN_MANIAC_GLYNN ; 'LOWELL ' REMATCH 
-	object_event  7,  6, SPRITE_FIREBREATHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerFirebreatherJay, EVENT_BEAT_RUIN_MANIAC_GLYNN ; 'ray rematch
-	object_event 12, 12, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerScientistOskar,EVENT_BEAT_RUIN_MANIAC_GLYNN	; PLACE 
-	object_event  4, 22, SPRITE_HIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerHikerTimothy, EVENT_BEAT_RUIN_MANIAC_GLYNN ; PLACE 
-	object_event 4, 30, SPRITE_FIREBREATHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerFirebreatherOleg, EVENT_BEAT_RUIN_MANIAC_GLYNN ; PLACE 
-	object_event 15, 29, SPRITE_HIKER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerRuin_maniacGlynn, EVENT_BEAT_RUIN_MANIAC_GLYNN; 'PETRY'
+	object_event  7,  6, SPRITE_FIREBREATHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerFirebreatherJay, EVENT_UNION_CAVE_B2F_FOSSIL ; 'ray rematch
+	object_event  6,  8, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 5, GenericTrainerScientistLinden, EVENT_UNION_CAVE_B2F_FOSSIL ; 'LOWELL ' REMATCH 
+	object_event 12, 12, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerScientistOskar,EVENT_UNION_CAVE_B2F_FOSSIL	; PL
+	object_event  6, 24, SPRITE_HIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerHikerTimothy, EVENT_UNION_CAVE_B2F_FOSSIL ; PLACE 
+	object_event 6, 30, SPRITE_FIREBREATHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerFirebreatherOleg, EVENT_UNION_CAVE_B2F_FOSSIL ; PLACE 
+	object_event 15, 29, SPRITE_HIKER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerRuin_maniacGlynn, EVENT_UNION_CAVE_B2F_FOSSIL; 'PETRY'
 
-	itemball_event 15, 25, GEODE, 5, EVENT_UNION_CAVE_B2F_ELIXIR ; 
-	itemball_event 14, 19, HYPER_POTION, 1, EVENT_UNION_CAVE_B2F_HYPER_POTION ; OK 
+	itemball_event 14, 19, GEODE, 5, EVENT_UNION_CAVE_B2F_ELIXIR ; 
+	itemball_event 15, 25, HYPER_POTION, 1, EVENT_UNION_CAVE_B2F_HYPER_POTION ; OK 
 
 	object_const_def
 	const UNIONCAVEB2F_BASTIODON
@@ -35,7 +35,7 @@ UnionCaveB2F_MapScriptHeader: ; todo: text
 UnionCaveBastiodon:
 	faceplayer
 	cry BASTIODON
-	loadwildmon BASTIODON, 30
+	loadwildmon BASTIODON, 25
 	startbattle
 	disappear UNIONCAVEB2F_BASTIODON
 	disappear UNIONCAVEB2F_RAMPARDOS
@@ -46,7 +46,7 @@ UnionCaveBastiodon:
 UnionCaveRampardos:
 	faceplayer
 	cry RAMPARDOS
-	loadwildmon RAMPARDOS, 30
+	loadwildmon RAMPARDOS, 25
 	startbattle
 	disappear UNIONCAVEB2F_BASTIODON
 	disappear UNIONCAVEB2F_RAMPARDOS
@@ -54,74 +54,195 @@ UnionCaveRampardos:
 	reloadmapafterbattle
 	end
 
-GenericTrainerCooltrainermNick:
-	generictrainer COOLTRAINERM, NICK, EVENT_BEAT_COOLTRAINERM_NICK, CooltrainermNickSeenText, CooltrainermNickBeatenText
+GenericTrainerFirebreatherJay:
+	generictrainer FIREBREATHER, JAY, EVENT_BEAT_FIREBREATHER_JAY, FirebreatherJaySeenText, FirebreatherJayBeatenText
 
-	text "Your #mon style"
-	line "is stunning and"
-	cont "colorful, I admit."
-
-	para "You'll just keep"
-	line "getting better!"
+	text "Boss Petry wants"
+	line "to reach the end"
+	cont "of this seam."
 	done
 
-GenericTrainerCooltrainerfGwen:
-	generictrainer COOLTRAINERF, GWEN, EVENT_BEAT_COOLTRAINERF_GWEN, CooltrainerfGwenSeenText, CooltrainerfGwenBeatenText
-
-	text "I'm going to train"
-	line "by myself until I"
-	cont "improve."
+FirebreatherJaySeenText:
+	text "You again?"
+	line "We won't be"
+	cont "stopped so easy"
+	cont "this time!"
 	done
 
-GenericTrainerCooltrainerfEmma:
-	generictrainer COOLTRAINERF, EMMA, EVENT_BEAT_COOLTRAINERF_EMMA, CooltrainerfEmmaSeenText, CooltrainerfEmmaBeatenText
-
-	text "Just once a week,"
-	line "a #mon comes to"
-	cont "the water's edge."
-
-	para "I wanted to see"
-	line "that #mon…"
+FirebreatherJayBeatenText:
+	text "Boss Petry wants"
+	line "to reach the end"
+	cont "of this seam."
 	done
 
-CooltrainermNickSeenText:
-	text "There are two"
-	line "kinds of people."
+GenericTrainerFirebreatherOleg:
+	generictrainer FIREBREATHER, OLEG, EVENT_BEAT_FIREBREATHER_OLEG, FirebreatherOlegSeenText, FirebreatherOlegBeatenText
 
-	para "Those who have"
-	line "style, and those"
-	cont "who don't."
-
-	para "What kind of"
-	line "person are you?"
+	text "Lost my cool."
+	line "Petry is up"
+	cont "ahead, he will"
+	cont "not be happy"
+	para "that we were"
+	line "battling."
 	done
 
-CooltrainermNickBeatenText:
-	text "You've got"
-	line "dazzling style!"
+FirebreatherOlegSeenText:
+	text "I'm focused now,"
+	line "you won't beat"
+	cont "me!"
 	done
 
-CooltrainerfGwenSeenText:
-	text "I'm in training."
-	line "Care for a round?"
+FirebreatherOlegBeatenText:
+	text "Lost my cool."
+	line "Petry is up"
+	cont "ahead, he will"
+	cont "not be happy"
+	para "that we were"
+	line "battling."
 	done
 
-CooltrainerfGwenBeatenText:
-	text "Aww, no! You're"
-	line "too good for me."
+GenericTrainerScientistLinden:
+	generictrainer SCIENTIST, LINDEN, EVENT_BEAT_SCIENTIST_LINDEN, ScientistLindenSeenText, ScientistLindenBeatenText
+
+	text "Failed to control"
+	line "for my own"
+	cont "incompetence."
 	done
 
-CooltrainerfEmmaSeenText:
-	text "If the #mon I"
-	line "liked were there,"
-	cont "I'd go anywhere."
-
-	para "That's what a real"
-	line "trainer does."
+ScientistLindenSeenText:
+	text "Calculations say"
+	line "I have time for"
+	cont "a battle!"
+	
+	para "I'll leech your"
+	line "#mon HP like"
+	cont "I leech metals!"
 	done
 
-CooltrainerfEmmaBeatenText:
-	text "I'd rather pet my"
-	line "babies than this!"
+ScientistLindenBeatenText:
+	text "Failed to control"
+	line "for my own"
+	cont "incompetence."
 	done
 
+GenericTrainerScientistOskar:
+	generictrainer SCIENTIST, OSKER, EVENT_BEAT_SCIENTIST_OSKAR, ScientistOskarSeenText, ScientistOskarBeatenText
+
+	text "I need to turn"
+	line "down my voltage."
+	done
+
+ScientistOskarSeenText:
+	text "Can you handle"
+	line "your potential?"
+	done
+	
+ScientistOskarBeatenText:
+	text "I need to turn"
+	line "down my voltage."
+	done
+
+GenericTrainerHikerTimothy:
+	generictrainer HIKER, TIMOTHY, EVENT_BEAT_HIKER_TIMOTHY, HikerTimothySeenText, HikerTimothyBeatenText
+
+	text "Ha, you were an"
+	line "immovable object!"
+	done
+
+HikerTimothySeenText:
+	text "I've dug this"
+	line "tunnel, you'd"
+	cont "barely be a"
+	cont "bump to me!"
+	
+	para "I'm an unstop-"
+	line "able force!"
+	done
+
+HikerTimothyBeatenText:
+	text "Ha, you were an"
+	line "immovable object!"
+	done
+
+
+GenericTrainerRuin_maniacGlynn:
+	generictrainer RUIN_MANIAC, GLYNN, EVENT_BEAT_RUIN_MANIAC_GLYNN, RuinManiacGlynnSeenText, RuinManiacGlynnBeatenText
+
+	text "Uff. Maybe I'm"
+	line "too old for this"
+	cont "stuff."
+	
+	para "What am I fight-"
+	line "ing for, anyway?"
+	
+	para "To make a few "
+	line "scars in the gro-"
+	cont "und? My poor"
+	cont "#mon. I will"
+	
+	para "release them. You"
+	line "can battle one,"
+	
+	para "but the other will"
+	line "probably run away."
+	
+	para "It's clear you"
+	line "would be a better"
+	cont "trainer than me."
+	done
+
+RuinManiacGlynnSeenText:
+	text "You! You're the"
+	line "one that threw"
+	cont "off our opera-"
+	cont "tion last time!"
+	
+	para "We're nearly at"
+	line "the heart of the"
+	cont "mountain, and "
+	
+	para "here you are,"
+	line "battling!"
+	
+	para "I'm not taking"
+	line "it easy on you"
+	cont "now. If I can't"
+	
+	para "deal with tres-"
+	line "passers, I should"
+	cont "just give it up."
+	
+	para "So! Battle me!"
+	
+	para "Winner takes"
+	line "all!"
+	done
+
+RuinManiacGlynnBeatenText:
+	text "Uff. Maybe I'm"
+	line "too old for this"
+	cont "stuff."
+	
+	para "What am I fight-"
+	line "ing for, anyway?"
+	
+	para "To make a few "
+	line "scars in the gro-"
+	cont "und? My poor"
+	cont "#mon. I will"
+	
+	para "release the"
+	line "youngest two."
+	
+	para "They deserve a "
+	line "chance."
+	
+	para "If you battle"
+	line "one, the other"
+	cont "will probably be"
+	cont "scared and flee."
+	
+	para "It's clear you"
+	line "would be a better"
+	cont "trainer than me."
+	done

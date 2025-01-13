@@ -4043,6 +4043,9 @@ RoseradeEvosAttacks:
 RampardosEvosAttacks:
 	db 0 ; no more Evolutions
 	db 1, ANCIENTPOWER
+	db 28, FURY_STRIKES
+	db 29, RAGE
+	db 30, STOMP
 	db 35, BITE
 	db 35, DOUBLE_KICK
 	db 35, IRON_HEAD
@@ -4056,6 +4059,9 @@ RampardosEvosAttacks:
 BastiodonEvosAttacks:
 	db 0 ; no more Evolutions
 	db 1, ANCIENTPOWER
+	db 28, STOMP
+	db 29, MUD_SLAP
+	db 30, SCREECH
 	db 35, CURSE
 	db 35, IRON_HEAD
 	db 35, COUNTER
