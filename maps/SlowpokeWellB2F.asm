@@ -5,9 +5,9 @@ SlowpokeWellB2F_MapScriptHeader:
 	callback MAPCALLBACK_TILES, SlowpokeWellB2FCallBack
 
 	def_warp_events
-	warp_event  9, 11, SLOWPOKE_WELL_B1F, 1 ; todo 
+	warp_event  9, 11, SLOWPOKE_WELL_B1F, 2 ; todo 
 	warp_event  5,  1, UNION_CAVE_B1F_SOUTH, 3
-	warp_event  11,  3, SLOWPOKE_WELL_B3F, 1
+	warp_event  15,  5, SLOWPOKE_WELL_B3F, 1
 
 	def_coord_events
 
@@ -27,8 +27,8 @@ SlowpokeWellB2F_MapScriptHeader:
 SlowpokeWellB2FCallBack:
 	checkevent EVENT_MISTY_BASIN_B1F_BLACKBELT
 	iffalse .Done
-	changeblock  5,  4, $02
-	changeblock  6,  4, $28
+	changeblock 10,  8, $02
+	changeblock 12,  8, $28
 .Done:
 	endcallback
 

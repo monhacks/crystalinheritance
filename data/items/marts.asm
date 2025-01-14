@@ -211,13 +211,14 @@ OlivineMart:
 	db -1
 
 WesternCapitalMonMart: ; in the dance theatre
-	db 6 ; # items
+	db 7 ; # items
 	db PROTECTOR
 	db ELECTIRIZER
 	db MAGMARIZER
 	db RAZOR_FANG
 	db RAZOR_CLAW
 	db METAL_COAT
+	db KINGS_ROCK 
 	db -1
 
 WesternCapitalPrepMart:
@@ -394,7 +395,7 @@ MahoganyMart2:
 	db EXP_SHARE
 	db -1
 
-EcruteakBattleMart:
+EcruteakBattleMart: ; SHRINE AREA 
 	db 9 ; # items
 	db EJECT_BUTTON
 	db LAGGING_TAIL

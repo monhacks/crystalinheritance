@@ -793,13 +793,13 @@ SamsaraGroup:
 	; party
 	db 34, STANTLER, NO_ITEM, "Pallbearer@"
 		db HI_JUMP_KICK, HYPNOSIS, STOMP, U_TURN
-	db 30, GENGAR, NO_ITEM, "Te No Me@"
+	db 30, GENGAR, LUM_BERRY, "Te No Me@"
 		db SHADOW_CLAW, DESTINY_BOND, MEAN_LOOK, SUCKER_PUNCH
-	db 32, MISMAGIUS, NO_ITEM, "Sabrina@"
+	db 32, MISMAGIUS, SITRUS_BERRY, "Sabrina@"
 		db THUNDER_WAVE, PSYCHIC_M, SHADOW_BALL, HEX
-	db 32, DUSKNOIR, NO_ITEM, "Yamaduta@"
+	db 32, DUSKNOIR, LEFTOVERS, "Yamaduta@"
 		db SHADOW_CLAW, WILL_O_WISP, CURSE, PAIN_SPLIT
-	db 36, H__TYPHLOSION, NO_ITEM, "Charon@"
+	db 36, H__TYPHLOSION, SPELL_TAG, "Charon@"
 		db FLAMETHROWER, SHADOW_BALL, SWIFT, CALM_MIND
 	db -1 ; end
 
@@ -6375,7 +6375,9 @@ SageGroup:
 	db "Jin@" ;  ; tin tower old 3f
 	db TRAINERTYPE_NORMAL
 	; party
-	db 7, WEEPINBELL
+	db 27, HAUNTER
+	db 30, MISDREAVUS
+	db 32, MISMAGIUS
 	db -1 ; end
 
 ; ================
@@ -6394,8 +6396,8 @@ SageGroup:
 	db "Jeffrey@" ; tin tower old 3f
 	db TRAINERTYPE_NORMAL
 	; party
-	db 22, HAUNTER
-	db 21, VULPIX
+	db 33, DUSCLOPS
+	db 30, GENGAR
 	db -1 ; end
 
 ; ================
@@ -6404,10 +6406,8 @@ SageGroup:
 	db "Ping@" ;  ; tin tower old 3f
 	db TRAINERTYPE_NORMAL
 	; party
-	db 17, GASTLY
-	db 17, PIDGEY
-	db 18, GASTLY
-	db 18, PIDGEOTTO
+	db 30, NINETALES
+	db 33, STANTLER
 	db -1 ; end
 
 ; ================
@@ -8107,7 +8107,7 @@ ScientistGroup:
 	db "Dennett@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 33, MAGNETRON
+	db 33, MAGNETON
 	db 34, ELECTRODE
 	db 36, LANTURN	
 	db -1 ; end

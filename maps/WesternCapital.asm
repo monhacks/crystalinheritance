@@ -14,7 +14,7 @@ WesternCapital_MapScriptHeader:
 	warp_event 0, 0, WESTERN_CAPITAL_STOCKROOM, 1	
 	warp_event 0, 0, WESTERN_CAPITAL_CEMETERY, 3
 	warp_event 0, 0, WESTERN_CAPITAL_CEMETERY, 4
-	warp_event 0, 0, TIN_TOWER_OLD_1, 1
+	warp_event 0, 0, TIN_TOWER_OLD_1F, 1
 
 	def_coord_events
 
@@ -26,10 +26,10 @@ WesternCapital_MapScriptHeader:
 
 	def_object_events
 	object_event 11, 21, SPRITE_MEJIMI, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_PROLOGUE_MEJIMI ; need to put all these in the event flags file
-	object_event  9, 28, SPRITE_ADRINNA, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_PROLOGUE_ADRINNA ; disappeared at start
-	object_event  9, 28, SPRITE_KENSEY, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_PROLOGUE_KENSEY; disappeared at start
-	object_event  9, 28, SPRITE_BOBESH, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_PROLOGUE_BOBESH; disappeared at start
-	object_event  9, 28, SPRITE_SAMSARA, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_PROLOGUE_SAMSARA; disappeared at start
+	object_event  9, 23, SPRITE_ADRINNA, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_PROLOGUE_ADRINNA ; disappeared at start
+	object_event  9, 23, SPRITE_KENSEY, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_PROLOGUE_KENSEY; disappeared at start
+	object_event  9, 23, SPRITE_BOBESH, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_PROLOGUE_BOBESH; disappeared at start
+	object_event  9, 23, SPRITE_SAMSARA, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_PROLOGUE_SAMSARA; disappeared at start
 	pokemon_event  10, 19, LUGIA, -1, -1, PAL_NPC_BLUE, WC_pkmn_text, EVENT_PROLOGUE_MEJIMI ; by tammy  ;;;; 
 	pokemon_event  12, 19, HO_OH, -1, -1, PAL_NPC_RED, WC_pkmn_text, EVENT_PROLOGUE_MEJIMI ; by tammy  ;;;; 
 	object_event 0, 0, SPRITE_FISHER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, WesternCapitalNPC1Text, EVENT_WESTERN_CAPITAL_CIVILIAN ; done
@@ -184,9 +184,15 @@ WesternCapitalCemeteryScene: ; SOME OF THIS C.F. MRPOKEMONSHOUSE.ASM IN POLISHED
 	closetext	
 
 	special Special_FadeBlackQuickly
+	
+	setevent EVENT_PROLOGUE_MEJIMI
+	setevent EVENT_PROLOGUE_ADRINNA
+	setevent EVENT_PROLOGUE_BOBESH
+	setevent EVENT_PROLOGUE_KENSEY
+	setevent EVENT_PROLOGUE_SAMSARA
 
 	setscene $1
-	warp HOLT_COAST_GATE,  3, 3
+	warp HOLT_COAST_GATE,  3, 5
 	end
 	
 WC_pkmn_text:
@@ -378,18 +384,18 @@ Prologue_Text10:
 	line "mountains and"
 
 	para "the southern"
-	cont "forests,"
+	line "forests,"
 
 	para "I will remake Jo-"
 	line "hto in my image!"
 	done
 
 WC_AdrinnaMovement1:
-	step_up
-	step_up
-	step_up
-	step_up
-	step_up
+;	step_up
+;	step_up
+;	step_up
+;	step_up
+;	step_up
 	step_up
 	step_up
 	step_up
@@ -398,53 +404,53 @@ WC_AdrinnaMovement1:
 	step_end
 	
 WC_KenseyMovement1:
-	step_up
-	step_up
-	step_up
-	step_up
-	step_up
+;	step_up
+;	step_up
+;	step_up
+;	step_up
+;	step_up
 	step_up
 	step_up	
 	turn_head_right
 	step_end
 
 WC_KenseyMovement2:
-	step_down
-	step_down
-	step_down
-	step_down
-	step_down
+;	step_down
+;	step_down
+;	step_down
+;	step_down
+;	step_down
 	step_down	
 	step_down
 	step_end
 
 WC_BobeshMovement1:
-	step_up
-	step_up
-	step_up
-	step_up
-	step_up
+;	step_up
+;	step_up
+;	step_up
+;	step_up
+;	step_up
 	step_up
 	step_up
 	turn_head_right
 	step_end
 
 WC_BobeshMovement2:
-	step_down
-	step_down
-	step_down
-	step_down
-	step_down	
+;	step_down
+;	step_down
+;	step_down
+;	step_down
+;	step_down	
 	step_down
 	step_down
 	step_end
 	
 WC_SamsaraMovement1:
-	step_up
-	step_up
-	step_up
-	step_up
-	step_up
+;	step_up
+;	step_up
+;	step_up
+;	step_up
+;	step_up
 	step_up
 	step_end
 

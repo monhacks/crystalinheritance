@@ -136,7 +136,7 @@ ENDM
 	map_const VALERIES_HOUSE,                              4,  4 ; 14
 	map_const ECRUTEAK_CHERISH_BALL_HOUSE,                 4,  4 ; 15
 	map_const ECRUTEAK_DESTINY_KNOT_HOUSE,                 4,  4 ; 16
-	map_const DANCE_THEATRE_2F,                            6,  7 ; c.f. dance theatre, but different 
+	map_const DANCE_THEATRE_2F,                            9,  3 ; c.f. dance theatre, but different 
 
 
 	newgroup                                                     ;  5 anarres town and surrounding

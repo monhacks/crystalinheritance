@@ -420,18 +420,17 @@ GauldenrodBobeshScene: ; todo, make
     showtext BobeshText4
     showtext CindyText5
     showtext BobeshText5
-    showtext CindyText6 ; crashed after this 
-	
-	special Special_FadeBlackQuickly
-	special Special_ReloadSpritesNoPalettes
-    disappear GAULDENROD_MATRON
-    disappear GAULDENROD_BRIGADER
-	disappear GAULDENROD_OCTILLERY ; FLAREON 
-	disappear GAULDENROD_BOBESH
+    showtext CindyText6 ; 
 	setevent EVENT_GAULDENROD_BOBESH
 	setevent EVENT_GAULDENROD_FLAREON
 	setevent EVENT_GAULDENROD_BRIGADER_CINDY
 	clearevent EVENT_GAULDENROD_CIVILIANS
+	special Special_FadeBlackQuickly
+	special Special_ReloadSpritesNoPalettes
+	disappear GAULDENROD_BOBESH
+    disappear GAULDENROD_MATRON
+    disappear GAULDENROD_BRIGADER
+	disappear GAULDENROD_OCTILLERY ; FLAREON 
 	pause 10
 	special Special_FadeInQuickly
 	setscene $1
@@ -496,12 +495,10 @@ BobeshText3:
 CindyText4:
     text "Cindy: These"
     line "days he is busy"
-    cont "pulling weeds"
-    cont "that don't"
-    cont "belong. We have"
-    cont "some ugly"
-    cont "red ones"
-    cont "right now."
+    cont "pulling weeds."
+
+    para "There's some"
+    line "ugly red ones."
     done
 
 BobeshText4:

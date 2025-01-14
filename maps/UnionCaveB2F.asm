@@ -126,7 +126,7 @@ ScientistLindenBeatenText:
 	done
 
 GenericTrainerScientistOskar:
-	generictrainer SCIENTIST, OSKER, EVENT_BEAT_SCIENTIST_OSKAR, ScientistOskarSeenText, ScientistOskarBeatenText
+	generictrainer SCIENTIST, OSKAR, EVENT_BEAT_SCIENTIST_OSKAR, ScientistOskarSeenText, ScientistOskarBeatenText
 
 	text "I need to turn"
 	line "down my voltage."
@@ -166,7 +166,7 @@ HikerTimothyBeatenText:
 
 
 GenericTrainerRuin_maniacGlynn:
-	generictrainer RUIN_MANIAC, GLYNN, EVENT_BEAT_RUIN_MANIAC_GLYNN, RuinManiacGlynnSeenText, RuinManiacGlynnBeatenText
+	generictrainer RUIN_MANIAC, GLYN, EVENT_BEAT_RUIN_MANIAC_GLYN, RuinManiacGlynnSeenText, RuinManiacGlynnBeatenText
 
 	text "Uff. Maybe I'm"
 	line "too old for this"

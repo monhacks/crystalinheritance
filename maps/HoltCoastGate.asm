@@ -30,7 +30,7 @@ HoltCoastGateWarpScene: ; C.F. bellchimetrail.asm on polished crystal clean
 	disappear PLAYER
 	waitsfx
 	setscene $1
-	warp WESTERN_CAPITAL, 10, 23
+	warp WESTERN_CAPITAL, 10, 22
 	end
 
 

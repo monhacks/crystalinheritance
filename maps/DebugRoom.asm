@@ -177,7 +177,15 @@ Breeder1Script:
 	givepoke H__SAMUROTT, NO_FORM, 100, LEFTOVERS
 	givepoke H__DECIDUEYE, NO_FORM, 100, LEFTOVERS
 	givepoke ALAKAZAM, NO_FORM, 100, LEFTOVERS
-	givepoke PIDGEY, NO_FORM, 5, NO_ITEM
+	givepoke PIDGEY, NO_FORM, 5, NO_ITEM ; CHECK FAINTING BEHAVIOR 
+;SPRITE CHECKS 
+	givepoke H__GOODRA, NO_FORM, 100
+	givepoke HEATRAN, NO_FORM, 5
+	givepoke AMBIPOM, NO_FORM, 5
+	givepoke EMPOLEON, NO_FORM, 5 
+	givepoke VESPIQUEN, NO_FORM, 5 
+	givepoke SKUNTANK, NO_FORM, 5 
+; END SPRITE CHECKS 
 	loadmem wPartyMon2Moves+0, SURF
 	loadmem wPartyMon2Moves+1, CRUNCH
 	loadmem wPartyMon2Moves+2, STRENGTH

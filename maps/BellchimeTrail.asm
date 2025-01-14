@@ -89,6 +89,7 @@ BellchimeTrailEmiScript:
 	promptbutton
 	verbosegiveitem ODD_SOUVENIR ; hisui stone
 	writetext EmiHealsYouText
+	waitbutton
 	playmusic MUSIC_HEAL
 	special HealParty
 	special SaveMusic	
