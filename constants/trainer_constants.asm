@@ -53,8 +53,8 @@ KRIS EQU __trainer_class__
 	const KURT2 ; SANDRA , oshawott yanma chikorita skiploom snubbul lv 14 
 	const KURT3 ; WHITNEY , clefairy pinsir nidorina mareep sunflora lv 17 
 	const KURT4 ; FALKNER , hitmontop magmar dratini electabuzz magnemite lv 21 
-	const KURT5 ; REI , stantler growlithe poliwhirl dugtrio grimer lv 24 
-	const KURT6 ; SAMSARA , eevee skarmory misdreavus dunsparce togetic lv 26
+	const KURT5 ; dance theatre , stantler growlithe poliwhirl dugtrio grimer lv 24 
+	const KURT6 ; wc dorms , eevee skarmory misdreavus dunsparce togetic lv 26
 	const KURT7 ; BARBEAU , grotle gligar girafarig tauros slowpoke lv 29
 	const KURT8 ; JASMINE , persian froslass drifblim seadra shuckle lv 33
 	const KURT9 ; PRYCE , tauros houndour miltank muk corsola lv 36 

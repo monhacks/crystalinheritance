@@ -48,8 +48,6 @@ GenericTrainerLassCathy:
 
     text "We used to idolize"
     line "Whitney, you know?"
-    para "Now I wonder if we"
-    line "were too hasty."
     done
 
 LassCathySeenText:
@@ -105,18 +103,6 @@ PryceText:
     cont "Radio Tower."
     done
 
-PryceAfterText:
-    text "I hear Whitney is"
-    line "at the radio"
-    cont "tower now, and"
-    cont "has her own show."
-    para "Its following"
-    line "is... far from"
-    cont "underground, if"
-    cont "you catch my"
-    cont "drift."
-    done
-
 
 WhitneyScript:
     faceplayer
@@ -147,8 +133,7 @@ WhitneyTextFacade:
 	para "But over time,"
 	line "I was shifting to"
 	cont "pushing everyone"
-	cont "in my life"
-	cont "away."
+	cont "else away."
 	
 	para "I was putting"
 	line "up a false im-"
@@ -167,11 +152,9 @@ WhitneyAfterText:
 	cont "son why I be-"
 	cont "came a Gym"
 	cont "Leader in the"
-	cont "first place."
-	
-	para "I should get"
-	line "get back to"
-	cont "helping people"
-	cont "see the cuteness"
+	cont "first place-"
+
+	para "helping people"
+	line "see the cuteness"
 	cont "in each other."
 	done

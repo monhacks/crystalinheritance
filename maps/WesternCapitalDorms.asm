@@ -70,19 +70,57 @@ WesternCapitalBedText2:
 WesternCapitalDormsKurtScript:
 	faceplayer
 	opentext
-	writetext KurtWesternCapitalDormsText
+	writetext KurtWCDormsText
+	yesorno
+	iffalse .WCKurtPC
+	winlosstext WCKurtBattleText, WCKurtBattleText
+	loadtrainer KURT, KURT6
+	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+	startbattle
+	reloadmapafterbattle
+	opentext
+	jumpopenedtext WCKurtBattleText2
+
+.WCKurtPC
+	writetext KurWCDormsText2
 	promptbutton
-	special PokemonCenterPC
+	special PokemonCenterPC ; per engine/events/std_scripts.asm this is how it should be done. 
 	endtext
 	end
 
-KurtWesternCapitalDormsText:
-	text "<PLAYER>. We"
-	line "need head west to"
-	para "stop the flow of"
-	line "Steel to Johto!"
+KurtWCDormsText:
+	text "<PLAYER>, these"
+	line "dorms are a good"
+	cont "place to rest."
 	
-	para "There must be a"
-	line "way across the"
-	cont "moat."
+	para "We still need to"
+	line "find a way to"
+	cont "the port."
+	
+	para "I can run back to"
+	line "our time for a PC"
+	cont "if you need."
+	
+	para "Oh! I found some"
+	line "neat #mon in"
+	cont "the wild areas"
+	cont "around here."
+
+	para "Want to battle?"
+	done
+	
+KurWCDormsText2:
+	text "I can run back"
+	line "to manage your"
+	cont "party."
+	done
+
+WCKurtBattleText:
+	text "How Regal!"
+	done
+
+WCKurtBattleText2:
+	text "We can battle as"
+	line "many times as"
+	cont "you like."
 	done

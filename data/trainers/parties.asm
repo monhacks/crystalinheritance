@@ -10938,18 +10938,50 @@ NomadMGroup:
 ; ================
 
 	; BUCK
-	db "Buck@"
+	db "Joel@"
 	db TRAINERTYPE_NORMAL
 	; party
 	; TODO: movesets, etc
-	db 65, UMBREON
-	db 64, GOLEM
-	db 62, POLIWRATH
-	db 63, FORRETRESS
-	db 62, SKARMORY
-	db 63, STEELIX
+	db 20, MILTANK
+	db 24, MILTANK
+	db 28, MILTANK
+	db 32, MILTANK
 	db -1 ; end
-
+	
+	; BUCK
+	db "Glenn@"
+	db TRAINERTYPE_NORMAL
+	; party
+	; TODO: movesets, etc
+	db 28, SEADRA
+	db 28, CLOYSTER
+	db 30, TENTACRUEL
+	db -1 ; end
+	
+	; BUCK
+	db "Dale@"
+	db TRAINERTYPE_NORMAL
+	; party
+	; TODO: movesets, etc
+	db 25, PIDGEOTTO
+	db 30, MANTINE
+	db 30, SEADRA
+	db -1 ; end
+	
+	; BUCK
+	db "Jacob@"
+	db TRAINERTYPE_NORMAL
+	; party
+	; TODO: movesets, etc
+	db TRAINERTYPE_ITEM | TRAINERTYPE_MOVES
+	; party
+	db 30, STARMIE, NO_ITEM
+		db WHIRLPOOL, WATER_GUN, NO_MOVE, NO_MOVE
+	db 62, KADABRA, NO_ITEM
+		db WHIRLPOOL, REFLECT, NO_MOVE, NO_MOVE
+	db 62, MISDREAVUS, NO_ITEM
+		db WHIRLPOOL, NO_MOVE, NO_MOVE, NO_MOVE
+	db -1 ; end
 
 ; ================
 ; ================================
@@ -11102,18 +11134,42 @@ NomadFGroup:
 ; ================================
 ; ================
 
-	; CAITLIN
-	db "Caitlin@"
+	; 
+	db "Reina@"
 	db TRAINERTYPE_NORMAL
 	; party
 	; TODO: movesets, etc
-	db 58, ESPEON
-	db 56, XATU
-	db 57, STARMIE
-	db 56, JYNX
-	db 58, ALAKAZAM
-	db 60, KADABRA
+	db 27, OCTILLERY
+	db 30, MANTINE
+	db 32, DRIFBLIM	
 	db -1 ; end
+
+	db "Alina@"
+	db TRAINERTYPE_NORMAL
+	; party
+	; TODO: movesets, etc
+	db 25, SKIPLOOM
+	db 28, JUMPLUFF	
+	db 30, XATU	
+	db -1 ; end
+
+	db "Marlene@"
+	db TRAINERTYPE_NORMAL
+	; party
+	; TODO: movesets, etc
+	db 25, PIDGEOTTO
+	db 28, PIDGEOTTO	
+	db 36, PIDGEOT	
+	db -1 ; end
+
+	db "Rin@"
+	db TRAINERTYPE_NORMAL
+	; party
+	; TODO: movesets, etc
+	db 25, MANKEY
+	db 30, PRIMEAPE
+	db -1 ; end
+
 
 ; ================
 ; ================================

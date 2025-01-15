@@ -51,7 +51,7 @@ GoldenrodCity_MapScriptHeader:
 	object_event 11, 18, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodCityPokefanMText, -1 ; done
 	object_event 38, 17, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 2, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodCityYoungster1Text, -1 ; done
 	object_event 16, 16, SPRITE_BATTLE_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GoldenrodCityCooltrainerF1Script, -1 ; done 
-	object_event 25, 25, SPRITE_BATTLE_GIRL, SPRITEMOVEDATA_WANDER, 2, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GoldenrodCityCooltrainerF2Script, -1
+;	object_event 25, 25, SPRITE_BATTLE_GIRL, SPRITEMOVEDATA_WANDER, 2, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GoldenrodCityCooltrainerF2Script, -1
 	object_event 25, 17, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GoldenrodCityYoungster2Script, -1 ; no changes
 	object_event 20, 10, SPRITE_LASS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodCityLassText, -1 ; done
 	object_event 15, 27, SPRITE_GRAMPS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodCityGrampsText, -1 ; done
@@ -136,13 +136,6 @@ MoveTutor:
 GoldenrodCityCooltrainerF1Script:
 	jumptextfaceplayer GoldenrodCityCooltrainerF1Text
 
-GoldenrodCityCooltrainerF2Script:
-	checkflag ENGINE_RADIO_CARD
-	iffalse_jumptextfaceplayer GoldenrodCityCooltrainerF2Text
-	checkevent EVENT_RESTORED_POWER_TO_KANTO
-	iffalse_jumptextfaceplayer GoldenrodCityCooltrainerFOlivineText
-	jumptextfaceplayer GoldenrodCityCooltrainerF2Text_GotRadioCard
-
 GoldenrodCityYoungster2Script:
 	faceplayer
 	opentext
@@ -154,8 +147,8 @@ GoldenrodCityPokefanMText:
 	text "I heard that"
 	line "Goldenrod used to"
 	cont "have a big wooden"
-	cont "tower, kind of"
-	cont "like Sprout Tower"
+	para "tower, kind of"
+	line "like Sprout Tower"
 	cont "used to be in"
 	cont "Violet City."
 	done
@@ -166,30 +159,14 @@ GoldenrodCityYoungster1Text:
 	done
 
 GoldenrodCityCooltrainerF1Text:
-	text "I love talking to"
-	line "other people abou"
-	cont "t Whitney's show,"
-	cont " ReArming Voice."
+	text "I love talking"
+	line "about Whitney's"
+	cont "show!"
 
 	para "It's a real"
 	line "community!"
 	done
 
-GoldenrodCityCooltrainerF2Text:
-	text "The Radio Tower in"
-	line "Goldenrod City is"
-	cont "a landmark."
-
-	para "They're running a"
-	line "promotional cam-"
-	cont "paign right now."
-
-	para "They'll modify"
-	line "your #gear,"
-
-	para "so it can also"
-	line "serve as a radio."
-	done
 
 GoldenrodCityCooltrainerFOlivineText:
 	text "I came here on"
@@ -200,18 +177,10 @@ GoldenrodCityCooltrainerFOlivineText:
 	cont "but more scenic."
 	done
 
-GoldenrodCityCooltrainerF2Text_GotRadioCard:
-	text "I came here on the"
-	line "Magnet Train."
-
-	para "Time to do some"
-	line "shopping!"
-	done
 
 GoldenrodCityYoungsterDayText:
 	text "I can't wait to"
-	line "visit the Museum"
-	cont "once it's open!"
+	line "visit the Museum!"
 
 	para "I heard they have"
 	line "some beautiful"
@@ -257,8 +226,8 @@ GoldenrodCityGymLassText:
 	para "Take a quote "
 	line "from Whitney's"
 	cont "show and ask a"
-	cont "friend if she "
-	cont "said it, or if "
+	para "friend if she "
+	line "said it, or if "
 	cont "Giovanni said it."
 	
 	para "You'd be surprised"	
@@ -293,15 +262,15 @@ GoldenrodDeptStoreSignText:
 	done
 
 GoldenrodGymSignText:
-	text "The sign is"
-	line "faded..."
-	
-	para "Goldenrod City"
+	text "Goldenrod City"
 	line "#mon Gym"
 	cont "Leader: Whitney"
 
 	para "The Incredibly"
 	line "Pretty Girl!"
+	
+	para "By appointment"
+	line "only."
 	done
 
 GoldenrodCitySignText:

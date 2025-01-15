@@ -21,7 +21,7 @@ DanceTheatre_MapScriptHeader:
 	object_event  7,  1, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerKimono_girlKuni, EVENT_BEAT_RIVAL_ROUTE_42 ; GLACEON, kimono girl 4 -- DONE
 	object_event  3, 10, SPRITE_OSTENE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, DanceTheatreOstene1Text, EVENT_BEAT_RIVAL_ROUTE_42;
 	pokemon_event  4, 10, PORYGON_Z, -1, -1, PAL_NPC_RED, PorygonZText, EVENT_BEAT_RIVAL_ROUTE_42;
-	object_event 10,  8, SPRITE_KURT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, DanceTheatreKurtText, EVENT_BEAT_KIMONO_GIRL_EMI ; 
+	object_event 10,  8, SPRITE_KURT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DanceTheatreKurtScript, EVENT_BEAT_KIMONO_GIRL_EMI ; 
 	object_event  1, 10, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, DanceTheatreSilphText, EVENT_BEAT_RIVAL_ROUTE_42 ; SILPH 
 	object_event  3,  8, SPRITE_LADY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, DanceTheatreNPC1Text, EVENT_BEAT_RIVAL_ROUTE_42
 
@@ -58,18 +58,71 @@ DanceTheatreSilphText:
 	cont "can draw some"
 	cont "big crowds."
 	done
+
+DanceTheatreKurtScript: ; will this work?....
+	faceplayer
+	opentext
+	writetext DanceTheatreKurtText
+	yesorno
+	iffalse .AnarresKurtPC
+	winlosstext DanceTheatreKurtBattleText, DanceTheatreKurtBattleText
+	loadtrainer KURT, KURT5 
+	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+	startbattle
+	reloadmapafterbattle
+	opentext
+	jumpopenedtext DanceTheatreKurtBattleText2
+
+.AnarresKurtPC
+	jumpopenedtext KurtDanceTheatreText2
+	promptbutton
+	end
+
+KurtAnarresDormsText:
+	text "<PLAYER>, these"
+	line "dorms are a good"
+	cont "place to rest."
+	
+	para "I can run back to"
+	line "our time for a PC"
+	cont "if you need."
+	
+	para "Oh! I found some"
+	line "neat #mon in"
+	cont "the wild areas"
+	cont "around here."
+
+	para "Want to battle?"
+	done
+	
+KurtDanceTheatreText2:
+	text "Maybe the Kimono"
+	line "Girls will have"
+	cont "an idea how to"
+	para "summon Celebi to"
+	line "go back in time."
+	done
+
+DanceTheatreKurtBattleText:
+	text "Excellent!"
+	done
+
+DanceTheatreKurtBattleText2:
+	text "We can battle as"
+	line "many times as"
+	cont "you like."
+	done
+
 	
 DanceTheatreKurtText:
 	text "<PLAYER> - "
-	line "maybe the Kimono"
-	cont "girls have an"
-	cont "idea how to go"
-	cont "back in time."
 	
-	para "You should see"
-	line "if they will"
-	cont "help us!"
-	done
+	line "the Kimono Girls"
+	cont "are excellent"
+	cont "battlers."
+	
+	para "Want to practice?"
+	DONE
 
 DanceTheatreNPC1Text:
 	text "This show is so"
