@@ -215,7 +215,7 @@ FIRST_BERRY_TREE EQU const_value
 ;	const FRUITTREE_ROUTE_31        ; 
 	const FRUITTREE_VIOLET_CITY     ; 0c pnk apricorn 
 	const FRUITTREE_ROUTE_33  ; 0d ; lum berry  
-	const FRUITTREE_UNUSED_2        ; 0e sitrus berry 
+	const FRUITTREE_CATTLE_CULL_39        ; 0e sitrus berry 
 	const FRUITTREE_ROUTE_35        ; 0f ; shore foam
 	const FRUITTREE_ROUTE_36        ; 10 ; WHT APRICORN
 	const FRUITTREE_ROUTE_38        ; 11

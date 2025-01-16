@@ -201,8 +201,8 @@ AcademyKurtText: ; need to ask the player if htey want to hear a story
 	para "After class, we"
 	line "walked around the"
 	cont "ponds, your dad"
-	cont "walking side by"
-	cont "side with his"
+	para "walking side by"
+	line "side with his"
 	cont "partner, holding"
 	cont "his apricorn."
 	
@@ -216,12 +216,11 @@ AcademyKurtText: ; need to ask the player if htey want to hear a story
 	cont "chip in the coat"
 	cont "was a memory of"
 	cont "an adventure."
-	
-	para "At nights, I'd"
-	line "find him under"
-	cont "the covers, the"
-	cont "glow of his ap-"
-	cont "ricorn giving"
-	cont "him away."
+;	
+;	para "At nights, I'd"
+;	line "find him under"
+;	cont "the covers, the"
+;	cont "glow of his ap-"
+;	cont "ricorn giving"
+;	cont "him away."
 	done
-
