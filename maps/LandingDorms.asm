@@ -1,4 +1,6 @@
-LandingDorms_MapScriptHeader: ;	def_scene_scripts
+LandingDorms_MapScriptHeader: 
+
+	def_scene_scripts
 
 
 	def_callbacks
@@ -13,11 +15,101 @@ LandingDorms_MapScriptHeader: ;	def_scene_scripts
 
 
 	def_bg_events
+	bg_event  0,  2, BGEVENT_READ, TradersLandingDormsBed
+	bg_event  0,  3, BGEVENT_READ, TradersLandingDormsBed
+	bg_event  0,  4, BGEVENT_READ, TradersLandingDormsBed
+	bg_event  0,  5, BGEVENT_READ, TradersLandingDormsBed
 
 
 
 	def_object_events
-
+	object_event 1, 1, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, LandingDormsKurtScript, EVENT_BEAT_KENSEY_PORT
+	object_event 12, 3, SPRITE_NOMAD_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, LandingDormsNPC1Text, -1
+	object_event 12, 4, SPRITE_NOMAD_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, LandingDormsNPC2Text, -1
+	object_event 3, 3, SPRITE_NOMAD_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, LandingDormsNPC3Text, -1
 
 
 	object_const_def
+
+
+TradersLandingDormsBed:
+	showtext TradersLandingBedText1
+	special Special_FadeBlackQuickly
+	special Special_ReloadSpritesNoPalettes
+	special HealParty
+	playmusic MUSIC_HEAL
+	pause 60
+	special RestartMapMusic
+	special Special_FadeInQuickly
+	showtext TradersLandingBedText2
+	end
+
+TradersLandingBedText1:
+	text "A comfy bed!"
+	line "Time to sleep…"
+	done
+
+TradersLandingBedText2:
+	text "Ah, refreshed and"
+	line "restored!"
+	done
+
+
+LandingDormsKurtScript:
+	faceplayer
+	opentext
+	writetext KurtTLDormsText
+	yesorno
+	iffalse .TLKurtPC
+	winlosstext TLKurtBattleText, TLKurtBattleText
+	loadtrainer KURT, KURT7
+	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+	startbattle
+	reloadmapafterbattle
+	opentext
+	jumpopenedtext TLKurtBattleText2
+
+.TLKurtPC
+	writetext KurTLDormsText2
+	promptbutton
+	special PokemonCenterPC ; per engine/events/std_scripts.asm this is how it should be done. 
+	endtext
+	end
+
+KurtTLDormsText:
+	text "<PLAYER>, these"
+	line "dorms are a good"
+	cont "place to rest."
+	
+	para "We should find a"
+	line "way to bring"
+	cont "Lugia from our"
+	cont "time backwards,"
+	para "so it causes a"
+	line "storm, preventing"
+	cont "the shipment!"
+	
+	para "Oh! I found some"
+	line "neat #mon in"
+	cont "the wild areas"
+	cont "around here."
+
+	para "Want to battle?"
+	done
+	
+KurTLDormsText2:
+	text "I can run back"
+	line "to manage your"
+	cont "party."
+	done
+
+TLKurtBattleText:
+	text "Impressive!"
+	done
+
+TLKurtBattleText2:
+	text "We can battle as"
+	line "many times as"
+	cont "you like."
+	done
+

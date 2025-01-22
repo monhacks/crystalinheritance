@@ -264,16 +264,17 @@ WesternCapitalMart_TM:
 	db -1
 
 TradersLandingMart:
-	db 7 ; # items
-	db ULTRA_BALL
+	db 9 ; # items
+	db RARE_CANDY
 	db MAX_REPEL
+	db ULTRA_BALL
+	db SUPER_POTION
 	db HYPER_POTION
-	db MAX_POTION
-	db FULL_RESTORE
-	db REVIVE
 	db FULL_HEAL
+	db REVIVE
+	db X_ATTACK
+	db X_SPEED
 	db -1
-
 AnarresMart:
 	db 9 ; # items
 	db RARE_CANDY
