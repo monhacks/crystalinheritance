@@ -7,8 +7,7 @@ WesternCapitalCemetery_MapScriptHeader: ;	def_scene_scripts
 	def_warp_events
 	warp_event  4, 17, WESTERN_CAPITAL, 3
 	warp_event  5, 17, WESTERN_CAPITAL, 3
-	warp_event  4, 0, WESTERN_CAPITAL, 7
-	warp_event  5, 0, WESTERN_CAPITAL, 8
+
 
 	def_coord_events
 
@@ -48,6 +47,8 @@ WesternCapitalCemetery_MapScriptHeader: ;	def_scene_scripts
 	object_event  4, 4, SPRITE_SAGE, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, CemeteryNPC1Text, -1
 	object_event  5, 8, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, CemeteryNPC2Text, -1
 	object_event 4, 11, SPRITE_SAGE, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, CemeteryNPC3Text, EVENT_BEAT_ADRINNA_MOUNT_MORTAR
+	object_event  4, 1, SPRITE_SAGE, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, CemeteryNPC4Text, -1
+	object_event  5, 1, SPRITE_SAGE, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, CemeteryNPC4Text, -1
 
 	object_const_def
 
@@ -190,4 +191,9 @@ WC_Cemetery8Text:
 	para "His voice made"
 	line "the Kimono Girls"
 	cont "dance heavenly."
+	done
+
+CemeteryNPC4Text:
+	text "Graveyard is off"
+	line "limits."
 	done

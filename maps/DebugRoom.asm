@@ -17,6 +17,7 @@ DebugRoom_MapScriptHeader: ; should be like  "BurnedTowerB1F_MapScriptHeader"
 	def_bg_events
 	bg_event  1,  2, BGEVENT_READ, DebugCPU ; check the items are all there 
 	bg_event  5,  2, BGEVENT_READ, DebugCPU2
+	bg_event  2,  7, BGEVENT_READ, DebugRoomTileGame
 
 	def_object_events
 	object_event  4,  3, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE,  OBJECTTYPE_SCRIPT, 0, dwgDebugScript, -1
@@ -545,3 +546,16 @@ DebugWonderTradeCompleteText:
 DebugWonderTradeGoodbyeText:
 	text "See ya!"
 	done
+
+
+DebugRoomTileGame:
+	refreshscreen
+	setval $0
+	special Special_SlotMachine
+	closetext
+	iftrue .PuzzleComplete
+	end
+
+.PuzzleComplete:
+	givecoins 100
+	end

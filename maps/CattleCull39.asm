@@ -19,7 +19,7 @@ CattleCull39_MapScriptHeader: ;TODO putthe locations of everything
 
 	def_object_events
 	object_event 11, 16, SPRITE_NOMAD_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 4, GenericTrainerNomadMDale, -1
-	object_event 13, 20 SPRITE_NOMAD_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 4, GenericTrainerNomadMJacob, -1
+	object_event 13, 20, SPRITE_NOMAD_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 4, GenericTrainerNomadMJacob, -1
 	object_event 7,  7, SPRITE_NOMAD_F, SPRITEMOVEDATA_SPINCOUNTERCLOCKWISE, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, GenericTrainerNomadFMarlene, -1
 	object_event 5,  29, SPRITE_NOMAD_F, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, GenericTrainerNomadFRin, -1
 	object_event 13, 10, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, CattleCullKurtText, EVENT_TALKED_TO_BARBEAU
@@ -27,8 +27,8 @@ CattleCull39_MapScriptHeader: ;TODO putthe locations of everything
 	pokemon_event  4, 11, MILTANK, -1, -1, PAL_NPC_RED, Miltank39Text, -1;
 	pokemon_event  9, 12, MILTANK, -1, -1, PAL_NPC_RED, Miltank39Text, -1;
 	pokemon_event  6, 12, MILTANK, -1, -1, PAL_NPC_RED, Miltank39Text, -1;
-	fruittree_event 2, 17, FRUITTREE_CATTLE_CULL_30, SITRUS_BERRY, PAL_NPC_RED
-	object_event 5, 13, SPRITE_NOMAD_F, SSPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, jumptextfaceplayer, CattleCull39HoneClaws, -1	
+	fruittree_event 2, 17, FRUITTREE_CATTLE_CULL_39, SITRUS_BERRY, PAL_NPC_RED
+	object_event 5, 13, SPRITE_NOMAD_F, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, jumptextfaceplayer, CattleCull39HoneClaws, -1	
 	
 	object_const_def
 
@@ -183,4 +183,14 @@ HoneClawsText:
 	para "Take this. Don't"
 	line "be afraid of lea-"
 	cont "rning new skills!"
+	done
+
+TaurosText:
+	text "Tauros:"
+	line "Mooo!"
+	done
+
+Miltank39Text:
+	text "Miltank:"
+	line "Moooooo!"
 	done

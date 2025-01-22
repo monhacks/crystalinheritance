@@ -64,7 +64,7 @@ DanceTheatreKurtScript: ; will this work?....
 	opentext
 	writetext DanceTheatreKurtText
 	yesorno
-	iffalse .AnarresKurtPC
+	iffalse .Jump
 	winlosstext DanceTheatreKurtBattleText, DanceTheatreKurtBattleText
 	loadtrainer KURT, KURT5 
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
@@ -73,27 +73,10 @@ DanceTheatreKurtScript: ; will this work?....
 	opentext
 	jumpopenedtext DanceTheatreKurtBattleText2
 
-.AnarresKurtPC
+.Jump
 	jumpopenedtext KurtDanceTheatreText2
 	promptbutton
 	end
-
-KurtAnarresDormsText:
-	text "<PLAYER>, these"
-	line "dorms are a good"
-	cont "place to rest."
-	
-	para "I can run back to"
-	line "our time for a PC"
-	cont "if you need."
-	
-	para "Oh! I found some"
-	line "neat #mon in"
-	cont "the wild areas"
-	cont "around here."
-
-	para "Want to battle?"
-	done
 	
 KurtDanceTheatreText2:
 	text "Maybe the Kimono"
@@ -122,7 +105,7 @@ DanceTheatreKurtText:
 	cont "battlers."
 	
 	para "Want to practice?"
-	DONE
+	done
 
 DanceTheatreNPC1Text:
 	text "This show is so"

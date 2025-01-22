@@ -8,20 +8,25 @@ WesternCapital_MapScriptHeader:
 	def_warp_events
 	warp_event 17, 11, EMPERORS_GARDEN, 1
 	warp_event 18, 11, EMPERORS_GARDEN, 2
-	warp_event 0, 0, WESTERN_CAPITAL_CEMETERY, 1
-	warp_event 0, 0, WESTERN_CAPITAL_DANCE_THEATRE, 1
-	warp_event 0, 0, WESTERN_CAPITAL_DORMS, 1
-	warp_event 0, 0, WESTERN_CAPITAL_STOCKROOM, 1	
-	warp_event 0, 0, WESTERN_CAPITAL_CEMETERY, 3
-	warp_event 0, 0, WESTERN_CAPITAL_CEMETERY, 4
-	warp_event 0, 0, TIN_TOWER_OLD_1F, 1
+	warp_event 9, 27, WESTERN_CAPITAL_CEMETERY, 1
+	warp_event 23, 17, WESTERN_CAPITAL_DANCE_THEATRE, 1
+	warp_event 21, 25, WESTERN_CAPITAL_DORMS, 1
+	warp_event 27, 23, WESTERN_CAPITAL_STOCKROOM, 1	
+	warp_event 0, 18, CAPITAL_CULL_GATE, 3
+	warp_event 0, 19, CAPITAL_CULL_GATE, 4
+	warp_event 35, 5, TIN_TOWER_OLD_1F, 1
 
 	def_coord_events
 
 
 
 	def_bg_events
-
+	bg_event 7, 7, BGEVENT_JUMPTEXT, WCBrassTowerText
+	bg_event 37, 7, BGEVENT_JUMPTEXT, WCTinTowerText
+	bg_event 15, 11, BGEVENT_JUMPTEXT, WCGardenText
+	bg_event 21, 17, BGEVENT_JUMPTEXT, WCDanceText
+	bg_event 21, 11, BGEVENT_JUMPTEXT, WCGloryToMejimiText
+	bg_event 17, 23, BGEVENT_JUMPTEXT, WCSignText
 
 
 	def_object_events
@@ -32,12 +37,13 @@ WesternCapital_MapScriptHeader:
 	object_event  9, 23, SPRITE_SAMSARA, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_PROLOGUE_SAMSARA; disappeared at start
 	pokemon_event  10, 19, LUGIA, -1, -1, PAL_NPC_BLUE, WC_pkmn_text, EVENT_PROLOGUE_MEJIMI ; by tammy  ;;;; 
 	pokemon_event  12, 19, HO_OH, -1, -1, PAL_NPC_RED, WC_pkmn_text, EVENT_PROLOGUE_MEJIMI ; by tammy  ;;;; 
-	object_event 0, 0, SPRITE_FISHER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, WesternCapitalNPC1Text, EVENT_WESTERN_CAPITAL_CIVILIAN ; done
-	object_event 0, 0, SPRITE_FISHER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, WesternCapitalHisuiText1, EVENT_WESTERN_CAPITAL_CIVILIAN ; done
-	object_event 0, 0, SPRITE_BEAUTY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, WesternCapitalNPC2Text, EVENT_WESTERN_CAPITAL_CIVILIAN ; done
-	object_event 0, 0, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, WesternCapitalNPC3Text, EVENT_WESTERN_CAPITAL_CIVILIAN ; done
-	object_event 0, 0, SPRITE_SAGE, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, WesternCapitalNPC4Text, EVENT_WESTERN_CAPITAL_CIVILIAN ; done
-	object_event 0, 0, SPRITE_GRANNY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, WesternCapitalNPC5Text, EVENT_WESTERN_CAPITAL_CIVILIAN ; done
+	object_event 16, 16, SPRITE_FISHER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, WesternCapitalNPC1Text, EVENT_WESTERN_CAPITAL_CIVILIAN ; done
+	object_event 26, 27, SPRITE_FISHER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, WesternCapitalHisuiText1, EVENT_WESTERN_CAPITAL_CIVILIAN ; done
+	object_event 28, 19, SPRITE_BEAUTY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, WesternCapitalNPC2Text, EVENT_WESTERN_CAPITAL_CIVILIAN ; done
+	object_event 16, 21, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, WesternCapitalNPC3Text, EVENT_WESTERN_CAPITAL_CIVILIAN ; done
+	object_event 18, 26, SPRITE_SAGE, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, WesternCapitalNPC4Text, EVENT_WESTERN_CAPITAL_CIVILIAN ; done
+	object_event 9, 17, SPRITE_GRANNY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, WesternCapitalNPC5Text, EVENT_WESTERN_CAPITAL_CIVILIAN ; done
+	object_event 5, 6, SPRITE_BRIGADER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_COMMAND, jumptextfaceplayer, WCBrigaderText, EVENT_WESTERN_CAPITAL_CIVILIAN ; done
 
 	object_const_def
 	const WESTERN_CAPITAL_MEJIMI
@@ -498,4 +504,48 @@ WesternCapitalNPC5Text:
 	line "us in case of an"
 	cont "ambush by the"
 	cont "outsiders."
+	done
+
+WCBrigaderText:
+	text "Off-limits until"
+	line "the tower is"
+	cont "blessed."
+	done
+
+
+WCBrassTowerText:
+	text "Brass Tower"
+	line "Devoted to"
+	cont "Emperor Mejimi!"
+	done
+
+WCTinTowerText:
+	text "Tin Tower"
+	line "Protected by"
+	cont "spirits"
+	done
+
+WCGardenText:
+	text "Emperor's Garden"
+	line "Home to refined"
+	cont "#mon"
+	done
+	
+WCDanceText:
+	text "Kimono Theatre"
+	line "A neverending"
+	cont "tapestry"
+	done
+
+WCGloryToMejimiText:
+	text "Welcome the new"
+	line "age - Glory to"
+	cont "Emperor Mejimi!"
+	done
+	
+WCSignText:
+	text "Western Capital"
+	line "Protected by"
+	para "Chronicler"
+	line "Samsara"
 	done

@@ -7,8 +7,8 @@ CattleCull38_MapScriptHeader:
 
 
 	def_warp_events
-	warp_event 35,  8, CAPITAL_CULL_CATE, 3
-	warp_event 35,  9, CAPITAL_CULL_CATE, 4
+	warp_event 35,  8, CAPITAL_CULL_GATE, 3
+	warp_event 35,  9, CAPITAL_CULL_GATE, 4
 
 
 	def_coord_events
