@@ -32,6 +32,45 @@ LandingDorms_MapScriptHeader:
 	object_const_def
 
 
+
+LandingDormsNPC1Text:
+	text "Do you know the"
+	line "legend of the"
+	cont "whirl islands?"
+	
+	para "They can only"
+	line "be navigated"
+	cont "by your talents"
+	cont "alone."
+	done
+	
+LandingDormsNPC2Text:
+	text "We navigated to"
+	line "those sheltered"
+	cont "shores south of"
+	cont "the port every"
+	cont "summer."
+	
+	para "Then, when winter"
+	line "monsoons arrived,"
+	cont "we surfed to the"
+	cont "cliffs here."
+	done
+
+LandingDormsNPC3Text:
+	text "Don't try to use"
+	line "a map to find"
+	cont "your way in the"
+	cont "whirlpools."
+	
+	para "Our histories ar"
+	line "full of fools who"
+	cont "tried to do so,"
+	cont "and were lost"
+	cont "at sea!"
+	done
+	
+
 TradersLandingDormsBed:
 	showtext TradersLandingBedText1
 	special Special_FadeBlackQuickly
