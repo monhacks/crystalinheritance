@@ -689,29 +689,47 @@ PryceScript:
 	writetext PrycePokemonText
 	promptbutton
 	verbosegivetmhm TM_RETURN
+	writetext PryceWatchKurtPleaseText
 	setevent EVENT_GOT_RETURN_PRYCE
 	setevent EVENT_TALKED_TO_PRYCE_TINDER_GARDEN
 	jumpthisopenedtext
 
 PryceSprigText:
-	text "You might have not-"
-	line "iced, gym leaders"
-	cont "have abandoned"
-	cont "their posts."
-
-	para "They're cynical, or"
-	line "vain, or worse!"
-	
-	para "I'm taking a sprig"
-	line "of this tree, and"
-	cont "maybe that will"
-	
-	para "remind them that"
-	line "if they don't fos-"
-	cont "ter their towns,"
-	
-	para "then their towns"
-	line "will wither up!"
+	text "<PLAYER>, please"
+	line "look out for Kurt"
+	cont "for me, alright?"
+	para "He means well,"
+	line "he truly does."
+	cont "But that passion"
+	cont "can lead him"
+	cont "astray at times."
+	para "Be patient with"
+	line "him. His whole"
+	cont "life's work..."
+	para "All that forest"
+	line "wisdom he gath-"
+	cont "ered to pass on,"
+	para "This fast world"
+	line "just sped on by,"
+	cont "too busy to hear"
+	cont "what he had to"
+	cont "share."
+	para "Left him standing"
+	line "there, arms full"
+	cont "of the things he"
+	cont "loves most,"
+	para "Watching it all"
+	line "hurry past him,"
+	cont "unheard, unseen."
+	para "But you know,"
+	line "he's got a point."
+	cont "The gym leaders"
+	cont "could stand to"
+	para "learn a thing or"
+	line "two from him"
+	cont "about how to"
+	cont "do right by this"
+	cont "land we share."
 	done
 
 PrycePokemonText:
@@ -720,8 +738,9 @@ PrycePokemonText:
 
 	para "Forgive my"
 	line "tardiness, I was"
-	cont "caught up with an-"
-	cont "other gym leader."
+	cont "in a feisty talk"
+	cont "with another gym"
+	cont "leader."
 
 	para "Your very own"
 	line "#mon partner!"
