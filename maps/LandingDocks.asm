@@ -1,11 +1,13 @@
-LandingDocks_MapScriptHeader: ;	def_scene_scripts
+LandingDocks_MapScriptHeader: 
+	def_scene_scripts
 
 
 	def_callbacks
 
 
 	def_warp_events
-
+	warp_event 2, 19, ARDUOUS_ANCHORAGE, 2
+	warp_event 3, 19, ARDUOUS_ANCHORAGE, 2
 
 
 	def_coord_events

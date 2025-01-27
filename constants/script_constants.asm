@@ -185,9 +185,9 @@ NUM_EMOTES EQU const_value
 EMOTE_FROM_MEM EQU -1
 
 ;Jeze Ball / RADIANT OPAL
-;Bub Ball
-;Deci Ball
-;Herb Ball / 
+;Bub Ball / SHORE FOAM 
+;Deci Ball / FIXED CHARGE 
+;Herb Ball / TOUGH LEAVES 
 ;Fast Ball / WHT APRICORN
 ;Geode / HOLLOW ROCK
 ;Love Ball / PNK APRICORN
@@ -202,7 +202,7 @@ EMOTE_FROM_MEM EQU -1
 	const FRUITTREE_ROUTE_37_2      ; 03 wht apx 
 	const FRUITTREE_ROUTE_37_3      ; 04 shore foam 
 	const FRUITTREE_CALM_COAST_3      ; 05 PNK APRICORN
-	const FRUITTREE_MAGNET_TUNNEL      ; 06 FIXED CHARGE, todo
+	const FRUITTREE_ROUTE_32      ; 06 FIXED CHARGE, todo
 	const FRUITTREE_GAULDENROD      ; 07 radiant opal
 	const FRUITTREE_ILEX_FOREST     ; 08 shore foam
 	const FRUITTREE_UNION_CAVE      ; 09 hollow rock
@@ -223,15 +223,15 @@ FIRST_BERRY_TREE EQU const_value
 	const FRUITTREE_ROUTE_43        ; 13
 	const FRUITTREE_ROUTE_44        ; 14
 	const FRUITTREE_ROUTE_45        ; 15
-	const FRUITTREE_ROUTE_46_1      ; 16
-	const FRUITTREE_ROUTE_46_2      ; 17
+	const FRUITTREE_KAJO_ACQUIFER     ; 16 ; RADIANT OPAL  
+	const FRUITTREE_ROUTE_KAJO      ; 17 ; HOLLOW ROCK AT KAJO  
 	const FRUITTREE_EMPERORS_GARDEN_1        ; 18 wht apx 
 	const FRUITTREE_EMPERORS_GARDEN_2        ; 19 lum berry 
 	const FRUITTREE_EMPERORS_GARDEN_3         ; 1a sitrus 
-	const FRUITTREE_ROUTE_11        ; 1b ; unused 
-	const FRUITTREE_FUCHSIA_CITY    ; 1c
-	const FRUITTREE_PEWTER_CITY_1   ; 1d
-	const FRUITTREE_PEWTER_CITY_2   ; 1e
+	const FRUITTREE_CIANWOOD_COVE        ; 1b ; SHORE FOAM  
+	const FRUITTREE_TRANQIL_TARN_1    ; 1c ; ANOTHER TOUGH LEAVES?? ;  
+	const FRUITTREE_TRANQIL_TARN_2   ; 1d ; RADIANT OPAL ;  
+	const FRUITTREE_GOLDENROD_CITY   ; 1e ; FIXED CHARGE
 	const FRUITTREE_ROUTE_2         ; 1f
 	const FRUITTREE_ROUTE_1         ; 20
 	const FRUITTREE_LUCKY_ISLAND    ; 21

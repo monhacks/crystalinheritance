@@ -50,7 +50,7 @@
 	tilecoll FLOOR, FLOOR, FLOOR, LADDER ; 31
 	tilecoll WALL, WALL, WALL, WALL ; 32
 	tilecoll WALL, FLOOR, WALL, FLOOR ; 33
-	tilecoll WALL, WALL, PC, FLOOR ; 34
+	tilecoll FLOOR, FLOOR, HOLE, HOLE ; 34
 	tilecoll FLOOR, FLOOR, FLOOR, TRASH_CAN ; 35
 	tilecoll FLOOR, WALL, FLOOR, WALL ; 36
 	tilecoll WALL, WALL, WALL, WALL ; 37

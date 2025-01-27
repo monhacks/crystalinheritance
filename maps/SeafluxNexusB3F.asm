@@ -4,6 +4,8 @@ SeafluxNexusB3F_MapScriptHeader:
 	def_callbacks
 
 	def_warp_events
+	warp_event ... SEAFLUX_NEXUS_B2F_4
+
 
 	def_coord_events
 

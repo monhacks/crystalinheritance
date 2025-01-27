@@ -302,7 +302,7 @@ ENDM
 	map_const SHELTERED_SHORES,                            27, 27 ; johto overcast
 	map_const RUSALKA_RUINS_1F,                            16,  9 ; LIGHTHOUSE
 	map_const RUSALKA_RUINS_B1F,                           14,  7 ; LIGHTHOUSE
-	map_const RUSALKA_RUINS_LIT_CABINS,                    13,  8 ; LIGHTHOUSE
+	map_const RUSALKA_RUINS_LIT_CABINS,                    15,  8 ; LIGHTHOUSE
 	map_const RUSALKA_RUINS_DARK_CABINS,                    5,  8 ; LIGHTHOUSE
 	map_const RUSALKA_RUINS_CAPTAIN,                        5,  6 ; lighthouse
 	map_const SEAFLUX_NEXUS,                               20, 14 ; cave

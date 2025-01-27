@@ -26,7 +26,7 @@ Marts:
 	dw GauldenrodMart3
 	dw WesternCapitalMart
 	dw WesternCapitalMart_TM
-	dw TradersLandingMart
+	dw TradersLandingMart_TM
 	dw TradersLandingMart_Items
 	dw SinjohCrossroadsMart
 	dw EerieHamletMart
@@ -263,18 +263,13 @@ WesternCapitalMart_TM:
 	db X_ATTACK
 	db -1
 
-TradersLandingMart:
-	db 9 ; # items
-	db RARE_CANDY
-	db MAX_REPEL
-	db ULTRA_BALL
-	db SUPER_POTION
-	db HYPER_POTION
-	db FULL_HEAL
-	db REVIVE
-	db X_ATTACK
-	db X_SPEED
+TradersLandingMart_TM:
+	db 5 ; # items
+	dbw TM_FLAMETHROWER,  20000
+	dbw TM_ICE_BEAM,      20000
+	dbw TM_THUNDERBOLT,   20000
 	db -1
+	
 AnarresMart:
 	db 9 ; # items
 	db RARE_CANDY

@@ -37,7 +37,7 @@ Route32_MapScriptHeader: ; convert all to generictrainers, freida to give venosh
 	itemball_event 6, 83, GEODE, 5, EVENT_ROUTE_32_REPEL
 	itemball_event 10, 14, BUB_BALL, 5, EVENT_ROUTE_32_GREAT_BALL
 	cuttree_event 10, 19, EVENT_ROUTE_32_CUT_TREE
-
+	fruittree_event 3, 31, FRUITTREE_ROUTE_32, FIXED_CHARGE, PAL_NPC_RED;OK
 
 	object_const_def
 

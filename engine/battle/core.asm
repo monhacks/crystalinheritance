@@ -3273,6 +3273,18 @@ SpikesDamage_GotAbility:
 .poststatus_done
 	jmp SwitchTurn
 
+HandleRoyalBlessing:
+; prints royal blessing and returns z if not, cf handleairballoon below 
+	farcall GetUserItem
+	ld a, b
+	cp HELD_ROYAL_BLESSING
+	ret nz
+	call GetCurItemName
+	ld hl, NotifyRoyalBlessingText
+	call StdBattleTextbox
+	xor a
+	ret
+
 HandleAirBalloon:
 ; prints air balloon msg and returns z if we have air balloon
 	farcall GetUserItem

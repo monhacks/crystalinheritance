@@ -464,6 +464,13 @@ AirBalloonPoppedText:
 	line "Air Balloon"
 	cont "popped!"
 	prompt
+	
+RoyalBlessingConsumedText: ; CF ABOVE 
+	text "The Royal Bless-"
+	line "ing was consumed"
+	cont "by the super-"
+	cont "effective hit!"
+	prompt
 
 BattleText_UsersStringBuffer1Activated:
 	text "<USER>'s"
@@ -1407,6 +1414,12 @@ IgnoredOrders2Text:
 BecameHealthyText:
 	text "<USER>"
 	line "became healthy!"
+	prompt
+
+NotifyRoyalBlessingText:
+	text "<USER>"
+	line "has a Royal"
+	cont "Blessing!"
 	prompt
 
 NotifyAirBalloonText:

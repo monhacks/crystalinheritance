@@ -49,6 +49,7 @@ RouteKajo_MapScriptHeader: ; trainer parties, check warps
 	itemball_event 33, 15, ELIXIR, 1, EVENT_KAJO_ELIXIR ;ok
 	tmhmball_event 50,  1, TM_STEEL_WING, EVENT_GOT_TM47_STEEL_WING ; ok 
     object_event 16, 30, SPRITE_HIKER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, RouteKajoHollowRockScript, -1
+	fruittree_event 18, 23, FRUITTREE_ROUTE_KAJO, HOLLOW_ROCK, PAL_NPC_RED; OK
 
 	object_const_def
 	const KAJO_SCHOOLGIRL

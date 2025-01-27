@@ -26,6 +26,8 @@ KurtsHouse_MapScriptHeader: ; todo add the ability to make apricorns here at the
 	def_object_events
 	object_event    6,  3, SPRITE_KURT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KurtHouseScript, EVENT_KURTS_HOUSE_KURT_0 ;
 	object_event  7,  3, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, IlexExcelsiorV5Script, EVENT_KURTS_HOUSE_NOTEBOOK
+	object_event  8,  4, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, FiddlerBookScript, -1	
+	
 	pokemon_event  14,  4, SHUCKLE, -1, -1, PAL_NPC_RED, KurtsHouseShuckleText, -1
 
 ; kurt is at the celebi shrine if you visit later
@@ -615,4 +617,19 @@ IlexExcelsiorV5Text:
 
 	para "We must save"
 	line "union cave"
+	done
+
+FiddlerBookScript:
+	opentext
+	writetext FiddlerBookText
+	waitbutton
+	closetext
+	end
+
+FiddlerBookText:
+	text "What's this book?"
+	line "The cover shows a"
+	para "man on the roof"
+	line "with a small str-"
+	cont "ing instrument."
 	done

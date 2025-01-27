@@ -1,11 +1,13 @@
-ArduousAnchorage_MapScriptHeader: ;	def_scene_scripts
+ArduousAnchorage_MapScriptHeader: 
+	def_scene_scripts
 
 
 	def_callbacks
 
 
 	def_warp_events
-
+	warp_event 6, 25, PHANTOM_FJORD, 1
+	warp_event 31, 11, LANDING_DOCKS, 1
 
 
 	def_coord_events

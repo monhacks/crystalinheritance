@@ -41,6 +41,7 @@ Back Sprites if different from above:
 * DWG: H__Arcanine, Hippowdon, Heatran, Grotle, Sneasler, Overqwil, Basculegion, H__Avalugg, Skuntank
 * Pokewilds: wyrdeer, hgoodra, hzoroark, hsliggoo, spiritomb, jumpluff, monferno, infernape, prinplup, bastiodon, gabite, garchomp, rotom, dusclops, dusknoir, rampardos, ambipom, empoleon, lopunny, snover, abomasnow, hbraviary, htyphlosion, hsamurott, kleavor, luxio, luxray, helectrode, rowlet, hdecidueye, skiploom, stantler, staraptor, torterra, staravia, ursaluna, vespiquen
 
+
 ## Trainer Sprites
 
 * Mejimi: Pokets3
@@ -48,11 +49,12 @@ Back Sprites if different from above:
 * Bronzeswagger for Samsara sprite 
 * Justinnuggets for scavenger (diver) trainer sprite 
 * Justin8964 for the Phoebe sprite (nomad female) and Hollis
+* Ferropexola for Ninja trainer and overworld sprites 
+
 
 ## Box Art
 
-* Assets adapted from Pokemon Trading Card Game art. 
-
+* Assets adapted from Pokemon Trading Card Game art in GIMP  
 
 ## Miscellaneous
 

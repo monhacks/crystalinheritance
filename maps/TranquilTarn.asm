@@ -1,4 +1,5 @@
-TranquilTarn_MapScriptHeader: ;	def_scene_scripts
+TranquilTarn_MapScriptHeader: 
+	def_scene_scripts
 
 
 	def_callbacks
@@ -17,7 +18,7 @@ TranquilTarn_MapScriptHeader: ;	def_scene_scripts
 
 
 	def_object_events
-
-
+	fruittree_event 17, 26, FRUITTREE_TRANQIL_TARN_1, TOUGH_LEAVES, PAL_NPC_GREEN;OK
+	fruittree_event 30, 15, FRUITTREE_TRANQIL_TARN_2, RADIANT_OPAL, PAL_NPC_RED;OK
 
 	object_const_def

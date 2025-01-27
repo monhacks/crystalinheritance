@@ -21,6 +21,8 @@ KajoAcquifer_MapScriptHeader: ;	def_scene_scripts
 	itemball_event 11,  2, REVIVE, 1, EVENT_KAJO_REVIVE ;ok
 	itemball_event 13,  5, SUPER_POTION, 1, EVENT_KAJO_POTION ;ok
 	itemball_event  3, 12, ODD_SOUVENIR, 1, EVENT_KAJO_SOUVENIR ;ok
+	fruittree_event 21, 2, FRUITTREE_KAJO_ACQUIFER, RADIANT_OPAL, PAL_NPC_RED;OK
+
 
 	object_const_def
 
