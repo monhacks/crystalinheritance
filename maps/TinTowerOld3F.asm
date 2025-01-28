@@ -13,14 +13,14 @@ TinTowerOld3F_MapScriptHeader: ;	def_scene_scripts
 	coord_event 7, 10, 0, TT3F_CCW_Bottom_Trigger
 	coord_event 7, 10, 1, TT3F_CW_Bottom_Trigger
 	
-;	coord_event 10, 9, 0, TT3F_CCW_Right_Trigger
-;	coord_event 10, 9, 1, TT3F_CW_Right_Trigger
+	coord_event 10, 9, 0, TT3F_CCW_Right_Trigger
+	coord_event 10, 9, 1, TT3F_CW_Right_Trigger
 	
-;	coord_event 8, 4, 0, TT3F_CCW_Top_Trigger
-;	coord_event 8, 4, 1, TT3F_CW_Top_Trigger
+	coord_event 8, 4, 0, TT3F_CCW_Top_Trigger
+	coord_event 8, 4, 1, TT3F_CW_Top_Trigger
 	
-;	coord_event 5, 7, 0, TT3F_CCW_Left_Trigger
-;	coord_event 5, 7, 1, TT3F_CW_Left_Trigger
+	coord_event 5, 7, 0, TT3F_CCW_Left_Trigger
+	coord_event 5, 7, 1, TT3F_CW_Left_Trigger
 
 	def_bg_events
 
@@ -108,7 +108,208 @@ Player_CW_Bottom_Move:
 	step_left
 	step_left
 	step_end
+
+;;; todo all the movmenets 
+
+TT3F_CCW_Right_Trigger:
+	pause 5
+	appear TIN_TOWER_OLD_3F_HAUNTER_1
+	pause 5
+	disappear TIN_TOWER_OLD_3F_HAUNTER_1
+	pause 5
+	appear TIN_TOWER_OLD_3F_HAUNTER_2
+	pause 5
+	disappear TIN_TOWER_OLD_3F_HAUNTER_2
+	pause 5
+	appear TIN_TOWER_OLD_3F_HAUNTER_3
+	pause 5
+	disappear TIN_TOWER_OLD_3F_HAUNTER_3
+	pause 5
+	appear TIN_TOWER_OLD_3F_HAUNTER_4
+	pause 5
+	disappear TIN_TOWER_OLD_3F_HAUNTER_4
+	pause 5
+	applymovement PLAYER, Player_CCW_Bottom_Move
+	setscene $1
+	end
 	
+TT3F_CW_Right_Trigger:
+	pause 5
+	appear TIN_TOWER_OLD_3F_HAUNTER_4
+	pause 5
+	disappear TIN_TOWER_OLD_3F_HAUNTER_4
+	pause 5
+	appear TIN_TOWER_OLD_3F_HAUNTER_3
+	pause 5
+	disappear TIN_TOWER_OLD_3F_HAUNTER_3
+	pause 5
+	appear TIN_TOWER_OLD_3F_HAUNTER_2
+	pause 5
+	disappear TIN_TOWER_OLD_3F_HAUNTER_2
+	pause 5
+	appear TIN_TOWER_OLD_3F_HAUNTER_1
+	pause 5
+	disappear TIN_TOWER_OLD_3F_HAUNTER_1
+	pause 5
+	applymovement PLAYER, Player_CW_Bottom_Move
+	setscene $0
+	end
+
+Player_CCW_Right_Move:; todo 
+	step_up
+	step_right
+	step_right
+	step_right
+	step_right
+	step_right
+	step_end
+	
+Player_CW_Right_Move:
+	step_up
+	step_left
+	step_up
+	step_up
+	step_left
+	step_left
+	step_left
+	step_end
+
+
+
+TT3F_CCW_Bottom_Trigger:
+	pause 5
+	appear TIN_TOWER_OLD_3F_HAUNTER_1
+	pause 5
+	disappear TIN_TOWER_OLD_3F_HAUNTER_1
+	pause 5
+	appear TIN_TOWER_OLD_3F_HAUNTER_2
+	pause 5
+	disappear TIN_TOWER_OLD_3F_HAUNTER_2
+	pause 5
+	appear TIN_TOWER_OLD_3F_HAUNTER_3
+	pause 5
+	disappear TIN_TOWER_OLD_3F_HAUNTER_3
+	pause 5
+	appear TIN_TOWER_OLD_3F_HAUNTER_4
+	pause 5
+	disappear TIN_TOWER_OLD_3F_HAUNTER_4
+	pause 5
+	applymovement PLAYER, Player_CCW_Bottom_Move
+	setscene $1
+	end
+	
+TT3F_CW_Bottom_Trigger:
+	pause 5
+	appear TIN_TOWER_OLD_3F_HAUNTER_4
+	pause 5
+	disappear TIN_TOWER_OLD_3F_HAUNTER_4
+	pause 5
+	appear TIN_TOWER_OLD_3F_HAUNTER_3
+	pause 5
+	disappear TIN_TOWER_OLD_3F_HAUNTER_3
+	pause 5
+	appear TIN_TOWER_OLD_3F_HAUNTER_2
+	pause 5
+	disappear TIN_TOWER_OLD_3F_HAUNTER_2
+	pause 5
+	appear TIN_TOWER_OLD_3F_HAUNTER_1
+	pause 5
+	disappear TIN_TOWER_OLD_3F_HAUNTER_1
+	pause 5
+	applymovement PLAYER, Player_CW_Bottom_Move
+	setscene $0
+	end
+
+Player_CCW_Bottom_Move:
+	step_up
+	step_right
+	step_right
+	step_right
+	step_right
+	step_right
+	step_end
+	
+Player_CW_Bottom_Move:
+	step_up
+	step_left
+	step_up
+	step_up
+	step_left
+	step_left
+	step_left
+	step_end
+
+
+TT3F_CCW_Bottom_Trigger:
+	pause 5
+	appear TIN_TOWER_OLD_3F_HAUNTER_1
+	pause 5
+	disappear TIN_TOWER_OLD_3F_HAUNTER_1
+	pause 5
+	appear TIN_TOWER_OLD_3F_HAUNTER_2
+	pause 5
+	disappear TIN_TOWER_OLD_3F_HAUNTER_2
+	pause 5
+	appear TIN_TOWER_OLD_3F_HAUNTER_3
+	pause 5
+	disappear TIN_TOWER_OLD_3F_HAUNTER_3
+	pause 5
+	appear TIN_TOWER_OLD_3F_HAUNTER_4
+	pause 5
+	disappear TIN_TOWER_OLD_3F_HAUNTER_4
+	pause 5
+	applymovement PLAYER, Player_CCW_Bottom_Move
+	setscene $1
+	end
+	
+TT3F_CW_Bottom_Trigger:
+	pause 5
+	appear TIN_TOWER_OLD_3F_HAUNTER_4
+	pause 5
+	disappear TIN_TOWER_OLD_3F_HAUNTER_4
+	pause 5
+	appear TIN_TOWER_OLD_3F_HAUNTER_3
+	pause 5
+	disappear TIN_TOWER_OLD_3F_HAUNTER_3
+	pause 5
+	appear TIN_TOWER_OLD_3F_HAUNTER_2
+	pause 5
+	disappear TIN_TOWER_OLD_3F_HAUNTER_2
+	pause 5
+	appear TIN_TOWER_OLD_3F_HAUNTER_1
+	pause 5
+	disappear TIN_TOWER_OLD_3F_HAUNTER_1
+	pause 5
+	applymovement PLAYER, Player_CW_Bottom_Move
+	setscene $0
+	end
+
+Player_CCW_Bottom_Move:
+	step_up
+	step_right
+	step_right
+	step_right
+	step_right
+	step_right
+	step_end
+	
+Player_CW_Bottom_Move:
+	step_up
+	step_left
+	step_up
+	step_up
+	step_left
+	step_left
+	step_left
+	step_end
+
+
+
+
+
+;;;
+
+
 GenericTrainerSageJeffrey:
     generictrainer SAGE, JEFFREY, EVENT_BEAT_SAGE_JEFFREY, SageJeffreySeenText, SageJeffreyBeatenText
 

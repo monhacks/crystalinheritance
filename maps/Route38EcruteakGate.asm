@@ -20,22 +20,22 @@ Route38EcruteakGate_MapScriptHeader:
 ProfOaksAide2Script:
 	faceplayer
 	opentext
-	checkevent EVENT_GOT_EXP_SHARE_FROM_PROF_OAKS_AIDE
+	checkevent EVENT_GOT_SHINY_CHARM_FROM_PROF_OAKS_AIDE
 	iftrue .Explain
 	writetext ProfOaksAide2HiText
 	waitbutton
 	countseencaught
 	readvar VAR_DEXCAUGHT
-	ifgreater 29, .HereYouGo
+	ifgreater 49, .HereYouGo
 .UhOh
 	jumpopenedtext ProfOaksAide2UhOhText
 
 .HereYouGo
 	writetext ProfOaksAide2HereYouGoText
 	waitbutton
-	verbosegiveitem EXP_SHARE
+	verbosegiveitem SHINY_CHARM
 	iffalse .NoRoom
-	setevent EVENT_GOT_EXP_SHARE_FROM_PROF_OAKS_AIDE
+	setevent EVENT_GOT_SHINY_CHARM_FROM_PROF_OAKS_AIDE
 .Explain
 	jumpopenedtext ProfOaksAide2ExplainText
 
@@ -46,20 +46,17 @@ Route38EcruteakGateOfficerText:
 	text "Where did you say"
 	line "you're from?"
 
-	para "New Bark Town?"
+	para "Azalea?"
 
-	para "Prof.Elm lives"
-	line "over there, right?"
-
-	para "You've come a long"
-	line "way to get here."
+	para "Oh, I get a maga-"
+	line "zine from there."
 	done
 
 ProfOaksAide2HiText:
 	text "Hello there! I'm"
 	line "Prof.Oak's aide."
 
-	para "If you caught 30"
+	para "If you caught 50"
 	line "kinds of #mon,"
 
 	para "I'm supposed to"
@@ -83,7 +80,7 @@ ProfOaksAide2UhOhText:
 
 	para "Come back and see"
 	line "me when you catch"
-	cont "30 kinds."
+	cont "50 kinds."
 	done
 
 ProfOaksAide2HereYouGoText:
@@ -106,13 +103,8 @@ ProfOaksAide2NoRoomText:
 	done
 
 ProfOaksAide2ExplainText:
-	text "That Exp.Share"
-	line "helps a #mon"
-
-	para "gain experience"
-	line "without even"
-	cont "battling."
-
-	para "Use it to com-"
-	line "plete the #dex!"
+	text "That Shiny Charm"
+	line "raises your odds"
+	cont "of finding shiny"
+	cont "#mon."
 	done

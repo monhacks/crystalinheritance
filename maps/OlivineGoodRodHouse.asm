@@ -17,34 +17,39 @@ OlivineGoodRodHouse_MapScriptHeader:
 GoodRodGuru:
 	faceplayer
 	opentext
-	checkevent EVENT_GOT_GOOD_ROD
+	checkevent EVENT_GOT_SUPER_ROD
 	iftrue_jumpopenedtext HaveGoodRodText
 	writetext OfferGoodRodText
 	yesorno
 	iffalse_jumpopenedtext DontWantGoodRodText
 	writetext GiveGoodRodText
 	promptbutton
-	verbosegivekeyitem GOOD_ROD
+	verbosegivekeyitem SUPER_ROD
 	writetext GaveGoodRodText
 	waitbutton
 	closetext
-	setevent EVENT_GOT_GOOD_ROD
+	setevent EVENT_GOT_SUPER_ROD
 	end
 
 OfferGoodRodText:
-	text "Olivine is on the"
-	line "sea!"
-
-	para "And if it's on the"
-	line "sea, there are"
-	cont "bound to be fish!"
-
-	para "I've fished here"
-	line "for 30 years."
-
-	para "Would you like to"
-	line "face the sea and"
-	cont "fish?"
+	text "The sea is more"
+	line "angry every day."
+	
+	para "Only an expert"
+	line "fisher would dare"
+	cont "go out there,"
+	
+	para "on the sandbar,"
+	line "with only his"
+	cont "rod and his wits."
+	
+	para "This super rod"
+	line "catches the most"
+	cont "angry fish in the"
+	cont "whole ocean."
+	
+	para "Does that sound"
+	line "like you, lad?"
 	done
 
 GiveGoodRodText:
@@ -54,11 +59,9 @@ GiveGoodRodText:
 	done
 
 GaveGoodRodText:
-	text "Fish aren't found"
-	line "in the sea alone."
-
-	para "They go wherever"
-	line "there is water."
+	text "Don't take my"
+	line "best fishing"
+	cont "spots, hear?"
 	done
 
 DontWantGoodRodText:

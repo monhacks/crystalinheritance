@@ -4,8 +4,8 @@ MoveManiacsHouse_MapScriptHeader:
 	def_callbacks
 
 	def_warp_events
-	warp_event  2,  7, CIANWOOD_CITY, 7
-	warp_event  3,  7, CIANWOOD_CITY, 7
+	warp_event  2,  7, CIANWOOD_CITY, 3
+	warp_event  3,  7, CIANWOOD_CITY, 3
 
 	def_coord_events
 
@@ -20,7 +20,7 @@ MoveReminderScript:
 	opentext
 	writetext MoveReminderIntroText
 	waitbutton
-	checkitem GOLD_LEAF
+	checkitem BIG_PEARL
 	iffalse .no_gold_leaf
 	writetext MoveReminderPromptText
 	yesorno
@@ -37,19 +37,19 @@ MoveReminderScript:
 	jumpopenedtext MoveReminderNoGoldLeafText
 
 .teach_move
-	takeitem GOLD_LEAF
+	takeitem BIG_PEARL
 	jumpopenedtext MoveReminderCancelText
 
 MoveReminderIntroText::
-	text "Me? I'm the"
-	line "Move Maniac."
-
-	para "I'll make your"
-	line "#mon remember"
-
-	para "a move if you'll"
-	line "trade me a"
-	cont "Gold Leaf!"
+	text "Why am I here?"
+	line "I'm the move re-"
+	cont "minder."
+	
+	para "And someone needs"
+	line "to remember this"
+	cont "sandy little city"
+	cont "until it washes"
+	cont "into the sea."
 	done
 
 MoveReminderPromptText::
@@ -65,12 +65,8 @@ MoveReminderWhichMonText::
 
 MoveReminderNoGoldLeafText::
 	text "Huh? You don't"
-	line "have any Gold"
-	cont "Leaves."
-
-	para "Sometimes you can"
-	line "find them on wild"
-	cont "Bellsprout."
+	line "have any Big"
+	cont "Pearls."
 	done
 
 MoveReminderNoMovesText::
@@ -86,5 +82,5 @@ MoveReminderCancelText::
 	line "needs to learn a"
 
 	para "move, come back"
-	line "with a Gold Leaf!"
+	line "with a Big Pearl!"
 	done

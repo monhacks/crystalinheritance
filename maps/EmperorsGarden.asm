@@ -32,6 +32,8 @@ EmperorsGarden_MapScriptHeader: ;	def_scene_scripts
 	object_event  	21,	6,	 	SPRITE_ADRINNA, SPRITEMOVEDATA_STANDING_LEFT, 	0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_EMPERORS_GARDEN_KENSEY ;	
 	object_event  	13,	10,	 	SPRITE_ADRINNA, SPRITEMOVEDATA_STANDING_UP, 	0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_EMPERORS_GARDEN_ADRINNA ;	
 
+	object_event 	16, 20, 	SPRITE_AMOS, 	SPRITEMOVEDATA_STANDING_UP,  	0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AmosGardenScript, EVENT_BATTLED_AMOS_GARDEN ;	
+
 	object_event	22,	30, 	SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_DOWN, 	0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptext, EG_Brigader_Text1, -1 ;
 	object_event	22,	31, 	SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_UP, 	0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptext, EG_Brigader_Text2, -1 ;
 
@@ -58,6 +60,8 @@ EmperorsGarden_MapScriptHeader: ;	def_scene_scripts
 	const EMPERORS_GARDEN_ADRINNA_2
 	const EMPERORS_GARDEN_ADRINNA_3
 	const EMPERORS_GARDEN_ADRINNA_4
+	
+	const EMPERORS_GARDEN_AMOS
 
 EG_Brigader_Text2:
 	text "Brigader: No, I"
@@ -551,3 +555,59 @@ EG_PanDownMovement:
 	step_down
 	step_down
 	step_end
+
+AmosGardenScript:
+	faceplayer
+	showemote EMOTE_SHOCK, EMPERORS_GARDEN_AMOS, 10
+	showtext AmosSuspectsYouText
+	winlosstext AmosWLText, AmosWLText
+	loadtrainer AMOS, 1 
+	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+	startbattle
+	dontrestartmapmusic
+	reloadmap	
+	showtext AmosGardenAfterBattleText
+	applyonemovement EMPERORS_GARDEN_AMOS, teleport_from
+	disappear EMPERORS_GARDEN_ADRINNA_4
+	setevent EVENT_BATTLED_AMOS_GARDEN
+	end
+
+AmosSuspectsYouText:
+	text "Who are you? I"
+	line "have seen you now"
+	cont "with Hollis, then"
+	cont "Samsara, always"
+	
+	para "as things are at"
+	line "their worst."
+	
+	para "Now, you meet"
+	line "General Adrinna"
+	cont "in some secret"
+	cont "meeting?"
+	
+	para "Battle me, so I"
+	line "can see your"
+	cont "true colors."
+	done
+	
+AmosWLText:
+	text "Hm, I see... Your"
+	line "home is threat-"
+	cont "ened by a king of"
+	cont "a different kind."
+	done
+
+AmosGardenAfterBattleText:
+	text "I know you want"
+	line "to save your"
+	cont "home, but to me,"
+	
+	para "it seems you are"
+	line "just getting in"
+	cont "my way."
+	
+	para "Let me handle"
+	line "this. Go home."
+	done
+	

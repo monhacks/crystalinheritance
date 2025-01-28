@@ -189,7 +189,7 @@ DewottEvosAttacks:
 	db 6, AQUA_JET
 	db 10, FOCUS_ENERGY
 	db 13, BITE
-	db 21, WATER_PULSE ; Flame Wheel → Defense Curl
+	db 19, WATER_PULSE ; Flame Wheel → Defense Curl
 	db 25, SLASH ; Defense Curl → Flame Charge
 	db 30, AQUA_TAIL ; Flame Charge → TM move
 	db 33, HEADBUTT
