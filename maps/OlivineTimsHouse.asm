@@ -29,7 +29,7 @@ ChoiceBandScript:
 	writetext AfterChoiceBandText
 	waitbutton
 	closetext
-	setevent EVENT_GOT_SUPER_ROD
+	setevent EVENT_GOT_CHOICE_BAND
 	end
 
 OfferChoiceBandText:

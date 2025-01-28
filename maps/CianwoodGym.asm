@@ -13,18 +13,19 @@ CianwoodGym_MapScriptHeader:
 	bg_event  3, 15, BGEVENT_READ, CianwoodGymStatue
 	bg_event  6, 15, BGEVENT_READ, CianwoodGymStatue
 
+
 	def_object_events
 	; NPC TO RESET THE TRAINERS TODO 
-	object_event  0, 0, SPRITE_BLACK_BELT, SPRITEMOVEDATA_SPIN_CLOCKWISE, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBlackbeltYoshi, -1
-	object_event  0, 0, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBlackbeltLao, -1
-	object_event  0, 0, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerBlackbeltNob, -1
-	object_event  0, 0, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBlackbeltLung, -1
-	strengthboulder_event  0, 0
-	strengthboulder_event  0, 0
-	strengthboulder_event  0, 0
-	strengthboulder_event  0, 0
-	tmhmball_event 0, 0, TM_DYNAMICPUNCH, EVENT_GOT_TM01_DYNAMICPUNCH
-	itemball_event 0, 0, CHOICE_BAND, 1, EVENT_GOT_CHOICE_BAND
+	object_event  3, 10, SPRITE_BLACK_BELT, SPRITEMOVEDATA_SPINCLOCKWISE, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerBlackbeltYoshi, -1
+	object_event  3, 7, SPRITE_BLACK_BELT, SPRITEMOVEDATA_SPINCLOCKWISE, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerBlackbeltLao, -1
+	object_event  6, 3, SPRITE_BLACK_BELT, SPRITEMOVEDATA_SPINCLOCKWISE, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerBlackbeltNob, -1
+	object_event  8, 10, SPRITE_BLACK_BELT, SPRITEMOVEDATA_SPINCLOCKWISE, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerBlackbeltLung, -1
+	strengthboulder_event  5, 2
+	strengthboulder_event  6, 2
+	strengthboulder_event  4, 2
+	strengthboulder_event  7, 7
+	tmhmball_event 8, 12, TM_DYNAMICPUNCH, EVENT_GOT_TM01_DYNAMICPUNCH
+	object_event  5,  13, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 2, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CianwoodGymResetScript, -1
 
 	object_const_def
 
@@ -41,73 +42,109 @@ CianwoodGymStatue:
 GenericTrainerBlackbeltYoshi:
 	generictrainer BLACKBELT_T, YOSHI, EVENT_BEAT_BLACKBELT_YOSHI, BlackbeltYoshiSeenText, BlackbeltYoshiBeatenText
 
-	text "You seem to have a"
-	line "strong bond with"
-	cont "your #mon too!"
+	text "We will be reme-"
+	line "mbered for 100"
+	cont "years!"
 	done
+
 
 GenericTrainerBlackbeltLao:
 	generictrainer BLACKBELT_T, LAO, EVENT_BEAT_BLACKBELT_LAO, BlackbeltLaoSeenText, BlackbeltLaoBeatenText
 
-	text "Fighting #mon"
-	line "are afraid of psy-"
-	cont "chics…"
+	text "Although our city"
+	line "washes into the"
+	cont "sea, I'll never"
+	cont "stop trying to"
+	cont "save it!"
 	done
 
 GenericTrainerBlackbeltNob:
 	generictrainer BLACKBELT_T, NOB, EVENT_BEAT_BLACKBELT_NOB, BlackbeltNobSeenText, BlackbeltNobBeatenText
 
-	text "I lost!"
-	line "I'm speechless!"
+	text "How far would you"
+	line "go to save what"
+	cont "you love?"
 	done
 
 GenericTrainerBlackbeltLung:
 	generictrainer BLACKBELT_T, LUNG, EVENT_BEAT_BLACKBELT_LUNG, BlackbeltLungSeenText, BlackbeltLungBeatenText
 
-	text "My #mon lost…"
-	line "My… my pride is"
-	cont "shattered…"
+	text "I was there the"
+	line "day the seawall"
+	cont "fell. Now, I fear"
+	cont "nothing!"
 	done
 
 
 BlackbeltYoshiSeenText:
-	text "My #mon and I"
-	line "are bound togeth-"
-	cont "er by friendship."
-
-	para "Our bond will"
-	line "never be broken!"
+	text "We will be reme-"
+	line "mbered for 100"
+	cont "years!"
 	done
 
 BlackbeltYoshiBeatenText:
-	text "This isn't real!"
+	text "They may remember"
+	line "you as well."
 	done
 
 BlackbeltLaoSeenText:
-	text "We martial artists"
-	line "fear nothing!"
+	text "Although our city"
+	line "washes into the"
+	cont "sea, I'll never"
+	cont "stop trying to"
+	cont "save it!"
 	done
 
 BlackbeltLaoBeatenText:
-	text "That's shocking!"
+	text "Such dedication!"
 	done
 
 BlackbeltNobSeenText:
-	text "Words are useless."
-	line "Let your fists do"
-	cont "the talking!"
+	text "How far would you"
+	line "go to save what"
+	cont "you love?"
 	done
 
 BlackbeltNobBeatenText:
-	text "…"
+	text "Admirable."
 	done
 
 BlackbeltLungSeenText:
-	text "My raging fists"
-	line "will shatter your"
-	cont "#mon!"
+	text "I was there the"
+	line "day the seawall"
+	cont "fell. Now, I fear"
+	cont "nothing!"
 	done
 
 BlackbeltLungBeatenText:
-	text "I got shattered!"
+	text "I am at peace."
+	done
+
+CianwoodGymResetScript:
+	faceplayer
+	opentext
+	writetext ResetCianwoodGymText
+	promptbutton
+	closetext
+	clearevent EVENT_BEAT_BLACKBELT_LUNG
+	clearevent EVENT_BEAT_BLACKBELT_NOB
+	clearevent EVENT_BEAT_BLACKBELT_LAO
+	clearevent EVENT_BEAT_BLACKBELT_YOSHI
+	done
+
+ResetCianwoodGymText:
+	text "We no longer rely"
+	line "on just brute"
+	cont "strength."
+	
+	para "If you are clever"
+	line "enough, you may"
+	cont "claim our TM."
+	
+	para "I'll instruct the"
+	line "blackbelts to"
+	cont "battle you."
+	
+	para "Each one has a 2"
+	line "tile vision."
 	done
