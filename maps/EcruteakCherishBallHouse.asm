@@ -16,26 +16,6 @@ EcruteakCherishBallHouse_MapScriptHeader:
 	object_event  2,  3, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldLeafMotherText, -1
 	object_event  5,  4, SPRITE_RICH_BOY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakGoldLeafScript, -1
 
-EcruteakGoldLeafScript: ; this is just wrong 
-	checkevent EVENT_GOT_GOLD_LEAF 
-	iftrue_jumptextfaceplayer GiveGoldLeafText
-	checkevent EVENT_GAVE_LITEBLUEMAIL
-	iftrue_jumptextfaceplayer GiveGoldLeafText
-	faceplayer
-	opentext	
-	writetext NeedALiteBlueMailText
-	waitbutton
-	checkitem LITEBLUEMAIL
-	iffalse_jumpopenedtext NoLiteBlueMailText
-	writetext Text_LiteBlueMailQuestion ;;
-	yesorno
-	iffalse_jumpopenedtext LiteBlueMailRefused
-	takeitem LITEBLUEMAIL
-	jumpopenedtext TextHeresTheGoldLeaf
-	verbosegiveitem GOLD_LEAF
-	iffalse_endtext
-	setevent EVENT_GOT_GOLD_LEAF 
-	jumpopenedtext GiveGoldLeafText 
 
 
 GoldLeafMotherText: 
@@ -52,19 +32,29 @@ GoldLeafMotherText:
 	cont "Olivine."
 	done
 
+EcruteakGoldLeafScript:
+	faceplayer
+	opentext	
+	writetext NeedALiteBlueMailText
+	waitbutton
+	checkitem LITEBLUEMAIL
+	iffalse_jumpopenedtext NoLiteBlueMailText
+	writetext Text_LiteBlueMailQuestion ;;
+	yesorno
+	iffalse_jumpopenedtext NoLiteBlueMailText
+	takeitem LITEBLUEMAIL
+	verbosegiveitem GOLD_LEAF
+	iffalse_endtext
+	jumpopenedtext GiveGoldLeafText 
 
 NeedALiteBlueMailText:
 	text "I simply cannot"
-	line "express my love on"
-	cont "Gold Leaf!"
+	line "express my love"
+	cont "on Gold Leaf!"
 
 	para "How is my beloved"
 	line "to know I'm more"
-	cont "than my trust fund"
-	para "when my letters"
-	line "look like they're"
-	cont "written on golden"
-	cont "nuggets?"
+	cont "than my money?"
 	done
 
 NoLiteBlueMailText:
@@ -72,7 +62,6 @@ NoLiteBlueMailText:
 	line "plain stationary,"
 	cont "come see me."
 	done
-
 
 Text_LiteBlueMailQuestion:
 	text "Willickers! Is"
@@ -82,25 +71,13 @@ Text_LiteBlueMailQuestion:
 	cont "must have it."
 	done
 
-LiteBlueMailRefused:
-	text "You refuse? How"
-	line "peculiar..."
-	cont "It's 24-Karat"
-	cont "Gold Leaf."
-	done
-
-TextHeresTheGoldLeaf:
-	text "Splendid! Do take"
-	line "this - careful!"
-	cont "It would be an"
-	cont "heirloom in YOUR"
-	cont "family!"
-	done
-
 GiveGoldLeafText:
-	text "Perfect! Now to"
-	line "write a properly"
-	cont "common letter."
-	para "I hope she makes"
-	line "haste in reply!"
+	text "Careful with that"
+	line "as it would be an"
+	cont "heirloom in your"
+	cont "family, I wager."
+	
+	
+	para "Now to write her"
+	line "a letter."
 	done

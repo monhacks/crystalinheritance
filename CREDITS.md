@@ -12,18 +12,17 @@ Front Sprites
 
 * Azure Keys: Dewott, Samurott, Spiritomb
 * E-SY (From PiaCRT Deviantart): Monferno, Infernape, Prinplup, Roserade, Hippowdon, Heatran, Grotle, Empoleon, Bronzor, Bronzong, Skuntank, Staraptor
-* Fokkos92: Ursaluna
-* Hellfire0raptor: Sneasler
 * Rowlet: Matdemo
 * H__Braviary: Pokets3
 * Nuukie: Wyrdeer, Roselia, Drifblim, Lopunny, Toxicroak, Snover, Abomasnow, Froslass, Kirlia, Gardevoir, Gallade
 * Pokewilds: Kleavor, Torterra, Staravia, Luxio, Luxray, Rampardos, Bastiodon, Ambipom, Gabite, Garchomp, Lucario, Drapion, Dusclops, Dusknoir, Rotom, Vespiquen, Dartrix, Decidueye, Oshawott
-* DWG: H__Electrode, H__Avalugg
+* DWG: H__Avalugg
 * Sour Crystal: Quilava, Butterfree, Pidgeotto, Sunflora, Dragonite, Celebi, Xatu
-* utytft: H__Typlosion, H__Decidueye, H__Samurott, H__Arcanine, Overqwil, Basculegion, H__Sliggoo, H__Goodra, H__Zoroark
+* utytft: H__Typlosion, H__Decidueye, H__Samurott, Basculegion, H__Sliggoo, H__Goodra, H__Zoroark
+* Bloodless (Rosie): Overqwil, Ursaluna, H__Electrode, Sneasler, H__Arcanine
 
 
-Back Sprites if different from above: 
+Back Sprites if different from above, using Deviantart handles:
 
 * LennyOliviera: H__Arcanine (adapted by dwg)
 * Azure Keys: Dewott, Lucario
@@ -44,17 +43,18 @@ Back Sprites if different from above:
 
 ## Trainer Sprites
 
-* Mejimi: Pokets3
-* Brigader sprite adapted from beta Falkner sprite 
-* Bronzeswagger for Samsara sprite 
-* Justinnuggets for scavenger (diver) trainer sprite 
-* Justin8964 for the Phoebe sprite (nomad female) and Hollis
-* Ferropexola for Ninja trainer and overworld sprites 
+* Pokets3: Emperor Mejimi
+* DWG: Brigader (adapted from beta Falkner)
+* Bronzeswagger: Samsara 
+* Justinnuggets: Scavenger (diver)  
+* Justin8964: Nomad_F (Phoebe) and Hollis
+* Ferropexola: Ninja
 
 
-## Box Art
+## Other Art
 
-* Assets adapted from Pokemon Trading Card Game art in GIMP  
+* Box Art Assets adapted from Pokemon Trading Card Game art
+* Title Screen: Tree adapted from takashi14_daumzey
 
 ## Miscellaneous
 
@@ -62,7 +62,7 @@ Back Sprites if different from above:
 * Ferropexola ("Johto Legends") 
 * r/PokemonROMhacks
 * Feedback at Crystal Inheritance Discord
-
+* 
 
 ## Tools used
 

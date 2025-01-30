@@ -16,26 +16,7 @@ EcruteakDestinyKnotHouse_MapScriptHeader: ; herbalist, part of trade quest
 	object_event  5,  4, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, HerbalistWifeText, -1
 	object_event  2,  3, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakBlueMailScript, -1
 
-EcruteakBlueMailScript: ; revised to match the anarres house format 
-	checkevent EVENT_GOT_LITEBLUEMAIL
-	iftrue_jumptextfaceplayer GiveLiteBlueMailText
-	checkevent EVENT_GAVE_BIG_MUSHROOM
-	iftrue_jumptextfaceplayer GiveLiteBlueMailText
-	faceplayer
-	opentext	
-	writetext NeedABigMushroomText
-	waitbutton
-	checkitem BIG_MUSHROOM
-	iffalse NoBigMushroom
-	writetext Text_BigMushroomQuestion ;;
-	yesorno
-	iffalse BigMushroomRefused
-	takeitem BIG_MUSHROOM
-	verbosegiveitem LITEBLUEMAIL
-	jumpopenedtext TextReadingTheTeaLeaves
-	iffalse_endtext
-	setevent EVENT_GOT_LITEBLUEMAIL 
-	jumpopenedtext GiveLiteBlueMailText 
+
 
 
 HerbalistWifeText:
@@ -47,6 +28,22 @@ HerbalistWifeText:
 	line "if they will end"
 	cont "up together."
 	done
+
+EcruteakBlueMailScript: ; revised to match the anarres house format 
+	faceplayer
+	opentext	
+	writetext NeedABigMushroomText
+	waitbutton
+	checkitem BIG_MUSHROOM
+	iffalse_jumpopenedtext NoBigMushroom
+	writetext Text_BigMushroomQuestion ;;
+	yesorno
+	iffalse_jumpopenedtext NoBigMushroom
+	takeitem BIG_MUSHROOM
+	verbosegiveitem LITEBLUEMAIL
+	jumpopenedtext TextReadingTheTeaLeaves
+	iffalse_endtext
+	jumpopenedtext GiveLiteBlueMailText 
 
 
 NeedABigMushroomText:
@@ -68,18 +65,11 @@ NoBigMushroom:
 	done
 
 Text_BigMushroomQuestion:
-	text "Oh! That's a Tiny-"
+	text "Oh! That's a BIG"
 	line "Mushroom! I can"
 	cont "show you your"
 	cont "future, if you"
-	cont "just give it to me."
-	done
-
-BigMushroomRefused:
-	text "No? Well, you won't"
-	line "have any corres-"
-	cont "pondence with the"
-	cont "future then."
+	cont "let me brew it."
 	done
 
 TextReadingTheTeaLeaves:
@@ -89,6 +79,9 @@ TextReadingTheTeaLeaves:
 	cont "Moss of Zubat,"
 	cont "and it looks nice"
 	cont "and blue..."
+	
+	para "Dunk the papers"
+	line "in the broth..."
 
 	para "Oh? It's blank."
 	done
@@ -98,7 +91,4 @@ GiveLiteBlueMailText:
 	line "spoken! Your"
 	cont "future is"
 	cont "undecided!"
-
-	para "Who will you"
-	line "correspond with?"
 	done

@@ -134,15 +134,15 @@ AzaleaPokeCenter1FSightseermText:
 	done
 
 AzaleaPokeCenter1FPokefanScript: 
-	checkevent EVENT_GOT_MINT_LEAF ;;TO ADD
-	iftrue_jumptextfaceplayer GiveMintLeafText
+;	checkevent EVENT_GOT_MINT_LEAF ;;TO ADD
+;	iftrue_jumptextfaceplayer GiveMintLeafText
 	faceplayer
 	opentext	
 	writetext MintLeafGiftText
 	promptbutton
 	verbosegiveitem MINT_LEAF
 	iffalse_endtext
-	setevent EVENT_GOT_MINT_LEAF 
+;	setevent EVENT_GOT_MINT_LEAF 
 	jumpopenedtext GiveMintLeafText 
 
 MintLeafGiftText: 
@@ -169,6 +169,9 @@ GiveMintLeafText: ;;
 	line "someone who"
 	cont "wants to freshen"
 	cont "their breath."
+	
+	para "Just come back if"
+	line "you ever lose it."
 	done
 
 ;;;;;;;;;;;;;;;;;

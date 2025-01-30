@@ -32,6 +32,7 @@ RouteKajo_MapScriptHeader: ; trainer parties, check warps
     
 	def_object_events
     object_event 48, 15, SPRITE_SCHOOLGIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, LostKajoGirlScript, EVENT_TALKED_TO_LOST_KAJO_GIRL ; 	
+	object_event 20,  5, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, SUDOWOODO, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, KajoSudowoodo, EVENT_KAJO_SUDOWOODO
     object_event 10, 23, SPRITE_CAMPER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, TrainerCamperBarryScript, -1;
     object_event 12, 17, SPRITE_PICNICKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, TrainerPicnickerTiffanyScript, -1;
     object_event 19, 27, SPRITE_HIKER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, TrainerHikerBenjaminScript, -1;
@@ -53,6 +54,7 @@ RouteKajo_MapScriptHeader: ; trainer parties, check warps
 
 	object_const_def
 	const KAJO_SCHOOLGIRL
+	const KAJO_SUDOWOODO
 
 RouteKajoCallback_GirlAppears: ; shouldn't appear until you talk to the dad in the cabin
 	checkevent EVENT_TALKED_TO_CABIN_DAD
@@ -351,3 +353,13 @@ NoPearlForHollowRockText:
 	line "pearls just by "
 	cont "fishing anywhere."
 	done
+
+KajoSudowoodo:
+	cry SUDOWOODO
+	pause 15
+	loadwildmon SUDOWOODO, 20
+	startbattle
+	disappear KAJO_SUDOWOODO
+	setevent EVENT_KAJO_SUDOWOODO
+	reloadmapafterbattle
+	end

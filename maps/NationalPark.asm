@@ -431,76 +431,47 @@ NationalParkTrainerTipsText:
 ThirstyCamperScript:
 	faceplayer
 	opentext
-	checkevent EVENT_GOT_BRICK_PIECE_FROM_CAMPER ; to add
-	iftrue .AlreadyGaveLemonade
 	writetext ThirstyCamperIntroText
-	yesorno
-	iffalse .Refused
+	waitbutton
 	checkitem LEMONADE
-	iffalse .NoLemonade
+	iffalse_jumpopenedtext Text_NoLemonade
+	writetext Text_LemonadeQuestion
+	yesorno
+	iffalse_jumpopenedtext Text_NoLemonade
 	takeitem LEMONADE
-	writetext ThirstyCamperGivingBrickPieceText
-	promptbutton
 	verbosegiveitem BRICK_PIECE
-	iffalse .NoRoom
-	setevent EVENT_GOT_BRICK_PIECE_FROM_CAMPER
-	jumpthisopenedtext
+	iffalse_endtext
+	jumpopenedtext GiveBrickPieceText
 
+GiveBrickPieceText:
 	text "Ah, that hits the"
 	line "spot! Thanks!"
 
 	para "Hope you find a"
 	line "good use for that"
 	cont "old Brick Piece."
-	done
-
-.AlreadyGaveLemonade:
-	jumpthisopenedtext
-	text "Thanks again for"
-	line "the Lemonade!"
-
-	para "That Brick Piece"
-	line "was pretty old."
 	
-	para "I wonder if the"
-	line "museum would be"
-	cont "interested in it?"
+	para "Seems historic."
 	done
 
-.Refused:
-	jumpthisopenedtext
-	text "Oh, alright. I'll"
-	line "just have to find"
-	cont "water somewhere…"
-	done
 
-.NoLemonade:
-	jumpthisopenedtext
+Text_NoLemonade:
 	text "Oh, you don't have"
 	line "any Lemonade?"
 
-	para "That's too bad. I'm"
-	line "so thirsty…"
-	done
-
-.NoRoom:
-	jumpthisopenedtext
-	text "Oh? Your Bag is"
-	line "full. Come back"
-	cont "when you have room"
-	cont "for this Brick"
-	cont "Piece."
+	para "That's too bad."
+	line "I'm so thirsty."
 	done
 
 ThirstyCamperIntroText:
 	text "Whew! Setting up"
 	line "this tent really"
-	cont "worked up a sweat!"
+	cont "got me thirsty."
+	done
 
-	para "I'm so thirsty…"
-
-	para "Hey, you wouldn't"
-	line "happen to have any"
+Text_LemonadeQuestion"
+	text "Hey, you wouldn't"
+	line "happen to have a"
 	cont "Lemonade, would"
 	cont "you?"
 
@@ -510,17 +481,7 @@ ThirstyCamperIntroText:
 	cont "trade you for it!"
 	done
 
-ThirstyCamperGivingBrickPieceText:
-	text "Oh, thank you so"
-	line "much! Here, take"
-	cont "this Brick Piece."
-	
-	para "Looks like it was"
-	line "part of a stru-"
-	cont "cture long ago."
-	done
 
-;;;
 NationalParkWhtApricornScript:
 	faceplayer
 	opentext

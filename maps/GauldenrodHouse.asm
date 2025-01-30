@@ -17,23 +17,36 @@ GauldenrodHouse_MapScriptHeader:
 	object_const_def
 	const LEMONADE_HOUSE_LADY
 
+
+
+	faceplayer
+	opentext	
+	writetext NeedAMintLeafText
+	waitbutton
+	checkitem MINT_LEAF
+	iffalse_jumpopenedtext Text_NoMintLeaf
+	writetext Text_MintLeafQuestion ;;
+	yesorno
+	iffalse_jumpopenedtext Text_NoMintLeaf
+	takeitem MINT_LEAF
+	verbosegiveitem TINYMUSHROOM
+	iffalse_endtext
+	jumpopenedtext GiveTinyMushroomText 
+	
 LemonadeHouseLadyScript:
 	faceplayer
 	opentext
-	checkevent EVENT_GOT_LEMONADE_FROM_LADY
-	iftrue_jumpopenedtext AlreadyGaveLemonadeText
 	writetext WantLemonadeText
-	yesorno
-	iffalse_jumpopenedtext RefusedLemonadeTradeText
+	waitbutton
 	checkitem TINYMUSHROOM
-	iffalse_jumpopenedtext NoTinyMushroomText
+	iffalse_jumpopenedtext Text_NoMushroom
+	writetext Text_MushroomQuestion
+	yesorno
+	iffalse_jumpopenedtext Text_NoMushroom
 	takeitem TINYMUSHROOM
-	writetext GivingLemonadeText
-	promptbutton
-	verbosegiveitem LEMONADE
 	iffalse_endtext
-	setevent EVENT_GOT_LEMONADE_FROM_LADY
-	jumpopenedtext GotLemonadeText
+	jumpopenedtext GivingLemonadeText 
+	
 
 WantLemonadeText:
 	text "I just wrote"
@@ -48,8 +61,10 @@ WantLemonadeText:
 	cont "he told me it"
 	cont "needs a mushroom"
 	cont "stamp."
+	done
 
-	para "Do you have a"
+Text_MushroomQuestion:
+	text "Do you have a"
 	line "mushroom that"
 	cont "would be small"
 	cont "enough?"
@@ -70,32 +85,7 @@ GivingLemonadeText:
 	cont "in my backyard!"
 	done
 
-GotLemonadeText:
-	text "Enjoy the lemonade!"
-
-	para "Thanks again for"
-	line "the Tinymushroom."
-	cont "Now I can stamp"
-	cont "all my letters!"
-	done
-
-AlreadyGaveLemonadeText:
-	text "Thanks again for"
-	line "the TinyMushroom!"
-	cont "Now I can stamp"
-	cont "all my letters!"
-	done
-
-RefusedLemonadeTradeText:
+Text_NoMushroom:
 	text "Really? That's"
 	line "too bad."
-	done
-
-NoTinyMushroomText:
-	text "Oh, you don't have"
-	line "a Tinymushroom?"
-
-	para "That's okay. If you"
-	line "find one, feel free"
-	cont "to come back!"
 	done

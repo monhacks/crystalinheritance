@@ -1,0 +1,69 @@
+AnarresHouseMushroomScript: 
+	faceplayer
+	opentext	
+	writetext NeedAMintLeafText
+	waitbutton
+	checkitem MINT_LEAF
+	iffalse NoMintLeaf
+	writetext Text_MintLeafQuestion ;;
+	yesorno
+	iffalse MintLeafRefused
+	takeitem MINT_LEAF
+	verbosegiveitem TINYMUSHROOM
+	iffalse_endtext
+	jumpopenedtext GiveTinyMushroomText 
+
+NeedAMintLeafText: 
+	text "I moved here"
+	line "from the landing."
+	
+	para "I tried to get"
+	line "these people to"
+	cont "appreciate the"
+	cont "taste of fish,"
+	cont "but they all say"
+	cont "my breath smells."
+	
+	para "No one wants to"
+	line "come over to"
+	cont "eat. I picked"
+	cont "two buckets"
+	cont "of mushrooms!"
+	
+	para "Do you have any"
+	line "item that might"
+	cont "make my breath"
+	cont "smell better?"	
+
+	para "I'll give you a"
+	line "savory mushroom"
+	cont "if you do."
+	done
+
+Text_MintLeafQuestion:
+	text "Oh! I smell it!"
+	
+	para "Would you please"
+	line "trade me that"
+	cont "Mint Leaf?"
+	done
+
+	
+GiveTinyMushroomText: 
+	text "Give that tiny-"
+	line "mushroom to"
+	cont "someone who"
+	cont "needs to make"
+	cont "a great dish."
+	done
+		
+NoMintLeaf:
+	jumpopenedtext Text_NoMintLeaf
+
+MintLeafRefused:
+	jumpopenedtext Text_NoMintLeaf
+
+Text_NoMintLeaf:
+	text "You don't?"
+	line "That's sad."
+	done

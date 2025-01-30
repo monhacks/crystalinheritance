@@ -20,7 +20,7 @@ MahoganyTown_MapScriptHeader:
 	bg_event  3, 13, BGEVENT_JUMPTEXT, MahoganyGymSignText
 
 	def_object_events
-	object_event  6,  9, SPRITE_GRAMPS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MahoganyTownGrampsScript, -1
+	object_event  6,  9, SPRITE_GRAMPS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, MahoganyTownGrampsScript, -1
 	object_event  6, 14, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, MahoganyTownFisherText, -1
 	object_event 12,  8, SPRITE_CUTE_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, MahoganyTownLassText, -1
 
@@ -31,23 +31,80 @@ MahoganyTownFlyPoint:
 	setflag ENGINE_FLYPOINT_MAHOGANY
 	endcallback
 
-MahoganyTownGrampsScript:
-	jumptextfaceplayer MahoganyTownGrampsText
-
 MahoganyTownSouvenirShopSign:
-	checkevent EVENT_MAHOGANY_MART_OWNERS
-	iftrue_jumptext MahoganyTownSouvenirShopSignText1
 	jumpthistext
 
 	text "Grandma's"
 	line "Souvenir Shop"
 	done
 
-MahoganyTownGrampsText:
-	text "Are you off to see"
-	line "the Gyarados ram-"
-	cont "page at the lake?"
+MahoganyTownGrampsScript:
+	faceplayer
+	opentext	
+	writetext NeedASurfMailText
+	waitbutton
+	checkitem SURF_MAIL
+	iffalse_jumpopenedtext Text_NoSurfMail
+	writetext Text_SurfMailQuestion ;;
+	yesorno
+	iffalse_jumpopenedtext Text_NoSurfMail
+	takeitem SURF_MAIL
+	verbosegiveitem OLD_AMBER
+	iffalse_endtext
+	jumpopenedtext GiveOldAmberText 
+
+NeedASurfMailText: 
+	text "Oh, the sea. How"
+	line "I miss my days on"
+	cont "the water."
+	
+	para "I wish I could"
+	line "see it once more,"
+	
+	para "as when I was a"
+	line "spry fisher,"
+	
+	para "but Olivine is"
+	line "too far away."
+	
+	para "Now, all I fish"
+	line "for are fossils"
+	cont "from the mud at"
+	cont "the quarry."
+	
+	para "Sigh... "	
 	done
+
+Text_SurfMailQuestion:
+	text "Wait - what're"
+	line "those doodles?"
+	
+	para "They look like"
+	line "the view from the"
+	cont "Olivine Pier."
+	
+	para "Could... Could I"
+	line "have it? I will"
+	cont "give you a fossil"
+	cont "I found."
+	done
+
+	
+GiveOldAmberText: 
+	text "That fossil was"
+	line "dug out of the"
+	cont "ground. It took a"
+	cont "lot of work!"
+	done
+
+Text_NoSurfMail:
+	text "Oh, I only have"
+	line "my memories to"
+	cont "see it by..."
+	done
+
+
+
 
 MahoganyTownFisherText:
 	text "Since you came"

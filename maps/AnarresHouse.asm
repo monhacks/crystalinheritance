@@ -33,23 +33,18 @@ AnarresHouseTinyMushroomTrigger:
 	
 
 AnarresHouseMushroomScript: 
-	checkevent EVENT_GOT_TINYMUSHROOM ;;TO ADD
-	iftrue_jumptextfaceplayer GiveTinyMushroomText
-	checkevent EVENT_GAVE_MINT_LEAF
-	iftrue_jumptextfaceplayer GiveTinyMushroomText
 	faceplayer
 	opentext	
 	writetext NeedAMintLeafText
 	waitbutton
 	checkitem MINT_LEAF
-	iffalse NoMintLeaf
+	iffalse_jumpopenedtext Text_NoMintLeaf
 	writetext Text_MintLeafQuestion ;;
 	yesorno
-	iffalse MintLeafRefused
+	iffalse_jumpopenedtext Text_NoMintLeaf
 	takeitem MINT_LEAF
 	verbosegiveitem TINYMUSHROOM
 	iffalse_endtext
-	setevent EVENT_GOT_TINYMUSHROOM 
 	jumpopenedtext GiveTinyMushroomText 
 
 NeedAMintLeafText: 
@@ -95,12 +90,7 @@ GiveTinyMushroomText:
 	cont "needs to make"
 	cont "a great dish."
 	done
-		
-NoMintLeaf:
-	jumpopenedtext Text_NoMintLeaf
 
-MintLeafRefused:
-	jumpopenedtext Text_NoMintLeaf
 
 Text_NoMintLeaf:
 	text "You don't?"

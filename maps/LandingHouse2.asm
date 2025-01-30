@@ -36,22 +36,20 @@ LandingHouse2CuteGirlText:
 	cont "miss us?"
 	done
 
+
 LandingHouse2PearlScript: ; wants a light ball gives a pearl 
-	checkevent EVENT_GOT_PEARL_TRADE_QUEST ;TO ADD
-	iftrue_jumptextfaceplayer GivePearlText
 	faceplayer
 	opentext	
 	writetext NeedALightBallText
 	waitbutton
 	checkitem LIGHT_BALL
-	iffalse NoLightBall
+	iffalse_jumpopenedtext NoLightBallText
 	writetext Text_LightBallQuestion ;;
 	yesorno
-	iffalse LightBallRefused
+	iffalse_jumpopenedtext NoLightBallText
 	takeitem LIGHT_BALL
 	verbosegiveitem PEARL
 	iffalse_endtext
-	setevent EVENT_GOT_PEARL_TRADE_QUEST 
 	jumpopenedtext GivePearlText 
 
 NeedALightBallText: 
@@ -85,30 +83,19 @@ Text_LightBallQuestion:
 	cont "bag!"
 
 	para "Please, trade"
-	line "me, I must have"
+	line "me, I will give"
 	cont "the rarest of all"
 	cont "pearls!"
-	
-	para "I'll give you"
-	line "one of my most"
-	cont "treasured pearls."
 	done
 
-	
 GivePearlText: 
 	text "Give that pearl"
 	line "to someone who"
 	cont "needs some help"
 	cont "fishing."
 	done
-		
-NoLightBall:
-	jumpopenedtext Text_NoLightBall
 
-LightBallRefused:
-	jumpopenedtext Text_NoLightBall
-
-Text_NoLightBall:
+NoLightBallText:
 	text "Oh, I'll have to"
 	line "keep dreaming."
 	done

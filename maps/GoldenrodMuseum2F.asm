@@ -132,41 +132,62 @@ GoldenrodMuseum2FNPC4Script:
 GoldenrodMuseum2FNPC5Script:
     jumptextfaceplayer GoldenrodMuseum2FNPC5Text
 
+
 GoldenrodMuseum2FScientistScript:
     faceplayer
     opentext
-    checkevent EVENT_TRADED_BRICK_PIECE
-    iftrue .AfterTrade
-    checkitem BRICK_PIECE
-    iftrue .HasBrickPiece
-    writetext GoldenrodMuseum2FScientistText1
-    waitbutton
-    closetext
-    end
+	writetext NeedBrickPieceText
+	waitbutton
+	checkitem BRICK_PIECE
+	iffalse_jumpopenedtext Text_NoBrickPiece
+	writetext Text_BrickPieceQuestion
+	yesorno
+	iffalse_jumpopenedtext Text_NoBrickPiece
+	takeitem BRICK_PIECE
+	verbosegiveitem RAGECANDYBAR
+	iffalse_endtext
+	jumpopenedtext GiveRageCandyBarText
+	
 
-.HasBrickPiece
-    writetext GoldenrodMuseum2FScientistText2
-    yesorno
-    iftrue .Trade
-    writetext GoldenrodMuseum2FScientistText3
-    waitbutton
-    closetext
-    end
+NeedBrickPieceText:
+    text "I tried to make"
+    line "progress studying"
+    cont "the sunken"
+    cont "stadium but I"
+    cont "can't find any"
+    cont "samples."
+    para "Now I'm stuck"
+    line "writing reports"
+    cont "about the rocket"
+    cont "hideout in"
+    cont "Mahogany town…"
+    done
 
-.Trade
-    takeitem BRICK_PIECE
-    giveitem RAGECANDYBAR
-    writetext GoldenrodMuseum2FScientistText4
-    waitbutton
-    closetext
-    setevent EVENT_TRADED_BRICK_PIECE
-    end
+Text_BrickPieceQuestion:
+    text "Oh my --- is that"
+    line "a piece from the"
+    cont "old stadium?"
+    para "Would you please"
+    line "trade it to me?"
+    para "I would give you"
+    line "this one of a"
+    cont "kind RageCandyBar."
+    done
 
-.AfterTrade
-    writetext GoldenrodMuseum2FScientistText5
-    waitbutton
-    closetext
-    end
+Text_NoBrickPiece:
+    text "I wish I had an"
+	line "historic sample"
+	cont "from the old"
+	cont "stadium."
+    done
+
+GiveRageCandyBarText:
+    text "Thank you so much."
+    line "That RageCandyBar"
+    cont "will delight even"
+	cont "a picky eater."
+    done
+
 
 GoldenrodMuseum2FExhibit3:
     jumptext GoldenrodMuseum2FExhibit3Text
@@ -200,94 +221,42 @@ GoldenrodMuseum2FNPC5Text:
     cont "Tower nowadays."
     done
 
-GoldenrodMuseum2FScientistText1:
-    text "I tried to make"
-    line "progress studying"
-    cont "the sunken"
-    cont "stadium but I"
-    cont "can't find any"
-    cont "samples."
-    para "Now I'm stuck"
-    line "writing reports"
-    cont "about the rocket"
-    cont "hideout in"
-    cont "Mahogany town…"
-    done
-
-GoldenrodMuseum2FScientistText2:
-    text "Oh my --- is that"
-    line "a piece from the"
-    cont "old stadium?"
-    para "Would you please"
-    line "trade it to me?"
-    para "I would give you"
-    line "this one of a"
-    cont "kind RageCandyBar."
-    done
-
-GoldenrodMuseum2FScientistText3:
-    text "Oh, I see.. well"
-    line "please let me"
-    cont "know if you"
-    cont "change your mind."
-    done
-
-GoldenrodMuseum2FScientistText4:
-    text "Thank you so much."
-    para "That RageCandyBar"
-    line "was quite a"
-    cont "treat… about ten"
-    cont "years ago."
-    done
-
-GoldenrodMuseum2FScientistText5:
-    text "Thanks again for"
-    line "the Brick Piece."
-    para "My research is"
-    line "progressing well!"
-    done
-
 GoldenrodMuseum2FExhibit3Text:
     text "A rite of passage"
     line "in old Goldenrod"
-    cont "was to travel"
-    cont "over the mountain"
-    cont "pass to the Ruins"
-    cont "of Alph and bring"
-    cont "back an unown."
-    para "It was thought"
-    line "that some"
-    cont "challengers would"
-    cont "perish on the"
-    cont "travel, but"
-    cont "recent data has"
-    cont "shown that it was"
-    cont "more common to"
-    cont "simply leave for"
-    cont "Violet City,"
-    cont "drawn by a"
-    cont "different culture."
+    
+    para "Young trainers"
+    line "would journey to"
+    cont "the Ruins of"
+    cont "Alph."
+    
+    para "Their goal:"
+    line "capture an"
+    cont "unown."
+    
+    para "While some were"
+    line "thought lost,"
+    
+    para "Many simply"
+    line "left the harsh"
+	cont "city to stay in"
+	cont "historic Violet."
     done
 
 GoldenrodMuseum2FExhibit4Text:
     text "Goldenrod Tower"
-    line "was one of the"
-    cont "Ho-Oh's resting"
-    cont "places, along"
-    cont "with the Ecruteak"
-    cont "Bell Tower."
-    para "However, during"
-    line "Ecruteak's time"
-    cont "of expansion,"
-    cont "Ho-Oh was"
-    cont "repelled by the"
-    cont "violence and fled."
-    para "Only ten years"
-    line "ago was the"
-    cont "rainbow #mon"
-    cont "seen, following"
-    cont "the ouster of"
-    cont "Team Rocket by a"
-    cont "young person from"
-    cont "New Bark Town."
+    line "A sacred place"
+    
+    para "Ho-Oh once"
+    line "rested here and"
+    cont "at Bell Tower."
+    
+    para "When Ecruteak"
+    line "grew violent,"
+    cont "Ho-Oh left."
+    
+    para "The legendary"
+    line "bird appears to"
+	cont "those with pure"
+	cont "hearts."
     done
