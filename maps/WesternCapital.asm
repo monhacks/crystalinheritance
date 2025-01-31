@@ -81,7 +81,7 @@ WesternCapitalCemeteryScene: ; SOME OF THIS C.F. MRPOKEMONSHOUSE.ASM IN POLISHED
 	
 	applyonemovement WESTERN_CAPITAL_MEJIMI, step_left
 	turnobject WESTERN_CAPITAL_MEJIMI, UP
-	showemote WESTERN_CAPITAL_MEJIMI, WESTERN_CAPITAL_MEJIMI, 15
+	showemote EMOTE_SHOCK, WESTERN_CAPITAL_MEJIMI, 15
 	
 	opentext
 	writetext Prologue_Text2 ; YOUR STRATEGIES... 
@@ -332,7 +332,7 @@ Prologue_Text7:
 	cont "Sacred Fire!"
 	
 	para "Mejimi: Oh,"
-	line "here's priestess"
+	line "here's Chronicler"
 	cont "Samsara."
 	done
 
@@ -375,25 +375,25 @@ Prologue_Text9:
 Prologue_Text10:
 	text "Mejimi: how"
 	line "dare you."
-	
-	para "My father was"
-	line "stagnant with"
-	cont "his inheritance."
-	
-	para "I will trans-"
-	line "form mine."
-	
-	para "From the west-"
-	line "ern islands to"
-	
-	para "the eastern"
-	line "mountains and"
-
-	para "the southern"
-	line "forests,"
-
-	para "I will remake Jo-"
-	line "hto in my image!"
+; move this to a different scene.	
+;	para "My father was"
+;	line "stagnant with"
+;	cont "his inheritance."
+;	
+;	para "I will trans-"
+;	line "form mine."
+;	
+;	para "From the west-"
+;	line "ern islands to"
+;	
+;	para "the eastern"
+;	line "mountains and"
+;
+;	para "the southern"
+;	line "forests,"
+;
+;	para "I will remake Jo-"
+;	line "hto in my image!"
 	done
 
 WC_AdrinnaMovement1:

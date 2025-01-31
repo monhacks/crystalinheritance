@@ -47,7 +47,7 @@
 	const SPRITE_KURT ; 2b
 	const SPRITE_REDS_MOM ; 2c
 	const SPRITE_DAISY ; 2d
-	const SPRITE_LORELEI ; 2e
+	const SPRITE_NINJA ; 2e REPLACES LORELEI
 	const SPRITE_AGATHA ; 2f
 	const SPRITE_PALMER ; 30
 	const SPRITE_RIVAL ; 31

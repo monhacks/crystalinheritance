@@ -1491,12 +1491,12 @@ Rival2Group:
 ; ================================
 
 ; TODO: give Lyra custom movesets
-Lyra1Group:
+NinjaGroup:
 ; ================================
 ; ================
 
-	; LYRA1
-	db "Lyra@"
+	; NINJA
+	db "Shadow@"
 	db TRAINERTYPE_NICKNAME
 	; party
 	db 5, CHIKORITA, "Chicory@"
@@ -1505,7 +1505,7 @@ Lyra1Group:
 ; ================
 
 	; LYRA1
-	db "Lyra@"
+	db "Mist@"
 	db TRAINERTYPE_NICKNAME
 	; party
 	db 5, CYNDAQUIL, "Cinder@"
@@ -1514,7 +1514,7 @@ Lyra1Group:
 ; ================
 
 	; LYRA1
-	db "Lyra@"
+	db "Twilight@"
 	db TRAINERTYPE_NICKNAME
 	; party
 	db 5, TOTODILE, "Toto@"
@@ -1523,7 +1523,7 @@ Lyra1Group:
 ; ================
 
 	; LYRA1
-	db "Lyra@"
+	db "Shimmer@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_EVS | TRAINERTYPE_NICKNAME
 	; party
 	db 16, PIDGEY, NO_ITEM, 36, "@"
@@ -1535,7 +1535,7 @@ Lyra1Group:
 ; ================
 
 	; LYRA1
-	db "Lyra@"
+	db "Echo@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_EVS | TRAINERTYPE_NICKNAME
 	; party
 	db 16, PIDGEY, NO_ITEM, 36, "@"
@@ -1547,7 +1547,7 @@ Lyra1Group:
 ; ================
 
 	; LYRA1
-	db "Lyra@"
+	db "Dusk@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_EVS | TRAINERTYPE_NICKNAME
 	; party
 	db 16, PIDGEY, NO_ITEM, 36, "@"
@@ -1559,7 +1559,7 @@ Lyra1Group:
 ; ================
 
 	; LYRA1
-	db "Lyra@"
+	db "Veil@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_EVS | TRAINERTYPE_NICKNAME
 	; party
 	db 33, PIDGEOTTO, NO_ITEM, 100, "@"
@@ -1572,7 +1572,7 @@ Lyra1Group:
 ; ================
 
 	; LYRA1
-	db "Lyra@"
+	db "Shade@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_EVS | TRAINERTYPE_NICKNAME
 	; party
 	db 33, PIDGEOTTO, NO_ITEM, 100, "@"
@@ -1585,7 +1585,7 @@ Lyra1Group:
 ; ================
 
 	; LYRA1
-	db "Lyra@"
+	db "Haze@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_EVS | TRAINERTYPE_NICKNAME
 	; party
 	db 33, PIDGEOTTO, NO_ITEM, 100, "@"
@@ -1598,7 +1598,7 @@ Lyra1Group:
 ; ================
 
 	; LYRA1
-	db "Lyra@"
+	db "Wraith@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_EVS | TRAINERTYPE_NICKNAME
 	; party
 	db 44, PIDGEOT, NO_ITEM, 132, "@"
@@ -1612,7 +1612,7 @@ Lyra1Group:
 ; ================
 
 	; LYRA1
-	db "Lyra@"
+	db "Vapor@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_EVS | TRAINERTYPE_NICKNAME
 	; party
 	db 44, PIDGEOT, NO_ITEM, 132, "@"
@@ -1626,7 +1626,7 @@ Lyra1Group:
 ; ================
 
 	; LYRA1
-	db "Lyra@"
+	db "Mirage@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_EVS | TRAINERTYPE_NICKNAME
 	; party
 	db 44, PIDGEOT, NO_ITEM, 132, "@"
@@ -6643,6 +6643,41 @@ ElderGroup:
 	db 38, VAPOREON
 	db 38, NINETALES
 	db -1 ; end
+	
+; ================
+
+	; ELDER
+	db "Gaku@"
+	db TRAINERTYPE_NORMAL
+	; party
+	db 37, PIDGEOTTO
+	db 38, FLAREON
+	db 38, WEEPINBELL
+	db -1 ; end
+
+; ================
+
+	; ELDER
+	db "Masa@"
+	db TRAINERTYPE_NORMAL
+	; party
+	db 37, PIDGEOTTO
+	db 38, JOLTEON
+	db 38, POLIWHIRL
+	db -1 ; end
+
+; ================
+
+	; ELDER
+	db "Koji@"
+	db TRAINERTYPE_NORMAL
+	; party
+	db 37, PIDGEOTTO
+	db 38, VAPOREON
+	db 38, NINETALES
+	db -1 ; end
+	
+
 
 ; ================
 ; ================================
@@ -11172,9 +11207,9 @@ BobeshGroup:
 	db 20, MAGMAR, NO_ITEM, "Culverin@"
 		db SUNNY_DAY, KARATE_CHOP, PSYBEAM, FIRE_PUNCH
 	db 21, SUNFLORA, NO_ITEM, "Helia@"
-		db SUNNY_DAY, GROWTH, ENERGY_BALL, LEECH_SEED
+		db SUNNY_DAY, GROWTH, RAZOR_LEAF, LEECH_SEED
 	db 22, OCTILLERY, ZOOM_LENS, "Levi@"
-		db FLAMETHROWER, OCTAZOOKA, NO_MOVE, NO_MOVE
+		db EMBER, OCTAZOOKA, NO_MOVE, NO_MOVE
 	db 22, FLAREON, NO_ITEM, "Kotei@"
 		db SUNNY_DAY, FLAME_CHARGE, ROCK_SMASH, DIG
 	db -1 ; end
@@ -11183,18 +11218,18 @@ BobeshGroup:
 	db "Bobesh@" ; todo: names, items
 	db TRAINERTYPE_ITEM | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
 	; party
-	db 23, NINETALES, NO_ITEM, "NAME@"
-		db SUNNY_DAY, KARATE_CHOP, PSYBEAM, FIRE_PUNCH
-	db 23, MAGMORTAR, NO_ITEM, "Culverin@"
-		db SUNNY_DAY, KARATE_CHOP, PSYBEAM, FIRE_PUNCH
-	db 23, SUNFLORA, NO_ITEM, "Helia@"
-		db SUNNY_DAY, GROWTH, ENERGY_BALL, LEECH_SEED
-	db 25, OCTILLERY, SCOPE_LENS, "Levi@"
-		db FLAMETHROWER, OCTAZOOKA, HYPER_BEAM, NO_MOVE
-	db 25, FLAREON, NO_ITEM, "Kotei@"
-		db SUNNY_DAY, FLAME_CHARGE, ROCK_SMASH, CLOSE_COMBAT
-	db 25, H__ARCANINE, NO_ITEM, "NAME@"
-		db SUNNY_DAY, FLAME_CHARGE, ROCK_SMASH, SMOKESCREEN
+	db 51, NINETALES, FOCUS_BAND, "NineLives@"
+		db SOLAR_BEAM, REST, SHADOW_BALL, WILL_O_WISP
+	db 54, MAGMORTAR, SITRUS_BERRY, "Culverin@"
+		db SUNNY_DAY, THUNDERBOLT, PSYCHIC_M, FIRE_BLAST
+	db 55, SUNFLORA, SITRUS_BERRY, "Helia@"
+		db SUNNY_DAY, GROWTH, SOLAR_BEAM, FLAMETHROWER
+	db 55, OCTILLERY, SCOPE_LENS, "Levi@"
+		db FLAMETHROWER, OCTAZOOKA, HYPER_BEAM, ROCK_BLAST
+	db 55, FLAREON, LEFTOVERS, "Kotei@"
+		db FLARE_BLITZ, FLAME_CHARGE, ROCK_SMASH, CLOSE_COMBAT
+	db 53, H__ARCANINE, SITRUS_BERRY, "Dauntless@"
+		db BODY_SLAM, EXTREMESPEED, FLARE_BLITZ, ROCK_SLIDE
 	db -1 ; end
 
 ; ================
@@ -11215,20 +11250,41 @@ AdrinnaGroup:
 	db 27, ELECTABUZZ, NO_ITEM, "NAME@"
 		db THUNDERPUNCH, KARATE_CHOP, NO_MOVE, NO_MOVE
 	db 33, JOLTEON, NO_ITEM, "NAME@"
-		db THUNDERBOLT, DOUBLE_KICK, NO_MOVE, NO_MOVE
+		db THUNDERBOLT, DOUBLE_KICK, THUNDER_WAVE, NO_MOVE
 	db -1 ; end
 
-	; Adrinna
-	db "Adrinna@"
-	db TRAINERTYPE_ITEM
+	db "Adrinna@" ; at the mine 
+	db TRAINERTYPE_ITEM | TRAINERTYPE_DVS | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
 	; party
-	; TODO: movesets, etc
-	db 63, VAPOREON, NO_ITEM
-	db 62, LAPRAS, NO_ITEM
-	db 63, POLIWRATH, NO_ITEM
-	db 61, JYNX, NO_ITEM
-	db 62, STARMIE, NO_ITEM
-	db 65, SUICUNE, NEVERMELTICE
+	db 44, FORRETRESS, FOCUS_SASH, FAKE_PERFECT_DVS, "NAME@"
+		db SPIKES, EXPLOSION, U_TURN, NO_MOVE		
+	db 44, WEAVILE, NO_ITEM, FAKE_PERFECT_DVS, "NAME@"
+		db NO_MOVE, NO_MOVE, NO_MOVE, NO_MOVE
+	db 46, HONCHKROW, NO_ITEM, FAKE_PERFECT_DVS, "NAME@"
+		db NO_MOVE, NO_MOVE, NO_MOVE, NO_MOVE
+	db 48, LUXRAY, NO_ITEM, FAKE_PERFECT_DVS, "NAME@"
+		db CRUNCH, SPARK, DOUBLE_EDGE, NO_MOVE
+	db 48, JOLTEON, NO_ITEM, DVS_HP_ICE, "NAME@"
+		db THUNDERBOLT, DOUBLE_KICK, HIDDEN_POWER, QUICK_ATTACK
+	db -1 ; end
+
+
+	; Adrinna TOWER ; DARK, STEEL, ELECTRIC, DRAGON
+	db "Adrinna@"
+	db TRAINERTYPE_ITEM | TRAINERTYPE_DVS | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
+	; party
+	db 57, MAGNEZONE, NO_ITEM, FAKE_PERFECT_DVS, "NAME@"
+		db NO_MOVE, NO_MOVE, NO_MOVE, NO_MOVE		
+	db 55, GARCHOMP, NO_ITEM, FAKE_PERFECT_DVS, "NAME@"
+		db NO_MOVE, NO_MOVE, NO_MOVE, NO_MOVE
+	db 55, WEAVILE, NO_ITEM, FAKE_PERFECT_DVS, "NAME@"
+		db NO_MOVE, NO_MOVE, NO_MOVE, NO_MOVE
+	db 56, HONCHKROW, NO_ITEM, FAKE_PERFECT_DVS, "NAME@"
+		db NO_MOVE, NO_MOVE, NO_MOVE, NO_MOVE
+	db 57, LUXRAY, NO_ITEM, FAKE_PERFECT_DVS, "NAME@"
+		db CRUNCH, WILD_CHARGE, DOUBLE_EDGE, NO_MOVE
+	db 57, JOLTEON, NO_ITEM, DVS_HP_ICE, "NAME@"
+		db THUNDERBOLT, SIGNAL_BEAM, HIDDEN_POWER, QUICK_ATTACK
 	db -1 ; end
 
 ; ================
@@ -11592,9 +11648,9 @@ KenseyGroup:
 		db SCALD, REFLECT, ICE_BEAM, TOXIC
 	db 38, EMPOLEON, NO_ITEM, "Waddleton@"
 		db SURF, DRILL_PECK, METAL_CLAW, NO_MOVE
-	db 38, SLOWKING, LIFE_ORB, "Hipocampus@"
+	db 38, SLOWKING, NO_ITEM, "Hipocampus@"
 		db NASTY_PLOT, PSYCHIC_M, BUBBLE_BEAM, NO_MOVE
-	db 40, H__SLIGGOO, LEFTOVERS, "AcidTide@"
+	db 40, H__SLIGGOO, NO_ITEM, "AcidTide@"
 		db DRAGON_PULSE, IRON_HEAD, PROTECT, ACID
 	db -1 ; end
 
@@ -11604,16 +11660,18 @@ KenseyGroup:
 	db "Kensey@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
 	; party
-	db 40, FERALIGATR, NO_ITEM, "Trapjaw@"
-		db CRUNCH, WATERFALL, SCARY_FACE, NO_MOVE
-	db 42, VAPOREON, LEFTOVERS, "Tidechaser@"
+	db 53, FERALIGATR, EXPERT_BELT, "Trapjaw@"
+		db CRUNCH, WATERFALL, ICE_PUNCH, DRAGON_DANCE
+	db 57, VAPOREON, LEFTOVERS, "Tidechaser@"
 		db SCALD, REFLECT, ICE_BEAM, TOXIC
-	db 38, EMPOLEON, NO_ITEM, "Waddleton@"
-		db SURF, DRILL_PECK, METAL_CLAW, NO_MOVE
-	db 38, SLOWKING, LIFE_ORB, "Hipocampus@"
-		db NASTY_PLOT, PSYCHIC_M, BUBBLE_BEAM, NO_MOVE
-	db 40, H__SLIGGOO, LEFTOVERS, "AcidTide@"
-		db DRAGON_PULSE, IRON_HEAD, PROTECT, ACID
+	db 55, EMPOLEON, SITRUS_BERRY, "Waddleton@"
+		db SURF, DRILL_PECK, IRON_HEAD, ROOST
+	db 56, SLOWKING, LIFE_ORB, "Hipocampus@"
+		db NASTY_PLOT, PSYCHIC_M, SURF, FLAMETHROWER
+	db 55, H__SLIGGOO, LEFTOVERS, "AcidTide@"
+		db DRAGON_PULSE, IRON_HEAD, PROTECT, SLUDGE_BOMB
+	db 56, AZUMARILL, SITRUS_BERRY, "Floppy@"
+		db AQUA_JET, BELLY_DRUM, NO_MOVE, NO_MOVE
 	db -1 ; end
 
 ; ================

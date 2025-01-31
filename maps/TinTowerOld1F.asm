@@ -101,9 +101,6 @@ Text_HoneyQuestion:
 	cont "project."
     done
 
-	
-
-
 Text_NoHoney:
     text "Back to work..."
     line "carefully now."

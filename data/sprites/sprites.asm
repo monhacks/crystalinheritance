@@ -52,7 +52,7 @@ SpriteHeaders:
 	overworld_sprite KurtSpriteGFX, WALKING_SPRITE, PAL_OW_BROWN
 	overworld_sprite RedsMomSpriteGFX, WALKING_SPRITE, PAL_OW_RED
 	overworld_sprite DaisySpriteGFX, WALKING_SPRITE, PAL_OW_BLUE
-	overworld_sprite LoreleiSpriteGFX, WALKING_SPRITE, PAL_OW_RED
+	overworld_sprite NinjaSpriteGFX, WALKING_SPRITE, PAL_OW_BLUE
 	overworld_sprite AgathaSpriteGFX, WALKING_SPRITE, PAL_OW_BROWN
 	overworld_sprite PalmerSpriteGFX, WALKING_SPRITE, PAL_OW_GREEN
 	overworld_sprite RivalSpriteGFX, WALKING_SPRITE, PAL_OW_BLUE

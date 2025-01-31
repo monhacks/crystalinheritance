@@ -111,19 +111,19 @@ KRIS EQU __trainer_class__
 
 	trainerclass RIVAL2 ; 1c
 
-	trainerclass LYRA1 ; 1d
-	const LYRA1_1
-	const LYRA1_2
-	const LYRA1_3
-	const LYRA1_4
-	const LYRA1_5
-	const LYRA1_6
-	const LYRA1_7
-	const LYRA1_8
-	const LYRA1_9
-	const LYRA1_10
-	const LYRA1_11
-	const LYRA1_12
+	trainerclass NINJA ; 1d FORMERLY LYRA1
+	const NINJA_1
+	const NINJA_2
+	const NINJA_3
+	const NINJA_4
+	const NINJA_5
+	const NINJA_6
+	const NINJA_7
+	const NINJA_8
+	const NINJA_9
+	const NINJA_10
+	const NINJA_11
+	const NINJA_12
 
 	trainerclass LYRA2 ; 1e
 
@@ -628,9 +628,20 @@ KRIS EQU __trainer_class__
 
 	trainerclass ELDER ; 42
 	const LI
-	const GAKU
-	const MASA
-	const KOJI
+	const GAKU ; STUDY 
+	const MASA ; PROPER
+	const KOJI ; PEACE 
+	;new
+	const NOBORU ; RISE
+	const TAKASHI ; NOBLE 
+	const ISAMU ; COURAGE
+	const KAITO ; SEA, SOAR
+	const HIROSHI ; GENEROUS
+	const AKIRA ; BRIGHT
+	const TADAO ; LOYAL 
+	const SATORU ; WISE
+	const YOSHI ; VIRTUOUS
+
 
 	trainerclass SR_AND_JR ; 43
 	const JOANDCATH1

@@ -2,7 +2,6 @@ FinalTextList_TriplePhrases:
 	dbw RIVAL0, .FinalText_Rival0 ; TODO
 	dbw RIVAL1, .FinalText_Rival1
 	dbw RIVAL2, .FinalText_Rival2
-	dbw LYRA1,  .FinalText_Lyra1
 	dbw LYRA2,  .FinalText_Lyra2
 	db -1
 
@@ -18,12 +17,6 @@ FinalTextList_TriplePhrases:
 .FinalText_Rival2:
 	dw Rival2_1FinalPkmnText ; TODO
 	dw Rival2_2FinalPkmnText
-
-.FinalText_Lyra1:
-	dw Lyra1_1FinalPkmnText
-	dw Lyra1_2FinalPkmnText
-	dw Lyra1_3FinalPkmnText
-	dw Lyra1_4FinalPkmnText
 
 .FinalText_Lyra2:
 	dw Lyra2_1FinalPkmnText

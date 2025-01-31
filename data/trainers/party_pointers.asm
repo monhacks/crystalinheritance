@@ -31,7 +31,7 @@ TrainerGroups:
 	dba Rival0Group
 	dba Rival1Group
 	dba Rival2Group
-	dba Lyra1Group
+	dba NinjaGroup
 	dba Lyra2Group
 	dba YoungsterGroup
 	dba BugCatcherGroup

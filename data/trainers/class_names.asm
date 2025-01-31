@@ -29,7 +29,7 @@ TrainerClassNames::
 	li "Woodcutter"       ; RIVAL0
 	li "Woodcutter"       ; RIVAL1
 	li "Woodcutter"       ; RIVAL2
-	li "<PK><MN> Trainer" ; LYRA1
+	li "Ninja"			  ; LYRA1
 	li "<PK><MN> Trainer" ; LYRA2
 	li "Youngster"        ; YOUNGSTER
 	li "Bug Catcher"      ; BUG_CATCHER
@@ -123,11 +123,11 @@ TrainerClassNames::
 	li "Rock Hound"       ; STEVEN UNUSED 
 	li "Researcher"       ; CYNTHIA UNUSED 
 	li "Johto"            ; Amos / INVER
-	li "<PK><MN> Trainer" ; CHERYL
-	li "<PK><MN> Trainer" ; RILEY
+	li "<PK><MN> Trainer" ; CHERYL / unused 
+	li "<PK><MN> Trainer" ; RILEY / unused 
 	li "Nomad" 			  ; formerly BUCK
-	li "<PK><MN> Trainer" ; MARLEY
-	li "<PK><MN> Trainer" ; MIRA
+	li "<PK><MN> Trainer" ; MARLEY / unused 
+	li "<PK><MN> Trainer" ; MIRA / unused 
 	li "Anarres"          ; Lanna / ANABEL
 	li "Valet"            ; DARACH UNUSED 
 	li "Nomad"            ; formerly CAITLIN 

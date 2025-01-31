@@ -56,7 +56,7 @@ SECTION "Overworld Sprites 3", ROMX
 KurtSpriteGFX::                INCBIN "gfx/sprites/kurt.2bpp.lz"
 RedsMomSpriteGFX::             INCBIN "gfx/sprites/reds_mom.2bpp.lz"
 DaisySpriteGFX::               INCBIN "gfx/sprites/daisy.2bpp.lz"
-LoreleiSpriteGFX::             INCBIN "gfx/sprites/lorelei.2bpp.lz"
+NinjaSpriteGFX::               INCBIN "gfx/sprites/ninja.2bpp.lz"
 AgathaSpriteGFX::              INCBIN "gfx/sprites/agatha.2bpp.lz"
 PalmerSpriteGFX::              INCBIN "gfx/sprites/palmer.2bpp.lz"
 RivalSpriteGFX::              INCBIN "gfx/sprites/rival.2bpp.lz"

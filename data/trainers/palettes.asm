@@ -33,7 +33,7 @@ LeafPalette:             INCLUDE "gfx/trainers/leaf.pal"
 Rival0Palette:           INCLUDE "gfx/trainers/walker.pal" ;done
 Rival1Palette:           INCLUDE "gfx/trainers/walker.pal" ;done
 Rival2Palette:           INCLUDE "gfx/trainers/walker.pal" ;done
-Lyra1Palette:            INCLUDE "gfx/trainers/lyra1.pal"
+NinjaPalette:            INCLUDE "gfx/trainers/ninja.pal"
 Lyra2Palette:            INCLUDE "gfx/trainers/lyra2.pal"
 YoungsterPalette:        INCLUDE "gfx/trainers/youngster.pal"
 BugCatcherPalette:       INCLUDE "gfx/trainers/bug_catcher.pal"
@@ -159,7 +159,6 @@ SilhouettePalette:       INCLUDE "gfx/trainers/silhouette.pal"
 else
 ChrisPalette:
 KrisPalette:
-Lyra1Palette:
 rept NUM_TRAINER_CLASS_PICS + 1
 	MONOCHROME_RGB_TWO
 endr

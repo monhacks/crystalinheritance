@@ -150,21 +150,17 @@ MejimiWalksInMovement:
 EG_Text1:
 	text "Emperor Mejimi:"
 	line "Ah, my generals."
-	para "Less disappointing"
-	line "than usual, I"
-	cont "trust?"
 	done
 
 EG_Text11:
 	text "Mejimi: How"
 	line "goes it in"
-	cont "Gauldenrod,"
-	cont "Bobesh?"
+	cont "Gauldenrod?"
 	done
 
 EG_Text2:
 	text "Bobesh: My"
-	line "liege - our"
+	line "liege - the"
 	cont "stadium... it..."
 	para "fell into a"
 	line "sinkhole."
@@ -174,23 +170,21 @@ EG_Text3:
 	text "Mejimi: A"
 	line "sinkhole?"
 	para "Bobesh: Yes. No"
-	line "soldiers were"
+	line "brigaders were"
 	cont "lost."
 	para "Mejimi: I see."
-	line "It will take"
-	cont "time to"
-	cont "restore order."
+	line "I trust you won't"
+	cont "fail me again."
 	done
 
 EG_Text4:
-	text "And how are"
-	line "things at the"
-	cont "port? We need"
-	cont "those metals."
+	text "And the port?"
+	cont "We need metals."
+
 	para "Kensey: We have"
-	line "traded for one"
-	cont "hundred tons"
-	cont "of Tin."
+	line "traded for 100"
+	cont "tons of Tin and"
+	cont "Brass."
 	para "The Hisuians"
 	line "will teach us"
 	cont "to smelt it."
@@ -206,8 +200,8 @@ EG_Text5:
 
 EG_Text6:
 	text "Mejimi: Good."
-	line "General"
-	cont "Adrinna,"
+	line "General Adrinna,"
+
 	para "please review"
 	line "their plans."
 	done
@@ -264,15 +258,11 @@ EG_Bobesh_Text1:
 	line "too."
 
 	para "We need to fend"
-	line "off the"
-	cont "outsiders."
+	line "off the enemy."
 
 	para "We need strong"
 	line "individuals,"
 	cont "not drones!"
-	
-	para "Pray you get"
-	line "another chance."
 	done
 
 AdrinnaMoves2:
@@ -319,52 +309,43 @@ PlayerHidesFromKenseyMovement:
 
 EG_Kensey_Text_1:
 	text "Adrinna: We"
-	line "make trade with"
-	cont "those"
+	line "trade with those"
 	cont "barbarians?"
 	
-	para "Kensey: We"
-	line "traded #mon"
-	cont "and safe port"
+	para "Kensey: We trade"
+	line "our safe port"
+	cont "for their metals."
 
-	para "for their metal"
-	line "for our tower."
-
-	para "Adrinna:"
-	line "Amazing..."
+	para "Adrinna: ..."
 
 	para "Kensey: There"
 	line "are now"
 	cont "hundreds on"
 	cont "our dole!"
 
-	para "Under my"
-	line "planning, our"
+	para "Under my plans,"
 	cont "skills have"
 	cont "never been"
 	cont "sharper!"
 
 	para "Adrinna: But"
 	line "how will we"
-	cont "remain"
-	cont "dynamic?"
+	cont "remain dynamic?"
 
 	para "Kensey: I'll"
 	line "oversee it."
 
 	para "Adrinna: I'm"
 	line "sure you will."
-
 	done
 
 EG_FamiliarSmellText:
 	text "What is that"
 	line "familiar smell?"
 	
-	para "Like holly,"
-	line "but that doesn't"
-	cont "grow anywhere"
-	cont "nearby."
+	para "Like holly, but"
+	line "that only grows"
+	cont "in the south."
 	done
 
 AdrinnaMoves3:
@@ -406,6 +387,7 @@ EmperorsGardenAdrinnaScene: ; todo - revise
 	disappear EMPERORS_GARDEN_ADRINNA_4
 	setevent EVENT_EMPERORS_GARDEN_ADRINNA
 	setscene $4 ; no more scenes 
+	special HealParty
 	end
 
 EG_AdrinnaMove3:
@@ -418,33 +400,34 @@ EG_AdrinnaText1:
 	text "<PLAYER>? What"
 	line "are you doing"
 	cont "here?"
+
 	para "Fufufu..."
-	line "Hopefully just"
-	cont "enjoying the"
-	cont "garden, eh?"
+	line "enjoying the"
+	cont "garden?"
 
 	para "This garden was"
-	line "shaped from dirt"
-	para "by the vision"
-	line "of an architect"
+	line "shaped from dirt."
+	para "by an architect."
+	
+	para "A visionary arch-"
+	line "itect that did"
+	line "away with taditi-"
+	cont "onal landscaping."
 	
 	para "I see the dirt"
 	line "on your nails - "
 	
 	para "show me, what"
 	line "is your vision?"
-
 	done
 
 EG_AdrinnaText2:
 	text "For entertaining"
-	line "me, I offer a"
-	cont "gift."
+	line "me, a gift."
 	
-	para "Please accept"
-	line "it: I found it"
-	cont "on the ground"
-	cont "near the towers."
+	para "It's a rare fea-"
+	line "ther from the"
+	cont "towers."
 	done
 
 EG_AdrinnaText3:
@@ -583,8 +566,7 @@ AmosSuspectsYouText:
 	
 	para "Now, you meet"
 	line "General Adrinna"
-	cont "in some secret"
-	cont "meeting?"
+	cont "in secret?"
 	
 	para "Battle me, so I"
 	line "can see your"

@@ -752,7 +752,7 @@ LeafPic:                  INCBIN "gfx/trainers/leaf.2bpp.lz"
 Rival0Pic:
 Rival1Pic:                INCBIN "gfx/trainers/rival1.2bpp.lz" ; walker
 Rival2Pic:                INCBIN "gfx/trainers/rival2.2bpp.lz" ;walker
-Lyra1Pic:                 INCBIN "gfx/trainers/lyra1.2bpp.lz"
+NinjaPic:                 INCBIN "gfx/trainers/ninja.2bpp.lz" ;
 Lyra2Pic:                 INCBIN "gfx/trainers/lyra2.2bpp.lz"
 YoungsterPic:             INCBIN "gfx/trainers/youngster.2bpp.lz"
 BugCatcherPic:            INCBIN "gfx/trainers/bug_catcher.2bpp.lz"

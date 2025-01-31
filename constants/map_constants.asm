@@ -201,7 +201,7 @@ ENDM
 	map_const BRASS_TOWER_3F,                                  6,  6 ; sprout tower
 	map_const BRASS_TOWER_4F,                                  6,  6 ; sprout tower	
 	map_const BRASS_TOWER_ROOF,                                9,  7 ; sprout tower	
-	map_const BRASS_TOWER_2F_WARP,                             5,  4 ; TRAD HOUSE
+	map_const BRASS_TOWER_2F_WARP,                             4,  5 ; TRAD HOUSE
 	map_const BRASS_TOWER_3F_WARP,                             5,  5 ; PORT
 	map_const BRASS_TOWER_4F_WARP,                             5,  5 ; LAB
 	map_const TIN_TOWER_OLD_1F,                                8,  8 ; sprout tower
