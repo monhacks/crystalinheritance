@@ -17,6 +17,7 @@ TinderGarden_MapScriptHeader: ;todo something weird happens when I stand to the 
 	coord_event  5, 14, 1, TinderGardenTryToLeaveScript
 	coord_event  4, 14, 3, TinderGardenRivalBattleScript1
 	coord_event  5, 14, 3, TinderGardenRivalBattleScript2	;add text for the tree
+	coord_event  0, 0, 4, TinderGardernWatchTheLoggersScript
 
 	def_bg_events
 	bg_event  4,  8, BGEVENT_JUMPTEXT, TGTreeText
@@ -34,6 +35,10 @@ TinderGarden_MapScriptHeader: ;todo something weird happens when I stand to the 
 	object_event  8, 12, SPRITE_WEIRD_TREE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, RowletPokeBallScript, EVENT_KURTS_HOUSE_KURT_0
 	object_event  4,  9, SPRITE_CELEBI, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CelebiScript, EVENT_KURTS_HOUSE_KURT_0
 	object_event  4, 11, SPRITE_PRYCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PryceScript, EVENT_TALKED_TO_PRYCE_TINDER_GARDEN 
+;for the cutscene if you choose adrinna
+	object_event  3, 0, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1 ;todo add kurtscript in this 
+	object_event  3, 1, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1
+	pokemon_event  4, 3, CELEBI, -1, -1, PAL_NPC_GREEN, Celebi2Text, EVENT_TINDER_GARDEN_CELEBI_2
 
 	object_const_def
 	const TINDER_GARDEN_KURT
@@ -45,6 +50,9 @@ TinderGarden_MapScriptHeader: ;todo something weird happens when I stand to the 
 	const TINDER_GARDEN_POKE_BALL3	
 	const TINDER_GARDEN_CELEBI
 	const TINDER_GARDEN_PRYCE
+	const TINDER_GARDEN_ENGINEER_1
+	const TINDER_GARDEN_ENGINEER_2
+	const TINDER_GARDEN_CELEBI_2
 
 CelebiCeremonyIntroScript:
 	sdefer .Script
@@ -936,3 +944,67 @@ TGTreeText:
 CelebiScript:
 	end
 	
+	
+TinderGardernWatchTheLoggersScript:
+;cf western capital scene 
+	special Special_FadeBlackQuickly
+	special Special_ReloadSpritesNoPalettes
+	special Special_FadeInQuickly
+	applyemote EMOTE_QUESTION, TINDER_GARDEN_ENGINEER_1, 10
+	showtext GardenEngineerText1
+	pause 10
+	showemote EMOTE_BOLT, TINDER_GARDEN_ENGINEER_2, 10
+	showtext GardenEngineerText2		
+	closetext
+	turnobject TINDER_GARDEN_ENGINEER_1, RIGHT
+	;SFX TO CUT
+	changeblock 4, 0, $01 
+	disappear TINDER_GARDEN_CELEBI_2
+	turnobject TINDER_GARDEN_ENGINEER_1, DOWN
+	showtext GardenEngineerText3
+	turnobject TINDER_GARDEN_ENGINEER_2, UP
+	showtext GardenEngineerText4
+	closetext
+	halloffame
+	end
+	
+GardenEngineerText1:
+	text "Is this the one?"
+	line "I couldn't find"
+	cont "any other blossom"
+	cont "trees."
+	done
+	
+GardenEngineerText2:
+	text "Yup, this is the"
+	line "it. Probably the"
+	cont "last one in all"
+	cont "of Johto. This'll"
+	cont "probably net us"
+	cont "a few months pay."
+	done
+	
+Celebi2Text:
+	text "..."
+	done
+
+GardenEngineerText3:
+	text "What are we using"
+	line "this for, anyway?"
+	done
+
+GardenEngineerText4:
+	text "Hoenn wants the"
+	line "lumber. They're"
+	cont "building an extr-"
+	cont "avagant dragon"
+	cont "shrine, and all"
+	cont "their trees were"
+	cont "burned down in"
+	cont "a freak wildfire."
+	
+	para "Reminds me of the"
+	line "kid who toppled"
+	cont "the emperor in"
+	cont "the Burned Tower."
+	done

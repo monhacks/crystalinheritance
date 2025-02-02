@@ -13,14 +13,14 @@ OlivineCity_MapScriptHeader:
 	warp_event  7, 17, OLIVINE_CAFE, 1
 	warp_event 19, 13, OLIVINE_MART, 2
 	warp_event 33, 19, OLIVINE_LIGHTHOUSE_1F, 1
-	warp_event 57, 30, ROUTE_35_NATIONAL_PARK_GATE, 5
-	warp_event 57, 31, ROUTE_35_NATIONAL_PARK_GATE, 6
+	warp_event 19, 25, OLIVINE_DESAL_1F, 1
+	warp_event 20, 25, OLIVINE_DESAL_1F, 2
 
 	def_coord_events
 	coord_event 10,  8, 0, OlivineCityRivalGymScript
 	coord_event 33, 23, 0, OlivineCityRivalLighthouseScript
 
-	def_bg_events
+	def_bg_events ; fix the signs 
 	bg_event 17,  7, BGEVENT_JUMPTEXT, OlivineCitySignText
 	bg_event 20, 22, BGEVENT_JUMPTEXT, OlivineCityPortSignText
 	bg_event  7,  7, BGEVENT_JUMPTEXT, OlivineGymSignText
@@ -33,27 +33,18 @@ OlivineCity_MapScriptHeader:
 	bg_event 49, 29, BGEVENT_ITEM + SOFT_SAND, EVENT_OLIVINE_CITY_HIDDEN_SOFT_SAND
 
 	def_object_events
-	object_event 10,  7, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_RIVAL_OLIVINE_CITY
 	object_event 20,  8, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OlivineCityYoungster1Script, -1
 	object_event 26, 22, SPRITE_SAILOR, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 2, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineCitySailor1Text, -1
-	object_event 15, 21, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, 1 << EVE, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineCitySailor2Text, -1
-	object_event 31, 17, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, (1 << MORN) | (1 << DAY), 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineCityFisherText, -1
-	object_event 31, 17, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, (1 << EVE) | (1 << NITE), 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineCitySailor3Text, -1
-	object_event 18, 26, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, (1 << DAY), PAL_NPC_BROWN, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineCityPokefanFText, -1
-	object_event 21, 27, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, (1 << MORN) | (1 << NITE), PAL_NPC_BROWN, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineCityPokefanMText, -1
-	object_event 23, 16, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineCitySailor4Text, -1
-	object_event 23, 17, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineCitySailor5Text, -1
-	object_event 26, 11, SPRITE_CUTE_GIRL, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, (1 << MORN) | (1 << EVE), PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineCityLass1Text, -1
-	object_event 28, 11, SPRITE_CAMPER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, (1 << DAY) | (1 << NITE), 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineCityYoungster2Text, -1
-	object_event  8, 21, SPRITE_CUTE_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, (1 << MORN) | (1 << DAY) | (1 << EVE), PAL_NPC_BROWN, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineCityLass2Text, -1
+	object_event 11, 23, SPRITE_POKEFAN_F, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 2, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineCitySailor4Text, -1
+	object_event 23, 17, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineCitySailor5Text, -1
 	smashrock_event 52, 23
 	smashrock_event 55, 26
-
     object_event 19, 20, SPRITE_POKEFAN_F, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OlivineCityPnkApricornScript, -1
-
+	object_event 
+;npc talking about the desal plant used to do and what it does now
 
 	object_const_def
-	const OLIVINECITY_OLIVINE_RIVAL
+
 
 OlivineCityFlyPoint:
 	setflag ENGINE_FLYPOINT_OLIVINE
@@ -234,25 +225,11 @@ OlivineCityStandingYoungsterPokedexText:
 	line "awesome."
 	done
 
-OlivineCitySailor1Text:
-	text "Dark roads are"
-	line "dangerous at"
-	cont "night."
-
-	para "But in the pitch-"
-	line "black of night,"
-
-	para "the sea is even"
-	line "more treacherous!"
-
-	para "Without the beacon"
-	line "of the Lighthouse"
-
-	para "to guide it, no"
-	line "ship can sail."
+OlivineCitySailor1Text: ; TODO what the lighthouse is 
+	text "..."
 	done
 
-OlivineCitySailor2Text:
+OlivineCitySailor2Text: ; TODO what the desal plant is 
 	text "The sea is sweet!"
 
 	para "Sunsets on the sea"
@@ -372,8 +349,8 @@ OlivineCitySignText:
 	done
 
 OlivineCityPortSignText:
-	text "Olivine Port"
-	line "Fast Ship Pier"
+	text "Olivine Desal"
+	line "Plant"
 	done
 
 OlivineGymSignText:

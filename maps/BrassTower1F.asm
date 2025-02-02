@@ -20,13 +20,55 @@ BrassTower1F_MapScriptHeader:
 	def_object_events
 ; KURT - pontificates
 ; AMOS - sells items 
-	object_event 0, 0, SPRITE_KURT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TowerKurtScript, -1 ; 
-	; lugia
-	object_event 0, 0, SPRITE_AMOS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_COMMAND, jumptextfaceplayer, BrassTowerAmosText, -1 ; done
-	; lucario 
-	object_event 0, 0, SPRITE_NINJA, ; MART 
+	object_event 6, 2, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TowerKurtScript, -1 ; 
+	pokemon_event  5, 2, LUGIA, -1, -1, PAL_NPC_BLUE, LugiaText, -1
+	object_event 7, 13, SPRITE_AMOS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_COMMAND, jumptextfaceplayer, BrassTowerAmosText, -1 ; done
+	object_event  5,  13, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_COMMAND, pokemart, MARTTYPE_STANDARD, MART_WESTERN_CAPITAL_PREP, -1
+	object_event 9, 13, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, BrassTowerHealScript, -1 ; done
 
 	object_const_def
+
+
+LugiaText:
+	text "Lluuu!"
+	done
+
+BrassTowerAmosText:
+	text "Let's go. I'll"
+	line "hold off anyone"
+	cont "who tries to come"
+	cont "up behind."
+
+	para "If you need any-"
+	line "thing, one of our"
+	cont "soldiers can sell"
+	cont "you some items or"
+	cont "heal you."
+	done
+
+BrassTowerHealScript: ; cf ilex healer
+	faceplayer
+	opentext
+	writetext WantToHealBrassTower
+	waitbutton
+	playmusic MUSIC_HEAL
+	special HealParty
+	special SaveMusic	
+	writetext BrassHealedPokemon
+	waitbutton
+	closetext
+	playmusic MUSIC_NONE	
+	special RestoreMusic
+	end
+
+WantToHealBrassTower:
+	text "Shall I heal"
+	line "your #mon?"
+	done
+
+BrassHealedPokemon:
+	text "All healed."
+	done
 
 
 TowerKurtScript: 

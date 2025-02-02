@@ -13,15 +13,16 @@ OlivinePokeCenter1F_MapScriptHeader:
 	bg_event 10,  1, BGEVENT_READ, PokemonJournalJasmineScript
 
 	def_object_events
-	object_event  8,  1, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BeautyCharlotteScript, -1
 	pc_nurse_event  5, 1
-	object_event  2,  6, SPRITE_FISHING_GURU, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumpstd, happinesschecknpc, -1
+	object_event  2,  6, SPRITE_MATRON, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumpstd, happinesschecknpc, -1
 	object_event  2,  3, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivinePokeCenter1FFisherText, -1
 	object_event 11,  6, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivinePokeCenter1FTeacherText, -1
 	object_event  9,  6, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, IlexExcelsiorV2Script, -1
+	object_event  10, 5, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KurtOlivineScript, EVENT_BEAT_CHUCK ;
+
 
 	object_const_def
-	const OLIVINEPOKECENTER1F_BEAUTY
+
 
 PokemonJournalJasmineScript:
 	setflag ENGINE_READ_JASMINE_JOURNAL
@@ -30,96 +31,34 @@ PokemonJournalJasmineScript:
 	text "#mon Journal"
 
 	para "Special Feature:"
-	line "Leader Jasmine!"
+	line "Leader Chuck!"
 
-	para "Rumor has it that"
-	line "Jasmine and Erika,"
-
-	para "the Celadon Gym"
-	line "Leader, chat about"
-	cont "fashion together."
-	done
-
-BeautyCharlotteScript:
-	checkevent EVENT_BEAT_BEAUTY_CHARLOTTE
-	iftrue_jumptextfaceplayer .AfterText
-	faceplayer
-	opentext
-	writetext .GreetingText
-	yesorno
-	iffalse_jumpopenedtext .NoBattleText
-	writetext .SeenText
-	waitbutton
-	closetext
-	winlosstext .BeatenText, 0
-	setlasttalked OLIVINEPOKECENTER1F_BEAUTY
-	loadtrainer BEAUTY, CHARLOTTE
-	startbattle
-	reloadmapafterbattle
-	setevent EVENT_BEAT_BEAUTY_CHARLOTTE
-	jumpthistext
-
-.AfterText:
-	text "How cool is it"
-	line "to have such a"
-	cont "special #mon?"
-	done
-
-.GreetingText:
-	text "Oh, are you a"
-	line "trainer?"
-
-	para "You came at just"
-	line "the right time!"
-
-	para "My unique and"
-	line "beautiful #mon"
-	cont "is all healed."
-
-	para "Do you want to"
-	line "battle and be"
-
-	para "amazed by my"
-	line "#mon?"
-	done
-
-.NoBattleText:
-	text "Oh, really? Talk"
-	line "to me if you want"
-
-	para "to battle some"
-	line "time!"
-	done
-
-.SeenText:
-	text "All right!"
-	line "Here I come!"
-	done
-
-.BeatenText:
-	text "Amazing battle!"
+	para "Despite losing"
+	line "his home to a"
+	cont "tsunami, Chuck"
+	
+	para "remains hopeful"
+	line "that the next"
+	cont "disaster can be"
+	cont "averted."
 	done
 
 OlivinePokeCenter1FFisherText:
-	text "There's this guy in"
-	line "Cianwood City who"
-	cont "looks weak, but he"
-
-	para "taught my #-"
-	line "mon Strength."
-
-	para "Now it can move"
-	line "big boulders."
+	text "The desal plant"
+	line "took my favorite"
+	cont "fishing spot."	
 	done
 
 OlivinePokeCenter1FTeacherText:
-	text "There's a person"
-	line "in Cianwood City"
-	cont "across the sea."
-
-	para "I heard him brag-"
-	line "ging about his"
-	cont "rare #mon."
+	text "Chuck's project"
+	line "with the Slowking"
+	cont "is called OMLAS."
+	
+	para "It stands for"
+	line "OMniscient"
+	cont "Liberated"
+	cont "Augmented"
+	cont "Slowking."	
 	done
 
 IlexExcelsiorV2Script:
@@ -141,7 +80,7 @@ IlexExcelsiorV2Text:
 	text "Ilex Excelsior"
 	
 	para "When the tree"
-	line "rings, will"
+	line "rings will"
 	cont "you answer"
 	
 	para "Second Edition"
@@ -151,4 +90,60 @@ IlexExcelsiorV2Text:
 	
 	para "remove parts"
 	line "from basement"
+	done
+	
+KurtOlivineScript:
+	faceplayer
+	opentext
+	writetext KurtOlivineText
+	yesorno
+	iffalse_jumpopenedtext KurtOlivineText3
+	winlosstext WCKurtBattleText, WCKurtBattleText
+	loadtrainer KURT, KURT8
+	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+	startbattle
+	reloadmapafterbattle
+	opentext
+	jumpopenedtext OlivineKurtBattleText2
+
+KurtOlivineText:
+	text "<PLAYER>. Nothing"
+	line "good can come"
+	cont "of Chuck's super-"
+	cont "Slowking."
+	
+	para "It's putting the"
+	line "whole town out of"
+	cont "work, and using"
+	cont "a ton of water"
+	cont "and energy."
+	
+	para "It seems like a"
+	line "few citizens"
+	cont "agree, as the"
+	cont "Desal Plant was"
+	cont "sabotaged."
+	
+	para "Now's a chance"
+	line "to strike, and"
+	cont "take it offline!"
+	
+	para "Want to battle"
+	line "to train a bit?"
+	done
+	
+KurtOlivineText3:
+	text "I can run back"
+	line "to manage your"
+	cont "party."
+	done
+
+WCKurtBattleText:
+	text "Rocked!"
+	done
+
+OlivineKurtBattleText2:
+	text "We can battle as"
+	line "many times as"
+	cont "you like."
 	done

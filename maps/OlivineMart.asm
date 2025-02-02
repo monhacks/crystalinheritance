@@ -17,24 +17,22 @@ OlivineMart_MapScriptHeader:
 	object_event  1,  6, SPRITE_CUTE_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineMartLassText, -1
 
 OlivineMartCooltrainerFText:
-	text "Do your #mon"
-	line "already know the"
-
-	para "move for carrying"
-	line "people on water?"
+	text "Chuck's Slowking"
+	line "is just another"
+	cont "invention. It may"
+	para "disrupt a few"
+	line "jobs, but I can't"
+	cont "imagine doing"
+	cont "mine without it."
 	done
 
 OlivineMartLassText:
-	text "My Butterfree came"
-	line "from my boyfriend"
-	cont "overseas."
-
-	para "It carried some"
-	line "Mail from him."
-
-	para "Want to know what"
-	line "it says?"
-
-	para "Let's see… Nope!"
-	line "It's a secret!"
+	text "Jasmine hasn't"
+	line "responded to any"
+	cont "calls asking her"
+	para "to look in to the"
+	line "effect that the"
+	cont "Desal Plant is"
+	cont "having on the"
+	cont "shoreline."	
 	done

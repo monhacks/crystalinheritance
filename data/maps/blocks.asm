@@ -487,6 +487,10 @@ SECTION "WhirlIslandSW_BlockData", ROMX
 WhirlIslandSW_BlockData:
 	INCBIN "maps/WhirlIslandSW.ablk.lz"
 
+SECTION "WhirlIsland1F_BlockData", ROMX
+WhirlIsland1F_BlockData:
+	INCBIN "maps/WhirlIsland1F.ablk.lz"
+
 SECTION "WhirlIslandB1F_BlockData", ROMX
 WhirlIslandB1F_BlockData:
 	INCBIN "maps/WhirlIslandB1F.ablk.lz"
@@ -494,6 +498,10 @@ WhirlIslandB1F_BlockData:
 SECTION "WhirlIslandB2F_BlockData", ROMX
 WhirlIslandB2F_BlockData:
 	INCBIN "maps/WhirlIslandB2F.ablk.lz"
+	
+SECTION "WhirlIslandB3F_BlockData", ROMX
+WhirlIslandB3F_BlockData:
+	INCBIN "maps/WhirlIslandB3F.ablk.lz"
 
 SECTION "WhirlIslandLugiaChamber_BlockData", ROMX
 WhirlIslandLugiaChamber_BlockData:

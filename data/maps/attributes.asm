@@ -237,8 +237,10 @@ ENDM
 	map_attributes WhirlIslandSW, WHIRL_ISLAND_SW, $9, 0
 	map_attributes WhirlIslandCave, WHIRL_ISLAND_CAVE, $9, 0
 	map_attributes WhirlIslandSE, WHIRL_ISLAND_SE, $f, 0
+	map_attributes WhirlIsland1F, WHIRL_ISLAND_1F, $9, 0
 	map_attributes WhirlIslandB1F, WHIRL_ISLAND_B1F, $9, 0
 	map_attributes WhirlIslandB2F, WHIRL_ISLAND_B2F, $2e, 0
+	map_attributes WhirlIslandB3F, WHIRL_ISLAND_B2F, $2e, 0
 	map_attributes WhirlIslandLugiaChamber, WHIRL_ISLAND_LUGIA_CHAMBER, $f, 0
 	map_attributes OlivinePokeCenter1F, OLIVINE_POKECENTER_1F, $0, 0
 	map_attributes OlivineGym, OLIVINE_GYM, $0, 0

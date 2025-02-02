@@ -112,10 +112,10 @@ ENDM
 	map_const WHIRL_ISLAND_SW,                            10,  9 ; 59
 	map_const WHIRL_ISLAND_CAVE,                          20, 45 ; 60
 	map_const WHIRL_ISLAND_SE,                             5,  9 ; 61
-	map_const WHIRL_ISLAND_1F,                            15, 15 
+	map_const WHIRL_ISLAND_1F,                            15, 15  ; NEW 
 	map_const WHIRL_ISLAND_B1F,                           20, 20 ; 62
 	map_const WHIRL_ISLAND_B2F,                           20, 18 ; 63
-	map_const WHIRL_ISLAND_B3F,                           10, 18 ; 
+	map_const WHIRL_ISLAND_B3F,                           10, 18 ; NEW 
 	map_const WHIRL_ISLAND_LUGIA_CHAMBER,                 10,  9 ; 64
 
 
