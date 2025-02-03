@@ -26,11 +26,49 @@ SeafluxNexus_MapScriptHeader:
 
 
 	def_bg_events
-; ADD A FEW HIDDEN ITEMS 
+	bg_event 24, 25, BGEVENT_ITEM + CALCIUM, EVENT_NEXUS_HIDDEN_CALCIUM
+	bg_event  3, 25, BGEVENT_ITEM + PROTEIN, EVENT_NEXUS_HIDDEN_PROTEIN
+	bg_event  2,  5, BGEVENT_ITEM + ZINC, EVENT_NEXUS_HIDDEN_ZINC
 
 
 	def_object_events
+	object_event 18, 20, NOMAD_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NexusNomadScript, EVENT_NOMAD_NEXUS ;
 
 
 
 	object_const_def
+
+
+NexusNomadScript:
+	faceplayer
+	showtext NexusNomadText
+	setevent EVENT_NOMAD_NEXUS
+	clearevent EVENT_NOMAD_ISLANDS_HOUSE
+	closetext
+	end
+	
+NexusNomadText:
+	text "I snuck out here"
+	line "because I thought"
+	cont "we could persist."
+	
+	para "If just a few of"
+	line "us kept the trad-"
+	cont "itions going, "
+	
+	para "maybe we would"
+	line "get back one day."
+	
+	para "But my friends"
+	line "gave up. I can't"
+	para "keep up with food"
+	line "and water all by"
+	cont "myself..."
+	
+	para "I need to head"
+	line "home tonight."
+
+	para "It'll really"
+	line "surprise my mom."
+	done
+	

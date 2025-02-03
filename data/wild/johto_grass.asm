@@ -728,7 +728,7 @@
 	end_grass_wildmons
 
 	def_grass_wildmons WHIRL_ISLAND_NW
-	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
+	db 1 percent, 1 percent, 1 percent ; encounter rates: morn/day/nite
 	; morn
 	wildmon 32, GOLBAT
 	wildmon 33, CLOYSTER
@@ -756,7 +756,7 @@
 	end_grass_wildmons
 
 	def_grass_wildmons WHIRL_ISLAND_NE
-	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
+	db 1 percent, 1 percent, 1 percent ; encounter rates: morn/day/nite
 	; morn
 	wildmon 32, GOLBAT
 	wildmon 33, CLOYSTER
@@ -784,7 +784,7 @@
 	end_grass_wildmons
 
 	def_grass_wildmons WHIRL_ISLAND_SW
-	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
+	db 1 percent, 1 percent, 1 percent ; encounter rates: morn/day/nite
 	; morn
 	wildmon 32, GOLBAT
 	wildmon 33, CLOYSTER
@@ -812,7 +812,7 @@
 	end_grass_wildmons
 
 	def_grass_wildmons WHIRL_ISLAND_CAVE
-	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
+	db 1 percent, 1 percent, 1 percent ; encounter rates: morn/day/nite
 	; morn
 	wildmon 32, GOLBAT
 	wildmon 33, CLOYSTER
@@ -840,7 +840,7 @@
 	end_grass_wildmons
 
 	def_grass_wildmons WHIRL_ISLAND_SE
-	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
+	db 1 percent, 1 percent, 1 percent ; encounter rates: morn/day/nite
 	; morn
 	wildmon 32, GOLBAT
 	wildmon 33, CLOYSTER
@@ -868,7 +868,7 @@
 	end_grass_wildmons
 
 	def_grass_wildmons WHIRL_ISLAND_B1F
-	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
+	db 1 percent, 1 percent, 1 percent ; encounter rates: morn/day/nite
 	; morn
 	wildmon 32, GOLBAT
 	wildmon 33, CLOYSTER
@@ -896,7 +896,7 @@
 	end_grass_wildmons
 
 	def_grass_wildmons WHIRL_ISLAND_B2F
-	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
+	db 1 percent, 1 percent, 1 percent ; encounter rates: morn/day/nite
 	; morn
 	wildmon 32, GOLBAT
 	wildmon 33, CLOYSTER

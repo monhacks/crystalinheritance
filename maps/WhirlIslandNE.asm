@@ -5,8 +5,8 @@ WhirlIslandNE_MapScriptHeader:
 
 	def_warp_events
 	warp_event  3, 13, ROUTE_41, 2
-	warp_event 17,  3, WHIRL_ISLAND_B1F, 2
-	warp_event 13, 11, WHIRL_ISLAND_B1F, 3
+	warp_event 17,  3, WHIRL_ISLAND_1F, 2
+
 
 	def_coord_events
 

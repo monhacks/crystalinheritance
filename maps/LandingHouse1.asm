@@ -29,7 +29,7 @@ LandingHouse1_MapScriptHeader:
 
 LandingHouse1MomScript:
 	faceplayer
-	checkevent EVENT_NOMAD_ISLANDS_HOUSE
+	checkevent EVENT_NOMAD_NEXUS
 	iffalse_jumpopenedtext LandingHouseWhereSonText
 	checkevent EVENT_GOT_LIFE_ORB ; CHECK 
 	iftrue_jumptextfaceplayer LandingHouse1_GotLifeOrb
