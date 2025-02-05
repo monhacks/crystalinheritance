@@ -381,14 +381,16 @@ Celadon3FTMMart:
 	db -1
 
 MahoganyMart2:
-	db 7 ; # items
-	db POKE_DOLL
+	db 9 ; # items
+	db MAX_REPEL
+	db HYPER_POTION
+	db FULL_HEAL
 	db FIRE_STONE
 	db WATER_STONE
 	db THUNDERSTONE
 	db LEAF_STONE
 	db ICE_STONE
-	db EXP_SHARE
+	db ODD_SOUVENIR
 	db -1
 
 EcruteakBattleMart: ; SHRINE AREA 

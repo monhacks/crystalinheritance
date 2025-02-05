@@ -915,6 +915,9 @@ KurtThinksTheyreCuttingTreesText:
 	para "I will see"
 	line "you in Ilex"
 	cont "Forest!"
+	
+	para "We have to fight"
+	line "for our home!"
 	done
 
 KurtMovesForward:

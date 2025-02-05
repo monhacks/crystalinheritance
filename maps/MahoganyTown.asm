@@ -2,7 +2,7 @@ MahoganyTown_MapScriptHeader:
 	def_scene_scripts
 
 	def_callbacks
-	callback MAPCALLBACK_NEWMAP, MahoganyTownFlyPoint ;TODO NEED TO ADD THE OLD JOHTO TOWNS AS FLYPOINTS
+	callback MAPCALLBACK_NEWMAP, MahoganyTownFlyPoint 
 
 	def_warp_events
 	warp_event 11,  7, MAHOGANY_MART_1F, 1
@@ -23,6 +23,8 @@ MahoganyTown_MapScriptHeader:
 	object_event  6,  9, SPRITE_GRAMPS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, MahoganyTownGrampsScript, -1
 	object_event  6, 14, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, MahoganyTownFisherText, -1
 	object_event 12,  8, SPRITE_CUTE_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, MahoganyTownLassText, -1
+	object_event  7, 14, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MahoganyKurtScript, EVENT_LISTENED_TO_KURT_4 ; 
+	
 
 	object_const_def
 	const MAHOGANYTOWN_POKEFAN_M
@@ -104,28 +106,18 @@ Text_NoSurfMail:
 	done
 
 
-
-
 MahoganyTownFisherText:
-	text "Since you came"
-	line "this far, take the"
-
-	para "time to do some"
-	line "sightseeing."
-
-	para "You should head"
-	line "north and check"
-
-	para "out Lake of Rage"
-	line "right now."
+	text "How'd they build"
+	line "such a complex"
+	cont "ninja hideout,"
+	para "underground, so"
+	line "many years ago?"
 	done
 
 MahoganyTownLassText:
-	text "Visit Grandma's"
-	line "shop. She sells"
-
-	para "stuff that nobody"
-	line "else has."
+	text "We have to ration"
+	line "water, now that"
+	cont "the lake is dry."
 	done
 
 MahoganyTownSignText:
@@ -135,16 +127,6 @@ MahoganyTownSignText:
 	line "Home of the Ninja"
 	done
 
-MahoganyTownSouvenirShopSignText1:
-	text "Just a Souvenir"
-	line "Shop"
-
-	para "Nothing Suspicious"
-	line "About It"
-
-	para "No Need to Be"
-	line "Alarmed"
-	done
 
 MahoganyGymSignText:
 	text "Mahogany Town"
@@ -153,4 +135,51 @@ MahoganyGymSignText:
 
 	para "The Teacher of"
 	line "Winter's Harshness"
+	done
+
+
+MahoganyKurtScript: 
+	faceplayer
+	opentext
+	writetext KurtHearAStoryQuestionMahogany
+	yesorno
+	iffalse_jumpopenedtext MahoganyDeclineKurtStoryText
+	writetext MahoganyKurtStoryText
+	setevent EVENT_LISTENED_TO_KURT_4; FOR USE IN KURTS HOUSE
+	waitbutton
+	end
+
+
+
+KurtHearAStoryQuestionMahogany:
+	text "Would you like"
+	line "to hear a story?"
+	
+	para "When I was here,"
+	line "with your dad?"
+	done
+	
+	
+MahoganyDeclineKurtStoryText:
+	text "Some other time."
+	done
+	
+MahoganyKurtStoryText:
+	text "I invited your"
+	line "dad to celebrate"
+	cont "winter festival,"
+
+	para "but he couldn't"
+	line "make it. We'd met"
+	cont "up to walk his"
+
+	para "#mon every"
+	line "month, but this"
+	cont "was the first he"
+	cont "couldn't make."
+
+	para "When I got home,"
+	line "I noticed some "
+	cont "paint was wearing"
+	cont "off the apricorn."
 	done
