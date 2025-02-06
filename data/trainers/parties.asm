@@ -6646,35 +6646,46 @@ ElderGroup:
 	
 ; ================
 
-	; ELDER
-	db "Gaku@"
+	; ELDER ; rise 
+	db "Noboru@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 37, PIDGEOTTO
-	db 38, FLAREON
-	db 38, WEEPINBELL
+	db 46, PIDGEOT
+	db 48, GLISCOR
+	db 50, MANTINE
+	db -1 ; end
+
+; ================
+
+	; ELDER ; noble 
+	db "Takashi@"
+	db TRAINERTYPE_NORMAL
+	; party
+	db 46, DRAGONAIR
+	db 48, YANMEGA
+	db 50, KINGDRA
 	db -1 ; end
 
 ; ================
 
 	; ELDER
-	db "Masa@"
+	db "Isamu@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 37, PIDGEOTTO
-	db 38, JOLTEON
-	db 38, POLIWHIRL
+	db 46, DRAGONAIR
+	db 48, YANMEGA
+	db 50, KINGDRA
 	db -1 ; end
-
+	
 ; ================
 
 	; ELDER
-	db "Koji@"
+	db "Kaito@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 37, PIDGEOTTO
-	db 38, VAPOREON
-	db 38, NINETALES
+	db 46, DRAGONAIR
+	db 48, YANMEGA
+	db 50, KINGDRA
 	db -1 ; end
 	
 
@@ -10975,9 +10986,9 @@ NomadMGroup:
 	db TRAINERTYPE_NORMAL
 	; party
 	; TODO: movesets, etc
-	db 28, SEADRA
-	db 28, CLOYSTER
-	db 30, TENTACRUEL
+	db 28, DONPHAN
+	db 28, WEEPINBELL
+	db 30, OVERQWIL
 	db -1 ; end
 	
 	; BUCK
@@ -10986,8 +10997,8 @@ NomadMGroup:
 	; party
 	; TODO: movesets, etc
 	db 25, PIDGEOTTO
-	db 30, MANTINE
-	db 30, SEADRA
+	db 30, OVERQWIL
+	db 30, GLIGAR
 	db -1 ; end
 	
 	; BUCK
@@ -10999,11 +11010,73 @@ NomadMGroup:
 	; party
 	db 30, STARMIE, NO_ITEM
 		db WHIRLPOOL, WATER_GUN, NO_MOVE, NO_MOVE
-	db 62, KADABRA, NO_ITEM
+	db 32, KADABRA, NO_ITEM
 		db WHIRLPOOL, REFLECT, NO_MOVE, NO_MOVE
-	db 62, MISDREAVUS, NO_ITEM
+	db 32, MISDREAVUS, NO_ITEM
 		db WHIRLPOOL, NO_MOVE, NO_MOVE, NO_MOVE
 	db -1 ; end
+	
+	; need to revise parties 
+	; BUCK
+	db "Aiden@"
+	db TRAINERTYPE_NORMAL
+	; party
+	; TODO: movesets, etc
+	db TRAINERTYPE_ITEM | TRAINERTYPE_MOVES
+	; party
+	db 30, STARMIE, NO_ITEM
+		db WHIRLPOOL, WATER_GUN, NO_MOVE, NO_MOVE
+	db 32, KADABRA, NO_ITEM
+		db WHIRLPOOL, REFLECT, NO_MOVE, NO_MOVE
+	db 32, MISDREAVUS, NO_ITEM
+		db WHIRLPOOL, NO_MOVE, NO_MOVE, NO_MOVE
+	db -1 ; end
+	
+	; BUCK
+	db "Dan@"
+	db TRAINERTYPE_NORMAL
+	; party
+	; TODO: movesets, etc
+	db TRAINERTYPE_ITEM | TRAINERTYPE_MOVES
+	; party
+	db 30, STARMIE, NO_ITEM
+		db WHIRLPOOL, WATER_GUN, NO_MOVE, NO_MOVE
+	db 32, KADABRA, NO_ITEM
+		db WHIRLPOOL, REFLECT, NO_MOVE, NO_MOVE
+	db 32, MISDREAVUS, NO_ITEM
+		db WHIRLPOOL, NO_MOVE, NO_MOVE, NO_MOVE
+	db -1 ; end
+
+	; BUCK
+	db "Teddy@"
+	db TRAINERTYPE_NORMAL
+	; party
+	; TODO: movesets, etc
+	db TRAINERTYPE_ITEM | TRAINERTYPE_MOVES
+	; party
+	db 30, STARMIE, NO_ITEM
+		db WHIRLPOOL, WATER_GUN, NO_MOVE, NO_MOVE
+	db 32, KADABRA, NO_ITEM
+		db WHIRLPOOL, REFLECT, NO_MOVE, NO_MOVE
+	db 32, MISDREAVUS, NO_ITEM
+		db WHIRLPOOL, NO_MOVE, NO_MOVE, NO_MOVE
+	db -1 ; end
+	
+	; BUCK
+	db "Tyrone@"
+	db TRAINERTYPE_NORMAL
+	; party
+	; TODO: movesets, etc
+	db TRAINERTYPE_ITEM | TRAINERTYPE_MOVES
+	; party
+	db 30, STARMIE, NO_ITEM
+		db WHIRLPOOL, WATER_GUN, NO_MOVE, NO_MOVE
+	db 32, KADABRA, NO_ITEM
+		db WHIRLPOOL, REFLECT, NO_MOVE, NO_MOVE
+	db 32, MISDREAVUS, NO_ITEM
+		db WHIRLPOOL, NO_MOVE, NO_MOVE, NO_MOVE
+	db -1 ; end
+	
 
 ; ================
 ; ================================
@@ -11161,7 +11234,7 @@ NomadFGroup:
 	db TRAINERTYPE_NORMAL
 	; party
 	; TODO: movesets, etc
-	db 27, OCTILLERY
+	db 27, GLOOM
 	db 30, MANTINE
 	db 32, DRIFBLIM	
 	db -1 ; end
@@ -11172,14 +11245,14 @@ NomadFGroup:
 	; TODO: movesets, etc
 	db 25, SKIPLOOM
 	db 28, JUMPLUFF	
-	db 30, XATU	
+	db 30, OVERQWIL	
 	db -1 ; end
 
 	db "Marlene@"
 	db TRAINERTYPE_NORMAL
 	; party
 	; TODO: movesets, etc
-	db 25, PIDGEOTTO
+	db 20, PIDGEOTTO
 	db 28, PIDGEOTTO	
 	db 36, PIDGEOT	
 	db -1 ; end
@@ -11192,6 +11265,45 @@ NomadFGroup:
 	db 30, PRIMEAPE
 	db -1 ; end
 
+	db "Collette@"
+	db TRAINERTYPE_NORMAL
+	; party
+	; TODO: movesets, etc
+	db 25, MANKEY
+	db 30, PRIMEAPE
+	db -1 ; end
+	
+	db "Hillary@"
+	db TRAINERTYPE_NORMAL
+	; party
+	; TODO: movesets, etc
+	db 25, MANKEY
+	db 30, PRIMEAPE
+	db -1 ; end
+	
+	db "Shirley@"
+	db TRAINERTYPE_NORMAL
+	; party
+	; TODO: movesets, etc
+	db 25, MANKEY
+	db 30, PRIMEAPE
+	db -1 ; end
+	
+	db "Kathryn@"
+	db TRAINERTYPE_NORMAL
+	; party
+	; TODO: movesets, etc
+	db 25, MANKEY
+	db 30, PRIMEAPE
+	db -1 ; end
+	
+	db "Clarice@"
+	db TRAINERTYPE_NORMAL
+	; party
+	; TODO: movesets, etc
+	db 25, MANKEY
+	db 30, PRIMEAPE
+	db -1 ; end
 
 ; ================
 ; ================================

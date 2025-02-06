@@ -3416,7 +3416,6 @@ QwilfishEvosAttacks:
 	db 49, POISON_JAB
 	db 53, DESTINY_BOND
 	db 57, HYDRO_PUMP
-	db 60, DOUBLE_EDGE ; Fell Stinger → event move
 	db 0 ; no more level-up moves
 
 OverqwilEvosAttacks:
@@ -3428,18 +3427,18 @@ OverqwilEvosAttacks:
 	db 5, DEFENSE_CURL ; Harden → TM move
 	db 9, MINIMIZE
 	db 13, BUBBLE_BEAM ; Bubble → similar move
-	db 17, ROLLOUT
-	db 21, TOXIC_SPIKES
+	db 17, TOXIC_SPIKES
+	db 21, ROLLOUT
 	db 25, PAIN_SPLIT ; Stockpile + Spit Up → HGSS move tutor
-	db 29, CRUNCH ; Revenge → Sw/Sh move
-	db 33, WATER_PULSE ; Brine → TM move
+	db 27, CRUNCH ; Revenge → Sw/Sh move
+	db 30, EXPLOSION
+	db 33, REVERSAL ; Brine → TM move
 	db 37, PIN_MISSILE
 	db 41, DARK_PULSE
 	db 45, AQUA_TAIL
 	db 49, POISON_JAB
 	db 53, DESTINY_BOND
 	db 57, HYDRO_PUMP
-	db 60, DOUBLE_EDGE ; Fell Stinger → event move
 	db 0 ; no more level-up moves
 
 ShuckleEvosAttacks:

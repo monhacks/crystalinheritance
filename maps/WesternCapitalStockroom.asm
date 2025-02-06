@@ -13,119 +13,33 @@ WesternCapitalStockroom_MapScriptHeader: ;	def_scene_scripts
 	bg_event  0,  2, BGEVENT_READ, WCApricornBenchScript
 
 	def_object_events
-	object_event 2, 3, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, WesternCapitalStockroomNPC1Script, -1
-	object_event 5, 2, SPRITE_ELDER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, WesternCapitalStockroomNPC2Script, -1
-	object_event 3, 5, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, WesternCapitalStockroomNPC3Script, -1
+	object_event 2, 3, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, WesternCapitalStockroomNPC1Text, -1 ; TODO FIX 
+	object_event 5, 2, SPRITE_ELDER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, WesternCapitalStockroomNPC2Text, -1 ; TODO FIX 
+	object_event 12, 3, SPRITE_BRIGADER, SPRITEMOVEDATA_WANDER, 1, 2, -1, -1, 0, OBJECTTYPE_COMMAND, trade, NPC_TRADE_EMY, -1 ; 
 	object_event  9,  0, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, pokemart, MARTTYPE_STANDARD, MART_WESTERN_CAPITAL, -1
 	object_event  9,  1, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, pokemart, MARTTYPE_TM, MART_WESTERN_CAPITAL_TM, -1
 
 	object_const_def
 
 
-WesternCapitalStockroomNPC1Script:
-	jumptextfaceplayer WesternCapitalStockroomNPC1Text
-
 WesternCapitalStockroomNPC1Text:
-
+	text "The presence of"
+	line "the outsiders at"
+	cont "the port corrupts"
+	cont "us with fear."
+	
+	para "The emperor is"
+	line "the only one who"
+	cont "stays true!"	
 	done
 
-WesternCapitalStockroomNPC2Script:
-	faceplayer
-	checkevent EVENT_GOT_EXPERT_BELT
-	iftrue .GotBelt
-	opentext
-	writetext WesternCapitalStockroomNPC2Text1
-	promptbutton
-	checkpoke UNOWN
-	iftrue .GiveItem
-	closetext
-	end
-
-.GiveItem
-	writetext WesternCapitalStockroomNPC2Text2
-	promptbutton
-	verbosegiveitem EXPERT_BELT
-	iffalse .BagFull
-	setevent EVENT_GOT_EXPERT_BELT
-	writetext WesternCapitalStockroomNPC2Text3
-	waitbutton
-.BagFull:
-	closetext
-	end
-
-.GotBelt
-	opentext
-	writetext WesternCapitalStockroomNPC2Text3
-	waitbutton
-	end
-
-WesternCapitalStockroomNPC2Text1:
-	text "When I was your"
-	line "age, I went on my"
-	cont "quest."
-
-	para "We tell the"
-	line "children, bring"
-	cont "back something"
-	cont "'unown' to the"
-	cont "village…"
+WesternCapitalStockroomNPC2Text:
+	text "Even the most"
+	line "stoic soldier"
+	cont "appreciates cute"
+	cont "#mon."
 	done
 
-WesternCapitalStockroomNPC2Text2:
-	text "Ah, you've done a"
-	line "quest? Here, take"
-	cont "this item…"
-	done
-
-WesternCapitalStockroomNPC2Text3:
-	text "Congratulations on"
-	line "your quest. What"
-	cont "will you do with"
-	cont "your gifts?"
-	done
-
-WesternCapitalStockroomNPC3Script:
-	jumptextfaceplayer WesternCapitalStockroomNPC3Text
-
-WesternCapitalStockroomNPC3Text:
-	text "It was a rite of"
-	line "passage to go on"
-	cont "an adventure and"
-	cont "bring back"
-	cont "knowledge."
-
-	para "I got to a cave"
-	line "and had a fantastic"
-	cont "vision, I saw the"
-	cont "creator of the"
-	cont "universe…"
-	done
-
-WesternCapitalStockroomNPC4Script:
-	jumptextfaceplayer WesternCapitalStockroomNPC4Text
-
-WesternCapitalStockroomNPC4Text:
-	text "We used to have a"
-	line "thriving craft"
-	cont "guild."
-
-	para "But the emperor"
-	line "ships cheap items,"
-	cont "and the guild had"
-	cont "to close."
-	done
-
-WesternCapitalStockroomNPC5Script:
-	jumptextfaceplayer WesternCapitalStockroomNPC5Text
-
-WesternCapitalStockroomNPC5Text:
-	text "Not everyone came"
-	line "back from the"
-	cont "quest."
-
-	para "It was a dangerous"
-	line "rite."
-	done
 
 WCApricornBenchScript:
 	opentext

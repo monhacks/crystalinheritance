@@ -56,7 +56,6 @@ MatronSoothesSecondClass2:
 	cont "clown scared my"
 	cont "son by doing a"
 	cont "routine."
-
 	done
 
 SecondClassCabinYoungster:

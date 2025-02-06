@@ -632,15 +632,15 @@ KRIS EQU __trainer_class__
 	const MASA ; PROPER
 	const KOJI ; PEACE 
 	;new
-	const NOBORU ; RISE
-	const TAKASHI ; NOBLE 
-	const ISAMU ; COURAGE
-	const KAITO ; SEA, SOAR
-	const HIROSHI ; GENEROUS
-	const AKIRA ; BRIGHT
-	const TADAO ; LOYAL 
-	const SATORU ; WISE
-	const YOSHI ; VIRTUOUS
+	const NOBORU ; RISE fly 
+	const TAKASHI ; NOBLE dragon 
+	const ISAMU ; COURAGE  
+	const KAITO ; SEA, SOAR water 
+	const HIROSHI ; GENEROUS 
+	const AKIRA ; BRIGHT electric 
+	const TADAO ; LOYAL ground 
+	const SATORU ; WISE psychic 
+	const YOSHI ; VIRTUOUS 
 
 
 	trainerclass SR_AND_JR ; 43

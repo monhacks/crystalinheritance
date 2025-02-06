@@ -17,17 +17,21 @@ WesternCapitalDorms_MapScriptHeader: ;	def_scene_scripts
 
 	def_object_events
 	object_event 1, 1, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, WesternCapitalDormsKurtScript, -1
-	object_event 12, 3, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, WesternCapitalDormsNPC1Text, -1
-	object_event 12, 4, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, WesternCapitalDormsNPC2Text, -1
-	object_event 3, 3, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, WesternCapitalDormsNPC3Text, -1
+	object_event 12, 3, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, trade, NPC_TRADE_TIM, -1 ; 
+	object_event 13, 3, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, WesternCapitalDormsNPC1Text, -1
+	object_event 5, 3, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, WesternCapitalDormsNPC2Text, -1
+	object_event 3, 3, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, WesternCapitalDormsNPC3Text, -1
 
 	object_const_def
 
 WesternCapitalDormsNPC1Text:
-	text "I don't see why"
-	line "we can't use the"
-	para "old way of build-"
-	line "ing towers."
+	text "My husband and I"
+	line "used to raise"
+	cont "strong #mon,"
+	
+	para "but now we need"
+	line "one who's a bit"
+	cont "simpler."
 	done
 
 WesternCapitalDormsNPC2Text:
@@ -42,8 +46,6 @@ WesternCapitalDormsNPC3Text:
 	line "outsiders leave"
 	cont "the port soon."
 	done
-
-
 
 WesternCapitalDormsBed:
 	showtext WesternCapitalBedText1

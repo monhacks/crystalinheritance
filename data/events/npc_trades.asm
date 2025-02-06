@@ -1,6 +1,6 @@
 NPCTrades:
 	table_width NPCTRADE_STRUCT_LENGTH, NPCTrades
-; NPC_TRADE_MIKE in Goldenrod City
+; NPC_TRADE_MIKE in Goldenrod City -- yes implemented 
 	rawchar 0, ABRA,       MISDREAVUS,     "Flutter@@@@"
 	db $EE, $EE, $EE, HIDDEN_ABILITY | NAT_SATK_UP_ATK_DOWN,  FEMALE, DUSK_BALL,   SITRUS_BERRY
 	dw 37460
@@ -10,16 +10,16 @@ NPCTrades:
 	db $EE, $EE, $EE, HIDDEN_ABILITY | NAT_SATK_UP_ATK_DOWN,   MALE,   JEZE_BALL,   PERSIM_BERRY
 	dw 48926
 	rawchar "Kyle@@@@", $00
-; NPC_TRADE_TIM in Olivine City
-	rawchar 1, STEELIX,    KANGASKHAN, "Joey@@@@@@@"
-	db $EE, $EE, $EE, HIDDEN_ABILITY | NAT_ATK_UP_SPD_DOWN,   MALE,   ULTRA_BALL,   SILK_SCARF
+; NPC_TRADE_TIM
+	rawchar 1, SNUBBULL,    HITMONLEE, "Geri@@@@@@@"
+	db $EE, $EE, $EE, HIDDEN_ABILITY | NAT_ATK_UP_SPD_DOWN,   MALE,   FAST_BALL,   SITRUS_BERRY
 	dw 29189
-	rawchar "Tim@@@@@", $00
+	rawchar "Jerry@@@", $00
 ; NPC_TRADE_EMY in Blackthorn City
-	rawchar 3, JYNX,       MR__MIME,   "Doris@@@@@@"
-	db $EE, $EE, $EE, HIDDEN_ABILITY | NAT_SPD_UP_ATK_DOWN,   FEMALE, LOVE_BALL,    PINK_BOW
+	rawchar 3, CLEFAIRY,       HITMONCHAN,   "Zuki@@@@@@@"
+	db $EE, $EE, $EE, HIDDEN_ABILITY | NAT_ATK_UP_SPD_DOWN,   FEMALE, FAST_BALL,    SITRUS_BERRY
 	dw 00283
-	rawchar "Emy@@@@@", $00
+	rawchar "Ted@@@@@", $00
 ; NPC_TRADE_CHRIS in Pewter City
 	rawchar 2, PINSIR,     HERACROSS,  "Paul@@@@@@@"
 	db $EE, $EE, $EE, HIDDEN_ABILITY | NAT_SPD_UP_SATK_DOWN,  MALE,   PARK_BALL,    SILVERPOWDER
