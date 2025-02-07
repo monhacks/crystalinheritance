@@ -23,5 +23,24 @@ BrassTower16F_MapScriptHeader:
 	def_object_events
 ; UNOWN AT 8, 15 
 ; FLAREON AT 4, 6
-
+	object_event  0, 0, SPRITE_ELDER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerElderTadao, -1 ; loyal
+	
 	object_const_def
+
+
+GenericTrainerElderTadao:
+    generictrainer ELDER, TADAO, EVENT_BEAT_ELDER_TADAO, TadaoSeenText, TadaoBeatenText
+
+
+TadaoBeatenText:
+	text "Should I stay"
+	line "true to my oath"
+	cont "or my values?"
+	done
+	
+TadaoSeenText:
+    text "Fall in line,"
+	line "show your"
+	cont "allegiance!"
+    done
+

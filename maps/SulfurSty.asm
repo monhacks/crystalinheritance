@@ -5,6 +5,8 @@ SulfurSty_MapScriptHeader: ;	def_scene_scripts
 
 
 	def_warp_events
+	warp_event 0, 0, SULFUR_STY_HOUSE_1, 1
+	warp_event 0, 0, SULFUR_STY_HOUSE_2, 1
 
 
 
@@ -17,7 +19,11 @@ SulfurSty_MapScriptHeader: ;	def_scene_scripts
 
 
 	def_object_events
+; brigaders fighting ninjas
+; ninjas with heracross or ursaring, brigaders with primeape or electabuzz or scizor
 
+	tmhmball_event 0, 0, TM_EXPLOSION, EVENT_GOT_TM_EXPLOSION
+	tmhmball_event 0, 0, TM_FOCUS_BLAST, EVENT_GOT_TM_FOCUS_BLAST
 
 
 	object_const_def

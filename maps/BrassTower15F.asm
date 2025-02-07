@@ -21,7 +21,24 @@ BrassTower15F_MapScriptHeader:
 
 
 	def_object_events
-
+	object_event  0, 0, SPRITE_ELDER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerElderAkira, -1 ; bright
 
 
 	object_const_def
+
+GenericTrainerElderAkira:
+    generictrainer ELDER, AKIRA, EVENT_BEAT_ELDER_AKIRA, AkiraSeenText, AkiraBeatenText
+
+
+AkiraBeatenText:
+	text "Oh, but I sense a"
+	line "stormcloud in"
+	cont "Mejimi's heart..."
+	done
+	
+AkiraSeenText:
+    text "The emperor will"
+	line "clear the sky, a"
+	cont "bright new dawn!"
+    done
+

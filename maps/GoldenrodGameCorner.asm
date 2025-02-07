@@ -49,8 +49,8 @@ GoldenrodGameCorner_MapScriptHeader:
 	object_event 10,  3, SPRITE_BATTLE_GIRL, SPRITEMOVEDATA_WANDER, 1, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodGameCornerCooltrainerFText, -1
 	object_event 17,  6, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodGameCornerPokefanFScript, -1
 	object_event  8,  7, SPRITE_BURGLAR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, (1 << DAY) | (1 << NITE), 0, OBJECTTYPE_SCRIPT, 0, GoldenrodGameCornerPharmacistScript, -1
-	object_event 14,  8, SPRITE_COOL_DUDE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodGameCornerCooltrainerMScript, -1
-	object_event  5, 10, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodGameCornerGentlemanScript, -1
+	object_event 14,  8, SPRITE_BURGLAR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodGameCornerCooltrainerMScript, -1
+	object_event  5, 10, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GameCornerSwaggerScript, -1
 	object_event 11, 10, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GoldenrodGameCornerPokefanM1Script, -1
 	object_event 17, 10, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodGameCornerPokefanM3Script, -1
 	object_event  2,  9, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodGameCornerPokefanM2Text, EVENT_BEAT_WHITNEY
@@ -253,11 +253,6 @@ GoldenrodGameCornerPokefanFScript:
 	turnobject LAST_TALKED, RIGHT
 	end
 
-GoldenrodGameCornerGentlemanScript:
-	showtextfaceplayer GoldenrodGameCornerGentlemanText
-	turnobject LAST_TALKED, RIGHT
-	end
-
 GoldenrodGameCornerLeftTheirDrinkScript:
 	jumptext GoldenrodGameCornerLeftTheirDrinkText
 
@@ -342,7 +337,7 @@ GoldenrodGameCornerFisherText:
 	line "get a Pay Day too."
 	done
 
-Text_GoldenrodGameCornerTutorPayDayQuestion:
+Text_GoldenrodGameCornerTutorSwaggerQuestion:
 	text "If you give me a"
 	line "Silver Leaf, I'll"
 
@@ -410,17 +405,6 @@ GoldenrodGameCornerCooltrainerFText:
 	line "I win!"
 	done
 
-GoldenrodGameCornerGentlemanText:
-	text "I taught Ice Beam"
-	line "to my #mon."
-
-	para "It was hard to get"
-	line "enough coins for"
-
-	para "it, but it was"
-	line "worth it."
-	done
-
 GoldenrodGameCornerPokefanM2Text:
 	text "I couldn't win at"
 	line "the slots, and I"
@@ -439,4 +423,74 @@ GoldenrodGameCornerLeftTheirDrinkText:
 	line "drink."
 
 	para "It smells sweet."
+	done
+
+GameCornerSwaggerScript:
+	faceplayer
+	opentext
+	checkevent EVENT_LISTENED_TO_SWAGGER_INTRO
+	iftrue GameCornerTutorSwaggerScript
+	writetext Text_SwaggerIntro
+	waitbutton
+	setevent EVENT_LISTENED_TO_SWAGGER_INTRO
+GameCornerTutorSwaggerScript:
+	writetext Text_GameCornerTutorSwagger ;;
+	waitbutton
+	checkitem SILVER_LEAF
+	iffalse .NoSilverLeaf
+	writetext Text_GameCornerTutorQuestion ;;
+	yesorno
+	iffalse .TutorRefused
+	setval SWAGGER
+	writetext ClearText
+	special Special_MoveTutor
+	ifequal $0, .TeachMove
+.TutorRefused
+	jumpopenedtext Text_GameCornerTutorRefused ;; 
+
+.NoSilverLeaf
+	jumpopenedtext Text_GameCornerTutorNoSilverLeaf
+
+.TeachMove
+	takeitem SILVER_LEAF
+	jumpopenedtext Text_GameCornerTutorTaught ;;
+	
+Text_SwaggerIntro: 
+	text "I stick to poker."
+	line "I can make my own"
+	cont "luck there."
+	
+	para "I act macho with"
+	line "Swagger. They get"
+	cont "tilted and take"
+	cont "themselves out!"
+
+	done
+
+Text_GameCornerTutorSwagger:
+	text "I can teach your"
+	line "#mon to use"
+
+	para "Swagger, for"
+	line "a Silver Leaf."
+	done
+
+Text_GameCornerTutorNoSilverLeaf:
+	text "You don't have"
+	line "a Silver Leaf."
+	done
+
+Text_GameCornerTutorQuestion:
+	text "Should I teach"
+	line "your #mon"
+	cont "Swagger?"
+	done
+
+Text_GameCornerTutorRefused:
+	text "Alright then."
+	done
+
+Text_GameCornerTutorTaught:
+	text "You look like a"
+	line "winner, kid."	
 	done

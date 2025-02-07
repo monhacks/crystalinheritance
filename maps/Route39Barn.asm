@@ -12,190 +12,156 @@ Route39Barn_MapScriptHeader:
 	def_bg_events
 
 	def_object_events
-	object_event  3,  3, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, MILTANK, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, MooMoo, -1
-	object_event  2,  3, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route39BarnTwin1Script, -1
-	object_event  4,  3, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route39BarnTwin2Script, -1
+	object_event  2,  3, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BarnZenHeadbuttScript, -1
+	object_event  6,  3, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BarnIronHeadScript, -1
 
-Route39BarnTwin1Script:
+	pokemon_event 3, 3, TAUROS, -1, -1, PAL_NPC_BLUE, TaurosBarnTextZen, -1
+	pokemon_event 5, 3, TAUROS, -1, -1, PAL_NPC_RED, TaurosBarnTextIron, -1
+
+
+BarnZenHeadbuttScript:
 	faceplayer
 	opentext
-	checkevent EVENT_HEALED_MOOMOO
-	iftrue .FeedingMooMoo
-	writetext Text_MoomooIsSick
+	checkevent EVENT_LISTENED_TO_ZEN_HEADBUTT_INTRO
+	iftrue BarnTutorZenHeadbuttScript
+	writetext Text_ZenHeadbuttIntro
 	waitbutton
-	closetext
-	turnobject LAST_TALKED, RIGHT
-	end
-
-.FeedingMooMoo:
-	writetext Text_WereFeedingMoomoo
+	setevent EVENT_LISTENED_TO_ZEN_HEADBUTT_INTRO
+BarnTutorZenHeadbuttScript:
+	writetext Text_BarnTutorZenHeadbutt ;;
 	waitbutton
-	closetext
-	turnobject LAST_TALKED, RIGHT
-	end
-
-Route39BarnTwin2Script:
-	faceplayer
-	opentext
-	checkevent EVENT_HEALED_MOOMOO
-	iftrue .FeedingMooMoo
-	writetext Text_MoomooIsSick
-	waitbutton
-	closetext
-	turnobject LAST_TALKED, LEFT
-	end
-
-.FeedingMooMoo:
-	writetext Text_WereFeedingMoomoo
-	waitbutton
-	closetext
-	turnobject LAST_TALKED, LEFT
-	end
-
-MooMoo:
-	checkevent EVENT_HEALED_MOOMOO
-	iftrue .HappyCow
-	opentext
-	writetext Text_WeakMoo
-	setval MILTANK
-	special PlaySlowCry
-	promptbutton
-	writetext Text_ItsCryIsWeak
-	promptbutton
-	writetext Text_AskGiveBerry
+	checkitem SILVER_LEAF
+	iffalse .NoSilverLeaf
+	writetext Text_BarnTutorQuestion ;;
 	yesorno
-	iffalse_jumpopenedtext Text_RefusedToGiveBerry
-	checkitem ORAN_BERRY
-	iffalse .MaybeSitrusBerry
-	takeitem ORAN_BERRY
-	readmem wMooMooBerries
-	addval 1
-	writemem wMooMooBerries
-	ifequal 3, .ThreeOranBerries
-	ifequal 5, .FiveOranBerries
-	ifequal 7, .SevenOranBerries
-	jumpopenedtext Text_GaveOranBerry
+	iffalse .TutorRefused
+	setval ZEN_HEADBUTT
+	writetext ClearText
+	special Special_MoveTutor
+	ifequal $0, .TeachMove
+.TutorRefused
+	jumpopenedtext Text_BarnTutorRefused ;; 
 
-.MaybeSitrusBerry:
-	checkitem SITRUS_BERRY
-	iffalse_jumpopenedtext Text_NoBerries
-	takeitem SITRUS_BERRY
-	readmem wMooMooBerries
-	addval 2
-	writemem wMooMooBerries
-	ifgreater 6, .SevenSitrusBerries
-	ifgreater 4, .FiveSitrusBerries
-	ifgreater 2, .ThreeSitrusBerries
-	jumpopenedtext Text_GaveSitrusBerry
+.NoSilverLeaf
+	jumpopenedtext Text_BarnTutorNoSilverLeaf
 
-.ThreeOranBerries:
-	writetext Text_GaveOranBerry
-	promptbutton
-	jumpopenedtext Text_LittleHealthier
+.TeachMove
+	takeitem SILVER_LEAF
+	jumpopenedtext Text_BarnTutorTaught ;;
+	
+Text_ZenHeadbuttIntro: 
+	text "This Tauros can"
+	line "meditate!"
+	
+	para "See, he is still"
+	line "for hours - ideal"
+	cont "posture."
 
-.FiveOranBerries:
-	writetext Text_GaveOranBerry
-	promptbutton
-	jumpopenedtext Text_QuiteHealthy
+	para "He ignores bugs"
+	line "landing on him,"
+	cont "complete non-att-"
+	cont "achment."
+	
 
-.SevenOranBerries:
-	playmusic MUSIC_HEAL
-	writetext Text_GaveOranBerry
-	pause 60
-	promptbutton
-	special RestartMapMusic
-	setevent EVENT_HEALED_MOOMOO
-	jumpopenedtext Text_TotallyHealthy
-
-.ThreeSitrusBerries:
-	writetext Text_GaveSitrusBerry
-	promptbutton
-	jumpopenedtext Text_LittleHealthier
-
-.FiveSitrusBerries:
-	writetext Text_GaveSitrusBerry
-	promptbutton
-	jumpopenedtext Text_QuiteHealthy
-
-.SevenSitrusBerries:
-	playmusic MUSIC_HEAL
-	writetext Text_GaveSitrusBerry
-	pause 60
-	promptbutton
-	special RestartMapMusic
-	setevent EVENT_HEALED_MOOMOO
-	jumpopenedtext Text_TotallyHealthy
-
-.HappyCow:
-	showcrytext MoomooHappyMooText, MILTANK
-	end
-
-Text_MoomooIsSick:
-	text "Moomoo is sick…"
-
-	para "She needs lots of"
-	line "healthy Berries."
+	para "Notice her gaze?"
+	line "A stare of deep"
+	cont "dharmic insight."
+	
+	para "Perfect Zen!"
 	done
 
-Text_WereFeedingMoomoo:
-	text "We're feeding"
-	line "Moomoo!"
+Text_BarnTutorZenHeadbutt:
+	text "I can teach your"
+	line "#mon to use"
+
+	para "Zen Headbutt, for"
+	line "a Silver Leaf."
 	done
 
-Text_WeakMoo:
-	text "Miltank: …Moo…"
+Text_BarnTutorNoSilverLeaf:
+	text "You don't have"
+	line "a Silver Leaf."
 	done
 
-Text_ItsCryIsWeak:
-	text "Its cry is weak…"
+Text_BarnTutorQuestion:
+	text "Should I teach"
+	line "your #mon?"
 	done
 
-MoomooHappyMooText:
-	text "Miltank: Mooo!"
+Text_BarnTutorRefused:
+	text "Alright then."
 	done
 
-Text_AskGiveBerry:
-	text "Give an Oran or"
-	line "Sitrus Berry to"
-	cont "Miltank?"
+Text_BarnTutorTaught:
+	text "All done!"
 	done
 
-Text_GaveOranBerry:
-	text "<PLAYER> gave an"
-	line "Oran Berry to"
-	cont "Miltank."
+TaurosBarnTextZen:
+	text "The Tauros chews"
+	line "cud, staring into"
+	cont "nothing."
 	done
 
-Text_GaveSitrusBerry:
-	text "<PLAYER> gave a"
-	line "Sitrus Berry to"
-	cont "Miltank."
+
+BarnIronHeadScript:
+	faceplayer
+	opentext
+	checkevent EVENT_LISTENED_TO_IRON_HEAD_INTRO
+	iftrue BarnTutorIronHeadScript
+	writetext Text_IronHeadIntro
+	waitbutton
+	setevent EVENT_LISTENED_TO_IRON_HEAD_INTRO
+BarnTutorIronHeadScript:
+	writetext Text_BarnTutorIronHead ;;
+	waitbutton
+	checkitem SILVER_LEAF
+	iffalse .NoSilverLeaf
+	writetext Text_BarnTutorQuestion ;;
+	yesorno
+	iffalse .TutorRefused
+	setval ZEN_HEADBUTT
+	writetext ClearText
+	special Special_MoveTutor
+	ifequal $0, .TeachMove
+.TutorRefused
+	jumpopenedtext Text_BarnTutorRefused ;; 
+
+.NoSilverLeaf
+	jumpopenedtext Text_BarnTutorNoSilverLeaf
+
+.TeachMove
+	takeitem SILVER_LEAF
+	jumpopenedtext Text_BarnTutorTaught ;;
+	
+Text_IronHeadIntro: 
+	text "How do I keep my"
+	line "cattle from wand-"
+	cont "ering off?"
+	
+	para "Well, I have this"
+	line "here magnet. And"
+	cont "when I flip it on"
+	
+	para "my Tauros' Iron"
+	line "Head is pulled "
+	cont "back to the barn!"
 	done
 
-Text_LittleHealthier:
-	text "Miltank became a"
-	line "little healthier!"
+Text_BarnTutorIronHead:
+	text "I can give your"
+	line "#mon the"
+
+	para "Iron Head, for"
+	line "a Silver Leaf."
 	done
 
-Text_QuiteHealthy:
-	text "Miltank became"
-	line "quite healthy!"
-	done
-
-Text_TotallyHealthy:
-	text "Miltank became"
-	line "totally healthy!"
-	done
-
-Text_NoBerries:
-	text "<PLAYER> has no"
-	line "Oran or Sitrus"
-	cont "Berries…"
-	done
-
-Text_RefusedToGiveBerry:
-	text "<PLAYER> wouldn't"
-	line "give a Berry."
-
-	para "Miltank looks sad."
+TaurosBarnTextIron:
+	text "The Tauros' head"
+	line "is covered by"
+	cont "solder excess and"
+	para "rusty metal"
+	line "scraps."
+	
+	para "It has hulking"
+	line "neck muscles."
 	done

@@ -13,4 +13,96 @@ LakeOfRageMagikarpHouse_MapScriptHeader:
 	bg_event  7,  1, BGEVENT_JUMPSTD, difficultbookshelf
 
 	def_object_events
-;	object_event  2,  3, SPRITE_FISHING_GURU, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, MagikarpLengthRaterScript, -1
+	object_event  2,  3, SPRITE_RUIN_MANIAC, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LakeOfRageEarthPowerScript, -1
+	pokemon_event 3,  4, QUAGSIRE, -1, -1, PAL_NPC_BLUE, QuagsireEarthPowerText, -1
+	
+QuagsireEarthPowerText:
+	text "Quag! Quag!"
+	
+	para "...What's that"
+	line "smell?"
+	done
+
+LakeOfRageEarthPowerScript:
+	faceplayer
+	opentext
+	checkevent EVENT_LISTENED_TO_EARTH_POWER_INTRO
+	iftrue LakeOfRageTutorEarthPowerScript
+	writetext Text_EarthPowerIntro
+	waitbutton
+	setevent EVENT_LISTENED_TO_EARTH_POWER_INTRO
+LakeOfRageTutorEarthPowerScript:
+	writetext Text_LakeOfRageTutorEarthPower ;;
+	waitbutton
+	checkitem SILVER_LEAF
+	iffalse .NoSilverLeaf
+	writetext Text_LakeOfRageTutorQuestion ;;
+	yesorno
+	iffalse .TutorRefused
+	setval EARTH_POWER
+	writetext ClearText
+	special Special_MoveTutor
+	ifequal $0, .TeachMove
+.TutorRefused
+	jumpopenedtext Text_LakeOfRageTutorRefused ;; 
+
+.NoSilverLeaf
+	jumpopenedtext Text_LakeOfRageTutorNoSilverLeaf
+
+.TeachMove
+	takeitem SILVER_LEAF
+	jumpopenedtext Text_LakeOfRageTutorTaught ;;
+	
+Text_EarthPowerIntro: 
+	text "You never know"
+	line "what will bubble"
+	cont "from the lakebed!"
+	
+	para "Long ago, a city"
+	line "stood nearby, but"
+	cont "was swallowed up"
+	cont "by the muck."
+	
+	para "Now, its secrets"
+	line "are digested by"
+	cont "the soil, and"
+	
+	para "released silently"
+	line "or with a poof."
+	
+	done
+
+Text_LakeOfRageTutorEarthPower:
+	text "If you'd like to"
+	line "wield this power"
+	cont "for yourself,"
+	
+	para "I can teach you."
+	line "You won't need"
+	cont "beans or cabbage,"
+	
+	para "Just a Silver"
+	line "Leaf."
+	done
+
+Text_LakeOfRageTutorNoSilverLeaf:
+	text "You don't have"
+	line "a Silver Leaf."
+	done
+
+Text_LakeOfRageTutorQuestion:
+	text "Should I teach"
+	line "your #mon"
+	cont "Earth Power?"
+	done
+
+Text_LakeOfRageTutorRefused:
+	text "Suit yourself."
+	done
+
+Text_LakeOfRageTutorTaught:
+	text "There! Now, you"
+	line "can wield the"
+	para "flatus of the"
+	line "Earth as well!"
+	done

@@ -23,9 +23,9 @@ Route39Farmhouse_MapScriptHeader:
 PokefanM_DairyFarmer:
 	faceplayer
 	opentext
-	checkevent EVENT_HEALED_MOOMOO
-	iftrue FarmerMScript_SellMilk
-	writetext FarmerMText_SickCow
+	checkevent EVENT_SAVED_MILTANK
+	iffalse FarmerMScript_SellMilk
+	writetext FarmerText_Rustler
 	waitbutton
 	closetext
 	end
@@ -96,36 +96,14 @@ FarmerMScript_SellMilk:
 PokefanF_AcrobaticsFarmer:
 	faceplayer
 	opentext
-	checkevent EVENT_GOT_TM62_ACROBATICS_FROM_MOOMOO_FARM
-	iftrue .GotAcrobatics
-	checkevent EVENT_HEALED_MOOMOO
-	iftrue .GiveAcrobatics
-	jumpopenedtext FarmerFText_InTrouble
+	checkevent EVENT_SAVED_MILTANK
+	iftrue_jumpopenedtext FarmerText_Rustler
+	jumpopenedtext FarmerFText_GreatCows
 
-.GiveAcrobatics:
-	writetext FarmerFText_HealedMiltank
-	promptbutton
-	verbosegivetmhm TM_ACROBATICS
-	setevent EVENT_GOT_TM62_ACROBATICS_FROM_MOOMOO_FARM
-.GotAcrobatics:
-	jumpopenedtext FarmerFText_AcrobaticsSpeech
-
-FarmerMText_SickCow:
-	text "My Miltank ain't"
-	line "givin' me milk"
-	cont "n'more."
-
-	para "This here Farm's"
-	line "got famous milk."
-
-	para "Most everyone"
-	line "wants a drink."
-
-	para "It'll give me lots"
-	line "o' milk if'n I"
-
-	para "feed it lots o'"
-	line "Berries, I reckon."
+FarmerText_Rustler:
+	text "Hey! Get out of"
+	line "our house, you"
+	cont "Rustler!"
 	done
 
 FarmerMText_BuyMilk:
@@ -168,38 +146,20 @@ FarmerMText_Milking:
 	done
 
 FarmerFText_InTrouble:
-	text "Our milk even goes"
-	line "out to Kanto."
-
-	para "So if our own"
-	line "Miltank won't give"
-
-	para "us any milk, we're"
-	line "in trouble."
+	text "I think our cows"
+	line "are lucky to be"
+	cont "at our ranch."
+	
+	para "Our ponds are cl-"
+	line "osed loop pools."
+	para "Water they drink"
+	line "goes right back"
+	cont "a bit later."
+	
+	para "And the sheen on"
+	line "the ponds changes"
+	cont "with the seasons!"
+	
+	para "Magical, right?"
 	done
 
-FarmerFText_HealedMiltank:
-	text "You fixed our"
-	line "Miltank, hon. Now"
-
-	para "it gives Moomoo"
-	line "Milk again."
-
-	para "Here's somethin'"
-	line "fer your trouble."
-	done
-
-FarmerFText_AcrobaticsSpeech:
-	text "That there's"
-	line "Acrobatics."
-
-	para "It's a move that"
-	line "hurts more if'n"
-
-	para "your #mon ain't"
-	line "holdin' an item."
-
-	para "You best think how"
-	line "you ought to use"
-	cont "it, hon."
-	done

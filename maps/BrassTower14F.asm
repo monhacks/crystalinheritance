@@ -18,7 +18,22 @@ BrassTower14F_MapScriptHeader:
 
 
 	def_object_events
-
+	object_event  0, 0, SPRITE_ELDER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerElderHiroshi, -1 ; generous
 
 
 	object_const_def
+
+GenericTrainerElderHiroshi:
+    generictrainer ELDER, HIROSHI, EVENT_BEAT_ELDER_HIROSHI, HiroshiSeenText, HiroshiBeatenText
+
+
+HiroshiBeatenText:
+	text "What goes around"
+	line "will come around."
+	done
+	
+HiroshiSeenText:
+    text "Give yourself to"
+	line "the emperor!"
+    done
+	

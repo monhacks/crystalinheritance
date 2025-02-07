@@ -22,7 +22,24 @@ BrassTower17F_MapScriptHeader:
 
 
 	def_object_events
-
+	object_event  0, 0, SPRITE_ELDER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerElderSatoru, -1 ; wise
 
 
 	object_const_def
+
+
+GenericTrainerElderSatoru:
+    generictrainer ELDER, SATORU, EVENT_BEAT_ELDER_SATORU, SatoruSeenText, SatoruBeatenText
+
+
+SatoruBeatenText:
+	text "Hm, but why does"
+	line "he act with such"
+	cont "folly."	
+	done
+	
+SatoruSeenText:
+    text "Mejimi has the"
+	line "wisdom of the"
+	cont "ages!"	
+    done

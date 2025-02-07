@@ -25,6 +25,8 @@ BrassTower13F_MapScriptHeader:
 	pokemon_event  11, 12, GENGAR, -1, -1, PAL_NPC_RED, BrassTowerGuardText, EVENT_BRASS_TOWER_RIGHT_GUARD
 	pokemon_event  10,  5, MISDREAVUS, -1, -1, PAL_NPC_RED, BrassTowerGuardText, EVENT_BRASS_TOWER_LEFT_GUARD
 	pokemon_event  2, 12, MISDREAVUS, -1, -1, PAL_NPC_RED, BrassTowerGuardText, EVENT_BRASS_TOWER_LEFT_GUARD
+	object_event  1, 6, SPRITE_ELDER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerElderIsamu, -1 ; courage
+	object_event  12,6, SPRITE_ELDER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerElderKaito, -1 ; sea, soar
 
 
 	object_const_def
@@ -82,3 +84,34 @@ NotSwitchingText:
 	text "Unchanged."
 	done
 
+
+
+GenericTrainerElderIsamu:
+    generictrainer ELDER, ISAMU, EVENT_BEAT_ELDER_ISAMU, IsamuSeenText, IsamuBeatenText
+
+IsamuBeatenText:
+    text "Bravery is shown"
+	line "only when afraid."
+    done
+	
+IsamuSeenText:
+	text "I fight with"
+	line "courage!"
+	done
+	
+	
+
+GenericTrainerElderKaito:
+    generictrainer ELDER, KAITO, EVENT_BEAT_ELDER_KAITO, KaitoSeenText, KaitoBeatenText
+
+KaitoBeatenText:
+    text "Where I end,"
+	line "another begins..."
+    done
+	
+KaitoSeenText:
+	text "We will belong to"
+	line "the everlasting!"
+	done
+	
+	

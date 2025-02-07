@@ -10,12 +10,11 @@ OlivineGym_MapScriptHeader:
 	def_coord_events
 
 	def_bg_events
-	bg_event  3, 13, BGEVENT_READ, OlivineGymStatue
-	bg_event  6, 13, BGEVENT_READ, OlivineGymStatue
+
 
 	def_object_events
 	object_event  5,  3, SPRITE_JASMINE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OlivineGymJasmineScript, -1
-	object_event  7, 13, SPRITE_GYM_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OlivineGymGuyScript, -1
+
 
 
 OlivineGymJasmineScript:
@@ -45,70 +44,40 @@ OlivineGymJasmineScript:
 	setevent EVENT_GOT_TM23_IRON_TAIL
 	jumpthisopenedtext
 
-	text "…You could use"
-	line "that TM to teach"
-	cont "Iron Tail."
+Jasmine_GoodLuck:
+	text "Olivine will find"
+	line "a way to persist."
+	
+	para "Though we were"
+	line "corroded, we will"
+	cont "polish ourselves"
+	cont "and shine bright."	
 	done
 
-OlivineGymGuyScript:
-	checkevent EVENT_BEAT_JASMINE
-	iftrue_jumptextfaceplayer OlivineGymGuyWinText
-	jumpthistextfaceplayer
-
-	text "Jasmine uses the"
-	line "newly discovered"
-	cont "Steel-type."
-
-	para "I don't know very"
-	line "much about it."
-	done
-
-
-OlivineGymStatue:
-	gettrainername JASMINE, 1, $1
-	checkflag ENGINE_MINERALBADGE
-	iftrue .Beaten
-	jumpstd gymstatue1
-.Beaten
-	jumpstd gymstatue2
 
 Jasmine_SteelTypeIntro:
-	text "…Thank you for"
-	line "your help at the"
-	cont "Lighthouse…"
+	text "Thank you for"
+	line "your help."
 
-	para "But this is dif-"
-	line "ferent. Please"
+	para "I thought that I"
+	line "was being kind,"
+	
+	para "but in being too"
+	line "permissive, I"
+	
+	para "was derelict in"
+	line "my duties. Now, "
+	
+	para "show me your"
+	line "#mon!"
 
-	para "allow me to intro-"
-	line "duce myself."
-
-	para "I am Jasmine, a"
-	line "Gym Leader. I use"
-	cont "the Steel-type."
-
-	para "…Do you know about"
-	line "the Steel-type?"
-
-	para "They are very"
-	line "hard, cold, sharp,"
-	cont "and really strong."
-
-	para "…Um… May I begin?"
 	done
 
 Jasmine_BetterTrainer:
-	text "…You are a better"
-	line "trainer than me,"
-
-	para "in both skill and"
-	line "kindness."
-
-	para "In accordance with"
-	line "League rules, I"
-
-	para "confer upon you"
-	line "this Badge."
+	text "Excellent battle,"
+	line "finding even more"
+	cont "weak spots in my"
+	cont "style."
 	done
 
 Text_ReceivedMineralBadge:
@@ -128,34 +97,4 @@ Jasmine_BadgeSpeech:
 
 	para "…Um… Please take"
 	line "this too…"
-	done
-
-Jasmine_GoodLuck:
-	text "Um… I don't know"
-	line "how to say this,"
-	cont "but good luck…"
-	done
-
-OlivineGymGuyWinText:
-	text "That was awesome."
-
-	para "The Steel-type,"
-	line "huh?"
-
-	para "That was a close"
-	line "encounter of an"
-	cont "unknown kind!"
-	done
-
-OlivineGymGuyPreText:
-	text "Jasmine, the Gym"
-	line "Leader, is at the"
-	cont "Lighthouse."
-
-	para "She's been tending"
-	line "to a sick #mon."
-
-	para "A strong trainer"
-	line "has to be compas-"
-	cont "sionate."
 	done

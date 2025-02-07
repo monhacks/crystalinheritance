@@ -14,9 +14,9 @@ MahoganyPokeCenter1F_MapScriptHeader:
 
 	def_object_events
 	pc_nurse_event  5, 1
-	object_event  9,  4, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, MahoganyPokeCenter1FPokefanmText, -1
 	object_event  1,  3, SPRITE_CAMPER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, MahoganyPokeCenter1FYoungsterText, -1
-	object_event  2,  3, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, MahoganyPokeCenter1FCooltrainerfText, -1
+	object_event  10,  3, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, MahoganyPokeCenter1FCooltrainerfText, -1
+	object_event 3, 3, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, MahoganyPokeCenter1FMatronText, -1
 	object_event  9,  6, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, IlexExcelsiorV7Script, -1
 
 PokemonJournalPryceScript:
@@ -28,52 +28,44 @@ PokemonJournalPryceScript:
 	para "Special Feature:"
 	line "Leader Pryce!"
 
-	para "Pryce's middle name"
-	line "is Willow."
-
-	para "His fighting style"
-	line "is said to be as"
-
-	para "flexible as a"
-	line "willow tree in"
-	cont "winter, which has"
-
-	para "earned him the"
-	line "nickname “the"
-	cont "winter trainer”."
+	para "Pryce is said to"
+	line "medidate north of"
+	cont "the Lake of Rage,"
+	
+	para "In a hidden cabin"
+	line "only few know of."
 	done
 
-MahoganyPokeCenter1FPokefanmText:
-	text "What's this? Team"
-	line "Rocket has come"
-	cont "back?"
-
-	para "I saw some men in"
-	line "black at Lake of"
-	cont "Rage…"
-	done
 
 MahoganyPokeCenter1FYoungsterText:
-	text "I stop my #mon"
-	line "from evolving too"
-	cont "early."
+	text "I want to explore"
+	line "the Lake, but my"
+	cont "dad says that the"
+	
+	para "#mon there"
+	line "are too strong."
+	
+	para "Yeah, right."
 
-	para "I make them learn"
-	line "certain moves be-"
-	cont "fore I let them"
-	cont "evolve."
 	done
 
 MahoganyPokeCenter1FCooltrainerfText:
-	text "#mon do become"
-	line "stronger when they"
-
-	para "evolve, but they"
-	line "also learn moves"
-	cont "more slowly."
+	text "Be careful if you"
+	line "go to the Lake."
+	
+	para "The gate clerks"
+	line "tell me not eve-"
+	cont "ryone comes back."	
 	done
 
-
+MahoganyPokeCenter1FMatronText:
+	text "Silph abandoned"
+	line "the Lake after it"
+	cont "drained."
+	
+	para "Now, wild #mon"
+	line "are taking over."
+	done
 
 IlexExcelsiorV7Script:
 	opentext

@@ -6646,46 +6646,117 @@ ElderGroup:
 	
 ; ================
 
-	; ELDER ; rise 
+	; ELDER ; rise 12f 
 	db "Noboru@"
 	db TRAINERTYPE_NORMAL
 	; party
 	db 46, PIDGEOT
 	db 48, GLISCOR
-	db 50, MANTINE
+	db 48, JUMPLUFF	
+	db 49, MANTINE
+	db 50, STARAPTOR
 	db -1 ; end
 
 ; ================
 
-	; ELDER ; noble 
+	; ELDER ; noble 12f
 	db "Takashi@"
 	db TRAINERTYPE_NORMAL
 	; party
 	db 46, DRAGONAIR
 	db 48, YANMEGA
+	db 49, KANGASKHAN
 	db 50, KINGDRA
 	db -1 ; end
 
 ; ================
 
 	; ELDER
-	db "Isamu@"
+	db "Isamu@" ; courage 13f
 	db TRAINERTYPE_NORMAL
 	; party
-	db 46, DRAGONAIR
-	db 48, YANMEGA
-	db 50, KINGDRA
+	db 46, ARCANINE
+	db 48, MAGCARGO
+	db 48, HOUNDOOM
+	db 50, EXEGGUTOR
+	db 50, RAPIDASH
 	db -1 ; end
 	
 ; ================
 
 	; ELDER
-	db "Kaito@"
+	db "Kaito@" ; sea , soar 13f
 	db TRAINERTYPE_NORMAL
 	; party
-	db 46, DRAGONAIR
-	db 48, YANMEGA
-	db 50, KINGDRA
+	db 46, LAPRAS
+	db 48, QUAGSIRE
+	db 48, AZUMARILL
+	db 48, TENTACRUEL	
+	db 50, LANTURN
+	db -1 ; end
+	
+	; ================
+
+	; ELDER
+	db "Hiroshi@" ; generous  ; 14f
+	db TRAINERTYPE_NORMAL
+	; party
+	db 46, MACHAMP
+	db 46, POLIWRATH	
+	db 46, SUDOWOODO	
+	db 48, TOXICROAK
+	db 50, H__DECIDUEYE
+	db -1 ; end
+	
+; ================
+
+	; ELDER
+	db "Akira@" ; bright ; 15f 
+	db TRAINERTYPE_NORMAL
+	; party
+	db 46, H__BRAVIARY
+	db 48, DRIFBLIM
+	db 48, AMPHAROS	
+	db 50, H__ELECTRODE
+	db -1 ; end
+	
+	; ================
+
+	; ELDER
+	db "Tadao@" ; loyal ; 16f 
+	db TRAINERTYPE_NORMAL
+	; party
+	db 46, TOGEKISS
+	db 50, UMBREON
+	db 48, BLISSEY	
+	db 50, CROBAT
+	db -1 ; end
+	
+; ================
+
+	; ELDER
+	db "Satoru@" ; wise ; 17f
+	db TRAINERTYPE_NORMAL
+	; party
+	db 46, HITMONLEE
+	db 48, HITMONCHAN
+	db 48, DUSKNOIR
+	db 48, BRONZONG	
+	db 50, SPIRITOMB
+	db -1 ; end
+	
+; ================
+
+	; ELDER
+	db "Yoshi@" ; virtous ; 19f 
+	db TRAINERTYPE_NORMAL
+	; party
+	db 46, MEGANIUM
+	db 46, XATU	
+	db 46, GRANBULL
+	db 46, URSARING
+	db 48, FROSLASS
+	db 50, H__AVALUGG
 	db -1 ; end
 	
 
