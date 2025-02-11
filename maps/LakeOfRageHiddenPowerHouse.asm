@@ -1,113 +1,121 @@
 LakeOfRageHiddenPowerHouse_MapScriptHeader:
 	def_scene_scripts
 
+
 	def_callbacks
+
 
 	def_warp_events
 	warp_event  2,  7, LAKE_OF_RAGE, 1
 	warp_event  3,  7, LAKE_OF_RAGE, 1
 
+
 	def_coord_events
+
+
 
 	def_bg_events
 	bg_event  5,  1, BGEVENT_JUMPSTD, radio2
 	bg_event  6,  1, BGEVENT_JUMPSTD, difficultbookshelf
 	bg_event  7,  1, BGEVENT_JUMPSTD, difficultbookshelf
 
+
 	def_object_events
-	object_event  2,  3, SPRITE_FAT_GUY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, HiddenPowerGuy, -1
+	object_event  3,  3, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BasculegionBlessingScript, -1
+	object_event  3,  4, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptext, PryceCabinText2, -1
 
-HiddenPowerGuy:
-	faceplayer
+	object_const_def
+
+PryceCabinText2:
+	text "To Kurt"
+	line "From Pryce"
+	
+	para "I'm sorry that so"
+	line "few Azaleans came"
+	cont "to the ceremony."
+	
+	para "And I hear you"
+	line "are more agitated"
+	cont "every day."
+	
+	para "Please, remember"
+	line "that you shape"
+	cont "<PLAYER>."
+	
+	para "You can't shape"
+	line "the whole world."
+	done
+
+BasculegionBlessingScript:
 	opentext
-	checkevent EVENT_GOT_TM10_HIDDEN_POWER
-	iftrue .AlreadyGotItem
-	writetext .Text1
-	promptbutton
-	verbosegivetmhm TM_HIDDEN_POWER
-	setevent EVENT_GOT_TM10_HIDDEN_POWER
-	writetext .Text2
-	waitbutton
-	sjump .CheckHiddenPower
-.AlreadyGotItem:
-	writetext .Text4
-	waitbutton
-.CheckHiddenPower
-	writetext .Text3
+	writetext ReadBasculegionTextQuestion
 	yesorno
-	iffalse_jumpopenedtext .Text7
-	writetext .Text5
-	promptbutton
-	special Special_HiddenPowerGuru
-	iffalse_jumpopenedtext .Text4
-	ifequal $1, .Egg
-	jumpthisopenedtext
-
-	text "I can sense it…"
-
-	para "Your "
-	text_ram wStringBuffer3
-	line "has a Hidden Power"
-	cont "of "
-	text_ram wStringBuffer1
-	text "!"
+	iffalse_jumpopenedtext NoReadBasculegionText
+	writetext BasculegionBlessingText
+	waitbutton
+	endtext
 	done
 
-.Egg:
-	jumpthisopenedtext
-
-	text "An Egg has not yet"
-	line "developed a Hidden"
-	cont "Power…"
+NoReadBasculegionText:
+	text "Some other time."
 	done
-
-.Text1:
-	text "…You have strayed"
-	line "far…"
-
-	para "Here I have medi-"
-	line "tated. Inside me,"
-
-	para "a new power has"
-	line "been awakened."
-
-	para "Let me share my"
-	line "power with your"
-	cont "#mon."
-
-	para "Take this, child."
+	
+ReadBasculegionTextQuestion:
+	text "It's a heavy tome"
+	line "with a picture of"
+	cont "a red fish. Read?"
 	done
+	
+BasculegionBlessingText:
+	text "To <PLAYER>."
+	line "From Pryce."
 
-.Text2:
-	text "Do you see it? It"
-	line "is Hidden Power!"
+	para "Winter winds"
+	line "remind us to be"
+	cont "like Basculin."
+	
+	para "In spring, they"
+	line "awake tethered to"
+	cont "riverbeds,"
+	para "wrapped in silt"
+	line "and sticks."
+	
+	para "They unwrap to"
+	line "find mysterious"
+	cont "salty scales and"
+	cont "ravaged fins."
 
-	para "It draws out the"
-	line "power of #mon"
-	cont "for attacking."
-
-	para "Remember this: its"
-	line "type depends on"
-	cont "the #mon"
-	cont "using it."
-	done
-
-.Text3:
-	text "Shall I divine"
-	line "the Hidden Power"
-	cont "of your #mon?"
-	done
-
-.Text4:
-	text "I am meditating…"
-	done
-
-.Text5:
-	text "Which #mon's"
-	line "Hidden Power"
-	cont "should I find?"
-	done
-
-.Text7:
-	text "…Very well…"
+	para "Then in summer,"
+	line "to the ocean with"
+	cont "its dangers and"
+	cont "opportunities."
+	
+	para "In fall, instinct"
+	line "compels them to"
+	para "fight the current"
+	line "and climb falls"
+	cont "to that familiar"
+	cont "riverbed."
+	
+	para "In the icy river"
+	line "they wrap their"
+	cont "eggs like gifts,"
+	
+	para "and lay down for"
+	line "a final rest."
+	
+	para "They will never"
+	line "see their gifts"
+	cont "received by the"
+	cont "next generations."
+	
+	para "They must hope an"
+	line "inheritance of an"
+	cont "orderly nest and"
+	para "proof of scaled"
+	line "waterfalls will"
+	cont "reassure the"
+	para "young ones of"
+	line "their magnificent"
+	cont "capability."
 	done
