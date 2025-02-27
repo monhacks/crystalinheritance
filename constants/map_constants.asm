@@ -378,7 +378,7 @@ ENDM
 	map_const MANIAS_HOUSE,                                4,  4 ;  4
 	map_const CIANWOOD_GYM,                                5,  9 ;  5
 	map_const MOVE_MANIACS_HOUSE,                          4,  4 ; 10
-
+	map_const CIANWOOD_CAVE,							  11, 20 ;
 
 	newgroup                                                     ; 23
 	map_const DEBUG_ROOM,                                   5,  5

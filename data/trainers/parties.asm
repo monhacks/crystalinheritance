@@ -213,13 +213,13 @@ PryceGroup:
 	db "Pryce@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
 	; party
-	db 43, CLOYSTER, FOCUS_BAND, "Aperifrizo@"
+	db 41, CLOYSTER, FOCUS_BAND, "Aperifrizo@"
 		db SPIKES, EXPLOSION, HAIL, NO_MOVE
-	db 44, LAPRAS, NO_ITEM, "dOeuvRas@"
+	db 42, LAPRAS, NO_ITEM, "dOeuvRas@"
 		db PERISH_SONG, THUNDER_WAVE, THUNDERBOLT, ICE_BEAM
-	db 45, MAMOSWINE, NO_ITEM, "MainoSwine@"
+	db 43, MAMOSWINE, NO_ITEM, "MainoSwine@"
 		db ICE_SHARD, EARTHQUAKE, STOMP, ROAR
-	db 46, JYNX, NEVERMELTICE, "DameBlanch@"
+	db 44, JYNX, NEVERMELTICE, "DameBlanch@"
 		db PSYCHIC_M, ICE_BEAM, CALM_MIND, DRAIN_KISS
 	db -1 ; end
 
@@ -3983,11 +3983,12 @@ PokefanMGroup:
 
 ; ================
 
-	; POKEFANM
+	; POKEFANM ; route 38 
 	db "Robert@"
 	db TRAINERTYPE_ITEM
 	; party
-	db 27, QUAGSIRE, SITRUS_BERRY
+	db 38, QUAGSIRE, SITRUS_BERRY
+	db 38, RAICHU, SITRUS_BERRY
 	db -1 ; end
 
 ; ================
@@ -4006,13 +4007,13 @@ PokefanMGroup:
 
 ; ================
 
-	; POKEFANM
+	; POKEFANM ; route 38 
 	db "Carter@"
 	db TRAINERTYPE_ITEM
 	; party
-	db 59, CHIKORITA, SITRUS_BERRY
-	db 59, GROWLITHE, SITRUS_BERRY
-	db 59, POLIWAG, SITRUS_BERRY
+	db 38, BAYLEEF, SITRUS_BERRY
+	db 38, GROWLITHE, SITRUS_BERRY
+	db 38, POLIWHIRL, SITRUS_BERRY
 	db -1 ; end
 
 ; ================
@@ -4117,11 +4118,12 @@ PokefanFGroup:
 
 ; ================
 
-	; POKEFANF
+	; POKEFANF ; route 38 
 	db "Ruth@"
 	db TRAINERTYPE_ITEM
 	; party
-	db 20, PIKACHU, ORAN_BERRY
+	db 36, FURRET, SITRUS_BERRY	
+	db 40, AZUMARILL, SITRUS_BERRY
 	db -1 ; end
 
 ; ================
@@ -4139,11 +4141,12 @@ PokefanFGroup:
 
 ; ================
 
-	; POKEFANF
+	; POKEFANF ; route 38 
 	db "Jaime@"
 	db TRAINERTYPE_ITEM
 	; party
-	db 16, MEOWTH, ORAN_BERRY
+	db 36, MEOWTH, SITRUS_BERRY
+	db 36, PERSIAN, SITRUS_BERRY
 	db -1 ; end
 
 ; ================
@@ -4173,7 +4176,7 @@ OfficerMGroup:
 ; ================================
 ; ================
 
-	; OFFICERM
+	; OFFICERM ; ilex forest 
 	db "Keith@"
 	db TRAINERTYPE_NORMAL
 	; party
@@ -4184,11 +4187,12 @@ OfficerMGroup:
 ; ================
 
 	; OFFICERM
-	db "Dirk@"
+	db "Dirk@" ; route 38
 	db TRAINERTYPE_NORMAL
 	; party
-	db 20, GROWLITHE
-	db 20, MACHOP
+	db 36, MACHOKE
+	db 36, ARCANINE
+	db 36, PRIMEAPE
 	db -1 ; end
 
 ; ================
@@ -6477,10 +6481,10 @@ ElderGroup:
 	db "Takashi@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 46, DRAGONAIR
-	db 48, YANMEGA
+	db 48, DRAGONAIR
+	db 49, YANMEGA
 	db 49, KANGASKHAN
-	db 50, KINGDRA
+	db 51, KINGDRA
 	db -1 ; end
 
 ; ================
@@ -6489,11 +6493,11 @@ ElderGroup:
 	db "Isamu@" ; courage 13f
 	db TRAINERTYPE_NORMAL
 	; party
-	db 46, ARCANINE
-	db 48, MAGCARGO
-	db 48, HOUNDOOM
-	db 50, EXEGGUTOR
-	db 50, RAPIDASH
+	db 48, ARCANINE
+	db 49, MAGCARGO
+	db 49, HOUNDOOM
+	db 52, EXEGGUTOR
+	db 52, RAPIDASH
 	db -1 ; end
 	
 ; ================
@@ -6502,11 +6506,11 @@ ElderGroup:
 	db "Kaito@" ; sea , soar 13f
 	db TRAINERTYPE_NORMAL
 	; party
-	db 46, LAPRAS
-	db 48, QUAGSIRE
-	db 48, AZUMARILL
-	db 48, TENTACRUEL	
-	db 50, LANTURN
+	db 48, LAPRAS
+	db 49, QUAGSIRE
+	db 49, AZUMARILL
+	db 49, TENTACRUEL	
+	db 51, LANTURN
 	db -1 ; end
 	
 	; ================
@@ -6516,10 +6520,10 @@ ElderGroup:
 	db TRAINERTYPE_NORMAL
 	; party
 	db 46, MACHAMP
-	db 46, POLIWRATH	
-	db 46, SUDOWOODO	
+	db 48, POLIWRATH	
+	db 49, SUDOWOODO	
 	db 48, TOXICROAK
-	db 50, H__DECIDUEYE
+	db 51, H__DECIDUEYE
 	db -1 ; end
 	
 ; ================
@@ -6528,10 +6532,10 @@ ElderGroup:
 	db "Akira@" ; bright ; 15f 
 	db TRAINERTYPE_NORMAL
 	; party
-	db 46, H__BRAVIARY
-	db 48, DRIFBLIM
-	db 48, AMPHAROS	
-	db 50, H__ELECTRODE
+	db 48, H__BRAVIARY
+	db 49, DRIFBLIM
+	db 49, AMPHAROS	
+	db 51, H__ELECTRODE
 	db -1 ; end
 	
 	; ================
@@ -6565,12 +6569,12 @@ ElderGroup:
 	db "Yoshi@" ; virtous ; 19f 
 	db TRAINERTYPE_NORMAL
 	; party
-	db 46, MEGANIUM
-	db 46, XATU	
-	db 46, GRANBULL
-	db 46, URSARING
-	db 48, FROSLASS
-	db 50, H__AVALUGG
+	db 48, MEGANIUM
+	db 49, XATU	
+	db 50, GRANBULL
+	db 51, URSARING
+	db 52, FROSLASS
+	db 53, H__AVALUGG
 	db -1 ; end
 	
 
@@ -7083,7 +7087,7 @@ SailorGroup:
 ; ================================
 ; ================
 
-	; SAILOR
+	; SAILOR ; 
 	db "Huey@"
 	db TRAINERTYPE_NORMAL
 	; party
@@ -7093,7 +7097,7 @@ SailorGroup:
 
 ; ================
 
-	; SAILOR
+	; SAILOR; 
 	db "Huey@"
 	db TRAINERTYPE_NORMAL
 	; party
@@ -7103,7 +7107,7 @@ SailorGroup:
 
 ; ================
 
-	; SAILOR
+	; SAILOR; 
 	db "Huey@"
 	db TRAINERTYPE_NORMAL
 	; party
@@ -7113,7 +7117,7 @@ SailorGroup:
 
 ; ================
 
-	; SAILOR
+	; SAILOR; 
 	db "Huey@"
 	db TRAINERTYPE_MOVES
 	; party
@@ -7125,45 +7129,44 @@ SailorGroup:
 
 ; ================
 
-	; SAILOR
+	; SAILOR ; ; ANCHORAGE
 	db "Eugene@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 17, POLIWHIRL
-	db 17, FURRET
-	db 19, CROCONAW
+	db 30, POLIWHIRL
+	db 32, FURRET
+	db 34, QUAGSIRE
 	db -1 ; end
 
 ; ================
 
-	; SAILOR
+	; SAILOR; ANCHORAGE
 	db "Terrell@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 20, POLIWHIRL
+	db 36, MACHOKE
+	db 36, HITMONTOP
 	db -1 ; end
 
 ; ================
 
-	; SAILOR
+	; SAILOR; ANCHORAGE
 	db "Kent@"
-	db TRAINERTYPE_MOVES
-	; party
-	db 18, CROCONAW
-		db WATER_GUN, LEER, TACKLE, DEFENSE_CURL
-	db 20, CROCONAW
-		db BUBBLE_BEAM, LEER, TACKLE, DEFENSE_CURL
-	db -1 ; end
-
-; ================
-
-	; SAILOR
-	db "Roberto@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 18, MACHOP
-	db 18, MACHOP
-	db 18, POLIWHIRL
+	db 32, CORSOLA
+	db 34, OCTILLERY
+	db -1 ; end
+
+; ================
+
+	; SAILOR ; ANCHORAGE 
+	db "Ernest@"
+	db TRAINERTYPE_NORMAL
+	; party
+	db 34, MANTINE
+	db 36, URSARING
+	db 38, EMPOLEON
 	db -1 ; end
 
 ; ================
@@ -10752,15 +10755,15 @@ AmosGroup:
 	db "Amos@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
 	; party
-	db 42, H__ELECTRODE, LEFTOVERS, "Casabaraq@"
+	db 48, H__ELECTRODE, LEFTOVERS, "Casabaraq@"
 		db LEECH_SEED, THUNDER_WAVE, GIGA_DRAIN, VOLT_SWITCH
-	db 43, H__TYPHLOSION, NO_ITEM, "Golaris@"
+	db 49, H__TYPHLOSION, NO_ITEM, "Golaris@"
 		db SHADOW_BALL, FIRE_BLAST, WILL_O_WISP, THUNDERPUNCH
-	db 43, H__DECIDUEYE, NO_ITEM, "Brawnshuf@"
+	db 49, H__DECIDUEYE, NO_ITEM, "Brawnshuf@"
 		db AURA_SPHERE, ENERGY_BALL, AIR_SLASH, CLOSE_COMBAT
-	db 43, H__SAMUROTT, NO_ITEM, "Mabbulwark@"
+	db 49, H__SAMUROTT, NO_ITEM, "Mabbulwark@"
 		db SWORDS_DANCE, CRUNCH, WATERFALL, SLASH
-	db 45, GALLADE, NO_ITEM, "Oatharav@"
+	db 51, GALLADE, NO_ITEM, "Oatharav@"
 		db ZEN_HEADBUTT, HI_JUMP_KICK, AGILITY, SWORDS_DANCE
 	db -1 ; end
 
@@ -11253,15 +11256,15 @@ AdrinnaGroup:
 	db "Adrinna@" ; at the mine 
 	db TRAINERTYPE_ITEM | TRAINERTYPE_DVS | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
 	; party
-	db 44, FORRETRESS, FOCUS_SASH, FAKE_PERFECT_DVS, "KiloJaal@"
+	db 46, FORRETRESS, FOCUS_SASH, FAKE_PERFECT_DVS, "KiloJaal@"
 		db SPIKES, EXPLOSION, U_TURN, NO_MOVE		
-	db 44, WEAVILE, NO_ITEM, FAKE_PERFECT_DVS, "Chayarctic@" ; shadow arctic 
+	db 46, WEAVILE, NO_ITEM, FAKE_PERFECT_DVS, "Chayarctic@" ; shadow arctic 
 		db ICE_PUNCH, NIGHT_SLASH, FEINT_ATTACK, ICE_SHARD
-	db 46, HONCHKROW, NO_ITEM, FAKE_PERFECT_DVS, "Kalraja@" ; dark king 
+	db 48, HONCHKROW, NO_ITEM, FAKE_PERFECT_DVS, "Kalraja@" ; dark king 
 		db DRILL_PECK, DARK_PULSE, NIGHT_SHADE, NO_MOVE
-	db 48, LUXRAY, NO_ITEM, FAKE_PERFECT_DVS, "Kalamp@"
+	db 50, LUXRAY, NO_ITEM, FAKE_PERFECT_DVS, "Kalamp@"
 		db CRUNCH, SPARK, DOUBLE_EDGE, NO_MOVE
-	db 48, JOLTEON, NO_ITEM, DVS_HP_ICE, "Indrage@"
+	db 50, JOLTEON, NO_ITEM, DVS_HP_ICE, "Indrage@"
 		db THUNDERBOLT, DOUBLE_KICK, HIDDEN_POWER, QUICK_ATTACK
 	db -1 ; end
 
@@ -11353,15 +11356,15 @@ KannaGroup:
 	db "Kanna@" ; mythic beings in sami folklore 
 	db TRAINERTYPE_ITEM | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
 	; party
-	db 40, ABOMASNOW, CHOICE_SCARF, "Sarakka@" ; CONTROL WEATHER
+	db 44, ABOMASNOW, CHOICE_SCARF, "Sarakka@" ; CONTROL WEATHER
 		db BLIZZARD, PETAL_DANCE, EARTHQUAKE, NO_MOVE
-	db 44, H__SNEASLER, RAZOR_CLAW,  "Lieabolmai@"  hunt
+	db 46, H__SNEASLER, RAZOR_CLAW,  "Lieabolmai@"  hunt
 		db POISON_JAB, NIGHT_SLASH, SLASH, QUICK_ATTACK
-	db 40, H__AVALUGG, FOCUS_BAND, "Sieidi@";mountain home 
+	db 42, H__AVALUGG, FOCUS_BAND, "Sieidi@";mountain home 
 		db ROCK_SLIDE, EARTHQUAKE, AVALANCHE, MIRROR_COAT
-	db 42, H__BRAVIARY, NO_ITEM, "Bieggolmai@" ; wind spirit
+	db 44, H__BRAVIARY, NO_ITEM, "Bieggolmai@" ; wind spirit
 		db AIR_SLASH, PSYCHIC_M, ROOST, NIGHT_SHADE
-	db 44, FROSLASS, SPELL_TAG, "JahbmeAkka@" ; dead
+	db 48, FROSLASS, SPELL_TAG, "JahbmeAkka@" ; dead
 		db DESTINY_BOND, SHADOW_BALL, ICE_SHARD, ICE_BEAM
 	db -1 ; end
 

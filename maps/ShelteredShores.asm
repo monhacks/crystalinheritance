@@ -24,7 +24,10 @@ ShelteredShores_MapScriptHeader:
 ; ADD A FEW ITEMS TODO
 ; ADD A FEW NOMAD_M TODO 
 ; ADD A FEW SAILORS? TODO 
-
+	itemball_event 17, 17, REVIVE, 1, EVENT_SHORES_ITEM_1 ;ok
+	itemball_event 17, 32, HYPER_POTION, 1, EVENT_SHORES_ITEM_2
+	itemball_event 40, 38, MAX_REPEL, 1, EVENT_SHORES_ITEM_3 ;ok
+	itemball_event 43, 16, PETAYA_BERRY, 1, EVENT_SHORES_ITEM_4
 
 	object_const_def
 

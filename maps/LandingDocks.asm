@@ -8,7 +8,8 @@ LandingDocks_MapScriptHeader:
 	def_warp_events
 	warp_event 2, 19, ARDUOUS_ANCHORAGE, 2
 	warp_event 3, 19, ARDUOUS_ANCHORAGE, 2
-
+	warp_event 2,  8, TRADERS_LANDING, 7
+	warp_event 3,  8, TRADERS_LANDING, 8
 
 	def_coord_events
 

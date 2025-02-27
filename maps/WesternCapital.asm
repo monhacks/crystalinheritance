@@ -27,7 +27,7 @@ WesternCapital_MapScriptHeader:
 	bg_event 21, 17, BGEVENT_JUMPTEXT, WCDanceText
 	bg_event 21, 11, BGEVENT_JUMPTEXT, WCGloryToMejimiText
 	bg_event 17, 23, BGEVENT_JUMPTEXT, WCSignText
-
+	bg_event 19, 19, BGEVENT_READ, WC_AmosWantedSign
 
 	def_object_events
 	object_event 11, 21, SPRITE_MEJIMI, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_PROLOGUE_MEJIMI ; need to put all these in the event flags file
@@ -548,4 +548,25 @@ WCSignText:
 	line "Protected by"
 	para "Chronicler"
 	line "Samsara"
+	done
+	
+WC_AmosWantedSign:
+	refreshscreen
+	trainerpic AMOS
+	waitbutton
+	closepokepic
+	jumpthistext
+
+	text "WANTED: This man"
+	line "is wanted for"
+	cont "crimes against"
+	cont "the emperor."
+
+	para "If you see him,"
+	line "please notify a"
+	cont "brigader"
+	cont "immediately."
+
+	para "Known alias:"
+	line "Amos."
 	done

@@ -62,8 +62,7 @@ KurtLugiaText2: ; need to have kurt go to the top floor and tell the player here
 	
 	para "There may be a"
 	line "shrine we can use"
-	cont "at Cianwood that"
-	cont "still stands."
+	cont "at Cianwood."
 	done
 
 KurtLeavesMovement:

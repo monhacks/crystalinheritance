@@ -33,15 +33,16 @@ OlivineCity_MapScriptHeader:
 	bg_event 49, 29, BGEVENT_ITEM + SOFT_SAND, EVENT_OLIVINE_CITY_HIDDEN_SOFT_SAND
 
 	def_object_events
-	object_event 20,  8, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OlivineCityYoungster1Script, -1
+	object_event 20,  8, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineCityYoungster1Text, -1
 	object_event 26, 22, SPRITE_SAILOR, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 2, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineCitySailor1Text, -1
-	object_event 11, 23, SPRITE_POKEFAN_F, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 2, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineCitySailor4Text, -1
-	object_event 23, 17, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineCitySailor5Text, -1
+	object_event 11, 23, SPRITE_POKEFAN_F, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 2, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineCityPokefanFText, -1
+	object_event 23, 17, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineCitySchoolBoyText, -1
+	object_event 23, 17, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineCityPokefanMText, -1
 	smashrock_event 52, 23
 	smashrock_event 55, 26
     object_event 19, 20, SPRITE_POKEFAN_F, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OlivineCityPnkApricornScript, -1
-	object_event 
-;npc talking about the desal plant used to do and what it does now
+	object_event 00, 00, SPRITE_PHARMACIST, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineCityRefugeeText, -1
+
 
 	object_const_def
 
@@ -89,256 +90,45 @@ OlivineCityRivalLighthouseScript:
 	special RestartMapMusic
 	end
 
-OlivineCityYoungster1Script:
-	random 2
-	iffalse_jumptextfaceplayer OlivineCityStandingYoungsterPokedexText
-	jumpthistextfaceplayer
-
-	text "That thing you"
-	line "have--it's a #-"
-	cont "gear, right? Wow,"
-	cont "that's cool."
-	done
-
-OlivineCityMovementData_ShovePlayerDown:
-	turn_head_up
-	fix_facing
-	step_down
-	remove_fixed_facing
-	step_end
-
-OlivineCityMovementData_RivalExitsLighthouse:
-	step_down
-	step_down
-	step_down
-	step_end
-
-OlivineCityMovementData_RivalLeavesGym:
-	step_right
-	step_right
-	step_right
-	step_right
-	step_right
-	step_right
-	step_right
-	step_right
-	step_end
-
-OlivineCityMovementData_ShovePlayerDown2:
-	turn_head_up
-	fix_facing
-	jump_step_down
-	remove_fixed_facing
-	step_end
-
-OlivineCityMovementData_RivalLeavesLighthouse:
-	step_down
-	step_down
-	step_left
-	step_left
-	step_left
-	step_left
-	step_left
-	step_end
-
-OlivineCityRivalGymText:
-	text "…"
-
-	para "You again?"
-
-	para "There's no need to"
-	line "panic. I don't"
-
-	para "bother with wimps"
-	line "like you."
-
-	para "Speaking of weak-"
-	line "lings, the city's"
-
-	para "Gym Leader isn't"
-	line "here."
-
-	para "Supposedly taking"
-	line "care of a sick"
-
-	para "#mon at the"
-	line "Lighthouse."
-
-	para "Humph! Boo-hoo!"
-	line "Just let sick"
-	cont "#mon go!"
-
-	para "A #mon that"
-	line "can't battle is"
-	cont "worthless!"
-
-	para "Why don't you go"
-	line "train at the"
-	cont "Lighthouse?"
-
-	para "Who knows. It may"
-	line "make you a bit"
-	cont "less weak!"
-	done
-
-OlivineCityRivalLighthouseText:
-	text "…"
-
-	para "You again?"
-
-	para "There's no need to"
-	line "panic. I don't"
-
-	para "bother with wimps"
-	line "like you."
-
-	para "Speaking of weak-"
-	line "lings, the city's"
-
-	para "Gym Leader is"
-	line "taking care of a"
-
-	para "sick #mon in"
-	line "the Lighthouse."
-
-	para "Humph! Boo-hoo!"
-	line "Just let sick"
-	cont "#mon go!"
-
-	para "A #mon that"
-	line "can't battle is"
-	cont "worthless!"
-
-	para "Why don't you go"
-	line "train inside?"
-
-	para "Who knows. It may"
-	line "make you a bit"
-	cont "less weak!"
-	done
-
-OlivineCityStandingYoungsterPokedexText:
-	text "Wow, you have a"
-	line "#dex!"
-
-	para "That is just so"
-	line "awesome."
+OlivineCityYoungster1Text:
+	text "Super Slowking"
+	line "keeps us safe!"
 	done
 
 OlivineCitySailor1Text: ; TODO what the lighthouse is 
-	text "..."
+	text "The lighthouse"
+	line "was a natural"
+	cont "place to house"
+	cont "Chuck's Slowking."
 	done
 
-OlivineCitySailor2Text: ; TODO what the desal plant is 
-	text "The sea is sweet!"
-
-	para "Sunsets on the sea"
-	line "are marvelous!"
-
-	para "Sing with me!"
-	line "♪ Yo-ho! Blow the"
-	cont "man down!… ♪"
+OlivineCityPokefanFText: ; TODO what the desal plant is 
+	text "It's not safe for"
+	line "boats to fish"
+	cont "in the harbor,"
+	
+	para "with the desal"
+	line "plant. The fish"
+	cont "market can sell"
+	cont "you some."
 	done
 
-OlivineCityFisherText:
-	text "You remind me of"
-	line "a kid who used to"
-	cont "live here."
-
-	para "The family moved"
-	line "away when their"
-
-	para "father became a"
-	line "Gym Leader in"
-	cont "another region."
-	done
-
-OlivineCitySailor3Text:
-	text "To see the Light-"
-	line "house illuminate"
-
-	para "the sea at night--"
-	line "it's beautiful!"
-	done
-
-OlivineCityPokefanFText:
-	text "Have you been to"
-	line "Olivine Café?"
-
-	para "The food is"
-	line "delicious."
+OlivineCitySchoolBoyText:
+	text "I'm using the Su-"
+	line "per Slowking to"
+	cont "write a perfect"
+	cont "essay."
 	done
 
 OlivineCityPokefanMText:
-	text "Most trainers who"
-	line "visit Olivine head"
-
-	para "straight for the"
-	line "Battle Tower."
-
-	para "Only the best can"
-	line "compete there."
-	done
-
-OlivineCitySailor4Text:
-	text "♪ A home like"
-	line "O-li-vine,"
-
-	para "I'm so hap-py I"
-	line "can call you mine,"
-
-	para "Next to the deep"
-	line "blue brine,"
-
-	para "Ci-ty oh so"
-	line "di-vine,"
-
-	para "Shine bright my"
-	line "O-li-vine!… ♪"
-	done
-
-OlivineCitySailor5Text:
-	text "Us sailors love"
-	line "a sing-song."
-	cont "Join in!"
-
-	para "♪ From off the"
-	line "plank,"
-
-	para "'twas then he"
-	line "thank,"
-
-	para "oh fiddle-dee"
-	line "fiddle-dee dee… ♪"
-	done
-
-OlivineCityLass1Text:
-	text "The sailors here"
-	line "may seem like a"
-
-	para "handful, but"
-	line "they're harmless."
-	done
-
-OlivineCityYoungster2Text:
-	text "Sailors and camp-"
-	line "ers have something"
-	cont "in common:"
-
-	para "we both like to"
-	line "sing!"
-
-	para "But sailors' songs"
-	line "are really…"
-	cont "different."
-	done
-
-OlivineCityLass2Text:
-	text "Jasmine, our Gym"
-	line "Leader, is a shy"
-
-	para "girl. She's no"
-	line "pushover, mind!"
+	text "I have to worry"
+	line "what the future"
+	para "holds. If Super"
+	line "Slowking can do"
+	cont "what I do faster"
+	para "and cheaper, then"
+	line "why do anything"
+	cont "at all?"
 	done
 
 OlivineCitySignText:
@@ -413,7 +203,6 @@ PearlForPnkApricornText:
 	para "I can't eat those."
 	line "I want to eat a"
 	cont "BIG Boba pearl."
-
 	done
 
 PearlForPnkApricornQuestionText:
@@ -439,4 +228,12 @@ NoPearlForPnkApricornText:
 	text "You don't have"
 	line "it? Guess I'll"
 	cont "stay hungry."
+	done
+
+OlivineCityRefugeeText:
+	text "Olivine isn't as"
+	line "quiet as Cianwood"
+	para "but it's better"
+	line "than living on"
+	cont "a sandbar."
 	done

@@ -11,168 +11,108 @@ Route38_MapScriptHeader:
 
 	def_bg_events
 	bg_event 33,  7, BGEVENT_JUMPTEXT, Route38SignText
-	bg_event  5, 13, BGEVENT_JUMPTEXT, Route38TrainerTipsText
+
 
 	def_object_events
-	object_event 12, 15, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBird_keeperToby, -1
-	object_event 19,  9, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBeautyValencia, -1
-	object_event 24,  5, SPRITE_SAILOR, SPRITEMOVEDATA_SPINCOUNTERCLOCKWISE, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerSailorHarry, -1
-	fruittree_event 12, 10, FRUITTREE_ROUTE_38, SITRUS_BERRY, PAL_NPC_BROWN
-	object_event  5,  8, SPRITE_BEAUTY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBeautyOlivia, -1
+	object_event  9,  7, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerPokefanMRobert, -1
+	object_event  7,  4, SPRITE_POKEFAN_F, SPRITEMOVEDATA_SPINCOUNTERCLOCKWISE, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerPokefanMCarter, -1
 
-GenericTrainerBird_keeperToby:
-	generictrainer BIRD_KEEPER, TOBY, EVENT_BEAT_BIRD_KEEPER_TOBY, Bird_keeperTobySeenText, Bird_keeperTobyBeatenText
+	object_event 17, 14, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerPokefanFRuth, -1
+	object_event 17,  4, SPRITE_POKEFAN_F, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerPokefanFJaime, -1
 
-	text "I plan to train in"
-	line "the Yellow Forest"
+	tmhmball_event 21, 12, TM_TOXIC, EVENT_GOT_TM06_TOXIC
+	object_event 30,  9, SPRITE_OFFICER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerOfficerMDirk, -1
 
-	para "to teach my #-"
-	line "mon how to Fly."
+GenericTrainerPokefanMRobert:
+	generictrainer POKEFANM, ROBERT, EVENT_BEAT_POKEFANM_ROBERT, PokefanMRobertSeenText, PokefanMRobertBeatenText
+
+PokefanMRobertSeenText:
+	text "Hey, release your"
+	line "Miltanks!"
 	done
 
-GenericTrainerSailorHarry:
-	generictrainer SAILOR, HARRY, EVENT_BEAT_SAILOR_HARRY, SailorHarrySeenText, SailorHarryBeatenText
-
-	text "All kinds of peo-"
-	line "ple around the"
-
-	para "world live happily"
-	line "with #mon."
+PokefanMRobertBeatenText:
+	text "Sorry, thought"
+	line "you were with the"
+	cont "factory farm."
+	
+	para "We're gathering"
+	line "evidence against"
+	cont "Moomoo farms."
 	done
 
-GenericTrainerBeautyValencia:
-	generictrainer BEAUTY, VALENCIA, EVENT_BEAT_BEAUTY_VALENCIA, BeautyValenciaSeenText, BeautyValenciaBeatenText
+GenericTrainerPokefanMCarter:
+	generictrainer POKEFANM, CARTER, EVENT_BEAT_POKEFANM_CARTER, PokefanMCarterSeenText, PokefanMCarterBeatenText
 
-	text "When I see #-"
-	line "mon, it seems to"
-	cont "soothe my nerves."
+PokefanMCarterBeatenText:
+	text "I heard that"
+	line "Moomoo cows have"
+	cont "to wear these"
+	cont "big, metal hats."
+	done
+	
+PokefanMCarterSeenText:
+	text "We're on a"
+	line "stakeout!"
 	done
 
-GenericTrainerBeautyOlivia:
-	generictrainer BEAUTY, OLIVIA, EVENT_BEAT_BEAUTY_OLIVIA, BeautyOliviaSeenText, BeautyOliviaBeatenText
 
-	text "Moomoo Milk is"
-	line "good for beauty"
-	cont "and health."
+GenericTrainerPokefanFRuth:
+	generictrainer POKEFANF, RUTH, EVENT_BEAT_POKEFANF_RUTH, PokefanFRuthSeenText, PokefanFRuthBeatenText
 
-	para "I like to buy a"
-	line "dozen bottles at"
-	cont "a time!"
+PokefanFRuthBeatenText:
+	text "The farm keeps"
+	line "expanding. Soon,"
+	cont "they'll need this"
+	cont "Route too."
 	done
 
-Bird_keeperTobySeenText:
-	text "Fly high into the"
-	line "sky, my beloved"
-	cont "bird #mon!"
+PokefanFRuthSeenText:
+	text "Battle me? We've"
+	line "been out here for"
+	cont "ages now."
+	
+	para "I'm even doing"
+	line "math just to stay"
+	cont "awake..."
 	done
 
-Bird_keeperTobyBeatenText:
-	text "I feel like just"
-	line "flying away now."
+GenericTrainerPokefanFJaime:
+	generictrainer POKEFANF, JAIME, EVENT_BEAT_POKEFANF_JAIME, PokefanFJaimeSeenText, PokefanFJaimeBeatenText
+
+PokefanFJaimeBeatenText:
+	text "Where do you"
+	line "suppose all the"
+	cont "Tauros go?"
+	
+	para "There's only one"
+	line "at the ranch."
 	done
 
-SchoolboyChad1SeenText:
-	text "Let me try some-"
-	line "thing I learned"
-	cont "today."
+PokefanFJaimeSeenText:
+	text "Meat is murder!"
 	done
 
-SchoolboyChad1BeatenText:
-	text "I didn't study"
-	line "enough, I guess."
+GenericTrainerPokefanFJaime:
+	generictrainer OFFICERM, DIRK, EVENT_BEAT_OFFICER_DIRK, OfficerDirkSeenText, OfficerDirkBeatenText
+
+OfficerDirkBeatenText:
+	text "Ah, just a good"
+	line "kid from Azalea."
+	
+	para "Carry on."
 	done
 
-SchoolboyChadSoManyTestsText:
-	text "I have to take so"
-	line "many tests, I"
 
-	para "don't have much"
-	line "time for #mon."
-
-	para "So when I do get"
-	line "to play, I really"
-	cont "concentrate."
+OfficerDirkSeenText:
+	text "Halt! No"
+	line "trespassing!"
 	done
-
-LassDana1SeenText:
-	text "You seem to be"
-	line "good at #mon."
-
-	para "If you are, how"
-	line "about giving me"
-	cont "some advice?"
-	done
-
-LassDana1BeatenText:
-	text "I see. So you can"
-	line "battle that way."
-	done
-
-LassDanaMoomooMilkText:
-	text "I know something"
-	line "good!"
-
-	para "Moomoo Farm's milk"
-	line "is famous for its"
-	cont "flavor."
-	done
-
-BeautyValenciaSeenText:
-	text "Hi! Aren't you a"
-	line "cute trainer!"
-
-	para "May I see your"
-	line "#mon?"
-	done
-
-BeautyValenciaBeatenText:
-	text "I'm glad I got to"
-	line "see your #mon!"
-	done
-
-SailorHarrySeenText:
-	text "I've been over-"
-	line "seas, so I know"
-
-	para "about all sorts of"
-	line "#mon!"
-	done
-
-SailorHarryBeatenText:
-	text "Your skill is"
-	line "world class!"
-	done
-
-BeautyOliviaSeenText:
-	text "Don't you think my"
-	line "#mon and I are"
-	cont "beautiful?"
-	done
-
-BeautyOliviaBeatenText:
-	text "We drink Moomoo"
-	line "Milk every day."
-	done
+	
 
 Route38SignText:
-	text "Route 38"
-
-	para "Olivine City -"
-	line "Ecruteak City"
+	text "No trespassing!"
+	
+	para "-MooMoo Farms"
 	done
 
-Route38TrainerTipsText:
-	text "Trainer Tips"
-
-	para "If a #mon is"
-	line "trying to evolve,"
-	cont "you can stop it."
-
-	para "Press the B But-"
-	line "ton during evolu-"
-	cont "tion."
-
-	para "That startles the"
-	line "#mon and stops"
-	cont "its evolution."
-	done

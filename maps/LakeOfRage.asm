@@ -1,6 +1,20 @@
 LakeOfRage_MapScriptHeader:
 	def_scene_scripts
 
+
+
+;	para "Take us back to"
+;	line "days of old,"
+;	
+;	para "When balance"
+;	line "stood intact,"
+;	
+;	para "Let truth now"
+;	line "be retold,"
+;	
+;	para "The past we"
+;	line "must enact."
+
 	def_callbacks
 	callback MAPCALLBACK_NEWMAP, LakeOfRageFlyPoint
 
@@ -252,3 +266,7 @@ LakeOfRageCooltrainerFText:
 	line "Gyarados were"
 	cont "usually blue?"
 	done
+
+
+
+	

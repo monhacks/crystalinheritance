@@ -32,6 +32,7 @@ ENDM
 	special_bg_pal map,      BELLCHIME_TRAIL,             PAL_TIMEOFDAY, BellchimeTrailPalette
 	special_bg_pal map,      HIDDEN_TREE_GROTTO,          PAL_SINGLE,    HiddenTreeGrottoPalette
 	special_bg_pal map,      HIDDEN_CAVE_GROTTO,          PAL_SINGLE,    HiddenCaveGrottoPalette
+	special_bg_pal map,      ROUTE_39,          		  PAL_TIMEOFDAY, Route39MuddyWaterPalette
 	special_bg_pal landmark, WHIRL_ISLANDS,               PAL_SINGLE,    WhirlIslandsPalette
 	special_bg_pal landmark, MT_MORTAR,                   PAL_SINGLE,    DarkCavePalette
 	special_bg_pal tileset,  TILESET_SHAMOUTI_ISLAND,     PAL_TIMEOFDAY, ShamoutiIslandPalette
@@ -66,10 +67,12 @@ ENDM
 	special_bg_pal landmark, ARDUOUS_ANCHORAGE,		      PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; looks OK.		
 	special_bg_pal landmark, TRANQUIL_TARN,		      	  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; looks OK.		
 	special_bg_pal landmark, SINJOH_CAMP,		      	  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; looks OK.		
-	special_bg_pal landmark, EMPIRES_EXTENT,		      	  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; looks OK.		
+	special_bg_pal landmark, EMPIRES_EXTENT,		  	  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; looks OK.		
 	special_bg_pal landmark, EERIE_HAMLET,		      	  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; looks OK.		
 	special_bg_pal landmark, SULFUR_STY,		      	  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; looks OK.		
 	special_bg_pal landmark, TIMELESS_TAPESTRY,		  	  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; looks OK.		
+
+	special_bg_pal map,      CIANWOOD_CAVE,               PAL_SINGLE,    WhirlIslandsPalette
 
 	special_bg_pal overcast, (unused),                    PAL_TIMEOFDAY, OvercastBGPalette
 	db 0 ; end
@@ -1079,6 +1082,39 @@ endr
 	RGB_MONOCHROME_BLACK
 endc
 
+Route39MuddyWaterPalette:
+if !DEF(MONOCHROME)
+INCLUDE "maps/Route39MuddyWaterPalette.pal"
+else
+rept 7
+	MONOCHROME_RGB_FOUR
+endr
+	RGB_MONOCHROME_WHITE
+	RGB_MONOCHROME_WHITE
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_BLACK
+rept 7
+	MONOCHROME_RGB_FOUR
+endr
+	RGB_MONOCHROME_WHITE
+	RGB_MONOCHROME_WHITE
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_BLACK
+rept 4
+	MONOCHROME_RGB_FOUR_NIGHT
+endr
+	RGB_MONOCHROME_WHITE
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_BLACK
+	MONOCHROME_RGB_FOUR_NIGHT
+	MONOCHROME_RGB_FOUR_NIGHT
+	RGB_MONOCHROME_WHITE
+	RGB_MONOCHROME_WHITE
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_BLACK
+endc
+
 YellowForestPalette:
 if !DEF(MONOCHROME)
 INCLUDE "maps/YellowForest.pal"
@@ -1118,6 +1154,7 @@ endr
 	RGB_MONOCHROME_DARK
 	RGB_MONOCHROME_BLACK
 endc
+
 
 HiddenTreeGrottoPalette:
 if !DEF(MONOCHROME)

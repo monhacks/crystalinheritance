@@ -70,7 +70,7 @@
 	tilecoll WALL, WALL, WALL, WALL ; 45
 	tilecoll WALL, WALL, WALL, WALL ; 46
 	tilecoll WALL, WINDOW, FLOOR, FLOOR ; 47
-	tilecoll DOOR, WALL, FLOOR, FLOOR ; 48
+	tilecoll WARP_CARPET_UP, WARP_CARPET_UP, FLOOR, FLOOR ; 48
 	tilecoll BUOY, BUOY, WATER, WATER ; 49
 	tilecoll BUOY, BUOY, WATER, WATER ; 4a
 	tilecoll WATER, WATER, WATER, WATER ; 4b

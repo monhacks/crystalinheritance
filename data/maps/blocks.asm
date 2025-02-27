@@ -507,6 +507,10 @@ SECTION "WhirlIslandLugiaChamber_BlockData", ROMX
 WhirlIslandLugiaChamber_BlockData:
 	INCBIN "maps/WhirlIslandLugiaChamber.ablk.lz"
 
+SECTION "CianwoodCave_BlockDate", ROMX
+CianwoodCave_BlockData:
+	INCBIN "maps/CianwoodCave.ablk.lz"
+
 SECTION "CianwoodGym_BlockData", ROMX
 CianwoodGym_BlockData:
 	INCBIN "maps/CianwoodGym.ablk.lz"

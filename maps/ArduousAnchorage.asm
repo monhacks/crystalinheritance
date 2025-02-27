@@ -23,8 +23,11 @@ ArduousAnchorage_MapScriptHeader:
 	object_event 30, 32, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, OVERQWIL, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Overqwil2, EVENT_ANCHORAGE_OVERQWIL_2
 	object_event 11, 12, SPRITE_NOMAD_M, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, AnchorageNomadMText, EVENT_BEAT_KENSEY_PORT
 	object_event  8,  7, SPRITE_NOMAD_F, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, AnchorageNomadFText, EVENT_BEAT_KENSEY_PORT
-
-
+	object_event 30, 20, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSailorEugene, -1
+	object_event 31, 18, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSailorTerrell, -1
+	object_event 30, 16, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSailorKent, -1	
+	object_event 31, 14, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSailorErnest, -1	
+	
 	object_const_def
 	const ANCHORAGE_OVERQWIL_1
 	const ANCHORAGE_OVERQWIL_2
@@ -75,4 +78,57 @@ Overqwil2:
 
 OverqwilText:
 	text "Baruu!"
+	done
+
+GenericTrainerSailorEugene:
+	generictrainer SAILOR, EUGENE, EVENT_BEAT_SAILOR_EUGENE, SailorEugeneSeenText, SailorEugeneBeatenText
+
+SailorEugeneBeatenText:
+	text "Too clever."
+	done
+	
+SailorEugeneSeenText:
+	text "Hey, how did you"
+	line "get past the"
+	cont "traps?"
+	done
+
+GenericTrainerSailorTerrell:
+	generictrainer SAILOR, TERRELL, EVENT_BEAT_SAILOR_TERRELL, SailorTerrellSeenText, SailorTerrellBeatenText
+
+SailorEugeneBeatenText:
+	text "Sailing days are"
+	line "long and boring."
+	done
+	
+SailorEugeneSeenText:
+	text "Finally, some"
+	line "excitement!"
+	done
+
+GenericTrainerSailorKent:
+	generictrainer SAILOR, KENT, EVENT_BEAT_SAILOR_KENT, SailorKentSeenText, SailorKentBeatenText
+
+SailorEugeneBeatenText:
+	text "I'll never make"
+	line "admiral at this"
+	cont "rate."
+	done
+	
+SailorEugeneSeenText:
+	text "Time to prove"
+	line "my mettle!"
+	done
+	
+GenericTrainerSailorErnest:
+	generictrainer SAILOR, ERNEST, EVENT_BEAT_SAILOR_ERNEST, SailorErnestSeenText, SailorErnestBeatenText
+
+SailorEugeneBeatenText:
+	text "Tch. The colonel"
+	line "will wreck you."
+	done
+	
+SailorEugeneSeenText:
+	text "I'm the last one,"
+	line "you're through!"
 	done

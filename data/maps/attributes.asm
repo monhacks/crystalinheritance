@@ -327,6 +327,7 @@ ENDM
 	map_attributes ManiasHouse, MANIAS_HOUSE, $0, 0
 	map_attributes CianwoodGym, CIANWOOD_GYM, $0, 0
 	map_attributes MoveManiacsHouse, MOVE_MANIACS_HOUSE, $0, 0
+	map_attributes CianwoodCave, CIANWOOD_CAVE, $0, 0
 	map_attributes HollysHolt, HOLLYS_HOLT, $35, 0 ; start of anarres group
 	map_attributes AnarresTown, ANARRES_TOWN, $5, 0 
 	map_attributes MistyBasin, MISTY_BASIN, $9, 0
@@ -471,24 +472,26 @@ ENDM
 	map_attributes LandingDocks, LANDING_DOCKS, $A, 0 
 
 	map_attributes SlowpokeDreams, SLOWPOKE_DREAMS, $0, NORTH | SOUTH | WEST | EAST 
-	connection north, SlowpokeDreamsBackgroundN, SLOWPOKE_DREAMS_BACKGROUND_N, -1
-	connection south, SlowpokeDreamsBackgroundS, SLOWPOKE_DREAMS_BACKGROUND_S, -1
+	connection north, SlowpokeDreamsBackgroundN, SLOWPOKE_DREAMS_BACKGROUND_N, -2
+	connection south, SlowpokeDreamsBackgroundS, SLOWPOKE_DREAMS_BACKGROUND_S, -2
 	connection west, SlowpokeDreamsBackgroundW, SLOWPOKE_DREAMS_BACKGROUND_W, 0
 	connection east, SlowpokeDreamsBackgroundE, SLOWPOKE_DREAMS_BACKGROUND_E, 0
 	
 	map_attributes SlowpokeDreamsBackgroundN, SLOWPOKE_DREAMS_BACKGROUND_N, $0, SOUTH | NORTH
-	connection south, SlowpokeDreams, SLOWPOKE_DREAMS, 1
-	connection north, SlowpokeDreamsBackgroundS, SLOWPOKE_DREAMS_BACKGROUND_S, -1
+	connection south, SlowpokeDreams, SLOWPOKE_DREAMS, 2
+	connection north, SlowpokeDreamsBackgroundS, SLOWPOKE_DREAMS_BACKGROUND_S, -2
 
 	map_attributes SlowpokeDreamsBackgroundS, SLOWPOKE_DREAMS_BACKGROUND_S, $0, NORTH | SOUTH 
-	connection north, SlowpokeDreams, SLOWPOKE_DREAMS, 1
+	connection north, SlowpokeDreams, SLOWPOKE_DREAMS, 2
 	connection south, SlowpokeDreamsBackgroundN, SLOWPOKE_DREAMS_BACKGROUND_N, 0 ; might get some error about not being able to make this infinite loop
 
-	map_attributes SlowpokeDreamsBackgroundE, SLOWPOKE_DREAMS_BACKGROUND_E, $0, WEST 
+	map_attributes SlowpokeDreamsBackgroundE, SLOWPOKE_DREAMS_BACKGROUND_E, $0, WEST | EAST
 	connection west, SlowpokeDreams, SLOWPOKE_DREAMS, 0
+	connection east, SlowpokeDreamsBackgroundW, SLOWPOKE_DREAMS_BACKGROUND_W, 0
 
-	map_attributes SlowpokeDreamsBackgroundW, SLOWPOKE_DREAMS_BACKGROUND_W, $0, EAST 
+	map_attributes SlowpokeDreamsBackgroundW, SLOWPOKE_DREAMS_BACKGROUND_W, $0, WEST | EAST 
 	connection east, SlowpokeDreams, SLOWPOKE_DREAMS, 0
+	connection west, SlowpokeDreamsBackgroundE, SLOWPOKE_DREAMS_BACKGROUND_E, 0
 
 	map_attributes EnteisCavern, ENTEIS_CAVERN, $9, 0
 

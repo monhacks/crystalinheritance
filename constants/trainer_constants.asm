@@ -708,10 +708,10 @@ KRIS EQU __trainer_class__
 	const HUEY2
 	const HUEY3
 	const HUEY4
-	const EUGENE
-	const TERRELL
-	const KENT
-	const ERNEST
+	const EUGENE ; ANCHORAGE
+	const TERRELL; ANCHORAGE
+	const KENT; ANCHORAGE
+	const ERNEST; ANCHORAGE
 	const JEFF
 	const GARRETT
 	const KENNETH

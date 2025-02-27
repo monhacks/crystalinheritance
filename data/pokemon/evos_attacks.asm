@@ -1356,7 +1356,9 @@ SlowkingEvosAttacks:
 	db 19, DISABLE
 	db 23, HEADBUTT
 	db 28, WATER_PULSE
-	db 32, ZEN_HEADBUTT
+	db 36, SURF
+	db 36, RECOVER
+	db 36, PSYCHIC_M
 	db 36, NASTY_PLOT
 	db 41, SWAGGER
 	db 45, PSYCHIC_M

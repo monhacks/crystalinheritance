@@ -19,7 +19,7 @@ LandingDorms_MapScriptHeader:
 	bg_event  0,  3, BGEVENT_READ, TradersLandingDormsBed
 	bg_event  0,  4, BGEVENT_READ, TradersLandingDormsBed
 	bg_event  0,  5, BGEVENT_READ, TradersLandingDormsBed
-
+	bg_event 0, 0, BGEVENT_JUMPTEXT, BarbeauJournal
 
 
 	def_object_events
@@ -152,3 +152,13 @@ TLKurtBattleText2:
 	cont "you like."
 	done
 
+BarbeauJournal:
+	text "Barbeau's Journal"
+	
+	para "The people grow"
+	line "restless... Is"
+	cont "Amos' plan really"
+	para "enough to repel"
+	line "the barbarians"
+	cont "and the Emperor?"
+	done

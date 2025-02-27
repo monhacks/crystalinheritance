@@ -406,7 +406,7 @@ INCLUDE "maps/CianwoodLugiaSpeechHouse.asm"
 INCLUDE "maps/CianwoodPharmacy.asm"
 INCLUDE "maps/ManiasHouse.asm"
 INCLUDE "maps/MoveManiacsHouse.asm"
-
+INCLUDE "maps/CianwoodCave.asm"
 
 SECTION "Clasts Cradle Scripts", ROMX
 

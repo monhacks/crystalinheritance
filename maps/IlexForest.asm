@@ -46,6 +46,8 @@ IlexForest_MapScriptHeader:
 	itemball_event 19, 16, SUPER_POTION, 1, EVENT_ILEX_FOREST_MULCH;OK
 	fruittree_event 10, 14, FRUITTREE_ILEX_FOREST, SHORE_FOAM, PAL_NPC_BLUE;OK
 	object_event 3, 8, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, IlexOfficer2InvestigationText, EVENT_SANDRA_WARPED
+	
+
 
 	object_const_def
 	const ILEX_FOREST_KURT

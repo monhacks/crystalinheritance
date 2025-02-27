@@ -464,7 +464,6 @@ Text_SwaggerIntro:
 	line "Swagger. They get"
 	cont "tilted and take"
 	cont "themselves out!"
-
 	done
 
 Text_GameCornerTutorSwagger:
