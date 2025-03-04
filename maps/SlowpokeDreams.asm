@@ -37,6 +37,7 @@ SlowkingDreamsScript:
 .Continue:
 	showtext SlowkingAfterText
 	special HealParty
+	setevent EVENT_SLOWKING_DREAMS
 	warp OLIVINE_LIGHTHOUSE_6F, 9, 10 
 	end
 	

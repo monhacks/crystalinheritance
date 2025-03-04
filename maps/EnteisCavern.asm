@@ -1,11 +1,12 @@
-EnteisCavern_MapScriptHeader: ;	def_scene_scripts
+EnteisCavern_MapScriptHeader: 
+	def_scene_scripts
 
 
 	def_callbacks
 
 
 	def_warp_events
-	warp_event 11, 17,  ROUTE_42, 1
+	warp_event 11, 17,  ROUTE_42, 3
 
 
 	def_coord_events
@@ -23,17 +24,17 @@ EnteisCavern_MapScriptHeader: ;	def_scene_scripts
 	object_const_def
 	const ENTEIS_CAVERN_ENTEI
 
-TinTowerHoOh:
+EnteiCavernScript:
 	opentext
 	writetext EnteiText
-	cry HO_OH
+	cry ENTEI
 	pause 15
 	closetext
 	setevent EVENT_FOUGHT_ENTEI
 	loadvar VAR_BATTLETYPE, BATTLETYPE_LEGENDARY
-	loadwildmon HO_OH, 50
+	loadwildmon ENTEI, 50
 	startbattle
-	disappear TINTOWERROOF_HO_OH
+	disappear ENTEIS_CAVERN_ENTEI
 	reloadmapafterbattle
 	end
 

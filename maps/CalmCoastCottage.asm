@@ -119,26 +119,13 @@ SchoolgirlAfterText:
 	para "recover a bit of"
 	line "HP when they deal"
 	cont "damage in battle."
-
-	para "It's like they're"
-	line "being rewarded for"
-	cont "their hard work!"
-
-	para "I hope it helps"
-	line "you on your own"
-	cont "adventures!"
 	done
 
 SchoolgirlRemindText:
 	text "How's that Shell"
 	line "Bell working out?"
 
-	para "Remember, it helps"
-	line "your #mon"
-	cont "recover HP in"
-	cont "battle."
-
-	para "It's like a little"
+	para "It's like a"
 	line "reward for their"
 	cont "efforts!"
 	done
@@ -146,9 +133,4 @@ SchoolgirlRemindText:
 SchoolgirlBagFullText:
 	text "Oh no! Your Bag"
 	line "is full."
-
-	para "Come back when you"
-	line "have some room,"
-	cont "and I'll give you"
-	cont "the Shell Bell."
 	done

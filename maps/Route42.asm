@@ -6,8 +6,7 @@ Route42_MapScriptHeader:
 	def_warp_events
 	warp_event  0,  8, ROUTE_42_ECRUTEAK_GATE, 3
 	warp_event  0,  9, ROUTE_42_ECRUTEAK_GATE, 4
-	warp_event 10,  5, MOUNT_MORTAR_1F_OUTSIDE, 1
-	warp_event 28,  9, MOUNT_MORTAR_1F_OUTSIDE, 2
+; entei's cavern 
 	warp_event 46,  7, MOUNT_MORTAR_1F_OUTSIDE, 3
 
 	def_coord_events
@@ -19,13 +18,16 @@ Route42_MapScriptHeader:
 	bg_event 45,  9, BGEVENT_JUMPTEXT, MtMortarSign2Text
 	bg_event 54,  8, BGEVENT_JUMPTEXT, Route42Sign2Text
 	bg_event 16, 11, BGEVENT_ITEM + MAX_POTION, EVENT_ROUTE_42_HIDDEN_MAX_POTION
+;entei's cavern if you have the pumice harp 
 
 	def_object_events
 	object_event 47,  8, SPRITE_POKEMANIAC, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerPokemaniacShane, -1
-	object_event  2,  8, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route42OfficerText, EVENT_BEAT_JASMINE
-	object_event  2,  9, SPRITE_OFFICER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route42OfficerText, EVENT_BEAT_JASMINE
+	object_event  2,  8, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route42OfficerText, EVENT_BEAT_CHUCK
+	object_event  2,  9, SPRITE_OFFICER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route42OfficerText, EVENT_BEAT_CHUCK
 	itemball_event  6,  4, ULTRA_BALL, 1, EVENT_ROUTE_42_ULTRA_BALL
 	itemball_event 33,  8, SUPER_POTION, 1, EVENT_ROUTE_42_SUPER_POTION
+	tmhmball_event 10, 2, TM_SCALD, EVENT_GOT_TM_SCALD 
+
 
 	object_const_def
 

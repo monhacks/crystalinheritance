@@ -15,6 +15,7 @@ MahoganyGym_MapScriptHeader:
 
 	def_object_events
 	object_event  5,  3, SPRITE_PRYCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MahoganyGymPryceScript, -1
+;trainers feel... how? 
 	object_event  4,  6, SPRITE_SKIER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSkierRoxanne, -1
 	object_event  0, 17, SPRITE_BOARDER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBoarderRonald, -1
 	object_event  9, 17, SPRITE_SKIER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSkierClarissa, -1
@@ -40,16 +41,6 @@ MahoganyGymPryceScript:
 	playsound SFX_GET_BADGE
 	waitsfx
 	setflag ENGINE_GLACIERBADGE
-	; Begin Team Rocket takeover of Radio Tower
-;	setflag ENGINE_ROCKETS_IN_RADIO_TOWER
-;	setevent EVENT_GOLDENROD_CITY_CIVILIANS
-;	setevent EVENT_RADIO_TOWER_BLACKBELT_BLOCKS_STAIRS
-;	clearevent EVENT_GOLDENROD_CITY_ROCKET_SCOUT
-;	clearevent EVENT_RADIO_TOWER_ROCKET_TAKEOVER
-;	clearevent EVENT_USED_THE_CARD_KEY_IN_THE_RADIO_TOWER
-;	specialphonecall SPECIALCALL_WEIRDBROADCAST
-;	setevent EVENT_MAHOGANY_TOWN_POKEFAN_M_BLOCKS_EAST
-;	setmapscene MAHOGANY_TOWN, $1
 .FightDone:
 	checkevent EVENT_GOT_TM67_AVALANCHE
 	iftrue_jumpopenedtext PryceText_CherishYourPokemon

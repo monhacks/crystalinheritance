@@ -691,53 +691,60 @@ OakScript:
 
 PryceScript:
 	checkevent EVENT_GOT_RETURN_PRYCE
-	iftrue_jumptextfaceplayer PryceSprigText
+	iftrue_jumptextfaceplayer PryceWatchKurtPleaseText2
 	faceplayer
 	opentext
 	writetext PrycePokemonText
 	promptbutton
 	verbosegivetmhm TM_RETURN
-	writetext PryceWatchKurtPleaseText
+	writetext PryceWatchKurtPleaseText1
+	waitbutton
+	writetext PryceWatchKurtPleaseText3
+	waitbutton 
+	writetext PryceWatchKurtPleaseText4
+	waitbutton
+	closetext
 	setevent EVENT_GOT_RETURN_PRYCE
 	setevent EVENT_TALKED_TO_PRYCE_TINDER_GARDEN
-	jumpthisopenedtext
+	end
 
-PryceSprigText:
+PryceWatchKurtPleaseText1:
 	text "<PLAYER>, please"
-	line "look out for Kurt"
-	cont "for me, alright?"
-	para "He means well,"
-	line "he truly does."
-	cont "But that passion"
-	cont "can lead him"
-	cont "astray at times."
-	para "Be patient with"
-	line "him. His whole"
-	cont "life's work..."
-	para "All that forest"
-	line "wisdom he gath-"
-	cont "ered to pass on,"
-	para "This fast world"
-	line "just sped on by,"
-	cont "too busy to hear"
-	cont "what he had to"
-	cont "share."
-	para "Left him standing"
-	line "there, arms full"
-	cont "of the things he"
-	cont "loves most,"
-	para "Watching it all"
-	line "hurry past him,"
-	cont "unheard, unseen."
-	para "But you know,"
-	line "he's got a point."
-	cont "The gym leaders"
-	cont "could stand to"
-	para "learn a thing or"
-	line "two from him"
-	cont "about how to"
-	cont "do right by this"
-	cont "land we share."
+	line "look after Kurt."
+	cont "He means well."
+	
+	para "The world's been"
+	line "changing fast, so"
+	cont "not everyone sees"
+	para "eye-to-eye with"
+	line "him - even those"
+	cont "he is closest to."
+	
+	para "Let's just say he"
+	line "took it very hard"
+	cont "when your Dad"
+	cont "moved away."
+	done
+
+PryceWatchKurtPleaseText3:
+	text "Kurt's always been"
+	line "steadfast, but I"
+	cont "see a rigidity as"
+	para "he wields tradit-"
+	line "ion as a sword,"
+	cont "rather than the"
+	cont "bridge it should"
+	cont "be, <PLAYER>."
+	done
+
+PryceWatchKurtPleaseText4:
+	text "He's not entirely"
+	line "wrong, mind you."
+	para "The other Gym"
+	line "Leaders should"
+	cont "slow down, given"
+	cont "the path they're"
+	cont "headed down."
 	done
 
 PrycePokemonText:
@@ -745,10 +752,7 @@ PrycePokemonText:
 	line "Look at you now!"
 
 	para "Forgive my"
-	line "tardiness, I was"
-	cont "in a feisty talk"
-	cont "with another gym"
-	cont "leader."
+	line "tardiness."
 
 	para "Your very own"
 	line "#mon partner!"
@@ -757,6 +761,12 @@ PrycePokemonText:
 	line "you. This TM grows"
 	cont "stronger with"
 	cont "your bond!"
+	done
+
+PryceWatchKurtPleaseText2:
+	text "<PLAYER>, please"
+	line "look out for Kurt"
+	cont "for me, alright?"
 	done
 
 TGKurtScript:
@@ -877,9 +887,15 @@ TGRivalGoodbyeText:
 	
 	para "Who put you in"
 	line "charge, anyway?"
-
+	
+	para "Kurt: <RIVAL>,"
+	line "you're always in"
+	cont "a rush to prove"
+	cont "yourself!"
+	
+	para "You never let us"
+	line "teach you!"
 	done
-
 
 
 PlayerMovesForRivalBattle:

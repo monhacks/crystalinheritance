@@ -39,6 +39,6 @@ ClastsCradle1F_MapScriptHeader:
 	itemball_event 28, 35, FULL_RESTORE, 1, EVENT_CRADLE_1F_FULL_RESTORE
 	itemball_event 19, 33, MAX_REVIVE, 1, EVENT_CRADLE_1F_MAX_REVIVE
 	itemball_event 11, 27, ODD_SOUVENIR, 1, EVENT_CRADLE_1F_SOUVENIR
-
+	tmhmball_event 7, 16, TM_SWORDS_DANCE, EVENT_TM_SWORDS_DANCE
 
 	object_const_def

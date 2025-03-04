@@ -20,7 +20,7 @@ OlivineCityDesalB1F_MapScriptHeader:
 	def_object_events
 	object_event  5,  7, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, DesalB1FText1, -1
 	object_event  7,  7, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, DesalB1FText2, -1
-
+	itemball_event 3, 0, ELECTIRIZER, 1, EVENT_GOT_ELECTRIZER
 
 
 	object_const_def

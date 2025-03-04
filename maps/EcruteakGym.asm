@@ -46,6 +46,8 @@ EcruteakGym_MapScriptHeader:
 	object_event  5, 14, SPRITE_PRYCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakGymPryceScript, EVENT_BURNED_TOWER_MORTY
 	pokemon_event  6, 27, MAMOSWINE, -1, -1, PAL_NPC_BLUE, EcruteakMamoswineText, EVENT_BURNED_TOWER_MORTY
 
+	object_event  2,  3, SPRITE_MEDIUM, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerMediumRebecca, -1
+	object_event  7,  3, SPRITE_MEDIUM, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerMediumDoris, -1
 
 	object_const_def
 	const ECRUTEAK_GYM_BOULDER1
@@ -71,6 +73,8 @@ EcruteakGymBoulders:
 	pause 30
 	playsound SFX_FORESIGHT
 	done
+
+
 
 EcruteakGymMortyScript:
 	faceplayer

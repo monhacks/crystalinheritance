@@ -701,7 +701,7 @@ KRIS EQU __trainer_class__
 	trainerclass COWGIRL ; 4a
 	const ANNIE
 	const APRIL
-	const DANIELA
+
 
 	trainerclass SAILOR ; 4b
 	const HUEY1
@@ -726,7 +726,7 @@ KRIS EQU __trainer_class__
 	const SIMON
 	const RANDALL
 	const CHARLIE
-	const GEORGE
+	const GEORGE ; leader 
 	const BERKE
 	const KIRK
 	const MATHEW
@@ -813,10 +813,6 @@ KRIS EQU __trainer_class__
 
 	trainerclass ROCKET_SCIENTIST ; 51
 	const ROSS
-	const MITCH
-	const JED
-	const MARC
-	const RICH
 
 	trainerclass BOARDER ; 52
 	const RONALD
@@ -920,7 +916,6 @@ KRIS EQU __trainer_class__
 	const BRETT
 	const VINCE
 	const OSWALD
-	const JORDAN
 
 	trainerclass ARTIST ; 5e
 	const REINA

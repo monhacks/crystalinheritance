@@ -6,7 +6,8 @@ SinjohEldersHouse_MapScriptHeader:
 
 
 	def_warp_events
-
+	warp_event 4, 7, SINJOH_CROSSROADS, 3
+	warp_event 5, 7, SINJOH_CROSSROADS, 3
 
 
 	def_coord_events

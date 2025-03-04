@@ -213,7 +213,7 @@ ROUTE35_TutorBodySlamScript:
 	jumpopenedtext Text_ROUTE35_TutorTaught ;;
 	
 Text_BodySlamIntro:
-	text "TUSCANY: Hi!"
+	text "Tuscany: Hi!"
 	line "I'm Tuscany of"
 	cont "Tuesday."
 		

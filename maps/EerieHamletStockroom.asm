@@ -1,11 +1,12 @@
-EerieHamletStockroom_MapScriptHeader: ;	def_scene_scripts
+EerieHamletStockroom_MapScriptHeader: 
+	def_scene_scripts
 
 
 	def_callbacks
 
 
 	def_warp_events
-
+	warp_event 5, 9, EERIE_HAMLET, 3
 
 
 	def_coord_events

@@ -3,7 +3,7 @@ TranquilTarn_MapScriptHeader:
 
 
 	def_callbacks
-
+;callback for the lake 
 
 	def_warp_events
 
@@ -19,6 +19,6 @@ TranquilTarn_MapScriptHeader:
 
 	def_object_events
 	fruittree_event 17, 26, FRUITTREE_TRANQIL_TARN_1, TOUGH_LEAVES, PAL_NPC_GREEN;OK
-	fruittree_event 30, 15, FRUITTREE_TRANQIL_TARN_2, RADIANT_OPAL, PAL_NPC_RED;OK
+	fruittree_event 36,  5, FRUITTREE_TRANQIL_TARN_2, RADIANT_OPAL, PAL_NPC_RED;OK
 
 	object_const_def

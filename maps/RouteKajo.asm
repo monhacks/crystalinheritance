@@ -2,7 +2,7 @@ RouteKajo_MapScriptHeader: ; trainer parties, check warps
     def_scene_scripts
 
     def_callbacks
-	callback MAPCALLBACK_OBJECTS, RouteKajoCallback_GirlAppears
+	
 
     def_warp_events ; DONE
     warp_event 6, 32, GOLDENROD_MAGNET_TRAIN_STATION, 4
@@ -51,19 +51,11 @@ RouteKajo_MapScriptHeader: ; trainer parties, check warps
 	tmhmball_event 50,  1, TM_STEEL_WING, EVENT_GOT_TM47_STEEL_WING ; ok 
     object_event 16, 30, SPRITE_HIKER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, RouteKajoHollowRockScript, -1
 	fruittree_event 18, 23, FRUITTREE_ROUTE_KAJO, HOLLOW_ROCK, PAL_NPC_RED; OK
+	itemball_event 23, 8, DAWN_STONE, 1, EVENT_KAJO_DAWN_STONE 
 
 	object_const_def
 	const KAJO_SCHOOLGIRL
 	const KAJO_SUDOWOODO
-
-RouteKajoCallback_GirlAppears: ; shouldn't appear until you talk to the dad in the cabin
-	checkevent EVENT_TALKED_TO_CABIN_DAD
-	iftrue .Skip
-	disappear KAJO_SCHOOLGIRL
-	endcallback
-
-.Skip:
-	endcallback
 
 TrainerCamperBarryScript:
     generictrainer CAMPER, BARRY, EVENT_BEAT_CAMPER_BARRY, CamperBarrySeenText, CamperBarryBeatenText
@@ -264,16 +256,24 @@ LostKajoGirlScript:
 	promptbutton
 	closetext
 	setevent EVENT_TALKED_TO_LOST_KAJO_GIRL
+	clearevent EVENT_KAJO_SCHOOLGIRL_CABIN
+	special Special_FadeBlackQuickly
+	special Special_ReloadSpritesNoPalettes
+	disappear KAJO_SCHOOLGIRL
+	pause 30
+	special Special_FadeInQuickly
 	end
 	
 LostKajoGirlText:
-	text "It is so fun"
-	line "to play here!"
+	text "I am so lost!"
+	line "Do you know the"
+	cont "way back?"
 	
-	para "Oh? My dad is"
-	line "worried about"
-	cont "me? I probably"
-	cont "should get back."
+	para "..."
+	
+	para "Thanks so much!"
+	line "I'm headed home."
+	
 	done
 
 KajoFeraligatrText:
@@ -283,8 +283,8 @@ KajoFeraligatrText:
 
 RouteKajoCabinSign:
     text "Cozy Cabin"
-	para "Weary travelers"
-	line "welcome"	
+	para "Weary Travelers"
+	line "Welcome"	
     done
 
 RouteKajoHollowRockScript:

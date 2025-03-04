@@ -3251,37 +3251,48 @@ _InitialOptionsText::
 	text "This game was"
 	line "built on the"
 	cont "Polished Crystal"
-	cont "Romhack by dwg."
-	
-	para "Do not contact"
-	line "Rangi42 about"
-	cont "errors you may"
-	cont "encounter."
-	
+	cont "3.0.0 by dwg."
+		
 	para "Please choose how"
-	line "you want to play"
-	cont "Polished Crystal."
+	line "you want to play.""
 	prompt
 
 SECTION "_ElmText1", ROMX ; being used, i think in intro_meu.asm as elmtext1?
 _ElmText1::
-	text "Hello! Are you"
-	line "excited? Today"
-	cont "is the day you"
-	cont "participate in"
-	cont "the ceremony."
+	text "Wake up, sleepy-"
+	line "head! Today is"
+	cont "your ceremony!"
+	
+	para "It means that you"
+	line "are ready to care"
+	cont "for the forest."
+	
+	para "It's how we pass"
+	line "down our values-"
+	cont "feed the saplings"
+	cont "and prune weeds."
 
-	para "Grandpa Kurt"
-	line "will make sure"
-	cont "everything goes"
-	cont "as it should."
+	para "You're going to"
+	line "look so grown-up"
+	cont "in your garb."
+	
+	para "I know I didn't"
+	line "ask your dad, but"
+	cont "some traditions"
+	para "are worth bending"
+	line "rules for. This"
+	cont "is your legacy"
+	cont "too."
 	prompt
 
 SECTION "_ElmText2", ROMX
 _ElmText2::
-	text "You will get"
-	line "your very first"
-	cont "#mon partner."
+	text "It's the start"
+	line "of your #mon"
+	cont "journey."
+
+	para "Which ones will"
+	line "you catch?"
 	
 	para "Your dad's first"
 	line "was an ornery"
@@ -3290,78 +3301,67 @@ _ElmText2::
 
 SECTION "_ElmText4", ROMX
 _ElmText4::
-	text "Every 20 years,"
-	line "for generations,"
-	cont "a rite of passage"
-	cont "has been the re-"
-	cont "building of the"
-	cont "Ilex Shrine."
+	text "We will rebuild"
+	line "the Ilex Shrine,"
+	
+	para "as has been done"
+	line "every 20 years."
+	
+	para "We tear down the"
+	line "blossom tree and"
+	cont "thank it for its"
+	cont "lumber,"
+	
+	para "recomitting our"
+	line "dedicatation to"
+	cont "protecting the"
+	cont "forest."
 	prompt
 
 SECTION "_ElmText5", ROMX
 _ElmText5::
-	text "Ah, this drought."
-	line "It's been tough,"
-	cont "hasn't it?"
-
-	para "Folks are strug-"
-	line "gling. Some say"
-	para "the old ways"
-	line "don't matter..."
+	text "This drought..."
+	line "I hope it breaks"
+	cont "soon. People are"
+	cont "turning to Silph"
+	cont "technology."
 	
-	para "But you know, "
-	line "in my day, we had"
-	cont "hard times too."
-
-	para "What got us thr-"
-	line "ough was coming"
-	cont "together, sharing"
-	para "tales, and reme-"
-	line "mbering our bond"
-	cont "with nature."
-
-
-	para "Who knows? Maybe"
-	line "coming together"
-	cont "will even bring"
-	cont "some rain."
+	para "Your parents too,"
+	line "I fear. But we"
+	cont "know better."
+	
+	para "Can Silph's inve-"
+	line "ntions really do"
+	cont "better than me?"	
+	
+	para "Oh, I've gone on"
+	line "too long. Let's"
+	cont "focus on you."
 	prompt
+
 
 SECTION "_ElmText6", ROMX
 _ElmText6::
 	text "What should we"
-	line "call you?"
+	line "call you today?"
 	prompt
 
 SECTION "_ElmText7", ROMX
 _ElmText7::
-	text "<PLAYER>, are you"
-	line "ready?"
-
-	para "This ceremony is"
-	line "the start of the"
-	cont "story of you!"
+	text "The bond between"
+	line "us and #mon,"
+	para "past and future-"
+	line "that's your"
+	cont "inheritance."
 	
-	para "But remember, you"
+	para "After today, you"
 	line "carry the hopes"
 	cont "and dreams of all"
 	cont "who came before."
-
-	para "The bond between"
-	line "us, #mon, and"
-	para "nature - that's"
-	line "your inheritance."
-
-	para "Cherish it, main-"
-	line "tain it, and let"
-	cont "it guide you."
-
-	para "Now go on,"
-	line "<PLAYER>."
 	
-	para "Make your own"
-	line "story. And make"
-	cont "us proud!"
+	para "If the tree rings"
+	line "I know you will"
+	cont "answer."
 	done
 
 SECTION "_WarnVBAText", ROMX

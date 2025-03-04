@@ -8,7 +8,7 @@ Route40_MapScriptHeader:
 	def_coord_events
 
 	def_bg_events
-	bg_event 14, 10, BGEVENT_JUMPTEXT, Route40SignText
+	bg_event 14, 10, BGEVENT_JUMPTEXT, Route40SignText ; fix sign 
 	bg_event  7,  8, BGEVENT_ITEM + HYPER_POTION, EVENT_ROUTE_40_HIDDEN_HYPER_POTION
 
 	def_object_events
@@ -19,16 +19,19 @@ Route40_MapScriptHeader:
 	smashrock_event  7, 8
 ; double edge 
 	object_event 16, 27, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route40FisherScript, -1
+;scavengers
+	object_event 13, 16, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerSwimmermHarold -1
+	object_event 18, 33, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 5, GenericTrainerSwimmermSimon, -1
+	object_event  3, 19, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerSwimmermRandall, -1
+	object_event  9, 25, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_SPINCLOCKWISE, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerSwimmermCharlie, -1
+; beach NPCs
+	object_event 11, 13, SPRITE_CUTE_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route40Lass1Text, -1 ; redo text and heal you 
+	object_event 13,  4, SPRITE_PICNICKER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route40Lass2Text, -1 ; redo text 
+	; npc who gives you razor claw for defeating them all 
+	object_event 0, 0, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_COMMAND, 0, RazorScavengerScript, -1
+; roadblock NPCs, quarantine the city while they look for who took the part 
 
-	object_event 13, 16, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerSwimmermSimon, -1
-	object_event 18, 33, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 5, GenericTrainerSwimmermRandall, -1
-	object_event  3, 19, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerSwimmerfElaine, -1
-	object_event  9, 25, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_SPINCLOCKWISE, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerSwimmerfPaula, -1
 
-	object_event 11, 13, SPRITE_CUTE_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route40Lass1Text, -1
-	object_event  7,  6, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, Route40PokefanMScript, -1
-	object_event 13,  4, SPRITE_PICNICKER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route40Lass2Text, -1
-	object_event 14,  8, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route40YoungsterScript, -1
 
 
 	object_const_def
@@ -48,7 +51,6 @@ MonicaScript:
 
 MonicaDoneScript:
 	end
-
 
 MonicaGivesGiftText:
 	text "Monica: Glad to"
@@ -200,18 +202,6 @@ GenericTrainerSwimmermRandall:
 	cont "It's healthy."
 	done
 
-Route40PokefanMScript:
-	checkevent EVENT_BATTLE_TOWER_OPEN
-	iftrue_jumptextfaceplayer Route40PokefanMText2
-	jumptextfaceplayer Route40PokefanMText
-
-Route40YoungsterScript:
-	checkevent EVENT_BATTLE_TOWER_OPEN
-	iftrue_jumptextfaceplayer Route40StandingYoungsterText
-	jumptextfaceplayer Route40YoungsterText
-
-
-
 SwimmermSimonSeenText:
 	text "You have to warm"
 	line "up before going"
@@ -269,22 +259,6 @@ Route40Lass1Text:
 	line "the sea."
 	done
 
-Route40PokefanMText:
-	text "Hm! There's a big"
-	line "building up ahead!"
-
-	para "What is it?"
-	done
-
-Route40PokefanMText2:
-	text "Hm! Look at all"
-	line "those serious-"
-	cont "looking trainers"
-	cont "streaming in."
-
-	para "What? What?"
-	done
-
 Route40Lass2Text:
 	text "I came to Olivine"
 	line "by ship to see the"
@@ -296,36 +270,6 @@ Route40Lass2Text:
 	line "feels so different"
 	cont "from a big city."
 	done
-
-Route40YoungsterText:
-	text "The Battle Tower"
-	line "is almost ready!"
-
-	para "Trainers are head-"
-	line "ing to Olivine"
-
-	para "from all over the"
-	line "world to test"
-	cont "their strength."
-	done
-
-Route40StandingYoungsterText:
-	text "Have you gone to"
-	line "the Battle Tower?"
-
-	para "I think a lot of"
-	line "tough trainers"
-
-	para "have gathered"
-	line "there already."
-
-	para "But since you have"
-	line "so many Badges,"
-
-	para "you shouldn't do"
-	line "badly at all."
-	done
-
 
 Route40SignText:
 	text "Route 40"

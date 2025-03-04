@@ -1,4 +1,4 @@
-RuinsOfAlphHoOhItemRoom_MapScriptHeader:
+RuinsOfAlphHoOhItemRoom_MapScriptHeader: ; HEATRAN 
 	def_scene_scripts
 
 	def_callbacks
@@ -17,9 +17,10 @@ RuinsOfAlphHoOhItemRoom_MapScriptHeader:
 
 	def_object_events
 	object_event  2,  5, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_ROCK, OBJECTTYPE_SCRIPT, 0, PumiceHarpScript, EVENT_GOT_PUMICE_HARP
+
 	itemball_event  2,  6, ODD_SOUVENIR, 1, EVENT_PICKED_UP_SUN_STONE_FROM_HO_OH_ITEM_ROOM
-	itemball_event  5,  6, MOON_STONE, 1, EVENT_PICKED_UP_MOON_STONE_FROM_HO_OH_ITEM_ROOM
-	itemball_event  2,  4, LIFE_ORB, 1, EVENT_PICKED_UP_LIFE_ORB_FROM_HO_OH_ITEM_ROOM
+	tmhmball_event  5,  6, TM_EARTHQUAKE, EVENT_PICKED_UP_MOON_STONE_FROM_HO_OH_ITEM_ROOM
+	itemball_event  2,  4, MAGMARIZER, 1, EVENT_PICKED_UP_LIFE_ORB_FROM_HO_OH_ITEM_ROOM
 	itemball_event  5,  4, SACRED_ASH, 1, EVENT_PICKED_UP_CHARCOAL_FROM_HO_OH_ITEM_ROOM
 
 

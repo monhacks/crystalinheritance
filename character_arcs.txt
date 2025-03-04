@@ -1,0 +1,25 @@
+	Start of story			End of story	
+	Sacrifice vs Selfish Score (0 = Selfish 10 = Sacrifice)	Tradition vs. Progress score (0 = All tradition 10 = All progress)		Sacrifice score	Tradition score
+Kurt	2	0		10	5
+Pryce	10	3			
+Rosin	2	10		5	5
+Ostene	0	10			
+Hollis	2	2		2	4
+Tammy	5	6			
+Sandra	10	2			
+Bobesh	2	7			
+Whitney	1	9		5	9
+Falkner	3	10		4	8
+Morty	8	2		8	4
+Kimono Girls	10	2			
+Mejimi	5	5		0	7
+Kensey	4	10			
+Adrinna	0	10			
+Samsara	10	2			
+Barbeau	8	0		4	5
+Eusine	5	1			
+Chuck	3	9		3	7
+Jasmine	0	7		2	7
+Kanna	10	4			
+Amos	8	3		8	5
+Players Parents	8	8			
