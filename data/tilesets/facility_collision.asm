@@ -54,7 +54,7 @@
 	tilecoll WALL, WALL, FLOOR, FLOOR ; 35
 	tilecoll WALL, WALL, FLOOR, FLOOR ; 36
 	tilecoll FLOOR, WALL, FLOOR, WALL ; 37
-	tilecoll FLOOR, WALL, FLOOR, WALL ; 38
+	tilecoll WALL, WALL, FLOOR, FLOOR ; 38
 	tilecoll WALL, WALL, FLOOR, FLOOR ; 39
 	tilecoll FLOOR, WALL, WALL, WALL ; 3a
 	tilecoll WALL, WALL, FLOOR, WALL ; 3b
@@ -82,10 +82,10 @@
 	tilecoll FLOOR, FLOOR, WALL, WALL ; 51
 	tilecoll WALL, FLOOR, WALL, FLOOR ; 52
 	tilecoll FLOOR, WALL, FLOOR, WALL ; 53
-	tilecoll WALL, WALL, FLOOR, FLOOR ; 54
+	tilecoll WATER, WATER, WATER, WATER ; 54
 	tilecoll WALL, WALL, WALL, FLOOR ; 55
 	tilecoll WALL, WALL, FLOOR, WALL ; 56
-	tilecoll LADDER, FLOOR, FLOOR, FLOOR ; 57
+	tilecoll WALL, WALL, WATER, WATER ; 57
 	tilecoll WALL, WALL, WALL, FLOOR ; 58
 	tilecoll WALL, FLOOR, FLOOR, WARP_CARPET_DOWN ; 59
 	tilecoll FLOOR, WALL, WARP_CARPET_DOWN, FLOOR ; 5a

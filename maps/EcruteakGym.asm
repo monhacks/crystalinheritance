@@ -74,7 +74,29 @@ EcruteakGymBoulders:
 	playsound SFX_FORESIGHT
 	done
 
+GenericTrainerMediumRebecca:
+	generictrainer MEDIUM, REBECCA, EVENT_BEAT_MEDIUM_REBECCA, RebeccaSeenText, RebeccaBeatenText
 
+RebeccaBeatenText:
+	text "Who guides you?"
+	done
+
+RebeccaSeenText:
+	text "Spirits guide me!"
+	done
+
+GenericTrainerMediumDoris:
+	generictrainer MEDIUM, DORIS, EVENT_BEAT_MEDIUM_DORIS, DorisSeenText, DorisBeatenText
+
+RebeccaBeatenText:
+	text "It surrounds us"
+	line "all!"
+	done
+
+RebeccaSeenText:
+	text "Can you feel the"
+	line "sublime?"
+	done
 
 EcruteakGymMortyScript:
 	faceplayer

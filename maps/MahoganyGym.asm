@@ -42,7 +42,7 @@ MahoganyGymPryceScript:
 	waitsfx
 	setflag ENGINE_GLACIERBADGE
 .FightDone:
-	checkevent EVENT_GOT_TM67_AVALANCHE
+	checkevent EVENT_GOT_TM_CALM_MIND
 	iftrue_jumpopenedtext PryceText_CherishYourPokemon
 	setevent EVENT_BEAT_SKIER_ROXANNE
 	setevent EVENT_BEAT_SKIER_CLARISSA
@@ -51,9 +51,10 @@ MahoganyGymPryceScript:
 	setevent EVENT_BEAT_BOARDER_DOUGLAS
 	writetext PryceText_GlacierBadgeSpeech
 	promptbutton
-	verbosegivetmhm TM_AVALANCHE
-	setevent EVENT_GOT_TM67_AVALANCHE
-	jumpthisopenedtext
+	verbosegivetmhm TM_CALM_MIND
+	setevent EVENT_GOT_TM_CALM_MIND 
+	jumpthisopenedtext ; TODO: CALM MIND 
+	
 
 	text "That TM contains"
 	line "Avalanche."

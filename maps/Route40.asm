@@ -12,6 +12,8 @@ Route40_MapScriptHeader:
 	bg_event  7,  8, BGEVENT_ITEM + HYPER_POTION, EVENT_ROUTE_40_HIDDEN_HYPER_POTION
 
 	def_object_events
+	; npc who gives you razor claw for defeating them all 
+	object_event 0, 0, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_COMMAND, 0, RazorScavengerScript, -1
 ;monica
 	object_event  8, 10, SPRITE_POKEFAN_F, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, MonicaScript, -1
 	smashrock_event  7, 11
@@ -27,14 +29,119 @@ Route40_MapScriptHeader:
 ; beach NPCs
 	object_event 11, 13, SPRITE_CUTE_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route40Lass1Text, -1 ; redo text and heal you 
 	object_event 13,  4, SPRITE_PICNICKER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route40Lass2Text, -1 ; redo text 
-	; npc who gives you razor claw for defeating them all 
-	object_event 0, 0, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_COMMAND, 0, RazorScavengerScript, -1
+
 ; roadblock NPCs, quarantine the city while they look for who took the part 
-
-
+	object_event 0, 0, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText, EVENT_BEAT_CHUCK ; redo text and heal you 
+	object_event 0, 0, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText, EVENT_BEAT_CHUCK ; redo text and heal you 
 
 
 	object_const_def
+	const ROUTE40_SCAVENGER
+
+OlivineOfficerText:
+	text "Olivine is in a"
+	line "strict lockdown."
+	
+	para "We need to catch"
+	line "a crook who took"
+	para "a part from the"
+	line "desal plant."
+	done
+
+RazorScavengerScript: ; check route 31 script if not working 
+;	endifjustbattled
+	checkevent EVENT_GOT_RAZOR_ITEM_ROUTE_40
+	iftrue_jumptextfaceplayer .AfterText2
+	faceplayer
+	opentext
+	checkevent EVENT_BEAT_SWIMMERM_GEORGE
+	iftrue .Beaten
+	checkevent EVENT_BEAT_SWIMMER_M_HAROLD
+	iffalse_jumpopenedtext .IntroText
+	checkevent EVENT_BEAT_SWIMMER_M_SIMON
+	iffalse_jumpopenedtext .IntroText
+	checkevent EVENT_BEAT_SWIMMER_M_RANDALL
+	iffalse_jumpopenedtext .IntroText
+	checkevent EVENT_BEAT_SWIMMER_M_CHARLIE
+	iffalse_jumpopenedtext .IntroText
+	writetext .QuestionText
+	yesorno
+	iffalse_jumpopenedtext .RefusedText
+	writetext .SeenText
+	waitbutton
+	closetext
+	winlosstext .BeatenText, 0
+	setlasttalked ROUTE40_SCAVENGER
+	loadtrainer SWIMMER_M, GEORGE
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_SWIMMERM_GEORGE
+	opentext
+.Beaten:
+	writetext .AfterText1
+	promptbutton
+	verbosegiveitem RAZOR_CLAW
+	iffalse_endtext
+	setevent EVENT_GOT_RAZOR_ITEM_ROUTE_40
+	jumpthisopenedtext
+
+.AfterText2: ;  
+	text "Without so many"
+	line "boats around, it"
+	cont "is safe to dive."
+	
+	para "The corals really"
+	line "took a hit with"
+	cont "the desal plant,"
+	cont "though."
+	done
+
+.IntroText:;  
+	text "The other scav-"
+	line "engers are good"
+	cont "divers, but not"
+	
+	para "so much battlers."
+	line "If you beat them"
+	cont "all, come talk to"
+	para "me, so I can have"
+	line "an interesting"
+	cont "battle."
+	
+	done
+
+.QuestionText:;  
+	text "You defeated all"
+	line "others!"
+	
+	para "Shall we battle?"
+	line "If you win, I'll"
+	para "give you a nice"
+	line "item I found in"
+	cont "a wreck."
+	done
+
+.RefusedText:;  
+	text "Fine, I'll keep"
+	line "my Razor Claw."
+	done
+
+.SeenText:;  
+	text "Let's go!"
+	done
+
+.BeatenText:;  
+	text "You're sharp!"
+	done
+
+.AfterText1:;  
+	text "That was a rush!"
+	line "Please take this."
+	
+	para "I found it in a"
+	line "shipwreck."
+	done
+	
 
 
 MonicaScript:

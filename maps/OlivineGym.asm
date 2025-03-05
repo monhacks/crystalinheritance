@@ -13,7 +13,7 @@ OlivineGym_MapScriptHeader:
 
 
 	def_object_events
-	object_event  5,  3, SPRITE_JASMINE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OlivineGymJasmineScript, -1
+	object_event  5,  3, SPRITE_JASMINE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OlivineGymJasmineScript, EVENT_JASMINE_GYM ; NOT HERE UNTIL AFTER BEATING CHUCK 
 
 
 

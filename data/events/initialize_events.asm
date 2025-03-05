@@ -41,6 +41,7 @@ InitialEvents: ; PROBABLY MOST OF THESE CAN BE REMOVED? --> keep these numbers, 
 	dw EVENT_PROLOGUE_KENSEY
 	dw EVENT_INITIALIZED_EVENTS
 	dw EVENT_LANDING_SCENE_1_KURT
+	dw EVENT_JASMINE_GYM ;
 	dw -1
 
 InitialEngineFlags:
