@@ -32,7 +32,8 @@ LakeOfRage_MapScriptHeader:
 	bg_event 11, 28, BGEVENT_ITEM + FULL_RESTORE, EVENT_LAKE_OF_RAGE_HIDDEN_FULL_RESTORE
 
 	def_object_events
-	object_event  4,  4, SPRITE_POKEMANIAC, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, WesleyScript, -1
+	; SIGHTSEERm blaise, gareth, sightseerf kamila, noelle, POKEMANIACS CALVIN AND SHANE 
+	object_event  4,  4, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, WesleyScript, -1
 ;trainers
 	object_event  4, 15, SPRITE_ACE_TRAINER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerCooltrainermAaron, -1
 	object_event 36,  7, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerCooltrainerfLois, -1
@@ -62,63 +63,64 @@ LakeOfRageSignText:
 
 WesleyScript:
 	checkevent EVENT_GOT_BLACK_BELT_FROM_WESLEY
-	iftrue_jumptextfaceplayer .WednesdayText
-	readvar VAR_WEEKDAY
-	ifnotequal WEDNESDAY, .NotWednesday
+	iftrue_jumptextfaceplayer WesleyDynamicPunchText
 	faceplayer
 	opentext
-	checkevent EVENT_MET_WESLEY_OF_WEDNESDAY
 	iftrue .MetWesley
-	writetext .MeetText
+	writetext MeetWesleyText
 	promptbutton
-	setevent EVENT_MET_WESLEY_OF_WEDNESDAY
-.MetWesley:
-	writetext .GivesGiftText
+	writetext WesleyGivesGiftText
 	promptbutton
-	verbosegiveitem BLACK_BELT
+	verbosegivetmhm TM_DYNAMICPUNCH ; 
 	iffalse_endtext
 	setevent EVENT_GOT_BLACK_BELT_FROM_WESLEY
-	jumpthisopenedtext
+	jumpopenedtext WesleyDynamicPunchText
 
-	text "Wesley: Black Belt"
-	line "beefs up the power"
-	cont "of Fighting moves."
-	done
 
-.NotWednesday:
-	jumpthisopenedtext
-
-	text "Wesley: Today's"
-	line "not Wednesday."
-	cont "That's too bad."
-	done
-
-.MeetText:
-	text "Wesley: Well, how"
-	line "do you do?"
-
-	para "Seeing as how it's"
-	line "Wednesday today,"
-
-	para "I'm Wesley of"
+MeetWesleyText:
+	text "I am Wesley"
 	line "Wednesday."
+
+	para "Wednesday is the"
+	line "exact middle of"
+	cont "the week."
+	
+	para "A day for the"
+	line "uncertainties of"
+	cont "the universe to"
+	
+	para "collapse into one"
+	line "of two states."
 	done
 
-.GivesGiftText:
-	text "Pleased to meet"
-	line "you. Please take a"
-	cont "souvenir."
+WesleyGivesGiftText:
+	text "That's why I love"
+	line "this technique."
+	
+	para "Dynamicpunch: it"
+	line "will hit or miss,"
+	cont "devastating for"
+	cont "either party,"
+	
+	para "But you won't"
+	line "know which until"
+	cont "you use it!"
+	
+	para "Exactly like the"
+	line "famous experiment"
+	para "with the Meowth"
+	line "in the box with"
+	cont "the radioact-"
+	
+	para "Oh, nevermind."
 	done
 
-.WednesdayText:
-	text "Wesley: Since you"
-	line "found me, you must"
-
-	para "have met my broth-"
-	line "ers and sisters."
-
-	para "Or did you just"
-	line "get lucky?"
+WesleyDynamicPunchText:
+	text "That move has a"
+	line "lot of momentum"
+	
+	para "but the position"
+	line "is unknown."	
 	done
 
 GenericTrainerCooltrainermAaron:

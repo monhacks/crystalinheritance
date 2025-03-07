@@ -29,7 +29,6 @@ Route40_MapScriptHeader:
 ; beach NPCs
 	object_event 11, 13, SPRITE_CUTE_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route40Lass1Text, -1 ; redo text and heal you 
 	object_event 13,  4, SPRITE_PICNICKER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route40Lass2Text, -1 ; redo text 
-
 ; roadblock NPCs, quarantine the city while they look for who took the part 
 	object_event 0, 0, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText, EVENT_BEAT_CHUCK ; redo text and heal you 
 	object_event 0, 0, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText, EVENT_BEAT_CHUCK ; redo text and heal you 

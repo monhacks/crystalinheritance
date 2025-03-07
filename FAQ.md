@@ -165,7 +165,7 @@ Brass Tower:
 
 Most first forms were removed to make room for more evolutionary lines. 
 
-Others whose types were already overrepresented (normal-flying, for example) were cut entirely. I really feel bad about Hoothoot, but there is an easter egg for it on the Calm Coast. 
+Others whose types were already overrepresented (normal-flying, for example) were cut entirely.
 
 ### I want the missing Pokémon back!
 

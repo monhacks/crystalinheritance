@@ -123,8 +123,8 @@ KimonoCabin3_MapScriptHeader: ; should be like  "BurnedTowerB1F_MapScriptHeader"
 	strengthboulder_event  8, 10	
 
 	object_event  9,  4, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, SNEASEL, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, KimonoCabin3Sneasel, EVENT_KIMONO_CABIN_SNEASEL
-	tmhmball_event 24, 33, TM_DARK_PULSE, EVENT_KIMONO_CABIN_TM_DARK_PULSE
-	
+	tmhmball_event 8, 12, TM_DARK_PULSE, EVENT_KIMONO_CABIN_TM_DARK_PULSE
+	itemball_event 16, 0, DUSK_STONE, EVENT_KIMONO_CABIN_DUSK_STONE 
 
 	object_const_def
 	const KIMONO_CABIN_3_SNEASEL ;  

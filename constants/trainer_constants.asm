@@ -291,7 +291,7 @@ KRIS EQU __trainer_class__
 	const TOBY
 	const DENIS
 	const HANK
-	const ROY
+	const HANK1
 	const BORIS
 	const BOB
 	const PETER
@@ -575,8 +575,7 @@ KRIS EQU __trainer_class__
 	const JARED
 	const RODNEY
 	const LEON
-	const URI
-	const VIRGIL
+
 
 	trainerclass HEX_MANIAC ; 3a
 	const TAMARA
@@ -585,9 +584,7 @@ KRIS EQU __trainer_class__
 	const LUNA
 	const NATALIE
 	const VIVIAN
-	const ESTHER
-	const MATILDA
-	const BETHANY
+
 
 	trainerclass SAGE ; 3b
 	const CHOW
@@ -598,12 +595,17 @@ KRIS EQU __trainer_class__
 	const PING
 	const EDMOND
 	const NEAL
+	const URI
+	const VIRGIL
 
 	trainerclass MEDIUM ; 3c
 	const MARTHA
 	const GRACE
 	const REBECCA
 	const DORIS
+	const ESTHER
+	const MATILDA
+	const BETHANY
 
 	trainerclass KIMONO_GIRL_1 ; 3d, red 
 	const SAYO ; flareon 
@@ -856,9 +858,9 @@ KRIS EQU __trainer_class__
 	trainerclass DRAGON_TAMER ; 56
 	const PAUL
 	const DARIN
-	const ADAM
-	const ERICK
-	const KAZU
+	const HANK2
+	const JONES2
+	const LELAND2
 	const AEGON
 
 	trainerclass ENGINEER ; 57

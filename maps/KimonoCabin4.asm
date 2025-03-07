@@ -37,9 +37,9 @@ KimonoCabin4_MapScriptHeader: ;REVISE THE TEXT
 
 
 	def_object_events
-	object_event  0, 0, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED,  OBJECTTYPE_SCRIPT, 0, KimonoCabin44Script, -1
-	object_event  0,  0, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, LAPRAS, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, KimonoCabin4Lapras, EVENT_KIMONO_4_LAPRAS
-
+	object_event  5, 9, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED,  OBJECTTYPE_SCRIPT, 0, KimonoCabin44Script, -1
+	object_event  3, 8, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, LAPRAS, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, KimonoCabin4Lapras, EVENT_KIMONO_4_LAPRAS
+	itemball_event 5, 5, SHINY_STONE, 1, EVENT_KIMONO_CABIN_SHINY_STONE 
 
 	object_const_def
 	const KIMONO_CABIN_4_GRANNY
@@ -114,13 +114,14 @@ KimonoCabin4Lapras:
 	startbattle
 	disappear KIMONO_CABIN_4_LAPRAS
 	setevent EVENT_KIMONO_4_LAPRAS
+	setevent EVENT_KIMONO_CABIN_4_LAPRAS_BATTLE
 	reloadmapafterbattle
 	end
 
 KimonoCabin44Script:
 	faceplayer
 	opentext
-	checkevent KIMONO_CABIN_4_LAPRAS 
+	checkevent EVENT_KIMONO_CABIN_4_LAPRAS_BATTLE
 	iftrue_jumpopenedtext WhatABeautifulSpecimenThatWasText
 	checkevent EVENT_EXPLAINED_SUDOKU
 	iftrue CheckSudokuSolved
@@ -133,15 +134,14 @@ CheckSudokuSolved: ; should give you a bub ball
 	checkevent EVENT_KC4_00
 	iffalse_jumpopenedtext SudokuNotSolvedText
 	; sudoku puzzle solved from here 
+	; if solved, then 
 	writetext TheGardenLooksBeautifulText
 	closetext
-	checkevent EVENT_KIMONO_4_LAPRAS
-	iftrue_jumpopenedtext WhatABeautifulSpecimenThatWasText
 	checkevent EVENT_KIMONO_CABIN_4_GAVE_BUB_BALL
 	iftrue_jumpopenedtext GoCatchThatLaprasText
 	appear KIMONO_CABIN_4_LAPRAS
 	writetext LaprasIsHereText
-	verbosegiveitem BUB_BALL, 5
+	verbosegiveitem BUB_BALL, 1
 	writetext Kimono4OddSouvenirText
 	verbosegiveitem ODD_SOUVENIR
 	setevent EVENT_KIMONO_CABIN_4_GAVE_BUB_BALL
@@ -167,7 +167,7 @@ ExplainSudokuText:
 	para "Each column, row"
 	line "and 2x2 plot "
 	cont "needs one stone"
-	cont "of each color."	
+	cont "of each color."
 	done
 
 SudokuNotSolvedText:

@@ -21,6 +21,7 @@ KimonoCabin2_MapScriptHeader: ; should be like  "BurnedTowerB1F_MapScriptHeader"
 	def_object_events
 	object_event  9, 11, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN,  OBJECTTYPE_SCRIPT, 0, KimonoCabin2RepelScript, EVENT_KIMONO_CABIN_2_REPEL_CHECK
 	object_event  1, 13, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN,  OBJECTTYPE_SCRIPT, 0, KimonoCabin2EndScript, -1
+	object_event  0, 12, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, LARVITAR, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_KIMONO_CABIN_LARVITAR
 
 	itemball_event 13, 1, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_1
 	itemball_event 13, 5, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_3
@@ -45,15 +46,11 @@ KimonoCabin2_MapScriptHeader: ; should be like  "BurnedTowerB1F_MapScriptHeader"
 	itemball_event  3, 4, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_9
 
 
-;	itemball_event  0, 3, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_11
-;	itemball_event  0, 5, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_13
-;	itemball_event  0, 7, POMEG_BERRY, 1, EVENT_KIMONO_CABIN_POMEG_14
-
-
 
 	object_const_def
 	const KIMONO_CABIN_2_KIMONO_GIRL
-
+	const KIMONO_CABIN_2_KIMONO_GIRL_2
+	const KIMONO_CABIN_2_LARVITAR
 
 KimonoCabin2RepelScript:
 	faceplayer
@@ -253,6 +250,7 @@ HedgeHogInteraction:
 	writetext HeresThatOrneryHedgehog
 	verbosegiveitem GEODE, 5
 	earthquake 30
+	appear KIMONO_CABIN_2_LARVITAR
 	showemote EMOTE_SHOCK, PLAYER, 20
 	pause 30
 	loadwildmon LARVITAR, 15
@@ -263,6 +261,8 @@ HedgeHogInteraction:
 	writetext Kimono2GladThatsOverText
 	writetext Kimono2TakeThisAsThanks
 	verbosegiveitem CHOICE_SCARF
+	writetext Kimono2TakeThisAsThanks2
+	verbosegiveitem SUN_STONE
 	closetext
 	end
 
@@ -297,4 +297,10 @@ Kimono2TakeThisAsThanks:
 	para "I knit it myself,"
 	line "as I had cellar"
 	cont "duty before Vera."
+	done
+
+Kimono2TakeThisAsThanks2:
+	text "Oh, hey, it dug"
+	line "up this weird"
+	cont "stone. Want it?"
 	done

@@ -18,7 +18,9 @@ TranquilTarn_MapScriptHeader:
 
 
 	def_object_events
+	; bird keeper hank, ruin maniac jones, RUIN MANIAC LELAND, bug catcher rob, 
 	fruittree_event 17, 26, FRUITTREE_TRANQIL_TARN_1, TOUGH_LEAVES, PAL_NPC_GREEN;OK
 	fruittree_event 36,  5, FRUITTREE_TRANQIL_TARN_2, RADIANT_OPAL, PAL_NPC_RED;OK
+	tmhmball_event 27, 17, TM_AVALANCE, EVENT_TM_AVALANCHE
 
 	object_const_def

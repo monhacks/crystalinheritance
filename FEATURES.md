@@ -7,11 +7,9 @@ Many of these changes were made to Polished Crystal 3.0.0.
 * The entire Pokédex can be caught in one game. 
 * See FAQ for unique evolutions. 
 
-
 ## Moves
 
-* Learnsets have been updated close to Gen VI, with missing moves replaced by similar, egg, TM, or event-exclusive moves.
-
+* Learnsets have been updated close to Gen VI, with missing moves replaced by similar, egg, TM, or event-exclusive moves. See data/pokemon/evos_attacks or data/pokemon/base_stats/<name> for level-up and TMHM learnsets.
 
 ## Battle Mechanics
 
@@ -94,7 +92,7 @@ Many of these changes were made to Polished Crystal 3.0.0.
 * New Pokéballs: Bub Ball, Herb Ball, Deci Ball, Jeze Ball, and Geode crafted from materials on the overworld.
 
 
-## Bug Fixes
+## Bug Fixes from Crystal Version (2000)
 
 * Dragon Fang boosts Dragon-type moves, not Dragon Scale.
 * Burn/Poison/Paralyze improve catch rate.
@@ -109,32 +107,30 @@ Many of these changes were made to Polished Crystal 3.0.0.
 * Default Set battle style.
 * Enemy AI doesn't fail an extra 25% of the time with sleep or poison-inducing moves, or 40% of the time with stat drops.
 * No badge boosts to stats or types.
-* Improved some trainers' rosters, movesets, held items, and DVs (particularly Gym Leaders, the Elite Four, and other bosses).
 * AI improvements, such as not trying to paralyze Electric types or burn Fire types.
-
 
 ## Changes and Buffs
 
 ### Pokémon
 
 * Many base stat changes, mostly based on [Drayano's Sacred Gold/Storm Silver](https://gbatemp.net/threads/pok%C3%A9mon-sacred-gold-storm-silver.327567/).
-* Ninetales is Fire/Ghost.
-* Meganium is Grass/Fairy.
-* Feraligatr is Water/Dark.
-* Sunflora is Grass/Fire.
 * Octillery is Water/Fire. 
 * Electivire is Electric/Fighting.
 * Mismagius is Ghost/Fairy.
-* Lugia has Drizzle ability. 
+* Meganium is Grass/Fairy.
+* Ninetales is Fire/Psychic. (Inheritance exclusive)
+* Sunflora is Grass/Fire. (Inheritance exclusive)
+* Vileplume is Grass/Dark.  (Inheritance exclusive)
+* Lugia has Drizzle ability.  (Inheritance exclusive)
 
 ### Moves
 
-* Cut is Steel-type, and has 60 power and 100% accuracy.
+* Cut is Steel-type, 60 power, 100% accuracy.
 * Fly has 100% accuracy.
 * Strength is 90 power fighting-type. 
 * Rock Smash has 75 power.
 * Fire Spin has 90% accuracy. 
-* Whirlpool is Psychic-type Bulldoze and can be learned by Psychic, ghost, and fairy types. 
+* Whirlpool is Psychic-type Bulldoze and can be learned by most Water, Psychic, Ghost, and Fairy types. 
 * Hail boosts Defense of Ice-types by 50%.
 * Submission and Take Down have 90 power, 100% accuracy, and 15 PP to match Wild Charge.
 * Crabhammer and Octazooka have 95% accuracy.

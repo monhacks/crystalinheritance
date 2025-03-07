@@ -19,24 +19,20 @@ TimelessTapestry_MapScriptHeader:
 
 	def_object_events
 	object_event 8, 26, SPRITE_SAMSARA, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_TAPESTRY_SAMSARA ; 
-	object_event 7, 26, SPRITE_KURT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1
+	object_event 7, 26, SPRITE_AMOS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1
 	; plyaer at 9, 29 
 ; ADD THE CHARACTERS FROM THE CABIN 
 	object_event 10, 14, SPRITE_SCHOOLGIRL, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, TapestryVera, -1 ; VERA 
-	object_event 15, 15, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_COMMAND, jumptextfaceplayer, TapestryPiper, -1 ; PIPER, former beauty 
+	object_event 15, 15, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TapestryPiper, -1 ; PIPER, former beauty 
 	object_event 12, 22, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, TapestrySamaria, -1 ; SAMARIA
 	object_event 13, 22, SPRITE_VETERAN_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, TapestryShiji, -1
 	object_event 16, 15, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_COMMAND, jumptextfaceplayer, TapestryMorphea, -1
 	
-; SCHOOLGIRL BLUE 
-; ACE TRAINER GREEN 
-; BEAUTY BROWN 
-; VETERAN RED
-; GRANNY PURPLE 
+
 
 	object_const_def
 	const TAPESTRY_SAMSARA
-	const TAPESTRY_KURT
+	const TAPESTRY_AMOS
 
 TapestrySceneFinale: ; if you helped all the kimono girls then piper gets to come with too 
 	;cf western capital scene 
@@ -44,8 +40,7 @@ TapestrySceneFinale: ; if you helped all the kimono girls then piper gets to com
 	special Special_ReloadSpritesNoPalettes
 	special Special_FadeInQuickly
 	special HealParty
-	applyemote EMOTE_QUESTION, TAPESTRY_KURT, 10
-	showtext TapestryTextKurt
+	showtext TapestryTextAmos
 	pause 10
 	showemote EMOTE_HEART, TAPESTRY_SAMSARA, 10
 	showtext TapestryTextSamsara		
@@ -56,21 +51,43 @@ TapestrySceneFinale: ; if you helped all the kimono girls then piper gets to com
 	halloffame
 	end
 
-TapestryTextKurt:
-	text "Kurt: Samsara, "
-	line "what will you "
+TapestryTextAmos:
+	text "The other elders"
+	line "agree. We'll meet"
+	
+	para "every 20 years,"
+	line "and if there is"
+	
+	para "no more need for"
+	line "common defense,"
+	
+	para "dissolve our"
+	line "union."
+	
+	para "..."
+
+	para "What will you "
 	cont "inscribe here?"
 	done
 	
 TapestryTextSamsara:
-	text "Your stories. You"
-	line "showed no one"
-	cont "owns tomorrow,"
+	text "The events of the"
+	line "Burned Tower."
 	
-	para "that every gener-"
-	line "ation is just a"
-	cont "caretake for the"
-	cont "next one."
+	para "A time when we"
+	line "rejected the idea"
+	
+	para "that anyone could"
+	line "own tomorrow,"
+		
+	para "that each genera-"
+	line "tion is just a"
+	cont "caretaker."
+	
+	para "Johto should know"
+	line "about the ones"
+	para "who sacrificed it"
+	line "all for them."
 	done
 
 
@@ -80,9 +97,68 @@ TapestryVera:
 	done
 
 TapestryPiper:
+	checkevent EVENT_TAPESTRY_CELEBI
+	iftrue_jumptextfaceplayer PiperAfterText
+	faceplayer
+	opentext
+	writetext SummonCelebiText
+	yesorno
+	iffalse_jumptext NoCelebiText
+; from polished ilex forest 
+	waitbutton
+	closetext
+	pause 20
+	showemote EMOTE_SHOCK, PLAYER, 20
+	special Special_FadeOutMusic
+	turnobject PLAYER, DOWN
+	pause 20
+	special Special_CelebiShrineEvent
+	loadwildmon CELEBI, 30
+	startbattle
+	reloadmapafterbattle
+	pause 20
+	setevent EVENT_TAPESTRY_CELEBI
+	special CheckCaughtCelebi
+	iffalse_jumptext PiperNoCatchCelebiText
+	showtext PiperCaughtCelebiText
+	end
+
+SummonCelebiText:
+	text "Piper: My great-"
+	line "grandma taught me"
+	cont "how to summon"
+	
+	para "Celebi. Amos told"
+	line "me you are a very"
+	cont "strong trainer-"
+	
+	para "Shall we summon"
+	line "Celebi?"
+	done
+
+PiperNoCatchCelebiText:
+	text "Oh, you didn't"
+	line "catch it."
+	
+	para "Don't worry-"
+	line "we still believe"
+	cont "in all of you!"
+	done
+
+NoCelebiText:
+	text "Oh, I understand."
+	done
+
+PiperCaughtCelebiText:
+	text "Oh! You did catch"
+	line "Celebi! I knew"
+	cont "you could."
+	done
+	
+PiperAfterText:
 	text "Piper: These Kim-"
-	line "onos... Their em-"
-	cont "broidery tells a"
+	line "onos... Their "
+	cont "threads tell a"
 	cont "story."
 
 	para "I'm ready for the"

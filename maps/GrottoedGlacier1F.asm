@@ -18,7 +18,8 @@ GrottoedGlacier1F_MapScriptHeader:
 
 
 	def_object_events
-;trainer at 12, 2
+;trainer at 12, 2, MEDIUM GRACE AND SAGE URI
+; medium grace AT 
 
 
 	object_const_def

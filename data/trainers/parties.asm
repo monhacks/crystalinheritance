@@ -1157,144 +1157,133 @@ NinjaGroup:
 
 	; NINJA
 	db "Shadow@"
-	db TRAINERTYPE_NICKNAME
+	db TRAINERTYPE_NORMAL
 	; party
-	db 5, CHIKORITA, "Chicory@"
+	db 40, DUSCLOPS
+	db 45, DUSKNOIR
 	db -1 ; end
+
 
 ; ================
 
 	; LYRA1
 	db "Mist@"
-	db TRAINERTYPE_NICKNAME
+	db TRAINERTYPE_NORMAL
 	; party
-	db 5, CYNDAQUIL, "Cinder@"
+	db 40, QWILFISH
+	db 44, TENTACRUEL
+	db 45, OVERQWIL
 	db -1 ; end
+
 
 ; ================
 
 	; LYRA1
 	db "Twilight@"
-	db TRAINERTYPE_NICKNAME
+	db TRAINERTYPE_NORMAL
 	; party
-	db 5, TOTODILE, "Toto@"
+	db 45, WYRDEER
+	db 46, LUCARIO
 	db -1 ; end
+
 
 ; ================
 
 	; LYRA1
 	db "Shimmer@"
-	db TRAINERTYPE_ITEM | TRAINERTYPE_EVS | TRAINERTYPE_NICKNAME
+	db TRAINERTYPE_NORMAL
 	; party
-	db 16, PIDGEY, NO_ITEM, 36, "@"
-	db 17, MARILL, NO_ITEM, 36, "@"
-	db 15, FLAAFFY, NO_ITEM, 36, "@"
-	db 18, BAYLEEF, ORAN_BERRY, 36, "Chicory@"
+	db 40, DRAPION
+	db 45, SNEASLER
+	db 43, SKUNTANK
 	db -1 ; end
+
 
 ; ================
 
 	; LYRA1
 	db "Echo@"
-	db TRAINERTYPE_ITEM | TRAINERTYPE_EVS | TRAINERTYPE_NICKNAME
+	db TRAINERTYPE_NORMAL
 	; party
-	db 16, PIDGEY, NO_ITEM, 36, "@"
-	db 17, SUNFLORA, NO_ITEM, 36, "@"
-	db 15, FLAAFFY, NO_ITEM, 36, "@"
-	db 18, QUILAVA, ORAN_BERRY, 36, "Cinder@"
+	db 44, TOXICROAK
+	db 47, UMBREON
 	db -1 ; end
+
 
 ; ================
 
 	; LYRA1
 	db "Dusk@"
-	db TRAINERTYPE_ITEM | TRAINERTYPE_EVS | TRAINERTYPE_NICKNAME
+	db TRAINERTYPE_NORMAL
 	; party
-	db 16, PIDGEY, NO_ITEM, 36, "@"
-	db 17, GROWLITHE, NO_ITEM, 36, "@"
-	db 15, FLAAFFY, NO_ITEM, 36, "@"
-	db 18, CROCONAW, ORAN_BERRY, 36, "Toto@"
+	db 40, GLOOM
+	db 42, ROSERADE
+	db 46, VILEPLUME
 	db -1 ; end
+
 
 ; ================
 
 	; LYRA1
 	db "Veil@"
-	db TRAINERTYPE_ITEM | TRAINERTYPE_EVS | TRAINERTYPE_NICKNAME
+	db TRAINERTYPE_NORMAL
 	; party
-	db 33, PIDGEOTTO, NO_ITEM, 100, "@"
-	db 34, GROWLITHE, NO_ITEM, 100, "@"
-	db 34, AZUMARILL, NO_ITEM, 100, "@"
-	db 32, FLAAFFY, NO_ITEM, 100, "@"
-	db 37, BAYLEEF, ORAN_BERRY, 100, "Chicory@"
+	db 48, MISMAGIUS
 	db -1 ; end
 
 ; ================
 
 	; LYRA1
 	db "Shade@"
-	db TRAINERTYPE_ITEM | TRAINERTYPE_EVS | TRAINERTYPE_NICKNAME
+	db TRAINERTYPE_NORMAL
 	; party
-	db 33, PIDGEOTTO, NO_ITEM, 100, "@"
-	db 34, SUNFLORA, NO_ITEM, 100, "@"
-	db 34, AZUMARILL, NO_ITEM, 100, "@"
-	db 32, FLAAFFY, NO_ITEM, 100, "@"
-	db 37, QUILAVA, ORAN_BERRY, 100, "Cinder@"
+	db 40, MISDREAVUS
+	db 42, XATU
+	db 46, ARIADOS
 	db -1 ; end
 
 ; ================
 
 	; LYRA1
 	db "Haze@"
-	db TRAINERTYPE_ITEM | TRAINERTYPE_EVS | TRAINERTYPE_NICKNAME
+	db TRAINERTYPE_NORMAL
 	; party
-	db 33, PIDGEOTTO, NO_ITEM, 100, "@"
-	db 34, SUNFLORA, NO_ITEM, 100, "@"
-	db 34, GROWLITHE, NO_ITEM, 100, "@"
-	db 32, FLAAFFY, NO_ITEM, 100, "@"
-	db 37, CROCONAW, ORAN_BERRY, 100, "Toto@"
+	db 40, HAUNTER
+	db 44, ESPEON
+	db 44, GENGAR
 	db -1 ; end
 
 ; ================
 
 	; LYRA1
 	db "Wraith@"
-	db TRAINERTYPE_ITEM | TRAINERTYPE_EVS | TRAINERTYPE_NICKNAME
+	db TRAINERTYPE_NORMAL
 	; party
-	db 44, PIDGEOT, NO_ITEM, 132, "@"
-	db 43, GIRAFARIG, NO_ITEM, 132, "@"
-	db 45, ARCANINE, NO_ITEM, 132, "@"
-	db 45, AZUMARILL, NO_ITEM, 132, "@"
-	db 46, AMPHAROS, NO_ITEM, 132, "@"
-	db 47, MEGANIUM, SITRUS_BERRY, 132, "Chicory@"
+	db 40, MUK
+	db 42, JYNX
+	db 46, VILEPLUME
 	db -1 ; end
 
 ; ================
 
 	; LYRA1
 	db "Vapor@"
-	db TRAINERTYPE_ITEM | TRAINERTYPE_EVS | TRAINERTYPE_NICKNAME
+	db TRAINERTYPE_NORMAL
 	; party
-	db 44, PIDGEOT, NO_ITEM, 132, "@"
-	db 43, GIRAFARIG, NO_ITEM, 132, "@"
-	db 45, SUNFLORA, NO_ITEM, 132, "@"
-	db 45, AZUMARILL, NO_ITEM, 132, "@"
-	db 46, AMPHAROS, NO_ITEM, 132, "@"
-	db 47, TYPHLOSION, SITRUS_BERRY, 132, "Cinder@"
+	db 40, GOLBAT
+	db 47, VENOMOTH
+	db 47, CROBAT
 	db -1 ; end
 
 ; ================
 
 	; LYRA1
 	db "Mirage@"
-	db TRAINERTYPE_ITEM | TRAINERTYPE_EVS | TRAINERTYPE_NICKNAME
+	db TRAINERTYPE_NORMAL
 	; party
-	db 44, PIDGEOT, NO_ITEM, 132, "@"
-	db 43, GIRAFARIG, NO_ITEM, 132, "@"
-	db 45, SUNFLORA, NO_ITEM, 132, "@"
-	db 45, ARCANINE, NO_ITEM, 132, "@"
-	db 46, AMPHAROS, NO_ITEM, 132, "@"
-	db 47, FERALIGATR, SITRUS_BERRY, 132, "Toto@"
+	db 45, MUK
+	db 45, WEEZING
+	db 45, JYNX
 	db -1 ; end
 
 ; ================
@@ -1689,23 +1678,23 @@ CamperGroup:
 
 ; ================
 
-	; CAMPER
+	; CAMPER ; ROUTE 42 
 	db "Dean@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 54, CROCONAW
-	db 52, DUGTRIO
+	db 33, GRAVELER
+	db 36, DUGTRIO
 	db -1 ; end
 
 ; ================
 
-	; CAMPER
+	; CAMPER; ROUTE 42 
 	db "Sid@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 53, DUGTRIO
-	db 51, PRIMEAPE
-	db 51, POLIWRATH
+	db 35, NIDORINO
+	db 35, RHYDON
+	db 35, QUILAVA
 	db -1 ; end
 
 ; ================
@@ -2415,21 +2404,20 @@ FisherGroup:
 ; ================
 
 	; FISHER
-	db "Arnold@"
+	db "Arnold@"  ; route 42 
 	db TRAINERTYPE_NORMAL
 	; party
-	db 62, CLOYSTER
+	db 40, CROCONAW
 	db -1 ; end
 
 ; ================
 
-	; FISHER
+	; FISHER ; route 42 
 	db "Kyle@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 57, POLIWHIRL
-	db 54, QWILFISH
-	db 57, GYARADOS
+	db 38, LANTURN
+	db 40, OCTILLERY
 	db -1 ; end
 
 ; ================
@@ -2765,22 +2753,22 @@ BirdKeeperGroup:
 
 ; ================
 
-	; BIRD_KEEPER
+	; BIRD_KEEPER ; tranquil tarn 1
 	db "Hank@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 13, PIDGEY
-	db 56, PIDGEOT
+	db 42, STARAVIA
+	db 44, STARAPTOR
 	db -1 ; end
 
 ; ================
 
-	; BIRD_KEEPER
+	; BIRD_KEEPER ; TARN 
 	db "Roy@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 55, PIDGEOTTO
-	db 59, PIDGEOT
+	db 42, H__BRAVIARY
+	db 44, EMPOLEON
 	db -1 ; end
 
 ; ================
@@ -3966,13 +3954,12 @@ OfficerFGroup:
 ; ================================
 ; ================
 
-	; OFFICERF
+	; OFFICERF ; route 43
 	db "Jamie@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 54, GROWLITHE
-	db 58, ARCANINE
-	db 57, POLIWRATH
+	db 37, ARCANINE
+	db 41, POLIWRATH
 	db -1 ; end
 
 ; ================
@@ -4019,11 +4006,11 @@ PokemaniacGroup:
 ; ================================
 ; ================
 
-	; POKEMANIAC
+	; POKEMANIAC ; brent1, route 43
 	db "Brent@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 32, DUGTRIO
+	db 43, SUDOWOODO
 	db -1 ; end
 
 ; ================
@@ -4057,40 +4044,44 @@ PokemaniacGroup:
 
 ; ================
 
-	; POKEMANIAC
+	; POKEMANIAC ;  route 43
 	db "Larry@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 11, SLOWPOKE
+	db 42, DUNSPARCE
+	db 40, PINSIR	
 	db -1 ; end
 
 ; ================
 
-	; POKEMANIAC
+	; POKEMANIAC route 43
 	db "Andrew@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 24, DUGTRIO
-	db 24, DUGTRIO
+	db 37, YANMEGA
+	db 39, URSARING
 	db -1 ; end
 
 ; ================
 
-	; POKEMANIAC
+	; POKEMANIAC ; lake of rage 
 	db "Calvin@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 26, KANGASKHAN
+	db 37, KANGASKHAN
+	db 40, SNORLAX
+	db 43, URSARING
 	db -1 ; end
 
 ; ================
 
 	; POKEMANIAC
-	db "Shane@"
+	db "Shane@" ; lake of rage 
 	db TRAINERTYPE_NORMAL
 	; party
-	db 20, NIDORINA
-	db 20, NIDORINO
+	db 42, NIDOKING
+	db 43, NIDOQUEEN
+	db 40, FORRETRESS
 	db -1 ; end
 
 ; ================
@@ -4872,12 +4863,12 @@ BugManiacGroup:
 
 ; ================
 
-	; BUG_MANIAC
+	; BUG_MANIAC ; TARN 
 	db "Rob@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 60, BEEDRILL
-	db 59, BUTTERFREE
+	db 40, VESPIQUEN
+	db 42, DRAPION
 	db -1 ; end
 
 ; ================
@@ -5013,22 +5004,22 @@ RuinManiacGroup:
 ; ================================
 ; ================
 
-	; RUIN_MANIAC
+	; RUIN_MANIAC ; becomes dragon tamer 
 	db "Jones@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 6, CORSOLA
-	db 6, CORSOLA
+	db 36, BRONZOR
+	db 44, BRONZONG
 	db -1 ; end
 
 ; ================
 
-	; RUIN_MANIAC
+	; RUIN_MANIAC ; becomes dragon tamer 
 	db "Leland@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 23, DUNSPARCE
-	db 25, DRAGONAIR
+	db 36, TORTERRA
+	db 40, HIPPOWDON
 	db -1 ; end
 
 ; ================
@@ -5743,25 +5734,7 @@ PsychicGroup:
 	db 53, GIRAFARIG
 	db -1 ; end
 
-; ================
 
-	; PSYCHIC_T
-	db "Uri@"
-	db TRAINERTYPE_NICKNAME
-	; party
-	db 57, KADABRA, "Hocus@"
-	db 57, KADABRA, "Pocus@"
-	db -1 ; end
-
-; ================
-
-	; PSYCHIC_T
-	db "Virgil@"
-	db TRAINERTYPE_NORMAL
-	; party
-	db 34, NATU
-	db 36, XATU
-	db -1 ; end
 
 ; ================
 ; ================================
@@ -5835,37 +5808,7 @@ HexManiacGroup:
 	db 56, ALAKAZAM
 	db -1 ; end
 
-; ================
 
-	; HEX_MANIAC
-	db "Esther@"
-	db TRAINERTYPE_NORMAL
-	; party
-	db 62, MISMAGIUS
-	db 62, MISMAGIUS
-	db -1 ; end
-
-; ================
-
-	; HEX_MANIAC
-	db "Matilda@"
-	db TRAINERTYPE_NORMAL
-	; party
-	db 23, ABRA
-	db 24, MISDREAVUS
-	db 25, KADABRA
-	db -1 ; end
-
-; ================
-
-	; HEX_MANIAC
-	db "Bethany@"
-	db TRAINERTYPE_NORMAL
-	; party
-	db 53, HAUNTER
-	db 55, GENGAR
-	db 54, MISDREAVUS
-	db -1 ; end
 
 ; ================
 ; ================================
@@ -5956,6 +5899,26 @@ SageGroup:
 	db -1 ; end
 
 ; ================
+; ================
+
+	; SAGE
+	db "Uri@"
+	db TRAINERTYPE_NORMAL
+	; party
+	db 43, ABOMASNOW
+	db 45, H__AVALUGG
+	db -1 ; end
+
+; ================
+
+	; SAGE
+	db "Virgil@"
+	db TRAINERTYPE_NORMAL
+	; party
+	db 44, H__BRAVIARY
+	db 47, GALLADE
+	db -1 ; end
+	
 ; ================================
 
 MediumGroup:
@@ -5973,11 +5936,11 @@ MediumGroup:
 ; ================
 
 	; MEDIUM
-	db "Grace@"
+	db "Grace@" ; grottoed glacier 1f
 	db TRAINERTYPE_NORMAL
 	; party
-	db 20, HAUNTER
-	db 20, MISDREAVUS
+	db 45, MISDREAVUS
+	db 45, DUSKNOIR
 	db -1 ; end
 
 ; ================
@@ -6001,6 +5964,38 @@ MediumGroup:
 	db -1 ; end
 
 ; ================
+; ================
+
+	; HEX_MANIAC
+	db "Esther@" ; grottoed glacier b1f
+	db TRAINERTYPE_NORMAL
+	; party
+	db 47, SNEASEL
+	db 46, MISMAGIUS
+	db 48, SNEASLER
+	db -1 ; end
+
+; ================
+
+	; HEX_MANIAC
+	db "Matilda@"
+	db TRAINERTYPE_NORMAL
+	; party
+	db 23, ABRA
+	db 24, MISDREAVUS
+	db 25, KADABRA
+	db -1 ; end
+
+; ================
+
+	; HEX_MANIAC
+	db "Bethany@"
+	db TRAINERTYPE_NORMAL
+	; party
+	db 53, HAUNTER
+	db 55, GENGAR
+	db 54, MISDREAVUS
+	db -1 ; end
 ; ================================
 
 KimonoGirl1Group:
@@ -7782,33 +7777,33 @@ ScientistGroup:
 
 ; ================
 
-	; SCIENTIST
+	; SCIENTIST ; LIGHTHOUSE 1F
 	db "Joseph@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 54, SNUBBULL
-	db 55, CROCONAW
-	db 53, KADABRA
+	db 36, VOLTORB
+	db 30, MAGNEMITE
+	db 33, MAGNETON
 	db -1 ; end
 
 ; ================
 
-	; SCIENTIST
+	; SCIENTIST ; LIGHTHOUSE 2F
 	db "Nigel@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 54, ELECTABUZZ
-	db 55, LANTURN
+	db 35, PORYGON
+	db 35, PORYGON2
 	db -1 ; end
 
 ; ================
 
-	; SCIENTIST
+	; SCIENTIST ; LIGHTHOUSE 3F
 	db "Piotr@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 54, CROCONAW
-	db 55, ALAKAZAM
+	db 38, DRIFBLIM
+	db 38, ELECTABUZZ
 	db -1 ; end
 
 ; ================
@@ -7832,34 +7827,32 @@ BoarderGroup:
 ; ================================
 ; ================
 
-	; BOARDER
+	; BOARDER ; pryce gym 
 	db "Ronald@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 33, SLOWPOKE
-	db 35, LAPRAS
-	db 33, SNEASEL
+	db 40, LAPRAS
+	db 40, SNEASEL
 	db -1 ; end
 
 ; ================
 
-	; BOARDER
+	; BOARDER ; pryce gym 
 	db "Brad@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 35, PILOSWINE
-	db 35, PILOSWINE
+	db 40, PILOSWINE
+	db 40, PILOSWINE
 	db -1 ; end
 
 ; ================
 
-	; BOARDER
+	; BOARDER ; pryce gym 
 	db "Douglas@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 33, CLOYSTER
-	db 35, CLOYSTER
-	db 33, CLOYSTER
+	db 39, ABOMASNOW
+	db 40, CLOYSTER
 	db -1 ; end
 
 ; ================
@@ -7910,19 +7903,19 @@ SkierGroup:
 ; ================
 
 	; SKIER
-	db "Roxanne@"
+	db "Roxanne@" ; pryce 
 	db TRAINERTYPE_NORMAL
 	; party
-	db 36, JYNX
+	db 42, JYNX
 	db -1 ; end
 
 ; ================
 
 	; SKIER
-	db "Clarissa@"
+	db "Clarissa@" ; pryce 
 	db TRAINERTYPE_NORMAL
 	; party
-	db 36, PILOSWINE
+	db 44, PILOSWINE
 	db -1 ; end
 
 ; ================
@@ -7972,7 +7965,7 @@ BlackbeltGroup:
 	db "Yoshi@"
 	db TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
 	; party
-	db 37, HITMONLEE, "Bruce@"
+	db 34, HITMONLEE, "Bruce@"
 		db DOUBLE_KICK, BULK_UP, HI_JUMP_KICK, FOCUS_ENERGY
 	db -1 ; end
 
@@ -7982,7 +7975,7 @@ BlackbeltGroup:
 	db "Lao@"
 	db TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
 	; party
-	db 37, HITMONCHAN, "Jackie@"
+	db 34, HITMONCHAN, "Jackie@"
 		db AERIAL_ACE, THUNDERPUNCH, ICE_PUNCH, FIRE_PUNCH
 	db -1 ; end
 
@@ -7992,9 +7985,9 @@ BlackbeltGroup:
 	db "Nob@"
 	db TRAINERTYPE_MOVES
 	; party
-	db 35, MACHOKE
+	db 32, MACHOKE
 		db LEER, FOCUS_ENERGY, KARATE_CHOP, SEISMIC_TOSS
-	db 38, MACHAMP
+	db 36, MACHAMP
 		db LEER, KARATE_CHOP, SEISMIC_TOSS, ROCK_SLIDE
 	db -1 ; end
 
@@ -8010,13 +8003,12 @@ BlackbeltGroup:
 
 ; ================
 
-	; BLACKBELT_T
+	; BLACKBELT_T ; lighthouse 1f 
 	db "Wai@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 46, MACHOKE
-	db 48, MACHOKE
-	db 50, MACHOKE
+	db 36, MACHOKE
+	db 36, PRIMEAPE
 	db -1 ; end
 
 ; ================
@@ -8099,24 +8091,21 @@ BattleGirlGroup:
 
 ; ================
 
-	; BATTLE_GIRL
+	; BATTLE_GIRL ; lighthouse 2f
 	db "Nozomi@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 36, MACHOKE
-	db 36, MACHOKE
-	db 37, HITMONTOP
+	db 36, POLIWRATH
+	db 36, HITMONTOP
 	db -1 ; end
 
 ; ================
 
-	; BATTLE_GIRL
+	; BATTLE_GIRL ; lighthouse 3f 
 	db "Ronda@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 37, HITMONCHAN
-	db 39, MACHAMP
-	db 38, URSARING
+	db 40, LUCARIO
 	db -1 ; end
 
 ; ================
@@ -8171,46 +8160,33 @@ DragonTamerGroup:
 
 ; ================
 
-	; DRAGON_TAMER
-	db "Adam@"
+	; DRAGON_TAMER ; former hisuian BIRD KEEPER HANK2
+	db "Hank@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 37, YANMA
-	db 38, SEADRA
-	db 39, DRATINI
+	db 44, STARAVIA
+	db 50, DRAGONAIR
 	db -1 ; end
 
 ; ================
 
-	; DRAGON_TAMER
-	db "Erick@"
-	db TRAINERTYPE_MOVES
+	; DRAGON_TAMER ; JONES2
+	db "Jones@"
+	db TRAINERTYPE_NORMAL
 	; party
-	db 39, DRAGONAIR
-		db THUNDER_WAVE, DRAGON_RAGE, AQUA_TAIL, BODY_SLAM
-	db 38, SEADRA
-		db SMOKESCREEN, AQUA_JET, WATER_PULSE, OUTRAGE
-if DEF(FAITHFUL)
-	db 40, DRAGONAIR
-		db WRAP, DRAGON_RAGE, AQUA_TAIL, DRAGON_PULSE
-else
-	db 40, YANMEGA
-		db DOUBLE_TEAM, DRAGON_RAGE, SLASH, DRAGON_PULSE
-endc
+	db 44, BRONZONG
+	db 50, H__SLIGGOO
 	db -1 ; end
+
 
 ; ================
 
 	; DRAGON_TAMER
-	db "Kazu@"
-	db TRAINERTYPE_MOVES
+	db "Leland@" ; LELAND2
+	db TRAINERTYPE_NORMAL
 	; party
-	db 40, DRAGONAIR
-		db THUNDER_WAVE, DRAGON_RAGE, AQUA_TAIL, FLAMETHROWER
-	db 40, DRAGONAIR
-		db THUNDER_WAVE, DRAGON_RAGE, AQUA_TAIL, THUNDERBOLT
-	db 40, DRAGONAIR
-		db THUNDER_WAVE, DRAGON_RAGE, AQUA_TAIL, ICE_BEAM
+	db 47, HIPPOWDON
+	db 47, GABITE
 	db -1 ; end
 
 ; ================
@@ -8245,7 +8221,7 @@ EngineerGroup:
 
 	; ENGINEER
 	db "Camden@"
-	db TRAINERTYPE_MOVES
+	db TRAINERTYPE_MOVES ; ILEX FOREXT 
 	; party
 	db 7, SCIZOR ;tried lv 10, way too hard
 		db CUT, LEER, AGILITY, FOCUS_ENERGY
@@ -8253,7 +8229,7 @@ EngineerGroup:
 
 ; ================
 
-	; ENGINEER
+	; ENGINEER ; LIGHTHOUSE 1F 
 	db "Bernie@"
 	db TRAINERTYPE_NORMAL
 	; party
@@ -8264,31 +8240,31 @@ EngineerGroup:
 
 ; ================
 
-	; ENGINEER
+	; ENGINEER; LIGHTHOUSE 1F 
 	db "Lang@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 55, ELECTRODE
-	db 55, ELECTRODE
+	db 30, MAGMAR
+	db 33, SKARMORY
 	db -1 ; end
 
 ; ================
 
-	; ENGINEER
+	; ENGINEER; LIGHTHOUSE 2F 
 	db "Hugo@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 54, MAGNETON
-	db 56, STEELIX
+	db 38, STEELIX
 	db -1 ; end
 
 ; ================
 
-	; ENGINEER
+	; ENGINEER; LIGHTHOUSE 3F 
 	db "Howard@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 57, MAGNEZONE
+	db 34, MAGMAR
+	db 37, KADABRA
 	db -1 ; end
 
 ; ================
@@ -8777,24 +8753,21 @@ AromaLadyGroup:
 
 ; ================
 
-	; AROMA_LADY
+	; AROMA_LADY ; route 42
 	db "Heather@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 18, CHIKORITA
-	db 18, FURRET
-	db 18, BAYLEEF
+	db 40, BAYLEEF
 	db -1 ; end
 
 ; ================
 
-	; AROMA_LADY
+	; AROMA_LADY ; route 42 
 	db "Holly@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 18, JIGGLYPUFF
-	db 18, CLEFAIRY
-	db 18, MEOWTH
+	db 36, SUNFLORA
+	db 38, BELLOSSOM
 	db -1 ; end
 
 ; ================
@@ -8802,7 +8775,6 @@ AromaLadyGroup:
 	; AROMA_LADY
 	db "Peony@"
 	db TRAINERTYPE_NORMAL
-
 	; PARTY
 	db 50, CHIKORITA
 	db -1 ; end
@@ -8826,30 +8798,35 @@ SightseerMGroup:
 ; ================================
 ; ================
 
-	; SIGHTSEERM
+	; SIGHTSEERM ; route 43 
 	db "Jaska@"
 	db TRAINERTYPE_NORMAL
-
-	; TODO: party
-	db 50, CHIKORITA
+	; party
+	db 40, MONFERNO
+	db 40, GROTLE
+	db 40, FURRET
 	db -1 ; end
 
 ; ================
 
-	; SIGHTSEERM
+	; SIGHTSEERM ; LAKE OF RAGE 
 	db "Blaise@"
-	db TRAINERTYPE_PERSONALITY | TRAINERTYPE_NICKNAME
-
+	db TRAINERTYPE_NORMAL
 	; TODO: party
-	db 50, CHIKORITA, ABILITY_1 | NAT_NEUTRAL, MALE, "CHIKORITA@"
+	db 40, LUXIO
+	db 42, LUXRAY
+	db 44, ROTOM
 	db -1 ; end
 
 ; ================
 
-	; SIGHTSEERM
+	; SIGHTSEERM ; LAKE OF RAGE 
 	db "Gareth@"
 	db TRAINERTYPE_NORMAL
-	db 50, CHIKORITA
+	; party
+	db 40, SKUNTANK
+	db 43, GALLADE
+	db 42, STARAVIA
 	db -1 ; end
 
 ; ================
@@ -8875,32 +8852,34 @@ SightseerFGroup:
 ; ================================
 ; ================
 
-	; SIGHTSEERF
+	; SIGHTSEERF ; ROUTE 43 
 	db "Rosie@"
 	db TRAINERTYPE_NORMAL
-
-	; TODO: party
-	db 50, CHIKORITA
+	; PARTY 
+	db 40, PRINPLUP
+	db 40, LOPUNNY
 	db -1 ; end
 
 ; ================
 
-	; SIGHTSEERF
+	; SIGHTSEERF ; Lake of rage
 	db "Kamila@"
 	db TRAINERTYPE_NORMAL
-
-	; TODO: party
-	db 50, CHIKORITA
+	; party
+	db 40, SNOVER
+	db 42, ABOMASNOW
+	db 44, RAPIDASH
 	db -1 ; end
 
 ; ================
 
-	; SIGHTSEERF
+	; SIGHTSEERF; Lake of rage
 	db "Noelle@"
 	db TRAINERTYPE_NORMAL
-
-	; TODO: party
-	db 50, CHIKORITA
+	; party
+	db 40, KIRLIA
+	db 42, GARDEVOIR
+	db 44, FROSLASS
 	db -1 ; end
 
 ; ================
@@ -10703,7 +10682,7 @@ KannaGroup:
 	; party
 	db 44, ABOMASNOW, CHOICE_SCARF, "Sarakka@" ; CONTROL WEATHER
 		db BLIZZARD, PETAL_DANCE, EARTHQUAKE, NO_MOVE
-	db 46, H__SNEASLER, RAZOR_CLAW,  "Lieabolmai@"  hunt
+	db 46, SNEASLER, RAZOR_CLAW,  "Lieabolmai@"  hunt
 		db POISON_JAB, NIGHT_SLASH, SLASH, QUICK_ATTACK
 	db 42, H__AVALUGG, FOCUS_BAND, "Sieidi@";mountain home 
 		db ROCK_SLIDE, EARTHQUAKE, AVALANCHE, MIRROR_COAT

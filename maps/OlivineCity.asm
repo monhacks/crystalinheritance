@@ -41,8 +41,14 @@ OlivineCity_MapScriptHeader:
 	smashrock_event 52, 23
 	smashrock_event 55, 26
     object_event 19, 20, SPRITE_POKEFAN_F, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OlivineCityPnkApricornScript, -1
-	object_event 00, 00, SPRITE_PHARMACIST, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineCityRefugeeText, -1
-
+	object_event 18, 17, SPRITE_PHARMACIST, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineCityRefugeeText, -1
+;roadblocks, their text is in route 40 
+	object_event -1, 19, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText, EVENT_BEAT_CHUCK ; redo text and heal you 
+	object_event -1, 18, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText, EVENT_BEAT_CHUCK ; redo text and heal you 
+	object_event 19, 0, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText, EVENT_BEAT_CHUCK ; redo text and heal you 
+	object_event 20, 0, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText, EVENT_BEAT_CHUCK ; redo text and heal you 
+	tmhmball_event 8, 3, TM_VOLT_SWITCH, EVENT_TM_VOLT_SWITCH
+	
 
 	object_const_def
 

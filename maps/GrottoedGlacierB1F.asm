@@ -21,6 +21,7 @@ GrottoedGlacierB1F_MapScriptHeader:
 
 
 	def_object_events
+	; MEDIUM ESTHER AND SAGE VIRGIL 
 	strengthboulder_event 3, 7, ; event
 	strengthboulder_event 11, 12, ; event
 
