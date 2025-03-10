@@ -951,10 +951,8 @@ KRIS EQU __trainer_class__
 	const LENIE
 
 	trainerclass SIGHTSEERS ; 64
-	const LIANDSU1
-	const LIANDSU2
-	const CYANDVI1
-	const CYANDVI2
+
+
 
 	trainerclass COOLTRAINERM ; 65
 	const GAVEN1

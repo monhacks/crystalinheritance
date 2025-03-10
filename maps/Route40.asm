@@ -9,29 +9,29 @@ Route40_MapScriptHeader:
 
 	def_bg_events
 	bg_event 14, 10, BGEVENT_JUMPTEXT, Route40SignText ; fix sign 
-	bg_event  7,  8, BGEVENT_ITEM + HYPER_POTION, EVENT_ROUTE_40_HIDDEN_HYPER_POTION
+	bg_event  8,  2, BGEVENT_ITEM + HYPER_POTION, EVENT_ROUTE_40_HIDDEN_HYPER_POTION
 
 	def_object_events
 	; npc who gives you razor claw for defeating them all 
-	object_event 0, 0, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_COMMAND, 0, RazorScavengerScript, -1
+	object_event 11, 16, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_COMMAND, 0, RazorScavengerScript, -1
 ;monica
-	object_event  8, 10, SPRITE_POKEFAN_F, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, MonicaScript, -1
+	object_event  10,  3, SPRITE_POKEFAN_F, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, MonicaScript, -1
 	smashrock_event  7, 11
 	smashrock_event  6, 9
 	smashrock_event  7, 8
 ; double edge 
-	object_event 16, 27, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route40FisherScript, -1
+	object_event 15, 27, SPRITE_SAILOR, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route40FisherScript, -1
 ;scavengers
 	object_event 13, 16, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerSwimmermHarold -1
 	object_event 18, 33, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 5, GenericTrainerSwimmermSimon, -1
 	object_event  3, 19, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerSwimmermRandall, -1
 	object_event  9, 25, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_SPINCLOCKWISE, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerSwimmermCharlie, -1
 ; beach NPCs
-	object_event 11, 13, SPRITE_CUTE_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route40Lass1Text, -1 ; redo text and heal you 
-	object_event 13,  4, SPRITE_PICNICKER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route40Lass2Text, -1 ; redo text 
+	object_event 12, 10, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route40MatronScript, -1 ; redo text and heal you 
+	object_event 13,  4, SPRITE_BEAUTY, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route40Lass2Text, -1 ; redo text 
 ; roadblock NPCs, quarantine the city while they look for who took the part 
-	object_event 0, 0, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText, EVENT_BEAT_CHUCK ; redo text and heal you 
-	object_event 0, 0, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText, EVENT_BEAT_CHUCK ; redo text and heal you 
+	object_event 19, 2, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText, EVENT_BEAT_CHUCK ; redo text and heal you 
+	object_event 19, 3, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText, EVENT_BEAT_CHUCK ; redo text and heal you 
 
 
 	object_const_def
@@ -42,7 +42,7 @@ OlivineOfficerText:
 	line "strict lockdown."
 	
 	para "We need to catch"
-	line "a crook who took"
+	line "a thief who took"
 	para "a part from the"
 	line "desal plant."
 	done
@@ -234,7 +234,7 @@ Text_DoubleEdgeIntro:
 
 	para "But now, complex"
 	line "new models demand"
-	cont "specialized hands."
+	cont "specialization."
 
 	para "Ah, speaking of"
 	line "double-edged..."
@@ -257,8 +257,7 @@ Text_Route40TutorNoSilverLeaf:
 Text_Route40TutorQuestion:
 	text "Should I teach"
 	line "your #mon"
-	cont "Double Edge?""
-	
+	cont "Double Edge?"
 	done
 
 Text_Route40TutorRefused:
@@ -276,110 +275,108 @@ Text_Route40TutorTaught:
 	line "yourself."
 	done
 
-GenericTrainerSwimmerfElaine:
-	generictrainer SWIMMERF, ELAINE, EVENT_BEAT_SWIMMERF_ELAINE, SwimmerfElaineSeenText, SwimmerfElaineBeatenText
-
-	text "I'd say I'm a bet-"
-	line "ter swimmer than"
-	cont "you. Yeah!"
-	done
-
-GenericTrainerSwimmerfPaula:
-	generictrainer SWIMMERF, PAULA, EVENT_BEAT_SWIMMERF_PAULA, SwimmerfPaulaSeenText, SwimmerfPaulaBeatenText
-
-	text "While I float like"
-	line "this, the waves"
-	cont "carry me along."
-	done
-
-GenericTrainerSwimmermSimon:
-	generictrainer SWIMMERM, SIMON, EVENT_BEAT_SWIMMERM_SIMON, SwimmermSimonSeenText, SwimmermSimonBeatenText
-
-	text "Cianwood City is"
-	line "a good distance"
-	cont "away from here."
-	done
-
-GenericTrainerSwimmermRandall:
-	generictrainer SWIMMERM, RANDALL, EVENT_BEAT_SWIMMERM_RANDALL, SwimmermRandallSeenText, SwimmermRandallBeatenText
-
-	text "Swimming exercises"
-	line "your entire body."
-	cont "It's healthy."
-	done
-
-SwimmermSimonSeenText:
-	text "You have to warm"
-	line "up before going"
-	cont "into the water."
-
-	para "That's basic."
-	done
-
-SwimmermSimonBeatenText:
-	text "OK! Uncle! I give!"
-	done
-
-SwimmermRandallSeenText:
-	text "Hey, you're young"
-	line "and fit!"
-
-	para "Don't ride your"
-	line "#mon! Swim!"
-	done
-
-SwimmermRandallBeatenText:
-	text "Uh-oh. I lost…"
-	done
-
-SwimmerfElaineSeenText:
-	text "Are you going to"
-	line "Cianwood?"
-
-	para "How about a quick"
-	line "battle first?"
-	done
-
-SwimmerfElaineBeatenText:
-	text "I lost that one!"
-	done
-
-SwimmerfPaulaSeenText:
-	text "No inner tube for"
-	line "me."
-
-	para "I'm hanging on to"
-	line "a sea #mon!"
-	done
-
-SwimmerfPaulaBeatenText:
-	text "Ooh, I'm feeling"
-	line "dizzy!"
-	done
-
-Route40Lass1Text:
-	text "Although you can't"
-	line "see it from here,"
-
-	para "Cianwood is across"
-	line "the sea."
-	done
-
-Route40Lass2Text:
-	text "I came to Olivine"
-	line "by ship to see the"
-
-	para "sights and soak up"
-	line "the atmosphere."
-
-	para "Being a port, it"
-	line "feels so different"
-	cont "from a big city."
-	done
 
 Route40SignText:
 	text "Route 40"
-
-	para "Cianwood City -"
-	line "Olivine City"
+	
+	para "Danger: high"
+	line "salt content"
 	done
+
+Route40MatronScript:
+	faceplayer
+	opentext
+	writetext Route40WantToHeal
+	waitbutton
+	playmusic MUSIC_HEAL
+	special HealParty
+	special SaveMusic	
+	writetext Route40Healed
+	waitbutton
+	closetext
+	playmusic MUSIC_NONE	
+	special RestoreMusic
+	end
+
+Route40WantToHeal:
+	text "Have you been out"
+	line "swimming in the"
+	para "chop? Let me heal"
+	line "your #mon."
+	done
+
+Route40Healed:
+	text "All better!"
+	done
+
+Route40Lass2Text:
+	text "The output from"
+	line "the desal plant"
+	line "has changed the"
+	para "ocean chemistry."
+	line "Around here, you"
+	para "need a wetsuit to"
+	line "protect yourself."
+	done
+
+
+GenericTrainerSwimmermHarold:
+	generictrainer SWIMMER_M, HAROLD, EVENT_BEAT_SWIMMER_M_HAROLD, .SeenText1, .BeatenText1
+
+.BeatenText1:
+	text "Back to diving!"
+	done
+
+.SeenText1:
+	text "I love to battle"
+	line "on my surface"
+	cont "intervals!"
+	done
+
+
+GenericTrainerSwimmermSimon:
+	generictrainer SWIMMER_M, SIMON, EVENT_BEAT_SWIMMER_M_SIMON, .SeenText2, .BeatenText2
+
+.BeatenText2:
+	text "You should see it"
+	line "under there."
+	done
+
+.SeenText2:
+	text "There's a whole"
+	line "world under the"
+	cont "surface!"
+	done
+
+
+
+GenericTrainerSwimmermRandall:
+	generictrainer SWIMMER_M, RANDALL, EVENT_BEAT_SWIMMER_M_RANDALL, .SeenText3, .BeatenText3
+
+.BeatenText3:
+	text "Diving is hard"
+	line "work."
+	done
+
+.SeenText3:
+	text "Gasp... Gasp..."
+	line "I'm exhausted but"
+	cont "I'll battle!"
+	done
+
+
+
+GenericTrainerSwimmermCharlie:
+	generictrainer SWIMMER_M, CHARLIE, EVENT_BEAT_SWIMMER_M_CHARLIE, .SeenText4, .BeatenText4
+
+.BeatenText4:
+	text "You brought me"
+	line "down."
+	done
+
+.SeenText4:
+	text "I already found"
+	line "some nuggets in a"
+	cont "shipwreck!"
+	done
+
