@@ -10,272 +10,321 @@ Route41_MapScriptHeader:
 	warp_event 37, 45, WHIRL_ISLAND_SE, 1
 
 	def_coord_events
+	
 
 	def_bg_events
-	bg_event  9, 35, BGEVENT_ITEM + MAX_ETHER, EVENT_ROUTE_41_HIDDEN_MAX_ETHER
+	bg_event  24, 24, BGEVENT_ITEM + BIG_NUGGET, EVENT_ROUTE_41_HIDDEN_MAX_ETHER
+	bg_event 26, 42, BGEVENT_JUMPTEXT, Route41SignText ; fix sign 
+
 
 	def_object_events
-; scavengers doing a deep sea dive  
-	object_event 32,  6, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerSwimmermBerke, -1
-	object_event 46,  8, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerSwimmermKirk, -1
-	object_event 20, 26, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_SPINCOUNTERCLOCKWISE, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerSwimmermMathew, -1
-; gentleman out for a boat ride 
-	object_event 0, 0, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerGentlemanCamus, -1;;
-;beauties sunbathing on a bachelorette party 
-	object_event 0, 0, SPRITE_BEAUTY, SPRITEMOVEDATA_SPINCLOCKWISE, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBeautyOlivia, -1;;
-	object_event 0, 0, SPRITE_BEAUTY, SPRITEMOVEDATA_SPINCOUNTERCLOCKWISE, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBeautyCharlotte, -1;;
-	object_event 0, 0, SPRITE_BEAUTY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBeautyBridget, -1;;
-;scientists collecting data for Olivine 
-	object_event 0, 0, SPRITE_SCIENTIST, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerScientistBraydon, -1;;
-	object_event 0, 0, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerScientistCarl, -1;;
-	object_event 0, 0, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerScientistDexter, -1;;
 ;sage
-	object_event  0, 0, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route41SageScript, -1
+	object_event  41, 9, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route41SageScript, EVENT_ROUTE_41_SAGE_1
+	object_event  40, 9, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route41SageScript, EVENT_ROUTE_41_SAGE_2
+	object_event  35, 21, SPRITE_SAGE, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route41SageScript2, -1
+	object_event  36, 21, SPRITE_SAGE, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route41SageScript2, -1
+; scavengers doing a deep sea dive to look for stuff from cianwood, done 
+	object_event 37,  4, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerSwimmermKirk, -1
+	object_event 23, 20, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerSwimmermBerke, -1
+	object_event  8, 28, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerSwimmermMathew, -1
+; gentleman out for a boat ride , done
+	object_event 24, 8, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerGentlemanCamus, -1;;
+;beauties sunbathing on a bachelorette party , done
+	object_event 23, 29, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerBeautyOlivia, -1;;
+	object_event 24, 26, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBeautyCharlotte, -1;;
+	object_event 25, 29, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBeautyBridget, -1;;
+	object_event 22, 27, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route41MatronScript, -1
+;scientists collecting data for Olivine , done
+	object_event 27, 41 SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_RIGHT, 1, 1, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerScientistBraydon, EVENT_BEAT_CHUCK;;
+	object_event 24, 44, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerScientistCarl, EVENT_BEAT_CHUCK;;
+	object_event 23, 44, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerScientistDexter, EVENT_BEAT_CHUCK;;
 
-GenericTrainerSwimmerfKaylee:
-	generictrainer SWIMMERF, KAYLEE, EVENT_BEAT_SWIMMERF_KAYLEE, SwimmerfKayleeSeenText, SwimmerfKayleeBeatenText
+	object_const_def
+	const ROUTE41_SAGE_1
+	const ROUTE41_SAGE_2
 
-	text "There's supposed"
-	line "to be a big #-"
-	cont "mon deep beneath"
+Route41SignText:
+	text "Route 41"
+	line "OMLAS Weather"
+	cont "Station"
+	done
+
+Route41SageScript: ; TODO 
+	faceplayer
+	showtext Route41SageImpressedText ; sees the silver wing
+	turnobject ROUTE41_SAGE_1, RIGHT
+	turnobject ROUTE41_SAGE_1, LEFT
+	pause 15
+	turnobject ROUTE41_SAGE_1, UP
+	turnobject ROUTE41_SAGE_1, UP
+	showtext Route41SageText2
+	applyonemovement ROUTE41_SAGE_1, teleport_from
+	disappear ROUTE41_SAGE_1
+	applyonemovement ROUTE41_SAGE_2, teleport_from
+	disappear ROUTE41_SAGE_2
+	setevent EVENT_ROUTE_41_SAGE_1
+	setevent EVENT_ROUTE_41_SAGE_2
+	; teleports away
+	end
+
+Route41SageImpressedText:
+	text "Halt! Who approa-"
+	line "ches Lugia's"
+	cont "islands?"
+	
+	para "..."
+	
+	para "Is that... Is it"
+	line "a Silver Wing?"
+	done
+
+Route41SageText2:
+	text "We don't know how"
+	line "you got it - but"
+	para "clearly you honor"
+	line "Lugia enough to"
+	para "preserve one of"
+	line "her feathers."
+	
+	para "We will grant you"
+	line "passage to the"
 	cont "Whirl Islands."
-
-	para "I wonder what it"
-	line "could be?"
 	done
 
-GenericTrainerSwimmerfSusie:
-	generictrainer SWIMMERF, SUSIE, EVENT_BEAT_SWIMMERF_SUSIE, SwimmerfSusieSeenText, SwimmerfSusieBeatenText
+Route41SageScript2:
+	faceplayer
+	opentext
+	writetext Route41AskToTimeTravel ; TODO 
+	yesorno
+	iffalse_jumpopenedtext Route41NoTimeTravel ; TODO 
+	writetext Route41TimeTravel ; TODO 
+	waitbutton
+	closetext
+	playsound SFX_WARP_TO
+	showtext Route41WaitText
+	special FadeOutPalettes
+	waitsfx
+	warp SEAFLUX_NEXUS, 29, 7
+	end
 
-	text "Wasn't there a hit"
-	line "song about a boy"
-	cont "riding a Lapras?"
+Route41AskToTimeTravel:
+	text "Have you come to"
+	line "observe Lugia's"
+	para "AncientPower with"
+	line "us?"
 	done
 
-GenericTrainerSwimmerfDenise:
-	generictrainer SWIMMERF, DENISE, EVENT_BEAT_SWIMMERF_DENISE, SwimmerfDeniseSeenText, SwimmerfDeniseBeatenText
-
-	text "A sunburn is the"
-	line "worst for skin."
-
-	para "But I don't use a"
-	line "sunblock."
-
-	para "I won't pollute"
-	line "the water."
+Route41NoTimeTravel:
+	text "Oh? But I thought"
+	line "you wanted to"
+	cont "join us?"
 	done
 
-GenericTrainerSwimmerfKara:
-	generictrainer SWIMMERF, KARA, EVENT_BEAT_SWIMMERF_KARA, SwimmerfKaraSeenText, SwimmerfKaraBeatenText
-
-	text "I heard roars from"
-	line "deep inside the"
-	cont "Islands."
+Route41TimeTravel:
+	text "Swirling depths,"
+	line "Lugia's might"
+	para "Even pulls the"
+	line "Day into night."
+	
+	
+	para "From the deep"
+	line "she watches all,"
+	para "Until tides turn"
+	line "And empires fall."
 	done
-
-GenericTrainerSwimmerfWendy:
-	generictrainer SWIMMERF, WENDY, EVENT_BEAT_SWIMMERF_WENDY, SwimmerfWendySeenText, SwimmerfWendyBeatenText
-
-	text "The clusters of"
-	line "Staryu light up"
-	cont "at the same time."
-
-	para "It's so beautiful,"
-	line "it's scary."
-	done
-
-GenericTrainerSwimmermCharlie:
-	generictrainer SWIMMERM, CHARLIE, EVENT_BEAT_SWIMMERM_CHARLIE, SwimmermCharlieSeenText, SwimmermCharlieBeatenText
-
-	text "Isn't it relaxing"
-	line "just floating like"
-	cont "this?"
-	done
-
-GenericTrainerSwimmermGeorge:
-	generictrainer SWIMMERM, GEORGE, EVENT_BEAT_SWIMMERM_GEORGE, SwimmermGeorgeSeenText, SwimmermGeorgeBeatenText
-
-	text "It's so far to"
-	line "Cianwood."
-
-	para "But it's no easy"
-	line "return trip to"
-	cont "Olivine either."
-
-	para "What should I do?"
-	done
-
-GenericTrainerSwimmermBerke:
-	generictrainer SWIMMERM, BERKE, EVENT_BEAT_SWIMMERM_BERKE, SwimmermBerkeSeenText, SwimmermBerkeBeatenText
-
-	text "It was a dark and"
-	line "stormy night…"
-
-	para "I saw this giant"
-	line "#mon flying"
-	cont "from the islands."
-
-	para "It was scattering"
-	line "feathers from its"
-	cont "silver wings."
-	done
-
-GenericTrainerSwimmermKirk:
-	generictrainer SWIMMERM, KIRK, EVENT_BEAT_SWIMMERM_KIRK, SwimmermKirkSeenText, SwimmermKirkBeatenText
-
-	text "The currents keep"
-	line "me from reaching"
-	cont "that island."
+	
+Route41WaitText:
+	text "Whoa, what is"
+	line "happening to you?"
 	done
 
 GenericTrainerSwimmermMathew:
-	generictrainer SWIMMERM, MATHEW, EVENT_BEAT_SWIMMERM_MATHEW, SwimmermMathewSeenText, SwimmermMathewBeatenText
+	generictrainer SWIMMER_M, MATHEW, EVENT_BEAT_SWIMMERM_MATHEW, .SeenText10, .SeenText10
 
-	text "A secret about"
-	line "Whirl Islands…"
-
-	para "It's pitch-black"
-	line "inside!"
+.SeenText10:
+	text "OK: the secret."
+	line "What Chuck has at"
+	cont "the lighthouse?"
+	
+	para "..."
+	
+	para "It's a #mon"
+	line "that washed up in"
+	cont "the storm."
 	done
 
-GenericTrainerSwimmermLewis:
-	generictrainer SWIMMERM, LEWIS, EVENT_BEAT_SWIMMERM_LEWIS, SwimmermLewisSeenText, SwimmermLewisBeatenText
-
-	text "It takes knowledge"
-	line "and experience"
-
-	para "to not get lost"
-	line "in the water."
+.SeenText10:
+	text "If you beat me,"
+	line "I'll tell you a"
+	cont "secret!"
 	done
 
-SwimmermCharlieSeenText:
-	text "The water's warm"
-	line "here. I'm loose"
-	cont "and limber."
+GenericTrainerSwimmermKirk:
+	generictrainer SWIMMER_M, BERKE, EVENT_BEAT_SWIMMERM_BERKE, .SeenText9, .BeatenText9
 
-	para "Sure, I'll take"
-	line "you on!"
+.BeatenText9:
+	text "My metal detector"
+	line "is going crazy."
+	
+	para "Must be a big'n."
 	done
 
-SwimmermCharlieBeatenText:
-	text "Yikes! I've got"
-	line "prune skin!"
+.SeenText9:
+	text "That nugget is"
+	line "mine!"
 	done
 
-SwimmermGeorgeSeenText:
-	text "I'm a bit tired."
-	line "If I win, lend me"
-	cont "your #mon."
+GenericTrainerSwimmermKirk:
+	generictrainer SWIMMER_M, KIRK, EVENT_BEAT_SWIMMERM_KIRK, .SeenText8, .BeatenText8
+
+.BeatenText8:
+	text "Lots of stuff is"
+	line "still washing up"
+	cont "from Cianwood."
+	
+	para "Er, what used to"
+	line "be Cianwood."
 	done
 
-SwimmermGeorgeBeatenText:
-	text "Pant, pant…"
+.SeenText8:
+	text "Are you looking"
+	line "for buried items"
+	cont "too?"
 	done
 
-SwimmermBerkeSeenText:
-	text "See those islands"
-	line "that are blocked"
-	cont "by whirlpools?"
+GenericTrainerGentlemanCamus:
+	generictrainer GENTLEMAN, CAMUS, EVENT_BEAT_GENTLEMAN_CAMUS, .SeenText7, .BeatenText7
 
-	para "There just has to"
-	line "be a secret!"
+.BeatenText7:
+	text "I'm hoping to get"
+	line "all the way to"
+	cont "Cianwood."
+	
+	para "I hear the storm"
+	line "opened up a cave."
 	done
 
-SwimmermBerkeBeatenText:
-	text "What's the secret"
-	line "to your strength?"
+.SeenText7:
+	text "Beautiful day to"
+	line "be on the sea!"
 	done
 
-SwimmermKirkSeenText:
-	text "The waves are wild"
-	line "here."
 
-	para "They tire you out"
-	line "while you swim."
+Route41MatronScript:
+	faceplayer
+	opentext
+	writetext Route41WantToHeal
+	waitbutton
+	playmusic MUSIC_HEAL
+	special HealParty
+	special SaveMusic	
+	writetext Route41Healed
+	waitbutton
+	closetext
+	playmusic MUSIC_NONE	
+	special RestoreMusic
+	end
+
+Route41WantToHeal:
+	text "Did my daughters"
+	line "battle you? Let"
+	para "me heal your"
+	line "#mon."
 	done
 
-SwimmermKirkBeatenText:
-	text "I'm beat!"
+Route41Healed:
+	text "Ta-ta now!"
 	done
 
-SwimmermMathewSeenText:
-	text "Are you seeking"
-	line "the secrets of"
-	cont "Whirl Islands?"
+
+GenericTrainerBeautyOlivia:
+	generictrainer BEAUTY, OLIVIA, EVENT_BEAT_BEAUTY_OLIVIA, .SeenText6, .BeatenText6
+
+.BeatenText6:
+	text "Oh, I lost. I'll"
+	line "never have the"
+	cont "nerve to swim to"
+	cont "those scientists."
 	done
 
-SwimmermMathewBeatenText:
-	text "Ooh, you've got"
-	line "great endurance!"
+.SeenText6:
+	text "You can surf? If"
+	line "you win, will you"
+	cont "do me a favor?"
 	done
 
-SwimmermLewisSeenText:
-	text "I feel right at"
-	line "home in the sea!"
+
+GenericTrainerBeautyCharlotte:
+	generictrainer BEAUTY, CHARLOTTE, EVENT_BEAT_BEAUTY_CHARLOTTE, .SeenText5, .BeatenText5
+
+.BeatenText5:
+	text "Here's a little"
+	line "gossip: Olivia"
+	para "has a crush on"
+	line "those scientists."
 	done
 
-SwimmermLewisBeatenText:
-	text "Beaten in my own"
-	line "home?"
+.SeenText5:
+	text "Oh, you found our"
+	line "secret beach!"
 	done
 
-SwimmerfKayleeSeenText:
-	text "I'm on my way to"
-	line "Whirl Islands."
+GenericTrainerBeautyBridget:
+	generictrainer BEAUTY, BRIDGET, EVENT_BEAT_BEAUTY_BRIDGET, .SeenText4, .BeatenText4
 
-	para "I'm going explor-"
-	line "ing with friends."
+.BeatenText4:
+	text "We're just trying"
+	line "to get a tan."
 	done
 
-SwimmerfKayleeBeatenText:
-	text "Is that how you do"
-	line "it?"
+.SeenText4:
+	text "You found our"
+	line "secret beach!"
 	done
 
-SwimmerfSusieSeenText:
-	text "You look so ele-"
-	line "gant, riding your"
-	cont "#mon."
+GenericTrainerScientistCarl:
+	generictrainer SCIENTIST, BRAYDON, EVENT_BEAT_SCIENTIST_BRAYDON, .SeenText3, .BeatenText3
+
+.BeatenText3:
+	text "I should stick"
+	line "to simulations."
 	done
 
-SwimmerfSusieBeatenText:
-	text "I'm crushed…"
+.SeenText3:
+	text "Let me show off"
+	line "my #mon for"
+	cont "those girls!"
 	done
 
-SwimmerfDeniseSeenText:
-	text "The weather is so"
-	line "beautiful, I'm in"
-	cont "a daze!"
+GenericTrainerScientistCarl:
+	generictrainer SCIENTIST, CARL, EVENT_BEAT_SCIENTIST_CARL, .SeenText2, .BeatenText2
+
+.BeatenText2:
+	text "This equipment"
+	line "costs more than"
+	cont "a master ball,"
+	cont "kid."
 	done
 
-SwimmerfDeniseBeatenText:
-	text "Ohhh!"
+.SeenText2:
+	text "Hey, this is our"
+	line "weather station!"
 	done
 
-SwimmerfKaraSeenText:
-	text "If you need to"
-	line "rest, just tread"
-	cont "water."
 
-	para "You'll get your"
-	line "wind back, so you"
 
-	para "can keep on going"
-	line "strong."
+GenericTrainerScientistDexter:
+	generictrainer SCIENTIST, DEXTER, EVENT_BEAT_SCIENTIST_DEXTER, .SeenText1, .BeatenText1
+
+.BeatenText1:
+	text "We're collecting"
+	line "data to help the"
+	cont "forecasting in"
+	cont "Olivine."
 	done
 
-SwimmerfKaraBeatenText:
-	text "Oh! You have more"
-	line "energy than I do."
+.SeenText1:
+	text "So much data!"
+	line "So little time!"
 	done
-
-SwimmerfWendySeenText:
-	text "At night, Staryu"
-	line "gather near the"
-	cont "water's surface."
-	done
-
-SwimmerfWendyBeatenText:
-	text "Oh, dear…"
-	done
-
+	

@@ -1,11 +1,13 @@
 Route40_MapScriptHeader:
 	def_scene_scripts
+	
 
 	def_callbacks
 
 	def_warp_events
 
 	def_coord_events
+	coord_event 14, 2, 0, Route40_KurtScene
 
 	def_bg_events
 	bg_event 14, 10, BGEVENT_JUMPTEXT, Route40SignText ; fix sign 
@@ -14,6 +16,7 @@ Route40_MapScriptHeader:
 	def_object_events
 	; npc who gives you razor claw for defeating them all 
 	object_event 11, 16, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_COMMAND, 0, RazorScavengerScript, -1
+	object_event 13, 2, SPRITE_KURT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_ROUTE_40_KURT
 ;monica
 	object_event  10,  3, SPRITE_POKEFAN_F, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, MonicaScript, -1
 	smashrock_event  7, 11
@@ -21,14 +24,15 @@ Route40_MapScriptHeader:
 	smashrock_event  7, 8
 ; double edge 
 	object_event 15, 27, SPRITE_SAILOR, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route40FisherScript, -1
+	object_event 14, 29, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_LEFT, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route40SailorText, -1
 ;scavengers
-	object_event 13, 16, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerSwimmermHarold -1
-	object_event 18, 33, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 5, GenericTrainerSwimmermSimon, -1
+	object_event 13, 21, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerSwimmermHarold -1
+	object_event  7, 31, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 5, GenericTrainerSwimmermSimon, -1
 	object_event  3, 19, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerSwimmermRandall, -1
 	object_event  9, 25, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_SPINCLOCKWISE, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerSwimmermCharlie, -1
 ; beach NPCs
 	object_event 12, 10, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route40MatronScript, -1 ; redo text and heal you 
-	object_event 13,  4, SPRITE_BEAUTY, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route40Lass2Text, -1 ; redo text 
+	object_event  9,  7, SPRITE_BEAUTY, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route40Lass2Text, -1 ; redo text 
 ; roadblock NPCs, quarantine the city while they look for who took the part 
 	object_event 19, 2, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText, EVENT_BEAT_CHUCK ; redo text and heal you 
 	object_event 19, 3, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText, EVENT_BEAT_CHUCK ; redo text and heal you 
@@ -36,6 +40,40 @@ Route40_MapScriptHeader:
 
 	object_const_def
 	const ROUTE40_SCAVENGER
+	const ROUTE40_KURT
+
+
+Route40_KurtScene:
+	pause 10
+	turnobject PLAYER, LEFT
+	turnobject ROUTE40_KURT, RIGHT
+	showemote EMOTE_SHOCK, ROUTE40_KURT, 15
+	showtext Route40_KurtText
+	applymovement ROUTE40_KURT, Route40KurtMovesDown
+	disappear ROUTE40_KURT
+	setevent EVENT_ROUTE_40_KURT
+	setscene $1
+	end
+
+Route40_KurtText:
+	text "<PLAYER>, Ha! It"
+	line "worked!"
+	
+	para "Let's get to the"
+	line "Whirl Islands and"
+	para "bring Lugia to"
+	line "the port."
+	
+	para "See you there."
+	done
+	
+Route40KurtMovesDown:
+	step_down
+	step_down
+	step_down
+	step_down
+	step_down
+	step_end
 
 OlivineOfficerText:
 	text "Olivine is in a"
@@ -45,6 +83,15 @@ OlivineOfficerText:
 	line "a thief who took"
 	para "a part from the"
 	line "desal plant."
+	done
+	
+Route40SailorText:
+	text "There's some real"
+	line "weirdos past us."
+	
+	para "Dressed in blue"
+	line "robes and wearing"
+	cont "Lugia pendants."
 	done
 
 RazorScavengerScript: ; check route 31 script if not working 

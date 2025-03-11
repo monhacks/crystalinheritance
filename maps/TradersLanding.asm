@@ -22,6 +22,9 @@ TradersLanding_MapScriptHeader:
 	coord_event 19, 0, 0, TL_Scene_Part_1_Script
 	coord_event 20, 0, 0, TL_Scene_Part_1_Script
 	coord_event 21, 0, 0, TL_Scene_Part_1_Script_R
+	
+	coord_event 5, 9, 1, TL_Scene_2_L
+	coord_event 6, 9, 1, TL_Scene_2_R
 
 	def_bg_events
 	bg_event 21, 4, BGEVENT_JUMPTEXT, TL_ReportForWorkSign
@@ -40,6 +43,7 @@ TradersLanding_MapScriptHeader:
 	object_event 18, 0, SPRITE_KURT, 	SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LANDING_SCENE_1_KURT
 	
 	object_event  5, 5, SPRITE_BARBEAU, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, LandingBarbeauScript, -1 ; ADD TO INITIALIZE EVENTS
+	object_event 5, 10, SPRITE_KURT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1 ; ADD TO INITIALIZE EVENTS
 
 	object_event 20, 25, SPRITE_BRIGADER, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, jumptextfaceplayer, TL_Brigader_Script, EVENT_BEAT_KENSEY_PORT
 	object_event 21, 25, SPRITE_BRIGADER, 	SPRITEMOVEDATA_STANDIING_UP, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, jumptextfaceplayer, TL_Brigader_Script, EVENT_BEAT_KENSEY_PORT
@@ -52,7 +56,7 @@ TradersLanding_MapScriptHeader:
 	const TRADERS_LANDING_KENSEY
 	const TRADERS_LANDING_KURT
 	const TRADERS_LANDING_BARBEAU_2
-
+	const TRADERS_LANDING_KURT_2
 
 TL_Scene_Part_1_Script_R:
 	applyonemovement PLAYER, step_left
@@ -144,9 +148,118 @@ Kurt: PLAYER. Lugia in this timeline is with the emperor. But with your silver w
 
 
 
+TL_Scene_2_L:
+	applyonemovement PLAYER, step_right
+TL_Scene_2_R:
+	applymovement PLAYER, TL_2_PlayerMovesUp
+	turnobject TRADERS_LANDING_BARBEAU_2, RIGHT
+	showtext TL_2_Text1 ; you've comE? 
+	pause 10
+	appear TRADERS_LANDING_KURT_2
+	applymovement TRADERS_LANDING_KURT_2, TL_2_PlayerMovesUp
+	turnobject TRADERS_LANDING_BARBEAU_2, DOWN
+	showtext TL_2_Text2 ; we are on a quest from celebi from a different world, to stop expansion of steel types. We believe that this shrine will get celebi to help us out. 
+	showemote EMOTE_SHOCK, TRADERS_LANDING_BARBEAU_2, 10
+	showtext TL_2_Text3 ; best chance i've got. kensey and those pokeballs are so brutal. Just promise me you will take good care of her?
+	showemote EMOTE_BOLT, TRADERS_LANDING_KURT_2, 10
+	showtext TL_2_Text4 ; yes we will
+	turnobject TRADERS_LANDING_BARBEAU_2, UP
+	applyonemovement TRADERS_LANDING_BARBEAU_2, step_up
+	turnobject PLAYER, UP
+	applyonemovement PLAYER, step_up
+	applymovement TRADERS_LANDING_KURT_2, TL_2_KurtMoves2
+	showtext TL_2_Text5 ; honor Lugia
+	playsound SFX_WARP_TO
+	setevent EVENT_BARBEAU_WARPED
+	special FadeOutPalettes
+	waitsfx
+	warp ROUTE_40, 14, 2
+	end
 
+TL_2_Text1:
+	text "Barbeau: You"
+	line "made it to our"
+	cont "shrine."
+	
+	para "But where's your"
+	line "grandpa?"
+	done
 
+TL_2_Text2:
+	text "Kurt: Mister"
+	line "Barbeau! We are on"
+	para "a quest given by"
+	line "Celebi, from a"
+	cont "time away."
+	
+	para "We share the same"
+	line "goal: stop those"
+	cont "ships landing."
+	
+	para "In our time, we"
+	line "are threatened"
+	cont "by an onslaught"
+	cont "of Steel types."
+	
+	para "I believe if you"
+	line "pray here, we can"
+	cont "bring Lugia back"
+	cont "to help you."
+	done
+	
+TL_2_Text3:
+	text "Barbeau: You are"
+	line "my best shot."
+	
+	para "We're stuck with"
+	line "brutal outsiders"
+	cont "on one side, and"
+	
+	para "brutal General"
+	line "Kensey on the"
+	cont "other side."
+	
+	para "Just promise me:"
+	line "you will look"
+	cont "after Lugia?"
+	
+	para "If anything were"
+	line "to happen to her,"
+	para "it would be..."
+	line "devastating."
+	
+	para "Lugia is not a"
+	line "machine to be"
+	cont "used."
+	done
 
+TL_2_Text4:
+	text "Kurt: I promise,"
+	line "I will respect"
+	cont "her limits."
+	
+	para "We even have a"
+	line "Silver Wing."
+	
+	para "You can trust"
+	line "us."
+	done
+	
+TL_2_Text5:
+	text "Barbeau: "
+	line "Without waypoint,"; keep these lines 
+	cont "Clouds shroud all" 
+	
+	para "Our minds muddled" ; maybe revise?
+	line "Fear enthralled"
+
+	para "Beseech thee moon" ; keep these lines
+	line "Show us the way,"
+
+	para "Pierce shadows" ; maybe revise?
+	line "Until dawn's ray."	
+	done
+	
 
 TL_KenseysOfficeSign:
 	text "Kensey's Office"
@@ -265,31 +378,32 @@ LandingBarbeauScript:
 	faceplayer
 	checkevent EVENT_BEAT_KENSEY_PORT
 	iftrue .AfterKensey
-	checkevent EVENT_TALKED_TO_BARBEAU_IN_SECRET
-	iftrue .AlreadyTalkedBarbeau
-	showtext BarbeauText1 ; what are you doing here 
-	appear TRADERS_BARBEAU_KURT_2
-	applymovement TRADERS_BARBEAU_KURT, BarbeauKurtMoves1
-	showtext BarbeauText2 ; we are here to stop steels
-	showemote EMOTE_SHOCK, TRADERS_BARBEAU_BARBEAU, 5
-	showtext BarbeauText3 ; kurt has a plan
-	turnobject TRADERS_BARBEAU_BARBEAU, RIGHT
-	showtext BarbeauText4 ; barbeau will do it 
-.AlreadyTalkedBarbeau
-	;warps, etc
+	opentext
+	writetext BarbeauTimeTravelText
+	yesorno
+	iffalse_jumpopenedtext BarbeauNoTimeTravelText
+	writetext TL_2_Text5
+	waitbutton
+	closetext
+	playsound SFX_WARP_TO
+	special FadeOutPalettes
+	waitsfx
+	warp ROUTE_40, 14, 2
 	end
+
+BarbeauTimeTravelText:
+	text "I thought you"
+	line "were bringing"
+	cont "Lugia back?"
 	
-	; hm, what are you doing here
-	; kurt barges in
-	; kurt: We are here to stop the steel imports
-	; barbeau: not possible
-	; kurt: celebi is guiding us
-	; barbeau: oh? 
-	; kurt: we have a silver wing... we can summon Lugia, if you can send us back to our time with a blessing
-	; barbeau: I don't understand ... if Kensey finds out I was connected, then bad things will happen 
-	; kurt: we can do it
-	; barbeau: I will help you
-	
+	para "Have you come to"
+	line "pray with me?"
+	done
+
+BarbeauNoTimeTravelText:
+	text "Some other time."
+	done
+
 
 
 .AfterKensey:
@@ -346,3 +460,17 @@ TL_AmosWantedSign:
 	para "Known alias:"
 	line "Amos."
 	done
+
+TL_2_PlayerMovesUp:
+	step_up
+	step_up
+	step_up
+	step_up
+	turn_head_left
+	step_end
+
+TL_2_KurtMoves2:
+	step_left
+	step_up
+	step_up
+	step_end
