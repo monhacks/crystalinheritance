@@ -3381,7 +3381,7 @@ BrigaderGroup:
 
 ; ================
 
-	; GRUNTM ; 2?
+	; GRUNTM ; 
 	db "Johnson@"
 	db TRAINERTYPE_NORMAL
 	; party
@@ -3487,201 +3487,91 @@ BrigaderGroup:
 	db 14, MAGMAR
 	db -1 ; end
 
-; ================ ; ABOVE ENDS THE STADIUM GROUNDS
+; ================ ; ABOVE ENDS THE STADIUM GROUNDS; todo: grunts 12- 20 
 
-	; GRUNTM
-	db "Lopez@"
+	; GRUNTM ; Lopezsulfur sty 
+	db "Lopez@" ; trainer name
 	db TRAINERTYPE_NORMAL
-	; party
-	db 37, FURRET
+	; party - Ground focus
+	db 43, HIPPOWDON
+	db 45, QUAGSIRE
+	db 47, DONPHAN
 	db -1 ; end
-
-; ================
-
-	; GRUNTM
-	db "Singh@"
+	
+	; GRUNTM ; Singhsulfur sty 
+	db "Singh@" ; trainer name
 	db TRAINERTYPE_NORMAL
-	; party
-	db 35, FURRET
-	db 35, GOLBAT
+	; party - Fighting/Rock focus
+	db 45, HITMONCHAN
+	db 45, SUDOWOODO
+	db 47, HITMONLEE
+	db 49, RHYPERIOR
 	db -1 ; end
-
-; ================
-
-	; GRUNTM
-	db "Ali@"
+	
+	; GRUNTM ; Ali sulfur sty 
+	db "Ali@" ; trainer name
 	db TRAINERTYPE_NORMAL
-	; party
-	db 35, MUK
-	db 35, WEEZING
+	; party - Flying/Ground focus
+	db 44, GLIGAR
+	db 46, STARAPTOR
+	db 48, GLISCOR
 	db -1 ; end
-
-; ================
-
-	; GRUNTM
-	db "Suzuki@"
-	db TRAINERTYPE_PERSONALITY
-	; party
-	db 26, GASTLY, ABILITY_1 | NAT_NEUTRAL, MALE
-	db 27, FURRET, ABILITY_1 | NAT_NEUTRAL, MALE
-	db -1 ; end
-
-; ================
-
-	; GRUNTM
-	db "Marten@"
+	
+	; GRUNTM ; Suzuki ; clast cradle 2f 15
+	db "Suzuki@" ; trainer name
 	db TRAINERTYPE_NORMAL
-	; party
-	db 32, GOLBAT
+	; party - Fire focus
+	db 50, MONFERNO
+	db 46, MAGCARGO
+	db 48, HOUNDOOM
 	db -1 ; end
-
-; ================
-
-	; GRUNTM
-	db "Lee@"
+	
+	; GRUNTM ; Marten cc 1f 
+	db "Marten@" ; trainer name
 	db TRAINERTYPE_NORMAL
-	; party
-	db 27, HOUNDOUR
-	db 28, GOLBAT
-	db 28, FURRET
+	; party - Dragon/Ground focus
+	db 43, GABITE
+	db 45, DRAGONAIR
+	db 47, PUPITAR
 	db -1 ; end
-
-; ================
-
-	; GRUNTM
-	db "Gupta@"
+	
+	; GRUNTM ; Lee cc 1f 17
+	db "Lee@" ; trainer name
 	db TRAINERTYPE_NORMAL
-	; party
-	db 28, VENONAT
-	db 28, VENOMOTH
+	; party - Poison focus
+	db 44, ARBOK
+	db 46, MUK
+	db 48, WEEZING
 	db -1 ; end
-
-; ================
-
-	; GRUNTM
-	db "Liu@"
+	
+	; GRUNTM ; Gupta cc 1f 
+	db "Gupta@" ; trainer name
 	db TRAINERTYPE_NORMAL
-	; party
-	db 26, ZUBAT
-	db 27, GRIMER
-	db 28, MEOWTH
+	; party - Steel/Rock focus
+	db 49, KANGASKHAN
+	db 48, HITMONTOP
+	db 50, MISMAGIUS
 	db -1 ; end
-
-; ================
-
-	; GRUNTM
-	db "Grunt@"
+	
+	; GRUNTM ; Liu cc b1f 19
+	db "Liu@" ; trainer name
 	db TRAINERTYPE_NORMAL
-	; party
-	db 26, ABRA
-	db 27, ZUBAT
-	db 28, HAUNTER
+	; party - Bug/Ghost focus
+	db 45, PINSIR
+	db 47, ARIADOS
+	db 49, YANMEGA
+	db 50, DUSKNOIR
 	db -1 ; end
-
-; ================
-
-	; GRUNTM
-	db "Grunt@"
+	
+	; GRUNTM ;  cc b1f
+	db "Tyson@" ; trainer name
 	db TRAINERTYPE_NORMAL
-	; party
-	db 23, GOLBAT
-	db 23, HAUNTER
-	db 23, GOLBAT
+	; party - Poison focus
+	db 46, STEELIX
+	db 46, NIDOKING
+	db 48, NIDOQUEEN
 	db -1 ; end
-
-; ================
-
-	; GRUNTM
-	db "Grunt@"
-	db TRAINERTYPE_NORMAL
-	; party
-	db 23, GROWLITHE
-	db 25, HOUNDOUR
-	db 23, TENTACRUEL
-	db -1 ; end
-
-; ================
-
-	; GRUNTM
-	db "Grunt@"
-	db TRAINERTYPE_NORMAL
-	; party
-	db 37, HAUNTER
-	db 36, WEEZING
-	db -1 ; end
-
-; ================
-
-	; GRUNTM
-	db "Grunt@"
-	db TRAINERTYPE_NORMAL
-	; party
-	db 36, TENTACRUEL
-	db 35, MUK
-	db -1 ; end
-
-; ================
-
-	; GRUNTM
-	db "Grunt@"
-	db TRAINERTYPE_NORMAL
-	; party
-	db 23, ZUBAT
-	db 24, FURRET
-	db 25, MURKROW
-	db -1 ; end
-
-; ================
-
-	; unused
-	; GRUNTM
-	db "Grunt@"
-	db TRAINERTYPE_NORMAL
-	; party
-	db -1 ; end
-
-; ================
-
-	; GRUNTM
-	db "Grunt@"
-	db TRAINERTYPE_NORMAL
-	; party
-	db 33, FURRET
-	db -1 ; end
-
-; ================
-
-	; GRUNTM
-	db "Grunt@"
-	db TRAINERTYPE_NORMAL
-	; party
-	db 9, MEOWTH
-	db 9, MEOWTH
-	db -1 ; end
-
-; ================
-
-	; GRUNTM
-	db "Grunt@"
-	db TRAINERTYPE_NORMAL
-	; party
-	db 25, GOLBAT
-	db 25, GOLBAT
-	db 30, ARBOK
-	db -1 ; end
-
-; ================
-
-	; GRUNTM
-	db "Grunt@"
-	db TRAINERTYPE_NORMAL
-	; party
-	db 51, GOLBAT
-	db 52, WEEZING
-	db 51, MUK
-	db -1 ; end
-
-; ================
+	
 ; ================================
 
 GruntFGroup:
@@ -3692,8 +3582,6 @@ GruntFGroup:
 	db "Grunt@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 9, ZUBAT
-	db 11, EKANS
 	db -1 ; end
 
 
@@ -8291,7 +8179,44 @@ EngineerGroup:
 		db CALM_MIND, AIR_SLASH, PSYCHIC_M, ROOST
 	db 60, TYPHLOSION, CHOICE_SPECS, 50, ABIL_TYPHLOSION_BLAZE | NAT_SPD_UP_DEF_DOWN, MALE
 		db FIRE_BLAST, EARTH_POWER, FOCUS_BLAST, THUNDERPUNCH
+	db -1 ; end 
+
+
+
+; ================
+
+	; ENGINEER; clasts cradle 2f
+	db "Goeth@"
+	db TRAINERTYPE_NORMAL
+	; party
+	db 44, ELECTRODE
+	db 47, SCIZOR
+	db 44, NINETALES
+	db 46, AMPHAROS
+	db -1 ; end
 	
+	
+	; ================
+
+	; ENGINEER; clasts cradle 1f 
+	db "Nobel@"
+	db TRAINERTYPE_NORMAL
+	; party
+	db 44, MAGNETON
+	db 46, MAGNEZONE
+	db 48, FORRETRESS
+	db -1 ; end
+	
+	; ================
+
+	; ENGINEER; clasts cradle 1f 
+	db "Ingsol@"
+	db TRAINERTYPE_NORMAL
+	; party
+	db 48, MAGMORTAR
+	db 47, RAICHU
+	db 50, DUGTRIO
+	db -1 ; end
 
 ; ================
 ; ================================
@@ -8307,48 +8232,6 @@ TeacherGroup:
 	db 60, CLEFAIRY
 	db -1 ; end
 
-; ================
-
-	; TEACHER
-	db "Hillary@"
-	db TRAINERTYPE_NORMAL
-	; party
-	db 58, PERSIAN
-	db 56, SUNFLORA
-	db 59, DIGLETT
-	db -1 ; end
-
-; ================
-
-	; TEACHER
-	db "Shirley@"
-	db TRAINERTYPE_NORMAL
-	; party
-	db 47, WIGGLYTUFF
-	db -1 ; end
-
-; ================
-
-	; TEACHER
-	db "Kathryn@"
-	db TRAINERTYPE_NORMAL
-	; party
-	db 26, BELLOSSOM
-	db 25, PIDGEOTTO
-	db 24, FURRET
-	db -1 ; end
-
-; ================
-
-	; TEACHER
-	db "Clarice@"
-	db TRAINERTYPE_NORMAL
-	; party
-	db 54, FURRET
-	db 56, SUNFLORA
-	db -1 ; end
-
-; ================
 ; ================================
 
 GuitaristMGroup:
@@ -8362,58 +8245,7 @@ GuitaristMGroup:
 	db 50, ELECTABUZZ
 	db -1 ; end
 
-; ================
 
-	; GUITARISTM
-	db "Vincent@"
-	db TRAINERTYPE_NORMAL
-	; party
-	db 53, VOLTORB
-	db 52, MAGNEMITE
-	db 55, JOLTEON
-	db -1 ; end
-
-; ================
-
-	; GUITARISTM
-	db "Roger@"
-	db TRAINERTYPE_NORMAL
-	; party
-	db 56, RAICHU
-	db 58, ELECTABUZZ
-	db -1 ; end
-
-; ================
-
-	; GUITARISTM
-	db "Ezekiel@"
-	db TRAINERTYPE_NORMAL
-	; party
-	db 56, MAGNEZONE
-	db -1 ; end
-
-; ================
-
-	; GUITARISTM
-	db "Biff@"
-	db TRAINERTYPE_NORMAL
-	; party
-	db 52, ONIX
-	db 54, MAGNETON
-	db 56, SKARMORY
-	db -1 ; end
-
-; ================
-
-	; GUITARISTM
-	db "Geddy@"
-	db TRAINERTYPE_NORMAL
-
-	; TODD: party
-	db 50, CHIKORITA
-	db -1 ; end
-
-; ================
 ; ================================
 
 GuitaristFGroup:
@@ -8430,47 +8262,6 @@ GuitaristFGroup:
 		db LIGHT_SCREEN, THUNDERPUNCH, CROSS_CHOP, SCREECH
 	db -1 ; end
 
-; ================
-
-	; GUITARISTF
-	db "Morgan@"
-	db TRAINERTYPE_NORMAL
-	; party
-	db 55, ELECTRODE
-	db 55, JOLTEON
-	db -1 ; end
-
-; ================
-
-	; GUITARISTF
-	db "Ritsuko@"
-	db TRAINERTYPE_NORMAL
-	; party
-	db 56, JOLTEON
-	db 58, JOLTEON
-	db -1 ; end
-
-; ================
-
-	; GUITARISTF
-	db "Wanda@"
-	db TRAINERTYPE_NORMAL
-	; party
-	db 53, MAGNEMITE
-	db 54, ELECTRODE
-	db 55, MAGNETON
-	db -1 ; end
-
-; ================
-
-	; GUITARISTF
-	db "Jaclyn@"
-	db TRAINERTYPE_NORMAL
-	; party
-	db 56, ELECTIVIRE
-	db -1 ; end
-
-; ================
 ; ================================
 
 BikerGroup:
@@ -8487,129 +8278,7 @@ BikerGroup:
 	db 57, WEEZING
 	db -1 ; end
 
-; ================
 
-	; BIKER
-	db "Harris@"
-	db TRAINERTYPE_NORMAL
-	; party
-	db 57, FLAREON
-	db -1 ; end
-
-; ================
-
-	; BIKER
-	db "Zeke@"
-	db TRAINERTYPE_NORMAL
-	; party
-	db 55, GROWLITHE
-	db 56, WEEZING
-	db -1 ; end
-
-; ================
-
-	; BIKER
-	db "Charles@"
-	db TRAINERTYPE_NORMAL
-	; party
-	db 54, GROWLITHE
-	db 54, GROWLITHE
-	db 57, WEEZING
-	db -1 ; end
-
-; ================
-
-	; BIKER
-	db "Reilly@"
-	db TRAINERTYPE_NORMAL
-	; party
-	db 59, WEEZING
-	db -1 ; end
-
-; ================
-
-	; BIKER
-	db "Joel@"
-	db TRAINERTYPE_NORMAL
-	; party
-	db 57, MAGMAR
-	db 57, MAGMAR
-	db -1 ; end
-
-; ================
-
-	; BIKER
-	db "Glenn@"
-	db TRAINERTYPE_NORMAL
-	; party
-	db 55, GROWLITHE
-	db 57, MAGMAR
-	db 59, WEEZING
-	db -1 ; end
-
-; ================
-
-	; BIKER
-	db "Dale@"
-	db TRAINERTYPE_NORMAL
-	; party
-	db 57, MUK
-	db 57, WEEZING
-	db -1 ; end
-
-; ================
-
-	; BIKER
-	db "Jacob@"
-	db TRAINERTYPE_NORMAL
-	; party
-	db 54, MAGMAR
-	db 54, TENTACRUEL
-	db -1 ; end
-
-; ================
-
-	; BIKER
-	db "Aiden@"
-	db TRAINERTYPE_NORMAL
-	; party
-	db 55, URSARING
-	db 55, AZUMARILL
-	db -1 ; end
-
-; ================
-
-	; BIKER
-	db "Dan@"
-	db TRAINERTYPE_NORMAL
-	; party
-	db 57, MUK
-	db 55, WEEZING
-	db 55, WEEZING
-	db -1 ; end
-
-; ================
-
-	; BIKER
-	db "Teddy@"
-	db TRAINERTYPE_NORMAL
-	; party
-	db 58, ARBOK
-	db -1 ; end
-
-; ================
-
-	; BIKER
-	db "Tyrone@"
-	db TRAINERTYPE_NORMAL
-	; party
-	db 22, MACHOP
-	db 32, GRIMER
-	db 42, MUK
-	db 52, WEEZING
-	db -1 ; end
-
-; ================
 ; ================================
 
 RoughneckGroup:
@@ -8625,27 +8294,7 @@ RoughneckGroup:
 	db 55, WEEZING
 	db -1 ; end
 
-; ================
 
-	; ROUGHNECK
-	db "Theron@"
-	db TRAINERTYPE_NORMAL
-	; party
-	db 55, MUK
-	db 55, POLIWRATH
-	db -1 ; end
-
-; ================
-
-	; ROUGHNECK
-	db "Markey@"
-	db TRAINERTYPE_NORMAL
-	; party
-	db 57, ARBOK
-	db 56, HOUNDOOM
-	db -1 ; end
-
-; ================
 ; ================================
 
 TamerGroup:
@@ -8677,7 +8326,7 @@ TamerGroup:
 	; party
 	db 38, FARFETCH_D
 	db 37, STANTLER
-	db 61, KANGASKHAN
+	db 39, KANGASKHAN
 	db -1 ; end
 
 
@@ -8696,39 +8345,6 @@ ArtistGroup:
 	db 55, SUDOWOODO
 	db -1 ; end
 
-; ================
-
-	; ARTIST
-	db "Alina@"
-	db TRAINERTYPE_ITEM | TRAINERTYPE_DVS | TRAINERTYPE_MOVES
-	; party
-	db 57, CHANSEY, MIRACLE_SEED, DVS_HP_GRASS ; green
-		db SPORE, FLAMETHROWER, SOLAR_BEAM, GIGA_DRAIN
-	db -1 ; end
-
-; ================
-
-	; ARTIST
-	db "Marlene@"
-	db TRAINERTYPE_ITEM | TRAINERTYPE_DVS | TRAINERTYPE_MOVES
-	; party
-	db 55, CHANSEY, CHARCOAL, DVS_HP_FIRE
-		db FIRE_BLAST, FLAMETHROWER, EARTH_POWER, WILL_O_WISP
-	db 55, CHANSEY, MAGNET, DVS_HP_ELECTRIC 
-		db THUNDER, THUNDERBOLT, THUNDER_WAVE, RAIN_DANCE
-	db 55, CHANSEY, MYSTIC_WATER, DVS_HP_WATER
-		db HYDRO_PUMP, SURF, ICE_BEAM, SCALD
-	db -1 ; end
-
-; ================
-
-	; ARTIST
-	db "Rin@"
-	db TRAINERTYPE_ITEM | TRAINERTYPE_DVS | TRAINERTYPE_MOVES
-	; party
-	db 64, CHANSEY, TWISTEDSPOON, DVS_HP_PSYCHIC ; pink
-		db PSYCHIC_M, SPORE, CALM_MIND, RECOVER
-	db -1 ; end
 
 ; ================
 ; ================================

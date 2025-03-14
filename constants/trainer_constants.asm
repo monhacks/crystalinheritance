@@ -871,48 +871,30 @@ KRIS EQU __trainer_class__
 	const HUGO
 	const HOWARD
 	const DWG
+	const GOETH ; goethite 
+	const NOBEL ; tnt, dynamite
+	const INGSOL ; inventor of drill 
+
 
 	trainerclass TEACHER ; 58
 	const COLETTE
-	const HILLARY
-	const SHIRLEY
-	const KATHRYN
-	const CLARICE
+
 
 	trainerclass GUITARISTM ; 59
 	const CLYDE
-	const VINCENT
-	const ROGER
-	const EZEKIEL
-	const BIFF
-	const GEDDY
+
 
 	trainerclass GUITARISTF ; 5a
 	const JANET
-	const MORGAN
-	const RITSUKO
-	const WANDA
-	const JACLYN
+
 
 	trainerclass BIKER ; 5b
 	const DWAYNE
-	const HARRIS
-	const ZEKE
-	const CHARLES
-	const REILLY
-	const JOEL
-	const GLENN
-	const DALE
-	const JACOB
-	const AIDEN
-	const DAN
-	const TEDDY
-	const TYRONE
+
 
 	trainerclass ROUGHNECK ; 5c
 	const BRIAN
-	const THERON
-	const MARKEY
+
 
 	trainerclass TAMER ; 5d
 	const BRETT
@@ -921,9 +903,7 @@ KRIS EQU __trainer_class__
 
 	trainerclass ARTIST ; 5e
 	const REINA
-	const ALINA
-	const MARLENE
-	const RIN
+
 
 	trainerclass AROMA_LADY ; 5f
 	const DAHLIA

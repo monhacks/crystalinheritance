@@ -53,10 +53,13 @@ LandingDocksScene:
 	showtext Docks_Text3
 	applymovement LANDING_DOCKS_LUGIA, Docks_LugiaMove1
 	disappear LANDING_DOCKS_LUGIA
+	setevent EVENT_DOCKS_LUGIA
 	showemote EMOTE_SHOCK, LANDING_DOCKS_BARBEAU, 30
 	showtext Docks_Text4
 	showemote EMOTE_SHOCK, LANDING_DOCKS_SURGE, 10
 	applymovement LANDING_DOCKS_SURGE, Docks_CaptainMove1
+	disappear LANDING_DOCKS_SURGE
+	setevent EVENT_DOCKS_SURGE
 	showemote EMOTE_HAPPY, LANDING_DOCKS_BARBEAU, 10
 	showtext Docks_Text5
 	showemote EMOTE_QUESTION, LANDING_DOCKS_KENSEY, 10
@@ -86,14 +89,48 @@ LandingDocksScene:
 	loadtrainer BARBEAU, 1 
 	startbattle
 	reloadmapafterbattle ; OBJECTS IN THE RIGHT SPOT?
-	
+; start of kensey section 
+	showtext Docks_Text12
+	playmusic MUSIC_HEAL
+	special HealParty
+	special SaveMusic	
+	playmusic MUSIC_NONE	
+	special RestoreMusic	
+	turnobject LANDING_DOCKS_KENSEY, LEFT
+	showemote EMOTE_BOLT, LANDING_DOCKS_KENSEY, 15
+	showtext Docks_Text13
+	applyonemovement LANDING_DOCKS_KENSEY, step_down
+	turnobject LANDING_DOCKS_KENSEY, LEFT
+	turnobject PLAYER, RIGHT
+	winlosstext KenseyBeaten1, 0
+	loadtrainer KENSEY, 1 
+	startbattle
+	reloadmapafterbattle ; OBJECTS IN THE RIGHT SPOT?
+	showtext Docks_Text14
+	applyonemovement LANDING_DOCKS_KENSEY, step_up
+	turnobject LANDING_DOCKS_KENSEY, DOWN
+	showtext Docks_Text15
+	applyonemovement LANDING_DOCKS_KURT, step_up
+	turnobject LANDING_DOCKS_KURT, DOWN
+	showemote EMOTE_QUESTION, LANDING_DOCKS_KURT, 10
+	showtext Docks_Text16
+	showemote EMOTE_SAD, LANDING_DOCKS_BARBEAU, 10
+	showtext Docks_Text17
+	showemote EMOTE_BOLT, LANDING_DOCKS_KENSEY, 10
+	showtext Docks_Text18
+	applymovement LANDING_DOCKS_KENSEY, Docks_KenseyMoves1
+	disapper LANDING_DOCKS_KENSEY
+	setevent EVENT_DOCKS_KENSEY
+	showtext Docks_Text19
+	special Special_CelebiShrineEvent
+	showtext Docks_Text20
 ; end 
 	setscene $1
 	setevent EVENT_DOCKS_KURT
-	setevent EVENT_DOCKS_KURT
-	setevent EVENT_DOCKS_KURT
-	setevent EVENT_DOCKS_KURT
-	setevent EVENT_DOCKS_KURT
+	setevent EVENT_DOCKS_KENSEY
+	setevent EVENT_DOCKS_BARBEAU
+	setevent EVENT_DOCKS_SURGE
+	setevent EVENT_DOCKS_LUGIA
 	playsound SFX_WARP_TO
 	special FadeOutPalettes
 	waitsfx
@@ -327,7 +364,15 @@ Docks_Text18:
 	line "stole his Lugia!"
 	done
 
-; kensey away
+Docks_KenseyMoves1:
+	step_up
+	step_left
+	step_left
+	step_left
+	step_left
+	step_left
+	step_left
+	step_end
 
 Docks_Text19: 
 	text "Barbeau: Kurt,"
@@ -349,3 +394,12 @@ Docks_Text19:
 
 ; celebi scene 
 
+Docks_Text20: ; really need to revise this to be about building up independents, ... 
+	text "Celebi: You mis-"
+	line "use #mon as"
+	cont "means to your end"
+	
+	para "Are you still"
+	line "worthy to help me?"
+	done
+	

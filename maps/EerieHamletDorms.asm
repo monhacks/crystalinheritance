@@ -15,14 +15,75 @@ EerieHamletDorms_MapScriptHeader:
 
 
 	def_bg_events
-	object_event 6,  6, SPRITE_GRANNY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, EerieDormsSleepTalkScript, -1 
-
+	bg_event  0,  2, BGEVENT_READ, HamletDormsBed
+	bg_event  0,  3, BGEVENT_READ, HamletDormsBed
+	bg_event  0,  4, BGEVENT_READ, HamletDormsBed
+	bg_event  0,  5, BGEVENT_READ, HamletDormsBed
 
 	def_object_events
+	object_event 1, 1, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, HamletDormsKurtScript, EVENT_BEAT_AMOS ; TODO fix dialogue 
+	
+	object_event 6,  6, SPRITE_GRANNY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, EerieDormsSleepTalkScript, -1 
+	object_event 13, 3, SPRITE_ACE_TRAINERF, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, HamletDormsNPC1Text, -1
+	pokemon_event  12, 3, SNEASEL, -1, -1, PAL_NPC_RED, SneaselText, -1
 
+	object_event 5, 3, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, HamletDormsNPC2Text, -1
+	object_event 3, 3, SPRITE_MEDIUM, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, HamletDormsNPC3Text, -1
 
 
 	object_const_def
+
+
+HamletDormsNPC1Text:
+	text "Ever since the"
+	line "Emperor started"
+	cont "occupying cities,"
+	
+	para "trainers have"
+	line "been coming from"
+	cont "all over Johto."
+	done
+
+HamletDormsNPC2Text:
+	text "What will become"
+	line "of the tarn?"
+	done
+
+HamletDormsNPC3Text:
+	text "Adrinna's workers"
+	line "don't really like"
+	cont "to spend time in"
+	cont "our Hamlet."
+	
+	para "I hope that it"
+	line "stays that way."
+	done
+
+SneaselText:
+	text "Snaasy!"
+	done
+
+HamletDormsBed:
+	showtext HamletBedText1
+	special Special_FadeBlackQuickly
+	special Special_ReloadSpritesNoPalettes
+	special HealParty
+	playmusic MUSIC_HEAL
+	pause 60
+	special RestartMapMusic
+	special Special_FadeInQuickly
+	showtext HamletBedText2
+	end
+
+HamletBedText1:
+	text "A comfy bed!"
+	line "Time to sleep…"
+	done
+
+HamletBedText2:
+	text "Ah, refreshed and"
+	line "restored!"
+	done
 
 
 EerieDormsSleepTalkScript:
@@ -99,4 +160,59 @@ Text_EerieDormsTutorTaught:
 	text "Come see me if"
 	line "you need another"
 	cont "tutor."
+	done
+
+
+HamletDormsKurtScript:
+	faceplayer
+	opentext
+	writetext KurtEHDormsText
+	yesorno
+	iffalse .WCKurtPC
+	winlosstext EHKurtBattleText, EHKurtBattleText
+	loadtrainer KURT, KURT11 
+	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+	startbattle
+	reloadmapafterbattle
+	opentext
+	jumpopenedtext EHKurtBattleText2
+
+.WCKurtPC
+	writetext KurEHDormsText2
+	promptbutton
+	special PokemonCenterPC 
+	endtext
+	end
+
+KurtEHDormsText: ; todo need to fix this dialogue 
+	text "<PLAYER>, these"
+	line "dorms are a good"
+	cont "place to rest."
+	
+	para "I know it didn't"
+	line "go well with the"
+	cont "Hisui Elder."
+	
+	para "But I believe "
+	line "Johto can still"
+	cont "save itself and"
+	
+	para "reject Mejimi's"
+	line "anti-tradition!"
+	done
+	
+KurEHDormsText2:
+	text "I can run back"
+	line "to manage your"
+	cont "party."
+	done
+
+EHKurtBattleText:
+	text "So impressive!"
+	done
+
+EHKurtBattleText2:
+	text "We can battle as"
+	line "many times as"
+	cont "you like."
 	done
