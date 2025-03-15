@@ -3,7 +3,8 @@ ClastsCradle1F_MapScriptHeader:
 
 
 	def_callbacks
-
+	callback MAPCALLBACK_STONETABLE, 	Cradle1FBoulders
+	callback MAPCALLBACK_TILES, 		Cradle1FCartsCallback
 
 	def_warp_events
 	warp_event 19,  7, CLASTS_CRADLE_2F, 2
@@ -23,6 +24,10 @@ ClastsCradle1F_MapScriptHeader:
 
 
 	def_object_events
+	strengthboulder_event 22, 16, EVENT_BOULDER_CRADLE1F_1; goes to hole at 3
+	strengthboulder_event 30, 23, EVENT_BOULDER_CRADLE1F_2; goes to hole at 4
+	strengthboulder_event 23, 35, EVENT_BOULDER_CRADLE1F_3; goes to hole at 5	
+	
 	object_event  22,  4, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBrigader16, EVENT_BEAT_ADRINNA_MINE
 	object_event  31, 16, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBrigader17, EVENT_BEAT_ADRINNA_MINE
 	object_event   3, 22, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBrigader18, EVENT_BEAT_ADRINNA_MINE
@@ -31,13 +36,11 @@ ClastsCradle1F_MapScriptHeader:
 	object_event  11, 39, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerEngineerIngsol, EVENT_BEAT_ADRINNA_MINE
 
 	
-	object_event   0,  0, SPRITE_DRAGON_TAMER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerDragonTamerHank2, EVENT_BEAT_ADRINNA_MINE	
-	object_event   0,  0, SPRITE_DRAGON_TAMER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerDragonTamerJones2, EVENT_BEAT_ADRINNA_MINE
-	object_event   0,  0, SPRITE_DRAGON_TAMER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerDragonTamerLeland2, EVENT_BEAT_ADRINNA_MINE
+	object_event  32, 11, SPRITE_DRAGON_TAMER, SPRITEMOVEDATA_SPIN_CLOCKWISE, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerDragonTamerHank2, EVENT_BEAT_ADRINNA_MINE	
+	object_event  31, 31, SPRITE_DRAGON_TAMER, SPRITEMOVEDATA_SPIN_CLOCKWISE, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerDragonTamerJones2, EVENT_BEAT_ADRINNA_MINE
+	object_event  16, 13, SPRITE_DRAGON_TAMER, SPRITEMOVEDATA_SPIN_CLOCKWISE, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerDragonTamerLeland2, EVENT_BEAT_ADRINNA_MINE
 
-	strengthboulder_event 22, 16; goes to hole at 3
-	strengthboulder_event 30, 23; goes to hole at 4
-	strengthboulder_event 23, 35; goes to hole at 5
+
 
 	itemball_event 9, 9, NUGGET, 1, EVENT_CRADLE_1F_NUGGET
 	itemball_event 28, 35, FULL_RESTORE, 1, EVENT_CRADLE_1F_FULL_RESTORE
@@ -46,7 +49,40 @@ ClastsCradle1F_MapScriptHeader:
 	tmhmball_event 7, 16, TM_SWORDS_DANCE, EVENT_TM_SWORDS_DANCE
 
 	object_const_def
+	const CRADLE1F_BOULDER1
+	const CRADLE1F_BOULDER2
+	const CRADLE1F_BOULDER3
 
+Cradle1FBoulders:
+	usestonetable .BoulderTable
+	endcallback
+
+.BoulderTable:
+	stonetable 3, CRADLE1F_BOULDER1, .Disappear1
+	stonetable 4, CRADLE1F_BOULDER1, .Disappear2
+	stonetable 5, CRADLE1F_BOULDER1, .Disappear3
+	db -1 ; end
+
+.Disappear1:
+	disappear CRADLE1F_BOULDER1
+	sjump .BouldersCradle1F
+	
+.Disappear1:
+	disappear CRADLE1F_BOULDER2
+	sjump .BouldersCradle1F
+
+.Disappear3:
+	disappear CRADLE1F_BOULDER3
+;fallthru
+.BouldersCradle1F:
+	pause 30
+	playsound SFX_STRENGTH
+	earthquake 40
+	jumpthistext
+
+	text "The boulder fell"
+	line "through!"
+	done
 
 GenericTrainerBrigader16: ; dragons 
 	generictrainer BRIGADER, 16, EVENT_BEAT_ROCKET_GRUNTM_16, Brigader16SeenText, Brigader16BeatenText  
