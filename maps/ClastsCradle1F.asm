@@ -23,13 +23,17 @@ ClastsCradle1F_MapScriptHeader:
 
 
 	def_object_events
-	object_event  22,  4, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerPokefanMRobert, EVENT_BEAT_ADRINNA_MINE
-	object_event  31, 16, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerPokefanMRobert, EVENT_BEAT_ADRINNA_MINE
-	object_event   3, 22, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerPokefanMRobert, EVENT_BEAT_ADRINNA_MINE
+	object_event  22,  4, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBrigader16, EVENT_BEAT_ADRINNA_MINE
+	object_event  31, 16, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBrigader17, EVENT_BEAT_ADRINNA_MINE
+	object_event   3, 22, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBrigader18, EVENT_BEAT_ADRINNA_MINE
 
-	object_event  14, 28, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerPokefanMRobert, EVENT_BEAT_ADRINNA_MINE	
-	object_event  11, 39, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerPokefanMRobert, EVENT_BEAT_ADRINNA_MINE
-	object_event  27, 41, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerPokefanMRobert, EVENT_BEAT_ADRINNA_MINE
+	object_event  14, 28, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerEngineerNobel, EVENT_BEAT_ADRINNA_MINE	
+	object_event  11, 39, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerEngineerIngsol, EVENT_BEAT_ADRINNA_MINE
+
+	
+	object_event   0,  0, SPRITE_DRAGON_TAMER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerDragonTamerHank2, EVENT_BEAT_ADRINNA_MINE	
+	object_event   0,  0, SPRITE_DRAGON_TAMER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerDragonTamerJones2, EVENT_BEAT_ADRINNA_MINE
+	object_event   0,  0, SPRITE_DRAGON_TAMER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerDragonTamerLeland2, EVENT_BEAT_ADRINNA_MINE
 
 	strengthboulder_event 22, 16; goes to hole at 3
 	strengthboulder_event 30, 23; goes to hole at 4
@@ -42,3 +46,37 @@ ClastsCradle1F_MapScriptHeader:
 	tmhmball_event 7, 16, TM_SWORDS_DANCE, EVENT_TM_SWORDS_DANCE
 
 	object_const_def
+
+
+GenericTrainerBrigader16: ; dragons 
+	generictrainer BRIGADER, 16, EVENT_BEAT_ROCKET_GRUNTM_16, Brigader16SeenText, Brigader16BeatenText  
+
+Brigader16BeatenText:
+	text "..."
+	done
+
+Brigader16SeenText:
+	text "..."
+	done
+	
+GenericTrainerBrigader17: ; poison
+	generictrainer BRIGADER, 17, EVENT_BEAT_ROCKET_GRUNTM_17, Brigader17SeenText, Brigader17BeatenText  
+
+Brigader17BeatenText:
+	text "..."
+	done
+
+Brigader17SeenText:
+	text "..."
+	done
+	
+GenericTrainerBrigader18: ; normal
+	generictrainer BRIGADER, 18, EVENT_BEAT_ROCKET_GRUNTM_18, Brigader18SeenText, Brigader18BeatenText  
+
+Brigader18BeatenText:
+	text "..."
+	done
+
+Brigader18SeenText:
+	text "..."
+	done
