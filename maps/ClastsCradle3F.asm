@@ -20,7 +20,7 @@ ClastsCradle3F_MapScriptHeader:
 
 	def_object_events
 	; AMOS heals you 
-	object_event 3, 3, SPRITE_AMOS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, 0, AmosScript, EVENT_BEAT_ADRINNA_MINE
+	object_event 3, 3, SPRITE_AMOS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AmosScriptCC, EVENT_BEAT_ADRINNA_MINE
 	pokemon_event  4, 3, GALLADE, -1, -1, PAL_NPC_BLUE, GalladeText, -1
 
 	object_const_def
@@ -29,7 +29,7 @@ GalladeText:
 	text "Galloo!"
 	done
 
-AmosScript:
+AmosScriptCC:
 	faceplayer
 	checkevent EVENT_AMOS_INTRO_MINE
 	iftrue .AmosHeals

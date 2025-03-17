@@ -2760,7 +2760,7 @@ BirdKeeperGroup:
 ; ================
 
 	; BIRD_KEEPER ; tranquil tarn 1
-	db "Hank@"
+	db "Hank@" ; rule the sky 
 	db TRAINERTYPE_NORMAL
 	; party
 	db 42, STARAVIA
@@ -4898,7 +4898,7 @@ RuinManiacGroup:
 ; ================================
 ; ================
 
-	; RUIN_MANIAC ; becomes dragon tamer 
+	; RUIN_MANIAC ; becomes dragon tamer , melting interest 
 	db "Jones@"
 	db TRAINERTYPE_NORMAL
 	; party

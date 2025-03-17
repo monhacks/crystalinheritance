@@ -1,6 +1,6 @@
 RuinsOfAlphKabutoChamber_MapScriptHeader:
 	def_scene_scripts
-	scene_script RuinsofAlphKabutoChamberTrigger0
+
 
 	def_callbacks
 	callback MAPCALLBACK_TILES, RuinsofAlphKabutoChamberHiddenDoorsCallback
@@ -26,40 +26,14 @@ RuinsOfAlphKabutoChamber_MapScriptHeader:
 	object_const_def
 	const RUINS_SCIENTIST
 
-RuinsofAlphKabutoChamberTrigger0:
-	checkevent EVENT_WALL_OPENED_IN_KABUTO_CHAMBER
-	iffalse .End
-	sdefer RuinsofAlphKabutoChamberWallOpenScript
-.End
-	end
 
 RuinsofAlphKabutoChamberHiddenDoorsCallback:
 	checkevent EVENT_WALL_OPENED_IN_KABUTO_CHAMBER
 	iftrue .WallOpen
-	changeblock 4, 0, $24 ;this should be closed unless we don't have the puzzle solved. 24 is the closed door
+	changeblock 4, 0, $24
 .WallOpen:
-	checkevent EVENT_SOLVED_KABUTO_PUZZLE
-	iffalse .FloorClosed
 	endcallback
 
-.FloorClosed:
-	changeblock 2, 2, $1
-	changeblock 4, 2, $2
-	endcallback
-
-
-
-RuinsofAlphKabutoChamberWallOpenScript:
-;	pause 30
-;	earthquake 30
-;	showemote EMOTE_SHOCK, PLAYER, 20
-;	pause 30
-;	playsound SFX_STRENGTH
-;	changeblock 4, 0, $25
-;	reloadmappart
-;	earthquake 50
-	setscene $1
-	end
 
 MapRuinsofAlphKabutoChamberSignpost2Script:
 	refreshscreen
@@ -70,35 +44,29 @@ MapRuinsofAlphKabutoChamberSignpost2Script:
 	end
 
 .PuzzleComplete:
-	setevent EVENT_WALL_OPENED_IN_KABUTO_CHAMBER ;no inner chamber so no EVENT_RUINS_OF_ALPH_INNER_CHAMBER_TOURISTS
+	setevent EVENT_WALL_OPENED_IN_KABUTO_CHAMBER
 	setevent EVENT_SOLVED_KABUTO_PUZZLE
 	earthquake 30
 	pause 15
+	playsound SFX_STRENGTH
+	earthquake 80
 	showemote EMOTE_SHOCK, PLAYER, 15
 	changeblock 4, 0, $25 ; open the door to the item room
 	reloadmappart
 	pause 30
-	playsound SFX_STRENGTH
-	earthquake 80
-	pause 30
 	showemote EMOTE_SHOCK, RUINS_SCIENTIST, 15
-	opentext
-	writetext StepBackText
-	promptbutton
-	closetext
 	applymovement PLAYER, PlayerStepBack
-	changeblock 2, 2, $14
-	changeblock 4, 2, $15
-	reloadmappart
 	pause 30
 	applymovement RUINS_SCIENTIST, RuinsScientistMovesToYou
+
 	opentext
-	writetext Scientist_TakeThisReport ;todo need to add an unown report to the key items
+	writetext Scientist_TakeThisReport
 	promptbutton
 	verbosegivekeyitem UNOWNREPORT
 	setmapscene ILEX_FOREST, $2 ; for the celebi event
 	writetext ScientistDescribesUnownReport
 	waitbutton
+
 .TryToGiveUnown
 	writetext Scientist_TakeThisUnown
 	yesorno

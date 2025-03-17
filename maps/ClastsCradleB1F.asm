@@ -28,7 +28,7 @@ ClastsCradleB1F_MapScriptHeader:
 	object_event 22, 8, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_CRADLE_CUTSCENE
 	object_event 27, 14, SPRITE_MEJIMI, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_CRADLE_CUTSCENE
 ; CUTSCENE 2
-	object_event   5,  17, SPRITE_ADRINNA, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerPokefanMRobert, EVENT_BEAT_ADRINNA_MINE
+	object_event   5,  17, SPRITE_ADRINNA, SSPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_ADRINNA_MINE
 	object_event   5,  15, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, HEATRAN, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_CC_HEATRAN
 ; KURT TO HEAL YOU 
 	object_event   5,  17, SPRITE_KURT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerPokefanMRobert, EVENT_BEAT_ADRINNA_MINE
@@ -45,6 +45,42 @@ ClastsCradleB1F_MapScriptHeader:
 	const CRADLE_CUTSCENE_WORKER
 	const CRADLE_CUTSCENE_MEJIMI
 
+KurtScriptCC:
+	faceplayer
+	checkevent EVENT_KURT_INTRO_MINE
+	iftrue .AmosHeals
+	showtext KurtCradleText1
+	setevent EVENT_KURT_INTRO_MINE
+.AmosHeals:
+	showtext KurtHealsTextCC
+	special Special_FadeBlackQuickly
+	special Special_ReloadSpritesNoPalettes
+	special HealParty
+	playmusic MUSIC_HEAL
+	pause 20
+	special RestartMapMusic
+	special Special_FadeInQuickly
+	showtext KurtCradleText2
+	end 
+	
+KurtCradleText1:
+	text "<PLAYER>, I can"
+	line "hear Adrinna up"
+	cont "ahead."
+	
+	para "It sounds like a"
+	line "powerful #mon"
+	cont "is nearby, also."
+	done
+
+KurtHealsTextCC:
+	text "Let me heal you"
+	line "up."
+	done
+
+KurtCradleText2:
+	text "You can do it!"
+	done
 
 ClastsCradleScene1:	
 ;cf western capital

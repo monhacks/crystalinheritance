@@ -169,24 +169,15 @@ AnarresHoltGateNPCAfterText:
     text "That Mystic Water"
     line "will power up"
     cont "Water-type moves."
-    para "Maybe it'll help"
-    line "you discover some"
-    cont "mystical #mon!"
     done
 
 AnarresHoltGateNPCRepeatText:
     text "I hope that Mystic"
     line "Water helps you"
     cont "on your journey!"
-    para "Keep an eye out"
-    line "for mysterious"
-    cont "#mon!"
     done
 
 AnarresHoltGateNPCBagFullText:
     text "Oh! Your Bag is"
-    line "full. Make some"
-    cont "room and come"
-    cont "back for this"
-    cont "Mystic Water!"
+    line "full."
     done

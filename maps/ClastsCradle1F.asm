@@ -20,6 +20,7 @@ ClastsCradle1F_MapScriptHeader:
 
 
 	def_bg_events
+; todo: the carts 
 ; HIDDEN ITEMS - BIG_NUGGET X2 AT 30, 11 AND 4, 16 , METAL COAT AT 18, 43
 
 
@@ -35,10 +36,9 @@ ClastsCradle1F_MapScriptHeader:
 	object_event  14, 28, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerEngineerNobel, EVENT_BEAT_ADRINNA_MINE	
 	object_event  11, 39, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerEngineerIngsol, EVENT_BEAT_ADRINNA_MINE
 
-	
-	object_event  32, 11, SPRITE_DRAGON_TAMER, SPRITEMOVEDATA_SPIN_CLOCKWISE, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerDragonTamerHank2, EVENT_BEAT_ADRINNA_MINE	
-	object_event  31, 31, SPRITE_DRAGON_TAMER, SPRITEMOVEDATA_SPIN_CLOCKWISE, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerDragonTamerJones2, EVENT_BEAT_ADRINNA_MINE
-	object_event  16, 13, SPRITE_DRAGON_TAMER, SPRITEMOVEDATA_SPIN_CLOCKWISE, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerDragonTamerLeland2, EVENT_BEAT_ADRINNA_MINE
+	object_event  32, 11, SPRITE_DRAGON_TAMER, SPRITEMOVEDATA_SPIN_CLOCKWISE, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerDragonTamerHank2, EVENT_BEAT_ADRINNA_MINE	
+	object_event  31, 31, SPRITE_DRAGON_TAMER, SPRITEMOVEDATA_SPIN_CLOCKWISE, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerDragonTamerJones2, EVENT_BEAT_ADRINNA_MINE
+	object_event  16, 13, SPRITE_DRAGON_TAMER, SPRITEMOVEDATA_SPIN_CLOCKWISE, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerDragonTamerLeland2, EVENT_BEAT_ADRINNA_MINE
 
 
 
@@ -63,7 +63,7 @@ Cradle1FBoulders:
 	stonetable 5, CRADLE1F_BOULDER1, .Disappear3
 	db -1 ; end
 
-.Disappear1:
+.Disappear2:
 	disappear CRADLE1F_BOULDER1
 	sjump .BouldersCradle1F
 	
@@ -88,31 +88,114 @@ GenericTrainerBrigader16: ; dragons
 	generictrainer BRIGADER, 16, EVENT_BEAT_ROCKET_GRUNTM_16, Brigader16SeenText, Brigader16BeatenText  
 
 Brigader16BeatenText:
-	text "..."
+	text "We're getting so"
+	line "close. You can't'"
+	cont "stop us."
 	done
 
 Brigader16SeenText:
-	text "..."
+	text "Intruder! Turn"
+	line "back now!"
 	done
 	
 GenericTrainerBrigader17: ; poison
 	generictrainer BRIGADER, 17, EVENT_BEAT_ROCKET_GRUNTM_17, Brigader17SeenText, Brigader17BeatenText  
 
 Brigader17BeatenText:
-	text "..."
+	text "Don't hack up a"
+	line "lung."
 	done
 
 Brigader17SeenText:
-	text "..."
+	text "Do you #mon"
+	line "find it hard to"
+	cont "breathe here?"
 	done
 	
 GenericTrainerBrigader18: ; normal
 	generictrainer BRIGADER, 18, EVENT_BEAT_ROCKET_GRUNTM_18, Brigader18SeenText, Brigader18BeatenText  
 
 Brigader18BeatenText:
-	text "..."
+	text "You won't get any"
+	line "further."
 	done
 
 Brigader18SeenText:
-	text "..."
+	text "I've trained with"
+	line "Adrinna, I can"
+	cont "beat you!"
+	done
+	
+GenericTrainerEngineerNobel:
+	generictrainer ENGINEER, NOBEL, EVENT_BEAT_ENGINEER_NOBEL, NobelSeenText, NobelBeatenText  
+
+NobelBeatenText:
+	text "I'm on a short"
+	line "fuse."
+	done
+
+NobelSeenText:
+	text "Whoa, watch out!"
+	line "I'm holding some"
+	cont "dynamite!"
+	done
+
+
+GenericTrainerEngineerIngsol:
+	generictrainer ENGINEER, INGSOL, EVENT_BEAT_ENGINEER_INGSOL, IngsolSeenText, IngsolBeatenText  
+
+IngsolBeatenText:
+	text "If you listen,"
+	line "you can hear the"
+	para "magma coursing"
+	line "beneath us."	
+	done
+
+IngsolSeenText:
+	text "We will reach the"
+	line "heart of this"
+	cont "mountain!"
+	done
+
+GenericTrainerDragonTamerHank2:
+	generictrainer DRAGON_TAMER, HANK2, EVENT_BEAT_DRAGON_TAMER_HANK2, Hank2SeenText, Hank2BeatenText  
+
+Hank2BeatenText:
+	text "They don't rule"
+	line "the caves..."
+	done
+
+Hank2SeenText:
+	text "Dragons will rule"
+	line "the sky!"
+	done
+
+
+GenericTrainerDragonTamerJones2:
+	generictrainer DRAGON_TAMER, JONES2, EVENT_BEAT_DRAGON_TAMER_JONES2, Jones2SeenText, Jones2BeatenText  
+
+Jones2BeatenText:
+	text "Even dragons can"
+	line "melt, I see."
+	done
+
+Jones2SeenText:
+	text "Can you damage my"
+	line "Steel dragons?"
+	done
+
+
+GenericTrainerDragonTamerLeland2:
+	generictrainer DRAGON_TAMER, LELAND2, EVENT_BEAT_DRAGON_TAMER_LELAND2, Leland2SeenText, Leland2BeatenText  
+
+Leland2BeatenText:
+	text "Dragon #mon"
+	line "make history. I'm"
+	cont "done studying it."
+	done
+
+Leland2SeenText:
+	text "You'll be history"
+	line "when I'm done"
+	cont "with you!"
 	done
