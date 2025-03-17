@@ -1,4 +1,4 @@
-ROUTE43GATE_TOLL EQU 1000
+ROUTE43GATE_TOLL EQU 1000 ; don't want to delete... 
 
 Route43Gate_MapScriptHeader:
 	def_scene_scripts
@@ -31,7 +31,7 @@ OfficerScript_GuardWithSludgeBomb:
 	writetext OfficerText_FoundTM
 	yesorno
 	iffalse_jumptextfaceplayer NotTheOne
-	jumptext PoisonJabbarText
+	writetext PoisonJabbarText
 	closetext
 	special Special_FadeBlackQuickly
 	special Special_ReloadSpritesNoPalettes
@@ -53,9 +53,7 @@ OfficerText_FoundTM:
 	done
 
 OfficerText_AvoidGrass:
-	text "Use this gate to"
-	line "avoid walking in"
-	cont "the grass."
+	text "Face your fear!"
 	done
 
 NotTheOne:

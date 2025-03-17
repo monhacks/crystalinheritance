@@ -174,7 +174,7 @@ Route42CharcoalKilnBossText:
 	done
 
 
-GenericTrainerFisherArnold:
+GenericTrainerFisherKyle:
 	generictrainer FISHER, KYLE, EVENT_BEAT_FISHER_KYLE, .SeenText2, .BeatenText2
 
 .BeatenText2:
