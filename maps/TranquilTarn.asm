@@ -11,7 +11,7 @@ TranquilTarn_MapScriptHeader:
 
 
 	def_coord_events
-	coord_event 0, 0, 1, TranquilTarnDestructionScene ; todo 
+	coord_event 0, 0, 0, TranquilTarnDestructionScene ; todo 
 
 
 	def_bg_events
@@ -36,9 +36,37 @@ TranquilTarn_MapScriptHeader:
 	fruittree_event 17, 26, FRUITTREE_TRANQIL_TARN_1, TOUGH_LEAVES, PAL_NPC_GREEN;OK
 	fruittree_event 36,  5, FRUITTREE_TRANQIL_TARN_2, RADIANT_OPAL, PAL_NPC_RED;OK
 	tmhmball_event 27, 17, TM_AVALANCE, EVENT_TM_AVALANCHE
+	itemball_event  0,  0, HYPER_POTION, 1, EVENT_TARN_ITEM_1
+	itemball_event  0,  0, REVIVE, 1, EVENT_TARN_ITEM_2
 
 	object_const_def
 
+
+GenericTrainerBirdKeeperHank:
+	generictrainer BIRD_KEEPER, HANK, EVENT_BEAT_BIRD_KEEPER_HANK, HankSeenText, HankBeatenText
+
+HankBeatenText:
+	text "You whirled us"
+	line "out of the air!"
+	done
+	
+HankSeenText:
+	text "Fly, fly! My bird"
+	line "#mon!"
+	done
+
+GenericTrainerRuinManiacJones:
+	generictrainer RUIN_MANIAC, JONES, EVENT_BEAT_RUIN_MANIAC_JONES, RuinManiacJonesSeenText, RuinManiacJonesBeatenText
+
+RuinManiacJonesBeatenText:
+	text "Rgh! You made me"
+	line "lose my temper!"
+	done
+	
+RuinManiacJonesSeenText:
+	text "Hisui steel won't"
+	line "melt!"
+	done
 
 GenericTrainerRuinManiacLeland:
 	generictrainer RUIN_MANIAC, ROB, EVENT_BEAT_RUIN_MANIAC_ROB, RuinManiacLelandSeenText, RuinManiacLelandBeatenText
@@ -135,6 +163,6 @@ TranquilTarnDestructionScene:
 	; gyarados are given to the hisuians
 	; hisuians can't control them
 	; the tarn is destroyed 
-	setscene $0
+	setscene $1
 	end
 	

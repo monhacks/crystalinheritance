@@ -24,7 +24,7 @@ MahoganyTown_MapScriptHeader:
 	object_event  6, 14, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, MahoganyTownFisherText, -1
 	object_event 12,  8, SPRITE_CUTE_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, MahoganyTownLassText, -1
 	object_event  7, 14, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MahoganyKurtScript, EVENT_LISTENED_TO_KURT_4 ; 
-
+	object_event 10,  9, SPRITE_GRANNY, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, MahoganyTownGrannyText, -1
 
 	object_const_def
 
@@ -38,6 +38,15 @@ MahoganyTownSouvenirShopSign:
 
 	text "Grandma's"
 	line "Souvenir Shop"
+	done
+
+MahoganyTownGrannyText:
+	text "I hear that at"
+	line "night, an enorm-"
+	cont "ous Ursaring goes"
+	
+	para "around, looking"
+	line "for scraps."
 	done
 
 MahoganyTownGrampsScript:

@@ -2,19 +2,6 @@ LakeOfRage_MapScriptHeader:
 	def_scene_scripts
 
 
-
-;	para "Take us back to"
-;	line "days of old,"
-;	
-;	para "When balance"
-;	line "stood intact,"
-;	
-;	para "Let truth now"
-;	line "be retold,"
-;	
-;	para "The past we"
-;	line "must enact."
-
 	def_callbacks
 	callback MAPCALLBACK_NEWMAP, LakeOfRageFlyPoint
 
@@ -24,6 +11,7 @@ LakeOfRage_MapScriptHeader:
 	warp_event 27, 31, LAKE_OF_RAGE_MAGIKARP_HOUSE, 1
 
 	def_coord_events
+	coord_event 0, 0, 0, LakeShrineEvent
 
 	def_bg_events
 	bg_event 21, 27, BGEVENT_JUMPTEXT, LakeOfRageSignText
@@ -31,35 +19,82 @@ LakeOfRage_MapScriptHeader:
 	bg_event 35,  5, BGEVENT_ITEM + MAX_POTION, EVENT_LAKE_OF_RAGE_HIDDEN_MAX_POTION
 	bg_event 11, 28, BGEVENT_ITEM + FULL_RESTORE, EVENT_LAKE_OF_RAGE_HIDDEN_FULL_RESTORE
 
+
 	def_object_events
 	; SIGHTSEERm blaise, gareth, sightseerf kamila, noelle, POKEMANIACS CALVIN AND SHANE 
-	object_event  4,  4, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, WesleyScript, -1
+	object_event 0, 0, SPRITE_PRYCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT,0, LakePryceScript, EVENT_LAKE_PRYCE ; INITIALIZE todo 
+	object_event 0, 0, SPRITE_KURT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LAKE_KURT ; INITIALIZE 
+	object_event 0, 0, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LAKE_RIVAL ; INITIALIZE 
 ;trainers
-	object_event  4, 15, SPRITE_ACE_TRAINER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerCooltrainermAaron, -1
-	object_event 36,  7, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerCooltrainerfLois, -1
-	object_event 30, 23, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerFisherAndre, -1
-	object_event 24, 26, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerFisherRaymond, -1
-;itemballs 
+	object_event  4,  4, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, WesleyScript, -1
+	pokemon_event 0,  0, MEOWTH, -1, -1, PAL_NPC_BROWN, WesleyMeowthText, -1
+	object_event  0,  0, SPRITE_SIGHTSEERM, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSightseerMBlaise, -1
+	object_event  0,  0, SPRITE_SIGHTSEERM, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerSightseerMGareth, -1
+	object_event  0,  0, SPRITE_SIGHTSEERF, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSightseerFKamila, -1
+	object_event  0,  0, SPRITE_SIGHTSEERF, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSightseerFNoelle, -1
+	object_event 0, 0,  SPRITE_POKEMANIAC, SPRITEMOVEDATA_STANDING_LEFT, 1, 1, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerPokemaniacCalvin, -1
+	object_event 0, 0,  SPRITE_POKEMANIAC, SPRITEMOVEDATA_STANDING_LEFT, 1, 1, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerPokemaniacShane, -1
+;itemballs
 	itemball_event 13,  2, ELIXIR, 1, EVENT_LAKE_OF_RAGE_ELIXIR
 	itemball_event  7, 10, MAX_REVIVE, 1, EVENT_LAKE_OF_RAGE_MAX_REVIVE
 	tmhmball_event 31, 3, TM_WILD_CHARGE, EVENT_GOT_TM_WILD_CHARGE 
 
 	object_const_def
-	const LAKEOFRAGE_WESLEY
+	const LAKEOFRAGE_PRYCE
+	const LAKEOFRAGE_KURT
+	const LAKEOFRAGE_RIVAL 
 
 LakeOfRageFlyPoint:
 	setflag ENGINE_FLYPOINT_LAKE_OF_RAGE
 	endcallback
 
+
 LakeOfRageSignText:
-	text "_ake _f R__e"
+	text "Sil__ _pring_"
 	
-	para "..."
+	para "Form___y kn__n"
+	line "L___ __ _a_e"
 	
 	para "The paint on the"
 	line "sign is faded."
 	done
 
+LakePryceScript:
+	showtext LakeShrineQuestion
+	yesorno
+	iffalse_jumptext LakeNoText
+	showtext LakePrayerText
+	waitbutton
+	playsound SFX_WARP_TO
+	special FadeOutPalettes
+	waitsfx
+	warp TRANQUIL_TARN, 0, 0 ; TODO GET THIS COORDINATE 
+	end
+
+LakeShrineQuestion:
+	text "Pryce: <PLAYER>,"
+	line "would you like to"
+	cont "pray to Celebi"
+	cont "with me?"
+	done
+
+LakeNoText:
+	text "Some other time."
+	done
+
+LakePrayerText:
+	text "Take us back to"
+	line "days of old,"
+	
+	para "When balance"
+	line "stood intact,"
+	
+	para "Let truth now"
+	line "be retold,"
+	
+	para "The past we"
+	line "must enact."
+	done
 
 WesleyScript:
 	checkevent EVENT_GOT_BLACK_BELT_FROM_WESLEY
@@ -99,8 +134,6 @@ WesleyGivesGiftText:
 	
 	para "Dynamicpunch: it"
 	line "will hit or miss,"
-	cont "devastating for"
-	cont "either party,"
 	
 	para "But you won't"
 	line "know which until"
@@ -108,9 +141,7 @@ WesleyGivesGiftText:
 	
 	para "Exactly like the"
 	line "famous experiment"
-	para "with the Meowth"
-	line "in the box with"
-	cont "the radioact-"
+	cont "with the Meowth-"
 	
 	para "Oh, nevermind."
 	done
@@ -123,137 +154,74 @@ WesleyDynamicPunchText:
 	line "is unknown."	
 	done
 
-GenericTrainerCooltrainermAaron:
-	generictrainer COOLTRAINERM, AARON, EVENT_BEAT_COOLTRAINERM_AARON, .SeenText, .BeatenText
-
-	text "#mon and their"
-	line "trainer become"
-
-	para "powerful through"
-	line "constant battling."
+WesleyMeowthText:
+	text "Meeeowww!"
+	line "It's purring!"
 	done
 
-.SeenText:
-	text "If a trainer spots"
-	line "another trainer,"
+GenericTrainerSightseerFKamila:
+	generictrainer SIGHTSEER_F, KAMILA, EVENT_BEAT_SIGHTSEERF_KAMILA, .SeenText1, .BeatenText1
 
-	para "he has to make a"
-	line "challenge."
-
-	para "That is our"
-	line "destiny."
+.BeatenText1:
+	text "..."
 	done
 
-.BeatenText:
-	text "Whew…"
-	line "Good battle."
+.SeenText1:
+	text "..."
 	done
 
-GenericTrainerCooltrainerfLois:
-	generictrainer COOLTRAINERF, LOIS, EVENT_BEAT_COOLTRAINERF_LOIS, .SeenText, .BeatenText
+GenericTrainerSightseerFNoelle:
+	generictrainer SIGHTSEER_F, NOELLE, EVENT_BEAT_SIGHTSEERF_NOELLE, .SeenText2, .BeatenText2
 
-	text "Come to think of"
-	line "it, I've seen a"
-	cont "pink Butterfree."
+.BeatenText2:
+	text "..."
 	done
 
-.SeenText:
-	text "What happened to"
-	line "the red Gyarados?"
-
-	para "It's gone?"
-
-	para "Oh, darn. I came"
-	line "here for nothing?"
-
-	para "I know--let's"
-	line "battle!"
+.SeenText2:
+	text "..."
 	done
-
-.BeatenText:
-	text "Good going!"
-	done
-
-GenericTrainerFisherAndre:
-	generictrainer FISHER, ANDRE, EVENT_BEAT_FISHER_ANDRE, FisherAndreSeenText, FisherAndreBeatenText
-
-	text "I won't lose as an"
-	line "angler! I catch"
-	cont "#mon all day."
-	done
-
-FisherAndreSeenText:
-	text "Let me battle with"
-	line "the #mon I just"
-	cont "caught!"
-	done
-
-FisherAndreBeatenText:
-	text "I might be an ex-"
-	line "pert angler, but"
-
-	para "I stink as a #-"
-	line "mon trainer…"
-	done
-
-GenericTrainerFisherRaymond:
-	generictrainer FISHER, RAYMOND, EVENT_BEAT_FISHER_RAYMOND, FisherRaymondSeenText, FisherRaymondBeatenText
-
-	text "Why can't I catch"
-	line "any good #mon?"
-	done
-
-FisherRaymondSeenText:
-	text "No matter what I"
-	line "do, all I catch"
-
-	para "are the same #-"
-	line "mon…"
-	done
-
-FisherRaymondBeatenText:
-	text "My line's all"
-	line "tangled up…"
-	done
-
-LakeOfRageGrampsScript:
-	jumpthistextfaceplayer
-
-	text "The Gyarados are"
-	line "angry!"
-
-	para "It's a bad omen!"
-	done
-
-.Text2:
-	text "Hahah! The Magi-"
-	line "karp are biting!"
-	done
-
-LakeOfRageSuperNerdText:
-	text "I heard this lake"
-	line "was made by ram-"
-	cont "paging Gyarados."
-
-	para "I wonder if there"
-	line "is any connection"
-
-	para "to their mass out-"
-	line "break now?"
-	done
-
-LakeOfRageCooltrainerFText:
-	text "Did my eyes de-"
-	line "ceive me? I saw a"
-
-	para "red Gyarados in"
-	line "the lake…"
-
-	para "But I thought"
-	line "Gyarados were"
-	cont "usually blue?"
-	done
-
-
-
 	
+GenericTrainerSightseerMBlaise:
+	generictrainer SIGHTSEER_F, BLAISE, EVENT_BEAT_SIGHTSEERM_BLAISE, .SeenText3, .BeatenText3
+
+.BeatenText3:
+	text "..."
+	done
+
+.SeenText3:
+	text "..."
+	done
+
+GenericTrainerSightseerMGareth:
+	generictrainer SIGHTSEER_F, GARETH, EVENT_BEAT_SIGHTSEERM_GARETH, .SeenText4, .BeatenText4
+
+.BeatenText4:
+	text "..."
+	done
+
+.SeenText4:
+	text "..."
+	done
+
+GenericTrainerPokemaniacCalvin:
+	generictrainer POKEMANIAC, CALVIN, EVENT_BEAT_POKEMANIAC_CALVIN, .SeenText5, .BeatenText5
+
+.BeatenText5:
+	text "..."
+	done
+
+.SeenText5:
+	text "..."
+	done
+
+
+GenericTrainerPokemaniacShane:
+	generictrainer POKEMANIAC, SHANE, EVENT_BEAT_POKEMANIAC_SHANE, .SeenText6, .BeatenText6
+
+.BeatenText6:
+	text "..."
+	done
+
+.SeenText6:
+	text "..."
+	done

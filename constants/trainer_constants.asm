@@ -112,18 +112,18 @@ KRIS EQU __trainer_class__
 	trainerclass RIVAL2 ; 1c
 
 	trainerclass NINJA ; 1d FORMERLY LYRA1
-	const NINJA_1
-	const NINJA_2
-	const NINJA_3
-	const NINJA_4
-	const NINJA_5
-	const NINJA_6
-	const NINJA_7
-	const NINJA_8
-	const NINJA_9
-	const NINJA_10
-	const NINJA_11
-	const NINJA_12
+	const NINJA1
+	const NINJA2
+	const NINJA3
+	const NINJA4
+	const NINJA5
+	const NINJA6
+	const NINJA7
+	const NINJA8
+	const NINJA9
+	const NINJA10
+	const NINJA11
+	const NINJA12
 
 	trainerclass LYRA2 ; 1e
 

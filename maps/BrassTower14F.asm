@@ -19,7 +19,7 @@ BrassTower14F_MapScriptHeader:
 
 	def_object_events
 	object_event  0, 0, SPRITE_ELDER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerElderHiroshi, -1 ; generous
-
+; flareon 
 
 	object_const_def
 

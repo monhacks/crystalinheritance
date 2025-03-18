@@ -18,12 +18,10 @@ BrassTower19F_MapScriptHeader:
 
 
 	def_object_events
-	pokemon_event  4, 10, FLAREON, -1, -1, PAL_NPC_RED, BrassTower19FFlareonText, EVENT_BRASS_TOWER_FLAREON
-	pokemon_event  4, 10, FLAREON, -1, -1, PAL_NPC_RED, BrassTower19FFlareonText, EVENT_BRASS_TOWER_FLAREON
-	pokemon_event  4, 10, VAPOREON, -1, -1, PAL_NPC_BLUE, BrassTower19FVaporeonText, EVENT_BRASS_TOWER_VAPOREON
-	pokemon_event  4, 10, VAPOREON, -1, -1, PAL_NPC_BLUE, BrassTower19FVaporeonText, EVENT_BRASS_TOWER_VAPOREON
-	pokemon_event  4, 10, JOLTEON, -1, -1, PAL_NPC_BROWN, BrassTower19FJolteonText, EVENT_BRASS_TOWER_JOLTEON
-	pokemon_event  4, 10, JOLTEON, -1, -1, PAL_NPC_BROWN, BrassTower19FJolteonText, EVENT_BRASS_TOWER_JOLTEON
+	pokemon_event  1, 10, 	FLAREON, 	-1, -1, PAL_NPC_RED, BrassTower19FFlareonText, EVENT_BRASS_TOWER_FLAREON
+	pokemon_event  14,  6, 	VAPOREON, 	-1, -1, PAL_NPC_BLUE, BrassTower19FVaporeonText, EVENT_BRASS_TOWER_VAPOREON
+	pokemon_event  1,  2, 	JOLTEON, 	-1, -1, PAL_NPC_BROWN, BrassTower19FJolteonText, EVENT_BRASS_TOWER_JOLTEON
+
 
 
 	object_const_def

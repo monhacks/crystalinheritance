@@ -19,7 +19,43 @@ RebelsRedoubtB1F_MapScriptHeader:
 
 
 	def_object_events
-
+	object_event  0,  0, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerNinja7, EVENT_BEAT_AMOS;veil
+	object_event  0,  0, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerNinja8, EVENT_BEAT_AMOS;shade 
+	object_event  0,  0, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerNinja9, EVENT_BEAT_AMOS;haze 
 
 
 	object_const_def
+
+
+GenericTrainerNinja7: ; 
+	generictrainer NINJA, NINJA7, EVENT_BEAT_NINJA7, .SeenText7, .BeatenText7
+
+.BeatenText7:
+	text "..."
+	done
+
+.SeenText7:
+	text "..."
+	done
+
+GenericTrainerNinja8: ; 
+	generictrainer NINJA, NINJA8, EVENT_BEAT_NINJA8, .SeenText8, .BeatenText8
+
+.BeatenText8:
+	text "..."
+	done
+
+.SeenText8:
+	text "..."
+	done
+	
+GenericTrainerNinja9: ; 
+	generictrainer NINJA, NINJA9, EVENT_BEAT_NINJA9, .SeenText9, .BeatenText9
+
+.BeatenText9:
+	text "..."
+	done
+
+.SeenText9:
+	text "..."
+	done

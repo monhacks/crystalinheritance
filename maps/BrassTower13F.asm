@@ -21,10 +21,13 @@ BrassTower13F_MapScriptHeader:
 
 	def_object_events
 	object_event  10,  8, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, UNOWN, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BrassTower13FUnownScript, EVENT_BRASS_TOWER_13F_UNOWN
+
 	pokemon_event  3,  5, GENGAR, -1, -1, PAL_NPC_RED, BrassTowerGuardText, EVENT_BRASS_TOWER_RIGHT_GUARD
 	pokemon_event  11, 12, GENGAR, -1, -1, PAL_NPC_RED, BrassTowerGuardText, EVENT_BRASS_TOWER_RIGHT_GUARD
+
 	pokemon_event  10,  5, MISDREAVUS, -1, -1, PAL_NPC_RED, BrassTowerGuardText, EVENT_BRASS_TOWER_LEFT_GUARD
 	pokemon_event  2, 12, MISDREAVUS, -1, -1, PAL_NPC_RED, BrassTowerGuardText, EVENT_BRASS_TOWER_LEFT_GUARD
+
 	object_event  1, 6, SPRITE_ELDER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerElderIsamu, -1 ; courage
 	object_event  12,6, SPRITE_ELDER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerElderKaito, -1 ; sea, soar
 
@@ -59,6 +62,15 @@ AskSwitchToLeft:
 	reloadmap
 	endtext
 
+
+SwitchSpiritsText:
+	text "Change spirits?"
+	done
+
+NotSwitchingText:
+	text "Unchanged."
+	done
+
 BrassTower13FUnownScript:
 	showtext BrassTowerUnownText
 	cry UNOWN
@@ -76,16 +88,6 @@ BrassTowerUnownText:
 	cont "the tower!"
 	done
 
-SwitchSpiritsText:
-	text "Change spirits?"
-	done
-
-NotSwitchingText:
-	text "Unchanged."
-	done
-
-
-
 GenericTrainerElderIsamu:
     generictrainer ELDER, ISAMU, EVENT_BEAT_ELDER_ISAMU, IsamuSeenText, IsamuBeatenText
 
@@ -98,7 +100,6 @@ IsamuSeenText:
 	text "I fight with"
 	line "courage!"
 	done
-	
 	
 
 GenericTrainerElderKaito:

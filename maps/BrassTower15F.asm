@@ -17,7 +17,7 @@ BrassTower15F_MapScriptHeader:
 
 
 	def_bg_events
-
+;switch 
 
 
 	def_object_events
