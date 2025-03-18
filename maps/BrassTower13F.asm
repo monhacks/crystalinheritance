@@ -75,6 +75,7 @@ BrassTower13FUnownScript:
 	showtext BrassTowerUnownText
 	cry UNOWN
 	pause 15
+	loadvar VAR_BATTLETYPE, BATTLETYPE_TRAP
 	loadwildmon UNOWN, 50
 	startbattle
 	disappear BRASS_TOWER_13F_UNOWN
@@ -82,6 +83,7 @@ BrassTower13FUnownScript:
 	reloadmapafterbattle
 	end
 	
+
 BrassTowerUnownText:
 	text "The Unown proj-"
 	line "ects an aura on"
