@@ -10,6 +10,7 @@ Many of these changes were made to Polished Crystal 3.0.0.
 ## Moves
 
 * Learnsets have been updated close to Gen VI, with missing moves replaced by similar, egg, TM, or event-exclusive moves. See data/pokemon/evos_attacks or data/pokemon/base_stats/<name> for level-up and TMHM learnsets.
+* HM moves do not require move deleter to overwrite.
 
 ## Battle Mechanics
 

@@ -26,7 +26,7 @@ The game's [data files](data/) do a fairly good job of listing things you'll wan
 * [Wild Pokémon](data/wild/)
 * TODO: Trainer Parties and movesets (Spoilers!)
 
-A route-by-route encounter table is posted in at ___ (insert screenshot or excel table)
+A route-by-route encounter table is posted at ___ (insert screenshot or excel table)
 
 ### My Pokémon is a different color, is it shiny?
 
@@ -56,14 +56,16 @@ There's only room for 255 moves, including Struggle. I wanted to fit in as many 
 
 ### How do I evolve my Pokémon?
 
+* Most weak first forms evolve at Lv. 12 (e.g. starters, wooper, ... ) 
+* Pokemon evolve into Hisui forms while holding the Hisui Stone from a standard pre-evolution (Hisuian forms: Typhlosion, Samurott, Decidueye, Arcanine, Electrode, Overqwil (from standard Qwilfish), Sneasler (from standard Sneasel), Wyrdeer (from Stantler))
+* Kadabra, Graveler, Machoke, Haunter evolve at Lv. 40 
+* Ponyta, Grimer, Rhydon evolve at Lv. 25
 * Item trade evolutions (like Seadra into Kingdra while holding a Dragon Scale) now evolve while holding the item.
+* Magneton evoles with a Thunderstone. 
+* Ursaring evolves with a Moon Stone 
 * Yanma, Tangela, and Piloswine evolve while knowing AncientPower.
-* Eevee evolves into Leafeon in Ilex Forest, site of the Moss Rock.
-* Eevee evolves into Glaceon in the Ice Path, site of the Ice Rock.
-* Eevee evolves into Sylveon with a Shiny Stone.
-* Magneton evolves into Magnezone in Rock Tunnel, site of the Lodestone.
-* Machoke, Graveler, Haunter, and Kadabra evolve by having sufficient EVs in Attack, Defense, Speed, and Special respectively (five Protein, Iron, Carbos, or Calcium is enough).
-* TODO: Insert other unique evolutions
+* Eevee evoles into Espeon with Sun Stone; Umbreon with Dusk Stone, Leafeon with Leaf Stone, Glaceon with Ice Stone, Sylveon with Shiny Stone. 
+
 
 ### Where do I get this item?
 
@@ -93,26 +95,14 @@ Gauldenrod:
 Goldenrod:
 Violet:
 Dance Theatre:
+Western Capital: 
 Trader's Landing Port:
 Lighthouse:
 Mahogany:
-Sinjoh Meeting:
+Sinjoh:
 Eerie Hamlet:
 Final Gauntlet:
 Final Boss:
-
-### Wait, who is this character?
-
-Hollis:
-Tammy:
-Mejimi:
-Bobesh:
-Kensey:
-Adrinna:
-Samsara:
-Barbeau:
-Kanna:
-Amos:
 
 
 
@@ -139,36 +129,53 @@ Legendary pokemon not encountered as part of the plot are found in the locations
 
 *Entei: Solve the last Alph puzzle and use the item obtained on the rock indent on the eastern half of Route 42. 
 *Suicune: Save the Miltank on Route 39. 
-*Raikou: Top of Lighthouse 
+*Raikou: Top of Lighthouse with Lugia or Politoed in the party 
 *Lugia: Historic Whirl Islands (Sheltered Shores), requires waterfall
-*Ho-Oh: Show Morty any of the legendary beasts, defeat him, and ascend Tin Tower. 
-*Heatran: End of Clast's Cradle. 
+*Ho-Oh: Show Morty any of the legendary beasts, defeat him, to get Rainbow Wing; acquire Clear Bell from Pryce; ascend Tin Tower. 
+*Celebi: Timeless Tapestry
 
 ### I'm stuck on the trade quest for the master ball!
 
-...
-
+0. Mint Leaf in Azalea Pokecenter
+1. TInymushroom in Anarres North House
+2. Lemonade in Gauldenrod Southwest House
+3. Brick Piece in National Park
+4. Ragecandybar in Goldenrod Museum 2F
+5. Big Mushroom in Violet West House
+6. Liteblue Mail in Ecruteak West House
+7. Gold Leaf in Ecruteak Central House
+8. Light Ball in Olivine City
+9. Pearl in Trader's Landing
+10. Surf Mail in Olivine City 
+11. Old Amber in Mahogany
+12. Sweet Honey in Eerie Hamlet
+13. Master Ball in historic Tin Tower 1F
 
 ### I can't figure out this puzzle!
 
 Puzzle solutions are posted on youtube: (TODO)
 
 Kimono puzzles:
+	Kimono 1:
+	Kimono 2:
+	Kimono 3:
+	Kimono 4:
+	Kimono 5: 
 
-Whirl Island:
+Historic Tin Tower: 
+
+Whirl Island + Sheltered Shores:
 
 Clast's Cradle (historic Mt Mortar): 
+
+Grottoed Glacier:
+
+Western Glacier:
 
 Brass Tower:
 
 ### Where did this Pokémon go?
 
-Most first forms were removed to make room for more evolutionary lines. 
+Many first forms were removed to make room for more evolutionary lines. 
 
-Others whose types were already overrepresented (normal-flying, for example) were cut entirely.
-
-### I want the missing Pokémon back!
-
-As [FEATURES.md](FEATURES.md) notes, 14 Pokémon had to be removed to make room for 17 Pokémon from Gen 4 (as well as Sylveon from Gen 6 to complete the Eeveelutions). I won't be able to restore them until the engine supports species IDs larger than 8 bits. There are some plans for 9-bit IDs, allowing over 500 Pokémon, but it will take time.
-
-I do think that the added Pokémon are one part of "polishing" Crystal version. Some of the new or improved things from Gen 4, like Leafeon, Tangrowth, or the extra map of Slowpoke Well, were originally planned for Gen 2, as we now know from the [Space World '97](https://tcrf.net/Proto:Pok%C3%A9mon_Gold_and_Silver/Spaceworld_1997_Demo) ROMs. The Sinjoh Ruins in HG/SS emphasize this connection between Johto/Gen 2 and Sinnoh/Gen 4. Although cutting any Pokémon is regrettable, I'd consider skipping Pokémon like Porygon-Z or Honchkrow to be worse than replacing Delibird or Lickitung.
+Evolution lines whose types were already overrepresented (normal-flying, for example) were cut.

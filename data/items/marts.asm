@@ -318,16 +318,15 @@ GauldenrodMart3: ; TMs, HMs
 	db -1
 
 TradersLandingMart_Items:
-	db 9 ; # items
+	db 8 ; # items
+	db RARE_CANDY
+	db MAX_REPEL
+	db HYPER_POTION
 	db GREAT_BALL
 	db HEAL_BALL
-	db POTION
-	db SUPER_POTION
-	db MAX_REPEL
-	db ANTIDOTE
-	db PARALYZEHEAL
-	db AWAKENING
-	db BURN_HEAL
+	db FULL_HEAL
+	db X_ATTACK
+	db X_SPEED
 	db -1
 
 SinjohCrossroadsMart:
@@ -338,15 +337,14 @@ SinjohCrossroadsMart:
 	db FULL_HEAL
 	db REVIVE
 	db ODD_SOUVENIR
-	db POKE_BALL
+	db ULTRA_BALL
 	db -1
 
 EerieHamletMart:
 	db 11 ; # items
 	db RARE_CANDY
 	db MAX_REPEL
-	db HYPER_POTION
-	db FULL_HEAL
+	db FULL_RESTORE
 	db REVIVE
 	db JEZE_BALL
 	db BUB_BALL
@@ -420,7 +418,7 @@ OlivineBattleMart:
 	db TOXIC_ORB
 	db -1
 
-SinjohCrossroadsMonMart: ; todo
+SinjohCrossroadsMonMart: ; UNUSED
 	db 4 ; # items
 	db DRAGON_SCALE
 	db SCOPE_LENS
@@ -428,9 +426,8 @@ SinjohCrossroadsMonMart: ; todo
 	db FOCUS_SASH
 	db -1
 
-GauldenrodTMMart: ; todo
-	db 4 ; # items
-	db TM_PROTECT
+GauldenrodTMMart: ; UNUSED
+	db 3 ; # items
 	db POWER_HERB
 	db WHITE_HERB
 	db BIG_ROOT
@@ -454,7 +451,6 @@ BattleTowerMart1:
 	db EXPERT_BELT,  32
 	db MUSCLE_BAND,  32
 	db WISE_GLASSES, 32
-;	db METRONOME_I,  32
 	db BINDING_BAND, 32
 	db GRIP_CLAW,    32
 	db -1

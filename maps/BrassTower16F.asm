@@ -17,13 +17,14 @@ BrassTower16F_MapScriptHeader:
 
 
 	def_bg_events
-
-
+	bg_event 12, 0, BGEVENT_READ, BrassTowerSwitchScript  ;  cf warehouse entrance basement key .... 
+	bg_event 10, 12, BGEVENT_READ, BrassTowerSwitchScript  ;  cf warehouse entrance basement key .... 
 
 	def_object_events
-; UNOWN AT 8, 15 
-; FLAREON AT 4, 6
-	object_event  0, 0, SPRITE_ELDER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerElderTadao, -1 ; loyal
+	object_event  2, 12, SPRITE_ELDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerElderTadao, -1 ; loyal
+	pokemon_event   9, 2, GENGAR, -1, -1, PAL_NPC_RED, BrassTowerGuardText, EVENT_BRASS_TOWER_RIGHT_GUARD
+	pokemon_event  8,  8, MISDREAVUS, -1, -1, PAL_NPC_RED, BrassTowerGuardText, EVENT_BRASS_TOWER_LEFT_GUARD	
+	
 	
 	object_const_def
 

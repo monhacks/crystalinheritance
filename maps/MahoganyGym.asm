@@ -10,18 +10,18 @@ MahoganyGym_MapScriptHeader:
 	def_coord_events
 
 	def_bg_events
-	bg_event  3, 15, BGEVENT_READ, MahoganyGymStatue
-	bg_event  6, 15, BGEVENT_READ, MahoganyGymStatue
+	bg_event  3, 15, BGEVENT_JUMPTEXT, MahoganyGymStatue
+	bg_event  6, 15, BGEVENT_JUMPTEXT, MahoganyGymStatue
 
 	def_object_events
-	object_event  5,  3, SPRITE_PRYCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MahoganyGymPryceScript, -1
+	object_event  5,  3, SPRITE_PRYCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MahoganyGymPryceScript, EVENT_GOT_TM_CALM_MIND
 ;trainers feel proud of pryce
-	object_event  4,  6, SPRITE_SKIER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSkierRoxanne, -1
-	object_event  9, 17, SPRITE_SKIER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSkierClarissa, -1
+	object_event  2, 16, SPRITE_SKIER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerSkierRoxanne, -1
+	object_event  8,  2, SPRITE_SKIER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSkierClarissa, -1
 	
-	object_event  0, 17, SPRITE_BOARDER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBoarderRonald, -1
-	object_event  5,  9, SPRITE_BOARDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBoarderBrad, -1
-	object_event  2,  4, SPRITE_BOARDER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBoarderDouglas, -1
+	object_event  2, 17, SPRITE_BOARDER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBoarderRonald, -1
+	object_event  3, 12, SPRITE_BOARDER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBoarderBrad, -1
+	object_event  0,  3, SPRITE_BOARDER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBoarderDouglas, -1
 
 MahoganyGymPryceScript:
 	faceplayer
@@ -43,7 +43,7 @@ MahoganyGymPryceScript:
 	setflag ENGINE_GLACIERBADGE
 .FightDone:
 	checkevent EVENT_GOT_TM_CALM_MIND
-	iftrue_jumpopenedtext PryceText_CherishYourPokemon
+	iftrue_jumpopenedtext PryceText_MeetYouAtTheLake
 	setevent EVENT_BEAT_SKIER_ROXANNE
 	setevent EVENT_BEAT_SKIER_CLARISSA
 	setevent EVENT_BEAT_BOARDER_RONALD
@@ -54,44 +54,54 @@ MahoganyGymPryceScript:
 	verbosegivetmhm TM_CALM_MIND
 	setevent EVENT_GOT_TM_CALM_MIND 
 	writetext PryceText_CalmMindText
+	promptbutton
+	vebosegivekeyitem CLEAR_BELL
 	writetext PryceText_ClearBell
-	givekeyitem CLEAR_BELL
+	promptbutton
+	writetext PryceText_MeetYouAtTheLake
 	closetext
 	end
 
+	PryceText_Intro: ; done 
+	text "<PLAYER>, Kurt"
+	line "told me about the"
+	cont "troubles you two"
+	cont "faced together."
+	para "I know his heart"
+	line "was in the right"
+	cont "place, but I hope"
+	para "you will show"
+	line "better judgement"
+	cont "if you ever get"
+	cont "the same choice."
+
+	para "...So you want to"
+	line "go to the Lake"
+	cont "to finish your"
+	cont "quest."
 	
-PryceText_CalmMindText: ; todo 
-	text "That TM contains"
-	line "Calm Mind."
-
-	para "It embodies the"
-	line "power that comes"
-	cont "from honing your"
-	
-	para "mind on other 
-	
-	done
-
-
-	
-
-
-MahoganyGymStatue:
-	gettrainername PRYCE, 1, $1
-	checkflag ENGINE_GLACIERBADGE
-	iftrue .Beaten
-	jumpstd gymstatue1
-.Beaten:
-	readvar VAR_BADGES
-	jumpstd gymstatue2
-
-
-PryceText_Intro: ; todo 
-	text "..."
+	para "I'm of two minds."
+	para "Changing the past"
+	line "to fix today..."
+	cont "It's tempting."
+	para "But what about"
+	line "staying here to"
+	cont "build a better"
+	cont "future?"
+	para "...I'll help you"
+	line "on one condition:"
+	para "Prove your #mon"
+	line "have the spirit"
+	cont "to inspire change"
+	para "in the hearts of"
+	line "others."
+	para "Show me that"
+	line "power!"
 	done
 
 PryceText_Impressed: ; todo 
-	text "..."
+	text "Your #mon"
+	line "fight as a team!"
 
 	para "You are worthy of"
 	line "this Badge!"
@@ -107,8 +117,38 @@ PryceText_GlacierBadgeSpeech: ; todo
 	line "from me."
 	done
 
-PryceText_CherishYourPokemon:
-	text "..." ; todo 
+PryceText_CalmMindText: ; revise, fix  
+	text "That TM contains"
+	line "Calm Mind."
+
+	para "Some meditation"
+	line "before challenges"
+	cont "will put you on"
+	cont "firm ground!"	
+	
+	para "Oh, one more"
+	line "thing for you."
+	done
+
+PryceText_ClearBell
+	text "Morty gave me"
+	line "those when he"
+	cont "left his gym."
+	
+	para "I think you are"
+	line "worthy to have"
+	cont "one."
+	done
+
+PryceText_MeetYouAtTheLake:
+	text "Now make haste!"
+	line "Meet me on the"
+	cont "north shore of"
+	cont "the Lake."
+	
+	para "It's a long trek"
+	line "so make sure you"
+	cont "have supplies."
 	done
 
 
@@ -117,11 +157,13 @@ GenericTrainerSkierRoxanne:
 	generictrainer SKIER, ROXANNE, EVENT_BEAT_SKIER_ROXANNE, SkierRoxanneSeenText, SkierRoxanneBeatenText
 
 SkierRoxanneBeatenText:
-	text "..."
+	text "You've got some"
+	line "skills!"
 	done
 
 SkierRoxanneSeenText:
-	text "..."
+	text "This is no"
+	line "bunny slope!"
 	done
 
 
@@ -129,13 +171,14 @@ GenericTrainerSkierClarissa:
 	generictrainer SKIER, CLARISSA, EVENT_BEAT_SKIER_CLARISSA, SkierClarissaSeenText, SkierClarissaBeatenText
 
 SkierClarissaBeatenText:
-	text "No! You made me"
-	line "wipe out!"
+	text "Don't let bumps"
+	line "throw you off"
+	cont "course."	
 	done
 
 SkierClarissaSeenText:
-	text "Check out my"
-	line "parallel turn!"
+	text "Can you keep your"
+	line "cool on moguls?"
 	done
 
 
@@ -144,7 +187,9 @@ GenericTrainerBoarderDouglas:
 
 
 BoarderDouglasBeatenText:
-	text "..."
+	text "He meditated in"
+	line "the lake in"
+	cont "Winter."
 	done
 
 BoarderDouglasSeenText:
@@ -157,14 +202,18 @@ GenericTrainerBoarderRonald:
 	generictrainer BOARDER, RONALD, EVENT_BEAT_BOARDER_RONALD, BoarderRonaldSeenText, BoarderRonaldBeatenText
 
 BoarderRonaldBeatenText:
-	text "Darn. I couldn't"
-	line "do a thing."
+	text "Gyms are places"
+	line "to learn. A shame"
+	cont "they're nearly"
+	cont "gone."
 	done
 
 BoarderRonaldSeenText:
-	text "I'll freeze your"
-	line "#mon, so you"
-	cont "can't do a thing!"
+	text "We're one of the"
+	line "last Johto gyms-"
+	
+	para "Come to see what"
+	line "we're about?"
 	done
 
 
@@ -178,13 +227,18 @@ BoarderBradBeatenText:
 	done
 
 BoarderBradSeenText:
-	text "This Gym has a"
-	line "slippery floor."
+	text "Watch out - I'm"
+	line "vying to take the"
+	cont "gym over after"
+	cont "Pryce!"
+	done
 
-	para "It's fun, isn't"
-	line "it?"
 
-	para "But hey--we're"
-	line "not playing games"
-	cont "here!"
+MahoganyGymStatue:
+	text "Mahogany Gym"
+	line "Leader: Pryce"
+	
+	para "Learn to keep"
+	line "cool in heated"
+	cont "situations"
 	done

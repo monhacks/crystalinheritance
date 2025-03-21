@@ -6,8 +6,7 @@ RuinsOfAlphHoOhItemRoom_MapScriptHeader: ; HEATRAN
 	def_warp_events
 	warp_event  3,  9, RUINS_OF_ALPH_HO_OH_CHAMBER, 5
 	warp_event  4,  9, RUINS_OF_ALPH_HO_OH_CHAMBER, 5
-	warp_event  3,  1, RUINS_OF_ALPH_HO_OH_WORD_ROOM, 1
-	warp_event  4,  1, RUINS_OF_ALPH_HO_OH_WORD_ROOM, 2
+
 
 	def_coord_events
 
@@ -33,33 +32,39 @@ PumiceHarpScript:
 	writetext HoldingAHarpText
 	promptbutton
 	yesorno
-	iffalse_jumpopenedtext .LeaveItAloneText
+	iffalse_jumpopenedtext LeaveItAloneText
 	verbosegivekeyitem PUMICE_HARP
-	setevent EVENT_GOT_PUMICE_HARP
+	; need a sfx for playing the harp
+	pause 10
+	showemote EMOTE_SHOCK, PLAYER, 10
 	disappear HOOH_ITEM_ROOM_STATUE
-	jumpthisopenedtext
+	setevent EVENT_GOT_PUMICE_HARP
+	jumpopenedtext StatueDissolvesText
 	
-	text "The statue cru-"
-	line "mbles, falling to"
-	cont "the ground in a "
-	cont "pile of ash."
-
-.LeaveItAloneText:
+LeaveItAloneText:
 	text "Better leave it"
 	line "alone."
 	done
 	
 	
 HoldingAHarpText:
-	text "It's a statue of"
-	line "a Kimono girl."
-	
-	para "She's holding a"
-	line "petrified harp,"
-	cont "which has the"
-	cont "outline of a "
-	cont "volcano in its"
-	cont "body."
-	
-	para "Take it?"
+	text "An eerie statue"
+	line "of a Kimono girl"
+	cont "carved from"
+	cont "porous pumice."
+		
+	para "In her hands,"  
+	line "a strange metal" 
+	cont "harp gleams."
+		
+	para "Pluck the"
+	line "strings?"
+	done
+
+StatueDissolvesText:
+	text "The harp's notes"
+	line "resonate with"
+	cont "the pumice. The"
+	cont "statue crumbles"
+	cont "to fine ash."
 	done

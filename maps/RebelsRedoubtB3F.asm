@@ -23,9 +23,13 @@ RebelsRedoubtB3F_MapScriptHeader:
 
 
 	def_object_events
-;hollis at 22, 11 
-;sandra at 19, 11 
-;barbeau at 8, 7 
-
+	object_event 22, 11, SPRITE_HOLLIS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 1, RedoubtHollisScript, EVENT_BEAT_AMOS
+	object_event 19, 11, SPRITE_SANDRA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 1, RedoubtSandraScript, EVENT_BEAT_AMOS
+	object_event  8,  7, SPRITE_BARBEAU, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 1, RedoubtBarbeauScript, EVENT_BEAT_AMOS
+	itemball_event 2, 15, MAX_POTION, 1, EVENT_REDOUBT_ITEM_3
+	itemball_event 13, 15, ELIXIR, 1, EVENT_REDOUBT_ITEM_4
+	itemball_event 15, 11, FULL_RESTORE, 1, EVENT_REDOUBT_ITEM_5
 
 	object_const_def
+
+

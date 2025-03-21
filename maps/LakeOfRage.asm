@@ -11,43 +11,80 @@ LakeOfRage_MapScriptHeader:
 	warp_event 27, 31, LAKE_OF_RAGE_MAGIKARP_HOUSE, 1
 
 	def_coord_events
-	coord_event 0, 0, 0, LakeShrineEvent
+	coord_event 16, 18, 0, LakeHursalunaScript
+
 
 	def_bg_events
 	bg_event 21, 27, BGEVENT_JUMPTEXT, LakeOfRageSignText
-	bg_event  4,  4, BGEVENT_ITEM + RARE_CANDY, EVENT_LAKE_OF_RAGE_HIDDEN_RARE_CANDY
-	bg_event 35,  5, BGEVENT_ITEM + MAX_POTION, EVENT_LAKE_OF_RAGE_HIDDEN_MAX_POTION
+	bg_event  9,  4, BGEVENT_JUMPTEXT, LakeOfRageSignPryceText
+	bg_event 35,  2, BGEVENT_ITEM + ULTRA_BALL, EVENT_LAKE_OF_RAGE_HIDDEN_RARE_CANDY
+	bg_event 10, 13, BGEVENT_ITEM + MAX_POTION, EVENT_LAKE_OF_RAGE_HIDDEN_MAX_POTION
 	bg_event 11, 28, BGEVENT_ITEM + FULL_RESTORE, EVENT_LAKE_OF_RAGE_HIDDEN_FULL_RESTORE
 
 
 	def_object_events
 	; SIGHTSEERm blaise, gareth, sightseerf kamila, noelle, POKEMANIACS CALVIN AND SHANE 
-	object_event 0, 0, SPRITE_PRYCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT,0, LakePryceScript, EVENT_LAKE_PRYCE ; INITIALIZE todo 
-	object_event 0, 0, SPRITE_KURT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LAKE_KURT ; INITIALIZE 
-	object_event 0, 0, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LAKE_RIVAL ; INITIALIZE 
+	object_event 17, 3, SPRITE_PRYCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT,0, LakePryceScript, EVENT_LAKE_PRYCE ; INITIALIZE todo 
+	object_event 23, 3, SPRITE_KURT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LAKE_KURT ; INITIALIZE 
+	object_event 23, 3, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LAKE_RIVAL ; INITIALIZE 
+;HURSALUNA
+	object_event  16,  13, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, H__URSALUNA, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LAKE_HURSALUNA 
 ;trainers
 	object_event  4,  4, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, WesleyScript, -1
-	pokemon_event 0,  0, MEOWTH, -1, -1, PAL_NPC_BROWN, WesleyMeowthText, -1
-	object_event  0,  0, SPRITE_SIGHTSEERM, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSightseerMBlaise, -1
-	object_event  0,  0, SPRITE_SIGHTSEERM, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerSightseerMGareth, -1
-	object_event  0,  0, SPRITE_SIGHTSEERF, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSightseerFKamila, -1
-	object_event  0,  0, SPRITE_SIGHTSEERF, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSightseerFNoelle, -1
-	object_event 0, 0,  SPRITE_POKEMANIAC, SPRITEMOVEDATA_STANDING_LEFT, 1, 1, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerPokemaniacCalvin, -1
-	object_event 0, 0,  SPRITE_POKEMANIAC, SPRITEMOVEDATA_STANDING_LEFT, 1, 1, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerPokemaniacShane, -1
+	pokemon_event 3,  4, MEOWTH, -1, -1, PAL_NPC_BROWN, WesleyMeowthText, -1
+	object_event  5, 23, SPRITE_SIGHTSEERM, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSightseerMBlaise, -1
+	object_event  3, 14, SPRITE_SIGHTSEERM, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSightseerMGareth, -1
+	object_event  23, 29, SPRITE_SIGHTSEERF, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSightseerFKamila, -1
+	object_event  28, 26, SPRITE_SIGHTSEERF, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSightseerFNoelle, -1
+	object_event  18, 30,  SPRITE_POKEMANIAC, SPRITEMOVEDATA_STANDING_LEFT, 1, 1, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerPokemaniacCalvin, -1
+	object_event  33, 22,  SPRITE_POKEMANIAC, SPRITEMOVEDATA_STANDING_LEFT, 1, 1, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerPokemaniacShane, -1
 ;itemballs
-	itemball_event 13,  2, ELIXIR, 1, EVENT_LAKE_OF_RAGE_ELIXIR
-	itemball_event  7, 10, MAX_REVIVE, 1, EVENT_LAKE_OF_RAGE_MAX_REVIVE
+	itemball_event  7,  10, ELIXIR, 1, EVENT_LAKE_OF_RAGE_ELIXIR
+	itemball_event 38,  14, ULTRA_BALL, 1, EVENT_LAKE_OF_RAGE_MAX_REVIVE
 	tmhmball_event 31, 3, TM_WILD_CHARGE, EVENT_GOT_TM_WILD_CHARGE 
 
 	object_const_def
 	const LAKEOFRAGE_PRYCE
 	const LAKEOFRAGE_KURT
 	const LAKEOFRAGE_RIVAL 
+	const LAKEOFRAGE_HURSALUNA
 
 LakeOfRageFlyPoint:
 	setflag ENGINE_FLYPOINT_LAKE_OF_RAGE
 	endcallback
 
+
+LakeHursalunaScript:
+	turnobject PLAYER, UP
+	earthquake 30
+	cry URSARING
+	pause 20
+	showemote PLAYER, EMOTE_SHOCK, 20
+	pause 20
+	applymovement LAKEOFRAGE_HURSALUNA, LakeHursalunaApproachesMovement
+	earthquake 20
+	applymovement LAKEOFRAGE_HURSALUNA, LakeHursalunaApproachesMovement2
+	earthquake 20	
+	loadvar VAR_BATTLETYPE, BATTLETYPE_TRAP
+	loadwildmon H__URSALUNA, 50
+	startbattle
+	disappear LAKEOFRAGE_HURSALUNA
+	reloadmapafterbattle
+	setevent EVENT_LAKE_HURSALUNA
+	setscene $1
+	end
+
+LakeHursalunaApproachesMovement:
+	fix_facing
+	fast_jump_step_down
+	fast_jump_step_down
+	step_end
+
+LakeHursalunaApproachesMovement2:
+	fix_facing
+	fast_jump_step_down
+	fast_jump_step_down
+	step_end
 
 LakeOfRageSignText:
 	text "Sil__ _pring_"
@@ -57,6 +94,10 @@ LakeOfRageSignText:
 	
 	para "The paint on the"
 	line "sign is faded."
+	done
+
+LakeOfRageSignPryceText:
+	text "Pryce's Cabin"
 	done
 
 LakePryceScript:
@@ -167,7 +208,7 @@ GenericTrainerSightseerFKamila:
 	done
 
 .SeenText1:
-	text "..."
+	text ""
 	done
 
 GenericTrainerSightseerFNoelle:

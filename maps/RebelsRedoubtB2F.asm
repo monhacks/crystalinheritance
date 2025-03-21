@@ -3,7 +3,7 @@ RebelsRedoubtB2F_MapScriptHeader:
 
 
 	def_callbacks
-
+;CALLBACKS FOR B3F ELDERS HOLLIS, SAMSARA, BARBEAU 
 
 	def_warp_events
 	warp_event 2, 14, REBELS_REDOUBT_B1F, 3 
@@ -20,14 +20,17 @@ RebelsRedoubtB2F_MapScriptHeader:
 
 
 	def_bg_events
-
+	bg_event 10,  9, BGEVENT_JUMPTEXT, RedoubtB2FStatue1Text
+	bg_event 10,  7, BGEVENT_JUMPTEXT, RedoubtB2FStatue1Text
+	bg_event 10,  5, BGEVENT_JUMPTEXT, RedoubtB2FStatue1Text
 
 
 	def_object_events
-	object_event  0,  0, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerNinja10, EVENT_BEAT_AMOS;wraith
-	object_event  0,  0, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerNinja11, EVENT_BEAT_AMOS;vapor
-	object_event  0,  0, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerNinja12, EVENT_BEAT_AMOS;mirage
-
+	object_event  3, 11, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 1, RedoubtKurtScript, EVENT_BEAT_AMOS;
+	object_event 25,  3, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerNinja10, EVENT_BEAT_AMOS;wraith
+	object_event  9, 11, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerNinja11, EVENT_BEAT_AMOS;vapor
+	object_event 22, 14, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerNinja12, EVENT_BEAT_AMOS;mirage
+	object_event 21,  6, SPRITE_AMOS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 1, RedoubtAmosScript, EVENT_BEAT_AMOS;
 
 
 	object_const_def
@@ -63,4 +66,10 @@ GenericTrainerNinja12: ;
 
 .SeenText12:
 	text "..."
+	done
+
+RedoubtB2FStatue1Text:
+	text "The statue's eyes"
+	line "seem to stare"
+	cont "back."
 	done

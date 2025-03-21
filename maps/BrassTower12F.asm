@@ -16,7 +16,7 @@ BrassTower12F_MapScriptHeader:
 
 
 	def_bg_events
-	bg_event 10, 12, BGEVENT_READ, BrassTower12FSwitchScript  ;  cf warehouse entrance basement key .... 
+	bg_event 10, 12, BGEVENT_READ, BrassTowerSwitchScript  ;  cf warehouse entrance basement key .... 
 
 
 	def_object_events
@@ -29,27 +29,6 @@ BrassTower12F_MapScriptHeader:
 	object_const_def
 
 
-BrassTower12FSwitchScript:
-	checkevent EVENT_BRASS_TOWER_RIGHT_GUARD
-	iftrue AskSwitchToLeft12 ; on 13f
-	opentext
-	writetext SwitchSpiritsText; on 13f
-	yesorno
-	iffalse_jumpopenedtext NotSwitchingText
-	clearevent EVENT_BRASS_TOWER_RIGHT_GUARD
-	setevent EVENT_BRASS_TOWER_LEFT_GUARD
-	reloadmap
-	endtext
-
-AskSwitchToLeft12:
-	opentext
-	writetext SwitchSpiritsText
-	yesorno
-	iffalse_jumpopenedtext NotSwitchingText
-	setevent EVENT_BRASS_TOWER_RIGHT_GUARD
-	clearevent EVENT_BRASS_TOWER_LEFT_GUARD
-	reloadmap
-	endtext
 
 
 GenericTrainerElderNoboru:

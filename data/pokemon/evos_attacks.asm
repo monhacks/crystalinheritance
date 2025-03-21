@@ -220,7 +220,7 @@ SamurottEvosAttacks:
 	
 HsamurottEvosAttacks:
 	db EVOLVE_LEVEL, 34, DECIDUEYE
-	db EVOLVE_ITEM, WATER_STONE, H__DECIDUEYE
+	db EVOLVE_ITEM, ODD_SOUVENIR, H__DECIDUEYE
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, LEER
@@ -1263,7 +1263,7 @@ GolemEvosAttacks:
 	db 0 ; no more level-up moves
 	
 PonytaEvosAttacks:
-	db EVOLVE_LEVEL, 22, RAPIDASH
+	db EVOLVE_LEVEL, 25, RAPIDASH
 	db 0 ; no more evolutions
 	db 1, GROWL
 	db 1, TACKLE
@@ -2656,7 +2656,7 @@ MeganiumEvosAttacks:
 	db 0 ; no more level-up moves
 	
 TotodileEvosAttacks:
-	db EVOLVE_LEVEL, 14, CROCONAW
+	db EVOLVE_LEVEL, 12, CROCONAW
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, LEER
@@ -2898,7 +2898,7 @@ XatuEvosAttacks:
 	db 0 ; no more level-up moves
 	
 MareepEvosAttacks:
-	db EVOLVE_LEVEL, 15, FLAAFFY
+	db EVOLVE_LEVEL, 12, FLAAFFY
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, GROWL
@@ -2962,7 +2962,7 @@ AmpharosEvosAttacks:
 	db 0 ; no more level-up moves
 
 MarillEvosAttacks:
-	db EVOLVE_LEVEL, 18, AZUMARILL
+	db EVOLVE_LEVEL, 12, AZUMARILL
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 2, GROWL ; Tail Whip → new move
@@ -3074,7 +3074,7 @@ SunfloraEvosAttacks:
 	db 0 ; no more level-up moves
 	
 WooperEvosAttacks:
-	db EVOLVE_LEVEL, 17, QUAGSIRE
+	db EVOLVE_LEVEL, 12, QUAGSIRE
 	db 0 ; no more evolutions
 	db 1, WATER_GUN
 	db 1, LEER ; Tail Whip → similar move
@@ -3364,7 +3364,7 @@ GliscorEvosAttacks:
 	db 0 ; no more level-up moves
 
 SnubbullEvosAttacks:
-	db EVOLVE_LEVEL, 23, GRANBULL
+	db EVOLVE_LEVEL, 20, GRANBULL
 	db 0 ; no more evolutions
 	db 1, LICK
 	db 1, PAY_DAY ; Tail Whip → similar move
@@ -3544,7 +3544,7 @@ SneaslerEvosAttacks:
 	db 0 ; no more level-up moves
 
 TeddiursaEvosAttacks:
-	db EVOLVE_LEVEL, 25, URSARING
+	db EVOLVE_LEVEL, 20, URSARING
 	db 0 ; no more evolutions
 	db 1, THIEF ; Covet → TM move
 	db 1, TACKLE
@@ -3564,7 +3564,7 @@ TeddiursaEvosAttacks:
 	db 0 ; no more level-up moves
 
 UrsaringEvosAttacks:
-	db EVOLVE_ITEM, MOON_STONE, URSARING
+	db EVOLVE_ITEM, MOON_STONE, URSALUNA
 	db 0 ; no more evolutions
 	db 1, GUNK_SHOT ; HGSS tutor move
 	db 1, THIEF ; Covet → TM move
@@ -3585,7 +3585,6 @@ UrsaringEvosAttacks:
 	db 0 ; no more level-up moves
 
 UrsalunaEvosAttacks:
-	db EVOLVE_ITEM, MOON_STONE, URSARING
 	db 0 ; no more evolutions
 	db 1, GUNK_SHOT ; HGSS tutor move
 	db 1, THIEF ; Covet → TM move
@@ -4148,7 +4147,7 @@ SkuntankEvosAttacks:
 	db 0 ; no more level-up moves
 	
 BronzorEvosAttacks:
-	db EVOLVE_LEVEL, 33, BRONZONG
+	db EVOLVE_LEVEL, 25, BRONZONG
 	db 0 ; no more Evolutions
 	db 1, RAIN_DANCE
 	db 1, CONFUSION
@@ -4180,9 +4179,10 @@ SpiritombEvosAttacks:;encounter at lv 35
 	db 1, REST
 	db 1, SLEEP_TALK
 	db 1, DARK_PULSE
-	db 1, CURSE
-	db 36, HYPNOSIS
-	db 36, DREAM_EATER
+	db 1, CALM_MIND
+	db 36, CURSE
+	db 40, HYPNOSIS
+	db 40, DREAM_EATER
 	db 44, SHADOW_BALL
 	db 50, NASTY_PLOT
 	db 0 ; no more level-up moves

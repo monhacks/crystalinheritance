@@ -151,7 +151,6 @@ Route43HursalunaMove1:
 	step_end
 
 
-
 Route43Sign2Text:
 	text "Route 43"
 	done

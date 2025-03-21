@@ -3,7 +3,7 @@ BrassTower17F_MapScriptHeader:
 
 
 	def_callbacks
-
+	callback MAPCALLBACK_TILES, BrassTower17FCallback  
 
 	def_warp_events
 	warp_event 13, 5, BRASS_TOWER_17F, 4
@@ -18,15 +18,23 @@ BrassTower17F_MapScriptHeader:
 
 
 	def_bg_events
-
-
+	bg_event  7, 10, BGEVENT_READ, BrassTower17FUnownBlocks
+	bg_event  6, 10, BGEVENT_READ, BrassTower17FUnownBlocks
+	bg_event  7, 11, BGEVENT_READ, BrassTower17FUnownBlocks
+	bg_event  6, 11, BGEVENT_READ, BrassTower17FUnownBlocks
 
 	def_object_events
-	object_event  0, 0, SPRITE_ELDER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerElderSatoru, -1 ; wise
-
+	object_event  5, 3, SPRITE_ELDER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerElderSatoru, -1 ; wise
+	pokemon_event  6,  8, MISDREAVUS, -1, -1, PAL_NPC_RED, BrassTowerGuardText, EVENT_BRASS_TOWER_LEFT_GUARD	
 
 	object_const_def
 
+BrassTower17FCallback:
+	checkevent EVENT_BRASS_TOWER_13F_UNOWN
+	iffalse .EndCallback
+	changeblock 6, 10, $5F
+.EndCallback:
+	endcallback
 
 GenericTrainerElderSatoru:
     generictrainer ELDER, SATORU, EVENT_BEAT_ELDER_SATORU, SatoruSeenText, SatoruBeatenText
@@ -43,3 +51,15 @@ SatoruSeenText:
 	line "wisdom of the"
 	cont "ages!"	
     done
+
+BrassTower17FUnownBlocks:
+	unowntypeface
+	showtext BrassTowerUnownText
+	restoretypeface
+	special MapCallbackSprites_LoadUsedSpritesGFX
+	end
+
+BrassTowerUnownText:
+	text "powered by"
+	line "unown"	
+	done

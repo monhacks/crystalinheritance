@@ -1,4 +1,4 @@
-RebelsRedoubt1F_MapScriptHeader: 
+RebelsRedoubt1F_MapScriptHeader: ; need a callback a la ruins of alph 
 	def_scene_scripts
 
 
@@ -19,14 +19,16 @@ RebelsRedoubt1F_MapScriptHeader:
 
 
 	def_object_events
-	object_event 2, 3, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RedoubtKnockOffTutorScript, -1 ;todo make this cost a silver leaf
+	object_event 2, 3, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RedoubtKnockOffTutorScript, -1
 	object_event  3,  3, SPRITE_BALL_CUT_FRUIT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_COMMAND, jumptext, RR_1F_BallText, EVENT_LISTENED_TO_KNOCK_OFF_INTRO
-	object_event 5, 4, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, HZoroarkGiftScript, -1 ;todo make this cost a silver leaf
+	object_event 5, 4, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Redoubt1FScript, -1 ;
+	object_event 4, 7, SPRITE_KURT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_REDOUBT_KURT ; todo initialize
 
 	object_const_def
 	REDOUBT_1B_NINJA
 	REDOUBT_1F_POKEBALL
-	
+	REDOUBT_1F_NINJA_2
+	REDOUBT_1F_KURT
 	
 RedoubtKnockOffTutorScript:
 	faceplayer
@@ -158,4 +160,87 @@ RR_1F_BallText:
 	para "Its base warns:"
 	line "EXTREMELY FRAGILE"
 	cont "in dark letters."
+	done
+
+Redoubt1FScript:
+	faceplayer
+	checkevent EVENT_BEAT_AMOS
+	iftrue_jumptext RR_1F_BeatAmosText
+	checkevent EVENT_RR_OPENED_HATCH
+	iftrue_jumptext RR_1F_DownTheHatchText
+	opentext
+	writetext RR_1F_NinjaText1
+	promptbutton
+	closetext
+	appear REDOUBT_1F_KURT
+	applymovement REDOUBT_1F_KURT, RedoubtKurtWalks
+	turnobject REDOUBT_1F_NINJA_2, RIGHT
+	showtext RR_1F_KurtText1
+	showemote EMOTE_QUESTION, REDOUBT_1F_NINJA_2, 10
+	showtext RR_1F_NinjaText2
+	setevent EVENT_RR_OPENED_HATCH
+	changeblock x, y, $00
+	reloadmappart
+	; sfx for changing the map part
+	showtext RR_1F_KurtText2
+	applyonemovement REDOUBT_1F_KURT, step_down
+	disappear REDOUBT_1F_KURT
+	setevent EVENT_REDOUBT_KURT
+	end
+
+
+RR_1F_NinjaText1:
+	text "Hey, you're the"
+	line "kid in green!"
+	
+	para "Amos warned us"
+	line "you might come."
+	done
+
+RR_1F_KurtText1:
+	text "Kurt: You don't"
+	line "understand!"
+	
+	para "There was a mis-"
+	line "understanding."
+	
+	para "We're on your"
+	line "side, the elders"
+	cont "of Johto can"
+	cont "vouch for us!"
+	done
+
+RR_1F_NinjaText2:
+	text "Hmm... OK, I'll"
+	line "let you through."
+	
+	para "The others will"
+	line "battle you to get"
+	cont "a better look."
+	done
+
+RR_1F_KurtText2:
+	text "Thank you!"
+	line "<PLAYER>, let's"
+	cont "go down."
+
+RR_1F_DownTheHatchText:
+	text "Amos is waiting."
+	line "Hurry!"
+	done
+
+RedoubtKurtWalks:
+	step_up
+	step_right
+	step_right
+	step_right
+	step_up
+	step_up
+	turn_head_left ; 7, 4 
+	step_end
+
+RR_1F_BeatAmosText:
+	text "Looks like Amos"
+	line "was wrong about"
+	cont "you."
 	done

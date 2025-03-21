@@ -11,13 +11,13 @@ This game should be patched to ...
 
 Crystal Inheritance is a time-traveling adventure through Johto! 
 
-When Ilex Forest is threatened, Celebi calls to you and Grandpa Kurt to help. Can you go back in time to save Johto's future? 
+When Ilex Forest is threatened, Celebi calls out for help. Can you go back in time to save Johto's future? 
 
 Use your knowledge of the world to craft pokéballs from new apricorns, discover Hisuian evolutions of Johto Pokémon, and explore Johto like never before. 
 
-In historic Johto, you'll see the power-hungry Emperor Mejimi; Mejimi's three Generals Bobesh, Kensey, and Adrinna; and his standing army of brigaders. 
+In historic Johto, you'll see the power-hungry Emperor Mejimi and his generals Bobesh, Kensey, and Adrinna use a crisis to consolidate power.
 
-In modern Johto, you'll help Pryce confront Johto's gym leaders as they confront their own cynicism. 
+In modern Johto, you'll confront Johto's wayward gym leaders as they wonder how to cope with a changing world. 
 
 Nothing is inevitable - what path will you choose? 
 
@@ -43,17 +43,3 @@ Mejimi "i am the ..."
 
 Example format below: 
 ![seafoam-islands](screenshots/seafoam-islands.png)
-
-
-## Credits
-
-Polished Crystal Developers
-
-
-Sprites:
-
-
-Commissioned: 
-
-
-

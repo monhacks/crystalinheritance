@@ -10,9 +10,7 @@ EmpiresExtent_MapScriptHeader:
 	warp_event 9, 49, EMPIRES_EXTENT_EERIE_HAMLET_GATE, 1
 	warp_event 10, 49, EMPIRES_EXTENT_EERIE_HAMLET_GATE, 2
 
-
 	def_coord_events
-
 
 
 	def_bg_events
@@ -21,20 +19,20 @@ EmpiresExtent_MapScriptHeader:
 
 	def_object_events
 ;a few hisuians who are going to join adrinna's army 
-	object_event 0, 0, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, 0, ExtentNPCText1, EVENT_BEAT_AMOS ; HANK 
-	object_event 0, 0, SPRITE_RUIN_MANIAC, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, 0, ExtentNPCText2, EVENT_BEAT_AMOS ; JONES 
-	object_event 0, 0, SPRITE_RUIN_MANIAC, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, 0, ExtentNPCText3, EVENT_BEAT_AMOS ; LELAND 
+	object_event 1, 15, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, 0, ExtentNPCText1, EVENT_BEAT_AMOS ; HANK 
+	object_event 1, 20, SPRITE_RUIN_MANIAC, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, 0, ExtentNPCText2, EVENT_BEAT_AMOS ; JONES 
+	object_event 2, 23, SPRITE_RUIN_MANIAC, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, 0, ExtentNPCText3, EVENT_BEAT_AMOS ; LELAND 
 ; ninjas	
-	object_event  0,  0, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerNinja1, EVENT_BEAT_AMOS;shadow
-	object_event  0,  0, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerNinja2, EVENT_BEAT_AMOS;mist
-	object_event  0,  0, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerNinja3, EVENT_BEAT_AMOS;twilight
-	object_event  0,  0, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerNinja4, EVENT_BEAT_AMOS;shimmer
-	object_event  0,  0, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerNinja5, EVENT_BEAT_AMOS;echo
-	object_event  0,  0, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerNinja6, EVENT_BEAT_AMOS;dusk 
+	object_event  9, 10, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerNinja1, EVENT_BEAT_AMOS;shadow
+	object_event 10, 10, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerNinja2, EVENT_BEAT_AMOS;mist
+	object_event  9, 21, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerNinja3, EVENT_BEAT_AMOS;twilight
+	object_event 10, 21, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerNinja4, EVENT_BEAT_AMOS;shimmer
+	object_event  4, 31, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerNinja5, EVENT_BEAT_AMOS;echo
+	object_event  5, 31, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerNinja6, EVENT_BEAT_AMOS;dusk 
 ;items 
-	itemball_event 0, 0, REVIVE,		1,	EXTENT_ITEM_1
-	itemball_event 0, 0, FULL_RESTORE, 	1,	EXTENT_ITEM_2
-	itemball_event 0, 0, BIG_NUGGET, 	1,	EXTENT_ITEM_3
+	itemball_event 13, 17, REVIVE,			1,	EVENT_EXTENT_ITEM_1
+	itemball_event 10, 34, FULL_RESTORE, 	1,	EVENT_EXTENT_ITEM_2
+	itemball_event 11, 25, BIG_NUGGET, 		1,	EVENT_EXTENT_ITEM_3
 
 	object_const_def
 
@@ -115,8 +113,7 @@ ExtentNPCText1:
 	
 	para "I'm following the"
 	line "Brigaders to have"
-	cont "that power for"
-	cont "myself."
+	cont "that power."
 	done
 
 ExtentNPCText2:

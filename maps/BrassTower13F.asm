@@ -16,7 +16,7 @@ BrassTower13F_MapScriptHeader:
 
 
 	def_bg_events
-	bg_event 2, 8, BGEVENT_READ, BrassTower13FSwitchScript  ;  cf warehouse entrance basement key .... 
+	bg_event 2, 8, BGEVENT_READ, BrassTowerSwitchScript  ;  cf warehouse entrance basement key .... 
 
 
 	def_object_events
@@ -40,7 +40,7 @@ BrassTowerGuardText:
 	line "the path."
 	done
 
-BrassTower13FSwitchScript:
+BrassTowerSwitchScript:
 	checkevent EVENT_BRASS_TOWER_RIGHT_GUARD
 	iftrue AskSwitchToLeft
 	opentext

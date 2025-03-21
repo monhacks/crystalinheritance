@@ -31,6 +31,8 @@ RuinsofAlphOmanyteChamberHiddenDoorsCallback:
 
 
 MapRuinsofAlphOmanyteChamberSignpost2Script:
+	checkevent EVENT_SOLVED_OMANYTE_PUZZLE
+	iftrue_jumptext PuzzleSolvedText
 	refreshscreen
 	setval $1
 	special Special_UnownPuzzle
@@ -63,4 +65,9 @@ RuinsOfAlphOmanyteChamberDescriptionText:
 	
 	para "incipient"
 	line "raindrops."
+	done
+
+PuzzleSolvedText:
+	text "The mosaic is"
+	line "solved."
 	done
