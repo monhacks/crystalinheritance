@@ -38,9 +38,9 @@ Cradle2FCartCallback:
 
 CC_2F_Switch:
 	opentext
-	writetext CC_2F_SwitchText
+	writetext CartSwitchText
 	yesorno
-	iffalse_jumptext CC_2F_NoSwitchText
+	iffalse_jumptext CartNoSwitchText
 	checkevent EVENT_CRADLE_2F_CART_1
 	iftrue CC_2F_SwitchBack
 	changeblock 16,  8, $C9
@@ -48,14 +48,16 @@ CC_2F_Switch:
 	playsound SFX_THUNDER
 	waitsfx
 	setevent EVENT_CRADLE_2F_CART_1
+	reloadmappart
 	jumptext CartMovedText 
 	
 CC_2F_SwitchBack:
-	changeblock 16,  8, $C8 ; todo fix 
+	changeblock 16,  8, $C8 
 	changeblock 4, 8, $C5
 	playsound SFX_THUNDER
 	waitsfx
 	clearevent EVENT_CRADLE_2F_CART_1
+	reloadmappart
 	jumptext CartMovedText 
 
 CartSwitchText:

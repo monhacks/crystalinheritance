@@ -4,7 +4,8 @@ ClastsCradle1F_MapScriptHeader:
 
 	def_callbacks
 	callback MAPCALLBACK_STONETABLE, 	Cradle1FBoulders
-	callback MAPCALLBACK_TILES, 		Cradle1FCartsCallback
+	callback MAPCALLBACK_TILES, Cradle1FCartCallback
+
 
 	def_warp_events
 	warp_event 19,  7, CLASTS_CRADLE_2F, 2
@@ -20,9 +21,10 @@ ClastsCradle1F_MapScriptHeader:
 
 
 	def_bg_events
-; todo: the carts 
-; HIDDEN ITEMS - BIG_NUGGET X2 AT 30, 11 AND 4, 16 , METAL COAT AT 18, 43
-
+	bg_event 25, 22, BGEVENT_READ, CC_1F_Switch1
+	bg_event 30, 11, BGEVENT_ITEM + NUGGET, EVENT_CRADLE_HIDDEN_1 ; hidden item
+	bg_event  4, 16, BGEVENT_ITEM + BIG_NUGGET, EVENT_CRADLE_HIDDEN_2 ; hidden item
+	bg_event 18, 43, BGEVENT_ITEM + METAL_COAT, EVENT_CRADLE_HIDDEN_3 ; hidden item
 
 	def_object_events
 	strengthboulder_event 22, 16, EVENT_BOULDER_CRADLE1F_1; goes to hole at 3
@@ -52,6 +54,14 @@ ClastsCradle1F_MapScriptHeader:
 	const CRADLE1F_BOULDER1
 	const CRADLE1F_BOULDER2
 	const CRADLE1F_BOULDER3
+
+Cradle1FCartCallback:
+	checkevent EVENT_CRADLE_1F_CART
+	iffalse .Done
+	changeblock 30, 28, $C9
+	changeblock 14, 28, $C5
+.Done:
+	endcallback
 
 Cradle1FBoulders:
 	usestonetable .BoulderTable
@@ -198,4 +208,41 @@ Leland2SeenText:
 	text "You'll be history"
 	line "when I'm done"
 	cont "with you!"
+	done
+
+CC_1F_Switch1:
+	opentext
+	writetext CartSwitchText
+	yesorno
+	iffalse_jumptext CartNoSwitchText
+	checkevent EVENT_CRADLE_1F_CART_1
+	iftrue CC_2F_SwitchBack
+	changeblock 30, 28, $C9
+	changeblock 14, 28, $C4
+	playsound SFX_THUNDER
+	waitsfx
+	setevent EVENT_CRADLE_2F_CART_1
+	reloadmappart
+	jumptext CartMovedText 
+	
+CC_2F_SwitchBack:
+	changeblock 30, 28, $C8 
+	changeblock 14, 28, $C5
+	playsound SFX_THUNDER
+	waitsfx
+	clearevent EVENT_CRADLE_2F_CART_1
+	reloadmappart
+	jumptext CartMovedText 
+
+CartSwitchText:
+	text "Hit the mine cart"
+	line "switch?"
+	done
+
+CartNoSwitchText:
+	text "Left it be."
+	done
+
+CartMovedText:
+	text "The cart moved!"
 	done
