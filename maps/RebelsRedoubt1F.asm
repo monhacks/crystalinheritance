@@ -3,7 +3,7 @@ RebelsRedoubt1F_MapScriptHeader: ; need a callback a la ruins of alph
 
 
 	def_callbacks
-
+; callback 
 
 	def_warp_events
 	warp_event 3, 7, EERIE_HAMLET, 1

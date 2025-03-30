@@ -426,7 +426,7 @@ TinTower3FSamsaraScript:
 	givetmhm HM_SURF
 	playsound SFX_GET_BADGE
 	waitsfx
-	setflag ENGINE_ZEPHYRBADGE
+	setflag ENGINE_THUNDERBADGE
 	promptbutton
 	verbosegivetmhm TM_SHADOW_CLAW
 	jumpopenedtext SamsaraAfterText

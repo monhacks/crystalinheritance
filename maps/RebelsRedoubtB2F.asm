@@ -4,7 +4,6 @@ RebelsRedoubtB2F_MapScriptHeader:
 
 	def_callbacks
 	callback MAPCALLBACK_TILES, RedoubtB2FDoorsCallback
-;CALLBACKS FOR B3F ELDERS HOLLIS, SAMSARA, BARBEAU 
 
 	def_warp_events
 	warp_event 2, 14, REBELS_REDOUBT_B1F, 3 
@@ -22,16 +21,16 @@ RebelsRedoubtB2F_MapScriptHeader:
 
 	def_bg_events
 	bg_event 10,  9, BGEVENT_JUMPTEXT, RedoubtB2FStatue1Text
-	bg_event 10,  7, BGEVENT_JUMPTEXT, RedoubtB2FStatue1Text
-	bg_event 10,  5, BGEVENT_JUMPTEXT, RedoubtB2FStatue1Text
+	bg_event 12,  7, BGEVENT_JUMPTEXT, RedoubtB2FStatue1Text
+	bg_event 14,  5, BGEVENT_JUMPTEXT, RedoubtB2FStatue1Text
 
 
 	def_object_events
-	object_event  3, 11, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 1, RedoubtKurtScript, EVENT_BEAT_AMOS;
-	object_event 21,  6, SPRITE_AMOS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 1, RedoubtAmosScript, EVENT_BEAT_AMOS;
+	object_event  3, 11, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RedoubtKurtScript, EVENT_BEAT_AMOS;
+	object_event 21,  6, SPRITE_AMOS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RedoubtAmosScript, EVENT_BEAT_AMOS;
 ;done
 	object_event 25,  3, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerNinja10, EVENT_BEAT_AMOS;wraith
-	object_event  9, 11, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerNinja11, EVENT_BEAT_AMOS;vapor
+	object_event  4,  1, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerNinja11, EVENT_BEAT_AMOS;vapor
 	object_event 22, 14, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerNinja12, EVENT_BEAT_AMOS;mirage
 
 	object_const_def
@@ -41,15 +40,15 @@ RebelsRedoubtB2F_MapScriptHeader:
 RedoubtB2FDoorsCallback:
 	checkevent EVENT_BEAT_HOLLIS_REDOUBT
 	iffalse .Sandra
-	changeblock 0, 0, $00
+	changeblock 12, 8, $09
 .Sandra:
 	checkevent EVENT_BEAT_SANDRA_REDOUBT
 	iffalse .Barbeau
-	changeblock 0, 0, $00
+	changeblock 14, 6, $09
 .Barbeau:
 	checkevent EVENT_BEAT_BARBEAU_REDOUBT
 	iffalse .Done
-	changeblock 0, 0, $00	
+	changeblock 16, 4, $09
 .Done:
 	endcallback
 
@@ -103,3 +102,46 @@ RedoubtB2FStatue1Text:
 	text "Its eyes seem to"
 	line "stare back."
 	done
+
+RedoubtKurtScript:
+	faceplayer
+	opentext
+	writetext KurtHealRedoubtText
+	waitbutton
+	playmusic MUSIC_HEAL
+	special HealParty
+	special SaveMusic	
+	writetext KurtHealRedoubtText2
+	waitbutton
+	closetext
+	playmusic MUSIC_NONE	
+	special RestoreMusic
+	end
+
+KurtHealRedoubtText:
+	text "<PLAYER>, there"
+	line "is one source"
+	cont "of Steel left"
+	para "for the emperor:"
+	line "in the mine."
+	
+	para "If we join forces"
+	line "with Amos, we can"
+	cont "end it for good,"
+	
+	para "and save Johto's"
+	line "heritage."
+	
+	para "Here, let me heal"
+	line "your #mon."	
+	done
+
+KurtHealRedoubtText2:
+	text "Keep exploring,"
+	line "there's got to"
+	para "be a way past"
+	line "these statues."
+	done
+
+RedoubtAmosScript:
+	
