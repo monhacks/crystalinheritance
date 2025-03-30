@@ -18,11 +18,11 @@ EmpiresExtent_MapScriptHeader:
 
 
 	def_object_events
-;a few hisuians who are going to join adrinna's army 
+;a few hisuians who are going to join adrinna's army , done 
 	object_event 1, 15, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, 0, ExtentNPCText1, EVENT_BEAT_AMOS ; HANK 
 	object_event 1, 20, SPRITE_RUIN_MANIAC, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, 0, ExtentNPCText2, EVENT_BEAT_AMOS ; JONES 
 	object_event 2, 23, SPRITE_RUIN_MANIAC, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, 0, ExtentNPCText3, EVENT_BEAT_AMOS ; LELAND 
-; ninjas	
+; ninjas	, todo 
 	object_event  9, 10, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerNinja1, EVENT_BEAT_AMOS;shadow
 	object_event 10, 10, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerNinja2, EVENT_BEAT_AMOS;mist
 	object_event  9, 21, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerNinja3, EVENT_BEAT_AMOS;twilight
@@ -36,37 +36,42 @@ EmpiresExtent_MapScriptHeader:
 
 	object_const_def
 
-GenericTrainerNinja1: ;
+GenericTrainerNinja1: ;shadow 
 	generictrainer NINJA, NINJA1, EVENT_BEAT_NINJA1, .SeenText1, .BeatenText1  
 
 .BeatenText1:
-	text "..."
+	text "You should go"
+	line "home."
 	done
 
 .SeenText1:
-	text "..."
+	text "Traitor!"
 	done
 
-GenericTrainerNinja2: ; 
+GenericTrainerNinja2: ; mist
 	generictrainer NINJA, NINJA2, EVENT_BEAT_NINJA2, .SeenText2, .BeatenText2  
 
 .BeatenText2:
-	text "..."
+	text "Our resolve is"
+	line "strong."
 	done
 
 .SeenText2:
-	text "..."
+	text "You show your"
+	line "face?"
 	done
 	
-GenericTrainerNinja3: ; 
+GenericTrainerNinja3: ; twilight 
 	generictrainer NINJA, NINJA3, EVENT_BEAT_NINJA3, .SeenText3, .BeatenText3  
 
 .BeatenText3:
-	text "..."
+	text "How do we get you"
+	line "to disappear?"
 	done
 
 .SeenText3:
-	text "..."
+	text "How did you find"
+	line "us?"
 	done
 
 
@@ -74,33 +79,43 @@ GenericTrainerNinja4: ;
 	generictrainer NINJA, NINJA4, EVENT_BEAT_NINJA4, .SeenText4, .BeatenText4  
 
 .BeatenText4:
-	text "..."
+	text "I let myself"
+	line "down."
 	done
 
 .SeenText4:
-	text "..."
+	text "My turn - Amos, I"
+	line "won't let you"
+	cont "down!"
 	done
 
-GenericTrainerNinja5: ; 
+GenericTrainerNinja5: ; echo 
 	generictrainer NINJA, NINJA5, EVENT_BEAT_NINJA5, .SeenText5, .BeatenText5  
 
 .BeatenText5:
-	text "..."
+	text "I've been"
+	line "silenced."
 	done
 
 .SeenText5:
-	text "..."
+	text "When I'm through,"
+	line "no one will hear"
+	cont "of you again."
 	done
 	
-GenericTrainerNinja6: ; 
+GenericTrainerNinja6: ; dusk 
 	generictrainer NINJA, NINJA6, EVENT_BEAT_NINJA6, .SeenText6, .BeatenText6 
 
 .BeatenText6:
-	text "..."
+	text "Your colors are"
+	line "surprising."
 	done
 
 .SeenText6:
-	text "..."
+	text "Lighting is best"
+	line "right before"
+	cont "night - let me"
+	cont "see you!"
 	done
 
 ExtentNPCText1:

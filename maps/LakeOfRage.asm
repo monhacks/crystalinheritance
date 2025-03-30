@@ -204,55 +204,77 @@ GenericTrainerSightseerFKamila:
 	generictrainer SIGHTSEER_F, KAMILA, EVENT_BEAT_SIGHTSEERF_KAMILA, .SeenText1, .BeatenText1
 
 .BeatenText1:
-	text "..."
+	text "My #mon keep"
+	line "my foold cold."
+	
+	para "So I can carry"
+	line "whatever I like!"	
 	done
 
 .SeenText1:
-	text ""
+	text "Want to know my"
+	line "secret to carry"
+	cont "less gear?"
 	done
 
 GenericTrainerSightseerFNoelle:
 	generictrainer SIGHTSEER_F, NOELLE, EVENT_BEAT_SIGHTSEERF_NOELLE, .SeenText2, .BeatenText2
 
 .BeatenText2:
-	text "..."
+	text "You can find your"
+	line "own way!"
 	done
 
 .SeenText2:
-	text "..."
+	text "Do you have a"
+	line "map?"
 	done
 	
 GenericTrainerSightseerMBlaise:
 	generictrainer SIGHTSEER_F, BLAISE, EVENT_BEAT_SIGHTSEERM_BLAISE, .SeenText3, .BeatenText3
 
 .BeatenText3:
-	text "..."
+	text "You've got some"
+	line "power!"
 	done
 
 .SeenText3:
-	text "..."
+	text "It's so nice to"
+	line "unplug with a big"
+	cont "hike."
 	done
 
 GenericTrainerSightseerMGareth:
 	generictrainer SIGHTSEER_F, GARETH, EVENT_BEAT_SIGHTSEERM_GARETH, .SeenText4, .BeatenText4
 
 .BeatenText4:
-	text "..."
+	text "You never know"
+	line "what will come"
+	cont "out of the blue."
 	done
 
 .SeenText4:
-	text "..."
+	text "This quarry is"
+	line "even wilder than"
+	cont "I expected!"
 	done
 
 GenericTrainerPokemaniacCalvin:
 	generictrainer POKEMANIAC, CALVIN, EVENT_BEAT_POKEMANIAC_CALVIN, .SeenText5, .BeatenText5
 
 .BeatenText5:
-	text "..."
+	text "I wonder how the"
+	line "draining of the"
+	cont "Lake will be"
+	cont "remembered."
 	done
 
 .SeenText5:
-	text "..."
+	text "Before Silph, the"
+	line "Lake had Gyarados"
+	cont "but now there's"
+	para "so many rare"
+	line "#mon!"
 	done
 
 
@@ -260,9 +282,12 @@ GenericTrainerPokemaniacShane:
 	generictrainer POKEMANIAC, SHANE, EVENT_BEAT_POKEMANIAC_SHANE, .SeenText6, .BeatenText6
 
 .BeatenText6:
-	text "..."
+	text "The lakebed is a"
+	line "perfect niche for"
+	cont "Yanmega!"
 	done
 
 .SeenText6:
-	text "..."
+	text "Have you seen any"
+	line "yanma evolution?"
 	done

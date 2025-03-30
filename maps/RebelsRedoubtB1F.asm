@@ -21,7 +21,7 @@ RebelsRedoubtB1F_MapScriptHeader:
 	def_object_events
 	object_event 23,  1, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerNinja7, EVENT_BEAT_AMOS;veil
 	object_event 25, 15, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerNinja8, EVENT_BEAT_AMOS;shade 
-	object_event  7, 15, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerNinja9, EVENT_BEAT_AMOS;haze 
+	object_event  7, 14, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerNinja9, EVENT_BEAT_AMOS;haze 
 	itemball_event 11, 7, MAX_POTION, 1, EVENT_REDOUBT_ITEM_1
 	itemball_event 16, 9, LUM_BERRY, 3, EVENT_REDOUBT_ITEM_2
 
@@ -29,35 +29,47 @@ RebelsRedoubtB1F_MapScriptHeader:
 	object_const_def
 
 
-GenericTrainerNinja7: ; 
+GenericTrainerNinja7: ; veil
 	generictrainer NINJA, NINJA7, EVENT_BEAT_NINJA7, .SeenText7, .BeatenText7
 
 .BeatenText7:
-	text "..."
+	text "I couldn't"
+	line "pierce you."
 	done
 
 .SeenText7:
-	text "..."
+	text "What really lies"
+	line "within you?"
 	done
 
-GenericTrainerNinja8: ; 
+GenericTrainerNinja8: ; shade 
 	generictrainer NINJA, NINJA8, EVENT_BEAT_NINJA8, .SeenText8, .BeatenText8
 
 .BeatenText8:
-	text "..."
+	text "It's no offense."
+	
+	para "We have to suss"
+	line "out your true"
+	cont "character."
 	done
 
 .SeenText8:
-	text "..."
+	text "You'll get no"
+	line "respite here!"
 	done
 	
-GenericTrainerNinja9: ; 
+GenericTrainerNinja9: ; haze
 	generictrainer NINJA, NINJA9, EVENT_BEAT_NINJA9, .SeenText9, .BeatenText9
 
 .BeatenText9:
-	text "..."
+	text "I've only seen"
+	line "such precision"
+	cont "from Amos..."
 	done
 
 .SeenText9:
-	text "..."
+	text "When your vision"
+	line "blurs, can you"
+	cont "stay on the path"
+	cont "you mean to?"
 	done

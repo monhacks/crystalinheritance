@@ -1161,7 +1161,7 @@ NinjaGroup:
 ; ================================
 ; ================
 
-	; NINJA
+	; NINJA1
 	db "Shadow@"
 	db TRAINERTYPE_NORMAL
 	; party
@@ -1172,7 +1172,7 @@ NinjaGroup:
 
 ; ================
 
-	; LYRA1
+	; NINJA2
 	db "Mist@"
 	db TRAINERTYPE_NORMAL
 	; party
@@ -1184,7 +1184,7 @@ NinjaGroup:
 
 ; ================
 
-	; LYRA1
+	; ninja3
 	db "Twilight@"
 	db TRAINERTYPE_NORMAL
 	; party
@@ -1195,7 +1195,7 @@ NinjaGroup:
 
 ; ================
 
-	; LYRA1
+	; ninnja4
 	db "Shimmer@"
 	db TRAINERTYPE_NORMAL
 	; party
@@ -1207,7 +1207,7 @@ NinjaGroup:
 
 ; ================
 
-	; LYRA1
+	; ninja5
 	db "Echo@"
 	db TRAINERTYPE_NORMAL
 	; party
@@ -1218,7 +1218,7 @@ NinjaGroup:
 
 ; ================
 
-	; LYRA1
+	; ninja6
 	db "Dusk@"
 	db TRAINERTYPE_NORMAL
 	; party
@@ -1230,7 +1230,7 @@ NinjaGroup:
 
 ; ================
 
-	; LYRA1
+	; ninja7
 	db "Veil@"
 	db TRAINERTYPE_NORMAL
 	; party
@@ -1239,7 +1239,7 @@ NinjaGroup:
 
 ; ================
 
-	; LYRA1
+	; ninja8
 	db "Shade@"
 	db TRAINERTYPE_NORMAL
 	; party
@@ -1250,7 +1250,7 @@ NinjaGroup:
 
 ; ================
 
-	; LYRA1
+	; ninja9
 	db "Haze@"
 	db TRAINERTYPE_NORMAL
 	; party
@@ -1261,7 +1261,7 @@ NinjaGroup:
 
 ; ================
 
-	; LYRA1
+	; ninja10
 	db "Wraith@"
 	db TRAINERTYPE_NORMAL
 	; party
@@ -1272,7 +1272,7 @@ NinjaGroup:
 
 ; ================
 
-	; LYRA1
+	; ninja11
 	db "Vapor@"
 	db TRAINERTYPE_NORMAL
 	; party
@@ -1283,7 +1283,7 @@ NinjaGroup:
 
 ; ================
 
-	; LYRA1
+	; ninja12
 	db "Mirage@"
 	db TRAINERTYPE_NORMAL
 	; party
