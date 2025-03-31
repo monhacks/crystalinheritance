@@ -143,5 +143,33 @@ KurtHealRedoubtText2:
 	line "these statues."
 	done
 
-RedoubtAmosScript:
-	
+RedoubtAmosScript: ;todo 
+	faceplayer
+	opentext
+	checkevent EVENT_BEAT_AMOS
+	iftrue .FightDone
+	writetext AmosText_Intro ; todo
+	waitbutton
+	closetext
+	winlosstext AmosText_Impressed, 0; todo
+	loadtrainer AMOS, 2
+	startbattle
+	reloadmapafterbattle
+	opentext
+	writetext Text_ReceivedVisionBadge; todo
+	playsound SFX_GET_BADGE
+	waitsfx
+	setflag ENGINE_SOULBADGE ; TODO TO CHECK 
+	setevent EVENT_BEAT_AMOS
+.FightDone:
+	setevent EVENT_BEAT_NINJA7
+	setevent EVENT_BEAT_NINJA8
+	setevent EVENT_BEAT_NINJA9	
+	setevent EVENT_BEAT_NINJA10
+	setevent EVENT_BEAT_NINJA12
+	setevent EVENT_BEAT_NINJA12
+	writetext AmosText_LegacyBadgeSpeech; todo
+	promptbutton
+	writetext AmosText_MeetYouAtTheMine; todo
+	closetext
+	end

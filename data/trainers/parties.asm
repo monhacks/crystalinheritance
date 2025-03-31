@@ -693,7 +693,7 @@ HollisGroup:
 	db 48, LEDIAN, NO_ITEM, 20
 		db AIR_SLASH, CLOSE_COMBAT, X_SCISSOR, BUG_BITE
 	db 46, SLOWBRO, NO_ITEM, 20
-		db SHELL_SMASH, SURF, PSYCHIC_M, REST
+		db SHELL_SMASH, SURF, HEADBUTT, REST
 	db 48, ARIADOS, NO_ITEM, 20
 		db HYPNOSIS, DREAM_EATER, GIGA_DRAIN, SCARY_FACE
 	db 48, KLEAVOR, METAL_COAT, 20
@@ -1812,17 +1812,6 @@ CamperGroup:
 	db 62, FURRET
 	db -1 ; end
 
-; ================
-
-	; CAMPER
-	db "Amos@"
-	db TRAINERTYPE_NORMAL
-	; party
-	db 59, PIDGEOT
-	db 58, NIDORINO
-	db 58, NIDORINA
-	db 60, TAUROS
-	db -1 ; end
 
 ; ================
 ; ================================

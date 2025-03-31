@@ -1,6 +1,6 @@
 ClastsCradleB1F_MapScriptHeader: 
 	def_scene_scripts
-	scene_script ClastsCradleScene1
+
 
 	def_callbacks
 
@@ -16,7 +16,7 @@ ClastsCradleB1F_MapScriptHeader:
 
 	def_coord_events
 	coord_event 21, 12, CradleScene1_Mejimi, 0; first scene
-	coord_event  5, 26, CradleScene2_Heatran, 0; first scene
+	coord_event  5, 26, CradleScene2_Heatran, 1; first scene
 
 	def_bg_events
 
@@ -27,13 +27,12 @@ ClastsCradleB1F_MapScriptHeader:
 	object_event 21, 8, SPRITE_ADRINNA, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_CRADLE_CUTSCENE
 	object_event 22, 8, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_CRADLE_CUTSCENE
 	object_event 27, 14, SPRITE_MEJIMI, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_CRADLE_CUTSCENE
-; CUTSCENE 2
-	object_event   5,  17, SPRITE_ADRINNA, SSPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_ADRINNA_MINE
+; CUTSCENE 2, TODO
+	object_event   4,  16, SPRITE_ADRINNA, SSPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_ADRINNA_MINE
 	object_event   5,  15, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, HEATRAN, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_CC_HEATRAN
 ; KURT TO HEAL YOU 
-	object_event   5,  17, SPRITE_KURT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerPokefanMRobert, EVENT_BEAT_ADRINNA_MINE
-; TRAINERS
-	object_event  16,  6, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBrigader18, EVENT_BEAT_ADRINNA_MINE
+	object_event   8,  5, SPRITE_KURT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 1, KurtScriptCC, EVENT_BEAT_ADRINNA_MINE
+; TRAINERS, TODO 
 	object_event  22,  20, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBrigader19, EVENT_BEAT_ADRINNA_MINE
 	object_event  17,  24, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBrigader20, EVENT_BEAT_ADRINNA_MINE
 
@@ -44,6 +43,7 @@ ClastsCradleB1F_MapScriptHeader:
 	const CRADLE_CUTSCENE_ADRINNA
 	const CRADLE_CUTSCENE_WORKER
 	const CRADLE_CUTSCENE_MEJIMI
+	const CRADLE_ADRINNA_2
 
 KurtScriptCC:
 	faceplayer
@@ -82,7 +82,7 @@ KurtCradleText2:
 	text "You can do it!"
 	done
 
-ClastsCradleScene1:	
+CradleScene1_Mejimi:	
 ;cf western capital
 	special Special_FadeBlackQuickly
 	special Special_ReloadSpritesNoPalettes
@@ -351,20 +351,65 @@ GenericTrainerBrigader19: ; bugs dark
 	generictrainer BRIGADER, 19, EVENT_BEAT_ROCKET_GRUNTM_19, Brigader19SeenText, Brigader19BeatenText  
 
 Brigader19BeatenText:
-	text "..."
+	text "Maybe I smelled"
+	line "the sulfur..."
 	done
 
 Brigader19SeenText:
-	text "..."
+	text "Don't look so"
+	line "scared. I can"
+	cont "smell your fear!"
 	done
 	
 GenericTrainerBrigader20: ; tyson nidos steelix
 	generictrainer BRIGADER, 20, EVENT_BEAT_ROCKET_GRUNTM_20, Brigader20SeenText, Brigader20BeatenText  
 
 Brigader20BeatenText:
-	text "..."
+	text "Unfathomable - I"
+	line "was the best!"
 	done
 
 Brigader20SeenText:
-	text "..."
+	text "Tyson: I'm the"
+	line "top Brigader in"
+	cont "here! You would"
+	cont "not last a day in"
+	cont "this environment!"
 	done
+
+CradleScene2_Heatran:
+	applymovement PLAYER, Player_CCB1F_Move1
+	showemote EMOTE_BOLT, CRADLE_ADRINNA_2, 30
+	showtext CradleAdrinnaText1
+	
+
+
+Player_CCB1F_Move1:
+	step_up
+	step_up
+	step_up
+	step_up
+	step_up
+	step_up
+	step_up
+	step_up
+	step_up
+	step_end
+	
+
+CradleAdrinnaText1:
+	text "<PLAYER>, I knew you would come. I knew you would follow me when I met you at the stadium, when I met you at the garden, and when I saw you in the glacier. 
+	
+	Johto has been held back by its obsession with tradition. It's time to see how far we can go.
+	
+	Consider: Hollis, holding back his most talented trainers. 
+	
+	The bizarre ritual in Gauldenrod that wastes youthful energy carrying around their sick and lame. 
+	
+	The nomads on the sea that never kept charts, just prayer books for Lugia. 
+	
+	And ten generations of emperors have missed the opportunity to tap this mountain's luscious steel. 
+	
+	The #mon in front of you is pure liquid steel and magma. With it, we could wipe the whole world clean. 
+	
+	I want you to have it, <PLAYER>. I
