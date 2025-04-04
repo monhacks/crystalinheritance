@@ -36,6 +36,12 @@
 
 # Amos: historic anarachist who tries to unite the various elders (see below) to defy the emperor and drive out the outsiders. Through a series of mishaps, believes the player is actually on the side of Adrinna, and defies the player near the end of the story until confronted. // similar to pryce, he believes that everyone has something to offer, but has a limited range of acceptable values.  // Goes from believing that the player is against him to that the player is with him. 
 
+# Samsara: Chief priestess to Emperor Mejimi. Has her eyes on history and is skeptical of Mejimi's path. Samsara's perspective could be expressed in pointed, memorable lines like: "The throne is not a seat of comfort, but an altar of service." "Your ancestors did not rule by taking, but by giving of themselves." Other religious figures might say:
+A Shinto priest: "The land and the emperor are one. To take from one is to diminish the other."
+A Buddhist monk: "Power grasped is power lost. Power given away returns tenfold."
+An elder advisor: "Each emperor's sacrifice renews the covenant with our people."
+
+
 ###Plot
 # Location, characters
 
