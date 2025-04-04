@@ -412,4 +412,46 @@ CradleAdrinnaText1:
 	
 	The #mon in front of you is pure liquid steel and magma. With it, we could wipe the whole world clean. 
 	
-	I want you to have it, <PLAYER>. I
+	I want you to have it, <PLAYER>. Heatran, rise!
+	
+<heatran battle>
+
+CradleAdrinnaText2:
+	text "Adrinna: I knew you could do it.
+	
+	How does it feel? With its magma coursing, the whole bedrock of society can be remade. 
+	
+	No more elders dictating what you can and can't do. Your only limit...
+	
+	...?	
+	
+CradleKurtText1:
+	Kurt: <PLAYER>! Don't listen!
+	
+	I've been wrong to be so skeptical of technology. 
+	
+	When we could have used <RIVAL>'s invention to make do during the drought, I pushed him away. 
+	
+	Truthfully, I was scared of change, and wanted to selfishly guard my position. But I forgot that I was doing it all for you. 
+
+	Show him, <PLAYER>, that she's wrong!
+	
+CradleAdrinnaText3: 
+	text "Adrinna: Ha! Come at me then, see if you can deny the strongest team I've assembled so far!"
+	
+CradleAdrinnaText4:
+	text "Adrinna: So you are tough."
+	
+CradleAdrinnaText5:
+	text "Adrinna: This hitch doesn't change my plans. Emperor Mejimi has no idea what's coming at his coronation at the Brass Tower. Maybe I'll see you again, <PLAYER>." 
+	
+CradleKurtText2:
+	text "Kurt: <PLAYER>, what was that? About the Brass Tower? ... Amos told me that he was going to regroup at the temples south of the capital. Let's regroup there."
+	
+
+	
+	
+	
+	
+	
+	

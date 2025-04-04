@@ -148,15 +148,15 @@ RedoubtAmosScript: ;todo
 	opentext
 	checkevent EVENT_BEAT_AMOS
 	iftrue .FightDone
-	writetext AmosText_Intro ; todo
+	writetext AmosText_Intro 
 	waitbutton
 	closetext
-	winlosstext AmosText_Impressed, 0; todo
+	winlosstext AmosText_Impressed, 0
 	loadtrainer AMOS, 2
 	startbattle
 	reloadmapafterbattle
 	opentext
-	writetext Text_ReceivedVisionBadge; todo
+	writetext Text_ReceivedVisionBadge
 	playsound SFX_GET_BADGE
 	waitsfx
 	setflag ENGINE_SOULBADGE ; TODO TO CHECK 
@@ -168,8 +168,71 @@ RedoubtAmosScript: ;todo
 	setevent EVENT_BEAT_NINJA10
 	setevent EVENT_BEAT_NINJA12
 	setevent EVENT_BEAT_NINJA12
-	writetext AmosText_LegacyBadgeSpeech; todo
+	writetext AmosText_LegacyBadgeSpeech
 	promptbutton
-	writetext AmosText_MeetYouAtTheMine; todo
-	closetext
 	end
+
+
+AmosText_Intro:
+	text "...<PLAYER>. Each"
+	line "time we meet, you"
+	cont "cause some havoc."
+	
+	para "I've been trying"
+	line "to organize an"
+	cont "opposition to "
+	cont "Mejimi."
+	
+	para "You've convinced"
+	line "the Elders from"
+	cont "around Johto that"
+	cont "you're no spy."
+	
+	para "But I still see a"
+	line "coin perched on"
+	cont "its edge, unsure"
+	
+	para "where it wants to"
+	line "fall."
+	
+	para "No more! Battle"
+	line "me, so I can see"
+	cont "your soul!"
+	done
+	
+AmosText_Impressed:
+	text "You see the full"
+	line "potential of your"
+	cont "#mon."
+	done
+
+Text_ReceivedVisionBadge:
+	text "As proof of my"
+	line "acceptance, take"
+	cont "the Vision Badge."
+	done
+
+	
+AmosText_LegacyBadgeSpeech:
+	text "With it, our"
+	line "soldiers will see"
+	cont "you're one of us."
+
+	para "First, we need to"
+	line "stop General Adr-"
+	cont "inna at the mine."
+	
+	para "If she gets to"
+	line "the powerful"
+	cont "#mon within, who"
+	cont "knows what she"
+	cont "will do with it."
+	
+	para "After that, we"
+	line "will disrupt the"
+	cont "coronation of"
+	cont "Emperor Mejimi."
+
+	para "Let's go! To the"
+	line "mine!"
+	done
