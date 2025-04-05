@@ -12,7 +12,7 @@ LakeOfRage_MapScriptHeader:
 
 	def_coord_events
 	coord_event 16, 18, 0, LakeHursalunaScript
-
+	coord_event 17, 4, 1, LakeRivalScript
 
 	def_bg_events
 	bg_event 21, 27, BGEVENT_JUMPTEXT, LakeOfRageSignText
@@ -291,3 +291,7 @@ GenericTrainerPokemaniacShane:
 	text "Have you seen any"
 	line "yanma evolution?"
 	done
+
+
+LakePryceScript:
+	
