@@ -4,7 +4,7 @@ CianwoodCove_MapScriptHeader:
 
 
 	def_callbacks
-
+	callback MAPCALLBACK_NEWMAP, CianwoodCoveFlyPoint
 
 	def_warp_events
 
@@ -26,7 +26,10 @@ CianwoodCove_MapScriptHeader:
 
 	object_const_def
 	const CIANWOOD_COVE_KURT
-	
+
+CianwoodCoveFlyPoint:
+	setflag ENGINE_FLYPOINT_CIANWOOD_COVE
+	endcallback	
 	
 CianwoodCoveKurtScript:
 	faceplayer

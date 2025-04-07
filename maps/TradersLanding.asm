@@ -4,6 +4,7 @@ TradersLanding_MapScriptHeader:
 
 
 	def_callbacks
+	callback MAPCALLBACK_NEWMAP, TradesLandingFlyPoint
 
 
 	def_warp_events
@@ -57,6 +58,10 @@ TradersLanding_MapScriptHeader:
 	const TRADERS_LANDING_KURT
 	const TRADERS_LANDING_BARBEAU_2
 	const TRADERS_LANDING_KURT_2
+
+TradesLandingFlyPoint:
+	setflag ENGINE_FLYPOINT_TRADERS_LANDING
+	endcallback
 
 TL_Scene_Part_1_Script_R:
 	applyonemovement PLAYER, step_left

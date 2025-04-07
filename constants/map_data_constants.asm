@@ -114,7 +114,7 @@ JOHTO_FLYPOINT EQU const_value
 	const FLY_CIANWOOD
 	const FLY_MAHOGANY
 	const FLY_LAKE_OF_RAGE
-; kanto
+; historic johto, as KANTO
 KANTO_FLYPOINT EQU const_value
 	const FLY_ANARRES
 	const FLY_GAULDENROD

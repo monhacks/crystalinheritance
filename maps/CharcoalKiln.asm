@@ -52,10 +52,10 @@ CharcoalKilnGettingReadyTrigger:
 	step_end
 
 .CharcoalKilnLookingText:
-	text "You are always"
-	line "losing things!..."
-	cont "Here. Why did you"
-	cont "put it there?"
+	text "Where is it?"
+	line "Under your stupid"
+	cont "glassware and"
+	cont "burners, I see."
 	done
 
 .Movement2:

@@ -35,6 +35,7 @@ AmosScriptCC:
 	iftrue .AmosHeals
 	showtext AmosCradleText1
 	setevent EVENT_AMOS_INTRO_MINE
+	setflag ENGINE_FLYPOINT_SULFUR_STY
 .AmosHeals:
 	showtext AmosHealsText
 	special Special_FadeBlackQuickly

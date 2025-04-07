@@ -162,14 +162,11 @@ TammyScript:
 	disappear MISTY_BASIN_TAMMY
 	end
 
-
-
 TammyAfterBattleText:
 	text "I invented a way"
 	line "to teach"
 	cont "techniques,"
 	cont "ramming a tree."
-	
 	
 	para "It shakes off"
 	line "pineco without"

@@ -3,7 +3,7 @@ TimelessTapestry_MapScriptHeader:
 
 
 	def_callbacks
-
+	callback MAPCALLBACK_NEWMAP, TimelessTapestryFlyPoint
 
 	def_warp_events
 	warp_event 3, 5, WHISPERS_TAPESTRY_GATE, 2
@@ -33,6 +33,11 @@ TimelessTapestry_MapScriptHeader:
 	object_const_def
 	const TAPESTRY_SAMSARA
 	const TAPESTRY_AMOS
+
+
+TimelessTapestryFlyPoint:
+	setflag ENGINE_FLYPOINT_TIMELESS_TAPESTRY
+	endcallback	
 
 TapestrySceneFinale: ; if you helped all the kimono girls then piper gets to come with too 
 	;cf western capital scene 

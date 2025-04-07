@@ -3,7 +3,7 @@ EerieHamlet_MapScriptHeader:
 
 
 	def_callbacks
-
+	callback MAPCALLBACK_NEWMAP, EerieHamletFlyPoint
 
 	def_warp_events
 	warp_event 13, 7, REBELS_REDOUBT_1F, 1
@@ -30,6 +30,10 @@ EerieHamlet_MapScriptHeader:
 
 	object_const_def
 
+
+EerieHamletFlyPoint:
+	setflag ENGINE_FLYPOINT_EERIE_HAMLET
+	endcallback
 
 EerieHamletNPC3:
 	text "The brigaders all"

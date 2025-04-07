@@ -3,6 +3,7 @@ TranquilTarn_MapScriptHeader:
 
 
 	def_callbacks
+	callback MAPCALLBACK_NEWMAP, TranquilTarnFlyPoint
 	callback MAPCALLBACK_TILES, TranquilTarnCallback  
 
 
@@ -40,6 +41,10 @@ TranquilTarn_MapScriptHeader:
 	const TRANQUIL_TARN_HANK
 	const TRANQUIL_TARN_BRIGADER
 	const TRANQUIL_TARN_GYARADOS
+
+TranquilTarnFlyPoint:
+	setflag ENGINE_FLYPOINT_TRANQUIL_TARN
+	endcallback
 
 GenericTrainerBirdKeeperHank:
 	generictrainer BIRD_KEEPER, HANK, EVENT_BEAT_BIRD_KEEPER_HANK, HankSeenText, HankBeatenText

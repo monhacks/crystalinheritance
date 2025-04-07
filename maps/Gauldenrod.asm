@@ -2,6 +2,8 @@ Gauldenrod_MapScriptHeader:
 	def_scene_scripts
 
 	def_callbacks
+	callback MAPCALLBACK_NEWMAP, GauldenrodFlyPoint
+
 
 	def_warp_events
 	warp_event 18, 27, GAULDENROD_DORMS, 1
@@ -58,6 +60,10 @@ Gauldenrod_MapScriptHeader:
 	const GAULDENROD_OCTILLERY
 	const GAULDENROD_MATRON
 	const GAULDENROD_BRIGADER
+
+GauldenrodFlyPoint:
+	setflag ENGINE_FLYPOINT_GAULDENROD
+	endcallback
 
 GauldenrodNPC1Script:
 	jumptextfaceplayer GauldenrodNPC1Text

@@ -802,7 +802,7 @@ RivalLeavesHumiliated:
 	line "beaten me this"
 	cont "time, but I'm"
 	cont "only getting str-"
-	cont "onger. The next"
+	cont "onger."
 	done
 	
 IlexRivalLeavesMovement:

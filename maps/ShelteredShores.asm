@@ -4,6 +4,7 @@ ShelteredShores_MapScriptHeader:
 
 	def_callbacks
 	callback MAPCALLBACK_TILES, ShelteredShoresOpenCallback
+	callback MAPCALLBACK_NEWMAP, ShelteredShoresFlyPoint
 
 	def_warp_events
 	warp_event 8, 17, SEAFLUX_NEXUS, 1
@@ -15,9 +16,7 @@ ShelteredShores_MapScriptHeader:
 	def_coord_events
 
 
-
 	def_bg_events
-
 
 
 	def_object_events
@@ -30,9 +29,11 @@ ShelteredShores_MapScriptHeader:
 
 	object_const_def
 
+CianwoodCoveFlyPoint:
+	setflag ENGINE_FLYPOINT_SHELTERED_SHORES
+	endcallback	
 
-
-StadiumGroundsFloodCallback:
+ShelteredShoresOpenCallback:
 	checkevent EVENT_BEAT_EUSINE ; need to open up the whirl islands so you don't black out and get stuck 
 	iffalse .Done
 	changeblock 12, 24, $35

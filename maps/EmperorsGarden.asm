@@ -553,6 +553,7 @@ AmosGardenScript:
 	applyonemovement EMPERORS_GARDEN_AMOS, teleport_from
 	disappear EMPERORS_GARDEN_ADRINNA_4
 	setevent EVENT_BATTLED_AMOS_GARDEN
+	setflag ENGINE_FLYPOINT_WESTERN_CAPITAL
 	end
 
 AmosSuspectsYouText:

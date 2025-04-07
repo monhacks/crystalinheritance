@@ -2094,9 +2094,9 @@ FlyMap:
 ; Start from New Bark Town
 	ld a, FLY_AZALEA
 	ld [wTownMapPlayerIconLandmark], a
-; Flypoints begin at New Bark Town...
+; Modern Johto Flypoints begin at New Bark Town...
 	ld [wStartFlypoint], a
-; ..and end at Silver Cave
+; ..and end at lake of rage 
 	ld a, FLY_LAKE_OF_RAGE  
 	ld [wEndFlypoint], a
 ; Fill out the map
@@ -2128,7 +2128,7 @@ FlyMap:
 	ld a, FLY_ANARRES;_TOWN  ; ANARRES_TOWN
 	ld [wStartFlypoint], a
 	ld [wTownMapPlayerIconLandmark], a ; DEFAULT FIRST PLACE 
-; ...and end at Indigo Plateau
+; ...and end at Timeless Tapestry
 	ld a, FLY_TIMELESS_TAPESTRY 
 	ld [wEndFlypoint], a
 ; Because Indigo Plateau is the first flypoint the player
