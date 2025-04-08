@@ -442,7 +442,6 @@ GauldenrodBobeshScene: ; todo, make
 	setscene $1
     end
 
-
 BrigaderText1:
     text "Brigader: Where"
     line "is he?"
