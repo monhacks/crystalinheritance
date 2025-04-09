@@ -62,7 +62,7 @@ MahoganyGymPryceScript:
 	closetext
 	end
 
-	PryceText_Intro: ; done 
+PryceText_Intro: ; done 
 	text "<PLAYER>, Kurt"
 	line "told me about the"
 	cont "troubles you two"
@@ -150,8 +150,6 @@ PryceText_MeetYouAtTheLake:
 	line "so make sure you"
 	cont "have supplies."
 	done
-
-
 
 GenericTrainerSkierRoxanne:
 	generictrainer SKIER, ROXANNE, EVENT_BEAT_SKIER_ROXANNE, SkierRoxanneSeenText, SkierRoxanneBeatenText

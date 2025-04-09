@@ -194,7 +194,7 @@ TapestryShiji:
 	cont "to return to the"
 	cont "Capital."
 	
-	para "These caverns are"
+	para "The temples are"
 	line "still under cons-"
 	cont "truction."
 	done

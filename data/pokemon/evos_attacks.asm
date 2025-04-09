@@ -4702,22 +4702,18 @@ HoOhEvosAttacks: ;ENCOUUNTER AT LEVEL 50
 	db 65, BRAVE_BIRD ; Sky Attack → Brave Bird
 	db 0 ; no more level-up moves
 
-CelebiEvosAttacks: ;ENCOUNTER AT LEVEL 25 AND THEN AT LEVEL 60
+CelebiEvosAttacks: ;ENCOUNTER AT LEVEL 50
 	db 0 ; no more evolutions
-	db 1, LEECH_SEED
-	db 1, RECOVER
 	db 1, CONFUSION
-	db 20, ANCIENTPOWER
-	db 30, BATON_PASS
-	db 35, MOONBLAST ; Natural Gift → new move
-	db 40, LIGHT_SCREEN ; Heal Block → TM move
-	db 45, FUTURE_SIGHT
-	db 50, PSYCHIC_M ; Healing Wish → Heal Bell
-	db 55, NASTY_PLOT ; Leaf Storm → event move
+	db 50, ENERGY_BALL 
+	db 50, LEECH_SEED
+	db 50, ANCIENTPOWER
+	db 50, PSYCHIC_M 
+	db 53, FUTURE_SIGHT
+	db 56, NASTY_PLOT
+	db 59, RECOVER
 	db 60, PERISH_SONG
-	db 65, AURA_SPHERE ; Sw/Sh move
 	db 0 ; no more level-up moves
-
 
 EggEvosAttacks::
 	db 0 ; no more evolutions
