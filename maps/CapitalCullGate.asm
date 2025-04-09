@@ -32,24 +32,14 @@ CapitalCullNomadFNPCScript:
 	jumptextfaceplayer CapitalCullGateNPCText
 
 CapitalCullGateNPCText:
-
-	text "Kensey speaks of"
-	line "progress, yet"
-	cont "I stand outside"
-	para "his moat, like"
-	line "a beggar."
-
-	para "I roamed free"
-	line "from shore to"
+	text "We roamed free"
+	line "from sea to"
 	cont "shore. Now,"
-	para "I'm 'free' to"
+	para "we’re 'free' to"
 	line "make #balls"
 	cont "for them."
 
-	para "..."
-
-	para "The Sheltered"
-	line "Shores call to"
-	cont "me still."
+	para "The waves call"
+	line "to me..."
 	done
 	

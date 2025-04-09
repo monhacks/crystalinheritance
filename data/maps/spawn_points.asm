@@ -10,16 +10,16 @@ SpawnPoints:
 
 	spawn KURTS_HOUSE,                 7,  1 ;  "YOUR HOUSE"
 
-	spawn ANARRES_TOWN,               17, 10 ;
-	spawn GAULDENROD,                 18, 28
-	spawn WESTERN_CAPITAL,            21, 26
-	spawn TRADERS_LANDING,            15, 17
-	spawn SHELTERED_SHORES,           34, 20
-	spawn CIANWOOD_COVE,              11, 14
-	spawn TRANQUIL_TARN,              13,  4
-	spawn EERIE_HAMLET,               11,  8
-	spawn SULFUR_STY,                 47, 24
-	spawn TIMELESS_TAPESTRY,           3,  6
+	spawn ANARRES_TOWN,               17, 10 ; ok 
+	spawn GAULDENROD,                 18, 28 ; ok 
+	spawn WESTERN_CAPITAL,            21, 26 ; ok 
+	spawn TRADERS_LANDING,            15, 17 ; ok 
+	spawn SHELTERED_SHORES,           34, 20 ; ok 
+	spawn CIANWOOD_COVE,              11, 14 ; ok 
+	spawn TRANQUIL_TARN,              13,  4 ; ok 
+	spawn EERIE_HAMLET,               11,  8 ; ok 
+	spawn SULFUR_STY,                 34,  8 ; ok 
+	spawn TIMELESS_TAPESTRY,           3,  6 ; ok 
 
 	spawn AZALEA_TOWN,                15, 10
 	spawn GOLDENROD_CITY,             18, 28

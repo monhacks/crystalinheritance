@@ -21,17 +21,11 @@ BrassTower1F_MapScriptHeader:
 ; KURT - pontificates
 ; AMOS - sells items 
 	object_event 6, 2, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TowerKurtScript, -1 ; 
-	pokemon_event  5, 2, LUGIA, -1, -1, PAL_NPC_BLUE, LugiaText, -1
 	object_event 7, 13, SPRITE_AMOS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_COMMAND, jumptextfaceplayer, BrassTowerAmosText, -1 ; done
 	object_event  5,  13, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_COMMAND, pokemart, MARTTYPE_STANDARD, MART_WESTERN_CAPITAL_PREP, -1
 	object_event 9, 13, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, BrassTowerHealScript, -1 ; done
 
 	object_const_def
-
-
-LugiaText:
-	text "Lluuu!"
-	done
 
 BrassTowerAmosText:
 	text "Let's go. I'll"
@@ -70,7 +64,6 @@ BrassHealedPokemon:
 	text "All healed."
 	done
 
-
 TowerKurtScript: 
 	faceplayer
 	opentext
@@ -89,8 +82,6 @@ TowerKurtScript:
 	special PokemonCenterPC ; per engine/events/std_scripts.asm this is how it should be done. 
 	endtext
 	end
-
-
 
 KurtHearAStoryQuestionTower:
 	text "Would you like"
