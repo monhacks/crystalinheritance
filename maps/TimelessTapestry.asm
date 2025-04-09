@@ -118,7 +118,7 @@ TapestryPiper:
 	turnobject PLAYER, DOWN
 	pause 20
 	special Special_CelebiShrineEvent
-	loadwildmon CELEBI, 30
+	loadwildmon CELEBI, 50
 	startbattle
 	reloadmapafterbattle
 	pause 20
