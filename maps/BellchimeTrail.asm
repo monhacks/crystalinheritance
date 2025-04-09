@@ -17,7 +17,7 @@ BellchimeTrail_MapScriptHeader:
 
 	def_object_events
 	object_event 14,  4, SPRITE_REI, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BellchimeTrailEmiScript, -1
-	object_event 21, 10, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, BellchimeBlockerText, EVENT_BEAT_MORTY_GYM ;
+	object_event 21, 10, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, BellchimeBlockerText, EVENT_BEAT_PRYCE_GYM ;
 
 	object_const_def
 	
@@ -214,7 +214,6 @@ EmiHealedPokemonText:
 	cont "#mon."
 	done
 
-
 BellchimeTrailAskToTimeTravelText:
 	text "Would you like to"
 	line "see for yourself?"
@@ -230,16 +229,8 @@ BellChimeTrailYesTimeTravelText:
 	line "pray to Celebi..."
 	done
 
-
 BellchimeBlockerText:
 	text "The tower is off-"
-	line "limits to those"
-	cont "without a Clear"
-	cont "Bell..."
-	
-	para "If Morty returns"
-	line "to his duty, he"
-	cont "may test if you"
-	cont "are worthy to"
-	cont "hold it."
+	line "limits without a"
+	cont "Clear Bell."
 	done

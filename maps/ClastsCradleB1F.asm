@@ -151,7 +151,7 @@ CradleScene1_Mejimi:
 	special Special_FadeBlackQuickly
 	setevent EVENT_CRADLE_CUTSCENE
 	setscene $1
-	warp OLIVINE_CITY,  19, 22
+	warp OLIVINE_CITY,  19, 22 ; revise to the desal plant 
 	end
 
 CradleCutscene_Text0:
