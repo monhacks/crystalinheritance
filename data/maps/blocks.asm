@@ -1128,3 +1128,11 @@ KimonoCabin4_BlockData:
 SECTION "KimonoCabin5_BlockData", ROMX
 KimonoCabin5_BlockData:
 	INCBIN "maps/KimonoCabin5.ablk.lz"
+	
+SECTION "TinderGarden2_BlockData", ROMX
+TinderGarden2_BlockData:
+	INCBIN "maps/TinderGarden2.ablk.lz"
+	
+SECTION "ShimmerSaddle_BlockData", ROMX
+ShimmerSadle_BlockData:
+	INCBIN "maps/ShimmerSaddle.ablk.lz"

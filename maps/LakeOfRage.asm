@@ -23,9 +23,8 @@ LakeOfRage_MapScriptHeader:
 
 
 	def_object_events
-	; SIGHTSEERm blaise, gareth, sightseerf kamila, noelle, POKEMANIACS CALVIN AND SHANE 
-	object_event 17, 3, SPRITE_PRYCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT,0, LakePryceScript, EVENT_LAKE_PRYCE ; INITIALIZE todo 
-	object_event 23, 3, SPRITE_KURT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LAKE_KURT ; INITIALIZE 
+	object_event 17, 3, SPRITE_PRYCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT,0, LakePryceScript, -1 ;
+	object_event 12, 4, SPRITE_KURT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LAKE_KURT ; INITIALIZE 
 	object_event 23, 3, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LAKE_RIVAL ; INITIALIZE 
 ;HURSALUNA
 	object_event  16,  13, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, H__URSALUNA, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LAKE_HURSALUNA 
@@ -100,6 +99,179 @@ LakeOfRageSignPryceText:
 	text "Pryce's Cabin"
 	done
 
+LakeRivalScript:
+    showemote EMOTE_SHOCK, PLAYER, 15
+    special Special_FadeOutMusic
+    pause 15
+	turnobject PLAYER, RIGHT
+    appear LAKEOFRAGE_RIVAL
+ 	applymovement LAKEOFRAGE_RIVAL, LakeRivalToPlayer
+	showtext LakeRivalText1
+	appear LAKEOFRAGE_KURT
+ 	applymovement LAKEOFRAGE_KURT, LakeKurtToPlayer
+	showtext LakeKurtText1
+	turnobject LAKEOFRAGE_RIVAL, DOWN
+	showtext LakeRivalText2
+	showemote EMOTE_BOLT, LAKEOFRAGE_RIVAL, 10
+	turnobject LAKEOFRAGE_RIVAL, LEFT
+    scall LakeRivalBattleScript ; todo 
+    applymovement LAKEOFRAGE_RIVAL, LakeRivalWalksAway
+    setscene $2
+    setevent EVENT_FOUGHT_LAKE_RIVAL
+	disappear LAKEOFRAGE_RIVAL
+    waitsfx
+    playmapmusic
+    end
+
+LakeRivalBattleScript:
+    playmusic MUSIC_RIVAL_ENCOUNTER
+    setevent EVENT_LAKE_RIVAL
+    checkevent EVENT_GOT_OSHAWOTT
+    iftrue .Oshawott
+    checkevent EVENT_GOT_ROWLET
+    iftrue .Rowlet
+    winlosstext RadioTowerRivalWinText, 0
+    setlasttalked LAKEOFRAGE_RIVAL
+    loadtrainer RIVAL1, 6 ; todo 
+    startbattle
+    dontrestartmapmusic
+    reloadmapafterbattle
+    sjump .FinishRivalBattle
+
+.Oshawott:
+    winlosstext RadioTowerRivalWinText, 0
+    setlasttalked LAKEOFRAGE_RIVAL
+    loadtrainer RIVAL1, 4 ; todo 
+    startbattle
+    dontrestartmapmusic
+    reloadmapafterbattle
+    sjump .FinishRivalBattle
+
+.Rowlet:
+    winlosstext RadioTowerRivalWinText, 0
+    setlasttalked LAKEOFRAGE_RIVAL
+    loadtrainer RIVAL1, 5 ; todo 
+    startbattle
+    dontrestartmapmusic
+    reloadmapafterbattle
+    sjump .FinishRivalBattle
+
+.FinishRivalBattle:
+    special DeleteSavedMusic
+    playmusic MUSIC_RIVAL_AFTER
+    jumptext LakeRivalAfterText
+
+LakeRivalText1:
+	text "What're you"
+	line "doing here?"
+	done
+	
+LakeKurtText1:
+	text "Kurt: <RIVAL>,"
+	line "here to destroy"
+	cont "something else?"
+	done
+
+LakeRivalText2:
+	text "<RIVAL>: Just"
+	line "getting material"
+	cont "for my distiller."
+	
+	para "I had to leave"
+	line "Olivine."
+	
+	para "KURT: See your"
+	line "inventions upset"
+	cont "the balance! You"
+	
+	para "should go"
+	line "home."
+	done
+
+LakeRivalText2:
+	text "You're the one"
+	line "who is upsetting"
+	cont "balance!"
+	
+	para "Your adherence to"
+	line "tradition is like"
+	
+	para "a Pineco infest-"
+	line "ation, unaware"
+	
+	para "that their insti-"
+	line "ncts kill their"
+	cont "own habitat."
+	
+	para "We are part of"
+	line "nature. Our niche"
+	cont "is to be reflect-"
+	cont "ive stewards."
+	
+	para "I'll show you how"
+	line "strong I am with-"
+	cont "out you!"
+	done
+
+RadioTowerRivalWinText:
+	text "I wish I was an"
+	line "entire region"
+	cont "away from you."
+	done
+
+LakeRivalAfterText:
+	text "You're only gett-"
+	line "ing weaker, like"
+	
+	para "the shrine that"
+	line "fades every 20"
+	cont "years. Unlike a"
+	
+	para "Pineco in its"
+	line "shell, or you hi-"
+	cont "ding behind self-"
+	cont "righteousness, or"
+	para "Silph hiding beh-"
+	line "ind a balance"
+	cont "sheet, "
+
+	para "I can see my eff-"
+	line "ect. I walked aw-"
+	cont "ay when it wasn't"
+	cont "working."
+	
+	para "<PLAYER>, when"
+	line "will you?"
+	done
+
+LakeRivalToPlayer:
+	step_left
+	step_left
+	step_left
+	step_down
+	step_left
+	step_left
+	step_end
+
+LakeKurtToPlayer:
+	step_right
+	step_right
+	step_right
+	step_right
+	step_down
+	step_right
+	step_end
+
+LakeRivalWalksAway:
+	step_right
+	step_right
+	step_up
+	step_right
+	step_right	
+	step_right
+	step_end
+
+
 LakePryceScript:
 	showtext LakeShrineQuestion
 	yesorno
@@ -109,7 +281,7 @@ LakePryceScript:
 	playsound SFX_WARP_TO
 	special FadeOutPalettes
 	waitsfx
-	warp TRANQUIL_TARN, 0, 0 ; TODO GET THIS COORDINATE 
+	warp TRANQUIL_TARN, 12, 4
 	end
 
 LakeShrineQuestion:
@@ -124,17 +296,18 @@ LakeNoText:
 	done
 
 LakePrayerText:
-	text "Take us back to"
-	line "days of old,"
+	text "The flow of time"
+	line "shapes us,"
 	
-	para "When balance"
-	line "stood intact,"
+	para "As a downpour or"
+	line "a sprinkle,"
 	
-	para "Let truth now"
-	line "be retold,"
-	
-	para "The past we"
-	line "must enact."
+	para "Don’t panic,"
+	line "have prudence!"
+
+
+	para "So we can choose"
+	ilne "our wrinkles."
 	done
 
 WesleyScript:

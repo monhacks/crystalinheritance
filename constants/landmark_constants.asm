@@ -45,6 +45,7 @@ KANTO_LANDMARK EQU const_value ;old johto updated 04.01.24
 	const CALM_COAST ;ROUTE 34
 	const GAULDENROD
 	const GAULDENROD_TOWER
+	const SHIMMER_SADDLE 
 	const SERENE_SPRINGS ;ROUTE 35
 	const STADIUM_GROUNDS
 	const STADIUM

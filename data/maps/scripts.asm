@@ -221,7 +221,7 @@ INCLUDE "maps/AzaleaGym.asm"
 INCLUDE "maps/CharcoalKiln.asm"
 INCLUDE "maps/KurtsHouse.asm"
 INCLUDE "maps/TinderGarden.asm"
-
+INCLUDE "maps/TinderGarden2.asm"
 
 SECTION "Slowpoke Well Scripts", ROMX
 
@@ -462,6 +462,7 @@ INCLUDE "maps/FirstClassCabin.asm"
 INCLUDE "maps/SecondClassCabin.asm"
 INCLUDE "maps/KajoCabin.asm"
 INCLUDE "maps/UndergroundRadioTower.asm"
+INCLUDE "maps/ShimmerSaddle.asm"
 
 SECTION "Blackthorn Scripts", ROMX
 

@@ -31,6 +31,7 @@ RadioTowerRivalTrigger1:
     applymovement PLAYER, RadioTowerPlayerPushbackMovement
     applymovement RADIOTOWER_RIVAL, RadioTowerRivalApproachMovement
     scall RadioTowerRivalBattleScript
+	; picks up back here 
     applymovement RADIOTOWER_RIVAL, RadioTowerRivalRetreatMovement
     playsound SFX_EXIT_BUILDING
     disappear RADIOTOWER_RIVAL

@@ -49,6 +49,7 @@ Landmarks:
 	landmark  76, 124, CalmCoastName ; good
 	landmark  76, 116, GauldenrodName ; good
 	landmark  72, 116, GauldenrodTowerName ; good
+	landmark  80, 116, ShimmerSaddleName 
 	landmark  76,  104, SereneSpringsName ; good
 	landmark  76,  92, StadiumGroundsName ; good
 	landmark  76,  88, StadiumName ; good
@@ -122,6 +123,7 @@ MistyBasinName:		   rawchar "Misty¯Basin@"
 CalmCoastName:	       rawchar "Calm¯Coast@"
 GauldenrodName:		   rawchar "Gauldenrod@"
 GauldenrodTowerName:   rawchar "Gauldenrod¯Tower@"
+ShimmerSaddleName:     rawchar "Shimmering_Saddle@"
 SereneSpringsName:	   rawchar "Serene¯Springs@"
 StadiumGroundsName:	   rawchar "Stadium¯Grounds@"
 StadiumName:           rawchar "Stadium@"

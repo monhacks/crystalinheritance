@@ -161,8 +161,6 @@ MortyIntroText:
 	cont "bonds!"
 	done
 
-
-
 MortyWinLossText:
 	text "I see. Your"
 	line "connection is"

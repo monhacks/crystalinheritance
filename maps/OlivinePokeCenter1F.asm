@@ -51,7 +51,6 @@ OlivinePokeCenter1FFisherText:
 
 OlivinePokeCenter1FTeacherText:
 	text "Chuck's project"
-	line "with the Slowking"
 	cont "is called OMLAS."
 	
 	para "It stands for"

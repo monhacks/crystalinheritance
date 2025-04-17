@@ -557,3 +557,7 @@ ENDM
 	map_attributes KimonoCabin4, KIMONO_CABIN_4, $19, 0
 	
 	map_attributes KimonoCabin5, KIMONO_CABIN_5, $0, 0
+	
+	map_attributes TinderGarden2, TINDER_GARDEN_2, $33, 0
+	
+	map_attributes ShimmerSaddle, SHIMMER_SADDLE,  $5, 0

@@ -427,7 +427,8 @@ ENDM
 
 
 	newgroup                                                     ; 31
-
+	map_const TINDER_GARDEN_2, 							   	 5,  5
+	map_const SHIMMER_SADDLE, 								20, 30
 
 	newgroup                                                     ; 32
 
