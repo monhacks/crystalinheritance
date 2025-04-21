@@ -18,19 +18,14 @@ OlivineLighthouse6F_MapScriptHeader:
 	def_bg_events
 
 	def_object_events
-	;kurt
 	object_event 14, 10, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, LighthouseKurtScript, EVENT_BEAT_CHUCK
-	;jasmine
 	object_event 7, 10, SPRITE_JASMINE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_CHUCK	
-	;chuck
 	object_event 8, 10, SPRITE_CHUCK, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_CHUCK	
-	; slowking 
+
 	pokemon_event  9, 9, SLOWKING, -1, -1, PAL_NPC_RED, SlowkingLighthouseText, EVENT_SLOWKING_DREAMS
 	pokemon_event  9, 8, TENTACRUEL, -1, -1, PAL_NPC_BLUE, TentacruelLighthouseText, EVENT_SLOWKING_DREAMS
-	;scientist x2
+
 	object_event 18,  9, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Lighthouse6FScientistScript, -1
-	object_event 15,  7, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Lighthouse6FScientistScript, EVENT_SLOWKING_DREAMS
-	
 	itemball_event  2,  9, DUBIOUS_DISC, 1, EVENT_DUBIOUS_DISC
 
 	object_const_def
@@ -56,15 +51,32 @@ Lighthouse6FScene:
 	applyonemovement PLAYER, step_left
 	turnobject PLAYER, UP
 	special HealParty
-	; no escape, right? 
 	warp SLOWPOKE_DREAMS, 5, 8
 	end
 ;
-Jasmine: How can you do this!
-Chuck: It doesn’t matter! The struggle – that’s how the Slowking’s brain gets more powerful! It is our guardian from the sea! 
-Kurt: <PLAYER>! You have to do something!
-<Player walks over to the Slowking, teleported to Slowking Dreams>
-;
+LighthouseJasmineText1:
+	text "Jasmine: How"
+	line "can you do this!"
+	done
+
+LighthouseChuckText1:
+	text "Chuck: It doesn't"
+	line "matter - The"
+	cont "struggle is how"
+	
+	para "The Slowking's"
+	line "brain gets more"
+	cont "powerful!"
+	
+	para "It's our guardian"
+	line "from the sea!"
+	done
+
+LighthouseKurtText1:
+	text "Kurt: <PLAYER>,"
+	line "do something!"
+
+
 Lighthouse6FScene3:
 	applyonemovement PLAYER, step_up
 Lighthouse6FScene2:
@@ -74,16 +86,14 @@ Lighthouse6FScene2:
 	applyonemovement PLAYER, step_left  
 Lighthouse6FScene1:
 	turnobject PLAYER, LEFT
-	turnobject LIGHTHOUSE_CHUCK, right
+	turnobject LIGHTHOUSE_CHUCK, RIGHT
 	showemote EMOTE_BOLT, LIGHTHOUSE_CHUCK, 10
 	showtext LighthouseChuckText2
-
 	showemote EMOTE_QUESTION, LIGHTHOUSE_JASMINE, 10
 	showtext LighthouseJasmineText2
 	showtext LighthouseChuckText2
 	showemote EMOTE_BOLT, LIGHTHOUSE_CHUCK, 10
 	showtext LighthouseChuckText3
-; cf polished, TODO FIX 
 	winlosstext ChuckLossText, 0
 	loadtrainer CHUCK, 1
 	startbattle
@@ -94,30 +104,108 @@ Lighthouse6FScene1:
 	playsound SFX_GET_BADGE
 	waitsfx
 	setflag ENGINE_STORMBADGE
-.FightDone:
-	checkevent EVENT_GOT_TM01_DYNAMICPUNCH
-	iftrue_jumpopenedtext ChuckAfterText
-	writetext ChuckExplainBadgeText
 	promptbutton
-	verbosegivetmhm TM_DYNAMICPUNCH
-	setevent EVENT_GOT_TM01_DYNAMICPUNCH
-	jumpopenedtext ChuckExplainTMText
+	turnobject LIGHTHOUSE_CHUCK, LEFT
+	showtext LighthouseJasmineText3
+	promptbutton
+	writetext LighthouseChuckText4
+	waitbutton
+	closetext
+	applymovement LIGHTHOUSE_CHUCK, LighthouseChuckLeavesMovement
+	disappear LIGHTHOUSE_CHUCK
+	applyonemovement LIGHTHOUSE_JASMINE, step_right
+	showemote EMOTE_HAPPY, LIGHTHOUSE_JASMINE, 10
+	showtext LighthouseJasmineText4
+	waitbutton
+	closetext
+	applymovement LIGHTHOUSE_JASMINE, LighthouseChuckLeavesMovement
+	disappear LIGHTHOUSE_JASMINE
 	
 ;
-LighthouseChuckText2
-Chuck: Hey, what gives? 
+LighthouseChuckText2:
+	text "Chuck: Hey,"
+	line "what gives?"
+	done
 
-LighthouseJasmineText2
-Jasmine: You tell me!
-Chuck: I had perfect understanding, perfect control!
-Jasmine: You kept me blind to this! 
+LighthouseJasmineText2:
+	text "Jasmine: You"
+	line "tell me!"
+	
+	para "Chuck: I had per-"
+	line "fect knowledge,"
+	cont "perfect control!"
+	
+	para "Jasmine: You kept"
+	line "me blind to it!"
 
-LighthouseChuckText3
-Chuck: I would have mapped the future for you. Now, you say you’d rather do without? I’ve already lost one home to the whims of fate. I won’t lose another. You – battle me!
-<Battle chuck>
-Chuck: Bested by you? But… I thought I knew it all… 
-Jasmine: You told me progress was always good, yet your design limited us. Even running our desal at a low level, it may take generations for the ecosystem to recover. 
-Chuck: Let’s go to your gym. We can talk about next steps. 
+LighthouseChuckText3:
+	text "Chuck: I'd have"
+	line "mapped the future"
+	cont "for you."
+	
+	para "You'd rather do"
+	line "without?"
+	
+	para "I've lost one"
+	line "home to the whims"
+	cont "of fate."
+	
+	para "I won't lose an-"
+	line "other. You child,"
+	cont "battle me!"
+	done
+	
+ChuckLossText:
+	text "Bested by you?"
+	line "I thought I knew"
+	cont "it all..."
+
+GetStormBadgeText:
+	text "Cianwood washed"
+	line "away, but not my"
+	cont "duty. You deserve"
+	cont "this badge."
+	done
+	
+LighthouseJasmineText3:
+	text "Jasmine: You told"
+	line "me progress was"
+	cont "always good, but"
+	
+	para "you limited us."
+	line "Running the desal"
+	cont "at its original"
+	cont "level, it may"
+	
+	para "take generations"
+	line "for the shore to"
+	cont "recover."
+	done
+
+LighthouseChuckText4:
+	text "Chuck: Let's go."
+	line "We can talk about"
+	cont "next steps."
+	done
+
+LighthouseJasmineText4:
+	text "If you have some"
+	line "time, I'd like to"
+	cont "meet you at my"
+	cont "Gym."
+	done
+
+LighthouseChuckLeavesMovement:
+	step_down
+	step_right
+	step_right
+	step_right
+	step_right
+	step_right
+	step_right
+	step_right
+	step_end
+
 <Chuck and Jasmine leave> 
 ;
 
@@ -134,6 +222,8 @@ TentacruelLighthouseText:
 
 LighthouseKurtScript:
 	faceplayer
+	checkevent EVENT_BEAT_CHUCK
+	iftrue_jumptext LighthouseKurtAfterChuck
 	showtext LighthouseKurtText1
 	special Special_FadeBlackQuickly
 	special Special_ReloadSpritesNoPalettes
@@ -160,6 +250,32 @@ LighthouseKurtText1:
 	para "Let me heal your"
 	line "#mon before"
 	cont "we face Chuck."
+	done
+	
+LighthouseKurtAfterChuck:
+	text "I'm ashamed to"
+	line "say that I recog-"
+	cont "nized the look in"
+	cont "Chuck's eyes."
+	
+	para "It's the same one"
+	line "that was in my"
+	cont "reflection, when"
+	cont "I commanded Lugia"
+	cont "at the port."
+	
+	para "A lack of aware-"
+	line "ness about what"
+	cont "might be lost,"
+	
+	para "How difficult it"
+	line "might be to rest-"
+	cont "ore balance."
+	
+	para "Hopefully, Celebi"
+	line "was watching, and"
+	cont "will see that I"
+	cont "have learned."
 	done
 	
 Lighthouse6FScientistScript:
