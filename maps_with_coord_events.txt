@@ -1,0 +1,26 @@
+Maps containing coord_event lines: 24
+
+AnarresTower3F.asm
+AzaleaTown.asm
+BellchimeTrail.asm
+BurnedTowerB1F.asm
+ClastsCradleB1F.asm
+EmperorsGarden.asm
+Gauldenrod.asm
+GrottoedGlacierB2F.asm
+IlexForest.asm
+LakeOfRage.asm
+LandingDocks.asm
+OlivineCity.asm
+OlivineLighthouse1F.asm
+OlivineLighthouse6F.asm
+RadioTower1F.asm
+Route40.asm
+Route43.asm
+ShimmerSaddle.asm
+StadiumGrounds.asm
+TimelessTapestry.asm
+TinTowerOld3F.asm
+TinderGarden.asm
+TradersLanding.asm
+TranquilTarn.asm
