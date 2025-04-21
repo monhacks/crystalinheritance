@@ -25,6 +25,7 @@ TreeMonMaps:
 	treemon_map MAHOGANY_TOWN, 0
 	treemon_map LAKE_OF_RAGE, 5
 	treemon_map ILEX_FOREST, 6
+	treemon_map ROUTE_KA_JO, 1 ; canyon 
 ;OLD 
 	treemon_map HOLLYS_HOLT, 6
 	treemon_map ANARRES_TOWN, 2
@@ -38,6 +39,7 @@ TreeMonMaps:
 	treemon_map SINJOH_CROSSROADS, 5
 	treemon_map EMPIRES_EXTENT, 5 
 	treemon_map SULFUR_STY, 3
+	treemon_man SHIMMER_SADDLE, 1
 	db -1
 
 RockMonMaps:

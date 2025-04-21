@@ -4449,7 +4449,7 @@ HgoodraEvosAttacks:
 	db 0 ; no more level-up moves
 	
 
-HzoroarkEvosAttacks:
+HzoroarkEvosAttacks: ; fought at Lv 30 
 	db 0 ; no more Evolutions
 	db 1, SHADOW_CLAW
 	db 1, SLASH

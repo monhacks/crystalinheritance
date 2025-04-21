@@ -1,9 +1,9 @@
 TreeMons:
 ; entries correspond to TREEMON_SET_* constants
 	table_width 2, TreeMons
-	dw TreeMonSet_City
-	dw TreeMonSet_Canyon
-	dw TreeMonSet_Town
+	dw TreeMonSet_City ; 0 
+	dw TreeMonSet_Canyon ; 1
+	dw TreeMonSet_Town ; 2 
 	dw TreeMonSet_Route
 	dw TreeMonSet_Kanto
 	dw TreeMonSet_Lake
@@ -18,7 +18,6 @@ TreeMons:
 ;	db  %, species, level
 
 TreeMonSet_City:
-TreeMonSet_Canyon:
 	db 50, PIDGEY,     10
 	db 15, PIDGEY,     10
 	db 15, PIDGEY,     10
@@ -34,6 +33,24 @@ TreeMonSet_Canyon:
 	db  5, MEOWTH,     10
 	db  5, MEOWTH,     10
 	db -1
+
+TreeMonSet_Canyon:
+	db 30, MANKEY,     20
+	db 30, GLIGAR,     20
+	db 10, GOLBAT,     20
+	db 20, NATU,       20
+	db  5, SKARMORY,   20
+	db  5, SKARMORY,   20
+	db -1
+	; rare
+	db 30, MANKEY,     20
+	db 30, GLIGAR,     20
+	db 10, GOLBAT,     20
+	db 20, NATU,       20
+	db  5, SKARMORY,   20
+	db  5, SKARMORY,   20
+	db -1
+
 
 TreeMonSet_Town:
 	db 50, PIDGEY,     10

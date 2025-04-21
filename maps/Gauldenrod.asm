@@ -49,6 +49,7 @@ Gauldenrod_MapScriptHeader:
 	object_event 13,  9, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 2, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GauldenrodNPC6Script, EVENT_GAULDENROD_CIVILIANS
 	object_event 19, 17, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GauldenrodNPC7Script, EVENT_GAULDENROD_CIVILIANS
 	object_event 12, 17, SPRITE_LASS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GauldenrodNPC8Script, EVENT_GAULDENROD_CIVILIANS
+	object_event 14, 13, SPRITE_ELDER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GauldenrodNPC9Script, EVENT_GAULDENROD_ELDER ; initialized until after bobesh defeated 
 
 	fruittree_event  36, 7, FRUITTREE_GAULDENROD, RADIANT_OPAL, PAL_NPC_RED
 	object_event 23, 4, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BrigaderScript, EVENT_GAULDENROD_TUNNELERS
@@ -347,14 +348,20 @@ GauldenrodHisuiTraderRememberText:
 	text "Hey, I remember"
 	line "you. How is that"
 	cont "#mon I gave you?"
+
+	para "Oh, by the way,"
+	line "if you see a red-"
+	cont "white #mon,"
+	
+	para "Just stay clear,"
+	line "OK?"
 	done
 
 GauldenrodHisuiTraderText:
 	text "Hello! Rare"
-	line "#MON! Fresh"
+	line "#mon! Gifts"
 	cont "from Hisui. Which"
-	cont "one would you"
-	cont "like?"
+	cont "would you like?"
 	done
 
 GauldenrodHisuiTraderLuxioText:
@@ -588,3 +595,66 @@ BobeshWalksAway:
     step_up
     step_up
 	step_end
+	
+GauldenrodNPC9Script:
+	faceplayer
+	checkevent EVENT_BEAT_SAMSARA
+	iffalse_jumptext GauldenrodElderNoSurf
+	showtext GauldenrodElderQuestText
+	yesorno
+	iffalse_jumptext GauldenrodElderQuestNo
+	showtext GauldenrodElderThanks
+	warp SHIMMER_SADDLE, 7, 33
+	end
+
+GauldenrodElderQuestText:
+	text "Please, help me!"
+	line "I escaped the"
+	cont "Stadium, but I"
+	
+	para "can't find her."
+	line "They say that she"
+	cont "was taken to the"
+	cont "Stadium,"
+	
+	para "But my old eyes"
+	line "still see her in"
+	cont "the mountains, "
+	
+	para "and hear her bec-"
+	line "kon me from the"
+	cont "hills."
+	
+	para "I was next to do"
+	line "the ritual, but"
+	cont "the youngsters"
+	para "are too scared,"
+	line "ever since the"
+	cont "Brigaders told "
+	para "some ghost stor-"
+	line "ies. Will you"
+	cont "help me?"
+	done
+	
+GauldenrodElderQuestNo:
+	text "Oh, I can't even"
+	line "pull weeds, I'm"
+	cont "too torn up!"
+	done
+
+GauldenrodElderThanks:
+	text "Thank you! I know"
+	line "a secret way up"
+	cont "to the top..."
+	done
+
+GauldenrodElderNoSurf:
+	text "Please, won't you"
+	line "help me? I can't"
+	cont "find my wife..."
+	
+	para "Oh, you don't"
+	line "have surf? I need"
+	cont "someone who can"
+	cont "navigate water."
+	done

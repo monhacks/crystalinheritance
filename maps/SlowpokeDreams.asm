@@ -18,7 +18,7 @@ SlowpokeDreams_MapScriptHeader: ;	def_scene_scripts
 
 	def_object_events
 	object_event  5, 4, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, SLOWKING, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, SlowkingDreamsScript, EVENT_SLOWKING_DREAMS
-	itemball_event 5, 10, POKE_BALL, 1, EVENT_DREAMS_POKEBALL
+	itemball_event 6, 9, POKE_BALL, 1, EVENT_DREAMS_POKEBALL
 
 	object_const_def
 
@@ -38,6 +38,7 @@ SlowkingDreamsScript:
 	showtext SlowkingAfterText
 	special HealParty
 	setevent EVENT_SLOWKING_DREAMS
+	setmapscene OLIVINE_LIGHTHOUSE_6F, $1
 	warp OLIVINE_LIGHTHOUSE_6F, 9, 10 
 	end
 	

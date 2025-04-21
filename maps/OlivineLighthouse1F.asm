@@ -20,10 +20,9 @@ OlivineLighthouse1F_MapScriptHeader:
 	object_event 14, 9, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, 	ObjectEvent, EVENT_RIVAL_LIGHTHOUSE; elec 
 	object_evet 11, 17, SPRITE_KURT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, 	ObjectEvent, EVENT_KURT_LIGHTHOUSE_1; elec 
 
-
-	object_event  0,  0, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, 	TrainerScientistJoseph, -1; elec
-	object_event  0,  0, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, 	TrainerBlackBeltWai, -1
-	object_event  0,  0, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, 	TrainerEngineerLang, -1
+	object_event  5,  4, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, 	TrainerScientistJoseph, -1; elec
+	object_event 13,  5, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, 	TrainerBlackBeltWai, -1
+	object_event  2,  4, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, 	TrainerEngineerLang, -1
 
 	object_const_def 
 	const LIGHTHOUSE_RIVAL
@@ -51,13 +50,18 @@ LighthouseRivalTrigger2:
 	turnobject PLAYER, UP
     scall LigthouseRivalBattleScript
 	; after the battle
-    applymovement Lighthouse_RIVAL, LighthouseRivalRetreatMovement
+    applymovement LIGHTHOUSE_RIVAL, LighthouseRivalRetreatMovement
     playsound SFX_EXIT_BUILDING
-    disappear Lighthouse_RIVAL
+    disappear LIGHTHOUSE_RIVAL
     setscene $1
     setevent EVENT_FOUGHT_RADIO_TOWER_RIVAL
     waitsfx
     playmapmusic
+	showemote EMOTE_SHOCK, LIGHTHOUSE_KURT, 10
+	showtext LighthouseKurtEndText
+	applymovement LighthouseKurtGoesUpMovement
+	disappear LIGHTHOUSE_KURT
+	setevent EVENT_KURT_LIGHTHOUSE_1
     end
 
 LigthouseRivalBattleScript:
@@ -69,8 +73,8 @@ LigthouseRivalBattleScript:
     checkevent EVENT_GOT_ROWLET
     iftrue .Rowlet
     winlosstext LighthouseRivalWinText, LighthouseRivalLossText
-    setlasttalked Lighthouse_RIVAL
-    loadtrainer RIVAL1, 6
+    setlasttalked LIGHTHOUSE_RIVAL
+    loadtrainer RIVAL1, 9
     startbattle
     dontrestartmapmusic
     reloadmapafterbattle
@@ -78,8 +82,8 @@ LigthouseRivalBattleScript:
 
 .Oshawott:
     winlosstext LighthouseRivalWinText, LighthouseRivalLossText
-    setlasttalked Lighthouse_RIVAL
-    loadtrainer RIVAL1, 4
+    setlasttalked LIGHTHOUSE_RIVAL
+    loadtrainer RIVAL1, 7
     startbattle
     dontrestartmapmusic
     reloadmapafterbattle
@@ -87,8 +91,8 @@ LigthouseRivalBattleScript:
 
 .Rowlet:
     winlosstext LighthouseRivalWinText, LighthouseRivalLossText
-    setlasttalked Lighthouse_RIVAL
-    loadtrainer RIVAL1, 5
+    setlasttalked LIGHTHOUSE_RIVAL
+    loadtrainer RIVAL1, 8
     startbattle
     dontrestartmapmusic
     reloadmapafterbattle
@@ -111,11 +115,27 @@ LighthouseRivalRetreatMovement:
     step_end
 
 LighthouseRivalBeforeText:
-    text "..."
+    text "<RIVAL>: Oh, it's"
+	line "you two."
+
+	para "Kurt: <RIVAL>,"
+	line "you're polluting"
+	cont "the sea with your"
+	cont "distiller!"
+	
+	para "<RIVAL>: I didn't"
+	line "know Silph would"
+	cont "do it like this!"
+	para "I wanted to bring"
+	line "us back into bal-"
+	cont "ance with nature."
+	para "Whil you looked"
+	line "back, I looked"
+	cont "forward!"
     done
 
 LighthouseRivalWinText:
-    text "..."
+    text "All my plans..."
     done
 
 LighthouseRivalLossText:
@@ -123,14 +143,41 @@ LighthouseRivalLossText:
     done
 
 LighthouseRivalAfterText:
-    text "..."
+    text "<RIVAL>: I didn't"
+	line "want to be their"
+	cont "pawn. And I had"
+	para "no idea what they"
+	line "were doing on the"
+	cont "top floor..."
+
+	para "Don't follow me"
+	line "any more."
     done
+
+LighthouseKurtEndText:
+	text "Kurt: What's that"
+	line "about the top"
+	cont "floor?..."
+	
+	para "We have to get"
+	line "up there!"
+	done
 
 Kurt_LighthouseMove1:
 	step_up
 	step_up
 	step_up
 	step_right
+	step_end
+
+LighthouseKurtGoesUpMovement:
+	step_up
+	step_up
+	step_right
+	step_right
+	step_up
+	step_up
+	step_up
 	step_end
 
 Kurt_LighthouseText1:	

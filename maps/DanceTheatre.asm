@@ -14,16 +14,16 @@ DanceTheatre_MapScriptHeader:
 
 
 	def_object_events
-	object_event  5,  9, SPRITE_OSTENE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DanceTheatreOstene2Script, EVENT_DANCE_THEATRE_OSTENE ; end 
-	object_event  6,  9, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, DanceTheatreKimono2Script, EVENT_DANCE_THEATRE_OSTENE ; end
-	object_event  0,  3, SPRITE_ELDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TheatreElderScript, EVENT_BEAT_RIVAL_ROUTE_42
-	object_event  3,  1, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerKimono_girlSayo, EVENT_BEAT_RIVAL_ROUTE_42 ; FLAREON, kimono girl 1 -- DONE 
-	object_event  7,  1, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerKimono_girlKuni, EVENT_BEAT_RIVAL_ROUTE_42 ; GLACEON, kimono girl 4 -- DONE
-	object_event  3, 10, SPRITE_OSTENE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, DanceTheatreOstene1Text, EVENT_BEAT_RIVAL_ROUTE_42;
-	pokemon_event  4, 10, PORYGON_Z, -1, -1, PAL_NPC_RED, PorygonZText, EVENT_BEAT_RIVAL_ROUTE_42;
+	object_event  5,  9, SPRITE_OSTENE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, DanceTheatreOstene1Text, EVENT_BEAT_RIVAL_THEATRE ; end 
+	object_event  6,  9, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DanceTheatreRivalScript, EVENT_BEAT_RIVAL_THEATRE ; end
+	object_event  0,  3, SPRITE_ELDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TheatreElderScript, -1
+	object_event  3,  1, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerKimono_girlSayo, -1 ; FLAREON, kimono girl 1 -- DONE 
+	object_event  7,  1, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerKimono_girlKuni, -1 ; GLACEON, kimono girl 4 -- DONE
+	object_event  3, 10, SPRITE_OSTENE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, DanceTheatreOstene1Text, -1;
+	pokemon_event  6, 9, PORYGON_Z, -1, -1, PAL_NPC_RED, PorygonZText, EVENT_BEAT_RIVAL_ROUTE_42;
 	object_event 10,  8, SPRITE_KURT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DanceTheatreKurtScript, EVENT_BEAT_KIMONO_GIRL_EMI ; 
-	object_event  1, 10, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, DanceTheatreSilphText, EVENT_BEAT_RIVAL_ROUTE_42 ; SILPH 
-	object_event  3,  8, SPRITE_LADY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, DanceTheatreNPC1Text, EVENT_BEAT_RIVAL_ROUTE_42
+	object_event  1, 10, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, DanceTheatreSilphText, -1 ; SILPH 
+	object_event  3,  8, SPRITE_LADY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, DanceTheatreNPC1Text, -1
 
 
 	object_const_def
@@ -36,11 +36,75 @@ PorygonZText:
 	line "Zoop zoop!"
 	done
 
-DanceTheatreOstene2Script: ; to add later
-	end
+DanceTheatreRivalScript:
+	faceplayer
+	checkevent EVENT_BEAT_RIVAL_THEATRE
+	iftrue_jumptext RivalTheatreAfterBattleText
+;
+    playmusic MUSIC_RIVAL_ENCOUNTER
+    showtext TheatreRivalBeforeText
+    checkevent EVENT_GOT_OSHAWOTT
+    iftrue .Oshawott
+    checkevent EVENT_GOT_ROWLET
+    iftrue .Rowlet
+    winlosstext TheatreRivalWinText, 0
+    loadtrainer RIVAL1, 15
+    startbattle
+    dontrestartmapmusic
+    reloadmapafterbattle
+    sjump .FinishRivalBattle
 
-DanceTheatreKimono2Script:
-	end 
+.Oshawott:
+    winlosstext TheatreRivalWinText, 0
+    setlasttalked Lighthouse_RIVAL
+    loadtrainer RIVAL1, 13
+    startbattle
+    dontrestartmapmusic
+    reloadmapafterbattle
+    sjump .FinishRivalBattle
+
+.Rowlet:
+    winlosstext TheatreRivalWinText, 0
+    setlasttalked Lighthouse_RIVAL
+    loadtrainer RIVAL1, 14
+    startbattle
+    dontrestartmapmusic
+    reloadmapafterbattle
+    sjump .FinishRivalBattle
+
+.FinishRivalBattle:
+    special DeleteSavedMusic
+    playmusic MUSIC_RIVAL_AFTER
+    jumptext RivalTheatreAfterBattleText
+
+TheatreRivalWinText:
+	text "It's just one"
+	line "setback."
+	done
+
+
+TheatreRivalBeforeText:
+	text "<RIVAL>: Hey, I'm"
+	line "in the middle of"
+	cont "something! Silph"
+	
+	para "is offering me a"
+	line "big project in"
+	cont "Olivine. I won't"
+	
+	para "have to live in"
+	line "Kurt's world, so"
+	cont "skewed towards"
+	cont "the past -"
+	
+	para "I owe the future"
+	line "a way to actually"
+	cont "solve problems."
+	
+	para "Hey, I'll start"
+	line "by getting you"
+	cont "out of here!"
+	done
 
 DanceTheatreOstene1Text:
 	text "Ostene: Oh, hi… "
@@ -51,6 +115,15 @@ DanceTheatreOstene1Text:
 	line "brought back "
 	cont "to life."
 	done
+	
+RivalTheatreAfterBattleText:
+	text "With Silph’s help"
+	line "I’m going to res-"
+	cont "tore balance."
+	
+	para "So stay out of"
+	line "my way."
+	done
 
 DanceTheatreSilphText:
 	text "We at Silph"
@@ -58,6 +131,7 @@ DanceTheatreSilphText:
 	cont "can draw some"
 	cont "big crowds."
 	done
+
 
 DanceTheatreKurtScript: ; will this work?....
 	faceplayer
@@ -84,6 +158,9 @@ KurtDanceTheatreText2:
 	cont "an idea how to"
 	para "summon Celebi to"
 	line "go back in time."
+	
+	para "Oh, I noticed"
+	line "<RIVAL> is here."
 	done
 
 DanceTheatreKurtBattleText:

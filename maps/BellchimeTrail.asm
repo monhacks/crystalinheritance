@@ -101,6 +101,7 @@ BellchimeTrailEmiScript:
 	writetext BellChimeTrailYesTimeTravelText
 	waitbutton
 	closetext
+	setevent EVENT_BEAT_RIVAL_THEATRE
 	playsound SFX_WARP_TO
 	special FadeOutPalettes
 	waitsfx

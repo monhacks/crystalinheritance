@@ -130,6 +130,7 @@ StadiumGroundsBobeshScene:
 	closetext	
 	setevent EVENT_BEAT_BOBESH_STADIUM
 	clearevent EVENT_STADIUM_BOX_ADRINNA ; now she should show up in the box
+	clearevent EVENT_GAULDENROD_ELDER 
 	setscene $1
 	end
 

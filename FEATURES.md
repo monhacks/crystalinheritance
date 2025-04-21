@@ -126,6 +126,7 @@ Many of these changes were made to Polished Crystal 3.0.0.
 
 ### Moves
 
+* HM moves are forgettable at any time. 
 * Cut is Steel-type, 60 power, 100% accuracy.
 * Fly has 100% accuracy.
 * Strength is 90 power fighting-type. 
