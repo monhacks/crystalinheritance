@@ -138,9 +138,6 @@ AfterTextBugsy:
 
 	para "many mysteries to"
 	line "be explored."
-
-	para "Study your favor-"
-	line "ites thoroughly."
 	done
 
 

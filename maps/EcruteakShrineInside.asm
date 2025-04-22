@@ -182,8 +182,8 @@ EcruteakShrineInsideSageText:
 	done
 
 EcruteakShrineInsideGrannyText:
-	text "I'm glad they didn't"
-	line "approve a stop in"
+	text "I'm glad we don't"
+	line "have a stop in"
 	cont "Ecruteak for the"
 	cont "Magnet Train."
 

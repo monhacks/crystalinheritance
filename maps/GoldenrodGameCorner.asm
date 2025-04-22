@@ -329,7 +329,7 @@ GoldenrodGameCornerPrizeVendorNoCoinCaseText:
 	done
 
 GoldenrodGameCornerFisherText:
-	text "Today's my pay day!"
+	text "Today's pay day!"
 	line "Time to celebrate"
 	cont "with some slots!"
 

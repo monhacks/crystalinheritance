@@ -76,7 +76,7 @@ GenericTrainerRuinManiacLeland:
 	generictrainer RUIN_MANIAC, ROB, EVENT_BEAT_RUIN_MANIAC_ROB, RuinManiacLelandSeenText, RuinManiacLelandBeatenText
 
 RuinManiacLelandBeatenText:
-	text "My #mon couldn't"
+	text "I couldn't"
 	line "even beat you?"
 	done
 	

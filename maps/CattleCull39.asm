@@ -98,8 +98,8 @@ NomadRinSeenText:
    done
 
 NomadRinBeatenText:
-   text "True strength needs"
-   line "freedom..."
+   text "True strength"
+   line " needs freedom!"
    done
 
 GenericTrainerNomadMJacob:

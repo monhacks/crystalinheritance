@@ -37,7 +37,7 @@ MistyBasinB1FBBScript:
 	jumpopenedtext MistyBasinB1FText2
 
 MistyBasinB1FText2:
-	text "Yeah, it's probably"
+	text "Yeah, probably"
 	line "a waste of time."
 	done
 	

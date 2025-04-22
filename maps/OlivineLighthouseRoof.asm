@@ -15,8 +15,6 @@ OlivineLighthouseRoof_MapScriptHeader:
 	object_event  10,  19, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, RAIKOU, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LIGHTHOUSE_RAIKOU ; INITIALIZE HTIS 
 	itemball_event 16,  8, SILVER_LEAF, 1, EVENT_OLIVINE_LIGHTHOUSE_ROOF_SILVER_LEAF
 
-
-
 	object_const_def
 	const LIGHTHOUSE_EUSINE
 	const LIGHTHOUSE_RAIKOU
@@ -75,26 +73,20 @@ RaikouConditionText:
 	
 	para "Raikou would"
 	line "be drawn to it!"
-	
-	para "We could see the"
-	line "legendary beast!"
 	done
 
 RaikouCOnditionText2:
 	text "That #mon"
 	line "summons a storm-"
 	
-	para "My heart races,"
-	line "I can hear its"
-	cont "footfalls, like"
+	para "I can hear its"
+	line "footfalls, like"
 	
-	para "static collecting"
-	line "on an antenna!"
+	para "static drawn to"
+	line "an antenna!"
 	done
 
 RaikouText3:
-	text "Exhlirating!"
-	line "I am so lucky"
-	cont "to witness such"
-	cont "majesty!"
+	text "My heart flutters"
+	line "to have seen it!"
 	done

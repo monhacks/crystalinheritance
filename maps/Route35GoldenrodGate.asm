@@ -134,7 +134,7 @@ Route35GoldenrodGateRandyThanksText:
 	done
 
 Route35GoldenrodGatePlayerReceivedAMonWithMailText:
-	text "<PLAYER> received a"
+	text "<PLAYER> received"
 	line "#mon with Mail."
 	done
 

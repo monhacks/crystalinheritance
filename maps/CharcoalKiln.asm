@@ -52,10 +52,10 @@ CharcoalKilnGettingReadyTrigger:
 	step_end
 
 .CharcoalKilnLookingText:
-	text "Where is it?"
-	line "Under your stupid"
+	text "Where is it? Oh,"
+	line "Under your messy"
 	cont "glassware and"
-	cont "burners, I see."
+	cont "burners."
 	done
 
 .Movement2:
@@ -83,24 +83,21 @@ CharcoalKilnBoss:
 	text "Made any nice"
 	line "apricorns?"
 
-	para "That's a handy"
-	line "thing to do."
+	para "That's handy."
+	line "Sigh..."
 	
-	para "Sigh..."
-	
-	para "If they keep log-"
-	line "ging, I don't"
-	cont "know what we will"
-	cont "do."
+	para "I don't know how"
+	line "we'll stay here,"
+	para "with the drought"
+	line "taking our trees."
 	done
 
 .Text3:
 	text "I wonder where"
 	line "my son went..."
 	
-	para "I wonder if I"
-	line "was too harsh"
-	cont "on him."
+	para "Maybe I've been"
+	line "too harsh on him."
 	done
 
 CharcoalKilnApprentice:
@@ -111,11 +108,9 @@ CharcoalKilnApprentice:
 	endtext
 
 .Text1:
-	text "Do you know what"
-	line "this ceremony"
-	cont "is? I hope it"
-	cont "means I can be"
-	cont "more independent."
+	text "I hope this cere-"
+	line "mony means I can"
+	cont "be independent."
 	done
 
 CharcoalKilnFarfetchdScript:

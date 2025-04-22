@@ -46,13 +46,7 @@ PokemonJournalBugsyScript:
 	
 	para "Very few are"
 	line "older than 160"
-	cont "years old. What"
-	cont "is the reason?"
-	
-	para "I've tried to"
-	line "get resources to"
-	cont "see what was"
-	cont "so damaging."
+	cont "years old. Why?"
 	done
 
 AzaleaPokeCenter1FToughLeavesScript:
@@ -74,23 +68,18 @@ AzaleaPokeCenter1FToughLeavesScript:
 
 PearlForToughLeavesText:
 	text "Hey, did you know"
-	line "raking leaves is"
-	cont "fun? Heh, leaves"
-	cont "in Ilex Forest"
-	cont "are some of the"
-	cont "toughest in the"
-	cont "whole world."
-
-	para "Way better than"
-	line "a grimy big pearl."
+	line "that leaves in"
+	cont "Ilex Forest are"
+	para "are the toughest"
+	line "in the world!"
 	done
 
 PearlForToughLeavesQuestionText:
 	text "Why, if I was you,"
 	line "I'd trade a big"
 	cont "pearl for a few of"
-	para "these withered-, "
-	line "I mean verdant, "
+	para "these withered-"
+	line "I mean verdant"
 	cont "leaves."
 	done
 
@@ -111,21 +100,18 @@ NoPearlForToughLeavesText:
 	done
 
 AzaleaPokeCenter1FGentlemanText:
-	text "It has been so"
-	line "since it rained."
-	
-	para "It must have to"
-	line "do with the slow-"
-	cont "poke driven out"
-	cont "of the well."
+	text "I wonder if the"
+	line "drought is conne-"
+	cont "cted to the Slow-"
+	cont "poke being driven"
+	cont "out of the well."
 	done
 
 AzaleaPokeCenter1FSightseermText:
 	text "Hard to believe"
-	line "that the charcoal"
-	cont "boy is old en-"
-	cont "ough to build"
-	cont "the shrine."
+	line "that <RIVAL> is"
+	cont "ready for the"
+	cont "ceremony."
 	
 	para "Seems like just"
 	line "yesterday, he"
@@ -134,36 +120,29 @@ AzaleaPokeCenter1FSightseermText:
 	done
 
 AzaleaPokeCenter1FPokefanScript: 
-;	checkevent EVENT_GOT_MINT_LEAF ;;TO ADD
-;	iftrue_jumptextfaceplayer GiveMintLeafText
 	faceplayer
 	opentext	
 	writetext MintLeafGiftText
 	promptbutton
 	verbosegiveitem MINT_LEAF
 	iffalse_endtext
-;	setevent EVENT_GOT_MINT_LEAF 
 	jumpopenedtext GiveMintLeafText 
 
 MintLeafGiftText: 
-	text "Oh, a new trai-"
-	line "ner! You know,"
-	cont "when I was a"
-	cont "trainer, I"
-	cont "traveled light."
+	text "A new trainer!"
+	line "When I was your"
+	cont "age, I traveled"
+	cont "light."
 	
-	para "Instead of"
-	line "carrying tooth-"
-	cont "paste, I chewed"
-	cont "on these every"
-	cont "night."
+	para "I chewed on these"
+	line "instead of using"
+	cont "toothpaste."
 	done
 	
 GiveMintLeafText: ;;
-	text "That mint leaf"
-	line "will make your"
-	cont "breath smell"
-	cont "great."
+	text "That Mint Leaf"
+	line "will freshen"
+	cont "your breath."
 	
 	para "Share it with"
 	line "someone who"
@@ -173,8 +152,6 @@ GiveMintLeafText: ;;
 	para "Just come back if"
 	line "you ever lose it."
 	done
-
-;;;;;;;;;;;;;;;;;
 
 IlexExcelsiorV4Script:
 	opentext
@@ -201,21 +178,11 @@ IlexExcelsiorV4Text:
 	para "Fourth Edition"
 
 	para "Silph has no"
-	line "right to trees"
-	
+	line "right to trees"	
 	para "sabotage their"
 	line "equipment"
-	
 	done
 	
-
-	
-
-;;;;;;;;;;;;;;;;;;
-
-
-
-;;;;;;;;;;;;;;;;;
 	
 AzaleaPokeCenter1FGentlemanText2:
 	text "What a strange"

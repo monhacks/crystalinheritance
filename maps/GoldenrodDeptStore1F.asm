@@ -208,7 +208,7 @@ RadioTower1FRadioCardWomanYouWinText:
 	done
 
 RadioTower1FPokegearIsARadioText:
-	text "<PLAYER>'s #gear"
+	text "The #gear"
 	line "can now double as"
 	cont "a radio!"
 	done

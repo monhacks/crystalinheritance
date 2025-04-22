@@ -80,7 +80,7 @@ NomadGlennSeenText:
 	done
 
 NomadGlennBeatenText:
-	text "Your strength flows"
+	text "Your power flows"
 	line "like lost tides..."
 	done
 

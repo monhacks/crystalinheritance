@@ -120,15 +120,13 @@ FalknerWinLossText:
 	line "teamwork... It's"
 	cont "opened my eyes."
 
-	para "I see now that I've"
-	line "been short-sighted."
-	cont "My actions would"
+	para "My actions would"
 	cont "harm all of Johto."
 
 	para "Pushing clouds,"
-	line "forcing rain dances"
-	cont "- it's not sustain-"
-	cont "able. Or right."
+	line "stealing rain,"
+	cont "it's not sustain-"
+	cont "able."
 	done
 
 ReceivedZephyrBadgeText:

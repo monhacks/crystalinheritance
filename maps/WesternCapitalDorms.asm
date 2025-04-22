@@ -37,8 +37,8 @@ WesternCapitalDormsNPC1Text:
 WesternCapitalDormsNPC2Text:
 	text "If we use the"
 	line "outsider methods,"
-	para "our culture will be"
-	line "lost!"
+	para "our culture will"
+	line "be lost!"
 	done
 
 WesternCapitalDormsNPC3Text:

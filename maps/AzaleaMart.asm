@@ -23,13 +23,13 @@ AzaleaMartCooltrainermText:
 	done
 
 AzaleaMartLadyText:
-	text "Some people like"
-	line "to use rare"
-	cont "candies on their"
-	cont "#mon, some"
-	cont "don't. Keep in"
-	cont "mind that your"
-	cont "#mon don't get"
-	cont "as strong with"
-	cont "candies, though."
+	text "Some people use"
+	line "rare candies,"
+
+	para "some don't. Keep"
+	line "in mind that"
+	cont "your #mon"
+	
+	para "won't be as"
+	line "strong, though."
 	done

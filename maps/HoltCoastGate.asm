@@ -39,15 +39,7 @@ HoltCoastGateNPCScript:
 
 HoltCoastGateNPCText:
 	text "I've heard stories"
-	line "about the emperor's"
-	cont "brigaders."
-	
-	para "Especially the"
-	line "General Bobesh."
-
-	para "They say they're"
-	line "keeping order in"
-	cont "other towns."
+	line "the brigaders."
 
 	para "I wonder when"
 	line "they'll come to"

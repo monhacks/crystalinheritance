@@ -60,7 +60,7 @@ CianwoodPhotoStudioFishingGuruScript:
 
 CianwoodPhotoStudioGreetingText:
 	text "I am Cameron"
-	line "the CianwoodPhotographer."
+	line "the photographer."
 
 	para "You have magnifi-"
 	line "cent #mon with"

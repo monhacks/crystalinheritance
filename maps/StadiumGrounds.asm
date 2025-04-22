@@ -344,7 +344,7 @@ GenericTrainerBrigader11:
 	line "usually rebels"
 	cont "against the"
 	cont "emperor. We make"
-	cont "sure they're tired,"
+	cont "sure they're weak,"
 	cont "so that they just"
 	cont "sound crazy to the"
 	cont "crowd in battle."
@@ -375,7 +375,7 @@ Brigader12SeenText:
 
 Brigader12BeatenText:
 	text "I've been hearing"
-	line "some strange sounds"
+	line "a strange sound"
 	cont "from underground."
 	done
 

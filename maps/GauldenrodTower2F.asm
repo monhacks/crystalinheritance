@@ -23,7 +23,7 @@ GenericTrainerAromaLadyBryony:
 
 	text "I don't see how"
 	line "this tower could"
-	cont "ever be demolished."
+	cont "be demolished."
 	done
 
 AromaLadyBryonySeenText:

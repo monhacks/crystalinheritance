@@ -145,8 +145,8 @@ ElderLiBeatenText:
 	cont "pass. "
 
 	para "Show him that true"
-	line "power elevates"
-	cont "all, not just self."
+	line "power elevatess"
+	cont "others!"
 	done
 
 

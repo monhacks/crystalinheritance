@@ -51,7 +51,7 @@ GenericTrainerFirebreatherNed:
 	cont "then they will see"
 	cont "how their attent-"
 	cont "ions have been put"
-	cont "to terrible things."
+	cont "to awful things."
 	done
 
 FirebreatherNedSeenText:

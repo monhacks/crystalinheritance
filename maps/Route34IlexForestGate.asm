@@ -84,10 +84,6 @@ EggGrannyOfferEggText:
     text "Oh, you must try"
     line "my egg diet! Here,"
     cont "take this egg."
-    para "It's special! It'll"
-    line "help your #mon"
-    cont "grow big and"
-    cont "strong!"
     done
 
 EggGrannyAfterText:

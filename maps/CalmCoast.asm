@@ -42,7 +42,7 @@ GenericTrainerYoungsterWarren:
 	cont "to go home?"
 	
 	para "I'm getting so"
-	line "bored standing here."
+	line "bored here."
 	done
 
 YoungsterWarrenSeenText:

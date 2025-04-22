@@ -184,10 +184,10 @@ SandraResponseText:
 
 BrigaderExplanationText:
 	text "Brigader:"
-	line "You'll see! You are"
-	cont "summoned by"
-	cont "General Bobesh to"
-	cont "the stadium!"
+	line "You'll see!"
+	
+	para "General Bobesh"
+	line "summones you!"
 	done
 
 SandraAgreementText:

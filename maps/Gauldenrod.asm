@@ -347,7 +347,7 @@ GauldenrodHisuiTraderScript:
 GauldenrodHisuiTraderRememberText:
 	text "Hey, I remember"
 	line "you. How is that"
-	cont "#mon I gave you?"
+	cont "#mon?"
 
 	para "Oh, by the way,"
 	line "if you see a red-"

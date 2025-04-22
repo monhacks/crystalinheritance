@@ -53,8 +53,8 @@ CaptainLog05:
 	cont "to navigate."
 	
 	para "Though we can just"
-	line "see the mountains of"
-	cont "our destination,"
+	line "see the mountain-"
+	cont "tops ahead,"
 	
 	para "We can't get any"
 	line "closer."

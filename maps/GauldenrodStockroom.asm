@@ -28,13 +28,8 @@ GauldenrodStockroomNPC1Script:
 GauldenrodStockroomNPC1Text:
 	text "See that fence?"
 	line "Long ago, I went"
-	cont "on my quest through"
-	cont "the pass beyond"
-	cont "them."
-
-	para "I think the emperor"
-	line "will clear it out"
-	cont "to make it easier."
+	para "on my quest to"
+	cont "the saddle."
 	done
 
 GauldenrodStockroomNPC2Script:
@@ -102,9 +97,9 @@ GauldenrodStockroomNPC3Text:
 	cont "bring back"
 	cont "knowledge."
 
-	para "I got to a cave"
-	line "and had a fantastic"
-	cont "vision, I saw the"
+	para "I got to a cave,"
+	line "had a fantastic"
+	cont "vision. I saw the"
 	cont "creator of the"
 	cont "universe…"
 	done

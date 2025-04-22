@@ -271,7 +271,7 @@ HeresThatOrneryHedgehog:
 	line "recipe exactly..."
 	
 	para "That hedgehog will"
-	line "be here any moment."
+	line "be here soon!"
 	
 	para "Take these, they"
 	line "will help you"

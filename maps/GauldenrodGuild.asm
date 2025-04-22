@@ -29,11 +29,9 @@ GauldenrodGuildNPC1Text:
 
 	para "If the emperor's"
 	line "plan to import"
-	cont "Steel goes through,"
-	cont "then I'll be out"
-	cont "of work when"
-	cont "everything is built"
-	cont "out of metal."
+	cont "Steel happens,"
+	para "then I'll be out"
+	line "of work!"
 	done
 
 GauldenrodGuildNPC2Script:

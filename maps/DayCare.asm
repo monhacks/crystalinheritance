@@ -129,7 +129,7 @@ DayCareManText_DeclinedEviolite:
     line "bad. Well, if you"
     cont "change your mind,"
     cont "come back anytime."
-    para "I'll always be here"
+    para "I'll be here"
     line "to support the"
     cont "little ones!"
     done

@@ -224,7 +224,7 @@ AmosText_LegacyBadgeSpeech:
 	
 	para "If she gets to"
 	line "the powerful"
-	cont "#mon within, who"
+	cont "#mon, then who"
 	cont "knows what she"
 	cont "will do with it."
 	
