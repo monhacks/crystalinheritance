@@ -1,4 +1,4 @@
-	db  80, 120,  79,  70,  95,  79 ; 680 BST
+	db  80, 120,  79,  70,  95,  79 ; na BST
 	;   hp  atk  def  spd  sat  sdf
 
 	db ELECTRIC, ELECTRIC ; type
