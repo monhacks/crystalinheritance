@@ -1,12 +1,16 @@
 # Credits
 
-The vision for Crystal Inheritance was a game that took place in Johto with modern mechanics. The most natural base for this was Polished Crystal. This game would not be possible without the developers of Polished Crystal. Credits for Polished Crystal are located at the end of this document. 
+The vision for Crystal Inheritance was a game that took place in Johto with modern mechanics. 
+
+The most natural base for this was Polished Crystal. This game would not be possible without the developers of Polished Crystal. 
+
+Credits from Polished Crystal are located at the end of this document. 
 
 ## Crystal Inheritance Credits
 
 ## Pokemon Front and Back sprites
 
-Many sprites were adapted to the Gen 2 format. Credits are for the original source. If you believe your work was used and is not credited, please let me know by reddit DM: u/dwg6m9
+Many sprites were adapted to the Gen 2 format. Credits are for the original source. If you believe your work was used and is not credited, please let me know by reddit! DM: u/dwg6m9
 
 Front Sprites
 
@@ -20,7 +24,7 @@ Front Sprites
 * Sour Crystal: Quilava, Butterfree, Pidgeotto, Sunflora, Dragonite, Celebi, Xatu
 * utytft: H__Typlosion, H__Decidueye, H__Samurott, Basculegion, H__Sliggoo, H__Goodra, H__Zoroark
 * Bloodless (Rosie): Overqwil, Ursaluna, H__Electrode, Sneasler, H__Arcanine
-
+* Ambipom: u/Bread-Zeppelin
 
 Back Sprites if different from above, using Deviantart handles:
 
