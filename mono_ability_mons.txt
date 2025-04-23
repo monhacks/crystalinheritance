@@ -1,6 +1,6 @@
 Abomasnow: SNOW_WARNING (add: soundproof) 
-Ambipom: TECHNICIAN --> pickup
-Ampharos: STATIC volt absorb
+Ambipom: TECHNICIAN, pickup, 
+Ampharos: STATIC volt absorb and galvanize
 Bastiodon: STURDY (soundproof) 
 Bellossom: CHLOROPHYLL natural cure
 Bronzong: LEVITATE magic guard 
@@ -17,21 +17,21 @@ Flaaffy: STATIC volt absorb
 Gardevoir: SYNCHRONIZE trace 
 Gastly: LEVITATE cursed body 
 Grotle: OVERGROW shell armor 
-Haunter: LEVITATE cursed body 
-H_Avalugg: ICE_BODY sturdy 
+Haunter: LEVITATE shadow tag
+H_Avalugg: ICE_BODY sturdy and slush_rush 
 H_Decidueye: OVERGROW sniper 
 Heatran: FLASH_FIRE flame body 
 H_Electrode: STATIC aftermath 
 Hippowdon: SAND_STREAM sand rush 
 H_Typhlosion: BLAZE flash fire 
-Infernape: BLAZE iron fist 
+Infernape: BLAZE iron fist  gorilla tactics 
 Jumpluff: CHLOROPHYLL infiltrator 
 Kirlia: SYNCHRONIZE trace 
 Lopunny: CUTE_CHARM limber  
-Lucario: STEADFAST inner focus 
+Lucario: STEADFAST inner focus fur coat 
 Lugia: DRIZZLE pressure 
 Mareep: STATIC volt absorb
-Monferno: BLAZE iron fist 
+Monferno: BLAZE iron fist gorilla tactics 
 Ninetales: DROUGHT flash fire 
 Oshawott: TORRENT battle armor 
 Overqwil: POISON_POINT swift swim 
