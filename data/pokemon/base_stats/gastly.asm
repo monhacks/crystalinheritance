@@ -8,7 +8,7 @@
 	db NO_ITEM ; item 2
 	dn GENDER_F50, 3 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/gastly/front.dimensions"
-	abilities_for GASTLY, LEVITATE, LEVITATE, LEVITATE
+	abilities_for GASTLY, LEVITATE, LEVITATE, CURSED_BODY
 	db GROWTH_MEDIUM_SLOW ; growth rate
 	dn EGG_INDETERMINATE, EGG_INDETERMINATE ; egg groups
 

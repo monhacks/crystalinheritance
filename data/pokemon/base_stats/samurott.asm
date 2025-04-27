@@ -8,7 +8,7 @@
 	db METAL_COAT ; item 2
 	dn GENDER_F50, 4 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/samurott/front.dimensions"
-	abilities_for SAMUROTT, TORRENT, TORRENT, TORRENT
+	abilities_for SAMUROTT, TORRENT, SHELL_ARMOR, TECHNICIAN
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_BUG, EGG_BUG ; egg groups
 

@@ -8,7 +8,7 @@
 	db NO_ITEM ; item 2
 	dn GENDER_F50, 6 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/dusclops/front.dimensions"
-	abilities_for DUSCLOPS, PRESSURE, PRESSURE, PRESSURE
+	abilities_for DUSCLOPS, PRESSURE, PRESSURE, CURSED_BODY
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_GROUND, EGG_GROUND ; egg groups
 

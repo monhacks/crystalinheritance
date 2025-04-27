@@ -8,7 +8,7 @@
 	db NO_ITEM ; item 2
 	dn GENDER_F50, 4 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/jumpluff/front.dimensions"
-	abilities_for JUMPLUFF, CHLOROPHYLL, CHLOROPHYLL, CHLOROPHYLL
+	abilities_for JUMPLUFF, CHLOROPHYLL, CHLOROPHYLL, INFILTRATOR
 	db GROWTH_MEDIUM_SLOW ; growth rate
 	dn EGG_HUMANSHAPE, EGG_HUMANSHAPE ; egg groups
 

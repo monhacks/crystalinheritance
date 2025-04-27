@@ -8,7 +8,7 @@
 	db NO_ITEM ; item 2
 	dn GENDER_F25, 3 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/prinplup/front.dimensions"
-	abilities_for PRINPLUP, TORRENT, TORRENT, TORRENT
+	abilities_for PRINPLUP,  TORRENT, COMPETITIVE, SLUSH_RUSH
 	db GROWTH_MEDIUM_SLOW ; growth rate
 	dn EGG_WATER_1, EGG_GROUND ; egg groups
 

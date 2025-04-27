@@ -8,7 +8,7 @@
 	db NO_ITEM ; item 2
 	dn GENDER_UNKNOWN, 3 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/helectrode/front.dimensions"
-	abilities_for H__ELECTRODE, STATIC, STATIC, STATIC
+	abilities_for H__ELECTRODE, STATIC, STATIC, AFTERMATH
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_GROUND, EGG_GROUND ; egg groups
 

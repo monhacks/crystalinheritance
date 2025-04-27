@@ -8,7 +8,7 @@
 	db NO_ITEM ; item 2
 	dn GENDER_F12_5, 3 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/typhlosion/front.dimensions"
-	abilities_for TYPHLOSION, BLAZE, BLAZE, FLASH_FIRE
+	abilities_for TYPHLOSION, BLAZE, FLASH_FIRE, WHITE_SMOKE
 	db GROWTH_MEDIUM_SLOW ; growth rate
 	dn EGG_GROUND, EGG_GROUND ; egg groups
 

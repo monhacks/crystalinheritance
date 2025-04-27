@@ -8,7 +8,7 @@
 	db NO_ITEM ; item 2
 	dn GENDER_F25, 4 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/empoleon/front.dimensions"
-	abilities_for EMPOLEON, TORRENT, TORRENT, TORRENT
+	abilities_for EMPOLEON, TORRENT, COMPETITIVE, SLUSH_RUSH
 	db GROWTH_MEDIUM_SLOW ; growth rate
 	dn EGG_NONE, EGG_NONE ; egg groups
 

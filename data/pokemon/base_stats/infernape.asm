@@ -8,7 +8,7 @@
 	db NO_ITEM ; item 2
 	dn GENDER_F12_5, 3 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/infernape/front.dimensions"
-	abilities_for INFERNAPE, BLAZE, BLAZE, BLAZE
+	abilities_for INFERNAPE, BLAZE, IRON_FIST, GORILLA_TACTICS
 	db GROWTH_MEDIUM_SLOW ; growth rate
 	dn EGG_MONSTER, EGG_PLANT ; egg groups
 

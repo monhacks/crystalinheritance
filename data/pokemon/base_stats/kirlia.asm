@@ -8,7 +8,7 @@
 	db NO_ITEM ; item 2
 	dn GENDER_F50, 3 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/kirlia/front.dimensions"
-	abilities_for KIRLIA, SYNCHRONIZE, SYNCHRONIZE, SYNCHRONIZE
+	abilities_for KIRLIA, SYNCHRONIZE, TRACE, PIXILATE
 	db GROWTH_SLOW ; growth rate
 	dn EGG_WATER_1, EGG_DRAGON ; egg groups
 

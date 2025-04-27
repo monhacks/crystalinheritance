@@ -8,7 +8,7 @@
 	db NO_ITEM ; item 2
 	dn GENDER_F50, 4 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/overqwil/front.dimensions"
-	abilities_for OVERQWIL, POISON_POINT, POISON_POINT, POISON_POINT
+	abilities_for OVERQWIL, POISON_POINT, AFTERMATH, SWIFT_SWIM
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_MINERAL, EGG_MINERAL ; egg groups
 

@@ -19,7 +19,6 @@ BrassTowerRoof_MapScriptHeader:
 
 	def_object_events
 ;mejimi 9, 9
-;samsara 8, 9
 ;kurt 9, 7
 ;adrinna 9, 7 
 ;lugia 7, 9
@@ -27,6 +26,5 @@ BrassTowerRoof_MapScriptHeader:
 
 	object_const_def
 	const BRASS_TOWER_ROOF_MEJIMI
-	const BRASS_TOWER_ROOF_SAMSARA
 	const BRASS_TOWER_ROOF_KURT
 	const BRASS_TOWER_ROOF_ADRINNA

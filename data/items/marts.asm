@@ -145,6 +145,7 @@ Celadon5FMart1:
 	db CALCIUM
 	db ZINC
 	db HP_UP
+	db ABILITY_CAP
 	db -1
 
 Goldenrod5FTMMart:

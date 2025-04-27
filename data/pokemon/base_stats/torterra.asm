@@ -8,7 +8,7 @@
 	db NO_ITEM ; item 2
 	dn GENDER_F12_5, 3 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/torterra/front.dimensions"
-	abilities_for TORTERRA, OVERGROW, OVERGROW, OVERGROW
+	abilities_for TORTERRA, OVERGROW, SHELL_ARMOR, WEAK_ARMOR
 	db GROWTH_MEDIUM_SLOW ; growth rate
 	dn EGG_MONSTER, EGG_WATER_1 ; egg groups
 

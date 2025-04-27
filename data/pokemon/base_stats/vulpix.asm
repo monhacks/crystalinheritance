@@ -8,7 +8,7 @@
 	db ASPEAR_BERRY ; item 2
 	dn GENDER_F75, 3 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/vulpix/front.dimensions"
-	abilities_for VULPIX, DROUGHT, DROUGHT, DROUGHT
+	abilities_for VULPIX, DROUGHT, DROUGHT, FLASH_FIRE
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_GROUND, EGG_GROUND ; egg groups
 

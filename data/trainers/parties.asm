@@ -249,7 +249,7 @@ ClairGroup:
 
 ; ================================
 
-KurtGroup: ;TODO
+KurtGroup: 
 ; ================================
 ; ================
 
@@ -792,7 +792,7 @@ Rival0Group:
 ; ================================
 ; ================
 
-	; RIVAL0
+	; RIVAL0 1
 	db "<RIVAL>@"
 	db TRAINERTYPE_ITEM
 	; party
@@ -801,7 +801,7 @@ Rival0Group:
 
 ; ================
 
-	; RIVAL0
+	; RIVAL0 2
 	db "<RIVAL>@"
 	db TRAINERTYPE_ITEM
 	; party
@@ -810,7 +810,7 @@ Rival0Group:
 
 ; ================
 
-	; RIVAL0
+	; RIVAL0 3
 	db "<RIVAL>@"
 	db TRAINERTYPE_ITEM
 	; party
@@ -3405,8 +3405,8 @@ BrigaderGroup:
 ; ================================
 ; ================
 
-	; unused
-	; GRUNTM
+
+	; GRUNTM 0
 	db "Grunt@"
 	db TRAINERTYPE_NORMAL
 	; party
@@ -3414,7 +3414,7 @@ BrigaderGroup:
 
 ; ================
 
-	; GRUNTM ; 2?
+	; GRUNTM 1
 	db "Smith@"
 	db TRAINERTYPE_NORMAL
 	; party
@@ -3425,7 +3425,7 @@ BrigaderGroup:
 
 ; ================
 
-	; GRUNTM ; 
+	; GRUNTM 2
 	db "Johnson@"
 	db TRAINERTYPE_NORMAL
 	; party
@@ -3436,7 +3436,7 @@ BrigaderGroup:
 
 ; ================
 
-	; GRUNTM ; 3 
+	; GRUNTM 3
 	db "Brown@"
 	db TRAINERTYPE_NORMAL
 	; party
@@ -3447,7 +3447,7 @@ BrigaderGroup:
 
 ; ================
 
-	; GRUNTM
+	; GRUNTM 4
 	db "Miller@"
 	db TRAINERTYPE_NORMAL
 	; party
@@ -3457,7 +3457,7 @@ BrigaderGroup:
 
 ; ================
 
-	; GRUNTM
+	; GRUNTM 5
 	db "Davis@"
 	db TRAINERTYPE_NORMAL
 	; party
@@ -3468,7 +3468,7 @@ BrigaderGroup:
 
 ; ================
 
-	; GRUNTM
+	; GRUNTM 6
 	db "Garcia@"
 	db TRAINERTYPE_NORMAL
 	; party
@@ -3479,7 +3479,7 @@ BrigaderGroup:
 
 ; ================
 
-	; GRUNTM 
+	; GRUNTM 7
 	db "Zhang@" ; SERENE SPRINGS
 	db TRAINERTYPE_NORMAL
 	; party
@@ -3493,7 +3493,7 @@ BrigaderGroup:
 
 ; ================
 
-	; GRUNTM
+	; GRUNTM 8
 	db "Patel@" ; START STADIUM GROUNDS
 	db TRAINERTYPE_NORMAL
 	; party
@@ -3503,7 +3503,7 @@ BrigaderGroup:
 
 ; ================
 
-	; GRUNTM
+	; GRUNTM 9
 	db "Manolete@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
 	; party
@@ -3514,7 +3514,7 @@ BrigaderGroup:
 
 ; ================
 
-	; GRUNTM
+	; GRUNTM 10
 	db "Kim@" ; should be #10
 	db TRAINERTYPE_NORMAL
 	; party
@@ -3523,7 +3523,7 @@ BrigaderGroup:
 	db -1 ; end
 ; ================
 
-	; GRUNTM
+	; GRUNTM 11
 	db "Chen@"
 	db TRAINERTYPE_NORMAL
 	; party
@@ -3533,7 +3533,7 @@ BrigaderGroup:
 
 ; ================ ; ABOVE ENDS THE STADIUM GROUNDS; todo: grunts 12- 20 
 
-	; GRUNTM ; Lopezsulfur sty 
+	; GRUNTM 12 opezsulfur sty 
 	db "Lopez@" ; trainer name
 	db TRAINERTYPE_NORMAL
 	; party - Ground focus
@@ -3542,7 +3542,7 @@ BrigaderGroup:
 	db 47, DONPHAN
 	db -1 ; end
 	
-	; GRUNTM ; Singhsulfur sty 
+	; GRUNTM 13 ; Singhsulfur sty 
 	db "Singh@" ; trainer name
 	db TRAINERTYPE_NORMAL
 	; party - Fighting/Rock focus
@@ -3552,7 +3552,7 @@ BrigaderGroup:
 	db 49, RHYPERIOR
 	db -1 ; end
 	
-	; GRUNTM ; Ali sulfur sty 
+	; GRUNTM  14; Ali sulfur sty 
 	db "Ali@" ; trainer name
 	db TRAINERTYPE_NORMAL
 	; party - Flying/Ground focus
@@ -3561,7 +3561,7 @@ BrigaderGroup:
 	db 48, GLISCOR
 	db -1 ; end
 	
-	; GRUNTM ; Suzuki ; clast cradle 2f 15
+	; GRUNTM 15 ; Suzuki ; clast cradle 2f 15
 	db "Suzuki@" ; trainer name
 	db TRAINERTYPE_NORMAL
 	; party - Fire focus
@@ -3570,7 +3570,7 @@ BrigaderGroup:
 	db 48, HOUNDOOM
 	db -1 ; end
 	
-	; GRUNTM ; Marten cc 1f 
+	; GRUNTM 16 Marten cc 1f 
 	db "Marten@" ; trainer name
 	db TRAINERTYPE_NORMAL
 	; party - Dragon/Ground focus
@@ -3579,7 +3579,7 @@ BrigaderGroup:
 	db 47, PUPITAR
 	db -1 ; end
 	
-	; GRUNTM ; Lee cc 1f 17
+	; GRUNTM 17 ; Lee cc 1f 17
 	db "Lee@" ; trainer name
 	db TRAINERTYPE_NORMAL
 	; party - Poison focus
@@ -3588,7 +3588,7 @@ BrigaderGroup:
 	db 48, WEEZING
 	db -1 ; end
 	
-	; GRUNTM ; Gupta cc 1f 
+	; GRUNTM 18 ; Gupta cc 1f 
 	db "Gupta@" ; trainer name
 	db TRAINERTYPE_NORMAL
 	; party - Steel/Rock focus
@@ -3597,7 +3597,7 @@ BrigaderGroup:
 	db 50, MISMAGIUS
 	db -1 ; end
 	
-	; GRUNTM ; Liu cc b1f 19
+	; GRUNTM 19 ; Liu cc b1f 19
 	db "Liu@" ; trainer name
 	db TRAINERTYPE_NORMAL
 	; party - Bug/Ghost focus
@@ -3607,7 +3607,7 @@ BrigaderGroup:
 	db 50, DUSKNOIR
 	db -1 ; end
 	
-	; GRUNTM ;  cc b1f
+	; GRUNTM 20 ;  cc b1f
 	db "Tyson@" ; trainer name
 	db TRAINERTYPE_NORMAL
 	; party - Poison focus

@@ -8,7 +8,7 @@
 	db NO_ITEM ; item 2
 	dn GENDER_UNKNOWN, 4 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/rotom/front.dimensions"
-	abilities_for ROTOM, LEVITATE, LEVITATE, LEVITATE
+	abilities_for ROTOM, LEVITATE, LEVITATE, PRANKSTER
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_BUG, EGG_BUG ; egg groups
 

@@ -8,7 +8,7 @@
 	db ORAN_BERRY ; item 2
 	dn GENDER_F50, 3 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/teddiursa/front.dimensions"
-	abilities_for TEDDIURSA, QUICK_FEET, QUICK_FEET, PICKUP
+	abilities_for TEDDIURSA, QUICK_FEET, PICKUP, TOUGH_CLAWS
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_GROUND, EGG_GROUND ; egg groups
 

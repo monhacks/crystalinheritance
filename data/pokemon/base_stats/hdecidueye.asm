@@ -8,7 +8,7 @@
 	db NO_ITEM ; item 2
 	dn GENDER_F50, 3 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/hdecidueye/front.dimensions"
-	abilities_for H__DECIDUEYE, OVERGROW, OVERGROW, OVERGROW
+	abilities_for H__DECIDUEYE, OVERGROW, OVERCOAT, SNIPER
 	db GROWTH_MEDIUM_SLOW ; growth rate
 	dn EGG_GROUND, EGG_GROUND ; egg groups
 

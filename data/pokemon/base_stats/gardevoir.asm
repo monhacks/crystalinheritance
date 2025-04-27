@@ -8,7 +8,7 @@
 	db NO_ITEM ; item 2
 	dn GENDER_F100, 3 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/gardevoir/front.dimensions"
-	abilities_for GARDEVOIR, SYNCHRONIZE, SYNCHRONIZE, SYNCHRONIZE
+	abilities_for GARDEVOIR, SYNCHRONIZE, TRACE, PIXILATE
 	db GROWTH_SLOW ; growth rate
 	dn EGG_INDETERMINATE, EGG_INDETERMINATE ; egg groups
 

@@ -8,7 +8,7 @@
 	db NO_ITEM ; item 2
 	dn GENDER_F50, 3 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/stantler/front.dimensions"
-	abilities_for STANTLER, INTIMIDATE, INTIMIDATE, INTIMIDATE
+	abilities_for STANTLER, INTIMIDATE, SAP_SIPPER, BERSERK
 	db GROWTH_SLOW ; growth rate
 	dn EGG_MONSTER, EGG_WATER_1 ; egg groups
 

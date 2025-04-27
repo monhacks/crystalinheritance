@@ -8,7 +8,7 @@
 	db NO_ITEM ; item 2
 	dn GENDER_F50, 15 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/lugia/front.dimensions"
-	abilities_for LUCARIO, STEADFAST, STEADFAST, STEADFAST
+	abilities_for LUCARIO, STEADFAST, INNER_FOCUS, JUSTIFIED
 	db GROWTH_MEDIUM_SLOW ; growth rate
 	dn EGG_NONE, EGG_NONE ; egg groups
 

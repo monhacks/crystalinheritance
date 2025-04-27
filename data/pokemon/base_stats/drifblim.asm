@@ -8,7 +8,7 @@
 	db NO_ITEM ; item 2
 	dn GENDER_F50, 3 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/drifblim/front.dimensions"
-	abilities_for DRIFBLIM, AFTERMATH, UNBURDEN, UNBURDEN
+	abilities_for DRIFBLIM, AFTERMATH, AFTERMATH, UNBURDEN
 	db GROWTH_MEDIUM_SLOW ; growth rate
 	dn EGG_HUMANSHAPE, EGG_HUMANSHAPE ; egg groups
 

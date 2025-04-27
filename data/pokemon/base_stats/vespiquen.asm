@@ -8,7 +8,7 @@
 	db NO_ITEM ; item 2
 	dn GENDER_F100, 3 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/vespiquen/front.dimensions"
-	abilities_for VESPIQUEN, PRESSURE, PRESSURE, PRESSURE
+	abilities_for VESPIQUEN, PRESSURE, UNNERVE, PARENTAL_BOND
 	db GROWTH_MEDIUM_SLOW ; growth rate
 	dn EGG_MONSTER, EGG_PLANT ; egg groups
 

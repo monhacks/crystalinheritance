@@ -8,7 +8,7 @@
 	db NO_ITEM ; item 2
 	dn GENDER_F50, 2 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/lopunny/front.dimensions"
-	abilities_for LOPUNNY, CUTE_CHARM, CUTE_CHARM, CUTE_CHARM
+	abilities_for LOPUNNY, CUTE_CHARM, FUR_COAT, SCRAPPY
 	db GROWTH_FAST ; growth rate
 	dn EGG_BUG, EGG_BUG ; egg groups
 

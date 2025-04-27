@@ -8,7 +8,7 @@
 	db NO_ITEM ; item 2
 	dn GENDER_F50, 4 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/skuntank/front.dimensions"
-	abilities_for SKUNTANK, AFTERMATH, AFTERMATH, AFTERMATH
+	abilities_for SKUNTANK, AFTERMATH, KEEN_EYE, STENCH
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_FLYING, EGG_FLYING ; egg groups
 

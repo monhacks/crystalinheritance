@@ -8,7 +8,7 @@
 	db RAZOR_CLAW ; item 2
 	dn GENDER_F50, 3 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/sneasler/front.dimensions"
-	abilities_for SNEASLER, PRESSURE, PRESSURE, PRESSURE
+	abilities_for SNEASLER, PRESSURE, PRESSURE, UNBURDEN
 	db GROWTH_MEDIUM_SLOW ; growth rate
 	dn EGG_GROUND, EGG_GROUND ; egg groups
 

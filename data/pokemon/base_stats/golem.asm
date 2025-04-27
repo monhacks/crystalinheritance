@@ -8,7 +8,7 @@
 	db EVERSTONE ; item 2
 	dn GENDER_F50, 2 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/golem/front.dimensions"
-	abilities_for GOLEM, ROCK_HEAD, STURDY, SAND_VEIL
+	abilities_for GOLEM, ROCK_HEAD, STURDY, GALVANIZE
 	db GROWTH_MEDIUM_SLOW ; growth rate
 	dn EGG_MINERAL, EGG_MINERAL ; egg groups
 

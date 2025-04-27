@@ -8,7 +8,7 @@
 	db NO_ITEM ; item 2
 	dn GENDER_F50, 3 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/parasect/front.dimensions"
-	abilities_for PARASECT, EFFECT_SPORE, DRY_SKIN, DAMP
+	abilities_for PARASECT, EFFECT_SPORE, DRY_SKIN, POISON_HEAL
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_BUG, EGG_PLANT ; egg groups
 

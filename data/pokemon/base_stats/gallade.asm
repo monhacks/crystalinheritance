@@ -8,7 +8,7 @@
 	db NO_ITEM ; item 2
 	dn GENDER_F0, 3 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/gallade/front.dimensions"
-	abilities_for GALLADE, STEADFAST, JUSTIFIED, STEADFAST
+	abilities_for GALLADE, STEADFAST, JUSTIFIED, INNER_FOCUS
 	db GROWTH_SLOW ; growth rate
 	dn EGG_INDETERMINATE, EGG_INDETERMINATE ; egg groups
 

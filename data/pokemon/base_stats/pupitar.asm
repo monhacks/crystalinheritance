@@ -8,7 +8,7 @@
 	db NO_ITEM ; item 2
 	dn GENDER_F50, 7 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/pupitar/front.dimensions"
-	abilities_for PUPITAR, SHED_SKIN, SHED_SKIN, SHED_SKIN
+	abilities_for PUPITAR, SHED_SKIN, SHED_SKIN, ROCK_HEAD
 	db GROWTH_SLOW ; growth rate
 	dn EGG_MONSTER, EGG_MONSTER ; egg groups
 

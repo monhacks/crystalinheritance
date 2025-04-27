@@ -8,7 +8,7 @@
 	db ABSORB_BULB ; item 2
 	dn GENDER_F50, 3 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/bellossom/front.dimensions"
-	abilities_for BELLOSSOM, CHLOROPHYLL, CHLOROPHYLL, CHLOROPHYLL
+	abilities_for BELLOSSOM, CHLOROPHYLL, CHLOROPHYLL, CLOUD_NINE
 	db GROWTH_MEDIUM_SLOW ; growth rate
 	dn EGG_PLANT, EGG_PLANT ; egg groups
 

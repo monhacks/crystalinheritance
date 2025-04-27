@@ -8,7 +8,7 @@
 	db NO_ITEM ; item 2
 	dn GENDER_F50, 4 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/rowlet/front.dimensions"
-	abilities_for ROWLET, OVERGROW, OVERGROW, OVERGROW
+	abilities_for ROWLET, OVERGROW, OVERCOAT, SNIPER
 	db GROWTH_MEDIUM_SLOW ; growth rate
 	dn EGG_BUG, EGG_BUG ; egg groups
 

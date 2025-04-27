@@ -8,7 +8,7 @@
 	db NO_ITEM ; item 2
 	dn GENDER_F12_5, 6 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/leafeon/front.dimensions"
-	abilities_for LEAFEON, LEAF_GUARD, LEAF_GUARD, CHLOROPHYLL
+	abilities_for LEAFEON, LEAF_GUARD, CHLOROPHYLL, HARVEST
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_GROUND, EGG_GROUND ; egg groups
 

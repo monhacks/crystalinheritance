@@ -8,7 +8,7 @@
 	db WIDE_LENS ; item 2
 	dn GENDER_F50, 3 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/yanmega/front.dimensions"
-	abilities_for YANMEGA, SPEED_BOOST, TINTED_LENS, FRISK
+	abilities_for YANMEGA, SPEED_BOOST, TINTED_LENS, SWARM
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_BUG, EGG_BUG ; egg groups
 

@@ -8,7 +8,7 @@
 	db NO_ITEM ; item 2
 	dn GENDER_F50, 4 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/roserade/front.dimensions"
-	abilities_for ROSERADE, POISON_POINT, POISON_POINT, POISON_POINT
+	abilities_for ROSERADE, POISON_POINT, POISON_POINT, TECHNICIAN
 	db GROWTH_MEDIUM_SLOW ; growth rate
 	dn EGG_BUG, EGG_BUG ; egg groups
 

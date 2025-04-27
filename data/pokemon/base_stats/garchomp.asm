@@ -8,7 +8,7 @@
 	db NO_ITEM ; item 2
 	dn GENDER_F50, 3 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/garchomp/front.dimensions"
-	abilities_for GARCHOMP, SAND_RUSH, SAND_RUSH, SAND_RUSH
+	abilities_for GARCHOMP, SAND_RUSH, SAND_RUSH, DRY_SKIN
 	db GROWTH_SLOW ; growth rate
 	dn EGG_INDETERMINATE, EGG_INDETERMINATE ; egg groups
 

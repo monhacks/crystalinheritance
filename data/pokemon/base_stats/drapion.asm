@@ -8,7 +8,7 @@
 	db NO_ITEM ; item 2
 	dn GENDER_F50, 7 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/drapion/front.dimensions"
-	abilities_for DRAPION, BATTLE_ARMOR, BATTLE_ARMOR, BATTLE_ARMOR
+	abilities_for DRAPION, BATTLE_ARMOR, BATTLE_ARMOR, SNIPER
 	db GROWTH_SLOW ; growth rate
 	dn EGG_WATER_1, EGG_DRAGON ; egg groups
 

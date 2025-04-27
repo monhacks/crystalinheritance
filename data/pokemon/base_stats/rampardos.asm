@@ -8,7 +8,7 @@
 	db NO_ITEM ; item 2
 	dn GENDER_F50, 15 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/rampardos/front.dimensions"
-	abilities_for RAMPARDOS, MOLD_BREAKER, MOLD_BREAKER, MOLD_BREAKER
+	abilities_for RAMPARDOS, MOLD_BREAKER, MOLD_BREAKER, SHEER_FORCE
 	db GROWTH_SLOW ; growth rate
 	dn EGG_NONE, EGG_NONE ; egg groups
 

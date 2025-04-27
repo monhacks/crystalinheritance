@@ -8,7 +8,7 @@
 	db NO_ITEM ; item 2
 	dn GENDER_UNKNOWN, 3 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/heatran/front.dimensions"
-	abilities_for HEATRAN, FLASH_FIRE, FLASH_FIRE, FLASH_FIRE
+	abilities_for HEATRAN, FLASH_FIRE, FLASH_FIRE, FLAME_BODY
 	db GROWTH_SLOW ; growth rate
 	dn EGG_INDETERMINATE, EGG_INDETERMINATE ; egg groups
 

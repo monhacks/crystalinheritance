@@ -8,7 +8,7 @@
 	db NO_ITEM ; item 2
 	dn GENDER_UNKNOWN, 7 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/bronzong/front.dimensions"
-	abilities_for BRONZONG, LEVITATE, LEVITATE, LEVITATE
+	abilities_for BRONZONG, LEVITATE, LEVITATE, DRIZZLE
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_FAIRY, EGG_FAIRY ; egg groups
 

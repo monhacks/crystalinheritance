@@ -8,7 +8,7 @@
 	db NO_ITEM ; item 2
 	dn GENDER_F50, 7 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/snover/front.dimensions"
-	abilities_for SNOVER, SNOW_WARNING, SNOW_WARNING, SNOW_WARNING
+	abilities_for SNOVER, SNOW_WARNING, SNOW_WARNING, SOUNDPROOF
 	db GROWTH_SLOW ; growth rate
 	dn EGG_MONSTER, EGG_MONSTER ; egg groups
 

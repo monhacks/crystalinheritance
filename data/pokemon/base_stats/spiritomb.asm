@@ -8,7 +8,7 @@
 	db NO_ITEM ; item 2
 	dn GENDER_F50, 2 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/spiritomb/front.dimensions"
-	abilities_for SPIRITOMB, PRESSURE, PRESSURE, PRESSURE
+	abilities_for SPIRITOMB, PRESSURE, PRESSURE, INFILTRATOR
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_BUG, EGG_BUG ; egg groups
 

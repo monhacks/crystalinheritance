@@ -299,8 +299,9 @@ IlexForestKurtEngineerScript:
 ;	special DeleteSavedMusic
 ;	playmusic MUSIC_RIVAL_AFTER
 	opentext
-	writetext CamdenLeavingText ; should i opentext closetext this?
+	writetext CamdenLeavingText
 	waitbutton
+	verbosegiveitem ABILITY_PATCH
 	closetext
 	applymovement ILEX_FOREST_CAMDEN, CamdenExitMovement
 	disappear ILEX_FOREST_CAMDEN
@@ -406,11 +407,13 @@ CamdenWinText:
 	done
 
 CamdenLeavingText:
-	text "Tch. We will"
-	line "leave for now,"
-	cont "but later be"
-	cont "back with a"
-	cont "vengeance."
+	text "We will be back"
+	line "later. Progress"
+	
+	para "isn't all bad,"
+	line "look at this pro-"
+	cont "totype Silph is"
+	cont "working on."
 	done
 
 CamdenExitMovement:

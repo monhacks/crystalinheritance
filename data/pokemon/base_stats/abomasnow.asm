@@ -8,7 +8,7 @@
 	db NEVERMELTICE ; item 2
 	dn GENDER_F50, 3 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/abomasnow/front.dimensions"
-	abilities_for ABOMASNOW, SNOW_WARNING, SNOW_WARNING, SNOW_WARNING
+	abilities_for ABOMASNOW, SNOW_WARNING, SNOW_WARNING, SOUNDPROOF
 	db GROWTH_SLOW ; growth rate
 	dn EGG_HUMANSHAPE, EGG_HUMANSHAPE ; egg groups
 

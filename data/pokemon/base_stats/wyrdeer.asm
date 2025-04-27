@@ -8,7 +8,7 @@
 	db NO_ITEM ; item 2
 	dn GENDER_F50, 3 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/wyrdeer/front.dimensions"
-	abilities_for WYRDEER, INTIMIDATE, INTIMIDATE, INTIMIDATE
+	abilities_for WYRDEER, INTIMIDATE, SAP_SIPPER, BERSERK
 	db GROWTH_SLOW ; growth rate
 	dn EGG_WATER_1, EGG_GROUND ; egg groups
 

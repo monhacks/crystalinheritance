@@ -8,7 +8,7 @@
 	db NO_ITEM ; item 2
 	dn GENDER_F100, 3 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/nidorina/front.dimensions"
-	abilities_for NIDORINA, POISON_POINT, RIVALRY, HUSTLE
+	abilities_for NIDORINA, POISON_POINT, SHEER_FORCE, RIVALRY
 	db GROWTH_MEDIUM_SLOW ; growth rate
 	dn EGG_MONSTER, EGG_GROUND ; egg groups
 

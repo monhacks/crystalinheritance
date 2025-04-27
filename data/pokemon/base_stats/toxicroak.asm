@@ -8,7 +8,7 @@
 	db BERSERK_GENE ; item 2
 	dn GENDER_F50, 3 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/toxicroak/front.dimensions"
-	abilities_for TOXICROAK, DRY_SKIN, DRY_SKIN, DRY_SKIN
+	abilities_for TOXICROAK, DRY_SKIN, DRY_SKIN, POISON_TOUCH
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_MONSTER, EGG_WATER_1 ; egg groups
 

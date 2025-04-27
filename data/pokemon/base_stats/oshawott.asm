@@ -8,7 +8,7 @@
 	db NO_ITEM ; item 2
 	dn GENDER_F50, 4 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/oshawott/front.dimensions"
-	abilities_for OSHAWOTT, TORRENT, TORRENT, TORRENT
+	abilities_for OSHAWOTT, TORRENT, SHELL_ARMOR, TECHNICIAN
 	db GROWTH_MEDIUM_SLOW ; growth rate
 	dn EGG_MINERAL, EGG_MINERAL ; egg groups
 

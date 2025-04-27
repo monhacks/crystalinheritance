@@ -8,7 +8,7 @@
 	db NO_ITEM ; item 2
 	dn GENDER_F50, 3 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/kleavor/front.dimensions"
-	abilities_for KLEAVOR, SWARM, SHEER_FORCE, SWARM
+	abilities_for KLEAVOR, SWARM, SHEER_FORCE, STEADFAST
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_WATER_1, EGG_DRAGON ; egg groups
 

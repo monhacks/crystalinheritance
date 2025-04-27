@@ -8,7 +8,7 @@
 	db NO_ITEM ; item 2
 	dn GENDER_F12_5, 4 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/monferno/front.dimensions"
-	abilities_for MONFERNO, BLAZE, BLAZE, BLAZE
+	abilities_for MONFERNO, BLAZE, IRON_FIST, GORILLA_TACTICS
 	db GROWTH_MEDIUM_SLOW ; growth rate
 	dn EGG_INDETERMINATE, EGG_INDETERMINATE ; egg groups
 

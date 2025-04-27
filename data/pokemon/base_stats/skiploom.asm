@@ -8,7 +8,7 @@
 	db SHARP_BEAK ; item 2
 	dn GENDER_F50, 4 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/skiploom/front.dimensions"
-	abilities_for SKIPLOOM, CHLOROPHYLL, CHLOROPHYLL, CHLOROPHYLL
+	abilities_for SKIPLOOM, CHLOROPHYLL, CHLOROPHYLL, INFILTRATOR
 	db GROWTH_MEDIUM_SLOW ; growth rate
 	dn EGG_FLYING, EGG_FLYING ; egg groups
 

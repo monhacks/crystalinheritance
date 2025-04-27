@@ -8,7 +8,7 @@
 	db NO_ITEM ; item 2
 	dn GENDER_F50, 3 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/mareep/front.dimensions"
-	abilities_for MAREEP, STATIC, STATIC, STATIC
+	abilities_for MAREEP, STATIC, STATIC, VOLT_ABSORB
 	db GROWTH_MEDIUM_SLOW ; growth rate
 	dn EGG_MONSTER, EGG_GROUND ; egg groups
 

@@ -8,7 +8,7 @@
 	db SMOKE_BALL ; item 2
 	dn GENDER_F50, 3 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/weezing/front.dimensions"
-	abilities_for WEEZING, LEVITATE, NEUTRALIZING_GAS, STENCH
+	abilities_for WEEZING, LEVITATE, NEUTRALIZING_GAS, AFTERMATH
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_INDETERMINATE, EGG_INDETERMINATE ; egg groups
 

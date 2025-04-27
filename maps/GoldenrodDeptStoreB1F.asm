@@ -4,7 +4,6 @@ GoldenrodDeptStoreB1F_MapScriptHeader:
 	def_callbacks
 
 	def_warp_events
-	warp_event 17,  2, UNDERGROUND_WAREHOUSE, 3
 	warp_event  9,  4, GOLDENROD_DEPT_STORE_ELEVATOR, 1
 	warp_event 10,  4, GOLDENROD_DEPT_STORE_ELEVATOR, 2
 
@@ -13,9 +12,9 @@ GoldenrodDeptStoreB1F_MapScriptHeader:
 	def_bg_events
 
 	def_object_events
-	itemball_event 10, 15, ETHER, 1, EVENT_GOLDENROD_DEPT_STORE_B1F_ETHER
+	itemball_event 10, 15, ABILITY_CAP, 1, EVENT_GOLDENROD_DEPT_STORE_B1F_ETHER
 	itemball_event 14,  2, MAX_REVIVE, 1, EVENT_GOLDENROD_DEPT_STORE_B1F_METAL_COAT
-	itemball_event  6,  3, BURN_HEAL, 1, EVENT_GOLDENROD_DEPT_STORE_B1F_BURN_HEAL
+	itemball_event  6,  3, ABILITY_PATCH, 1, EVENT_GOLDENROD_DEPT_STORE_B1F_BURN_HEAL
 	itemball_event 15, 15, ULTRA_BALL, 1, EVENT_GOLDENROD_DEPT_STORE_B1F_ULTRA_BALL
 	object_event  9, 10, SPRITE_BLACK_BELT, SPRITEMOVEDATA_WALK_UP_DOWN, 1, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodDeptStoreB1FBlackBelt1Text, -1
 	object_event  4,  8, SPRITE_BLACK_BELT, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodDeptStoreB1FBlackBelt2Text, -1

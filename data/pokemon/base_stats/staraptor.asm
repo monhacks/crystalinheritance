@@ -8,7 +8,7 @@
 	db NO_ITEM ; item 2
 	dn GENDER_F50, 3 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/staraptor/front.dimensions"
-	abilities_for STARAPTOR, INTIMIDATE, INTIMIDATE, INTIMIDATE
+	abilities_for STARAPTOR, INTIMIDATE, INTIMIDATE, RECKLESS
 	db GROWTH_MEDIUM_SLOW ; growth rate
 	dn EGG_MONSTER, EGG_WATER_1 ; egg groups
 
