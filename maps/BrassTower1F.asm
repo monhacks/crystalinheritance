@@ -6,8 +6,7 @@ BrassTower1F_MapScriptHeader:
 
 
 	def_warp_events
-	warp_event 7, 15, WESTERN_CAPITAL, 1 ; CHECK THE WARP
-	warp_event 8, 15, WESTERN_CAPITAL, 1 ; CHECK THE WARP
+
 
 	def_coord_events
 
@@ -18,26 +17,43 @@ BrassTower1F_MapScriptHeader:
 
 
 	def_object_events
-; KURT - pontificates
-; AMOS - sells items 
 	object_event 6, 2, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TowerKurtScript, -1 ; 
-	object_event 7, 13, SPRITE_AMOS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_COMMAND, jumptextfaceplayer, BrassTowerAmosText, -1 ; done
+	object_event 7, 13, SPRITE_AMOS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, BrassTowerAmosScript, -1 ; done
 	object_event  5,  13, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_COMMAND, pokemart, MARTTYPE_STANDARD, MART_WESTERN_CAPITAL_PREP, -1
 	object_event 9, 13, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, BrassTowerHealScript, -1 ; done
 
 	object_const_def
+
+BrassTowerAmosScript:
+	faceplayer
+	opentext
+	writetext BrassTowerAmosText1
+	yesorno
+	iffalse_jumptext BrassTowerAmosText
+	playsound SFX_WARP_TO
+	special FadeOutPalettes
+	waitsfx
+	warp TIMELESS_TAPESTRY, 12, 21
+	end
+
+BrassTowerAmosText1:
+	text "If you need any-"
+	line "thing, one of our"
+	cont "soldiers can sell"
+	cont "you some items or"
+	cont "heal you."
+
+	para "If you need more"
+	line "preparation, I"
+	para "can warp you out"
+	line "of here."
+	done
 
 BrassTowerAmosText:
 	text "Let's go. I'll"
 	line "hold off anyone"
 	cont "who tries to come"
 	cont "up behind."
-
-	para "If you need any-"
-	line "thing, one of our"
-	cont "soldiers can sell"
-	cont "you some items or"
-	cont "heal you."
 	done
 
 BrassTowerHealScript: ; cf ilex healer
@@ -67,11 +83,11 @@ BrassHealedPokemon:
 TowerKurtScript: 
 	faceplayer
 	opentext
-	writetext KurtHearAStoryQuestionTower
+	writetext KurtHearAStoryQuestionTower ; todo, move this to the roof 
 	yesorno
 	iffalse .AskPC
 	writetext BrassTowerKurtStoryText
-	setevent EVENT_LISTENED_TO_KURT_5; FOR USE IN KURTS HOUSE
+	setevent EVENT_LISTENED_TO_KURT_5; TODO in kurt's house 
 	waitbutton
 .AskPC
 	writetext TowerKurtPCQuestion
@@ -79,8 +95,7 @@ TowerKurtScript:
 	iffalse_jumpopenedtext KurtTowerDeclineText
 	writetext KurtTowerText2
 	promptbutton
-	special PokemonCenterPC ; per engine/events/std_scripts.asm this is how it should be done. 
-	endtext
+	special PokemonCenterPC
 	end
 
 KurtHearAStoryQuestionTower:
@@ -109,10 +124,10 @@ BrassTowerKurtStoryText:
 	para "since he was abo-"
 	line "ut to have you. "
 	
-	para "Before he arrived"
+	para "While I waited,"
 	line "I looked in the "
 	cont "bag and found his"
-	cont "apricorn. "
+	cont "apricorn."
 	
 	para "The paint was ne-"
 	line "arly all chipped"

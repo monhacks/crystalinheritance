@@ -79,6 +79,7 @@ GrottoedGlacierB1FScene0:
 	startbattle
 	ifequal $1, .Continue
 .Continue:
+	disappear GLACIER_B2F_BASCULEGION_ALIVE
 	setscene $1
 	setevent EVENT_BATTLED_BASCULEGION
 	setevent EVENT_BASCULEGION_SLEEPS

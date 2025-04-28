@@ -20,14 +20,14 @@ TimelessTapestry_MapScriptHeader:
 	def_object_events
 	object_event 8, 26, SPRITE_SAMSARA, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_TAPESTRY_SAMSARA ; 
 	object_event 7, 26, SPRITE_AMOS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1
-	; plyaer at 9, 29 
+	; player at 9, 29 
 ; ADD THE CHARACTERS FROM THE CABIN 
 	object_event 10, 14, SPRITE_SCHOOLGIRL, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, TapestryVera, -1 ; VERA 
 	object_event 15, 15, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TapestryPiper, -1 ; PIPER, former beauty 
 	object_event 12, 22, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, TapestrySamaria, -1 ; SAMARIA
 	object_event 13, 22, SPRITE_VETERAN_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, TapestryShiji, -1
 	object_event 16, 15, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_COMMAND, jumptextfaceplayer, TapestryMorphea, -1
-	
+	object_event 13, 21, SPRITE_AMOS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TapestryAmos, -1
 
 
 	object_const_def
@@ -38,6 +38,20 @@ TimelessTapestry_MapScriptHeader:
 TimelessTapestryFlyPoint:
 	setflag ENGINE_FLYPOINT_TIMELESS_TAPESTRY
 	endcallback	
+
+TapestryAmos:
+	faceplayer
+	opentext
+	writetext TapestryAmosText1
+	waitbutton
+	yesorno
+	iffalse_jumptext TapestryAmosNoText
+	playsound SFX_WARP_TO
+	special FadeOutPalettes
+	waitsfx
+	warp BRASS_TOWER_1F, 7, 14
+	end
+
 
 TapestrySceneFinale: ; if you helped all the kimono girls then piper gets to come with too 
 	;cf western capital scene 

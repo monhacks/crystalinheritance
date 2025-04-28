@@ -15,9 +15,10 @@ ClastsCradleB1F_MapScriptHeader:
 
 
 	def_coord_events
-	coord_event 21, 12, CradleScene1_Mejimi, 0; first scene
-	coord_event  5, 26, CradleScene2_Heatran, 1; first scene
-
+	coord_event 21, 12, CradleScene1_Mejimi, 0; cutscene
+	coord_event  5, 26, CradleScene2_Heatran, 1; battle heatran 
+	coord_event  5, 26, CradleScene2_Adrinna, 2; battle with adrinna
+	
 	def_bg_events
 
 
@@ -28,8 +29,9 @@ ClastsCradleB1F_MapScriptHeader:
 	object_event 22, 8, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_CRADLE_CUTSCENE
 	object_event 27, 14, SPRITE_MEJIMI, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_CRADLE_CUTSCENE
 ; CUTSCENE 2, TODO
-	object_event   4,  16, SPRITE_ADRINNA, SSPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_ADRINNA_MINE
+	object_event   4,  16, SPRITE_ADRINNA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_ADRINNA_MINE
 	object_event   5,  15, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, HEATRAN, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_CC_HEATRAN
+	object_event   0,  00, SPRITE_KURT, SPRITEMOVEDATA_STANDING_LEFT 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_KURT_MINE_2
 ; KURT TO HEAL YOU 
 	object_event   8,  5, SPRITE_KURT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 1, KurtScriptCC, EVENT_BEAT_ADRINNA_MINE
 ; TRAINERS, TODO 
@@ -44,6 +46,8 @@ ClastsCradleB1F_MapScriptHeader:
 	const CRADLE_CUTSCENE_WORKER
 	const CRADLE_CUTSCENE_MEJIMI
 	const CRADLE_ADRINNA_2
+	const CRADLE_HEATRAN
+	const CRADLE_KURT
 
 KurtScriptCC:
 	faceplayer
@@ -377,10 +381,56 @@ Brigader20SeenText:
 	cont "this environment!"
 	done
 
+
+CradleScene2_Adrinna:
+	applymovement PLAYER, Player_CCB1F_Move1
+	sjump Crade_Scene3
+
 CradleScene2_Heatran:
 	applymovement PLAYER, Player_CCB1F_Move1
 	showemote EMOTE_BOLT, CRADLE_ADRINNA_2, 30
 	showtext CradleAdrinnaText1
+; may need an additional 
+	loadvar VAR_BATTLETYPE, BATTLETYPE_TRAP
+	loadwildmon HEATRAN, 50
+	startbattle
+	ifequal $1, .Continue
+.Continue:
+	setscene $2
+	disappear CRADLE_HEATRAN
+	setevent EVENT_CC_HEATRAN
+	;fallthru 
+Crade_Scene3: ; just in case you lose to adrinna after heatran 
+	showtext CradleAdrinnaText2
+	pause 10
+	appear CRADLE_KURT
+	applymovement CRADLE_KURT, CradleKurtMovesToYou
+	turnobject CRADLE_ADRINNA_2, DOWN
+	showtext CradleKurtText1
+	special HealParty
+	showemote EMOTE_BOLT, CRADLE_ADRINNA_2, 10
+	showtext CradleAdrinnaText3
+	winlosstext CradleAdrinnaText4, 0
+	loadtrainer ADRINNA, ADRINNA2
+	startbattle
+	ifequal $1, .Continue2
+.Continue2:
+	reloadmapafterbattle
+	opentext
+	writetext CradleAdrinnaText5
+	waitbutton
+	closetext
+	setevent EVENT_BEAT_ADRINNA_MINE
+	applyonemovement CRADLE_ADRINNA_2, teleport_from	
+	disappear CRADLE_ADRINNA_2
+	showemote EMOTE_SHOCK, CRADLE_KURT, 10
+	showtext CradleKurtText2
+	playsound SFX_WARP_TO
+	special FadeOutPalettes
+	waitsfx
+	setscene $2
+	warp WHISPERING_WAY, 10, 4
+	end
 	
 
 
@@ -396,62 +446,142 @@ Player_CCB1F_Move1:
 	step_up
 	step_end
 	
+CradleKurtMovesToYou:
+	step_left
+	step_left
+	step_up
+	step_up
+	step_up
+	step_up
+	step_up
+	step_up
+	step_end
 
 CradleAdrinnaText1:
-	text "<PLAYER>, I knew you would come. I knew you would follow me when I met you at the stadium, when I met you at the garden, and when I saw you in the glacier. 
+	text "<PLAYER>, I knew"
+	line "you would come."
 	
-	Johto has been held back by its obsession with tradition. It's time to see how far we can go.
+	para "We are held back"
+	line "by tradition."
 	
-	Consider: Hollis, holding back his most talented trainers. 
+	para "Consider: Hollis,"
+	line "holds back his"
+	cont "best trainers."
 	
-	The bizarre ritual in Gauldenrod that wastes youthful energy carrying around their sick and lame. 
+	para "Gauldenrod's rit-"
+	line "ual that wastes"
+	para "energy carrying" 
+	line "sick and lame."
 	
-	The nomads on the sea that never kept charts, just prayer books for Lugia. 
+	para "The nomads that"
+	line "never track their"
+	cont "own progress."
 	
-	And ten generations of emperors have missed the opportunity to tap this mountain's luscious steel. 
+	para "Ten generations of"
+	line "emperors missing"
+	para "the chance to tap"
+	line "this mountain's"
+	cont "luscious steel!"
 	
-	The #mon in front of you is pure liquid steel and magma. With it, we could wipe the whole world clean. 
+	para "The #mon here"
+	line "can wipe the"
+	cont "region clean."
 	
-	I want you to have it, <PLAYER>. Heatran, rise!
-	
-<heatran battle>
+	para "<PLAYER>, I want"
+	line "you to have it."
+	done
+
 
 CradleAdrinnaText2:
-	text "Adrinna: I knew you could do it.
+	text "Adrinna: I knew"
+	line "you could do it."
 	
-	How does it feel? With its magma coursing, the whole bedrock of society can be remade. 
+	para "No more elders to"
+	line "tell you what you"
+	cont "should do."
 	
-	No more elders dictating what you can and can't do. Your only limit...
+	para "Your only limit"
+	line "is ... ...?"
+	done
 	
-	...?	
 	
 CradleKurtText1:
-	Kurt: <PLAYER>! Don't listen!
+	text "Kurt: She's wrong!"
+	line "I have been wrong"
+	para "to be so against"
+	line "technologies."
 	
-	I've been wrong to be so skeptical of technology. 
+	para "When I could have"
+	line "helped <RIVAL>'s"
+	para "distiller to let"
+	line "us make do during"
+	cont "the drought,"
 	
-	When we could have used <RIVAL>'s invention to make do during the drought, I pushed him away. 
+	para "I pushed him out."
+	line "I was scared of"
+	cont "change. But every"
 	
-	Truthfully, I was scared of change, and wanted to selfishly guard my position. But I forgot that I was doing it all for you. 
+	para "generation has"
+	line "its own challenge"
+	cont "to overcome."
+	
+	para "The greatest gift"
+	line "I could leave you"
+	cont "is adaptability."
+	
+	para "That's what our"
+	line "traditions are"
+	para "really about: "
+	line "reminding us that"
+	para "our ancestors"
+	line "persevered, and"
+	cont "we can, too."
+	
+	para "Show her that she"
+	line "is wrong!"
+	
+	para "I'll heal your"
+	line "#mon!"
+	done
+	
 
-	Show him, <PLAYER>, that she's wrong!
-	
 CradleAdrinnaText3: 
-	text "Adrinna: Ha! Come at me then, see if you can deny the strongest team I've assembled so far!"
+	text "Adrinna: Come at"
+	line "me, see if you"
+	line "can defeat the"
+	
+	para "strongest team"
+	line "I've assembled!"
+	done
 	
 CradleAdrinnaText4:
-	text "Adrinna: So you are tough."
+	text "Adrinna: So you"
+	line "are tough."
+	done
 	
 CradleAdrinnaText5:
-	text "Adrinna: This hitch doesn't change my plans. Emperor Mejimi has no idea what's coming at his coronation at the Brass Tower. Maybe I'll see you again, <PLAYER>." 
+	text "Adrinna: This"
+	line "changes nothing."
+	
+	para "Emperor Mejimi"
+	line "has no idea what's"
+	para "coming at his co-"
+	line "ronation at the"
+	cont "Brass Tower."
+	
+	para "Think about my"
+	line "offer, <PLAYER>." 
+	done
 	
 CradleKurtText2:
-	text "Kurt: <PLAYER>, what was that? About the Brass Tower? ... Amos told me that he was going to regroup at the temples south of the capital. Let's regroup there."
-	
+	text "Kurt: <PLAYER>,"
+	line "what was that?"
 
+	para "The Brass Tower?"
+	line "Amos told me to"
+	para "regroup south of"
+	line "the capital."
 	
-	
-	
-	
-	
-	
+	para "I'll take us"
+	line "there now..."
+	done

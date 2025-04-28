@@ -24,13 +24,16 @@ BrassTower4FWarp_MapScriptHeader: ;	def_scene_scripts
 	object_const_def
 	
 BrassTowerAdrinna:
+	faceplayer
 	checkevent EVENT_BEAT_ADRINNA_TOWER
-	iftrue_jumptextfaceplayer .AfterText
-	showtextfaceplayer .SeenText
+	iftrue_jumptext .AfterText
+	checkpoke CELEBI
+	iftrue .DeclinedCelebi 
+	showtext .SeenText
 	pause 10
 	yesorno
 	iftrue .YesToAdrinna
-.Declined
+.Declined:
 	showtext .NoToAdrinnaText
 	winlosstext .BeatenText, 0
 	loadtrainer ADRINNA, 3
@@ -38,6 +41,11 @@ BrassTowerAdrinna:
 	reloadmapafterbattle
 	showtext .AfterText
 	setevent EVENT_BEAT_ADRINNA_TOWER
+	end
+
+.DeclinedCelebi:
+	showtext AdrinnaSeenText0
+	sjump .Declined
 	end
 
 .YesToAdrinna:
@@ -48,6 +56,40 @@ BrassTowerAdrinna:
 	showtext .AdrinnaTakesOverText
 	setevent EVENT_BEAT_ADRINNA_TOWER
 	end
+
+AdrinnaSeenText0:
+	text "I knew your tal-"
+	line "ents would rise"
+	cont "you to the top."
+	
+	para "The world is best"
+	line "when the strong"
+	cont "can sort thems-"
+	cont "elves into power."
+	
+	para "<PLAYER>. You"
+	line "could be so much"
+	cont "more without your"
+	cont "bleeding-heart"
+	cont "grandfather."
+	
+	para "If you shed those"
+	line "antiquated bonds,"
+	cont "you would gain"
+	cont "fame from Anarres"
+	cont "to the Landing"
+	cont "and beyond!"
+	
+	para "You know that tr-"
+	line "dition serves the"
+	cont "leeching elders."
+	
+	para "Hm? I can see in"
+	line "your eyes, you're"
+	cont "as weak as your"
+	cont "Grandfather."
+	done
+
 
 .SeenText:
 	text "I knew your tal-"
@@ -76,7 +118,7 @@ BrassTowerAdrinna:
 	line "dition serves the"
 	cont "leeching elders."
 	
-	para "What do you say>?"
+	para "What do you say?"
 	line "Burn it down with"
 	cont "me. We only need"
 	cont "a cult of self."

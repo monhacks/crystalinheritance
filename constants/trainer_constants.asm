@@ -1074,6 +1074,7 @@ KRIS EQU __trainer_class__
 	trainerclass ADRINNA ; 84 BLANCHE
 	const ADRINNA1
 	const ADRINNA2
+	const ADRINNA3
 
 	trainerclass BARBEAU ; 85 SPARK_T
 
