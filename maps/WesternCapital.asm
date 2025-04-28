@@ -1,4 +1,4 @@
-WesternCapital_MapScriptHeader: 
+WesternCapital_MapScriptHeader: ; todo the NPCs need to say something dependin gon whether or not EVENT_BEAT_ADRINNA_MINE 
 	def_scene_scripts
 	scene_script WesternCapitalCemeteryScene
 
@@ -516,7 +516,7 @@ WCBrigaderText:
 WCBrassTowerText:
 	text "Brass Tower"
 	line "Devoted to"
-	cont "Emperor Mejimi!"
+	cont "Emperor Mejimi"
 	done
 
 WCTinTowerText:

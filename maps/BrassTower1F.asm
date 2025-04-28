@@ -84,10 +84,6 @@ TowerKurtScript:
 	faceplayer
 	opentext
 	writetext KurtHearAStoryQuestionTower ; todo, move this to the roof 
-	yesorno
-	iffalse .AskPC
-	writetext BrassTowerKurtStoryText
-	setevent EVENT_LISTENED_TO_KURT_5; TODO in kurt's house 
 	waitbutton
 .AskPC
 	writetext TowerKurtPCQuestion
@@ -108,62 +104,10 @@ KurtHearAStoryQuestionTower:
 	cont "our time."
 	done
 
-BrassTowerKurtStoryText:
-	text "For the new year"
-	line "celebration befo-"
-	cont "re you were born,"
-
-	para "your dad and I "
-	line "met here. I was "
-	cont "so excited."
-
-	para "I wanted to rem-"
-	line "ind him of his "
-	cont "1st #mon,"
-	
-	para "since he was abo-"
-	line "ut to have you. "
-	
-	para "While I waited,"
-	line "I looked in the "
-	cont "bag and found his"
-	cont "apricorn."
-	
-	para "The paint was ne-"
-	line "arly all chipped"
-	cont "off, so only he "
-	cont "and I would know"
-	cont "what it once was." 
-	
-	para "When I picked it"
-	line "up it was cold"
-	cont "and still - not"
-	cont "as it should be."
-	
-	para "When I opened it,"
-	line "the inside was "
-	cont "dark. I tried re-"
-	cont "opening it to no"
-	cont "avail."
-	
-	para "I closed it for"
-	line "the last time,"
-	cont "marking the end"
-	cont "of that part of"
-	cont "my life."
-
-	para "I still think of"
-	line "those good days"
-	cont "whenever I see"
-	cont "an apricorn, "
-	
-	para "wishing I could"
-	line "see him catch his"
-	cont "first one again."
-	done
-
 TowerKurtPCQuestion:
-	text "..."
+	text "Do you need me to"
+	line "manage your party"
+	cont "for you?"
 	done
 
 KurtTowerDeclineText:
