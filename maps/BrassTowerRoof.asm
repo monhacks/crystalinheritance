@@ -4,7 +4,6 @@ BrassTowerRoof_MapScriptHeader:
 
 	def_callbacks
 
-
 	def_warp_events
 	warp_event 9, 5, BRASS_TOWER_4F, 3
 
@@ -26,13 +25,23 @@ BrassTowerRoof_MapScriptHeader:
 	object_event  	10, 9, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, HO_OH, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_ROOF_HOOH 
 	object_event  	10, 9, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, CELEBI, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_ROOF_HOOH
 
-	object_const_def
+	object_event  7, 3, SPRITE_LIGHTNING_OVERWORLD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LIGHTNING_1
+	object_event  7, 4, SPRITE_LIGHTNING_OVERWORLD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LIGHTNING_2
+	object_event  7, 5, SPRITE_LIGHTNING_OVERWORLD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LIGHTNING_3
+
+
+	object_const_def ; IS THIS TOO MANY? 
 	const BRASS_TOWER_ROOF_MEJIMI
 	const BRASS_TOWER_ROOF_KURT
 	const BRASS_TOWER_ROOF_ADRINNA
 	const BRASS_TOWER_ROOF_LUGIA
 	const BRASS_TOWER_ROOF_HOOH
 	const BRASS_TOWER_ROOF_CELEBI
+	const BRASS_TOWER_ROOF_LIGHTNING_1
+	const BRASS_TOWER_ROOF_LIGHTNING_2
+	const BRASS_TOWER_ROOF_LIGHTNING_3
+
+
 	
 BrassTowerRoofScript:
 	checkevent EVENT_ACCEPTED_ADRINNA
@@ -62,16 +71,30 @@ BrassTowerRoofScript:
 	ifequal $1, .Continue
 .Continue:
 	reloadmapafterbattle
-
 	showemote EMOTE_SHOCK, BRASS_TOWER_ROOF_MEJIMI, 10
-
-; lightning bolt: see data/moves/animations
-; also todo, make the flames 
+	appear BRASS_TOWER_ROOF_LIGHTNING_1
+	pause 2
+	appear BRASS_TOWER_ROOF_LIGHTNING_2
+	pause 2
+	appear BRASS_TOWER_ROOF_LIGHTNING_3
+	pause 2
+	disappear BRASS_TOWER_ROOF_LIGHTNING_1
+	pause 2
+	disappear BRASS_TOWER_ROOF_LIGHTNING_2
+	pause 2
+	disappear BRASS_TOWER_ROOF_LIGHTNING_3
+	pause 2
+	playsound SFX_THUNDER
+	waitsfx
+	changeblock 6, 6, $0F ; fire, todo 
+	setevent EVENT_FIRST_LIGHTNING_ROOF
 	applyonemovement BRASS_TOWER_ROOF_MEJIMI, step_down
-	turnobject BRASS_TOWER_ROOF_MEJIMI, LEFT /
+	turnobject BRASS_TOWER_ROOF_MEJIMI, LEFT 
 	showtext TowerRoofMejimiText1_9
 	applymovement BRASS_TOWER_ROOF_LUGIA, BrassTowerLugiaFleesMovement ; todo 
 	showemote EMOTE_SHOCK, BRASS_TOWER_ROOF_MEJIMI, 10
+; another lightning bolt, 	moveobject BRASS_TOWER_ROOF_LIGHTNING_1, 10,  3?
+; changeblock 10, 6, $0F ; fire, todo 	
 	turnobject BRASS_TOWER_ROOF_MEJIMI, RIGHT 
 	showtext TowerRoofMejimiText1_9_2
 	applymovement BRASS_TOWER_ROOF_HOOH, BrassTowerHoOhMovement1 ; todo , go up two spaces 

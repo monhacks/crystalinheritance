@@ -189,7 +189,7 @@
 	const SPRITE_WII ; b9
 	const SPRITE_SILVER_TROPHY ; ba
 	const SPRITE_GOLD_TROPHY ; bb
-	const SPRITE_ELECTRIC_FENCE_LEFT ; bc
+	const SPRITE_LIGHTNING_OVERWORLD ; bc ; replaces electric_fence_left
 	const SPRITE_ELECTRIC_FENCE_RIGHT ; bd
 	const SPRITE_SAILBOAT ; be
 	const SPRITE_ICE_BOULDER ; bf

@@ -222,7 +222,7 @@ GameCubeSpriteGFX::            INCBIN "gfx/sprites/gamecube.2bpp.lz"
 WiiSpriteGFX::                 INCBIN "gfx/sprites/wii.2bpp.lz"
 SilverTrophySpriteGFX::        INCBIN "gfx/sprites/silver_trophy.2bpp.lz"
 GoldTrophySpriteGFX::          INCBIN "gfx/sprites/gold_trophy.2bpp.lz"
-ElectricFenceLeftSpriteGFX::   INCBIN "gfx/sprites/electric_fence_left.2bpp.lz"
+LightningOverworldGFX::   INCBIN "gfx/sprites/lightning_overworld.2bpp.lz"
 ElectricFenceRightSpriteGFX::  INCBIN "gfx/sprites/electric_fence_right.2bpp.lz"
 
 
