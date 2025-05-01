@@ -1,0 +1,69 @@
+I'll analyze this assembly code to explain how the fire animation works. This appears to be Game Boy/Game Boy Color assembly code (likely for a Pokémon game based on the references to "Elite Four Room").
+Overview of Fire Animation System
+This code animates a set of 8 fire tiles that together form a larger fire animation. Each tile cycles through its own sequence of frame tiles to create the animation effect.
+Key Components
+
+TilesetEliteFourRoom2Anim: Animation sequence table that defines what frames to show and which animation function to call
+AnimateFountainTile: The function that updates a specific tile graphic in VRAM
+FireFrames1-8: Defines the VRAM destination and source graphic data for each of the 8 fire tiles
+FireTiles1-8: The actual graphical data for each animation frame
+
+How the Animation Works
+The animation system works as follows:
+
+The game cycles through the TilesetEliteFourRoom2Anim table sequentially
+For each entry in the table that has FireFrames data, it calls AnimateFountainTile
+The AnimateFountainTile function:
+
+Gets the VRAM address from the FireFrames data (where to place the tile)
+Gets the source tile data address from FireFrames
+Uses a timer value (wFountainAnimationTimer) to determine which frame to show
+Copies the tile graphic data to VRAM using WriteTile
+
+
+
+Fire Tile Layout
+The 8 fire tiles are arranged in a pattern in VRAM:
+
+Tiles $0E, $1E, $2E, $3E (first row)
+Tiles $0F, $1F, $2F, $3F (second row)
+
+This would create a 2x4 grid of tiles (16x32 pixels) for the full fire animation.
+Animation Cycles
+Based on the code:
+
+The TilesetEliteFourRoom2Anim table calls all 8 fire tile animations in sequence
+Each tile is updated using AnimateFountainTile
+The wFountainAnimationTimer is used to select which frame to show for each tile
+After all 8 fire tiles are updated, other animation functions are called (LightsAnim1, LightsAnim2, etc.)
+
+Performance Analysis
+It's difficult to give an exact cycle count without seeing the full implementation of functions like WriteTile, but I can make some observations:
+
+The AnimateFountainTile function is called 8 times per full animation cycle (once per fire tile)
+Each call to AnimateFountainTile involves:
+
+Several memory reads to get addresses
+A calculation to determine the frame offset
+Copying 16 bytes (one full tile) from ROM to VRAM via WriteTile
+
+
+
+For the Game Boy/Game Boy Color processor (Z80-like), this would likely take:
+
+~10-20 cycles for setup and addressing
+~5-10 cycles for the timer calculation
+~10-15 cycles for the source address calculation
+~80-160 cycles for the actual tile data transfer (16 bytes)
+
+Total estimate per tile update: ~105-205 cycles
+Total for all 8 tiles: ~840-1640 cycles per full animation frame
+Since each tile can have multiple frames (determined by wFountainAnimationTimer), the full animation would cycle through these frames over time.
+Interesting Technical Details
+
+The code uses a clever technique of manipulating the stack pointer (sp) to efficiently copy tile data, which is a common performance optimization in Game Boy programming.
+Each fire tile can have up to 5 frames of animation, based on the imported .2bpp files.
+The fire animation is part of a larger tileset animation system that also handles fountains and lights.
+The animation timer (wFountainAnimationTimer) is shifted left 4 bits (swap a) to multiply by 16, which is the byte size of one tile in Game Boy graphics.
+
+This is a sophisticated tile animation system designed for the Game Boy's limited hardware capabilities, efficiently animating multiple tiles to create a fluid fire effect.
