@@ -3,6 +3,11 @@ BrassTowerRoof_MapScriptHeader:
 	scene_script BrassTowerRoofScript
 
 	def_callbacks
+; callbacks for right before the noadrinna mejimi battle
+
+; callback for right before the yesadrinna mejimi battle
+; callback for right before the noadrinna kurt battle 
+
 
 	def_warp_events
 	warp_event 9, 5, BRASS_TOWER_4F, 3
@@ -29,6 +34,7 @@ BrassTowerRoof_MapScriptHeader:
 	object_event  7, 4, SPRITE_LIGHTNING_OVERWORLD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LIGHTNING_2
 	object_event  7, 5, SPRITE_LIGHTNING_OVERWORLD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LIGHTNING_3
 
+	object_event  7, 6, SPRITE_MON_ICON, 	SPRITEMOVEDATA_POKEMON, 0, JOLTEON, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_ROOF_JOLTEON
 
 	object_const_def ; IS THIS TOO MANY? 
 	const BRASS_TOWER_ROOF_MEJIMI
@@ -40,7 +46,7 @@ BrassTowerRoof_MapScriptHeader:
 	const BRASS_TOWER_ROOF_LIGHTNING_1
 	const BRASS_TOWER_ROOF_LIGHTNING_2
 	const BRASS_TOWER_ROOF_LIGHTNING_3
-
+	const BRASS_TOWER_ROOF_JOLTEON
 
 	
 BrassTowerRoofScript:
@@ -115,7 +121,7 @@ BrassTowerRoofScript:
 	special FadeOutPalettes
 	waitsfx
 ; 	clearevent TODO 
-	warp TINDER_GARDEN_2, 10, 4
+	warp TIMELESS_TAPESTRY,  9, 26
 	end
 
 BTR_PlayerStepsDownMovement:
@@ -221,4 +227,162 @@ TowerRoofMejimiText1_10:
 	cont "despite all"
 	cont "dangers."
 	done
+
+
+.AcceptedAdrinnaRoofScript:
+	applymovement PLAYER, BTR_PlayerStepsDownMovement
+	appear BRASS_TOWER_ROOF_ADRINNA
+	applymovement BRASS_TOWER_ROOF_ADRINNA, BTR_AdrinnaMove1
+	pause 10
+	turnobject BRASS_TOWER_ROOF_MEJIMI, UP
+	showemote EMOTE_SHOCK, BRASS_TOWER_ROOF_MEJIMI, 10
+	showtext TowerRoofMejimiText1_0
+	appear BRASS_TOWER_ROOF_KURT
+	applymovement BRASS_TOWER_ROOF_KURT, BTR_KurtStepsDownMovement
+	showemote EMOTE_QUESTION, BRASS_TOWER_ROOF_KURT, 10 
+	showtext TowerRoofText2_4
+	turnobject PLAYER, RIGHT
+	showemote EMOTE_BOLT, BRASS_TOWER_ROOF_ADRINNA, ADRINNA, 10
+	showtext TowerRoofText2_5
+	showemote EMOTE_BOLT, BRASS_TOWER_ROOF_MEJIMI, MEJIMI, 10
+	showtext TowerRoofText2_7
+	applyonemovement BRASS_TOWER_ROOF_MEJIMI, step_up
+	setevent EVENT_YES_ADRINNA_BATTLE_MEJIMI 
+; BATTLE MEJIMI 
+	winlosstext TowerRoofMejimiText2_8, 0
+	loadtrainer MEJIMI, 1
+	startbattle
+	ifequal $1, .Continue
+.Continue:
+	reloadmapafterbattle
+	showemote EMOTE_SHOCK, BRASS_TOWER_ROOF_MEJIMI, 10
+	showtext TowerRoofText2_8_1
+	applymovement BRASS_TOWER_ROOF_MEJIMI, BTR_MejimiLeaves
+	disappear BRASS_TOWER_ROOF_MEJIMI
+	applyonemovement BRASS_TOWER_ROOF_HOOH, teleport_from
+	disappear BRASS_TOWER_ROOF_HOOH
+	applyonemovement BRASS_TOWER_ROOF_LUGIA, teleport_from
+	disappear BRASS_TOWER_ROOF_LUGIA
+	pause 10
+	appear BRASS_TOWER_ROOF_JOLTEON
+	; TODO sfx of doors and leaving
+	appear 
+	turnobject PLAYER, RIGHT
+	showtext TowerRoofText2_9
+	applymovement BRASS_TOWER_ROOF_ADRINNA, BTR_AdrinnaMove2
+	showtext TowerRoofText2_10
+	showemote EMOTE_SAD, BRASS_TOWER_ROOF_KURT, 10
+	showtext TowerRoofText2_11
+	turnobject BRASS_TOWER_ROOF_ADRINNA, UP
+	showtext TowerRoofText2_12
+	turnobject BRASS_TOWER_ROOF_KURT, DOWN
+	showtext TowerRoofText2_13
+	special Special_CelebiShrineEvent ; todo check that this is OK 
+	showemote EMOTE_SHOCK, BRASS_TOWER_ROOF_KURT, 10
+	showtext TinTowerRoofText2_Celebi
+	setevent EVENT_YES_ADRINNA_BATTLE_KURT ; TODO CLEAR THESE EVENTS WHEN YOU BATTLE BOBESH THE FIRST TIME 
+; BATTLE MEJIMI 
+	winlosstext TowerRoofText2_16, 0
+	loadtrainer KURT, KURT13
+	startbattle
+	ifequal $1, .Continue
+.Continue:
+	reloadmapafterbattle
+	turnobject BRASS_TOWER_ROOF_KURT, UP
+	showtext TowerRoofText2_16_2
+	applymovement BRASS_TOWER_ROOF_KURT, BTR_Kurt_Leaves
+	disappear BRASS_TOWER_ROOF_KURT
+	pause 10
+	appear BRASS_TOWER_ROOF_LIGHTNING_1
+	pause 2
+	appear BRASS_TOWER_ROOF_LIGHTNING_2
+	pause 2
+	appear BRASS_TOWER_ROOF_LIGHTNING_3
+	pause 2
+	disappear BRASS_TOWER_ROOF_LIGHTNING_1
+	pause 2
+	disappear BRASS_TOWER_ROOF_LIGHTNING_2
+	pause 2
+	disappear BRASS_TOWER_ROOF_LIGHTNING_3
+	pause 2
+	playsound SFX_THUNDER
+	waitsfx
+	showemote EMOTE_SHOCK, BRASS_TOWER_ROOF_JOLTEON, 10
+	showtext TowerRoofText2_18
+	applymovement PLAYER, BTR_PlayerToFrontMovement
+	pause 30
+	warp TINDER_GARDEN, 3, 3
+	end
 	
+TowerRoofMejimiText1_0: Mejimi: Hm? Adrinna, what are you doing with this child? 
+
+TowerRoofText2_4: Kurt: <PLAYER>, what’s going on?
+
+TowerRoofText2_5: Adrinna: <PLAYER> is done with your traditions. You either embrace progress or get trampled.
+
+TowerRoofText2_7: Mejimi: Traitor! I’ll start by wrecking you, <PLAYER>!”
+
+
+TowerRoofText2_8: Mejimi: My #mon… How could they be defeated?
+TowerRoofText2_8_1: Mejimi: Impossible. I must convene with the sages. 
+
+TowerRoofText2_9: Kurt: <PLAYER>, is this who you are?
+
+TowerRoofText2_10: Adrinna: Johto! Anyone can rise to the level of the emperor, with the right attitude! See <PLAYER>, from a no-name town. It’s time to let the energy out from every one of you. This is how we repel the outsiders. 
+
+TowerRoofText2_11: “Kurt: No! <PLAYER>, I was misguided. I wanted the future to look like my past. But I didn’t realize that traditions serve us, not the other way around. If I had listened to <RIVAL> earlier, might we have saved more of our forest? Made it possible to live there?
+
+TowerRoofText2_12: Adrinna: <PLAYER>, show him how you feel. 
+
+TowerRoofText2_13: Kurt: I don’t want to hurt you. But I will fight for my home!
+
+TinTowerRoofText2_Celebi: Humans are not above or below nature - you are nature. Just as the forest needs both growth and decay, society needs both tradition and innovation. I tried to show you that all generations are part of an endless cycle - but only Rosin and Kurt realize this. You failed me, <PLAYER>.
+
+TowerRoofText2_16: Kurt: So this is the end…
+
+TowerRoofText2_16_2: Kurt: I... I don't know where I go from here. First my only son, then my only home, and now my only grandchild. Goodbye, <PLAYER>. I know that deep down, there's a good person trying to do the right thing. I can't help you any more.
+
+TowerRoofText2_18: Adrinna: Thank you, Indrage. Player, it’s time to let the strong rise to the top. 
+<warp to tinder garden>
+
+
+BTR_AdrinnaMove1:
+	step_down
+	step_left
+	step_down
+	step_end
+
+BTR_KurtStepsDownMovement
+	step_down
+	step_right
+	step_down
+	turn_head_left
+	step_end
+	
+BTR_MejimiLeaves:
+	step_left
+	step_left
+	step_up
+	step_up
+	step_up
+	step_right
+	step_right
+	step_end
+
+BTR_AdrinnaMove2:
+	step_down
+	step_right
+	step_down
+	step_end
+
+BTR_Kurt_Leaves:
+	step_up
+	step_up
+	step_left
+	step_end
+
+BTR_PlayerToFrontMovement:
+	step_down
+	step_left
+	step_down
+	step_end

@@ -54,7 +54,8 @@ TapestryAmos:
 
 
 TapestrySceneFinale: ; if you helped all the kimono girls then piper gets to come with too 
-	;cf western capital scene 
+	;cf western capital scene ; TODO REVISE 
+	disappear PLAYER
 	special Special_FadeBlackQuickly
 	special Special_ReloadSpritesNoPalettes
 	special Special_FadeInQuickly
@@ -67,7 +68,7 @@ TapestrySceneFinale: ; if you helped all the kimono girls then piper gets to com
 	turnobject TAPESTRY_SAMSARA, UP
 	applyonemovement TAPESTRY_SAMSARA, step_up
 	disappear TAPESTRY_SAMSARA
-	halloffame
+	warp TINDER_GARDEN_2, 10, 4 
 	end
 
 TapestryTextAmos:

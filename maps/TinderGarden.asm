@@ -17,13 +17,14 @@ TinderGarden_MapScriptHeader: ;todo something weird happens when I stand to the 
 	coord_event  5, 14, 1, TinderGardenTryToLeaveScript
 	coord_event  4, 14, 3, TinderGardenRivalBattleScript1
 	coord_event  5, 14, 3, TinderGardenRivalBattleScript2	;add text for the tree
-	coord_event  0, 0, 4, TinderGardernWatchTheLoggersScript
+	coord_event  3, 3, 4, TinderGardernWatchTheLoggersScript
 
 	def_bg_events
 	bg_event  4,  8, BGEVENT_JUMPTEXT, TGTreeText
 	bg_event  4,  9, BGEVENT_JUMPTEXT, TGTreeText
 	bg_event  5,  8, BGEVENT_JUMPTEXT, TGTreeText
 	bg_event  5,  9, BGEVENT_JUMPTEXT, TGTreeText	
+	bg_event  0, 16, BGEVENT_JUMPTEXT, LittleGiddingText
 	
 	def_object_events
 	object_event  4, 10, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TGKurtScript, EVENT_KURT_HEARS_LOGGERS ;todo add kurtscript in this 
@@ -966,6 +967,7 @@ CelebiScript:
 	
 TinderGardernWatchTheLoggersScript:
 ;cf western capital scene 
+	disappear PLAYER
 	special Special_FadeBlackQuickly
 	special Special_ReloadSpritesNoPalettes
 	special Special_FadeInQuickly
@@ -1026,4 +1028,19 @@ GardenEngineerText4:
 	line "kid who toppled"
 	cont "the emperor in"
 	cont "the Burned Tower."
+	done
+
+
+LittleGiddingText:
+	text "We shalln't cease"
+	line "from exploration,"
+	
+	para "And the end of"
+	line "our exploring,"
+	
+	para "Will be to arrive"
+	line "where we started,"
+	
+	para "And know it as if"
+	line "for the 1st time."
 	done

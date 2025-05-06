@@ -1027,30 +1027,30 @@ wUndergroundSwitchPositions:: db
 wFarfetchdPosition:: db
 
 ; map triggers
-wAlways0SceneID:: db
-wAzaleaTownSceneID:: db
+wAlways0SceneID:: db ; used 
+wAzaleaTownSceneID:: db ; used 
 wStadiumGroundsSceneID:: db ; formerly wbattlefacilitysceneid
 	ds 3 ; unused
-wAnarresHoltGateSceneID:: db
-wBellchimeTrailSceneID:: db
-wCharcoalKilnSceneID:: db
-wBurnedTower1FSceneID:: db
+wAnarresHoltGateSceneID:: db ; used 
+wBellchimeTrailSceneID:: db ; used 
+wCharcoalKilnSceneID:: db ; used 
+wBurnedTower1FSceneID:: db 
 wBurnedTowerB1FSceneID:: db
-wTinderGardenSceneID:: db
-wAnarresTower3FSceneID:: db
-wAzaleaPokecenter1FSceneID:: db 
-wHollysHoltSceneID:: db
-wCianwoodCitySceneID:: db 
-wMistyBasinSceneID:: db
-wColosseumSceneID:: db 
-wAnarresHouseSceneID:: db
-wDayCareSceneID:: db
-wDragonsDenB1FSceneID:: db
-wDragonShrineSceneID:: db
+wTinderGardenSceneID:: db ; used 
+wAnarresTower3FSceneID:: db ; used 
+wAzaleaPokecenter1FSceneID:: db  ; used 
+wHollysHoltSceneID:: db ; used 
+wCianwoodCitySceneID:: db  ; used? 
+wMistyBasinSceneID:: db ; used 
+wColosseumSceneID:: db  ; used?
+wAnarresHouseSceneID:: db ; used 
+wDayCareSceneID:: db ; ; used 
+wDragonsDenB1FSceneID:: db ; used?
+wTimelessTapestrySceneID:: db  ; dragon shrine 
 wEcruteakGymSceneID:: db
 wEcruteakHouseSceneID:: db
 wEcruteakPokecenter1FSceneID:: db
-wElmsLabSceneID:: db
+wTinTowerOld3FSceneID:: db ; elms lab 
 wFarawayIslandSceneID:: db
 wFastShip1FSceneID:: db
 wFastShipB1FSceneID:: db
@@ -1058,9 +1058,9 @@ wGiovannisCaveSceneID:: db
 wGoldenrodCitySceneID:: db
 wGoldenrodGymSceneID:: db
 wGoldenrodMuseum1FSceneID:: db
-wHallOfFameSceneID:: db
-wIlexForestSceneID:: db
-wKarensRoomSceneID:: db
+wHallOfFameSceneID:: db ; probably used?
+wIlexForestSceneID:: db ; used 
+wLakeOfRageSceneID:: ; wKarensRoomSceneID:: db
 wKogasRoomSceneID:: db
 wKurtsHouseSceneID:: db ;changed from playershouse
 wLancesRoomSceneID:: db
@@ -1071,7 +1071,7 @@ wMountMoon1FSceneID:: db
 wMrPokemonsHouseSceneID:: db
 wMystriStageSceneID:: db
 wNewBarkTownSceneID:: db
-wOlivineCitySceneID:: db
+wOlivineCitySceneID:: db ; used 
 wOlivinePortSceneID:: db
 wPokecenter2FSceneID:: db
 wPokemonLeagueGateSceneID:: db
@@ -1081,16 +1081,16 @@ wRoute10NorthSceneID:: db
 wRoute23SceneID:: db
 wRoute24SceneID:: db
 wRoute27SceneID:: db
-wRoute29SceneID:: db
-wRoute32SceneID:: db
-wRoute34SceneID:: db
+wTranquilTarnSceneID:: db ; route 29 
+wTinTowerOld3FSceneID:: db ; route 32 
+wShimmerSaddleSceneID:: db ; route 34
 wRoute35NationalParkGateSceneID:: db
 wRoute36NationalParkGateSceneID:: db
-wRoute36SceneID:: db
-wRoute42SceneID:: db
+wRoute43SceneID:: db ; route 36
+wRoute40SceneID:: db ; route 42 
 wRoute43GateSceneID:: db
-wRoute47SceneID:: db
-wRoute48SceneID:: db
+wOlivineLighthouse6F:: db ; route 47
+wOlivineLighthouse1F:: db ; wRoute48SceneID:: db
 wRuinsOfAlphAerodactylChamberSceneID:: db
 wRuinsOfAlphHoOhChamberSceneID:: db
 wRuinsOfAlphInnerChamberSceneID:: db
@@ -1101,17 +1101,17 @@ wRuinsOfAlphResearchCenterSceneID:: db
 wHoltCoastGateSceneID:: db ; wSeagallopFerryNavelGateSceneID:: db
 wRoute35GoldenrodGateSceneID:: db ; wSeagallopFerryShamoutiGateSceneID:: db
 wSeagallopFerryVermilionGateSceneID:: db
-wShamoutiHotelRestaurantSceneID:: db
-wSproutTower3FSceneID:: db
+wLandingDocksSceneID:: db ; wShamoutiHotelRestaurantSceneID:: db
+wSproutTower3FSceneID:: db ; maybe used? 
 wTeamRocketBaseB2FSceneID:: db
-wTeamRocketBaseB3FSceneID:: db
+wGrottoedGlacierB2FSceneID:: db ; wTeamRocketBaseB3FSceneID:: db ; 
 wTinTower1FSceneID:: db
 wTradeCenterSceneID:: db
 wUndergroundPathSwitchRoomEntrancesSceneID:: db
 wEmperorsGardenSceneID:: db ; vermillion city 
 wTinTowerOld3FSceneID:: db ; vermillion port
 wWesternCapitalSceneID:: db ; wVictoryRoad2FSceneID:: db
-wVioletGymSceneID:: db
+wClastsCradleB1FSceneID:: db ; wVioletGym
 wGauldenrodSceneID:: db ; willsroomsceneid
 wUnusedYetSceneID:: db ; wisetrios
 wRadioTower1FSceneID:: db ; yellowforest sceneid ; sceneids should only go through 1117 line. TODO 
