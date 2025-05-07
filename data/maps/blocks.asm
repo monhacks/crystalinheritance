@@ -459,14 +459,6 @@ SECTION "OlivineLighthouse3F_BlockData", ROMX
 OlivineLighthouse3F_BlockData:
 	INCBIN "maps/OlivineLighthouse3F.ablk.lz"
 
-SECTION "OlivineLighthouse4F_BlockData", ROMX
-OlivineLighthouse4F_BlockData:
-	INCBIN "maps/OlivineLighthouse4F.ablk.lz"
-
-SECTION "OlivineLighthouse5F_BlockData", ROMX
-OlivineLighthouse5F_BlockData:
-	INCBIN "maps/OlivineLighthouse5F.ablk.lz"
-
 SECTION "OlivineLighthouse6F_BlockData", ROMX
 OlivineLighthouse6F_BlockData:
 	INCBIN "maps/OlivineLighthouse6F.ablk.lz"

@@ -97,7 +97,7 @@ KurtOlivineScript:
 	writetext KurtOlivineText
 	yesorno
 	iffalse_jumpopenedtext KurtOlivineText3
-	winlosstext WCKurtBattleText, WCKurtBattleText
+	winlosstext OlivineKurtBattleText, OlivineKurtBattleText
 	loadtrainer KURT, KURT8
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
@@ -137,7 +137,7 @@ KurtOlivineText3:
 	cont "party."
 	done
 
-WCKurtBattleText:
+OlivineKurtBattleText:
 	text "Rocked!"
 	done
 

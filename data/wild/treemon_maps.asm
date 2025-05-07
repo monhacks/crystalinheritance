@@ -39,7 +39,7 @@ TreeMonMaps:
 	treemon_map SINJOH_CROSSROADS, 5
 	treemon_map EMPIRES_EXTENT, 5 
 	treemon_map SULFUR_STY, 3
-	treemon_man SHIMMER_SADDLE, 1
+	treemon_map SHIMMER_SADDLE, 1
 	db -1
 
 RockMonMaps:

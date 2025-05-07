@@ -28,7 +28,7 @@ BrassTower18F_MapScriptHeader:
 	const BRASS_TOWER_JOLTEON
 
 GenericTrainerElderYoshi:
-    generictrainer ELDER, YOSHI, EVENT_BEAT_ELDER_YOSHI, YoshiSeenText, YoshiBeatenText
+    generictrainer ELDER, YOSHI_SAGE, EVENT_BEAT_ELDER_YOSHI, YoshiSeenText, YoshiBeatenText
 
 YoshiBeatenText:
 	text "But who does he"

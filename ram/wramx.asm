@@ -1050,7 +1050,7 @@ wTimelessTapestrySceneID:: db  ; dragon shrine
 wEcruteakGymSceneID:: db
 wEcruteakHouseSceneID:: db
 wEcruteakPokecenter1FSceneID:: db
-wTinTowerOld3FSceneID:: db ; elms lab 
+wTinTowerOld1FSceneID:: db ; UNUSED: NOT NEEDED 
 wFarawayIslandSceneID:: db
 wFastShip1FSceneID:: db
 wFastShipB1FSceneID:: db
@@ -1082,7 +1082,7 @@ wRoute23SceneID:: db
 wRoute24SceneID:: db
 wRoute27SceneID:: db
 wTranquilTarnSceneID:: db ; route 29 
-wTinTowerOld3FSceneID:: db ; route 32 
+wTinTowerOld2FSceneID:: db ; UNUSED 
 wShimmerSaddleSceneID:: db ; route 34
 wRoute35NationalParkGateSceneID:: db
 wRoute36NationalParkGateSceneID:: db

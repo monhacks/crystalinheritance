@@ -82,7 +82,7 @@ Brigader2Text1:
 SinjohNinjaText:
 	text "Shh..."
 	
-	para "I'm watching the
+	para "I'm watching the"
 	line "brigaders."
 	done
 

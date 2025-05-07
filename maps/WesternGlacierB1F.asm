@@ -1,4 +1,4 @@
-WesternGlacierB1F_MapScriptHeader: 
+WesternGlacierB1F_MapScriptHeader:  ;hint: only the bottom and the left boulders need to be moved 
 	def_scene_scripts
 
 
@@ -26,6 +26,3 @@ WesternGlacierB1F_MapScriptHeader:
 
 
 	object_const_def
-
-
-;hint: only the bottom and the left boulders need to be moved 

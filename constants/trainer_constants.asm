@@ -623,7 +623,7 @@ KRIS EQU __trainer_class__
 	const AKIRA ; BRIGHT electric 
 	const TADAO ; LOYAL ground 
 	const SATORU ; WISE psychic 
-	const YOSHI ; VIRTUOUS 
+	const YOSHI_SAGE ; VIRTUOUS 
 
 
 	trainerclass SR_AND_JR ; 43

@@ -469,7 +469,7 @@ ThirstyCamperIntroText:
 	cont "got me thirsty."
 	done
 
-Text_LemonadeQuestion"
+Text_LemonadeQuestion:
 	text "Hey, you wouldn't"
 	line "happen to have a"
 	cont "Lemonade, would"

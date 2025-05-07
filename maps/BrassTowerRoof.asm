@@ -314,38 +314,6 @@ TowerRoofMejimiText1_10:
 	warp TINDER_GARDEN, 3, 3
 	end
 	
-TowerRoofMejimiText1_0: Mejimi: Hm? Adrinna, what are you doing with this child? 
-
-TowerRoofText2_4: Kurt: <PLAYER>, what’s going on?
-
-TowerRoofText2_5: Adrinna: <PLAYER> is done with your traditions. You either embrace progress or get trampled.
-
-TowerRoofText2_7: Mejimi: Traitor! I’ll start by wrecking you, <PLAYER>!”
-
-
-TowerRoofText2_8: Mejimi: My #mon… How could they be defeated?
-TowerRoofText2_8_1: Mejimi: Impossible. I must convene with the sages. 
-
-TowerRoofText2_9: Kurt: <PLAYER>, is this who you are?
-
-TowerRoofText2_10: Adrinna: Johto! Anyone can rise to the level of the emperor, with the right attitude! See <PLAYER>, from a no-name town. It’s time to let the energy out from every one of you. This is how we repel the outsiders. 
-
-TowerRoofText2_11: “Kurt: No! <PLAYER>, I was misguided. I wanted the future to look like my past. But I didn’t realize that traditions serve us, not the other way around. If I had listened to <RIVAL> earlier, might we have saved more of our forest? Made it possible to live there?
-
-TowerRoofText2_12: Adrinna: <PLAYER>, show him how you feel. 
-
-TowerRoofText2_13: Kurt: I don’t want to hurt you. But I will fight for my home!
-
-TinTowerRoofText2_Celebi: Humans are not above or below nature - you are nature. Just as the forest needs both growth and decay, society needs both tradition and innovation. I tried to show you that all generations are part of an endless cycle - but only Rosin and Kurt realize this. You failed me, <PLAYER>.
-
-TowerRoofText2_16: Kurt: So this is the end…
-
-TowerRoofText2_16_2: Kurt: I... I don't know where I go from here. First my only son, then my only home, and now my only grandchild. Goodbye, <PLAYER>. I know that deep down, there's a good person trying to do the right thing. I can't help you any more.
-
-TowerRoofText2_18: Adrinna: Thank you, Indrage. Player, it’s time to let the strong rise to the top. 
-<warp to tinder garden>
-
-
 BTR_AdrinnaMove1:
 	step_down
 	step_left
