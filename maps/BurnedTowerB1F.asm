@@ -1,4 +1,4 @@
-BurnedTowerB1F_MapScriptHeader: ; this map is not used 
+BurnedTowerB1F_MapScriptHeader: ; this map is not used but is needed for some harder coded stuff. so try not to mess with it 
 	def_scene_scripts
 
 	def_callbacks
@@ -21,8 +21,7 @@ BurnedTowerB1F_MapScriptHeader: ; this map is not used
 	object_event 12,  3, SPRITE_MON_ICON, SPRITEMOVEDATA_STILL, 0, ENTEI, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BURNED_TOWER_B1F_BEASTS_2
 	object_event 10,  4, SPRITE_MON_ICON, SPRITEMOVEDATA_STILL, 0, SUICUNE, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BURNED_TOWER_B1F_BEASTS_2
 	object_event 10, 12, SPRITE_EUSINE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BurnedTowerB1FEusine, EVENT_EUSINE_IN_BURNED_TOWER
-	strengthboulder_event 17, 8
-	tmhmball_event 16,  4, TM_FLAME_CHARGE, EVENT_BURNED_TOWER_B1F_TM_FLAME_CHARGE
+
 
 	object_const_def
 	const BURNEDTOWERB1F_RAIKOU1

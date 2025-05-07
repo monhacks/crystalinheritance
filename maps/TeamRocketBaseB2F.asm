@@ -4,11 +4,6 @@ TeamRocketBaseB2F_MapScriptHeader:
 	def_callbacks
 
 	def_warp_events
-	warp_event  3, 14, TEAM_ROCKET_BASE_B1F, 2
-	warp_event  3,  2, TEAM_ROCKET_BASE_B3F, 1
-	warp_event 27,  2, TEAM_ROCKET_BASE_B3F, 2
-	warp_event  3,  6, TEAM_ROCKET_BASE_B3F, 3
-	warp_event 27, 14, TEAM_ROCKET_BASE_B3F, 4
 
 	def_coord_events
 
@@ -17,6 +12,6 @@ TeamRocketBaseB2F_MapScriptHeader:
 
 
 	def_object_events
-	itemball_event  3, 10, HYPER_POTION, 1, EVENT_TEAM_ROCKET_BASE_B2F_HYPER_POTION
+
 
 	object_const_def
