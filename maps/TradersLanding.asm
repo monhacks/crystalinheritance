@@ -122,36 +122,94 @@ TL_Scene_Part_1_Script:
 	end
 
 TL_Text1:
-Kensey: You must get your navigators to help! We have promised the outsiders safe port. 
+	text "Kensey: You must"
+	line "get your sailors"
+	cont "to help!"
+
+	para "We promised the"
+	line "outsiders a port."
+	done
 
 TL_Text2:
-Barbeau: How can I force them? They refuse. We know that the guardian of the sea protects us. 
+	text "Barbeau: How?"
+	line "They refuse."
+
+	para "The guardian of"
+	line "the sea protects"
+	cont "us."
+	done
 
 TL_Text3:
-Kensey: You’re being difficult. Yes, Lugia is the guardian of the sea, but she also serves the emperor. You don’t understand what’s at stake. 
+	text "Kensey: Urgh!"
+	line "Yes, Lugia is the"
+	para "guardian of the"
+	line "sea, but she also"	
+	cont "serves Mejimi."
+
+	para "Do you know what"
+	line "is at stake?"
+	done
 
 TL_Text4:
-Barbeau: I know we’re caught between the emperor’s heel and the outsiders’ cannons. When the time comes, I have faith she will choose us over the emperor.
+	text "Barbeau: We're "
+	line "between your heel"
+	cont "and their cannon."
+
+	para "I have faith she"
+	line "will choose us."
+	done
 
 TL_Text5:
-Kensey: Ugh! If the ships don’t make passage, the outsiders will see it as an act of war! All of Johto depends on you. Get to it. 
-Kensey leaves
+	text "Kensey: Ugh! If"
+	line "the ships don't"
+	cont "make passage,"
+	
+	para "the outsiders"
+	line "will see it as an"
+	cont "act of war!"
+	
+	para "Johto depends on"
+	line "you. Get to it."
+	done
 
 TL_Text6:
-Barbeau: (sighs) … Father, what would you do?
+	text "Barbeau: (sighs)"
+	line "Guide me, mother."
+	done
+	
 
-Kurt appears
 TL_Text7:
-Kurt: Excuse me! Are you the elder here? We are trying to oppose the emperor's import of steel, and we may be able to help you. 
+	text "Kurt: Excuse me!"
+	line "Are you the elder"
+	para "here? We need to"
+	line "stop the imports,"
+	para "and we may be"
+	line "able to help you."
+	done
 
 TL_Text8:
-Barbeau: Hush! You'll get me in trouble. If you are serious, meet me by the shrine at the west of town. 
+	text "Barbeau: Hush!"
+	line "If you're serious"
+	para "then meet me by "
+	line "the shrine."
+	done
 
 TL_Text9:
-Kurt: PLAYER. Lugia in this timeline is with the emperor. But with your silver wing, we could go to our time and bring her here to wreck the emperor's port. Let's see if Barbeau will help us out. 
-
-
-
+	text "Kurt: <PLAYER>:"
+	line "Lugia in this "
+	para "timeline is with"
+	line "the emperor."
+	
+	para "But with your "
+	line "silver wing,"
+	para "we can go to our"
+	line "time and bring"
+	cont "her here to save"
+	para "the Landing."
+	
+	para "Let's see if Bar-"
+	line "beau can help."
+	done
 
 TL_Scene_2_L:
 	applyonemovement PLAYER, step_right
@@ -312,7 +370,7 @@ LandingEggScript: ;cf the cafe script
 	yesorno
 	iffalse_jumpopenedtext NoMoneyText
 	checkmoney $0, 10000
-	ifequal $2, jumpopenedtext NoMoneyText
+	ifequal $2, .NoMoney 
 	promptbutton
 	giveegg H__SLIGGOO
 	iffalse_jumpopenedtext NoRoomText
@@ -325,6 +383,8 @@ LandingEggScript: ;cf the cafe script
 	closetext
 	end
 
+.NoMoney:
+	jumpopenedtext NoMoneyText
 
 GivingHSliggooEggText:
 	text "Hey, you my"

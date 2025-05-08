@@ -34,8 +34,8 @@ Route39_MapScriptHeader:
 	object_event  9,  7, SPRITE_TAMER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerTamerOswald, -1
 
 	object_const_def
-	ROUTE_39_MILTANK 
-	ROUTE_39_SUICUNE
+	const ROUTE_39_MILTANK 
+	const ROUTE_39_SUICUNE
 
 Route39SignText:
 	text "Route 39"
@@ -116,7 +116,7 @@ CowgirlThanksPlayerText:
 	line "these as thanks."
 	done
 
-CowgirlBattlesPlayer:
+CowgirlBattlesPlayer: ; todo 
 	showtext CowgirlBattlesPlayerText
 	winlosstext __, __
 	loadtrainer COWGIRL, ??
@@ -159,7 +159,7 @@ Route39MiltankScript:
 	yesorno
 	iffalse_jumptext NoSpookMiltankText
 	applymovement ROUTE_39_MILTANK, MiltankMovement4 ; THREE LEFT
-	applymovment PLAYER, PlayerFollowMiltank ; THREE left
+	applymovement PLAYER, PlayerFollowMiltank ; THREE left
 	applymovement ROUTE_39_MILTANK, MiltankMovement4 ; THREE LEFT
 	applymovment PLAYER, PlayerFollowMiltank ; THREE left
 	applymovement ROUTE_39_MILTANK, MiltankMovement4 ; THREE LEFT

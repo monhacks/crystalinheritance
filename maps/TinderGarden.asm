@@ -971,7 +971,7 @@ TinderGardernWatchTheLoggersScript:
 	special Special_FadeBlackQuickly
 	special Special_ReloadSpritesNoPalettes
 	special Special_FadeInQuickly
-	applyemote EMOTE_QUESTION, TINDER_GARDEN_ENGINEER_1, 10
+	showemote EMOTE_QUESTION, TINDER_GARDEN_ENGINEER_1, 10
 	showtext GardenEngineerText1
 	pause 10
 	showemote EMOTE_BOLT, TINDER_GARDEN_ENGINEER_2, 10

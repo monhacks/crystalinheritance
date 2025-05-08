@@ -333,11 +333,11 @@ KRIS EQU __trainer_class__
 	const DERRICK
 	const FLOYD
 
-	trainerclass BRIGADER ; 94 replaces gruntm
+	trainerclass BRIGADER
 
-	trainerclass GRUNTF ; 28
+	trainerclass GRUNTF
 
-	trainerclass POKEFANM ; 29
+	trainerclass POKEFANM
 	const DEREK1
 	const DEREK2
 	const DEREK3
@@ -890,6 +890,8 @@ KRIS EQU __trainer_class__
 	const HEATHER
 	const HOLLY
 	const PEONY
+	const ROSA
+
 
 	trainerclass WAITER ; 60
 

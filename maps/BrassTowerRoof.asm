@@ -156,7 +156,7 @@ TowerRoofMejimiText1_1:
 	line "generals fail me?"
 	done
 
-TowerRoofMejimiText1_4
+TowerRoofMejimiText1_4:
 	text "Kurt: we are all"
 	line "part of nature."
 	para "When you set"
@@ -238,7 +238,7 @@ TowerRoofMejimiText1_10:
 	showemote EMOTE_SHOCK, BRASS_TOWER_ROOF_MEJIMI, 10
 	showtext TowerRoofMejimiText1_0
 	appear BRASS_TOWER_ROOF_KURT
-	applymovement BRASS_TOWER_ROOF_KURT, BTR_KurtStepsDownMovement
+	applymovement BRASS_TOWER_ROOF_KURT, BTR_KurtStepsDownMovement2
 	showemote EMOTE_QUESTION, BRASS_TOWER_ROOF_KURT, 10 
 	showtext TowerRoofText2_4
 	turnobject PLAYER, RIGHT
@@ -266,7 +266,6 @@ TowerRoofMejimiText1_10:
 	pause 10
 	appear BRASS_TOWER_ROOF_JOLTEON
 	; TODO sfx of doors and leaving
-	appear 
 	turnobject PLAYER, RIGHT
 	showtext TowerRoofText2_9
 	applymovement BRASS_TOWER_ROOF_ADRINNA, BTR_AdrinnaMove2
@@ -285,8 +284,8 @@ TowerRoofMejimiText1_10:
 	winlosstext TowerRoofText2_16, 0
 	loadtrainer KURT, KURT13
 	startbattle
-	ifequal $1, .Continue
-.Continue:
+	ifequal $1, .Continue2
+.Continue2:
 	reloadmapafterbattle
 	turnobject BRASS_TOWER_ROOF_KURT, UP
 	showtext TowerRoofText2_16_2
@@ -320,7 +319,7 @@ BTR_AdrinnaMove1:
 	step_down
 	step_end
 
-BTR_KurtStepsDownMovement
+BTR_KurtStepsDownMovement2:
 	step_down
 	step_right
 	step_down

@@ -316,7 +316,7 @@ Brigader9BeatenText:
 	cont "going back…"
 	done
 
-GenericTrainerBrigader10:
+GenericTrainerBrigader10: ; manolete, tauros 
 	generictrainer BRIGADER, 10, EVENT_BEAT_ROCKET_GRUNTM_10, Brigader10SeenText, Brigader10BeatenText
 
 	text "We find really"

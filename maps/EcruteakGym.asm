@@ -88,12 +88,12 @@ RebeccaSeenText:
 GenericTrainerMediumDoris:
 	generictrainer MEDIUM, DORIS, EVENT_BEAT_MEDIUM_DORIS, DorisSeenText, DorisBeatenText
 
-RebeccaBeatenText:
+DorisBeatenText:
 	text "It surrounds us"
 	line "all!"
 	done
 
-RebeccaSeenText:
+DorisSeenText:
 	text "Can you feel the"
 	line "sublime?"
 	done

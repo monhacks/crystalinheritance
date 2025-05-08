@@ -17,7 +17,7 @@ SeafluxNexusB3F_MapScriptHeader:
 
 
 	object_const_def
-	NEXUSB3F_LUGIA
+	const NEXUSB3F_LUGIA
 	
 	
 Lugia:

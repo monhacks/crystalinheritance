@@ -69,10 +69,10 @@ GrottoedGlacierB1FScene0:
 	appear GLACIER_B2F_BASCULEGION_ALIVE
 	pause 10
 	showemote EMOTE_BOLT, GLACIER_B2F_BASCULEGION_ALIVE, 10
-	applymovement GlacierBasc_Move1
+	applymovement GLACIER_B2F_BASCULEGION_ALIVE, GlacierBasc_Move1
 	applyonemovement GLACIER_B2F_ADRINNA, step_right
 	turnobject GLACIER_B2F_ADRINNA, LEFT
-	applymovement GlacierBasc_Move2
+	applymovement GLACIER_B2F_BASCULEGION_ALIVE, GlacierBasc_Move2
 	showtext BasculegionText
 	loadvar VAR_BATTLETYPE, BATTLETYPE_TRAP
 	loadwildmon TOXICROAK, 20
@@ -88,7 +88,7 @@ GrottoedGlacierB1FScene1:
 	showtext GlacierB2F_Text5
 	showemote EMOTE_QUESTION, GLACIER_B2F_KANNA, 10 
 	showtext GlacierB2F_Text6
-	showemote EMOTE_BOLT GLACIER_B2F_KANNA, 10 	
+	showemote EMOTE_BOLT, GLACIER_B2F_KANNA, 10 	
 	showtext GlacierB2F_Text7
 	special HealParty
 	winlosstext KannaWinText, 0
@@ -107,7 +107,7 @@ GrottoedGlacierB1FScene1:
 	writetext KannaTellAmosText	
 	closetext
 	earthquake 100
-	showemote EMOTE_SHOCK, GLACIER_B2F_KANNA
+	showemote EMOTE_SHOCK, GLACIER_B2F_KANNA, 10 
 	opentext 
 	writetext GlacierB2F_Text8
 	waitbutton
@@ -210,12 +210,6 @@ Text_ReceivedKannaBadge:
 	para "the Legacy Badge,"
 	line "and this HM."
 	done
-
-KannaTellAmosText:
-	text "I'll be telling"
-	line "the Johto elders"
-	para "about <PLAYER>."
-	Done
 
 GlacierB2F_Text8:
 	text "Kanna: What's"

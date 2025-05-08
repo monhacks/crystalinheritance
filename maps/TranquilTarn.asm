@@ -28,7 +28,7 @@ TranquilTarn_MapScriptHeader:
 	object_event  18,  19, SPRITE_RUIN_MANIAC, 	SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerRuinManiacLeland, EVENT_BEAT_KANNA
 	object_event  26,  25, SPRITE_BUG_MANIAC, 	SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBugManiacRob, EVENT_BEAT_KANNA
 	object_event 20, 6, SPRITE_AROMA_LADY, 	SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TranquilTarnNPC1Script, EVENT_BEAT_KANNA
-	object_event 11, 10, SPRITE_BLACKBELT, 	SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, TranquilTarnNPC2Text, 
+	object_event 11, 10, SPRITE_BLACKBELT, 	SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, TranquilTarnNPC2Text, EVENT_BEAT_KANNA
 	object_event 23, 10, SPRITE_BRIGADER, 	SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, TranquilTarnBrigaderScript, -1	
 	pokemon_event  24, 10, GYARADOS, -1, -1, PAL_NPC_BLUE, GyaradosText, EVENT_BEAT_KANNA
 	fruittree_event 17, 26, FRUITTREE_TRANQIL_TARN_1, TOUGH_LEAVES, PAL_NPC_GREEN;OK
@@ -148,7 +148,7 @@ TarnBrigaderText2:
 	cont "brigade!"
 	
 	para "And now, a great"
-	like "Lake to raise up"
+	line "Lake to raise up"
 	cont "Gyarados."
 	done
 
@@ -187,12 +187,10 @@ TranquilTarnNPC2Text:
 	done
 
 GyaradosText:
-	text: "Gayash!"
+	text "Gayash!"
 	done
 
-
-
-TranquilTarnDestructionScene:	; c.f. western capital 
+TranquilTarnDestructionScene:	; c.f. western capital  -- probably will cut, but leaving here in case I want to do it 
 	special Special_FadeBlackQuickly
 	special Special_ReloadSpritesNoPalettes
 	disappear PLAYER

@@ -48,15 +48,11 @@ GladThatsOverText:
 	line "Lugia perished in"
 	cont "the sea?"
 	
-	para "Then... who will"
-	line "guard us on our"
-	cont "treks?"
-	
 	para "How will we"
 	line "find our way?"
 	done
 	
-LandingTavernNomad1:
+LandingTavernNomad2:
 	faceplayer
 	checkevent EVENT_BEAT_KENSEY_PORT
 	iftrue_jumpopenedtext TavernGladThatsOverText2
@@ -64,10 +60,10 @@ LandingTavernNomad1:
 	
 	text "Barbeau thinks"
 	line "he can strong-"
-	cont "arm us into"
-	para "helping guide the"
-	line "barbarian ships"
-	cont "into port."
+	para "arm us into"
+	line "helping guide the"
+	para "barbarian ships"
+	line "into port."
 	
 	para "Never! We're on"
 	line "strike!"
@@ -80,8 +76,8 @@ TavernGladThatsOverText2:
 	
 	para "It's a metal arc,"
 	line "lens, and mirror."
-	cont "I line up a star"
-	cont "with the horizon,"
+	para "I line up a star"
+	line "with the horizon,"
 	para "and then I know"
 	line "my latitude!"
 	done
@@ -89,9 +85,9 @@ TavernGladThatsOverText2:
 LandingTavernSailorText:
 	text "Where's our ship?"
 	line "If it doesn't"
-	cont "make it to port"
-	para "soon, another"
-	line "will come after"
-	cont "it to see if Ken-"
+	para "make it to port"
+	line "soon, another"
+	para "will come after"
+	line "it to see if Ken-"
 	cont "sey reneged."
 	done

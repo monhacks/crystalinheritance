@@ -96,12 +96,12 @@ SailorEugeneSeenText:
 GenericTrainerSailorTerrell:
 	generictrainer SAILOR, TERRELL, EVENT_BEAT_SAILOR_TERRELL, SailorTerrellSeenText, SailorTerrellBeatenText
 
-SailorEugeneBeatenText:
+SailorTerrellBeatenText:
 	text "Sailing days are"
 	line "long and boring."
 	done
 	
-SailorEugeneSeenText:
+SailorTerrellSeenText:
 	text "Finally, some"
 	line "excitement!"
 	done
@@ -109,13 +109,13 @@ SailorEugeneSeenText:
 GenericTrainerSailorKent:
 	generictrainer SAILOR, KENT, EVENT_BEAT_SAILOR_KENT, SailorKentSeenText, SailorKentBeatenText
 
-SailorEugeneBeatenText:
+SailorKentBeatenText:
 	text "I'll never make"
 	line "admiral at this"
 	cont "rate."
 	done
 	
-SailorEugeneSeenText:
+SailorKentSeenText:
 	text "Time to prove"
 	line "my mettle!"
 	done
@@ -123,12 +123,12 @@ SailorEugeneSeenText:
 GenericTrainerSailorErnest:
 	generictrainer SAILOR, ERNEST, EVENT_BEAT_SAILOR_ERNEST, SailorErnestSeenText, SailorErnestBeatenText
 
-SailorEugeneBeatenText:
+SailorErnestBeatenText:
 	text "Tch. The colonel"
 	line "will wreck you."
 	done
 	
-SailorEugeneSeenText:
+SailorErnestSeenText:
 	text "I'm the last one,"
 	line "you're through!"
 	done

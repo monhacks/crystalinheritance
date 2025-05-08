@@ -216,7 +216,7 @@ CC_1F_Switch1:
 	yesorno
 	iffalse_jumptext CartNoSwitchText
 	checkevent EVENT_CRADLE_1F_CART_1
-	iftrue CC_2F_SwitchBack
+	iftrue CC_1F_SwitchBack
 	changeblock 30, 28, $C9
 	changeblock 14, 28, $C4
 	playsound SFX_THUNDER
@@ -225,7 +225,7 @@ CC_1F_Switch1:
 	reloadmappart
 	jumptext CartMovedText 
 	
-CC_2F_SwitchBack:
+CC_1F_SwitchBack:
 	changeblock 30, 28, $C8 
 	changeblock 14, 28, $C5
 	playsound SFX_THUNDER
@@ -233,11 +233,6 @@ CC_2F_SwitchBack:
 	clearevent EVENT_CRADLE_2F_CART_1
 	reloadmappart
 	jumptext CartMovedText 
-
-CartSwitchText:
-	text "Hit the mine cart"
-	line "switch?"
-	done
 
 CartNoSwitchText:
 	text "Left it be."

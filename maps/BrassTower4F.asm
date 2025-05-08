@@ -26,7 +26,7 @@ BrassTower4F_MapScriptHeader:
 	object_const_def
 
 
-BrassTower3FCallback:
+BrassTower4FCallback:
 	checkevent EVENT_BEAT_ADRINNA_TOWER
 	iffalse .Done
 	changeblock 2, 4, $20

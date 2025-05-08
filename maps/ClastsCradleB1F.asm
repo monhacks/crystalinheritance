@@ -28,10 +28,10 @@ ClastsCradleB1F_MapScriptHeader:
 	object_event 21, 8, SPRITE_ADRINNA, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_CRADLE_CUTSCENE
 	object_event 22, 8, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_CRADLE_CUTSCENE
 	object_event 27, 14, SPRITE_MEJIMI, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_CRADLE_CUTSCENE
-; CUTSCENE 2, TODO
+; CUTSCENE 2
 	object_event   4,  16, SPRITE_ADRINNA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_ADRINNA_MINE
 	object_event   5,  15, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, HEATRAN, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_CC_HEATRAN
-	object_event   0,  00, SPRITE_KURT, SPRITEMOVEDATA_STANDING_LEFT 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_KURT_MINE_2
+	object_event   5,  26, SPRITE_KURT, SPRITEMOVEDATA_STANDING_LEFT 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_KURT_MINE_2
 ; KURT TO HEAL YOU 
 	object_event   8,  5, SPRITE_KURT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 1, KurtScriptCC, EVENT_BEAT_ADRINNA_MINE
 ; TRAINERS, TODO 
@@ -329,7 +329,7 @@ CC_MejimiMoves1: ;6left 5 UP
 	step_up
 	step_end
 
-CC_WorkerMoves1 ; 2 d 1 l 3 d 5 r
+CC_WorkerMoves1: ; 2 d 1 l 3 d 5 r
 	step_down
 	step_down
 	step_left
@@ -344,12 +344,23 @@ CC_WorkerMoves1 ; 2 d 1 l 3 d 5 r
 	step_right
 	step_end
 
-CC_AdrinnaMoves2; left down face right
+CC_AdrinnaMoves2:; left down face right
 	step_left
 	step_down
 	turn_head_right
 	step_end
 
+CC_MejimiMoves2: ;; 4 D 5 raw
+	step_down
+	step_down
+	step_down
+	step_down
+	step_right
+	step_right
+	step_right
+	step_right
+	step_right
+	step_end
 	
 GenericTrainerBrigader19: ; bugs dark 
 	generictrainer BRIGADER, 19, EVENT_BEAT_ROCKET_GRUNTM_19, Brigader19SeenText, Brigader19BeatenText  

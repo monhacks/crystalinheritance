@@ -119,7 +119,7 @@ LandingDocksScene:
 	showemote EMOTE_BOLT, LANDING_DOCKS_KENSEY, 10
 	showtext Docks_Text18
 	applymovement LANDING_DOCKS_KENSEY, Docks_KenseyMoves1
-	disapper LANDING_DOCKS_KENSEY
+	disappear LANDING_DOCKS_KENSEY
 	setevent EVENT_DOCKS_KENSEY
 	showtext Docks_Text19
 	special Special_CelebiShrineEvent

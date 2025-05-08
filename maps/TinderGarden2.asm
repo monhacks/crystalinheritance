@@ -1,4 +1,4 @@
-ShimmerSaddle_MapScriptHeader:
+TinderGarden2_MapScriptHeader:
 	def_scene_scripts
 	scene_script TinderGarden2Script ; warp in at 4, 2
 

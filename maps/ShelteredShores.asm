@@ -29,7 +29,7 @@ ShelteredShores_MapScriptHeader:
 
 	object_const_def
 
-CianwoodCoveFlyPoint:
+ShelteredShoresFlyPoint:
 	setflag ENGINE_FLYPOINT_SHELTERED_SHORES
 	endcallback	
 

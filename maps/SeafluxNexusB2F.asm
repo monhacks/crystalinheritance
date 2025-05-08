@@ -56,8 +56,8 @@ SeafluxNexusB2FCallback1:
 	changeblock 18, 20, $02
 .Check2:
 	checkevent EVENT_NEXUS_B1F_BOULDER_2
+	iffalse .Done
 	changeblock 20, 20, $02
-	iffalse.Done
 .Done:
 	endcallback	
 	
@@ -220,7 +220,7 @@ SeafluxNexusB2F_Switch5: ; w2,w4
 	iftrue .ClearB1FFalls4
 	setevent EVENT_NEXUS_B1F_FALLS_4_OFF
 	sjump .Switch5End
-.ClearB1FFalls2:
+.ClearB1FFalls4:
 	clearevent EVENT_NEXUS_B1F_FALLS_2_OFF
 .Switch5End:
 	showtext Switch5EffectText 

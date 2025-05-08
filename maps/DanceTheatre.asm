@@ -117,8 +117,8 @@ DanceTheatreOstene1Text:
 	done
 	
 RivalTheatreAfterBattleText:
-	text "With Silph’s help"
-	line "I’m going to res-"
+	text "With Silph's help"
+	line "I'm going to res-"
 	cont "tore balance."
 	
 	para "So stay out of"

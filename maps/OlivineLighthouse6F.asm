@@ -33,7 +33,7 @@ OlivineLighthouse6F_MapScriptHeader:
 	const LIGHTHOUSE_JASMINE
 	const LIGHTHOUSE_CHUCK
 	const LIGHTHOUSE_SLOWKING
-	consT LIGHTHOUSE_TENTACRUEL
+	const LIGHTHOUSE_TENTACRUEL
 
 Lighthouse6FScene0:
 	applyonemovement PLAYER, step_up
@@ -206,10 +206,6 @@ LighthouseChuckLeavesMovement:
 	step_right
 	step_end
 
-<Chuck and Jasmine leave> 
-;
-
-
 SlowkingLighthouseText:
 	text "OMLAS: ..."
 	done
@@ -224,7 +220,7 @@ LighthouseKurtScript:
 	faceplayer
 	checkevent EVENT_BEAT_CHUCK
 	iftrue_jumptext LighthouseKurtAfterChuck
-	showtext LighthouseKurtText1
+	showtext LighthouseKurtText0
 	special Special_FadeBlackQuickly
 	special Special_ReloadSpritesNoPalettes
 	special HealParty
@@ -235,7 +231,7 @@ LighthouseKurtScript:
 	showtext LighthouseKurtText2
 	end 
 
-LighthouseKurtText1:
+LighthouseKurtText0:
 	text "Do you hear what"
 	line "Chuck is doing in"
 	cont "there?"

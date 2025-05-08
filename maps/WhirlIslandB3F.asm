@@ -1,4 +1,4 @@
-WhirlIslandB1F_MapScriptHeader:
+WhirlIslandB3F_MapScriptHeader:
 	def_scene_scripts
 
 	def_callbacks
@@ -18,4 +18,6 @@ WhirlIslandB1F_MapScriptHeader:
 	def_object_events
 
 
-	object_const_def
+
+	
+	

@@ -58,8 +58,3 @@ BrassTower17FUnownBlocks:
 	restoretypeface
 	special MapCallbackSprites_LoadUsedSpritesGFX
 	end
-
-BrassTowerUnownText:
-	text "powered by"
-	line "unown"	
-	done

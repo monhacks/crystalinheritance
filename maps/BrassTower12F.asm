@@ -47,12 +47,12 @@ NoboruSeenText:
 GenericTrainerElderTakashi:
     generictrainer ELDER, TAKASHI, EVENT_BEAT_ELDER_TAKASHI, TakashiSeenText, TakashiBeatenText
 
-NoboruBeatenText:
+TakashiBeatenText:
     text "I should have"
 	line "revered you..."
     done
 	
-NoboruSeenText:
+TakashiSeenText:
     text "The emperor must"
 	line "be revered!"
 	done

@@ -3406,7 +3406,7 @@ BrigaderGroup:
 ; ================
 
 
-	; GRUNTM 0
+	; GRUNTM 1
 	db "Grunt@"
 	db TRAINERTYPE_NORMAL
 	; party
@@ -3414,7 +3414,7 @@ BrigaderGroup:
 
 ; ================
 
-	; GRUNTM 1
+	; GRUNTM 2
 	db "Smith@"
 	db TRAINERTYPE_NORMAL
 	; party
@@ -3425,7 +3425,7 @@ BrigaderGroup:
 
 ; ================
 
-	; GRUNTM 2
+	; GRUNTM 3
 	db "Johnson@"
 	db TRAINERTYPE_NORMAL
 	; party
@@ -3436,7 +3436,7 @@ BrigaderGroup:
 
 ; ================
 
-	; GRUNTM 3
+	; GRUNTM 4
 	db "Brown@"
 	db TRAINERTYPE_NORMAL
 	; party
@@ -3447,7 +3447,7 @@ BrigaderGroup:
 
 ; ================
 
-	; GRUNTM 4
+	; GRUNTM 5
 	db "Miller@"
 	db TRAINERTYPE_NORMAL
 	; party
@@ -3457,7 +3457,7 @@ BrigaderGroup:
 
 ; ================
 
-	; GRUNTM 5
+	; GRUNTM 6
 	db "Davis@"
 	db TRAINERTYPE_NORMAL
 	; party
@@ -3468,7 +3468,7 @@ BrigaderGroup:
 
 ; ================
 
-	; GRUNTM 6
+	; GRUNTM 7
 	db "Garcia@"
 	db TRAINERTYPE_NORMAL
 	; party
@@ -3479,7 +3479,7 @@ BrigaderGroup:
 
 ; ================
 
-	; GRUNTM 7
+	; GRUNTM 8
 	db "Zhang@" ; SERENE SPRINGS
 	db TRAINERTYPE_NORMAL
 	; party
@@ -3493,7 +3493,7 @@ BrigaderGroup:
 
 ; ================
 
-	; GRUNTM 8
+	; GRUNTM 9
 	db "Patel@" ; START STADIUM GROUNDS
 	db TRAINERTYPE_NORMAL
 	; party
@@ -3503,7 +3503,7 @@ BrigaderGroup:
 
 ; ================
 
-	; GRUNTM 9
+	; GRUNTM 10
 	db "Manolete@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
 	; party
@@ -3514,8 +3514,8 @@ BrigaderGroup:
 
 ; ================
 
-	; GRUNTM 10
-	db "Kim@" ; should be #10
+	; GRUNTM 11
+	db "Kim@" 
 	db TRAINERTYPE_NORMAL
 	; party
 	db 14, MACHOP
@@ -3523,7 +3523,7 @@ BrigaderGroup:
 	db -1 ; end
 ; ================
 
-	; GRUNTM 11
+	; GRUNTM 12
 	db "Chen@"
 	db TRAINERTYPE_NORMAL
 	; party
@@ -3531,17 +3531,9 @@ BrigaderGroup:
 	db 14, MAGMAR
 	db -1 ; end
 
-; ================ ; ABOVE ENDS THE STADIUM GROUNDS; todo: grunts 12- 20 
+; ================ ; ABOVE ENDS THE STADIUM GROUNDS; todo: grunts 13- 20 
 
-	; GRUNTM 12 opezsulfur sty 
-	db "Lopez@" ; trainer name
-	db TRAINERTYPE_NORMAL
-	; party - Ground focus
-	db 43, HIPPOWDON
-	db 45, QUAGSIRE
-	db 47, DONPHAN
-	db -1 ; end
-	
+
 	; GRUNTM 13 ; Singhsulfur sty 
 	db "Singh@" ; trainer name
 	db TRAINERTYPE_NORMAL
@@ -3614,6 +3606,15 @@ BrigaderGroup:
 	db 46, STEELIX
 	db 46, NIDOKING
 	db 48, NIDOQUEEN
+	db -1 ; end
+	
+	; GRUNTM 21 sulfur sty 
+	db "Lopez@" ; trainer name
+	db TRAINERTYPE_NORMAL
+	; party - Ground focus
+	db 43, HIPPOWDON
+	db 45, QUAGSIRE
+	db 47, DONPHAN
 	db -1 ; end
 	
 ; ================================
@@ -8402,7 +8403,7 @@ AromaLadyGroup:
 	db TRAINERTYPE_NORMAL
 	; party
 	db 18, DARTRIX
-	db 18, PARASECT
+	db 18, PARAS
 	db 18, EXEGGCUTE
 	db -1 ; end
 
@@ -8438,11 +8439,20 @@ AromaLadyGroup:
 
 ; ================
 
-	; AROMA_LADY
+	; AROMA_LADY ; GAULDENROD TOWER 2F
 	db "Peony@"
 	db TRAINERTYPE_NORMAL
 	; PARTY
-	db 50, CHIKORITA
+	db 20, BAYLEEF
+	db -1 ; end
+
+; ================
+
+	; AROMA_LADY ; GAULDENROD TOWER 2F
+	db "Rosa@"
+	db TRAINERTYPE_NORMAL
+	; PARTY
+	db 15, LEAFEON
 	db -1 ; end
 
 ; ================

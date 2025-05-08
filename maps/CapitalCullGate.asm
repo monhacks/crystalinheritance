@@ -35,11 +35,8 @@ CapitalCullGateNPCText:
 	text "We roamed free"
 	line "from sea to"
 	cont "shore. Now,"
-	para "we’re 'free' to"
+	para "we're 'free' to"
 	line "make #balls"
 	cont "for them."
-
-	para "The waves call"
-	line "to me..."
 	done
 	

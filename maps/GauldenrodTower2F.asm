@@ -15,8 +15,8 @@ GauldenrodTower2F_MapScriptHeader:
 
 	def_object_events
 	object_event  0,  0, SPRITE_AROMA_LADY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerAromaLadyBryony, EVENT_BEAT_SANDRA
-	object_event  4,  2, SPRITE_AROMA_LADY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerAromaLadyHeather, EVENT_BEAT_SANDRA
-	object_event  6,  2, SPRITE_AROMA_LADY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerAromaLadyHolly, EVENT_BEAT_SANDRA
+	object_event  4,  2, SPRITE_AROMA_LADY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerAromaLadyRosa, EVENT_BEAT_SANDRA
+	object_event  6,  2, SPRITE_AROMA_LADY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerAromaLadyPeony, EVENT_BEAT_SANDRA
 
 GenericTrainerAromaLadyBryony:
 	generictrainer AROMA_LADY, BRYONY, EVENT_BEAT_AROMA_LADY_BRYONY, AromaLadyBryonySeenText, AromaLadyBryonyBeatenText
@@ -37,8 +37,8 @@ AromaLadyBryonyBeatenText:
 	text "Respectable…"
 	done
 
-GenericTrainerAromaLadyHeather:
-	generictrainer AROMA_LADY, HEATHER, EVENT_BEAT_AROMA_LADY_HEATHER, AromaLadyHeatherSeenText, AromaLadyHeatherBeatenText
+GenericTrainerAromaLadyRosa:
+	generictrainer AROMA_LADY, ROSA, EVENT_BEAT_AROMA_LADY_ROSA, AromaLadyRosaSeenText, AromaLadyRosaBeatenText
 
 	text "This tower is how"
 	line "people learn to"
@@ -48,33 +48,33 @@ GenericTrainerAromaLadyHeather:
 	cont "it is gone?"
 	done
 
-AromaLadyHeatherSeenText:
+AromaLadyRosaSeenText:
 	text "Have you come to"
 	line "see the Rainbow"
 	cont "bird #mon?"
 	done
 
-AromaLadyHeatherBeatenText:
+AromaLadyRosaBeatenText:
 	text "I see something"
 	line "in you…"
 	done
 
-GenericTrainerAromaLadyHolly:
-	generictrainer AROMA_LADY, HOLLY, EVENT_BEAT_AROMA_LADY_HOLLY, AromaLadyHollySeenText, AromaLadyHollyBeatenText
+GenericTrainerAromaLadyPeony:
+	generictrainer AROMA_LADY, PEONY, EVENT_BEAT_AROMA_LADY_PEONY, AromaLadyPeonySeenText, AromaLadyPeonyBeatenText
 
 	text "A contribution can"
 	line "be made by even"
 	cont "the smallest"
-	cont "JIGGLYPUFF."
+	cont "Jigglypuff."
 	done
 
-AromaLadyHollySeenText:
+AromaLadyPeonySeenText:
 	text "We find dignity in"
 	line "all #mon."
 	cont "Do you?"
 	done
 
-AromaLadyHollyBeatenText:
+AromaLadyPeonyBeatenText:
 	text "You have great"
 	line "trust in your"
 	cont "#mon."

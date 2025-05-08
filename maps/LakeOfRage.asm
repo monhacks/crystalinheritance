@@ -130,7 +130,7 @@ LakeRivalBattleScript:
     iftrue .Oshawott
     checkevent EVENT_GOT_ROWLET
     iftrue .Rowlet
-    winlosstext RadioTowerRivalWinText, 0
+    winlosstext LakeRivalWinText, 0
     setlasttalked LAKEOFRAGE_RIVAL
     loadtrainer RIVAL1, 6 ; todo 
     startbattle
@@ -139,7 +139,7 @@ LakeRivalBattleScript:
     sjump .FinishRivalBattle
 
 .Oshawott:
-    winlosstext RadioTowerRivalWinText, 0
+    winlosstext LakeRivalWinText, 0
     setlasttalked LAKEOFRAGE_RIVAL
     loadtrainer RIVAL1, 4 ; todo 
     startbattle
@@ -148,7 +148,7 @@ LakeRivalBattleScript:
     sjump .FinishRivalBattle
 
 .Rowlet:
-    winlosstext RadioTowerRivalWinText, 0
+    winlosstext LakeRivalWinText, 0
     setlasttalked LAKEOFRAGE_RIVAL
     loadtrainer RIVAL1, 5 ; todo 
     startbattle
@@ -186,9 +186,9 @@ LakeRivalText2:
 	
 	para "should go"
 	line "home."
-	done
-
-LakeRivalText2:
+;	done
+; fallthru 
+;LakeRivalText3:
 	text "You're the one"
 	line "who is upsetting"
 	cont "balance!"
@@ -213,7 +213,7 @@ LakeRivalText2:
 	cont "out you!"
 	done
 
-RadioTowerRivalWinText:
+LakeRivalWinText:
 	text "I wish I was an"
 	line "entire region"
 	cont "away from you."
@@ -229,16 +229,16 @@ LakeRivalAfterText:
 	
 	para "Pineco in its"
 	line "shell, or you hi-"
-	cont "ding behind self-"
-	cont "righteousness, or"
+	para "ding behind self-"
+	line "righteousness, or"
 	para "Silph hiding beh-"
 	line "ind a balance"
 	cont "sheet, "
 
 	para "I can see my eff-"
 	line "ect. I walked aw-"
-	cont "ay when it wasn't"
-	cont "working."
+	para "ay when it wasn't"
+	line "working."
 	
 	para "<PLAYER>, when"
 	line "will you?"
@@ -302,12 +302,11 @@ LakePrayerText:
 	para "As a downpour or"
 	line "a sprinkle,"
 	
-	para "Don’t panic,"
+	para "Don't panic,"
 	line "have prudence!"
 
-
 	para "So we can choose"
-	ilne "our wrinkles."
+	line "our wrinkles."
 	done
 
 WesleyScript:
@@ -464,7 +463,3 @@ GenericTrainerPokemaniacShane:
 	text "Have you seen any"
 	line "yanma evolution?"
 	done
-
-
-LakePryceScript:
-	

@@ -105,7 +105,7 @@ CianwoodEusineScript:
 	applymovement CIANWOODCITY_KURT, CC_Move_Kurt
 	appear CIANWOODCITY_LUGIA
 	applymovement PLAYER, CC_Move_PlayerStepsDown
-	applyemote EMOTE_SHOCK, CIANWOODCITY_EUSINE, 10
+	showemote EMOTE_SHOCK, CIANWOODCITY_EUSINE, 10
 	showtext CC_KurtText1
 	applymovement CIANWOODCITY_EUSINE, CC_Move_Eusine_1
 	showtext CC_EusineText1
@@ -209,7 +209,7 @@ CC_KurtText1:
 	cont "destiny."
 	done
 	
-CC_EusineText1	
+CC_EusineText1:
 	text "Eusine: Lugia!"
 	line "What majesty!"
 

@@ -55,8 +55,8 @@ MahoganyGymPryceScript:
 	setevent EVENT_GOT_TM_CALM_MIND 
 	writetext PryceText_CalmMindText
 	promptbutton
-	vebosegivekeyitem CLEAR_BELL
-	writetext PryceText_ClearBell
+;	verbosegivekeyitem CLEAR_BELL ; morty gives it 
+;	writetext PryceText_ClearBell
 	promptbutton
 	writetext PryceText_MeetYouAtTheLake
 	closetext
@@ -130,15 +130,15 @@ PryceText_CalmMindText: ; revise, fix
 	line "thing for you."
 	done
 
-PryceText_ClearBell
-	text "Morty gave me"
-	line "those when he"
-	cont "left his gym."
-	
-	para "I think you are"
-	line "worthy to have"
-	cont "one."
-	done
+;PryceText_ClearBell:
+;	text "Morty gave me"
+;	line "those when he"
+;	cont "left his gym."
+;	
+;	para "I think you are"
+;	line "worthy to have"
+;	cont "one."
+;	done
 
 PryceText_MeetYouAtTheLake:
 	text "Now make haste!"

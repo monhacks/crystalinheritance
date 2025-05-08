@@ -129,7 +129,7 @@ TT3F_CCW_Right_Trigger:
 	pause 5
 	disappear TIN_TOWER_OLD_3F_HAUNTER_4
 	pause 5
-	applymovement PLAYER, Player_CCW_Bottom_Move
+	applymovement PLAYER, Player_CCW_Right_Move
 	setscene $1
 	end
 	
@@ -151,7 +151,7 @@ TT3F_CW_Right_Trigger:
 	pause 5
 	disappear TIN_TOWER_OLD_3F_HAUNTER_1
 	pause 5
-	applymovement PLAYER, Player_CW_Bottom_Move
+	applymovement PLAYER, Player_CW_Right_Move
 	setscene $0
 	end
 
@@ -176,7 +176,7 @@ Player_CW_Right_Move:
 
 
 
-TT3F_CCW_Bottom_Trigger:
+TT3F_CCW_Top_Trigger:
 	pause 5
 	appear TIN_TOWER_OLD_3F_HAUNTER_1
 	pause 5
@@ -194,11 +194,11 @@ TT3F_CCW_Bottom_Trigger:
 	pause 5
 	disappear TIN_TOWER_OLD_3F_HAUNTER_4
 	pause 5
-	applymovement PLAYER, Player_CCW_Bottom_Move
+	applymovement PLAYER, Player_CCW_Top_Move
 	setscene $1
 	end
 	
-TT3F_CW_Bottom_Trigger:
+TT3F_CW_Top_Trigger:
 	pause 5
 	appear TIN_TOWER_OLD_3F_HAUNTER_4
 	pause 5
@@ -216,11 +216,11 @@ TT3F_CW_Bottom_Trigger:
 	pause 5
 	disappear TIN_TOWER_OLD_3F_HAUNTER_1
 	pause 5
-	applymovement PLAYER, Player_CW_Bottom_Move
+	applymovement PLAYER, Player_CW_Top_Move
 	setscene $0
 	end
 
-Player_CCW_Bottom_Move:
+Player_CCW_Top_Move:
 	step_up
 	step_right
 	step_right
@@ -229,7 +229,7 @@ Player_CCW_Bottom_Move:
 	step_right
 	step_end
 	
-Player_CW_Bottom_Move:
+Player_CW_Top_Move:
 	step_up
 	step_left
 	step_up
@@ -240,7 +240,7 @@ Player_CW_Bottom_Move:
 	step_end
 
 
-TT3F_CCW_Bottom_Trigger:
+TT3F_CCW_Left_Trigger:
 	pause 5
 	appear TIN_TOWER_OLD_3F_HAUNTER_1
 	pause 5
@@ -258,11 +258,11 @@ TT3F_CCW_Bottom_Trigger:
 	pause 5
 	disappear TIN_TOWER_OLD_3F_HAUNTER_4
 	pause 5
-	applymovement PLAYER, Player_CCW_Bottom_Move
+	applymovement PLAYER, Player_CCW_Left_Move
 	setscene $1
 	end
 	
-TT3F_CW_Bottom_Trigger:
+TT3F_CW_Left_Trigger:
 	pause 5
 	appear TIN_TOWER_OLD_3F_HAUNTER_4
 	pause 5
@@ -280,11 +280,11 @@ TT3F_CW_Bottom_Trigger:
 	pause 5
 	disappear TIN_TOWER_OLD_3F_HAUNTER_1
 	pause 5
-	applymovement PLAYER, Player_CW_Bottom_Move
+	applymovement PLAYER, Player_CW_Left_Move
 	setscene $0
 	end
 
-Player_CCW_Bottom_Move:
+Player_CCW_Left_Move:
 	step_up
 	step_right
 	step_right
@@ -293,7 +293,7 @@ Player_CCW_Bottom_Move:
 	step_right
 	step_end
 	
-Player_CW_Bottom_Move:
+Player_CW_Left_Move:
 	step_up
 	step_left
 	step_up
@@ -302,12 +302,6 @@ Player_CW_Bottom_Move:
 	step_left
 	step_left
 	step_end
-
-
-
-
-
-;;;
 
 
 GenericTrainerSageJeffrey:

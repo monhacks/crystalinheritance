@@ -34,7 +34,7 @@ EusineRaikouScript:
 	done
 	
 .RaikouAppears
-	applyemote EMOTE_SHOCK, LIGHTHOUSE_EUSINE, 15
+	showemote EMOTE_SHOCK, LIGHTHOUSE_EUSINE, 15
 	showtext RaikouCOnditionText2
 	appear LIGHTHOUSE_RAIKOU
 	applymovement LIGHTHOUSE_RAIKOU, LighthouseRaikouMovement1

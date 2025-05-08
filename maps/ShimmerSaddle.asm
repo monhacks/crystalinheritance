@@ -84,7 +84,7 @@ ShimmerSaddleSignText:
 ShimmerSaddle_Scene1_ManHZ:
 	follow SHIMMER_GRAMPS_1, PLAYER
 	applymovement SHIMMER_GRAMPS_1, ShimmerGramps1Move
-	turnobject SHIMMER_GRAMPS_1
+	turnobject SHIMMER_GRAMPS_1, LEFT
 	showtext ShimmerGramps1Text
 	pause 10
 	disappear SHIMMER_HZ_1
@@ -149,7 +149,7 @@ ShimmerGramps1Move2:
 ShimmerSaddle_Scene2_HZOnly:
 	pause 10
 	applymovement SHIMMER_HZ_2, ShimmerHZ2_Stalks
-	showemote EMOTE_SHOCK, SHIMMER_MON_2
+	showemote EMOTE_SHOCK, SHIMMER_MON_2, 10 
 	; sfx slash todo 
 	disappear SHIMMER_MON_2
 	setevent EVENT_SHIMMER_MANKEY_2

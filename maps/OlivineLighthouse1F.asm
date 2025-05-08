@@ -18,7 +18,7 @@ OlivineLighthouse1F_MapScriptHeader:
 
 	def_object_events ; black belts 
 	object_event 14, 9, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, 	ObjectEvent, EVENT_RIVAL_LIGHTHOUSE; elec 
-	object_evet 11, 17, SPRITE_KURT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, 	ObjectEvent, EVENT_KURT_LIGHTHOUSE_1; elec 
+	object_event 11, 17, SPRITE_KURT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, 	ObjectEvent, EVENT_KURT_LIGHTHOUSE_1; elec 
 
 	object_event  5,  4, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, 	TrainerScientistJoseph, -1; elec
 	object_event 13,  5, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, 	TrainerBlackBeltWai, -1
@@ -59,7 +59,7 @@ LighthouseRivalTrigger2:
     playmapmusic
 	showemote EMOTE_SHOCK, LIGHTHOUSE_KURT, 10
 	showtext LighthouseKurtEndText
-	applymovement LighthouseKurtGoesUpMovement
+	applymovement LIGHTHOUSE_KURT, LighthouseKurtGoesUpMovement
 	disappear LIGHTHOUSE_KURT
 	setevent EVENT_KURT_LIGHTHOUSE_1
     end

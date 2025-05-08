@@ -49,7 +49,7 @@ AbilityPatchVendorScript:
 	yesorno
 	iffalse_jumpopenedtext NoMoneyTextPatch
 	checkmoney $0, 30000
-	ifequal $2, jumpopenedtext NoMoneyTextPatch
+	ifequal $2, .NotEnoughMoney 
 	promptbutton
 	giveitem ABILITYPATCH
 	iffalse_jumpopenedtext NoRoomTextPatch
@@ -61,6 +61,8 @@ AbilityPatchVendorScript:
 	closetext
 	end
 
+.NotEnoughMoney:
+	jumptext NoMoneyTextPatch
 
 GivingPatchText:
 	text "Thanks to using"

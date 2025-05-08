@@ -50,14 +50,14 @@ SulfurSty_MapScriptHeader: ;	def_scene_scripts
 	object_const_def
 
 
-GenericTrainerBrigader12:
-	generictrainer BRIGADER, 12, EVENT_BEAT_ROCKET_GRUNTM_12, Brigader12SeenText, Brigader12BeatenText
+GenericTrainerBrigader21:
+	generictrainer BRIGADER, 21, EVENT_BEAT_ROCKET_GRUNTM_12, Brigader12SeenText, Brigader12BeatenText
 
-Brigader12BeatenText:
+Brigader21BeatenText:
 	text "Crushed!"
 	done
 
-Brigader12SeenText:
+Brigader21SeenText:
 	text "We'll ground you"
 	line "down!"
 	done

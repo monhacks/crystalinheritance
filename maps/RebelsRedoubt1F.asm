@@ -25,10 +25,10 @@ RebelsRedoubt1F_MapScriptHeader: ; need a callback a la ruins of alph
 	object_event 4, 7, SPRITE_KURT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_REDOUBT_KURT ; todo initialize
 
 	object_const_def
-	REDOUBT_1B_NINJA
-	REDOUBT_1F_POKEBALL
-	REDOUBT_1F_NINJA_2
-	REDOUBT_1F_KURT
+	const REDOUBT_1B_NINJA
+	const REDOUBT_1F_POKEBALL
+	const REDOUBT_1F_NINJA_2
+	const REDOUBT_1F_KURT
 	
 RedoubtKnockOffTutorScript:
 	faceplayer
