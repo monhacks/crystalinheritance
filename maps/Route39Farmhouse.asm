@@ -106,6 +106,14 @@ FarmerText_Rustler:
 	cont "Rustler!"
 	done
 
+FarmerFText_GreatCows:
+	text "Believe it or not"
+	line "there are more"
+	para "Miltank alive now"
+	line "than any other"
+	cont "time in the past!"
+	done
+
 FarmerMText_BuyMilk:
 	text "How'd you like my"
 	line "Moomoo Milk?"

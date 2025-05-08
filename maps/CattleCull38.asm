@@ -37,7 +37,7 @@ CattleCull38SignText:
 	done
 	
 GenericTrainerNomadMJoel:
-	generictrainer NOMAD_M, JOEL, EVENT_BEAT_NOMAD_M_JOEL, NomadJoelSeenText, NomadJoelBeatenText
+	generictrainer NOMAD_M, NOMAD_M_JOEL, EVENT_BEAT_NOMAD_M_JOEL, NomadJoelSeenText, NomadJoelBeatenText
 
 	text "Each spring, we"
 	line "guided our herds"
@@ -63,7 +63,7 @@ NomadJoelBeatenText:
 
 
 GenericTrainerNomadMGlenn:
-	generictrainer NOMAD_M, GLENN, EVENT_BEAT_NOMAD_M_GLENN, NomadGlennSeenText, NomadGlennBeatenText
+	generictrainer NOMAD_M, NOMAD_M_GLENN, EVENT_BEAT_NOMAD_M_GLENN, NomadGlennSeenText, NomadGlennBeatenText
 
 	text "Emperor's ships"
 	line "patrol our seas."
@@ -87,7 +87,7 @@ NomadGlennBeatenText:
 
 
 GenericTrainerNomadFReina:
-	generictrainer NOMAD_F, REINA, EVENT_BEAT_NOMAD_F_REINA, NomadReinaSeenText, NomadReinaBeatenText
+	generictrainer NOMAD_F, NOMAD_F_REINA, EVENT_BEAT_NOMAD_F_REINA, NomadReinaSeenText, NomadReinaBeatenText
 
 	text "Sacred herbs grow"
 	line "on these slopes."

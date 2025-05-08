@@ -15,9 +15,9 @@ ClastsCradleB1F_MapScriptHeader:
 
 
 	def_coord_events
-	coord_event 21, 12, CradleScene1_Mejimi, 0; cutscene
-	coord_event  5, 26, CradleScene2_Heatran, 1; battle heatran 
-	coord_event  5, 26, CradleScene2_Adrinna, 2; battle with adrinna
+	coord_event 21, 12, 0, CradleScene1_Mejimi; cutscene
+	coord_event  5, 26, 1, CradleScene2_Heatran; battle heatran 
+	coord_event  5, 26, 2, CradleScene2_Adrinna; battle with adrinna
 	
 	def_bg_events
 
@@ -440,7 +440,7 @@ Crade_Scene3: ; just in case you lose to adrinna after heatran
 	special FadeOutPalettes
 	waitsfx
 	setscene $2
-	warp WHISPERING_WAY, 10, 4
+	warp WHISPERS_WAY, 10, 4
 	end
 	
 

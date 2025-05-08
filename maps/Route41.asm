@@ -139,7 +139,7 @@ Route41WaitText:
 	done
 
 GenericTrainerSwimmermMathew:
-	generictrainer SWIMMER_M, MATHEW, EVENT_BEAT_SWIMMERM_MATHEW, .SeenText10, .BeatenText10
+	generictrainer SWIMMERM, MATHEW, EVENT_BEAT_SWIMMERM_MATHEW, .SeenText10, .BeatenText10
 
 .BeatenText10:
 	text "OK: what's at the"
@@ -157,7 +157,7 @@ GenericTrainerSwimmermMathew:
 	done
 
 GenericTrainerSwimmermBerke:
-	generictrainer SWIMMER_M, BERKE, EVENT_BEAT_SWIMMERM_BERKE, .SeenText9, .BeatenText9
+	generictrainer SWIMMERM, BERKE, EVENT_BEAT_SWIMMERM_BERKE, .SeenText9, .BeatenText9
 
 .BeatenText9:
 	text "My metal detector"
@@ -172,7 +172,7 @@ GenericTrainerSwimmermBerke:
 	done
 
 GenericTrainerSwimmermKirk:
-	generictrainer SWIMMER_M, KIRK, EVENT_BEAT_SWIMMERM_KIRK, .SeenText8, .BeatenText8
+	generictrainer SWIMMERM, KIRK, EVENT_BEAT_SWIMMERM_KIRK, .SeenText8, .BeatenText8
 
 .BeatenText8:
 	text "Lots of stuff is"

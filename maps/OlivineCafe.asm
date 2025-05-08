@@ -16,7 +16,6 @@ OlivineCafe_MapScriptHeader:
 	object_event 9, 1, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OlivineCafe1Script, -1
 ;	object_event 9, 2, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OlivineCafe2Script, -1
 ;	object_event 9, 3, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OlivineCafe3Script, -1
-;	object_event 9, 4, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OlivineCafe4Script, -1
 
 	object_event  4,  5, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, CafeSurfMailScript, -1 
 
@@ -26,11 +25,13 @@ OlivineCafe_MapScriptHeader:
 	
 ; Octillery FLASH CANNON, Mantine MIRROR COAT, Qwilfish EXPLOSION, with sitrus_berry and in ultra_balls ; 25000 
 ; Dratini EXTREMESPEED liechi, Seadra POISON JAB salac, Staryu transform petaya, with pinch berry and in bub_ball 50000 
+
 ;cf celadonuniversity cafeteria 
+
 OlivineCafe1Script: ; 5000 
 	faceplayer
 	opentext
-	writetext OlivineCafeText
+	writetext OlivineCafe1Text
 	special PlaceMoneyTopRight
 	yesorno
 	iffalse_jumpopenedtext .Text4
@@ -48,13 +49,12 @@ OlivineCafe1Script: ; 5000
 
 ;	givepoke MAGIKARP, MAGIKARP_MASK_FORM, 10, EVIOLITE, ULTRA_BALL, DRAGON_RAGE
 .GiveMagikarp:
-	givepoke MAGIKARP, NO_FORM, 100, LEPPA_BERRY, POKE_BALL, FLAIL
-	iffalse_jumpopenedtext .Text6
+	givepoke MAGIKARP, NO_FORM, 100, LEPPA_BERRY, POKE_BALL, REVERSAL
+	iffalse_jumpopenedtext Text_NoCarry
 	playsound SFX_TRANSACTION
 	takemoney $0, 5000
 	special PlaceMoneyTopRight
 	jumpthisopenedtext
-
 
 	text "Here you go, kid!"
 	line "Enjoy it!"
@@ -62,7 +62,7 @@ OlivineCafe1Script: ; 5000
 
 .GiveChinchou:
 	givepoke CHINCHOU, NO_FORM, 5, LEPPA_BERRY, POKE_BALL, PSYBEAM
-	iffalse_jumpopenedtext .Text6
+	iffalse_jumpopenedtext Text_NoCarry
 	playsound SFX_TRANSACTION
 	takemoney $0, 5000
 	special PlaceMoneyTopRight
@@ -76,7 +76,7 @@ OlivineCafe1Script: ; 5000
 
 .GiveCorsola:
 	givepoke CORSOLA, NO_FORM, 5, LEPPA_BERRY, POKE_BALL, AMNESIA
-	iffalse_jumpopenedtext .Text6
+	iffalse_jumpopenedtext Text_NoCarry
 	playsound SFX_TRANSACTION
 	takemoney $0, 5000
 	special PlaceMoneyTopRight
@@ -89,7 +89,7 @@ OlivineCafe1Script: ; 5000
 
 .GiveShuckle:
 	givepoke SHUCKLE, NO_FORM, 5, LEPPA_BERRY, POKE_BALL, SHELL_SMASH
-	iffalse_jumpopenedtext .Text6
+	iffalse_jumpopenedtext Text_NoCarry
 	playsound SFX_TRANSACTION
 	takemoney $0, 5000
 	special PlaceMoneyTopRight
@@ -116,18 +116,17 @@ OlivineCafe1Script: ; 5000
 	db "SHUCKLE@"
 	db "CANCEL@"
 	
-.OlivineCafe1Text:
+OlivineCafe1Text:
 	text "Oy, oy, we got"
-	line "a lotta fish"
-	cont "here."
-	
+	line "a lotta fish!"
+
 	para "These small fry"
 	line "are just 5k."
 	
 	para "They've got spec-"
 	line "ial moves."
 	
-	para "They cost ¥4000"
+	para "They cost ¥5000"
 	line "to take home."
 	
 	para "It's a Magikarp,"
@@ -152,13 +151,10 @@ CafeNoFishText:
 	text "See you later."
 	done
 
-.Text6:
+Text_NoCarry:
 	text "You can't carry"
 	line "it, kid."
 	done
-
-
-
 
 CafeSurfMailScript: 
 	faceplayer
@@ -180,7 +176,7 @@ NeedAPearlText:
 	line "shop and the de-"
 	cont "sal discharge, I"
 	
-	para "Can't pull any"
+	para "can't pull any"
 	line "fish! I need"
 	cont "better lures."
 	para "Fish love shiny"
@@ -203,7 +199,6 @@ Text_PearlQuestion:
 	line "with water-type"
 	cont "#mon!"
 	done
-
 	
 GiveSurfMailText: 
 	text "That surf mail"
@@ -214,7 +209,6 @@ GiveSurfMailText:
 	cont "it by, if you"
 	cont "ever leave."
 	done
-
 
 Text_NoPearl:
 	text "You won't?"

@@ -44,7 +44,7 @@ RusalkaRuins1F_MapScriptHeader:
 	object_const_def
 
 
-CaptainLog05:
+CaptainsLog05:
 	text "Captain's Log 5"
 	line "May 15"
 	
@@ -69,7 +69,7 @@ CaptainLog05:
 	cont "have precious"
 	cont "metals inside."
 
-CaptainLog06:
+CaptainsLog06:
 	text "Captain's Log 6"
 	line "May 20"
 	
@@ -100,7 +100,7 @@ CaptainLog06:
 	done
 
 
-CaptainLog07:
+CaptainsLog07:
 	text "Captain's Log 7"
 	line "June 03"
 	
@@ -116,7 +116,7 @@ CaptainLog07:
 	cont "close?"
 	done
 
-CaptainLog09:
+CaptainsLog09:
 	text "Captain's Log 9"
 	line "June 06"
 	

@@ -8,7 +8,7 @@ BrassTower4F_MapScriptHeader:
 	def_warp_events
 	warp_event 9, 3, BRASS_TOWER_3F, 3
 	warp_event 2, 9, BRASS_TOWER_4F_WARP, 1
-	warp_event 2, 4, BRASS_TOWER_5F, 1
+	warp_event 2, 4, BRASS_TOWER_ROOF, 1
 
 
 	def_coord_events

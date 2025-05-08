@@ -18,7 +18,7 @@ SeafluxNexusB2F_MapScriptHeader:
 	warp_event 17, 21, SEAFLUX_NEXUS_B1F, 3 ; ladder 
 	warp_event 9, 31, SEAFLUX_NEXUS_B1F, 4
 ; hole drop 
-	warp_event 7, 27, SEAFLUX_NEXT_B3F, 1 ; to the bottom of the waterfall 
+	warp_event 7, 27, SEAFLUX_NEXUS_B3F, 1 ; to the bottom of the waterfall 
 ; northeast warp comes from the north warp from b3f
 
 
@@ -28,7 +28,6 @@ SeafluxNexusB2F_MapScriptHeader:
 	def_bg_events
 	bg_event 21, 16, BGEVENT_READ, SeafluxNexusB2F_MasterSwitch  ;  cf warehouse entrance basement key .... 
 	bg_event 19, 24, BGEVENT_READ, SeafluxNexusB2F_ResetSwitch  ;  cf warehouse entrance basement key .... 
-	bg_event 15, 24, BGEVENT_READ, SeafluxNexusB2F_Switch1 
 
 ;	bg_event  7, 14, BGEVENT_READ, SeafluxNexusB2F_Switch1 ; controls w2, w3
 ;	bg_event 29, 14, BGEVENT_READ, SeafluxNexusB2F_Switch2 ; controls w1, w3, w4

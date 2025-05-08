@@ -17,8 +17,7 @@ OlivineCity_MapScriptHeader:
 	warp_event 20, 25, OLIVINE_DESAL_1F, 2
 
 	def_coord_events
-	coord_event 10,  8, 0, OlivineCityRivalGymScript
-	coord_event 33, 23, 0, OlivineCityRivalLighthouseScript
+
 
 	def_bg_events ; fix the signs 
 	bg_event 17,  7, BGEVENT_JUMPTEXT, OlivineCitySignText
@@ -56,45 +55,6 @@ OlivineCity_MapScriptHeader:
 OlivineCityFlyPoint:
 	setflag ENGINE_FLYPOINT_OLIVINE
 	endcallback
-
-OlivineCityRivalGymScript:
-	turnobject PLAYER, UP
-	showemote EMOTE_SHOCK, PLAYER, 15
-	special Special_FadeOutMusic
-	playsound SFX_ENTER_DOOR
-	appear OLIVINECITY_OLIVINE_RIVAL
-	waitsfx
-	playsound SFX_TACKLE
-	applymovement PLAYER, OlivineCityMovementData_ShovePlayerDown
-	applyonemovement OLIVINECITY_OLIVINE_RIVAL, step_down
-	playmusic MUSIC_RIVAL_ENCOUNTER
-	showtext OlivineCityRivalGymText
-	turnobject PLAYER, RIGHT
-	applymovement OLIVINECITY_OLIVINE_RIVAL, OlivineCityMovementData_RivalLeavesGym
-	setscene $1
-	disappear OLIVINECITY_OLIVINE_RIVAL
-	special RestartMapMusic
-	end
-
-OlivineCityRivalLighthouseScript:
-	turnobject PLAYER, UP
-	showemote EMOTE_SHOCK, PLAYER, 15
-	special Special_FadeOutMusic
-	moveobject OLIVINECITY_OLIVINE_RIVAL, 33, 19
-	playsound SFX_ENTER_DOOR
-	appear OLIVINECITY_OLIVINE_RIVAL
-	waitsfx
-	applymovement OLIVINECITY_OLIVINE_RIVAL, OlivineCityMovementData_RivalExitsLighthouse
-	playmusic MUSIC_RIVAL_ENCOUNTER
-	showtext OlivineCityRivalLighthouseText
-	playsound SFX_TACKLE
-	applymovement PLAYER, OlivineCityMovementData_ShovePlayerDown2
-	turnobject PLAYER, LEFT
-	applymovement OLIVINECITY_OLIVINE_RIVAL, OlivineCityMovementData_RivalLeavesLighthouse
-	setscene $1
-	disappear OLIVINECITY_OLIVINE_RIVAL
-	special RestartMapMusic
-	end
 
 OlivineCityYoungster1Text:
 	text "Super Slowking"

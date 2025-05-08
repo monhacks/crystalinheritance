@@ -318,6 +318,7 @@ GauldenrodMart3: ; TMs, HMs
 	dbw TM_HAIL,          20000
 	db -1
 
+TradersLandingMart:
 TradersLandingMart_Items:
 	db 8 ; # items
 	db RARE_CANDY

@@ -43,7 +43,7 @@ LandingTavernNomad1:
 	cont "for relaxing."
 	done
 	
-GladThatsOverText:
+TavernGladThatsOverText:
 	text "Is it true?"
 	line "Lugia perished in"
 	cont "the sea?"

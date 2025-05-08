@@ -368,7 +368,7 @@ Route40Lass2Text:
 
 
 GenericTrainerSwimmermHarold:
-	generictrainer SWIMMER_M, HAROLD, EVENT_BEAT_SWIMMER_M_HAROLD, .SeenText1, .BeatenText1
+	generictrainer SWIMMERM, HAROLD, EVENT_BEAT_SWIMMER_M_HAROLD, .SeenText1, .BeatenText1
 
 .BeatenText1:
 	text "Back to diving!"
@@ -382,7 +382,7 @@ GenericTrainerSwimmermHarold:
 
 
 GenericTrainerSwimmermSimon:
-	generictrainer SWIMMER_M, SIMON, EVENT_BEAT_SWIMMER_M_SIMON, .SeenText2, .BeatenText2
+	generictrainer SWIMMERM, SIMON, EVENT_BEAT_SWIMMER_M_SIMON, .SeenText2, .BeatenText2
 
 .BeatenText2:
 	text "You should see it"
@@ -398,7 +398,7 @@ GenericTrainerSwimmermSimon:
 
 
 GenericTrainerSwimmermRandall:
-	generictrainer SWIMMER_M, RANDALL, EVENT_BEAT_SWIMMER_M_RANDALL, .SeenText3, .BeatenText3
+	generictrainer SWIMMERM, RANDALL, EVENT_BEAT_SWIMMER_M_RANDALL, .SeenText3, .BeatenText3
 
 .BeatenText3:
 	text "Diving is hard"
@@ -414,7 +414,7 @@ GenericTrainerSwimmermRandall:
 
 
 GenericTrainerSwimmermCharlie:
-	generictrainer SWIMMER_M, CHARLIE, EVENT_BEAT_SWIMMER_M_CHARLIE, .SeenText4, .BeatenText4
+	generictrainer SWIMMERM, CHARLIE, EVENT_BEAT_SWIMMER_M_CHARLIE, .SeenText4, .BeatenText4
 
 .BeatenText4:
 	text "You brought me"

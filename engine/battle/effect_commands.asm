@@ -1207,17 +1207,6 @@ CheckAirBalloon:
 	pop bc
 	cp HELD_AIR_BALLOON
 	ret
-	
-CheckRoyalBlessing: ; cf CheckAirBalloon
-; Returns z if the user is holding an Air Balloon
-	push bc
-	push hl
-	call GetOpponentItem
-	pop hl
-	ld a, b
-	pop bc
-	cp HELD_ROYAL_BLESSING
-	ret
 
 BattleCommand_stab:
 ; STAB = Same Type Attack Bonus

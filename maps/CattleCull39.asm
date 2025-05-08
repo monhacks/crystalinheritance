@@ -33,7 +33,7 @@ CattleCull39_MapScriptHeader: ;TODO putthe locations of everything
 	object_const_def
 
 GenericTrainerNomadFMarlene:
-   generictrainer NOMAD_F, MARLENE, EVENT_BEAT_NOMAD_F_MARLENE, NomadMarleneSeenText, NomadMarleneBeatenText
+   generictrainer NOMAD_F, NOMAD_F_MARLENE, EVENT_BEAT_NOMAD_F_MARLENE, NomadMarleneSeenText, NomadMarleneBeatenText
 
 
    text "They fear barbari-"
@@ -57,7 +57,7 @@ NomadMarleneBeatenText:
 
 
 GenericTrainerNomadMDale:
-   generictrainer NOMAD_M, DALE, EVENT_BEAT_NOMAD_M_DALE, NomadDaleSeenText, NomadDaleBeatenText
+   generictrainer NOMAD_M, NOMAD_M_DALE, EVENT_BEAT_NOMAD_M_DALE, NomadDaleSeenText, NomadDaleBeatenText
 
    text "We read storms to"
    line "guide our kin."
@@ -82,7 +82,7 @@ NomadDaleBeatenText:
 
 
 GenericTrainerNomadFRin:
-   generictrainer NOMAD_F, RIN, EVENT_BEAT_NOMAD_F_RIN, NomadRinSeenText, NomadRinBeatenText
+   generictrainer NOMAD_F, NOMAD_F_RIN, EVENT_BEAT_NOMAD_F_RIN, NomadRinSeenText, NomadRinBeatenText
 
    text "Their new healing"
    line "house rises..."
@@ -103,7 +103,7 @@ NomadRinBeatenText:
    done
 
 GenericTrainerNomadMJacob:
-   generictrainer NOMAD_M, JACOB, EVENT_BEAT_NOMAD_M_JACOB, NomadJacobSeenText, NomadJacobBeatenText
+   generictrainer NOMAD_M, NOMAD_M_JACOB, EVENT_BEAT_NOMAD_M_JACOB, NomadJacobSeenText, NomadJacobBeatenText
 
    text "They say their"
    line "routes are safe."

@@ -24,11 +24,11 @@ EerieHamletDorms_MapScriptHeader:
 	object_event 1, 1, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, HamletDormsKurtScript, EVENT_BEAT_AMOS ; TODO fix dialogue 
 	
 	object_event 6,  6, SPRITE_GRANNY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, EerieDormsSleepTalkScript, -1 
-	object_event 13, 3, SPRITE_ACE_TRAINERF, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, HamletDormsNPC1Text, -1
+	object_event 13, 3, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, HamletDormsNPC1Text, -1
 	pokemon_event  12, 3, SNEASEL, -1, -1, PAL_NPC_RED, SneaselText, -1
 
 	object_event 5, 3, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, HamletDormsNPC2Text, -1
-	object_event 3, 3, SPRITE_MEDIUM, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, HamletDormsNPC3Text, -1
+	object_event 3, 3, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, HamletDormsNPC3Text, -1
 
 
 	object_const_def

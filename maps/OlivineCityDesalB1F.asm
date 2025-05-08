@@ -3,7 +3,7 @@ OlivineCityDesalB1F_MapScriptHeader:
 
 
 	def_callbacks
-	warp_event 3, 8, OLIVINE_CITY_DESAL_1F, 3
+	warp_event 3, 8, OLIVINE_DESAL_1F, 3
 
 	def_warp_events
 

@@ -559,3 +559,4 @@ ENDM
 	map_attributes TinderGarden2, TINDER_GARDEN_2, $33, 0
 	
 	map_attributes ShimmerSaddle, SHIMMER_SADDLE,  $5, 0
+	

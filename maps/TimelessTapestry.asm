@@ -53,6 +53,21 @@ TapestryAmos:
 	end
 
 
+TapestryAmosText1:
+	text "Brigaders guard"
+	line "the tower, but my"
+	para "#mon can tel-"
+	line "eport inside."
+	
+	para "Are you ready?"
+	done
+
+TapestryAmosNoText:
+	text "Get ready quick!"
+	line "There's not much"
+	cont "time!"
+	done
+
 TapestrySceneFinale: ; if you helped all the kimono girls then piper gets to come with too 
 	;cf western capital scene ; TODO REVISE 
 	disappear PLAYER

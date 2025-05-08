@@ -25,8 +25,8 @@ SinjohDorms_MapScriptHeader:
 
 	object_event 13, 3, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, SinjohDormsNPC1Text, EVENT_BEAT_KANNA
 	pokemon_event  12, 3, CHIKORITA, -1, -1, PAL_NPC_GREEN, ChikoritaText, -1
-	object_event 5, 3, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, SinjohDormsNPC2Text, EVENT_BEAT_KANNA
-	object_event 3, 3, SPRITE_MEDIUM, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, SinjohDormsNPC3Text, EVENT_BEAT_KANNA
+	object_event 5, 3, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, SinjohDormsNPC2Text, EVENT_BEAT_KANNA
+	object_event 3, 3, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, SinjohDormsNPC3Text, EVENT_BEAT_KANNA
 
 	object_const_def
 

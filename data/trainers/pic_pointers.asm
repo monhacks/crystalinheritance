@@ -29,7 +29,7 @@ TrainerPicPointers::
 	dba Rival0Pic ;rival0
 	dba Rival1Pic ;rival1
 	dba Rival2Pic ;rival2
-	dba Ninja1Pic
+	dba NinjaPic
 	dba Lyra2Pic
 	dba YoungsterPic
 	dba BugCatcherPic

@@ -1091,7 +1091,6 @@ ClastsCradleB1F_BlockData:
 SECTION "EnteisCavern_BlockData", ROMX
 EnteisCavern_BlockData:
 	INCBIN "maps/EnteisCavern.ablk.lz"
-;;;
 
 SECTION "DebugRoom_BlockData", ROMX
 DebugRoom_BlockData:
@@ -1124,7 +1123,8 @@ KimonoCabin5_BlockData:
 SECTION "TinderGarden2_BlockData", ROMX
 TinderGarden2_BlockData:
 	INCBIN "maps/TinderGarden2.ablk.lz"
-	
+
 SECTION "ShimmerSaddle_BlockData", ROMX
-ShimmerSadle_BlockData:
+ShimmerSaddle_BlockData:
 	INCBIN "maps/ShimmerSaddle.ablk.lz"
+	

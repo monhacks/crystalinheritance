@@ -30,16 +30,13 @@ RusalkaRuinsB1F_MapScriptHeader:
 	object_event  20,  4, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptext, CaptainsLog04, -1
 	object_event  4,  2, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptext, CaptainsLog08, -1	
 
-	bg_event  5,  7, BGEVENT_ITEM + X_ATTACK, EVENT_RUSALKA_B1F_X_ATTACK ;TODO
-	bg_event 27, 13, BGEVENT_ITEM + X_SPEED, EVENT_RUSALKA_B1F_X_SPEED ;TODO
+	bg_event  5,  7, BGEVENT_ITEM + X_ATTACK, EVENT_RUSALKA_B1F_X_ATTACK ;
+	bg_event 27, 13, BGEVENT_ITEM + X_SPEED, EVENT_RUSALKA_B1F_X_SPEED ;
 
 
 	object_const_def
 
-
-
-; FORMAT THESE 
-CaptainLog01:
+CaptainsLog01:
 	text "Captain's Log 1"
 	line "March 01"
 	
@@ -72,7 +69,7 @@ CaptainLog01:
 	cont "captured flag."
 	done
 
-CaptainLog02:
+CaptainsLog02:
 	text "Captain's Log 2"
 	line "March 16"
 	
@@ -106,7 +103,7 @@ CaptainLog02:
 	cont "collection."
 	done
 
-CaptainLog03:
+CaptainsLog03:
 	text "Captain's Log 3"
 	line "April 09"
 	
@@ -130,7 +127,7 @@ CaptainLog03:
 	cont "in the cells."
 	done
 
-CaptainLog04:
+CaptainsLog04:
 	text "Captain's Log 4"
 	line "April 12"
 	
@@ -157,7 +154,7 @@ CaptainLog04:
 	cont "disappeared."
 	done
 
-CaptainLog08:
+CaptainsLog08:
 	text "Captain's Log 8"
 	line "June 05"
 	

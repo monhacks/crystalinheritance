@@ -19,9 +19,9 @@ EmpiresExtent_MapScriptHeader:
 
 	def_object_events
 ;a few hisuians who are going to join adrinna's army , done 
-	object_event 1, 15, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, 0, ExtentNPCText1, EVENT_BEAT_AMOS ; HANK 
-	object_event 1, 20, SPRITE_RUIN_MANIAC, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, 0, ExtentNPCText2, EVENT_BEAT_AMOS ; JONES 
-	object_event 2, 23, SPRITE_RUIN_MANIAC, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, 0, ExtentNPCText3, EVENT_BEAT_AMOS ; LELAND 
+	object_event 1, 15, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, ExtentNPCText1, EVENT_BEAT_AMOS ; HANK 
+	object_event 1, 20, SPRITE_HIKER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, ExtentNPCText2, EVENT_BEAT_AMOS ; JONES 
+	object_event 2, 23, SPRITE_HIKER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, ExtentNPCText3, EVENT_BEAT_AMOS ; LELAND 
 ; ninjas	, todo 
 	object_event  9, 10, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerNinja1, EVENT_BEAT_AMOS;shadow
 	object_event 10, 10, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerNinja2, EVENT_BEAT_AMOS;mist

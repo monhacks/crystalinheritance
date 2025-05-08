@@ -43,9 +43,9 @@ DeadCaptainText:
 	done
 
 
-CaptainLog10:
+CaptainsLog10:
 	text "Captain's Log 10"
-	line "Final Entry"
+	line "My Final Entry"
 	
 	para "The stone glows"
 	line "brighter with"
@@ -96,3 +96,4 @@ CaptainLog10:
 	line "better for you"
 	cont "this way."
 	done
+	

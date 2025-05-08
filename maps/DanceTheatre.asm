@@ -28,7 +28,7 @@ DanceTheatre_MapScriptHeader:
 
 	object_const_def
 	const THEATRE_OSTENE_1
-	const THEATRE_KIMONO_GIRL
+	const THEATRE_RIVAL
 	const THEATRE_ELDER
 
 PorygonZText:
@@ -48,6 +48,7 @@ DanceTheatreRivalScript:
     checkevent EVENT_GOT_ROWLET
     iftrue .Rowlet
     winlosstext TheatreRivalWinText, 0
+	setlasttalked THEATRE_RIVAL
     loadtrainer RIVAL1, 15
     startbattle
     dontrestartmapmusic
@@ -56,7 +57,7 @@ DanceTheatreRivalScript:
 
 .Oshawott:
     winlosstext TheatreRivalWinText, 0
-    setlasttalked Lighthouse_RIVAL
+    setlasttalked THEATRE_RIVAL
     loadtrainer RIVAL1, 13
     startbattle
     dontrestartmapmusic
@@ -65,7 +66,7 @@ DanceTheatreRivalScript:
 
 .Rowlet:
     winlosstext TheatreRivalWinText, 0
-    setlasttalked Lighthouse_RIVAL
+    setlasttalked THEATRE_RIVAL
     loadtrainer RIVAL1, 14
     startbattle
     dontrestartmapmusic

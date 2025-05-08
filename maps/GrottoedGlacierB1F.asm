@@ -22,7 +22,7 @@ GrottoedGlacierB1F_MapScriptHeader:
 	def_object_events
 	strengthboulder_event 3, 7, EVENT_BOULDER1_IN_GLACIER
 	strengthboulder_event 11, 12, EVENT_BOULDER2_IN_GLACIER
-	object_event 12,  9, SPRITE_MEDIUM, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerMediumEsther, EVENT_BEAT_KANNA
+	object_event 12,  9, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerMediumEsther, EVENT_BEAT_KANNA
 	object_event  4, 19, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerSageVirgil, EVENT_BEAT_KANNA
 ; TODO add some items 
 
