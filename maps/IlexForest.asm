@@ -301,7 +301,7 @@ IlexForestKurtEngineerScript:
 	opentext
 	writetext CamdenLeavingText
 	waitbutton
-	verbosegiveitem ABILITY_PATCH
+	verbosegiveitem ABILITYPATCH
 	closetext
 	applymovement ILEX_FOREST_CAMDEN, CamdenExitMovement
 	disappear ILEX_FOREST_CAMDEN
@@ -624,7 +624,7 @@ IlexForestCelebiEventScript:
 	writetext WhatIsNaturalText
 	waitbutton
 	closetext
-	setevent SUMMONED_CELEBI_IN_ILEX
+	setevent EVENT_SUMMONED_CELEBI_IN_ILEX
 	setevent EVENT_ILEX_SHRINE_CELEBI
 	setevent EVENT_TAMMY_HOLLYS_HOLT
 	opentext
@@ -639,7 +639,7 @@ IlexForestCelebiEventScript:
 	end
 
 IlexForestShrineScript:
-	checkevent SUMMONED_CELEBI_IN_ILEX
+	checkevent EVENT_SUMMONED_CELEBI_IN_ILEX
 	iffalse .BeautifulShrine
 	opentext
 	writetext AskToTimeTravelText

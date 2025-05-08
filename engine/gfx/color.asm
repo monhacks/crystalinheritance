@@ -467,7 +467,7 @@ GetPlayerOrMonPalettePointer:
 	and a
 	jr nz, GetMonNormalOrShinyPalettePointer
 
-	ld hl, Lyra1Palette
+	ld hl, Lyra2Palette ; formerly lyra1palette 
 	ld a, [wBattleType]
 	cp BATTLETYPE_TUTORIAL
 	ret z

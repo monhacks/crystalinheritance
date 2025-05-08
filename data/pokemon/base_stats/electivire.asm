@@ -8,7 +8,7 @@
 	db ELECTIRIZER ; item 2
 	dn GENDER_F25, 4 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/electivire/front.dimensions"
-	abilities_for ELECTIVIRE, MOTOR_DRIVE, MOTOR_DRIVE, VITAL_SPIRIT
+	abilities_for ELECTIVIRE, MOTOR_DRIVE, MOTOR_DRIVE, IRON_FIST
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_HUMANSHAPE, EGG_HUMANSHAPE ; egg groups
 

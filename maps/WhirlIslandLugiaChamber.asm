@@ -16,7 +16,7 @@ WhirlIslandLugiaChamber_MapScriptHeader:
 
 	def_object_events
 	object_event  9,  9, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, LUGIA, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_WHIRL_ISLAND_LUGIA_CHAMBER_LUGIA
-	object_event  9, 11, SPRITE_KURT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, ObjectEvent, EVENT_GOT_WHIRLPOOL_WHIRL_ISLANDS ;
+	object_event  9, 11, SPRITE_KURT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, ObjectEvent, EVENT_WHIRL_ISLAND_LUGIA_CHAMBER_KURT ;
 	object_event  9, 10, SPRITE_BALL_CUT_FRUIT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LUGIA_POKEBALL
 	
 	
@@ -31,23 +31,26 @@ WhirlIslandKurtLugiaScript:
 	end
 	
 .Script:
-	applyonemovement PLAYER, UP
+	applyonemovement PLAYER, step_up
 	showemote EMOTE_BOLT, WHIRLISLANDLUGIACHAMBER_KURT, 15
 	showtext KurtLugiaText1
 	appear WHIRLISLANDLUGIACHAMBER_BALL
 	pause 30
 	disappear WHIRLISLANDLUGIACHAMBER_LUGIA
+	setevent EVENT_WHIRL_ISLAND_LUGIA_CHAMBER_LUGIA
 	pause 30
 	disappear WHIRLISLANDLUGIACHAMBER_BALL
 	pause 30
 	turnobject WHIRLISLANDLUGIACHAMBER_KURT, DOWN
 	showtext KurtLugiaText2
-	applymovement KurtLeavesMovement, WHIRLISLANDLUGIACHAMBER_KURT
+	applymovement WHIRLISLANDLUGIACHAMBER_KURT, KurtLeavesMovement
 	disappear WHIRLISLANDLUGIACHAMBER_KURT
 	setscene $1 ; need to add to scenes
+	setevent EVENT_LUGIA_POKEBALL
+	setevent EVENT_WHIRL_ISLAND_LUGIA_CHAMBER_KURT
 	end
 	
-KurtBallText1:
+KurtLugiaText1:
 	text "Kurt: Lugia, give"
 	line "me your power!"
 	done

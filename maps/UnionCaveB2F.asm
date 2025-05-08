@@ -27,7 +27,7 @@ UnionCaveB2F_MapScriptHeader: ; todo: text
 
 	itemball_event 14, 19, GEODE, 5, EVENT_UNION_CAVE_B2F_ELIXIR ; 
 	itemball_event 15, 25, HYPER_POTION, 1, EVENT_UNION_CAVE_B2F_HYPER_POTION ; OK 
-	itemball_event 16, 31, ABILITY_PATCH, 5, EVENT_UNION_CAVE_B2F_ABILITY; 
+	itemball_event 16, 31, ABILITYPATCH, 5, EVENT_UNION_CAVE_B2F_ABILITY; 
 
 
 	object_const_def

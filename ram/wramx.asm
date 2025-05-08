@@ -1113,7 +1113,7 @@ wTinTowerOld3FSceneID:: db ; vermillion port
 wWesternCapitalSceneID:: db ; wVictoryRoad2FSceneID:: db
 wClastsCradleB1FSceneID:: db ; wVioletGym
 wGauldenrodSceneID:: db ; willsroomsceneid
-wUnusedYetSceneID:: db ; wisetrios
+wWhirlIslandLugiaChamberSceneID:: db ; wisetrios
 wRadioTower1FSceneID:: db ; yellowforest sceneid ; sceneids should only go through 1117 line. TODO 
 
 ; fight counts

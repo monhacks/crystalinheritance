@@ -18,7 +18,7 @@ WhispersTapestryGate_MapScriptHeader:
 
 
 	def_object_events
-	object_event 	2, 	2, SPRITE_KIMONO_GIRL, 	SPRITEMOVEDATA_WANDER, 			1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BatonPassTutor, -1 
+	object_event 	2, 	2, SPRITE_KIMONO_GIRL, 	SPRITEMOVEDATA_WANDER, 			1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TapestryBatonPassScript, -1 
 
 
 	object_const_def

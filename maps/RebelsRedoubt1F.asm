@@ -3,7 +3,7 @@ RebelsRedoubt1F_MapScriptHeader: ; need a callback a la ruins of alph
 
 
 	def_callbacks
-; callback 
+	callback MAPCALLBACK_TILES, RebelRedoubt1FCallback
 
 	def_warp_events
 	warp_event 3, 7, EERIE_HAMLET, 1
@@ -29,6 +29,14 @@ RebelsRedoubt1F_MapScriptHeader: ; need a callback a la ruins of alph
 	const REDOUBT_1F_POKEBALL
 	const REDOUBT_1F_NINJA_2
 	const REDOUBT_1F_KURT
+	
+RebelRedoubt1FCallback:
+	checkevent EVENT_RR_OPENED_HATCH
+	iffalse .DoorClosed
+	changeblock 6, 2, $1E
+.DoorClosed:
+	endcallback	
+	
 	
 RedoubtKnockOffTutorScript:
 	faceplayer
@@ -179,7 +187,7 @@ Redoubt1FScript:
 	showemote EMOTE_QUESTION, REDOUBT_1F_NINJA_2, 10
 	showtext RR_1F_NinjaText2
 	setevent EVENT_RR_OPENED_HATCH
-	changeblock x, y, $00
+	changeblock 6, 2, $1E
 	reloadmappart
 	; sfx for changing the map part
 	showtext RR_1F_KurtText2
