@@ -79,6 +79,10 @@ Route39MiltankText:
 
 Route39FarmerScript:
 	faceplayer
+	checkevent EVENT_GAVE_MOOMOO_MILKS
+	iftrue_jumptext CowgirlThanksAgainText
+	checkevent EVENT_BEAT_COWGIRL_ANNIE
+	iftrue_jumptext AfterCowgirlAnnieBattleText
 	checkevent EVENT_MILTANK_SUICUNE
 	iftrue CowgirlBattlesPlayer
 	checkevent EVENT_MILTANK_COWGIRL
@@ -104,6 +108,7 @@ Route39LostMiltankText:
 CowgirlThanksPlayer:
 	showtext CowgirlThanksPlayerText
 	verbosegiveitem MOOMOO_MILK, 12
+	setevent EVENT_GAVE_MOOMOO_MILKS
 	end
 
 CowgirlThanksPlayerText:
@@ -116,12 +121,39 @@ CowgirlThanksPlayerText:
 	line "these as thanks."
 	done
 
+CowgirlThanksAgainText:
+	text "Thanks again!"
+	done
+
 CowgirlBattlesPlayer: ; todo 
 	showtext CowgirlBattlesPlayerText
-	winlosstext __, __
-	loadtrainer COWGIRL, ??
-	
+	winlosstext CowgirlWinLossText, 0
+	loadtrainer COWGIRL, ANNIE
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_COWGIRL_ANNIE
+	jumptext AfterCowgirlAnnieBattleText
 
+CowgirlBattlesPlayerText:
+	text "I saw you let her"
+	line "out of here!"
+	
+	para "I'll get you for"
+	line "that, rustler!"
+	done
+
+CowgirlWinLossText:
+	text "This ain't your"
+	line "first rodeo."
+	done
+
+AfterCowgirlAnnieBattleText:
+	text "Dirty hands, "
+	line "clean money."
+	
+	para "Can you say the"
+	line "same?"
+	done
 
 Route39MiltankScript:
 	checkevent EVENT_MILTANK_COWGIRL
@@ -161,7 +193,7 @@ Route39MiltankScript:
 	applymovement ROUTE_39_MILTANK, MiltankMovement4 ; THREE LEFT
 	applymovement PLAYER, PlayerFollowMiltank ; THREE left
 	applymovement ROUTE_39_MILTANK, MiltankMovement4 ; THREE LEFT
-	applymovment PLAYER, PlayerFollowMiltank ; THREE left
+	applymovement PLAYER, PlayerFollowMiltank ; THREE left
 	applymovement ROUTE_39_MILTANK, MiltankMovement4 ; THREE LEFT
 	applymovement ROUTE_39_SUICUNE, SuicuneMovement ; three right, down one 
 	setevent EVENT_MILTANK_SUICUNE
@@ -204,8 +236,6 @@ NoSpookMiltankText:
 	text "Not yet."
 	done
 	
-
-
 MiltankMovement1: 
 	fix_facing
 	fast_jump_step_up

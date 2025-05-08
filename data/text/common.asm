@@ -3254,7 +3254,7 @@ _InitialOptionsText::
 	cont "3.0.0 by dwg."
 		
 	para "Please choose how"
-	line "you want to play.""
+	line "you want to play."
 	prompt
 
 SECTION "_ElmText1", ROMX ; being used, i think in intro_meu.asm as elmtext1?

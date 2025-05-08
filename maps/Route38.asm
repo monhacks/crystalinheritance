@@ -34,11 +34,7 @@ PokefanMRobertSeenText:
 PokefanMRobertBeatenText:
 	text "Sorry, thought"
 	line "you were with the"
-	cont "factory farm."
-	
-	para "We're gathering"
-	line "evidence against"
-	cont "Moomoo farms."
+	cont "Moomoo Farms."
 	done
 
 GenericTrainerPokefanMCarter:
@@ -63,18 +59,14 @@ GenericTrainerPokefanFRuth:
 PokefanFRuthBeatenText:
 	text "The farm keeps"
 	line "expanding. Soon,"
-	cont "they'll need this"
-	cont "Route too."
+	para "they'll need this"
+	line "Route too."
 	done
 
 PokefanFRuthSeenText:
 	text "Battle me? We've"
 	line "been out here for"
 	cont "ages now."
-	
-	para "I'm even doing"
-	line "math just to stay"
-	cont "awake..."
 	done
 
 GenericTrainerPokefanFJaime:
@@ -84,25 +76,20 @@ PokefanFJaimeBeatenText:
 	text "Where do you"
 	line "suppose all the"
 	cont "Tauros go?"
-	
-	para "There's only one"
-	line "at the ranch."
 	done
 
 PokefanFJaimeSeenText:
 	text "Meat is murder!"
 	done
 
-GenericTrainerPokefanFJaime:
+GenericTrainerOfficerMDirk:
 	generictrainer OFFICERM, DIRK, EVENT_BEAT_OFFICER_DIRK, OfficerDirkSeenText, OfficerDirkBeatenText
 
 OfficerDirkBeatenText:
 	text "Ah, just a good"
-	line "kid from Azalea."
-	
-	para "Carry on."
+	line "kid from Azalea."	
+	cont "Carry on."
 	done
-
 
 OfficerDirkSeenText:
 	text "Halt! No"
@@ -112,7 +99,6 @@ OfficerDirkSeenText:
 
 Route38SignText:
 	text "No trespassing!"
-	
-	para "-MooMoo Farms"
+	line "-MooMoo Farms"
 	done
 

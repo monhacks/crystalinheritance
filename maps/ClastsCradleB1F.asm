@@ -31,7 +31,7 @@ ClastsCradleB1F_MapScriptHeader:
 ; CUTSCENE 2
 	object_event   4,  16, SPRITE_ADRINNA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_ADRINNA_MINE
 	object_event   5,  15, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, HEATRAN, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_CC_HEATRAN
-	object_event   5,  26, SPRITE_KURT, SPRITEMOVEDATA_STANDING_LEFT 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_KURT_MINE_2
+	object_event   5,  26, SPRITE_KURT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_KURT_MINE_2
 ; KURT TO HEAL YOU 
 	object_event   8,  5, SPRITE_KURT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 1, KurtScriptCC, EVENT_BEAT_ADRINNA_MINE
 ; TRAINERS, TODO 
@@ -140,7 +140,7 @@ CradleScene1_Mejimi:
 	showtext CradleCutscene_Text11
 	turnobject CRADLE_CUTSCENE_MEJIMI, DOWN
 	showtext CradleCutscene_Text12
-	applymovement CC_MejimiMoves2 ; 4 D 5 raw
+	applymovement CRADLE_CUTSCENE_MEJIMI, CC_MejimiMoves2 ; 4 D 5 raw
 	pause 20
 	showtext CradleCutscene_Text13
 	pause 20

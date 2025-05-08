@@ -35,7 +35,7 @@ Route41_MapScriptHeader:
 	object_event 25, 29, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBeautyBridget, -1;;
 	object_event 22, 27, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route41MatronScript, -1
 ;scientists collecting data for Olivine , done
-	object_event 27, 41 SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_RIGHT, 1, 1, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerScientistBraydon, EVENT_BEAT_CHUCK;;
+	object_event 27, 41, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_RIGHT, 1, 1, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerScientistBraydon, EVENT_BEAT_CHUCK;;
 	object_event 24, 44, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerScientistCarl, EVENT_BEAT_CHUCK;;
 	object_event 23, 44, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerScientistDexter, EVENT_BEAT_CHUCK;;
 
@@ -139,14 +139,11 @@ Route41WaitText:
 	done
 
 GenericTrainerSwimmermMathew:
-	generictrainer SWIMMER_M, MATHEW, EVENT_BEAT_SWIMMERM_MATHEW, .SeenText10, .SeenText10
+	generictrainer SWIMMER_M, MATHEW, EVENT_BEAT_SWIMMERM_MATHEW, .SeenText10, .BeatenText10
 
-.SeenText10:
-	text "OK: the secret."
-	line "What Chuck has at"
-	cont "the lighthouse?"
-	
-	para "..."
+.BeatenText10:
+	text "OK: what's at the"
+	line "the lighthouse?"
 	
 	para "It's a #mon"
 	line "that washed up in"
@@ -159,7 +156,7 @@ GenericTrainerSwimmermMathew:
 	cont "secret!"
 	done
 
-GenericTrainerSwimmermKirk:
+GenericTrainerSwimmermBerke:
 	generictrainer SWIMMER_M, BERKE, EVENT_BEAT_SWIMMERM_BERKE, .SeenText9, .BeatenText9
 
 .BeatenText9:
@@ -209,7 +206,6 @@ GenericTrainerGentlemanCamus:
 	line "be on the sea!"
 	done
 
-
 Route41MatronScript:
 	faceplayer
 	opentext
@@ -236,7 +232,6 @@ Route41Healed:
 	text "Ta-ta now!"
 	done
 
-
 GenericTrainerBeautyOlivia:
 	generictrainer BEAUTY, OLIVIA, EVENT_BEAT_BEAUTY_OLIVIA, .SeenText6, .BeatenText6
 
@@ -252,7 +247,6 @@ GenericTrainerBeautyOlivia:
 	line "you win, will you"
 	cont "do me a favor?"
 	done
-
 
 GenericTrainerBeautyCharlotte:
 	generictrainer BEAUTY, CHARLOTTE, EVENT_BEAT_BEAUTY_CHARLOTTE, .SeenText5, .BeatenText5
@@ -282,7 +276,7 @@ GenericTrainerBeautyBridget:
 	line "secret beach!"
 	done
 
-GenericTrainerScientistCarl:
+GenericTrainerScientistBraydon:
 	generictrainer SCIENTIST, BRAYDON, EVENT_BEAT_SCIENTIST_BRAYDON, .SeenText3, .BeatenText3
 
 .BeatenText3:
@@ -310,8 +304,6 @@ GenericTrainerScientistCarl:
 	text "Hey, this is our"
 	line "weather station!"
 	done
-
-
 
 GenericTrainerScientistDexter:
 	generictrainer SCIENTIST, DEXTER, EVENT_BEAT_SCIENTIST_DEXTER, .SeenText1, .BeatenText1

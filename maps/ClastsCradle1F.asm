@@ -233,11 +233,3 @@ CC_1F_SwitchBack:
 	clearevent EVENT_CRADLE_2F_CART_1
 	reloadmappart
 	jumptext CartMovedText 
-
-CartNoSwitchText:
-	text "Left it be."
-	done
-
-CartMovedText:
-	text "The cart moved!"
-	done
