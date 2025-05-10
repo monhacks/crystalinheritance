@@ -353,3 +353,165 @@ BTR_PlayerToFrontMovement:
 	step_left
 	step_down
 	step_end
+
+TowerRoofMejimiText1_0: 
+	text "Mejimi: Adrinna,"
+	line "why are you with"
+	cont "this child?"
+	done
+
+TowerRoofText2_4: 
+	text "Kurt: <PLAYER>,"
+	line "what’s going on?"
+	done
+
+TowerRoofText2_5: 
+	text "Adrinna: <PLAYER>"
+	line "is done with your"
+	cont "traditions."
+	
+	para "Soon, all Johto"
+	line "will see what a"
+	para "waste all this"
+	line "pageantry is."
+	
+	para "Only earned power"
+	line "deserves to stand"
+	cont "on these towers."
+	
+	para "I'm coming for"
+	line "you, Mejimi!"
+	done
+
+TowerRoofText2_7: 
+	text "Mejimi: Traitor!"
+	line "I'll start with"
+	cont "you, <PLAYER>!"
+	done
+
+TowerRoofText2_8: 
+	text "Mejimi: My "
+	line "#mon… How "
+	cont "could I lose?"
+	done
+	
+TowerRoofText2_8_1: 
+	text "Mejimi: Impossible."
+	line "I must convene"
+	cont "with the sages."
+	done
+
+TowerRoofText2_9: 
+	text "Kurt: <PLAYER>, is"
+	line "this who you are?"
+	done
+
+TowerRoofText2_10: 
+	text "Adrinna: Johto!"
+	line "Anyone can rise"
+	para "to the level of"
+	line "the emperor, with"
+	para "the right skills!"
+	line "See <PLAYER>,"
+	para "from a no-name"
+	line "town. It's time"
+	para "to let the energy"
+	line "out of every one"
+	cont "of you."
+
+	para "This is how we"
+	line "repel the out-"
+	cont "siders."
+	done
+
+TowerRoofText2_11: 
+	text "Kurt: No! <PLAYER>,"
+	line "I was misguided."
+
+	para "I wanted the fu-"
+	line "ture to look like"
+	cont "my past."
+
+	para "But I forgot that"
+	line "traditions serve"
+	cont "us, not the other"
+	cont "way around."
+	
+	para "If I'd listened to"
+	line "<RIVAL> earlier,"
+	para "we might've saved"
+	line "more of Ilex."
+	done
+
+TowerRoofText2_12: 
+	text "Adrinna: Enough."
+	line "Show him out." 
+	done
+
+TowerRoofText2_13: 
+	text "Kurt: I will"
+	line "fight for my"
+	cont "home!"
+
+TinTowerRoofText2_Celebi: 
+	text "Humans are not "
+	line "above or below "
+	cont "nature - "
+	
+	para "you are nature."
+	line "Just as a forest"
+	cont "needs growth and"
+	cont "decay,"
+	
+	para "society needs"
+	line "tradition and"
+	cont "innovation."
+	
+	para "I tried to show"
+	line "you that all"
+	cont "generations are"
+	
+	para "part of an end-"
+	line "less cycle - "
+	
+	para "but only <RIVAL>"
+	line "and Kurt learned."
+
+	para "You failed me,"
+	line "<PLAYER>."
+	done
+
+TowerRoofText2_16: 
+	text "Kurt: So this"
+	line "is the end…"
+
+TowerRoofText2_16_2: 
+	text "Kurt: I… I don't"
+	line "know where I go"
+	cont "from here."
+	
+	para "First my son,"
+	line "then my home,"
+	cont "and now my "
+	cont "grandchild."
+
+	para "So long, <PLAYER>."
+	line "I know that deep"
+	para "down, there's a"
+	line "good person try-"
+	cont "ing to do the "
+	cont "right thing."
+	
+	para "I can't guide"
+	line "you any more."	
+
+TowerRoofText2_18: 
+	text "Adrinna: Thank"
+	line "you, Indrage."
+	
+	para "<PLAYER>, it's"
+	line "time to let the"
+	cont "strong rise to"
+	cont "the top."
+	done
+	
