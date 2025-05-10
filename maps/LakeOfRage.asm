@@ -31,10 +31,10 @@ LakeOfRage_MapScriptHeader:
 ;trainers
 	object_event  4,  4, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, WesleyScript, -1
 	pokemon_event 3,  4, MEOWTH, -1, -1, PAL_NPC_BROWN, WesleyMeowthText, -1
-	object_event  5, 23, SPRITE_SIGHTSEERM, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSightseerMBlaise, -1
-	object_event  3, 14, SPRITE_SIGHTSEERM, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSightseerMGareth, -1
-	object_event  23, 29, SPRITE_SIGHTSEERF, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSightseerFKamila, -1
-	object_event  28, 26, SPRITE_SIGHTSEERF, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSightseerFNoelle, -1
+	object_event  5, 23, SPRITE_SIGHTSEER_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSightseerMBlaise, -1
+	object_event  3, 14, SPRITE_SIGHTSEER_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSightseerMGareth, -1
+	object_event  23, 29, SPRITE_PICNICKER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSightseerFKamila, -1
+	object_event  28, 26, SPRITE_PICNICKER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSightseerFNoelle, -1
 	object_event  18, 30,  SPRITE_POKEMANIAC, SPRITEMOVEDATA_STANDING_LEFT, 1, 1, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerPokemaniacCalvin, -1
 	object_event  33, 22,  SPRITE_POKEMANIAC, SPRITEMOVEDATA_STANDING_LEFT, 1, 1, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerPokemaniacShane, -1
 ;itemballs
@@ -65,7 +65,7 @@ LakeHursalunaScript:
 	applymovement LAKEOFRAGE_HURSALUNA, LakeHursalunaApproachesMovement2
 	earthquake 20	
 	loadvar VAR_BATTLETYPE, BATTLETYPE_TRAP
-	loadwildmon H__URSALUNA, 50
+	loadwildmon URSALUNA, 45
 	startbattle
 	disappear LAKEOFRAGE_HURSALUNA
 	reloadmapafterbattle
@@ -373,7 +373,7 @@ WesleyMeowthText:
 	done
 
 GenericTrainerSightseerFKamila:
-	generictrainer SIGHTSEER_F, KAMILA, EVENT_BEAT_SIGHTSEERF_KAMILA, .SeenText1, .BeatenText1
+	generictrainer SIGHTSEERF, KAMILA, EVENT_BEAT_SIGHTSEERF_KAMILA, .SeenText1, .BeatenText1
 
 .BeatenText1:
 	text "My #mon keep"
@@ -390,7 +390,7 @@ GenericTrainerSightseerFKamila:
 	done
 
 GenericTrainerSightseerFNoelle:
-	generictrainer SIGHTSEER_F, NOELLE, EVENT_BEAT_SIGHTSEERF_NOELLE, .SeenText2, .BeatenText2
+	generictrainer SIGHTSEERF, NOELLE, EVENT_BEAT_SIGHTSEERF_NOELLE, .SeenText2, .BeatenText2
 
 .BeatenText2:
 	text "You can find your"
@@ -403,7 +403,7 @@ GenericTrainerSightseerFNoelle:
 	done
 	
 GenericTrainerSightseerMBlaise:
-	generictrainer SIGHTSEER_F, BLAISE, EVENT_BEAT_SIGHTSEERM_BLAISE, .SeenText3, .BeatenText3
+	generictrainer SIGHTSEERM, BLAISE, EVENT_BEAT_SIGHTSEERM_BLAISE, .SeenText3, .BeatenText3
 
 .BeatenText3:
 	text "You've got some"
@@ -417,7 +417,7 @@ GenericTrainerSightseerMBlaise:
 	done
 
 GenericTrainerSightseerMGareth:
-	generictrainer SIGHTSEER_F, GARETH, EVENT_BEAT_SIGHTSEERM_GARETH, .SeenText4, .BeatenText4
+	generictrainer SIGHTSEERM, GARETH, EVENT_BEAT_SIGHTSEERM_GARETH, .SeenText4, .BeatenText4
 
 .BeatenText4:
 	text "You never know"

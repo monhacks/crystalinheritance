@@ -24,22 +24,21 @@ BrassTower4FWarp_MapScriptHeader: ;	def_scene_scripts
 	object_const_def
 	
 BrassTowerAdrinna:
-	faceplayer
 	checkevent EVENT_BEAT_ADRINNA_TOWER
-	iftrue_jumptext .AfterText
+	iftrue_jumptextfaceplayer AdrinnaAfterText
 	checkpoke CELEBI
 	iftrue .DeclinedCelebi 
-	showtext .SeenText
+	showtextfaceplayer .SeenText
 	pause 10
 	yesorno
 	iftrue .YesToAdrinna
 .Declined:
-	showtext .NoToAdrinnaText
-	winlosstext .BeatenText, 0
+	showtext NoToAdrinnaText
+	winlosstext BeatenTextAdrinnaWarp, 0
 	loadtrainer ADRINNA, 3
 	startbattle
 	reloadmapafterbattle
-	showtext .AfterText
+	showtext AdrinnaAfterText
 	setevent EVENT_BEAT_ADRINNA_TOWER
 	end
 
@@ -49,11 +48,11 @@ BrassTowerAdrinna:
 	end
 
 .YesToAdrinna:
-	showtext .AreYouSure
+	showtext AreYouSureAdrinna
 	yesorno
 	iffalse .Declined ; jumps above
 	setevent EVENT_ACCEPTED_ADRINNA
-	showtext .AdrinnaTakesOverText
+	showtext AdrinnaTakesOverText
 	setevent EVENT_BEAT_ADRINNA_TOWER
 	end
 
@@ -124,7 +123,7 @@ AdrinnaSeenText0:
 	cont "a cult of self."
 	done
 
-.BeatenText:
+BeatenTextAdrinnaWarp:
 	text "Unbelievable."
 	line "I gathered the"
 	cont "strongest #mon"
@@ -134,7 +133,7 @@ AdrinnaSeenText0:
 	cont "it overcome me?"
 	done
 
-.AfterText:
+AdrinnaAfterText:
 	text "Goodbye <PLAYER>."
 	line "I know that one"
 	cont "day, you'll look"
@@ -147,7 +146,7 @@ AdrinnaSeenText0:
 	cont "had the chance."
 	done
 
-.AdrinnaTakesOverText:
+AdrinnaTakesOverText:
 	text "Excellent. Meet"
 	line "me on the roof."
 	para "We need to show"
@@ -156,14 +155,14 @@ AdrinnaSeenText0:
 	cont "manipulates them."
 	done
 
-.AreYouSure:
+AreYouSureAdrinna:
 	text "Really? You will"
 	line "join me in burn-"
 	cont "ing down Johto's"
 	cont "traditions?"
 	done
 
-.NoToAdrinnaText:
+NoToAdrinnaText:
 	text "Disappointing."
 	line "No matter - I'll"
 	cont "dispatch you, and"

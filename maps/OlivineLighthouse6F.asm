@@ -228,7 +228,6 @@ LighthouseKurtScript:
 	pause 30
 	special RestartMapMusic
 	special Special_FadeInQuickly
-	showtext LighthouseKurtText2
 	end 
 
 LighthouseKurtText0:

@@ -47,7 +47,7 @@ TradersLanding_MapScriptHeader:
 	object_event 5, 10, SPRITE_KURT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1 ; ADD TO INITIALIZE EVENTS
 
 	object_event 20, 25, SPRITE_BRIGADER, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, jumptextfaceplayer, TL_Brigader_Script, EVENT_BEAT_KENSEY_PORT
-	object_event 21, 25, SPRITE_BRIGADER, 	SPRITEMOVEDATA_STANDIING_UP, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, jumptextfaceplayer, TL_Brigader_Script, EVENT_BEAT_KENSEY_PORT
+	object_event 21, 25, SPRITE_BRIGADER, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, jumptextfaceplayer, TL_Brigader_Script, EVENT_BEAT_KENSEY_PORT
 
 	object_event 10, 19, SPRITE_FIREBREATHER, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LandingEggScript, EVENT_BEAT_KENSEY_PORT
 
@@ -442,7 +442,7 @@ TL_Move_Kurt_1:
 LandingBarbeauScript:
 	faceplayer
 	checkevent EVENT_BEAT_KENSEY_PORT
-	iftrue .AfterKensey
+	iftrue AfterKensey
 	opentext
 	writetext BarbeauTimeTravelText
 	yesorno
@@ -471,7 +471,7 @@ BarbeauNoTimeTravelText:
 
 
 
-.AfterKensey:
+AfterKensey:
 	checkpoke LUGIA
 	iftrue_jumptextfaceplayer BarbeauLugiaText
 	jumpthisopenedtext

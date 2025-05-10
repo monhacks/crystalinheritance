@@ -3599,7 +3599,7 @@ UrsalunaEvosAttacks:
 	db 29, SLASH
 	db 34, REST
 	db 38, EARTHQUAKE ; Snore → egg move
-	db 38, DOUBLE_EDGE
+	db 43, DOUBLE_EDGE
 	db 48, SCARY_FACE
 	db 55, CRUNCH
 	db 60, CLOSE_COMBAT ; Hammer Arm → new move

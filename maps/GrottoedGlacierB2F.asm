@@ -258,3 +258,18 @@ KannaTellAmosText:
 	para "about your green"
 	line "minion, Adrinna."
 	done
+
+GlacierBasc_Move1: ; just in front of adrinna
+	fix_facing
+	fast_jump_step_down
+	fast_jump_step_down
+	step_end	
+
+GlacierBasc_Move2: ; in front of player 
+	fix_facing
+	fast_jump_step_down
+	step_end
+	
+BasculegionText:
+	text "Baskaa!"
+	done

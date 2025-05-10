@@ -15,7 +15,7 @@ ShimmerSaddle_MapScriptHeader:
 ; third cave set
 	warp_event 48, 3, SHIMMER_SADDLE, 5 ; BACKWARDS ; 7 
 	warp_event 52, 3, SHIMMER_SADDLE, 10 ; 8 
-	warp_event 44, 3, SHIMMER_sADDLE, 16 ; top left  ; 9 
+	warp_event 44, 3, SHIMMER_SADDLE, 16 ; top left  ; 9 
 ; fourth cave set
 	warp_event 22, 13, SHIMMER_SADDLE, 8 ; 10 ; progress 
 	warp_event 24, 13, SHIMMER_SADDLE, 14 ; 11 
@@ -187,7 +187,7 @@ ShimmerSaddle_Scene3_ManHZ:
 	showtext ShimmerGramps2Text4
 	stopfollow
 	applyonemovement SHIMMER_GRAMPS_2, step_right
-	turnobject SHIMMER_GRAMPS_2, left
+	turnobject SHIMMER_GRAMPS_2, LEFT
 	applymovement PLAYER, step_up
 	setlasttalked SHIMMER_HZ_3
 	loadvar VAR_BATTLETYPE, BATTLETYPE_TRAP
@@ -197,7 +197,7 @@ ShimmerSaddle_Scene3_ManHZ:
 	reloadmapafterbattle
 	setevent EVENT_SHIMMER_HZ_3
 	setscene $2
-	turnobject PLAYER, right
+	turnobject PLAYER, RIGHT
 	showtext ShimmerGramps2Text5
 	verbosegiveitem SHINY_STONE
 	warp GAULDENROD, 15, 17 

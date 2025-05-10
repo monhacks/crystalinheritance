@@ -1026,7 +1026,7 @@ wMooMooBerries:: db
 wUndergroundSwitchPositions:: db
 wFarfetchdPosition:: db
 
-; map triggers
+; map triggers, NEED A CORRESPONDING ONE IN DATA/MAPS/SCENES.ASM
 wAlways0SceneID:: db ; used 
 wAzaleaTownSceneID:: db ; used 
 wStadiumGroundsSceneID:: db ; formerly wbattlefacilitysceneid
@@ -1035,7 +1035,7 @@ wAnarresHoltGateSceneID:: db ; used
 wBellchimeTrailSceneID:: db ; used 
 wCharcoalKilnSceneID:: db ; used 
 wBurnedTower1FSceneID:: db 
-wBurnedTowerB1FSceneID:: db
+wBurnedTowerB1FSceneID:: db ; UNUSED 
 wTinderGardenSceneID:: db ; used 
 wAnarresTower3FSceneID:: db ; used 
 wAzaleaPokecenter1FSceneID:: db  ; used 
@@ -1102,7 +1102,7 @@ wHoltCoastGateSceneID:: db ; wSeagallopFerryNavelGateSceneID:: db
 wRoute35GoldenrodGateSceneID:: db ; wSeagallopFerryShamoutiGateSceneID:: db
 wSeagallopFerryVermilionGateSceneID:: db
 wLandingDocksSceneID:: db ; wShamoutiHotelRestaurantSceneID:: db
-wSproutTower3FSceneID:: db ; maybe used? 
+wSproutTower3FSceneID:: db ; used
 wTeamRocketBaseB2FSceneID:: db
 wGrottoedGlacierB2FSceneID:: db ; wTeamRocketBaseB3FSceneID:: db ; 
 wTinTower1FSceneID:: db

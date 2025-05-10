@@ -196,3 +196,38 @@ Kurt_LighthouseText1:
 	line "brutally, for his" ; brutal 
 	cont "own plans!"
 	done
+
+TrainerScientistJoseph:
+	generictrainer SCIENTIST, JOSEPH, EVENT_BEAT_ENGINEER_JOSEPH, .SeenText1, .BeatenText1
+
+.BeatenText1:
+	text "..." ; todo 
+	done
+
+.SeenText1:
+	text "..." ; todo 
+	done
+
+
+TrainerBlackBeltWai:
+	generictrainer BLACKBELT, WAI, EVENT_BEAT_BLACKBELT_WAI, .SeenText2, .BeatenText2
+	
+.BeatenText2:
+	text "..." ; todo 
+	done
+
+.SeenText2:
+	text "..." ; todo 
+	done
+
+TrainerEngineerLang:
+	generictrainer ENGINEER, LANG, EVENT_BEAT_ENGINEER_JOSEPH, .SeenText3, .BeatenText3
+
+.BeatenText3:
+	text "..." ; todo 
+	done
+
+.SeenText3:
+	text "..." ; todo 
+	done
+

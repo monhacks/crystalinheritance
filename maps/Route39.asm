@@ -17,7 +17,7 @@ Route39_MapScriptHeader:
 
 	def_object_events
 	object_event  9, 26, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, MILTANK, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route39MiltankScript, EVENT_ROUTE39_MILTANK
-	object_event  0, 20, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, SUICUNE, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SuicuneScript, EVENT_ROUTE39_MILTANK
+	object_event  0, 20, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, SUICUNE, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_ROUTE39_MILTANK
 
 	pokemon_event  3, 12, MILTANK, -1, -1, PAL_NPC_RED, Route39MiltankText, -1
 	pokemon_event  6, 11, MILTANK, -1, -1, PAL_NPC_RED, Route39MiltankText, -1
@@ -165,7 +165,7 @@ Route39MiltankScript:
 	applymovement ROUTE_39_MILTANK, MiltankMovement1
 	waitsfx
 	playsound SFX_STOMP
-	applyonemovement PLAYER, UP
+	applyonemovement PLAYER, step_up
 	applymovement ROUTE_39_MILTANK, MiltankMovement2		
 	setevent EVENT_MILTANK_39_MOVED_ONCE
 	end
@@ -196,8 +196,6 @@ Route39MiltankScript:
 	applymovement PLAYER, PlayerFollowMiltank ; THREE left
 	applymovement ROUTE_39_MILTANK, MiltankMovement4 ; THREE LEFT
 	applymovement ROUTE_39_SUICUNE, SuicuneMovement ; three right, down one 
-	setevent EVENT_MILTANK_SUICUNE
-	setevent EVENT_ROUTE39_MILTANK
 	opentext
 	writetext SuicuneText
 	cry SUICUNE
@@ -205,6 +203,8 @@ Route39MiltankScript:
 	closetext
 	loadvar VAR_BATTLETYPE, BATTLETYPE_LEGENDARY
 	loadwildmon SUICUNE, 40
+	setevent EVENT_MILTANK_SUICUNE
+	setevent EVENT_ROUTE39_MILTANK
 	startbattle
 	disappear ROUTE_39_SUICUNE
 	reloadmapafterbattle
@@ -232,10 +232,19 @@ SpookToRancherText:
 	cont "rancher?"
 	done
 
+SpookToSuicuneText:
+	text "Herd the miltank"
+	line "to Suicune?"
+	done
+
 NoSpookMiltankText:
 	text "Not yet."
 	done
-	
+
+SuicuneText:
+	text "Shawoo!"
+	done
+
 MiltankMovement1: 
 	fix_facing
 	fast_jump_step_up
@@ -257,3 +266,48 @@ MiltankMovement3:
 	fast_jump_step_up
 	fast_jump_step_up
 	step_end
+
+MiltankMovement4:
+	fix_facing
+	fast_jump_step_left
+	fast_jump_step_left
+	fast_jump_step_left
+	step_end
+	
+PlayerFollowMiltank:
+	step_left
+	step_left
+	step_left
+	step_end
+
+SuicuneMovement:
+	fix_facing
+	fast_jump_step_right
+	fast_jump_step_right
+	fast_jump_step_right
+	fast_jump_step_down
+	step_end
+
+GenericTrainerTamerVince:
+	generictrainer TAMER, VINCE, EVENT_BEAT_TAMER_VINCE, .SeenText1, .BeatenText1
+
+.BeatenText1:
+	text "..."
+	done
+
+.SeenText1:
+	text "..."
+	done
+	
+	
+
+GenericTrainerTamerVince:
+	generictrainer TAMER, VINCE, EVENT_BEAT_TAMER_VINCE, .SeenText1, .BeatenText1
+
+.BeatenText1:
+	text "..."
+	done
+
+.SeenText1:
+	text "..."
+	done
