@@ -3,7 +3,7 @@ SlowpokeWellB1F_MapScriptHeader:
 
 	def_callbacks
 
-	def_warp_events ;todo not warping me to b1f
+	def_warp_events
 	warp_event 17, 15, SLOWPOKE_WELL_ENTRANCE, 2
 	warp_event  7, 11, SLOWPOKE_WELL_B2F, 1
 
@@ -14,7 +14,7 @@ SlowpokeWellB1F_MapScriptHeader:
 
 	def_object_events
 	itemball_event 10,  3, SUPER_POTION, 1, EVENT_SLOWPOKE_WELL_B1F_SUPER_POTION
-	object_event  5,  4, SPRITE_BAKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SlowpokeWellB1FRolloutScript, -1 ;todo make this cost a silver leaf
+	object_event  5,  4, SPRITE_BAKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SlowpokeWellB1FRolloutScript, -1
 	object_event  13, 3, SPRITE_SCIENTIST, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, SlowpokeWellB1FText, -1  
 
 	object_const_def

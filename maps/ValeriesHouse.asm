@@ -21,7 +21,7 @@ ValeriesHouse_MapScriptHeader:
 	const VALERIESHOUSE_VALERIE
 
 
-ValeriesHouseVCurseScript: ;todo from here 
+ValeriesHouseVCurseScript:
 	checkevent EVENT_GOT_TM_CURSE
 	iftrue_jumptextfaceplayer Valerie_GotCurse
 	faceplayer

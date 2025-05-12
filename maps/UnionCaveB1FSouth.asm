@@ -4,7 +4,7 @@ UnionCaveB1FSouth_MapScriptHeader:
 	def_callbacks
 
 	def_warp_events
-	warp_event  3,  5, UNION_CAVE_1F, 2 ;ok
+	warp_event  3,  5, UNION_CAVE_1F, 2
 	warp_event 17,  3, UNION_CAVE_B2F, 1
 	warp_event  7, 33, SLOWPOKE_WELL_B2F, 2
 
@@ -16,7 +16,7 @@ UnionCaveB1FSouth_MapScriptHeader:
 	bg_event  4, 30, BGEVENT_ITEM + FULL_RESTORE, EVENT_UNION_CAVE_B1F_SOUTH_HIDDEN_FULL_RESTORE
 
 	def_object_events
-	object_event 11, 27, SPRITE_HIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerHikerParry, -1 ;TODO TEXT ON THESE
+	object_event 11, 27, SPRITE_HIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerHikerParry, -1
 	object_event 12, 10, SPRITE_HIKER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerHikerRussell, -1
 	object_event 11,  4, SPRITE_HIKER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerHikerPhillip, -1
 	smashrock_event 11, 14

@@ -1,4 +1,4 @@
-UnionCaveB2F_MapScriptHeader: ; todo: text 
+UnionCaveB2F_MapScriptHeader:
 	def_scene_scripts
 
 	def_callbacks
@@ -16,8 +16,6 @@ UnionCaveB2F_MapScriptHeader: ; todo: text
 	def_object_events
 	object_event  16, 29, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, BASTIODON, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, UnionCaveBastiodon, EVENT_UNION_CAVE_B2F_FOSSIL
 	object_event  17, 29, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, RAMPARDOS, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, UnionCaveRampardos, EVENT_UNION_CAVE_B2F_FOSSIL	
-
-;TODO change these to other trainers
 	object_event  7,  6, SPRITE_FIREBREATHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerFirebreatherJay, EVENT_UNION_CAVE_B2F_FOSSIL ; 'ray rematch
 	object_event  6,  8, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 5, GenericTrainerScientistLinden, EVENT_UNION_CAVE_B2F_FOSSIL ; 'LOWELL ' REMATCH 
 	object_event 12, 12, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerScientistOskar,EVENT_UNION_CAVE_B2F_FOSSIL	; PL

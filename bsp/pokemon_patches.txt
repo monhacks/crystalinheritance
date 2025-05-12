@@ -22,7 +22,7 @@ AdjustPokemonIndexes:
 	call .box_species
 
 	; modify pokedex flags
-	seek 0x2a16 ; TODO: replace literal
+	seek 0x2a16 ; could do : replace literal
 	set #1, 256
 	set #2, #r0
 	call ShiftFlags

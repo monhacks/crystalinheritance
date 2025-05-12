@@ -12,7 +12,7 @@ TranquilTarn_MapScriptHeader:
 
 
 	def_coord_events
-	coord_event 26, 20, 0, TranquilTarnDestructionScene ; todo 
+	coord_event 26, 20, 0, TranquilTarnDestructionScene ; probably going to cut this  
 
 
 	def_bg_events
@@ -20,7 +20,6 @@ TranquilTarn_MapScriptHeader:
 
 
 	def_object_events
-; trainers are excited about the dragons, need to finish 
 	object_event  28,  20, SPRITE_BIRD_KEEPER, 	SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBirdKeeperHank, EVENT_BEAT_KANNA
 	object_event 29, 20, SPRITE_BRIGADER, 	SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, TranquilTarnBrigaderScript, -1
 	pokemon_event  30, 20, GYARADOS, -1, -1, PAL_NPC_BLUE, GyaradosText, EVENT_BEAT_KANNA

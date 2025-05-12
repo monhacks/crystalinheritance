@@ -1,4 +1,4 @@
-UnionCave1F_MapScriptHeader: ;todo add a heal
+UnionCave1F_MapScriptHeader:
 	def_scene_scripts
 
 	def_callbacks
@@ -27,7 +27,7 @@ UnionCave1F_MapScriptHeader: ;todo add a heal
 	itemball_event   3, 28, SUPER_POTION, 1, EVENT_UNION_CAVE_1F_POTION
 	itemball_event  12, 45, FULL_HEAL, 1, EVENT_UNION_CAVE_1F_AWAKENING
 	fruittree_event 14, 40, FRUITTREE_UNION_CAVE, HOLLOW_ROCK, PAL_NPC_BLUE
-	tmhmball_event   2, 14, TM_BULLDOZE, EVENT_ROUTE_39_TM_BULLDOZE ;BULLDOZE
+	tmhmball_event   2, 14, TM_BULLDOZE, EVENT_ROUTE_39_TM_BULLDOZE 
 	smashrock_event  3, 14 
 
 GenericTrainerScientistLowell:

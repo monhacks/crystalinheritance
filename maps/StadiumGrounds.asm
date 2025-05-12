@@ -1,4 +1,4 @@
-StadiumGrounds_MapScriptHeader: ; todo make everything happen once you talk to Bobesh - a scene_script rather than various coord_events, and making sandra2 only visible once the scene is over. 
+StadiumGrounds_MapScriptHeader:
 	def_scene_scripts
 
 	def_callbacks
@@ -11,8 +11,9 @@ StadiumGrounds_MapScriptHeader: ; todo make everything happen once you talk to B
 	warp_event  8, 39, SERENE_SPRINGS, 3
 	warp_event  7, 39, SERENE_SPRINGS, 4
 	
-	def_coord_events
-	coord_event 26,  6, 0, StadiumGroundsBobeshScene
+	def_coord_events ; todo: need to pan the camera over for changing the blocks, and then also have a condition depending on if you beat the toxicroak but lose to bobesh 
+	coord_event 26,  6, 0, StadiumGroundsToxicroakScene
+; coord_event 0, 0, 1, StadiumGroundsBobeshScene 
 
 	def_bg_events
 	bg_event  6, 34, BGEVENT_JUMPTEXT, Text_StadiumSign1;
@@ -29,8 +30,8 @@ StadiumGrounds_MapScriptHeader: ; todo make everything happen once you talk to B
 	object_event 42,  3, SPRITE_BRIGADER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader10, EVENT_BEAT_BOBESH_STADIUM
 	object_event 34, 37, SPRITE_BRIGADER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader11, EVENT_BEAT_BOBESH_STADIUM
 	object_event  7,  9, SPRITE_BRIGADER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader12, EVENT_BEAT_BOBESH_STADIUM
-	object_event 49, 17, SPRITE_BRIGADER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader6, EVENT_BEAT_BOBESH_STADIUM ; todo- place in south 
-	object_event 48, 34, SPRITE_BRIGADER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader7, EVENT_BEAT_BOBESH_STADIUM ; todo - place in south 
+	object_event 49, 17, SPRITE_BRIGADER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader6, EVENT_BEAT_BOBESH_STADIUM 
+	object_event 48, 34, SPRITE_BRIGADER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader7, EVENT_BEAT_BOBESH_STADIUM
 
 
 	tmhmball_event 53, 35, TM_FLAME_CHARGE, EVENT_BURNED_TOWER_B1F_TM_FLAME_CHARGE
@@ -129,7 +130,7 @@ StadiumGroundsBobeshScene:
 	waitbutton
 	closetext	
 	setevent EVENT_BEAT_BOBESH_STADIUM
-	clearevent EVENT_STADIUM_BOX_ADRINNA ; now she should show up in the box
+	clearevent EVENT_STADIUM_BOX_ADRINNA
 	clearevent EVENT_GAULDENROD_ELDER 
 	setscene $1
 	end

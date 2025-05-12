@@ -288,7 +288,7 @@ AdjustShuckleAndEeveelutionIndexes:
 	set #r0, .mon_adjust_table
 	call AdjustPokemonIndexes
 
-	seek 0x2a16 ; TODO: replace literal
+	seek 0x2a16 ; could do: replace literal
 	set #1, 210
 	set #2, #zero
 	call FlagAction

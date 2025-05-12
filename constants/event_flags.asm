@@ -1,4 +1,4 @@
-; wEventFlags bit flags ; TODO maybe some of the visibility items are not being used 
+; wEventFlags bit flags
 
 	const_def
 ; The first eight flags are reset upon reloading the map
@@ -2317,7 +2317,7 @@
 	const EVENT_ROUTE_49_CUT_TREE_2
 	const EVENT_MAGNET_TUNNEL_EAST_CUT_TREE
 	const EVENT_CHERRYGROVE_BAY_CUT_TREE
-; TODO: reorganize these when it's okay to break saves
+; could do: reorganize these when it's okay to break saves
 	const EVENT_JUDGE_MACHINE_ENGINEER
 	const EVENT_BRED_AN_EGG
 	const EVENT_ROUTE_32_COAST_HIDDEN_ELIXIR

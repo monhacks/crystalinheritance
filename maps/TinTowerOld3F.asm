@@ -1,4 +1,5 @@
-TinTowerOld3F_MapScriptHeader: ;	def_scene_scripts
+TinTowerOld3F_MapScriptHeader:
+	def_scene_scripts
 
 
 	def_callbacks
@@ -32,7 +33,7 @@ TinTowerOld3F_MapScriptHeader: ;	def_scene_scripts
 	object_event  7, 6, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, HAUNTER, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TinTowerHaunterScript, EVENT_TIN_TOWER_OLD_HAUNTER_3
 	object_event  8, 6, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, HAUNTER, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TinTowerHaunterScript, EVENT_TIN_TOWER_OLD_HAUNTER_4
 	object_event 13, 13, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, H__TYPHLOSION, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TinTowerHTyphlosionScript, EVENT_TIN_TOWER_OLD_HAUNTER_4
-	;TODO PARTIES - GHOSTS 
+
 	object_event 14, 7, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSageJeffrey, -1
 	object_event  10, 1, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSagePing, -1
 	object_event  2, 3, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSageJin, -1
@@ -109,8 +110,6 @@ Player_CW_Bottom_Move:
 	step_left
 	step_end
 
-;;; todo all the movmenets 
-
 TT3F_CCW_Right_Trigger:
 	pause 5
 	appear TIN_TOWER_OLD_3F_HAUNTER_1
@@ -155,7 +154,7 @@ TT3F_CW_Right_Trigger:
 	setscene $0
 	end
 
-Player_CCW_Right_Move:; todo 
+Player_CCW_Right_Move: 
 	step_up
 	step_right
 	step_right
@@ -400,7 +399,7 @@ SageJinBeatenText:
 TinTower3FSamsaraScript:
 	faceplayer
 	checkevent EVENT_BEAT_SAMSARA
-	iftrue_jumpopenedtext SamsaraAfterText ; todo
+	iftrue_jumpopenedtext SamsaraAfterText 
 	checkevent EVENT_BEAT_SAGE_JEFFREY
 	iffalse_jumpopenedtext TinTower3FStudyHarderText;
 	checkevent EVENT_BEAT_SAGE_PING

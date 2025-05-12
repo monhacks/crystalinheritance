@@ -143,7 +143,7 @@ ShiftPocketBytes:
 	jump .done_shift
 
 .shift_back
-; TODO: Warn the player if they're overwriting data
+; could do: Warn the player if they're overwriting data
 	xor #1, 0xffff
 	increment #1
 	set #2, #1

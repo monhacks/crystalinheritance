@@ -69,7 +69,7 @@ TapestryAmosNoText:
 	done
 
 TapestrySceneFinale: ; if you helped all the kimono girls then piper gets to come with too 
-	;cf western capital scene ; TODO REVISE 
+	;cf western capital scene ;
 	disappear PLAYER
 	special Special_FadeBlackQuickly
 	special Special_ReloadSpritesNoPalettes
