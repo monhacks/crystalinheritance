@@ -29,9 +29,9 @@ Route39_MapScriptHeader:
 
 	itemball_event 11, 32, BLACK_SLUDGE, 1, EVENT_ROUTE_39_SLUDGE ; TOP OF THE CAVE
 ; trainers 
-	object_event  9,  7, SPRITE_TAMER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerTamerVince, -1
-	object_event  9,  7, SPRITE_COWGIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerCowgirlApril, -1
-	object_event  9,  7, SPRITE_TAMER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerTamerOswald, -1
+	object_event  3,  9, SPRITE_TAMER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerTamerVince, -1
+	object_event  8,  9, SPRITE_COWGIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerCowgirlApril, -1
+	object_event  4,  12, SPRITE_TAMER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerTamerOswald, -1
 
 	object_const_def
 	const ROUTE_39_MILTANK 
@@ -292,22 +292,54 @@ GenericTrainerTamerVince:
 	generictrainer TAMER, VINCE, EVENT_BEAT_TAMER_VINCE, .SeenText1, .BeatenText1
 
 .BeatenText1:
-	text "..."
+	text "Tending cows is"
+	line "hard work."
 	done
 
 .SeenText1:
-	text "..."
+	text "This ranch isn't"
+	line "a playground!"
 	done
 	
 	
 
-GenericTrainerTamerVince:
-	generictrainer TAMER, VINCE, EVENT_BEAT_TAMER_VINCE, .SeenText1, .BeatenText1
+GenericTrainerTamerOswald:
+	generictrainer TAMER, OSWALD, EVENT_BEAT_TAMER_OSWALD, .SeenText2, .BeatenText2
 
-.BeatenText1:
-	text "..."
+.BeatenText2:
+	text "You skimmed me."
 	done
 
-.SeenText1:
-	text "..."
+.SeenText2:
+	text "Your odds to win?"
+	line "Lower than two"
+	cont "percent!"
+	done
+
+GenericTrainerCowgirlApril:
+	generictrainer COWGIRL, APRIL, EVENT_BEAT_COWGIRL_APRIL, .SeenText3, .BeatenText3
+
+	text "Oh, the 4 H's?"
+	line "That's how we get"
+	cont "interlopers out."
+	
+	para "Heckle you,"
+	line "Harass you,"
+	cont "Herd you,"
+	
+	para "and if that hasn't"
+	line "worked,"
+	cont "Hogtie you."
+	done
+
+.BeatenText3:
+	text "Take it easy,"
+	line "you'll scare the"
+	cont "Miltank!"
+	done
+
+.SeenText3:
+	text "Stay out, or we"
+	line "will give you all"
+	cont "four H's!"
 	done

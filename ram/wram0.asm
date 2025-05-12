@@ -1127,7 +1127,7 @@ wMenuDataBank:: db ; menu data bank?
 	ds 6
 wMenuHeaderEnd::
 
-; TODO: organize this section better (integrate unions from pret/pokecrystal)
+; could do : organize this section better (integrate unions from pret/pokecrystal)
 wMenuData::
 wMenuDataFlags::
 ; bit 7: When set, start printing text one tile to the right of the border

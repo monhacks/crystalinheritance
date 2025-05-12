@@ -6,7 +6,7 @@ WesternGlacier1F_MapScriptHeader:
 
 
 	def_warp_events
-	warp_event 6, 3, SINJOH_CROSSROADS, 5 ; TODO CHECK THIS NUMBER 
+	warp_event 6, 3, SINJOH_CROSSROADS, 5 
 	warp_event 5, 17, WESTERN_GLACIER_B2F, 1
 
 

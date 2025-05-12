@@ -1114,7 +1114,7 @@ wWesternCapitalSceneID:: db ; wVictoryRoad2FSceneID:: db
 wClastsCradleB1FSceneID:: db ; wVioletGym
 wGauldenrodSceneID:: db ; willsroomsceneid
 wWhirlIslandLugiaChamberSceneID:: db ; wisetrios
-wRadioTower1FSceneID:: db ; yellowforest sceneid ; sceneids should only go through 1117 line. TODO 
+wRadioTower1FSceneID:: db ; yellowforest sceneid ; sceneids should only go through 1117 line. 
 
 ; fight counts
 wJackFightCount::    db
@@ -1503,7 +1503,7 @@ wActiveBGEffectsEnd::
 
 wLastAnimObjectIndex:: db
 
-; TODO: Fill in variable names for wBattleAnimTemp4-8 (identified in pret/pokecrystal)
+; could do from polished: Fill in variable names for wBattleAnimTemp4-8 (identified in pret/pokecrystal)
 wBattleAnimFlags:: db
 wBattleAnimAddress:: dw
 wBattleAnimDelay:: db

@@ -201,11 +201,13 @@ TrainerScientistJoseph:
 	generictrainer SCIENTIST, JOSEPH, EVENT_BEAT_ENGINEER_JOSEPH, .SeenText1, .BeatenText1
 
 .BeatenText1:
-	text "..." ; todo 
+	text "My colleague is"
+	line "not so bright.";  
 	done
 
 .SeenText1:
-	text "..." ; todo 
+	text "Candela is the"
+	line "proper unit!";  
 	done
 
 
@@ -213,21 +215,28 @@ TrainerBlackBeltWai:
 	generictrainer BLACKBELT, WAI, EVENT_BEAT_BLACKBELT_WAI, .SeenText2, .BeatenText2
 	
 .BeatenText2:
-	text "..." ; todo 
+	text "I wonder if any-"
+	line "one is still at"
+	cont "the Cianwood Gym."
 	done
 
 .SeenText2:
-	text "..." ; todo 
+	text "I left the gym,"
+	line "but still guard"
+	cont "this like one!"
 	done
 
 TrainerEngineerLang:
 	generictrainer ENGINEER, LANG, EVENT_BEAT_ENGINEER_JOSEPH, .SeenText3, .BeatenText3
 
 .BeatenText3:
-	text "..." ; todo 
+	text "Unit conversion"
+	line "is half my job." 
 	done
 
 .SeenText3:
-	text "..." ; todo 
+	text "I'm telling you,"
+	line "we measure it in"
+	cont "Lumens!"
 	done
 

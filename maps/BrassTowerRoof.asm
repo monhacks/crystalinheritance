@@ -28,7 +28,7 @@ BrassTowerRoof_MapScriptHeader:
 
 	object_event  	8, 9, SPRITE_MON_ICON, 	SPRITEMOVEDATA_POKEMON, 0, LUGIA, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_ROOF_LUGIA 
 	object_event  	10, 9, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, HO_OH, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_ROOF_HOOH 
-	object_event  	10, 9, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, CELEBI, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_ROOF_HOOH
+	object_event  	10, 3, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, CELEBI, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_ROOF_HOOH
 
 	object_event  7, 3, SPRITE_LIGHTNING_OVERWORLD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LIGHTNING_1
 	object_event  7, 4, SPRITE_LIGHTNING_OVERWORLD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LIGHTNING_2
@@ -51,7 +51,7 @@ BrassTowerRoof_MapScriptHeader:
 	
 BrassTowerRoofScript:
 	checkevent EVENT_ACCEPTED_ADRINNA
-	iftrue .AcceptedAdrinnaRoofScript
+	iftrue AcceptedAdrinnaRoofScript
 	sdefer .DeclinedAdrinnaRoofScript
 	end
 	
@@ -98,6 +98,7 @@ BrassTowerRoofScript:
 	turnobject BRASS_TOWER_ROOF_MEJIMI, LEFT 
 	showtext TowerRoofMejimiText1_9
 	applymovement BRASS_TOWER_ROOF_LUGIA, BrassTowerLugiaFleesMovement ; todo 
+	disappear BRASS_TOWER_ROOF_LUGIA
 	showemote EMOTE_SHOCK, BRASS_TOWER_ROOF_MEJIMI, 10
 ; another lightning bolt, 	moveobject BRASS_TOWER_ROOF_LIGHTNING_1, 10,  3?
 ; changeblock 10, 6, $0F ; fire, todo 	
@@ -109,6 +110,7 @@ BrassTowerRoofScript:
 	turnobject PLAYER, RIGHT
 	disappear PLAYER
 	applymovement BRASS_TOWER_ROOF_HOOH, BrassTowerHoOhMovement2 ; steps down off screen
+	disappear BRASS_TOWER_ROOF_HOOH
 	; more flames 
 	pause 5
 	special FadeOutPalettes
@@ -228,8 +230,29 @@ TowerRoofMejimiText1_10:
 	cont "dangers."
 	done
 
+BrassTowerLugiaFleesMovement:
+	fix_facing
+	fast_jump_step_down
+	fast_jump_step_down
+	fast_jump_step_down
+	step_end
+	
+BrassTowerHoOhMovement1:
+	fix_facing
+	fast_jump_step_up
+	fast_jump_step_up
+	step_end
 
-.AcceptedAdrinnaRoofScript:
+BrassTowerHoOhMovement2:
+	fix_facing
+	fast_jump_step_down
+	fast_jump_step_down
+	fast_jump_step_down
+	fast_jump_step_down
+	fast_jump_step_down	
+	step_end
+
+AcceptedAdrinnaRoofScript:
 	applymovement PLAYER, BTR_PlayerStepsDownMovement
 	appear BRASS_TOWER_ROOF_ADRINNA
 	applymovement BRASS_TOWER_ROOF_ADRINNA, BTR_AdrinnaMove1

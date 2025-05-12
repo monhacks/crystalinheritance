@@ -8,7 +8,7 @@ hScriptVar:: db
 
 hROMBankBackup:: db
 
-; TODO: come up with other names for hBuffer
+; could do : come up with other names for hBuffer
 ; related to home/audio.asm and home/decompress.asm
 hTempBank::
 hBuffer:: db
