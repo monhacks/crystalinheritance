@@ -654,7 +654,7 @@ SpriteAnimOAMData:
 	dsprite  2,  2,  0,  0, $0a, $3 | VRAM_BANK_1
 	dsprite  2,  2,  1,  0, $0b, $3 | VRAM_BANK_1
 
-	; Mini shadow (TODO)
+	; Mini shadow (x)
 
 	; Item
 	dsprite  2,  0,  0,  4, $10, $0 | VRAM_BANK_1
@@ -667,7 +667,7 @@ SpriteAnimOAMData:
 	dsprite  1,  0,  0,  0, $16, $5 | VRAM_BANK_1
 	dsprite  1,  0,  1,  0, $17, $5 | VRAM_BANK_1
 
-	; Mini shadow (TODO)
+	; Mini shadow (x)
 
 .OAMData_PcMode:
 	db 3
