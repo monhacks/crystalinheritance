@@ -2532,7 +2532,6 @@ FailText_CheckOpponentProtect:
 ; has side effects -- it triggers the ability. Also,
 ; cp ATKFAIL_CUSTOM is used first since ATKFAIL_CUSTOM!=1 and
 ; hl is otherwise overwritten.
-; TODO: use this function more extensively
 	ld a, [wAttackMissed]
 	and a
 	ret z

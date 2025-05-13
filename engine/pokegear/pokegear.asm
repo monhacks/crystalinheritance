@@ -2118,14 +2118,14 @@ FlyMap:
 ; enters Kanto, fly access is restricted until Indigo Plateau is
 ; visited and its flypoint enabled
 	push af
-	ld c, SPAWN_ANARRES ; TODO SHOULD BE HOLLYS HOLT, USED TO BE INDIGO PLATEAU THEN WAS LAKE OF RAGE
+	ld c, SPAWN_ANARRES ; in Polished, this is indigo plateau
 	call HasVisitedSpawn
 	and a
 	jr z, .NoKanto
 ; Kanto's map is only loaded if we've visited Indigo Plateau
 
 ; Flypoints begin at Pallet Town...
-	ld a, FLY_ANARRES;_TOWN  ; ANARRES_TOWN
+	ld a, FLY_ANARRES;_TOWN  ; ANARRES_TOWN, this is a FLY_<> value, searchable 
 	ld [wStartFlypoint], a
 	ld [wTownMapPlayerIconLandmark], a ; DEFAULT FIRST PLACE 
 ; ...and end at Timeless Tapestry

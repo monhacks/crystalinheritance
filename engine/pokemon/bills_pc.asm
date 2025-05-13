@@ -240,7 +240,7 @@ SwapPartyMonMail:
 
 SwapPartyMons:
 ; Swap 1-indexed partymon c and e. Preserves bc, de, hl.
-; TODO: this is more efficient than SwitchPartyMons, maybe make it use this.
+; could do : this is more efficient than SwitchPartyMons, maybe make it use this.
 	push hl
 	push de
 	push bc

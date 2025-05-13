@@ -1,119 +1,119 @@
 TMHMMoves:
-; entries correspond to *_TMNUM constants (see constants/item_constants.asm) TODO remove the locations 
+; entries correspond to *_TMNUM constants (see constants/item_constants.asm)
 	table_width 1, TMHMMoves
-	db DYNAMICPUNCH ; TM01 (Chuck)
-	db DRAGON_CLAW  ; TM02 (Route 27)
-	db CURSE        ; TM03 (Celadon Mansion)
-	db CALM_MIND    ; TM04 (Celadon Dept. Store)
-	db ROAR         ; TM05 (Route 32)
-	db TOXIC        ; TM06 (Celadon Game Corner)
-	db HAIL         ; TM07 (Celadon Dept. Store)
-	db BULK_UP      ; TM08 (Celadon Dept. Store)
-	db VENOSHOCK    ; TM09 (Route 11)
-	db HIDDEN_POWER ; TM10 (Lake of Rage)
-	db SUNNY_DAY    ; TM11 (Celadon Dept. Store)
-	db HONE_CLAWS   ; TM12 (Route 35)
-	db ICE_BEAM     ; TM13 (Goldenrod Game Corner)
-	db BLIZZARD     ; TM14 (Goldenrod Dept. Store)
-	db HYPER_BEAM   ; TM15 (Goldenrod Dept. Store)
-	db LIGHT_SCREEN ; TM16 (Goldenrod Dept. Store)
-	db PROTECT      ; TM17 (Goldenrod Dept. Store)
-	db RAIN_DANCE   ; TM18 (Celadon Dept. Store)
-	db GIGA_DRAIN   ; TM19 (Erika)
-	db SAFEGUARD    ; TM20 (Celadon Dept. Store)
-	db BULLDOZE     ; TM21 (Route 39)
-	db SOLAR_BEAM   ; TM22 (Goldenrod Dept. Store)
-	db IRON_TAIL    ; TM23 (Jasmine)
-	db THUNDERBOLT  ; TM24 (Goldenrod Game Corner)
-	db THUNDER      ; TM25 (Goldenrod Dept. Store)
-	db EARTHQUAKE   ; TM26 (Victory Road)
-	db RETURN       ; TM27 (Goldenrod Dept. Store)
-	db DIG          ; TM28 (National Park)
-	db PSYCHIC_M    ; TM29 (Sabrina)
-	db SHADOW_BALL  ; TM30 (Morty)
-	db ROCK_SMASH   ; TM31 (Route 36)
-	db DOUBLE_TEAM  ; TM32 (Celadon Game Corner)
-	db REFLECT      ; TM33 (Goldenrod Dept. Store)
-	db FLASH_CANNON ; TM34 (Route 9)
-	db FLAMETHROWER ; TM35 (Goldenrod Game Corner)
-	db SLUDGE_BOMB  ; TM36 (Route 43)
-	db SANDSTORM    ; TM37 (Celadon Dept. Store)
-	db FIRE_BLAST   ; TM38 (Goldenrod Dept. Store)
-	db SWIFT        ; TM39 (Union Cave)
-	db AERIAL_ACE   ; TM40 (Mount Mortar)
-	db SUBSTITUTE   ; TM41 (Lake of Rage)
-	db FACADE       ; TM42 (Dim Cave)
-	db FLAME_CHARGE ; TM43 (Burned Tower)
-	db REST         ; TM44 (Dim Cave)
-	db ATTRACT      ; TM45 (Whitney)
-	db THIEF        ; TM46 (Team Rocket Base)
-	db STEEL_WING   ; TM47 (Route 28)
-	db ROCK_SLIDE   ; TM48 (Brock)
-	db DAZZLINGLEAM ; TM49 (Bellchime Trail)
-	db LEECH_LIFE   ; TM50 (Yellow Forest)
-	db ROOST        ; TM51 (Falkner)
-	db FOCUS_BLAST  ; TM52 (Quiet Cave)
-	db ENERGY_BALL  ; TM53 (Olivine Lighthouse)
-	db FALSE_SWIPE  ; TM54 (Ilex Forest Gate)
-	db SCALD        ; TM55 (Route 19)
-	db X_SCISSOR    ; TM56 (Underground Warehouse)
-	db WILD_CHARGE  ; TM57 (Lt. Surge)
-	db DARK_PULSE   ; TM58 (Dark Cave)
-	db DRAGON_PULSE ; TM59 (Clair)
-	db DRAIN_PUNCH  ; TM60 (Noisy Forest)
-	db WILL_O_WISP  ; TM61 (Blaine)
-	db ACROBATICS   ; TM62 (Route 39 Farmhouse)
-	db WATER_PULSE  ; TM63 (Misty)
-	db EXPLOSION    ; TM64 (Underground)
-	db SHADOW_CLAW  ; TM65 (Lake of Rage)
-	db POISON_JAB   ; TM66 (Janine)
-	db AVALANCHE    ; TM67 (Pryce)
-	db GIGA_IMPACT  ; TM68 (Celadon Game Corner)
-	db U_TURN       ; TM69 (Bugsy)
-	db FLASH        ; TM70 (Sprout Tower)
-	db STONE_EDGE   ; TM71 (Blue)
-	db VOLT_SWITCH  ; TM72 (Route 10)
-	db THUNDER_WAVE ; TM73 (Rock Tunnel)
-	db GYRO_BALL    ; TM74 (Magnet Tunnel)
-	db SWORDS_DANCE ; TM75 (Celadon Dept. Store)
+	db DYNAMICPUNCH ; TM01 
+	db DRAGON_CLAW  ; TM02 
+	db CURSE        ; TM03 
+	db CALM_MIND    ; TM04 
+	db ROAR         ; TM05 
+	db TOXIC        ; TM06 
+	db HAIL         ; TM07
+	db BULK_UP      ; TM08
+	db VENOSHOCK    ; TM09
+	db HIDDEN_POWER ; TM10
+	db SUNNY_DAY    ; TM11
+	db HONE_CLAWS   ; TM12
+	db ICE_BEAM     ; TM13
+	db BLIZZARD     ; TM14
+	db HYPER_BEAM   ; TM15
+	db LIGHT_SCREEN ; TM16
+	db PROTECT      ; TM17
+	db RAIN_DANCE   ; TM18
+	db GIGA_DRAIN   ; TM19
+	db SAFEGUARD    ; TM20
+	db BULLDOZE     ; TM21
+	db SOLAR_BEAM   ; TM22
+	db IRON_TAIL    ; TM23
+	db THUNDERBOLT  ; TM24
+	db THUNDER      ; TM25
+	db EARTHQUAKE   ; TM26
+	db RETURN       ; TM27
+	db DIG          ; TM28
+	db PSYCHIC_M    ; TM29
+	db SHADOW_BALL  ; TM30
+	db ROCK_SMASH   ; TM31
+	db DOUBLE_TEAM  ; TM32
+	db REFLECT      ; TM33
+	db FLASH_CANNON ; TM34
+	db FLAMETHROWER ; TM35
+	db SLUDGE_BOMB  ; TM36
+	db SANDSTORM    ; TM37
+	db FIRE_BLAST   ; TM38
+	db SWIFT        ; TM39
+	db AERIAL_ACE   ; TM40
+	db SUBSTITUTE   ; TM41
+	db FACADE       ; TM42
+	db FLAME_CHARGE ; TM43
+	db REST         ; TM44
+	db ATTRACT      ; TM45
+	db THIEF        ; TM46
+	db STEEL_WING   ; TM47 
+	db ROCK_SLIDE   ; TM48
+	db DAZZLINGLEAM ; TM49
+	db LEECH_LIFE   ; TM50
+	db ROOST        ; TM51 
+	db FOCUS_BLAST  ; TM52
+	db ENERGY_BALL  ; TM53 
+	db FALSE_SWIPE  ; TM54
+	db SCALD        ; TM55
+	db X_SCISSOR    ; TM56
+	db WILD_CHARGE  ; TM57
+	db DARK_PULSE   ; TM58
+	db DRAGON_PULSE ; TM59
+	db DRAIN_PUNCH  ; TM60
+	db WILL_O_WISP  ; TM61 
+	db ACROBATICS   ; TM62 
+	db WATER_PULSE  ; TM63
+	db EXPLOSION    ; TM64
+	db SHADOW_CLAW  ; TM65
+	db POISON_JAB   ; TM66 
+	db AVALANCHE    ; TM67
+	db GIGA_IMPACT  ; TM68 
+	db U_TURN       ; TM69 
+	db FLASH        ; TM70 
+	db STONE_EDGE   ; TM71 
+	db VOLT_SWITCH  ; TM72 
+	db THUNDER_WAVE ; TM73 
+	db GYRO_BALL    ; TM74 
+	db SWORDS_DANCE ; TM75 
 	assert_table_length NUM_TMS
-	db CUT          ; HM01 (Ilex Forest)
-	db FLY          ; HM02 (Cianwood City)
-	db SURF         ; HM03 (Ecruteak City)
-	db STRENGTH     ; HM04 (Cianwood City)
-	db WHIRLPOOL    ; HM05 (Route 42)
-	db WATERFALL    ; HM06 (Ice Path)
+	db CUT          ; HM01
+	db FLY          ; HM02 
+	db SURF         ; HM03 
+	db STRENGTH     ; HM04 
+	db WHIRLPOOL    ; HM05 
+	db WATERFALL    ; HM06 
 	assert_table_length NUM_TMS + NUM_HMS
-	db AGILITY      ; MT01 (x)
-	db AQUA_TAIL    ; MT02 (Route 4)
-	db BATON_PASS   ; MT03 (x)
-	db BODY_SLAM    ; MT04 (Warm Beach)
-	db CHARM        ; MT05 (x)
-	db COUNTER      ; MT06 (Celadon Dept. Store)
-	db DEFENSE_CURL ; MT07 (Mount Mortar)
-	db DOUBLE_EDGE  ; MT08 (Safari Zone)
-	db DREAM_EATER  ; MT09 (Viridian City)
-	db EARTH_POWER  ; MT10 (Cherrygrove Bay)
-	db ENDURE       ; MT11 (x)
-	db FIRE_PUNCH   ; MT12 (Goldenrod City)
-	db HEADBUTT     ; MT13 (Ilex Forest)
-	db HYPER_VOICE  ; MT14 (Goldenrod Harbor)
-	db ICE_PUNCH    ; MT15 (Goldenrod City)
-	db ICY_WIND     ; MT16 (Ice Path)
-	db IRON_HEAD    ; MT17 (Route 4)
-	db KNOCK_OFF    ; MT18 (Route 40)
-	db PAY_DAY      ; MT20 (Goldenrod Game Corner)
-	db ROLLOUT      ; MT19 (Route 46)
-	db SEED_BOMB    ; MT21 (Yellow Forest)
-	db SEISMIC_TOSS ; MT22 (Pewter City)
-	db SKILL_SWAP   ; MT23 (Route 27)
-	db SLEEP_TALK   ; MT24 (Route 31)
-	db SUCKER_PUNCH ; MT25 (Scary Cave)
-	db SWAGGER      ; MT26 (Celadon City)
-	db THUNDERPUNCH ; MT27 (Goldenrod City)
-	db TRICK        ; MT28 (Battle Tower)
-	db TRICK_ROOM   ; MT29 (x)
-	db ZAP_CANNON   ; MT30 (Power Plant)
-	db ZEN_HEADBUTT ; MT31 (Saffron City)
+	db AGILITY      ; MT01
+	db AQUA_TAIL    ; MT02
+	db BATON_PASS   ; MT03
+	db BODY_SLAM    ; MT04
+	db CHARM        ; MT05
+	db COUNTER      ; MT06
+	db DEFENSE_CURL ; MT07
+	db DOUBLE_EDGE  ; MT08
+	db DREAM_EATER  ; MT09
+	db EARTH_POWER  ; MT10
+	db ENDURE       ; MT11 
+	db FIRE_PUNCH   ; MT12 
+	db HEADBUTT     ; MT13 
+	db HYPER_VOICE  ; MT14 
+	db ICE_PUNCH    ; MT15 
+	db ICY_WIND     ; MT16 
+	db IRON_HEAD    ; MT17
+	db KNOCK_OFF    ; MT18 
+	db PAY_DAY      ; MT20
+	db ROLLOUT      ; MT19
+	db SEED_BOMB    ; MT21
+	db SEISMIC_TOSS ; MT22 
+	db SKILL_SWAP   ; MT23
+	db SLEEP_TALK   ; MT24
+	db SUCKER_PUNCH ; MT25
+	db SWAGGER      ; MT26
+	db THUNDERPUNCH ; MT27
+	db TRICK        ; MT28
+	db TRICK_ROOM   ; MT29
+	db ZAP_CANNON   ; MT30
+	db ZEN_HEADBUTT ; MT31
 	assert_table_length NUM_TM_HM_TUTOR
 	db 0 ; end

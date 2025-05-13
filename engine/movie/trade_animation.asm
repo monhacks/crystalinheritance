@@ -127,7 +127,7 @@ RunTradeAnimSequence:
 	push af
 	set NO_TEXT_SCROLL, [hl]
 	call .TradeAnimLayout
-	ld a, [wUnusedTradeAnimPlayEvolutionMusic] ; TODO: figure out what can be removed if this is unused (presumably this and next 2 lines)
+	ld a, [wUnusedTradeAnimPlayEvolutionMusic] ; could do : figure out what can be removed if this is unused (presumably this and next 2 lines)
 	and a
 	jr nz, .anim_loop
 	ld de, MUSIC_EVOLUTION

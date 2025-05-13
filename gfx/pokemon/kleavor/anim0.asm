@@ -1,4 +1,4 @@
-	frame 0, 06 ;todo remove every other of these to get down to size
+	frame 0, 06
 	frame 1, 06
 	frame 2, 06
 	frame 3, 06

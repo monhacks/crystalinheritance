@@ -3777,7 +3777,7 @@ New: No change
 	next "its side.@"
 
 
---- 362.asm --- ; hisuian zoroark
+--- 362.asm --- ; hisuian zoroark --> transforms, ditto replacement 
 
 
 

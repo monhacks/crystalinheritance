@@ -184,59 +184,58 @@ NUM_FLOORS EQU const_value
 NUM_EMOTES EQU const_value
 EMOTE_FROM_MEM EQU -1
 
-;Jeze Ball / RADIANT OPAL
-;Bub Ball / SHORE FOAM 
-;Deci Ball / FIXED CHARGE 
-;Herb Ball / TOUGH LEAVES 
-;Fast Ball / WHT APRICORN
-;Geode / HOLLOW ROCK
-;Love Ball / PNK APRICORN
-
+;Jeze Ball	RADIANT OPAL	xxxx
+;Bub Ball 	SHORE FOAM 		xxxx
+;Deci Ball	FIXED CHARGE 	xx		y
+;Herb Ball	TOUGH LEAVES 	xxx		y
+;Fast Ball	WHT APRICORN 	xxxx
+;Geode		HOLLOW ROCK		xx		Yy
+;Love Ball	PNK APRICORN	xxx
 
 ; fruittree arguments
 ; FruitTreeItems indexes (see data/items/fruit_trees.asm) ; not sure where this is?... 
 	const_def 1
 ; Apricorn trees come first, then Berry trees
-	const FRUITTREE_AZALEA_TOWN     ; 01 wht aprx
+	const FRUITTREE_AZALEA_TOWN     ; 01 wht apricorn
 	const FRUITTREE_ROUTE_37_1      ; 02 tough leaves 
-	const FRUITTREE_ROUTE_37_2      ; 03 wht apx 
+	const FRUITTREE_ROUTE_37_2      ; 03 wht apricorn
 	const FRUITTREE_ROUTE_37_3      ; 04 shore foam 
-	const FRUITTREE_CALM_COAST_3      ; 05 PNK APRICORN
-	const FRUITTREE_ROUTE_32      ; 06 FIXED CHARGE, todo
+	const FRUITTREE_CALM_COAST_3    ; 05 pnk apricorn
+	const FRUITTREE_ROUTE_32        ; 06 fixed charge
 	const FRUITTREE_GAULDENROD      ; 07 radiant opal
 	const FRUITTREE_ILEX_FOREST     ; 08 shore foam
 	const FRUITTREE_UNION_CAVE      ; 09 hollow rock
 	const FRUITTREE_HOLLYS_HOLT     ; 0a tough leaves
-	const FRUITTREE_MISTYBASIN     ;  0b radiant opal
+	const FRUITTREE_MISTYBASIN      ; 0b radiant opal
 FIRST_BERRY_TREE EQU const_value
-;	const FRUITTREE_ROUTE_29        ; 
+;	const FRUITTREE_ROUTE_29        ; todo, check if these can be removed at next build 
 ;	const FRUITTREE_ROUTE_30_1      ; 
 ;	const FRUITTREE_ROUTE_30_2      ; 
 ;	const FRUITTREE_ROUTE_31        ; 
-	const FRUITTREE_VIOLET_CITY     ; 0c pnk apricorn 
-	const FRUITTREE_ROUTE_33  ; 0d ; lum berry  
-	const FRUITTREE_CATTLE_CULL_39        ; 0e sitrus berry 
-	const FRUITTREE_ROUTE_35        ; 0f ; shore foam
-	const FRUITTREE_ROUTE_36        ; 10 ; WHT APRICORN
-	const FRUITTREE_ROUTE_38        ; 11
-	const FRUITTREE_ROUTE_39        ; 12
-	const FRUITTREE_ROUTE_43        ; 13
-	const FRUITTREE_ROUTE_44        ; 14
-	const FRUITTREE_ROUTE_45        ; 15
-	const FRUITTREE_KAJO_ACQUIFER     ; 16 ; RADIANT OPAL  
-	const FRUITTREE_ROUTE_KAJO      ; 17 ; HOLLOW ROCK AT KAJO  
-	const FRUITTREE_EMPERORS_GARDEN_1        ; 18 wht apx 
-	const FRUITTREE_EMPERORS_GARDEN_2        ; 19 lum berry 
-	const FRUITTREE_EMPERORS_GARDEN_3         ; 1a sitrus 
-	const FRUITTREE_CIANWOOD_COVE        ; 1b ; SHORE FOAM  
-	const FRUITTREE_TRANQIL_TARN_1    ; 1c ; ANOTHER TOUGH LEAVES?? ;  
-	const FRUITTREE_TRANQIL_TARN_2   ; 1d ; RADIANT OPAL ;  
-	const FRUITTREE_GOLDENROD_CITY   ; 1e ; FIXED CHARGE
-	const FRUITTREE_ROUTE_2         ; 1f
-	const FRUITTREE_ROUTE_1         ; 20
-	const FRUITTREE_LUCKY_ISLAND    ; 21
-	const FRUITTREE_CALM_COAST_1 ; 22 sitrus  
-	const FRUITTREE_CALM_COAST_2        ; 23 lum  
+	const FRUITTREE_VIOLET_CITY     	; 0c pnk apricorn 
+	const FRUITTREE_ROUTE_33  			; 0d lum berry  
+	const FRUITTREE_CATTLE_CULL_39  	; 0e sitrus berry 
+	const FRUITTREE_ROUTE_35        	; 0f shore foam
+	const FRUITTREE_ROUTE_36        	; 10 wht apricorn
+	const FRUITTREE_ROUTE_38        	; 11 TODO fixed charge on brass tower exterior in western capital 
+	const FRUITTREE_ROUTE_39        	; 12 pnk apricorn
+	const FRUITTREE_ROUTE_43        	; 13 lum berry 
+	const FRUITTREE_ROUTE_44        	; 14 TODO hollow rock in Union Cave B1F North 
+	const FRUITTREE_ROUTE_45        	; 15 TODO tough leaves at lake of rage
+	const FRUITTREE_KAJO_ACQUIFER     	; 16 radiant opal  
+	const FRUITTREE_ROUTE_KAJO      	; 17 hollow rock 
+	const FRUITTREE_EMPERORS_GARDEN_1 	; 18 wht apricorn 
+	const FRUITTREE_EMPERORS_GARDEN_2   ; 19 lum berry 
+	const FRUITTREE_EMPERORS_GARDEN_3   ; 1a sitrus berry
+	const FRUITTREE_CIANWOOD_COVE       ; 1b shore foam  
+	const FRUITTREE_TRANQIL_TARN_1    	; 1c tough leaves 
+	const FRUITTREE_TRANQIL_TARN_2   	; 1d radiant opal
+	const FRUITTREE_GOLDENROD_CITY   	; 1e fixed charge
+	const FRUITTREE_ROUTE_2         	; 1f todo stat-raising berry on shimmer saddle
+	const FRUITTREE_ROUTE_1         	; 20 todo hollow rock at route 40 outside mount mortar
+	const FRUITTREE_LUCKY_ISLAND    	; 21 todo stat-raising berry on shimmer saddle 
+	const FRUITTREE_CALM_COAST_1 		; 22 sitrus berry
+	const FRUITTREE_CALM_COAST_2        ; 23 lum berry
 NUM_FRUIT_TREES EQU const_value - 1
 
 ; hidden grottoes

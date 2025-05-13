@@ -179,7 +179,7 @@
 	const SPRITE_PIDGEOTTO_SIDE ; af (blank side frame) 
 	const SPRITE_RATTATA_BACK ; b0 (blank side frame)
 	const SPRITE_SLOWPOKETAIL ; b1
-	const SPRITE_WEIRD_TREE ; b2 TODO change to cyndaquil/oshawott/rowlet, 'SPRITE_STARTER'
+	const SPRITE_WEIRD_TREE ; b2 starters sprite, may revise back?
 	const SPRITE_BALL_CUT_FRUIT ; b3
 	const SPRITE_BOULDER_ROCK_FOSSIL ; b4
 	const SPRITE_BOOK_PAPER_POKEDEX ; b5

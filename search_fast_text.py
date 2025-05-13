@@ -45,3 +45,4 @@ def search_directory(search_word):
 if __name__ == "__main__":
     search_term = input("Enter the word to search for: ")
     search_directory(search_term)
+    

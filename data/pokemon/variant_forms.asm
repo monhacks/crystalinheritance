@@ -42,7 +42,7 @@ ExtSpeciesTable:
 ; For species after index 254. Just a simple ordered table.
 ; We can't just convert directly, that results in problems with formes, even if
 ; the extspecies doesn't have a form on its own.
-; TODO: maybe convert directly anyway by splitting the tables up for
+; could do: maybe convert directly anyway by splitting the tables up for
 ; optimization reasons? This would only really be relevant for the pokedex.
 	table_width 2, ExtSpeciesTable
 	assert_table_length NUM_EXT_SPECIES

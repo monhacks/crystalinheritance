@@ -14,10 +14,10 @@ TrainerClassNames::
 	li "Grandpa"		  ; KURT 
 	li "Emperor"		  ; MEJIMI
 	li "Elite Four"       ; BRUNO
-	li "Elder"            ; Sandra (KAREN)
+	li "Elder"            ; Sandra
 	li "Champion"         ; CHAMPION
 	li "Leader"           ; BROCK
-	li "Chronicler"        ; Samsara, replace misty
+	li "Chronicler"       ; Vespera
 	li "Leader"           ; LT_SURGE
 	li "Leader"           ; ERIKA
 	li "Leader"           ; JANINE
@@ -139,11 +139,11 @@ TrainerClassNames::
 	li "Pilot"            ; SKYLA UNUSED
 	li "Designer"         ; VALERIE UNUSED 
 	li "<PK><MN> Trainer" ; KUKUI UNUSED 
-	li "Scavenger"           ; VICTOR TODO CHANGE TO Scavenger with diver sprite 
+	li "Scavenger"        ; VICTOR 
 	li "#Maniac"          ; BILL_T UNUSED 
 	li "Anarres"          ; TAMMY (YELLOW), yup this is right
 	li "<PK><MN> Trainer" ; SILVER FROM WALKER rival
 	li "Student"          ; IMAKUNI, UNUSED 
 	li "General"          ; Kensey  / LAWRENCE
-	li "Chronicler"       ; REI (emi)
+	li "Chronicler"       ; Emi 
 	assert_list_length NUM_TRAINER_CLASSES + 1

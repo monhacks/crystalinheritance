@@ -1,4 +1,4 @@
-INCLUDE "data/trainers/party_pointers.asm" ;todo check that this matches party pointers. need to remove a bunch of party pointers that don't exist anymore. 
+INCLUDE "data/trainers/party_pointers.asm" 
 
 ; All trainers follow a basic structure: 
 	; Name
@@ -19,9 +19,6 @@ INCLUDE "data/trainers/party_pointers.asm" ;todo check that this matches party p
 ; That means:
 ; * DVs cannot be $ff -- use $00 instead (ReadTrainerParty converts it to $ff)
 ; * "9" cannot be used in nicknames
-
-; TODO: boss trainers need better movesets, held items, natures, and abilities
-; TODO: swap ABILITY_1 and ABILITY_2 in base data as need so that ABILITY_1 is the better one for default NPCs (e.g. NPCs should have Sturdy when possible)
 
 
 SECTION "Enemy Trainer Parties 1", ROMX
@@ -3531,7 +3528,7 @@ BrigaderGroup:
 	db 14, MAGMAR
 	db -1 ; end
 
-; ================ ; ABOVE ENDS THE STADIUM GROUNDS; todo: grunts 13- 20 
+; ================ ; ABOVE ENDS THE STADIUM GROUNDS
 
 
 	; GRUNTM 13 ; Singhsulfur sty 
@@ -8488,7 +8485,7 @@ SightseerMGroup:
 	; SIGHTSEERM ; LAKE OF RAGE 
 	db "Blaise@"
 	db TRAINERTYPE_NORMAL
-	; TODO: party
+	; 
 	db 40, LUXIO
 	db 42, LUXRAY
 	db 44, ROTOM
@@ -9607,8 +9604,7 @@ ProfIvyGroup:
 	; PROF_IVY
 	db "Ivy@"
 	db TRAINERTYPE_NORMAL
-	; party
-	; TODO: movesets, etc
+	; party ; unused 
 	db 65, BUTTERFREE
 	db 64, POLITOED
 	db 64, VICTREEBEL
@@ -9851,7 +9847,7 @@ CherylGroup:
 	db "Cheryl@"
 	db TRAINERTYPE_EVS
 	; party
-	; TODO: movesets, etc
+	; unused 
 	db 28, CHANSEY, 68
 	db 27, NIDORINA, 68
 	db 24, CLEFABLE, 68
@@ -9870,7 +9866,7 @@ RileyGroup:
 	db "Riley@"
 	db TRAINERTYPE_NORMAL
 	; party
-	; TODO: movesets, etc
+	; unused 
 	db 58, MACHAMP
 	db 57, DRAGONITE
 	db 56, RHYPERIOR
@@ -9997,7 +9993,7 @@ MarleyGroup:
 	db "Marley@"
 	db TRAINERTYPE_EVS
 	; party
-	; TODO: movesets, etc
+	; unused 
 	db 40, ARCANINE, 120
 	db 38, RAICHU, 120
 	db 37, CROBAT, 120
@@ -10015,7 +10011,7 @@ MiraGroup:
 	db "Mira@"
 	db TRAINERTYPE_NORMAL
 	; party
-	; TODO: movesets, etc
+	; unused 
 	db 58, TOGEKISS
 	db 57, ALAKAZAM
 	db 56, MAGMORTAR
@@ -10035,7 +10031,7 @@ LannaGroup:
 	db "Lanna@"
 	db TRAINERTYPE_NORMAL
 	; party
-	; TODO: movesets, etc
+	; unused 
 	db 57, ESPEON
 	db 55, SNORLAX
 	db 56, SLOWKING
@@ -10054,7 +10050,7 @@ DarachGroup:
 	db "Darach@"
 	db TRAINERTYPE_NORMAL
 	; party
-	; TODO: movesets, etc
+	; unused 
 	db 58, NIDOQUEEN
 	db 56, HERACROSS
 if DEF(FAITHFUL)
@@ -10079,7 +10075,6 @@ NomadFGroup:
 	db "Reina@"
 	db TRAINERTYPE_NORMAL
 	; party
-	; TODO: movesets, etc
 	db 27, GLOOM
 	db 30, MANTINE
 	db 32, DRIFBLIM	
@@ -10088,7 +10083,6 @@ NomadFGroup:
 	db "Alina@"
 	db TRAINERTYPE_NORMAL
 	; party
-	; TODO: movesets, etc
 	db 25, SKIPLOOM
 	db 28, JUMPLUFF	
 	db 30, OVERQWIL	
@@ -10097,7 +10091,6 @@ NomadFGroup:
 	db "Marlene@"
 	db TRAINERTYPE_NORMAL
 	; party
-	; TODO: movesets, etc
 	db 20, PIDGEOTTO
 	db 28, PIDGEOTTO	
 	db 36, PIDGEOT	
@@ -10106,7 +10099,6 @@ NomadFGroup:
 	db "Rin@"
 	db TRAINERTYPE_NORMAL
 	; party
-	; TODO: movesets, etc
 	db 25, MANKEY
 	db 30, PRIMEAPE
 	db -1 ; end
@@ -10114,7 +10106,7 @@ NomadFGroup:
 	db "Collette@"
 	db TRAINERTYPE_NORMAL
 	; party
-	; TODO: movesets, etc
+	; unused
 	db 25, MANKEY
 	db 30, PRIMEAPE
 	db -1 ; end
@@ -10122,7 +10114,7 @@ NomadFGroup:
 	db "Hillary@"
 	db TRAINERTYPE_NORMAL
 	; party
-	; TODO: movesets, etc
+	; unused
 	db 25, MANKEY
 	db 30, PRIMEAPE
 	db -1 ; end
@@ -10130,7 +10122,7 @@ NomadFGroup:
 	db "Shirley@"
 	db TRAINERTYPE_NORMAL
 	; party
-	; TODO: movesets, etc
+	; unused
 	db 25, MANKEY
 	db 30, PRIMEAPE
 	db -1 ; end
@@ -10138,7 +10130,7 @@ NomadFGroup:
 	db "Kathryn@"
 	db TRAINERTYPE_NORMAL
 	; party
-	; TODO: movesets, etc
+	; unused
 	db 25, MANKEY
 	db 30, PRIMEAPE
 	db -1 ; end
@@ -10146,7 +10138,7 @@ NomadFGroup:
 	db "Clarice@"
 	db TRAINERTYPE_NORMAL
 	; party
-	; TODO: movesets, etc
+	; unused
 	db 25, MANKEY
 	db 30, PRIMEAPE
 	db -1 ; end
@@ -10159,7 +10151,7 @@ BobeshGroup:
 ; ================
 
 	; Bobesh stadium
-	db "Bobesh@" ; todo: names, items
+	db "Bobesh@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
 	; party
 	db 20, MAGMAR, NO_ITEM, "Culverin@"
@@ -10173,7 +10165,7 @@ BobeshGroup:
 	db -1 ; end
 	
 	; Bobesh e4
-	db "Bobesh@" ; todo: names, items
+	db "Bobesh@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
 	; party
 	db 51, NINETALES, FOCUS_BAND, "NineLives@"
@@ -10198,7 +10190,7 @@ AdrinnaGroup:
 ; ================
 
 	; ADRINNA garden
-	db "Adrinna@" ; todo: names, items
+	db "Adrinna@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
 	; party
 	db 30, FORRETRESS, FOCUS_SASH, "KiloJaal@" ; net or trap 
@@ -10270,7 +10262,7 @@ BarbeauGroup:
 
 ; ================
 
-	; Barbeau_T ; TODO: IMPROVE TEAM MOVES 
+	; Barbeau_T
 	db "Barbeau@" ; at redoubt 
 	db TRAINERTYPE_ITEM | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
 	; party
@@ -10297,7 +10289,7 @@ FlanneryGroup:
 	db "Flannery@"
 	db TRAINERTYPE_EVS
 	; party
-	; TODO: movesets, etc
+	; unused 
 	db 64, MAGCARGO, 212
 	db 63, ARCANINE, 212
 	db 63, HOUNDOOM, 212
@@ -10342,7 +10334,7 @@ SkylaGroup:
 	db "Skyla@"
 	db TRAINERTYPE_EVS
 	; party
-	; TODO: movesets, etc
+	; unused 
 	db 33, FARFETCH_D, 100
 	db 37, PIDGEOT, 100
 	db 34, XATU, 100
@@ -10384,7 +10376,7 @@ KukuiGroup:
 	db "Kukui@"
 	db TRAINERTYPE_EVS | TRAINERTYPE_PERSONALITY
 	; party
-	; TODO: movesets, etc
+	; unused
 	db 66, MAGNEZONE, 244, ABILITY_1 | NAT_NEUTRAL, MALE
 	db 66, SNORLAX, 244, ABILITY_1 | NAT_NEUTRAL, MALE
 	db -1 ; end
@@ -10484,13 +10476,8 @@ ImakuniGroup:
 	db "Imakuni@"
 	db TRAINERTYPE_ITEM
 	; party
-	; TODO: movesets, etc
+	; unused 
 	db 62, CROCONAW, BRIGHTPOWDER
-	db 62, SLOWBRO, TWISTEDSPOON
-	db 63, KADABRA, QUICK_CLAW
-	db 61, FARFETCH_D, STICK
-	db 61, PIDGEOT, SHARP_BEAK
-	db 64, KADABRA, LEFTOVERS
 	db -1 ; end
 
 ; ================

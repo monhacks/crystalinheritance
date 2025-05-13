@@ -3983,7 +3983,7 @@ BattleMenu_Bait:
 	call StdBattleTextbox
 	ld hl, wEnemyMonCatchRate
 	srl [hl] ; halve catch rate
-	; TODO: Play bait animation
+	; could do: Play bait animation
 	ld hl, wSafariMonEating
 	ld de, wSafariMonAngerCount
 	jr BattleMenu_BaitRock_Common
@@ -4000,7 +4000,7 @@ BattleMenu_Rock:
 	ld a, $ff
 .noCarry
 	ld [hl], a
-	; TODO: Play the rock animation
+	; could do: Play the rock animation
 	ld hl, wSafariMonAngerCount
 	ld de, wSafariMonEating
 	; fallthrough
@@ -5547,7 +5547,7 @@ ResetVarsForSubstatusRage:
 	ret
 
 LinkBattleError:
-; TODO: handle link battle errors gracefully
+; could do : handle link battle errors gracefully
 	ld hl, LinkBattleErrorText
 	call StdBattleTextbox
 	jmp SoftReset

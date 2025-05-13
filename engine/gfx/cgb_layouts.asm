@@ -821,7 +821,7 @@ _CGB_TrainerCard2:
 
 	jmp _CGB_FinishLayout
 
-_CGB_TrainerCard3: ; todo figure 
+_CGB_TrainerCard3: 
 	call LoadFirstTwoTrainerCardPals
 
 	ld a, HOLLIS
@@ -866,7 +866,7 @@ _CGB_TrainerCard3: ; todo figure
 	ld a, $3
 	call FillBoxWithByte
 
-	; Misty / SAMSARA  -- TODO: UPDATE FACE 
+	; Misty / vespera
 	hlcoord 11, 10, wAttrMap
 	lb bc, 3, 3
 	ld a, $4

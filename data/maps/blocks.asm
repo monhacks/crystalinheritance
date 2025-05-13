@@ -672,7 +672,6 @@ SECTION "AnarresTower3F_BlockData", ROMX
 AnarresTower3F_BlockData:
 	INCBIN "maps/AnarresTower3F.ablk.lz"
 
-;new from 08-13-24, TODO consolidate the stockrooms and dorms
 SECTION "CalmCoast_BlockData", ROMX
 CalmCoast_BlockData:
 	INCBIN "maps/CalmCoast.ablk.lz"

@@ -138,7 +138,7 @@ BillsPC_LoadUI:
 	call _InitSpriteAnimStruct
 
 	; Pack icon.
-	; TODO: Instead of a hack where we prevent the pack from claiming a slot,
+	; could do : Instead of a hack where we prevent the pack from claiming a slot,
 	; maybe implement a sprite anim priority system?
 	ld hl, wSpriteAnim4 ; reserve this for quickanim
 	inc [hl]
@@ -707,7 +707,7 @@ WriteIconPaletteData:
 	pop af
 
 if !DEF(MONOCHROME)
-	; TODO: per-mon palettes
+	; could do : per-mon palettes
 	; RGB values copied from PartyMenuOBPals
 	ld [hl], LOW(palred 31 + palgreen 19 + palblue 10) ; no-optimize *hl++|*hl-- = N
 	inc hl
@@ -1198,7 +1198,7 @@ _GetCursorMon:
 	and a
 	inc hl
 	jr z, .did_pokerus
-	; TODO: smiley face if cured (use shiny color + custom color 3?)
+	; could do : smiley face if cured (use shiny color + custom color 3?)
 	ld [hl], "."
 	and $f
 	jr z, .did_pokerus
@@ -1629,7 +1629,7 @@ BillsPC_SetIcon:
 BillsPC_MoveIconData:
 ; Copies icon data from slot bc to slot de, then blanks slot bc.
 ; Box -1 is a sentinel for held (slot 0) or quick (slot 1).
-; TODO: can we make this code (.GetAddr especially) less messy?
+; could do : can we make this code (.GetAddr especially) less messy?
 	; Copy palette data
 	ldh a, [rSVBK]
 	push af

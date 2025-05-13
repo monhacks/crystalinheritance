@@ -235,7 +235,7 @@ DoEggStep::
 	ld a, 1
 	and a
 .done
-	ld c, 0 ; TODO: check if this is needed (was done earlier)
+	ld c, 0 ; could do : check if this is needed (was done earlier)
 	ret
 
 .NextPartyMon:

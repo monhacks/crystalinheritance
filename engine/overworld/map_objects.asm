@@ -1757,7 +1757,7 @@ UpdateJumpPosition:
 	db -11, -10,  -9,  -8,  -6,  -4,   0,   0
 
 StepFunction_NPCStairs:
-	; TODO
+	; could do 
 	ret ; no-optimize stub function
 
 StepFunction_PlayerStairs:

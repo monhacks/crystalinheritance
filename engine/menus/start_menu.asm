@@ -141,7 +141,7 @@ StartMenu::
 	dw .MenuString
 	dw .Items
 
-; TODO: remove vestigial menu account EmptyString descriptions
+; could do: remove vestigial menu account EmptyString descriptions
 .Items:
 	dw StartMenu_Pokedex,  .PokedexString,  EmptyString
 	dw StartMenu_Pokemon,  .PartyString,    EmptyString

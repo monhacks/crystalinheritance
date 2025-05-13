@@ -195,7 +195,7 @@ CheckBallOverflow:
 	xor a
 	ret
 
-BallMultiplierFunctionTable: ;TODO revise this according to the table. 
+BallMultiplierFunctionTable: ;could do revise this according to the table. 
 ; table of routines that increase or decrease the catch rate based on
 ; which ball is used in a certain situation.
 	dbw GREAT_BALL,  GreatBallMultiplier

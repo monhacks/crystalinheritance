@@ -71,7 +71,6 @@ AI_Basic:
 
 AI_Conversion:
 ; not a layer, called by Conversion to allow the AI to select a good move type
-; TODO: implement
 	call BattleRandom
 	and %11
 	ret
@@ -1220,8 +1219,6 @@ AI_Smart_PainSplit:
 AI_Smart_SleepTalk:
 ; Greatly encourage this move if enemy is fast asleep.
 ; Greatly discourage this move otherwise.
-; TODO: sleep talk is typically used with rest, but we shouldn't
-; know how long we sleep for if it's randomly 1-3 turns...
 	call GetTrueUserAbility
 	cp EARLY_BIRD
 	ld b, 3

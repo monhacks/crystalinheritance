@@ -65,7 +65,7 @@ TrainerCard:
 	ld [hli], a ; wJumptableIndex
 	ld [hli], a ; wTrainerCardBadgeFrameCounter
 	ld [hli], a ; wTrainerCardBadgeTileID
-	ld [hl], a  ; TODO: check if this is still needed
+	ld [hl], a  ; could do : check if this is still needed
 	ret
 
 .Jumptable:

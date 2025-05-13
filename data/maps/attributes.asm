@@ -396,7 +396,7 @@ ENDM
 	map_attributes WesternCapitalCemetery, WESTERN_CAPITAL_CEMETERY, $0, 0
 
 	map_attributes WesternCapital, WESTERN_CAPITAL, $5, SOUTH 
-	connection south, WhispersWay, WHISPERS_WAY, 7	; TODO CHECK
+	connection south, WhispersWay, WHISPERS_WAY, 7
 	
 	map_attributes WhispersWay, WHISPERS_WAY, $5, NORTH 
 	connection north, WesternCapital, WESTERN_CAPITAL, 7	; 
@@ -481,7 +481,7 @@ ENDM
 
 	map_attributes SlowpokeDreamsBackgroundS, SLOWPOKE_DREAMS_BACKGROUND_S, $0, NORTH | SOUTH 
 	connection north, SlowpokeDreams, SLOWPOKE_DREAMS, 2
-	connection south, SlowpokeDreamsBackgroundN, SLOWPOKE_DREAMS_BACKGROUND_N, 0 ; might get some error about not being able to make this infinite loop
+	connection south, SlowpokeDreamsBackgroundN, SLOWPOKE_DREAMS_BACKGROUND_N, 0
 
 	map_attributes SlowpokeDreamsBackgroundE, SLOWPOKE_DREAMS_BACKGROUND_E, $0, WEST | EAST
 	connection west, SlowpokeDreams, SLOWPOKE_DREAMS, 0
@@ -494,13 +494,13 @@ ENDM
 	map_attributes EnteisCavern, ENTEIS_CAVERN, $9, 0
 
 	map_attributes TranquilTarn, TRANQUIL_TARN, $0, NORTH | SOUTH ; 
-	connection north, SinjohCrossroads, SINJOH_CROSSROADS, 0 ; to check todo
-	connection south, EmpiresExtent, EMPIRES_EXTENT, 0 ; to check todo
+	connection north, SinjohCrossroads, SINJOH_CROSSROADS, 0
+	connection south, EmpiresExtent, EMPIRES_EXTENT, 0
 	
-	map_attributes SinjohCrossroads, SINJOH_CROSSROADS, $5, SOUTH; TODO
-	connection south, TranquilTarn, TRANQUIL_TARN, 0 ; to check
+	map_attributes SinjohCrossroads, SINJOH_CROSSROADS, $5, SOUTH
+	connection south, TranquilTarn, TRANQUIL_TARN, 0
 	
-	map_attributes EmpiresExtent, EMPIRES_EXTENT, $5, NORTH | SOUTH ; todo
+	map_attributes EmpiresExtent, EMPIRES_EXTENT, $5, NORTH | SOUTH
 	connection north, TranquilTarn, TRANQUIL_TARN, 0 
 	connection south, EerieHamlet, EERIE_HAMLET, 0
 
@@ -521,11 +521,11 @@ ENDM
 	map_attributes EmpiresExtentCavern, EMPIRES_EXTENT_CAVERN, $5, 0
 	map_attributes DragonsDen, DRAGONS_DEN, $0, 0
 
-	map_attributes EerieHamlet, EERIE_HAMLET, $5, NORTH | WEST	; TODO
+	map_attributes EerieHamlet, EERIE_HAMLET, $5, NORTH | WEST
 	connection north, EmpiresExtent, EMPIRES_EXTENT, 0
 	connection west, SulfurSty, SULFUR_STY, -1
 	
-	map_attributes SulfurSty, SULFUR_STY, $5, EAST ; TODO
+	map_attributes SulfurSty, SULFUR_STY, $5, EAST
 	connection east, EerieHamlet, EERIE_HAMLET, 1
 
 	map_attributes EerieHamletDorms, EERIE_HAMLET_DORMS, $0, 0

@@ -23,7 +23,7 @@ Route39_MapScriptHeader:
 	pokemon_event  6, 11, MILTANK, -1, -1, PAL_NPC_RED, Route39MiltankText, -1
 	pokemon_event  4, 15, MILTANK, -1, -1, PAL_NPC_RED, Route39MiltankText, -1
 	pokemon_event  8, 13, MILTANK, -1, -1, PAL_NPC_RED, Route39MiltankText, -1
-	fruittree_event  9,  3, FRUITTREE_ROUTE_39, CHESTO_BERRY, PAL_NPC_PURPLE
+	fruittree_event  9,  3, FRUITTREE_ROUTE_39, PNK_APRICORN, PAL_NPC_RED
 
 	object_event  13,19, SPRITE_COWGIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route39FarmerScript, -1  ; annie 
 

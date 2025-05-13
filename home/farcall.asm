@@ -1,7 +1,7 @@
 FarCall_de::
 ; Call a:de.
 ; Preserves other registers.
-; TODO: Get rid of this, it's only used in two places
+; could do : Get rid of this, it's only used in two places
 	ldh [hTempBank], a
 	ldh a, [hROMBank]
 	push af

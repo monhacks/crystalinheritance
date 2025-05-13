@@ -257,7 +257,7 @@ endc
 	ldh [rSVBK], a
 	ret
 
-; TODO: vary paint color with unused DV bits
+; could do: vary paint color with unused DV bits
 ; * DarkRed' = DarkRed + (HPDV & %0100 >> 2) - (HPDV & %1000 >> 3)
 ; * DarkGrn' = DarkGrn + (AtkDV & %0100 >> 2) - (AtkDV & %1000 >> 3)
 ; * DarkBlu' = DarkBlu + (DefDV & %0100 >> 2) - (DefDV & %1000 >> 3)

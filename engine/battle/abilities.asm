@@ -157,7 +157,7 @@ TraceAbility:
 	ld b, a
 	farcall BufferAbility
 
-	; TODO: fancier graphics?
+	; could do 
 	call DisableAnimations
 	call ShowAbilityActivation
 	call ShowEnemyAbilityActivation
