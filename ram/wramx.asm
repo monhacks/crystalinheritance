@@ -1026,71 +1026,54 @@ wMooMooBerries:: db
 wUndergroundSwitchPositions:: db
 wFarfetchdPosition:: db
 
-; map triggers, NEED A CORRESPONDING ONE IN DATA/MAPS/SCENES.ASM
-wAlways0SceneID:: db ; used 
-wAzaleaTownSceneID:: db ; used 
-wStadiumGroundsSceneID:: db ; formerly wbattlefacilitysceneid
-	ds 3 ; unused
-wAnarresHoltGateSceneID:: db ; used 
-wBellchimeTrailSceneID:: db ; used 
-wCharcoalKilnSceneID:: db ; used 
-wBurnedTower1FSceneID:: db  ; keep 
-wBurnedTowerB1FSceneID:: db ; keep 
-wTinderGardenSceneID:: db ; used 
-wAnarresTower3FSceneID:: db ; used 
-wAzaleaPokecenter1FSceneID:: db  ; used 
-wHollysHoltSceneID:: db ; used 
-wCianwoodCitySceneID:: db  ; used? 
-wMistyBasinSceneID:: db ; used 
-wUnused1SceneID:: db   
-wAnarresHouseSceneID:: db ; used 
-wDayCareSceneID:: db ; used 
-wEerieHamletSceneID:: db  ; trade quest 
-wTimelessTapestrySceneID:: db  ; dragon shrine 
-wEcruteakCherishBallHouseSceneID:: db ; trade 
-wEcruteakDestinyKnotHouseSceneID:: db ; trade quest 
-wUnused3SceneID:: db
-wGauldenrodHouseSceneID:: db ; trade quest 
-wUnused2SceneID:: db
-wUnused4SceneID:: db
-wUnused5SceneID:: db
-wUnused6SceneID:: db
-wUnused8SceneID:: db ; possibly unused 
-wUnused9SceneID:: db ; possibly unused 
+; map triggers. Corresponding entries in data/maps/scenes.asm 
+wAlways0SceneID:: db  
+wAzaleaTownSceneID:: db  
+wStadiumGroundsSceneID:: db
+	ds 3 ; unknown function 
+wAnarresHoltGateSceneID:: db 
+wAnarresHouseSceneID:: db 
+wAnarresTower3FSceneID:: db 
+wAzaleaPokecenter1FSceneID:: db 
+wBellchimeTrailSceneID:: db 
+wBurnedTower1FSceneID:: db 
+wBurnedTowerB1FSceneID:: db 
+wCharcoalKilnSceneID:: db 
+wCianwoodCitySceneID:: db  
+wClastsCradleB1FSceneID:: db 
+wDayCareSceneID:: db  
+wEcruteakCherishBallHouseSceneID:: db
+wEcruteakDestinyKnotHouseSceneID:: db
+wEerieHamletSceneID:: db
+wEmperorsGardenSceneID:: db 
+wGauldenrodHouseSceneID:: db
+wGauldenrodSceneID:: db 
 wGoldenrodMuseum2FSceneID:: db
-wHallOfFameSceneID:: db ; probably used?
-wIlexForestSceneID:: db ; used 
-wLakeOfRageSceneID:: ; wKarensRoomSceneID:: db
-wUnused7SceneID:: db
-wKurtsHouseSceneID:: db ;changed from playershouse
-wUnused10SceneID:: db
-wLandingHouse2SceneID:: db ; trade quest 
-wUnused11SceneID:: db
+wGrottoedGlacierB2FSceneID:: db 
+wHallOfFameSceneID:: db
+wHollysHoltSceneID:: db
+wHoltCoastGateSceneID:: db 
+wIlexForestSceneID:: db  
+wKurtsHouseSceneID:: db 
+wLakeOfRageSceneID:: 
+wLandingDocksSceneID:: db
+wLandingHouse2SceneID:: db
 wMahoganyTownSceneID:: db
-wMountMoon1FSceneID:: db
-wMrPokemonsHouseSceneID:: db
-wMystriStageSceneID:: db
-wNewBarkTownSceneID:: db
-wOlivineCitySceneID:: db ; used 
-wOlivinePortSceneID:: db
-wPokecenter2FSceneID:: db
-wPokemonLeagueGateSceneID:: db
-wPowerPlantSceneID:: db
-wRadioTower5FSceneID:: db
-wRoute10NorthSceneID:: db
-wRoute23SceneID:: db
-wRoute24SceneID:: db
-wRoute27SceneID:: db
-wTranquilTarnSceneID:: db ; route 29 
-wTinTowerOld2FSceneID:: db ; UNUSED 
-wShimmerSaddleSceneID:: db ; route 34
+wMistyBasinSceneID:: db 
+wNationalParkSceneID:: db
+wOlivineCafeSceneID:: db 
+wOlivineLighthouse1F:: db
+wOlivineLighthouse6F:: db
+wOlivinePunishmentSpeechHouseSceneID:: db
+wPokecenter2FSceneID:: db 
+wRadioTower1FSceneID:: db 
+wRadioTower5FSceneID:: db 
+wRoute35GoldenrodGateSceneID:: db
 wRoute35NationalParkGateSceneID:: db
 wRoute36NationalParkGateSceneID:: db
-wRoute43SceneID:: db ; route 36
-wRoute40SceneID:: db ; route 42 
+wRoute40SceneID:: db 
 wRoute43GateSceneID:: db
-wOlivineLighthouse6F:: db ; route 47
-wOlivineLighthouse1F:: db ; wRoute48SceneID:: db
+wRoute43SceneID:: db
 wRuinsOfAlphAerodactylChamberSceneID:: db
 wRuinsOfAlphHoOhChamberSceneID:: db
 wRuinsOfAlphInnerChamberSceneID:: db
@@ -1098,25 +1081,42 @@ wRuinsOfAlphKabutoChamberSceneID:: db
 wRuinsOfAlphOmanyteChamberSceneID:: db
 wRuinsOfAlphOutsideSceneID:: db
 wRuinsOfAlphResearchCenterSceneID:: db
-wHoltCoastGateSceneID:: db ; wSeagallopFerryNavelGateSceneID:: db
-wRoute35GoldenrodGateSceneID:: db ; wSeagallopFerryShamoutiGateSceneID:: db
-wSeagallopFerryVermilionGateSceneID:: db
-wLandingDocksSceneID:: db ; wShamoutiHotelRestaurantSceneID:: db
-wSproutTower3FSceneID:: db ; used
-wTeamRocketBaseB2FSceneID:: db
-wGrottoedGlacierB2FSceneID:: db ; wTeamRocketBaseB3FSceneID:: db ; 
+wShimmerSaddleSceneID:: db
+wSproutTower3FSceneID:: db 
+wTimelessTapestrySceneID:: db  
+wTinderGardenSceneID:: db  
 wTinTower1FSceneID:: db
+wTinTowerOld1FSceneID:: db 
+wTinTowerOld3FSceneID:: db 
 wTradeCenterSceneID:: db
+wTranquilTarnSceneID:: db 
 wUndergroundPathSwitchRoomEntrancesSceneID:: db
-wEmperorsGardenSceneID:: db ; vermillion city 
-wTinTowerOld3FSceneID:: db ; vermillion port
-wWesternCapitalSceneID:: db ; wVictoryRoad2FSceneID:: db
-wClastsCradleB1FSceneID:: db ; wVioletGym
-wGauldenrodSceneID:: db ; willsroomsceneid
-wWhirlIslandLugiaChamberSceneID:: db ; wisetrios
-wRadioTower1FSceneID:: db ; yellowforest sceneid ; sceneids should only go through 1117 line. 
-
-; fight counts
+wVioletNicknameSpeechHouseSceneID:: db 
+wWesternCapitalSceneID:: db 
+wWhirlIslandLugiaChamberSceneID:: db 
+wUnused10SceneID:: db
+wUnused11SceneID:: db
+wUnused12SceneID:: db
+wUnused13SceneID:: db
+wUnused15SceneID:: db  
+wUnused16SceneID:: db
+wUnused17SceneID:: db
+wUnused18SceneID:: db
+wUnused19SceneID:: db
+wUnused1SceneID:: db   
+wUnused20SceneID:: db
+wUnused21SceneID:: db
+wUnused24SceneID:: db 
+wUnused2SceneID:: db
+wUnused3SceneID:: db
+wUnused4SceneID:: db
+wUnused5SceneID:: db
+wUnused6SceneID:: db
+wUnused7SceneID:: db
+wUnused8SceneID:: db 
+wUnused9SceneID:: db ;
+;sceneids should only go through 1117 line. 
+; fight counts, these are essentially unused but would be annoying to scrap 
 wJackFightCount::    db
 wBeverlyFightCount:: db ; unused
 wHueyFightCount::    db

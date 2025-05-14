@@ -33,7 +33,7 @@ Gauldenrod_MapScriptHeader:
 
 	def_object_events
 	object_event  23, 30, SPRITE_BOBESH, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0,  OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_GAULDENROD_BOBESH
-	pokemon_event 24, 32, FLAREON, -1, -1, PAL_NPC_RED, ObjectEvent, EVENT_GAULDENROD_FLAREON; DISAPPEARED UNTIL APPEARS
+	pokemon_event 24, 32, FLAREON, -1, -1, PAL_NPC_RED, ObjectEvent, EVENT_GAULDENROD_FLAREON
 	object_event  23, 33, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PURPLE,  OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_GAULDENROD_BRIGADER_CINDY
 	object_event  24, 33, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_GAULDENROD_BRIGADER_CINDY
 
@@ -410,7 +410,7 @@ GauldenrodHisuiTraderNoThanksText:
 	cont "your mind!"
 	done
 
-GauldenrodBobeshScene: ; todo, make 
+GauldenrodBobeshScene:
 	clearevent EVENT_GAULDENROD_BOBESH
     showemote GAULDENROD_BRIGADER, EMOTE_BOLT, 10
     showtext BrigaderText1

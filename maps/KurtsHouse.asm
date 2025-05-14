@@ -1,4 +1,4 @@
-KurtsHouse_MapScriptHeader: ; todo add the ability to make apricorns here at the bench
+KurtsHouse_MapScriptHeader:
 	def_scene_scripts
 	scene_script KurtsHouseIntroTrigger
 
@@ -7,17 +7,15 @@ KurtsHouse_MapScriptHeader: ; todo add the ability to make apricorns here at the
 	def_warp_events
 	warp_event  3,  7, AZALEA_TOWN, 4
 	warp_event  4,  7, AZALEA_TOWN, 4
-;	warp_event 11,  3, KURTS_HOUSE_B1F
 	
 	def_coord_events
 
 
-	def_bg_events;done
-	bg_event  6,  1, BGEVENT_JUMPSTD, radio2 ; this is fine for later
-;	bg_event  6,  1, BGEVENT_READ, DebugRadio ;this line for debug
-	bg_event  8,  0, BGEVENT_JUMPTEXT, KurtsHouseOakPhotoText ;revised
-	bg_event  9,  0, BGEVENT_JUMPTEXT, KurtsHouseOakPhotoText ;revised
-	bg_event  5,  1, BGEVENT_READ, PokemonJournalProfWestwoodScript ; revised
+	def_bg_events
+	bg_event  6,  1, BGEVENT_JUMPSTD, radio2 
+	bg_event  8,  0, BGEVENT_JUMPTEXT, KurtsHouseOakPhotoText
+	bg_event  9,  0, BGEVENT_JUMPTEXT, KurtsHouseOakPhotoText
+	bg_event  5,  1, BGEVENT_READ, PokemonJournalProfWestwoodScript
 	bg_event  2,  1, BGEVENT_READ, PokemonJournalProfWestwoodScript
 	bg_event  3,  1, BGEVENT_READ, PokemonJournalProfWestwoodScript
 	bg_event 14,  2, BGEVENT_READ, ApricornBenchScript
@@ -27,10 +25,8 @@ KurtsHouse_MapScriptHeader: ; todo add the ability to make apricorns here at the
 	object_event    6,  3, SPRITE_KURT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KurtHouseScript, EVENT_KURTS_HOUSE_KURT_0 ;
 	object_event  7,  3, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, IlexExcelsiorV5Script, EVENT_KURTS_HOUSE_NOTEBOOK
 	object_event  8,  4, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, FiddlerBookScript, -1	
-	
 	pokemon_event  14,  4, SHUCKLE, -1, -1, PAL_NPC_RED, KurtsHouseShuckleText, -1
 
-; kurt is at the celebi shrine if you visit later
 
 	object_const_def
 	const KURTSHOUSE_KURT
@@ -40,7 +36,6 @@ KurtsHouseIntroTrigger:
 	sdefer KurtsHouseScript1
 	end
 	
-
 KurtsHouseScript1:
 	playmusic MUSIC_PROF_OAK
 	pause 30

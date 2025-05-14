@@ -475,14 +475,14 @@ Kimono4ThanksForHelpingText:
 
 
 
-KimonoCabin5Script: ; todo check that all others have been done
+KimonoCabin5Script:
 	faceplayer
 	opentext
 	checkevent EVENT_KIMONO_CABIN_EEVEE
 	iftrue_jumpopenedtext Kimono5HelpedText
-	checkevent EVENT_BEAT_KENSEY_DOCKS
+	checkevent EVENT_BEAT_KENSEY_DOCKS ; plot check 
 	iffalse_jumpopenedtext Kimono5NotStrongEnoughText
-	checkevent EVENT_KIMONO_CABIN_LAPRAS
+	checkevent EVENT_KIMONO_CABIN_LAPRAS ; from kimono cabin 4
 	iffalse_jumpopenedtext Kimono5NotStrongEnoughText
 	writetext Kimono5AskHelpText
 	yesorno

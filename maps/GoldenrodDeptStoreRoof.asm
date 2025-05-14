@@ -1,4 +1,4 @@
-GoldenrodDeptStoreRoof_MapScriptHeader: ; todo change binoculars
+GoldenrodDeptStoreRoof_MapScriptHeader:
 	def_scene_scripts
 
 	def_callbacks
@@ -260,8 +260,7 @@ GoldenrodDeptStoreRoofBugCatcherText:
 Binoculars1Text:
 	text "Wow, I can see"
 	line "the whole magnet"
-	cont "train route over"
-	cont "the mountain!"
+	cont "train route!"
 	
 	para "Wait, are those"
 	line "Prinplup playing"
@@ -275,14 +274,9 @@ Binoculars2Text:
 	done
 
 Binoculars3Text:
-	text "These binoculars"
-	line "let me see far"
-
-	para "away. Maybe I can"
-	line "see my own house."
-
-	para "Is it the one with"
-	line "the green roof?"
+	text "There's so much"
+	line "activity outside"
+	cont "Union Cave."
 	done
 
 PokeDollVendingMachineText:

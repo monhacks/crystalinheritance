@@ -47,7 +47,7 @@ GauldenrodTower4FSandraScript:
 	opentext
 	writetext SandraAfterText
 	givekeyitem RAINBOW_WING
-	setflag ENGINE_CASCADEBADGE ; todo
+	setflag ENGINE_CASCADEBADGE
 	waitbutton
 	closetext
 	applymovement GAULDENRODTOWER4F_BRIGADER, BrigaderApproachMovement

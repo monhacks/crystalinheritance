@@ -29,7 +29,8 @@ KimonoCabin1_MapScriptHeader: ; should be like  "BurnedTowerB1F_MapScriptHeader"
 	smashrock_event  9, 17
 	smashrock_event  11, 11
 	itemball_event  4, 0, MOON_STONE, 1, EVENT_KIMONO_CABIN_SITRUS
-	itemball_event  4, 1, FAST_BALL, 5, EVENT_KIMONO_CABIN_FAST_BALLS
+	itemball_event  4, 1, FAST_BALL, 1, EVENT_KIMONO_CABIN_FAST_BALLS
+	itemball_event  0, 0, CARBOS, 5, EVENT_KIMONO_CABIN_1_CARBOS ; TODO PLACE 
 
 	object_const_def
 	const KIMONO_CABIN_1_DRATINI ;  

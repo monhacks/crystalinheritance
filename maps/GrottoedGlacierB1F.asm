@@ -24,7 +24,9 @@ GrottoedGlacierB1F_MapScriptHeader:
 	strengthboulder_event 11, 12, EVENT_BOULDER2_IN_GLACIER
 	object_event 12,  9, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerMediumEsther, EVENT_BEAT_KANNA
 	object_event  4, 19, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerSageVirgil, EVENT_BEAT_KANNA
-; TODO add some items 
+	; TODO PLACE THESE ITEMS 
+	itemball_event 0, 0, NEVERMELTICE, 1, EVENT_GLACIER_B1F_ITEM_1
+	itemball_event 0, 0, REVIVAL_HERB, 1, EVENT_GLACIER_B1F_ITEM_2
 
 	object_const_def
 	const GROTTOEDGLACIER_BOULDER1
@@ -81,7 +83,7 @@ GenericTrainerMediumEsther:
 
 
 
-GenericTrainerSageVirgil: ; todo 
+GenericTrainerSageVirgil:
 	generictrainer SAGE, VIRGIL, EVENT_BEAT_SAGE_VIRGIL, .SeenText1, .BeatenText1
 
 .BeatenText1:
