@@ -99,7 +99,7 @@ PryceText_Intro: ; done
 	line "power!"
 	done
 
-PryceText_Impressed: ; todo 
+PryceText_Impressed:
 	text "Your #mon"
 	line "fight as a team!"
 
@@ -112,7 +112,7 @@ Text_ReceivedGlacierBadge:
 	line "the Glacier Badge."
 	done
 
-PryceText_GlacierBadgeSpeech: ; todo 
+PryceText_GlacierBadgeSpeech:
 	text "These are gifts"
 	line "from me."
 	done

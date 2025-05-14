@@ -20,7 +20,7 @@ LandingHouse1_MapScriptHeader:
 
 	def_object_events
 	object_event  5,  4, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LandingHouse1MomScript, -1 
-	object_event  2,  4, NOMAD_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LandingHouse1SonScript, EVENT_NOMAD_ISLANDS_HOUSE ; todo, put in initializevents
+	object_event  2,  4, NOMAD_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LandingHouse1SonScript, EVENT_NOMAD_ISLANDS_HOUSE 
 
 
 
@@ -58,22 +58,16 @@ LandingHouse1_GiveLifeOrb:
 	
 	para "We craft these"
 	line "orbs when we"
-	cont "need strength to"
-	para "break through a"
-	line "tough storm..."
-	
-	para "Please, accept"
-	line "this gift."
+	para "need strength to"
+	line "break through a"
+	cont "tough storm..."
 	done
 	
 LandingHouseWhereSonText:
 	text "Where is my son?"
-	line "I wish I could"
-	cont "see him one more"
-	cont "time... He told"
-	para "me he was going"
-	line "back to the"
-	cont "islands..."
+	line "I told him he"
+	para "shouldn't go to"
+	line "the shores alone."
 	done
 	
 

@@ -143,7 +143,7 @@ KurtHealRedoubtText2:
 	line "these statues."
 	done
 
-RedoubtAmosScript: ;todo 
+RedoubtAmosScript: 
 	faceplayer
 	opentext
 	checkevent EVENT_BEAT_AMOS
@@ -159,7 +159,7 @@ RedoubtAmosScript: ;todo
 	writetext Text_ReceivedVisionBadge
 	playsound SFX_GET_BADGE
 	waitsfx
-	setflag ENGINE_SOULBADGE ; TODO TO CHECK 
+	setflag ENGINE_SOULBADGE
 	setevent EVENT_BEAT_AMOS
 .FightDone:
 	setevent EVENT_BEAT_NINJA7

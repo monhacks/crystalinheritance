@@ -69,5 +69,6 @@ MapScenes::
 	scene_var EERIE_HAMLET, 						  wEerieHamletSceneID ; todo 
 	scene_var MAHOGANY_TOWN,                          wMahoganyTownSceneID ; TODO 
 	scene_var TIN_TOWER_OLD_1F, 					  wTinTowerOld1FSceneID ; todo 
-	scene_var TIN_TOWER_OLD_3F, 					  wTinTowerOld3FSceneID
+	scene_var TIN_TOWER_OLD_3F, 					  wTinTowerOld3FSceneID 
+	scene_var RUSALKA_RUINS_B1F, 					  wRusalkaRuinsB1FSceneID ; todo 
 	db -1

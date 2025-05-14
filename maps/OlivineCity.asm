@@ -61,22 +61,21 @@ OlivineCityYoungster1Text:
 	line "keeps us safe!"
 	done
 
-OlivineCitySailor1Text: ; TODO what the lighthouse is 
+OlivineCitySailor1Text:
 	text "The lighthouse"
 	line "was a natural"
-	cont "place to house"
-	cont "Chuck's Slowking."
+	para "place to put"
+	line "the OMLAS."
 	done
 
-OlivineCityPokefanFText: ; TODO what the desal plant is 
-	text "It's not safe for"
-	line "boats to fish"
-	cont "in the harbor,"
+OlivineCityPokefanFText:
+	text "The Desal plant"
+	line "has briny runoff,"
 	
-	para "with the desal"
-	line "plant. The fish"
-	cont "market can sell"
-	cont "you some."
+	para "so the only place"
+	line "to get good fish"
+	para "is at the"
+	line "Fish Market."
 	done
 
 OlivineCitySchoolBoyText:

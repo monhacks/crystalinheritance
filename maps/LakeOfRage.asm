@@ -114,7 +114,7 @@ LakeRivalScript:
 	showtext LakeRivalText2
 	showemote EMOTE_BOLT, LAKEOFRAGE_RIVAL, 10
 	turnobject LAKEOFRAGE_RIVAL, LEFT
-    scall LakeRivalBattleScript ; todo 
+    scall LakeRivalBattleScript 
     applymovement LAKEOFRAGE_RIVAL, LakeRivalWalksAway
     setscene $2
     setevent EVENT_FOUGHT_LAKE_RIVAL
@@ -132,7 +132,7 @@ LakeRivalBattleScript:
     iftrue .Rowlet
     winlosstext LakeRivalWinText, 0
     setlasttalked LAKEOFRAGE_RIVAL
-    loadtrainer RIVAL1, 6 ; todo 
+    loadtrainer RIVAL1, 12 
     startbattle
     dontrestartmapmusic
     reloadmapafterbattle
@@ -141,7 +141,7 @@ LakeRivalBattleScript:
 .Oshawott:
     winlosstext LakeRivalWinText, 0
     setlasttalked LAKEOFRAGE_RIVAL
-    loadtrainer RIVAL1, 4 ; todo 
+    loadtrainer RIVAL1, 10 
     startbattle
     dontrestartmapmusic
     reloadmapafterbattle
@@ -150,7 +150,7 @@ LakeRivalBattleScript:
 .Rowlet:
     winlosstext LakeRivalWinText, 0
     setlasttalked LAKEOFRAGE_RIVAL
-    loadtrainer RIVAL1, 5 ; todo 
+    loadtrainer RIVAL1, 11 
     startbattle
     dontrestartmapmusic
     reloadmapafterbattle

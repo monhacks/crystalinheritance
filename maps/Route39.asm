@@ -125,7 +125,7 @@ CowgirlThanksAgainText:
 	text "Thanks again!"
 	done
 
-CowgirlBattlesPlayer: ; todo 
+CowgirlBattlesPlayer: 
 	showtext CowgirlBattlesPlayerText
 	winlosstext CowgirlWinLossText, 0
 	loadtrainer COWGIRL, ANNIE

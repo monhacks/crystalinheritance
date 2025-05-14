@@ -9,14 +9,15 @@ RusalkaRuinsB1F_MapScriptHeader:
 	warp_event  1, 12, PHANTOM_FJORD, 2
 	warp_event  26, 6, RUSALKA_RUINS_1F, 1
 	warp_event  0, 4, RUSALKA_RUINS_1F, 2
-
 	warp_event  26, 3, RUSALKA_RUINS_1F, 1 ; hole drop FOR MOST  
 	warp_event  3, 10, RUSALKA_RUINS_1F, 1 ; hole drop FOR CAPTAIN 
 	warp_event  8, 2, RUSALKA_RUINS_1F, 1 ; hole drop FOR DARK CABIN   	
 
 
 	def_coord_events
-; IF MEMORY ADDRESSES PERMIT, TODO PUT A STALKING SPIRITOMB ON THIS LEVEL 
+; todo stalking spiritomb 
+	coord_event 0, 0, 0, Rusalka_B1F_Spiritomb_1 ; setscene $1
+	coord_event 0, 0, 1, Rusalka_B1F_Spiritomb_2 ; setscene $2 
 
 
 	def_bg_events
@@ -24,17 +25,19 @@ RusalkaRuinsB1F_MapScriptHeader:
 
 
 	def_object_events
+	object_event  0,  0, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, SPIRITOMB, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_RUSALKA_B1F_SPIRITOMB_1
+	object_event  0,  0, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, SPIRITOMB, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_RUSALKA_B1F_SPIRITOMB_2
 	object_event  1,  10, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptext, CaptainsLog01, -1
 	object_event  8,  10, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptext, CaptainsLog02, -1
 	object_event  13,  6, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptext, CaptainsLog03, -1
 	object_event  20,  4, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptext, CaptainsLog04, -1
 	object_event  4,  2, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptext, CaptainsLog08, -1	
-
-	bg_event  5,  7, BGEVENT_ITEM + X_ATTACK, EVENT_RUSALKA_B1F_X_ATTACK ;
-	bg_event 27, 13, BGEVENT_ITEM + X_SPEED, EVENT_RUSALKA_B1F_X_SPEED ;
-
+	bg_event  5,  7, BGEVENT_ITEM + X_ATTACK, EVENT_RUSALKA_B1F_X_ATTACK 
+	bg_event 27, 13, BGEVENT_ITEM + X_SPEED, EVENT_RUSALKA_B1F_X_SPEED
 
 	object_const_def
+	const RUSALKA_B1F_SPIRITOMB_1
+	const RUSALKA_B1F_SPIRITOMB_2
 
 CaptainsLog01:
 	text "Captain's Log 1"

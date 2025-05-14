@@ -5,7 +5,7 @@ SlowpokeWellB2F_MapScriptHeader:
 	callback MAPCALLBACK_TILES, SlowpokeWellB2FCallBack
 
 	def_warp_events
-	warp_event  9, 11, SLOWPOKE_WELL_B1F, 2 ; todo 
+	warp_event  9, 11, SLOWPOKE_WELL_B1F, 2
 	warp_event  5,  1, UNION_CAVE_B1F_SOUTH, 3
 	warp_event  15,  5, SLOWPOKE_WELL_B3F, 1
 

@@ -49,7 +49,7 @@ Route41SignText:
 	cont "Station"
 	done
 
-Route41SageScript: ; TODO 
+Route41SageScript:
 	faceplayer
 	showtext Route41SageImpressedText ; sees the silver wing
 	turnobject ROUTE41_SAGE_1, RIGHT
@@ -94,10 +94,10 @@ Route41SageText2:
 Route41SageScript2:
 	faceplayer
 	opentext
-	writetext Route41AskToTimeTravel ; TODO 
+	writetext Route41AskToTimeTravel
 	yesorno
-	iffalse_jumpopenedtext Route41NoTimeTravel ; TODO 
-	writetext Route41TimeTravel ; TODO 
+	iffalse_jumpopenedtext Route41NoTimeTravel  
+	writetext Route41TimeTravel
 	waitbutton
 	closetext
 	playsound SFX_WARP_TO

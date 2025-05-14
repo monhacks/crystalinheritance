@@ -2,7 +2,6 @@ SeafluxNexusB2F_MapScriptHeader:
 	def_scene_scripts
 ; REVISE THE MAP SO THAT THERE IS WATERFALLS PUSHING YOU BACK TO THE CENTRAL WARP UNTIL YOU GET BOTH OF THEM 
 
-
 	def_callbacks
 	;CALLBACKS BASED ON EVENT_NEXUS_B1F_BOULDER_1, EVENT_NEXUS_B1F_BOULDER_2
 	; solving the strength puzzles lets you access the fifth 
@@ -19,7 +18,7 @@ SeafluxNexusB2F_MapScriptHeader:
 	warp_event 9, 31, SEAFLUX_NEXUS_B1F, 4
 ; hole drop 
 	warp_event 7, 27, SEAFLUX_NEXUS_B3F, 1 ; to the bottom of the waterfall 
-; northeast warp comes from the north warp from b3f
+
 
 
 	def_coord_events
@@ -37,7 +36,7 @@ SeafluxNexusB2F_MapScriptHeader:
 ; correct order: switch 5 -- 2 -- 3 -- 4 -- 1
 
 
-	def_object_events ; TODO, PLACE AND SET EVENTS PROPERLY 
+	def_object_events
 	itemball_event  6,  8, GEODE, 1, EVENT_NEXUSB2F_ITEM1
 	itemball_event 18, 34, JEZE_BALL, 1, EVENT_NEXUSB2F_ITEM2
 	itemball_event 26, 31, CALCIUM, 1, EVENT_NEXUSB2F_ITEM3

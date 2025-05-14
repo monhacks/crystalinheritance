@@ -1094,7 +1094,7 @@ wUndergroundPathSwitchRoomEntrancesSceneID:: db
 wVioletNicknameSpeechHouseSceneID:: db 
 wWesternCapitalSceneID:: db 
 wWhirlIslandLugiaChamberSceneID:: db 
-wUnused10SceneID:: db
+wRusalkaRuinsB1FSceneID:: db ; sorta new 
 wUnused11SceneID:: db
 wUnused12SceneID:: db
 wUnused13SceneID:: db

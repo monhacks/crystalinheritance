@@ -376,6 +376,7 @@ Route32SlowpokeTailScript:
 	verbosegiveitem SLOWPOKETAIL
 	iffalse_endtext
 	setevent EVENT_GOT_SLOWPOKETAIL_ROUTE32
+	writetext Route32Slowpoketail2Text
 	closetext
 	end
 
@@ -386,13 +387,11 @@ Route32Slowpoketail2Text:
 	done
 
 Route32AmenitiesText:
-	text "I used to be a"
-	line "member of Team"
-	cont "Rocket. "
+	text "I was once a"
+	line "Rocket Grunt."
 	
-	para "I served my time"
-	line "and my skills"
-	cont "got me a job"
+	para "I served my time,"
+	line "and got a job"
 	
 	para "making lunch for"
 	line "Silph workers!"
@@ -403,4 +402,6 @@ Route32AmenitiesText:
 	
 	para "that they will"
 	line "be on B2F soon."
+	
+	para "Hungry? Try this."
 	done

@@ -2,17 +2,18 @@ OlivineLighthouse6F_MapScriptHeader:
 	def_scene_scripts
 
 	def_callbacks
+	
 
 	def_warp_events
 	warp_event  8, 14, OLIVINE_LIGHTHOUSE_5F, 2
 	warp_event  9,  2, OLIVINE_LIGHTHOUSE_ROOF, 1
 
-	def_coord_events ; TODO REVISE THIS X, Y 
+	def_coord_events 
 	coord_event 13, 11, 0, Lighthouse6FScene0
 	coord_event 13, 10, 0, Lighthouse6FScene
 	coord_event  9, 10, 1, Lighthouse6FScene1
-	coord_event  9, 10, 1, Lighthouse6FScene2 ; move you if you lose to chuck and don't advance the scene , TODO 
-	coord_event  9, 10, 1, Lighthouse6FScene3 ; move you if you lose to chuck and don't advance the scene TODO
+	coord_event  9, 10, 1, Lighthouse6FScene2
+	coord_event  9, 10, 1, Lighthouse6FScene3
 
 	
 	def_bg_events

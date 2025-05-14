@@ -25,8 +25,8 @@ SinjohStockroom_MapScriptHeader:
 	object_event  9,  0, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, pokemart, MARTTYPE_STANDARD, MART_SINJOH_CROSSROADS, EVENT_BEAT_KANNA
 
 
-	object_event 2, 3, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, SinjohStockroomNPC1Text, -1 ; TODO FIX 
-	object_event 5, 2, SPRITE_SAGE, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, SinjohStockroomNPC2Text, EVENT_BEAT_KANNA ; TODO FIX 
+	object_event 2, 3, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, SinjohStockroomNPC1Text, -1
+	object_event 5, 2, SPRITE_SAGE, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, SinjohStockroomNPC2Text, EVENT_BEAT_KANNA
 
 SinjohStockroomNPC1Text:
 	text "I've never been"
@@ -36,13 +36,10 @@ SinjohStockroomNPC1Text:
 SinjohStockroomNPC2Text:
 	text "We used to have"
 	line "gather in peace"
-	cont "with Johtonians-"
+	cont "with Johto-"
 	
 	para "Now the emperor"
 	line "sends soldiers?"
-	
-	para "This does not"
-	line "bode well."
 	done
 
 

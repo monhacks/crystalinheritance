@@ -16,11 +16,7 @@ RebelsRedoubtB3F_MapScriptHeader:
 
 	def_coord_events
 
-
-
 	def_bg_events
-
-
 
 	def_object_events
 	object_event 22, 11, SPRITE_HOLLIS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 1, RedoubtHollisScript, EVENT_BEAT_AMOS
@@ -30,23 +26,24 @@ RebelsRedoubtB3F_MapScriptHeader:
 	itemball_event 13, 15, ELIXIR, 1, EVENT_REDOUBT_ITEM_4
 	itemball_event 15, 11, FULL_RESTORE, 1, EVENT_REDOUBT_ITEM_5
 
-	object_const_def
-
-
-RedoubtHollisScript: ;todo 
+RedoubtHollisScript: 
+	refreshscreen
+	trainerpic HOLLIS
+	waitbutton
+	closepokepic
 	faceplayer
 	opentext
 	checkevent EVENT_BEAT_HOLLIS_REDOUBT
 	iftrue .FightDone
-	writetext HollisRedoubtText_Intro ; todo
+	writetext HollisRedoubtText_Intro
 	waitbutton
 	closetext
-	winlosstext HollisRedoubtText_Impressed, 0; todo
+	winlosstext HollisRedoubtText_Impressed, 0
 	loadtrainer HOLLIS, 2
 	startbattle
 	reloadmapafterbattle
 .FightDone:
-	writetext Text_HollisRedoubt2; todo
+	writetext Text_HollisRedoubt2
 	setevent EVENT_BEAT_HOLLIS_REDOUBT
 	promptbutton
 	closetext
@@ -96,20 +93,24 @@ Text_HollisRedoubt2:
 	cont "elders."
 	done
 
-RedoubtSandraScript: ;todo 
+RedoubtSandraScript: 
+	refreshscreen
+	trainerpic SANDRA
+	waitbutton
+	closepokepic
 	faceplayer
 	opentext
 	checkevent EVENT_BEAT_SANDRA_REDOUBT
 	iftrue .FightDone
-	writetext SandraRedoubtText_Intro ; todo
+	writetext SandraRedoubtText_Intro
 	waitbutton
 	closetext
-	winlosstext SandraRedoubtText_Impressed, 0; todo
+	winlosstext SandraRedoubtText_Impressed, 0
 	loadtrainer SANDRA, 2
 	startbattle
 	reloadmapafterbattle
 .FightDone:
-	writetext Text_SandraRedoubt2; todo
+	writetext Text_SandraRedoubt2
 	setevent EVENT_BEAT_SANDRA_REDOUBT
 	promptbutton
 	closetext
@@ -164,20 +165,24 @@ Text_SandraRedoubt2:
 	cont "elders."
 	done
 
-RedoubtBarbeauScript: ;todo 
+RedoubtBarbeauScript: 
+	refreshscreen
+	trainerpic BARBEAU
+	waitbutton
+	closepokepic
 	faceplayer
 	opentext
 	checkevent EVENT_BEAT_BARBEAU_REDOUBT
 	iftrue .FightDone
-	writetext BarbeauRedoubtText_Intro ; todo
+	writetext BarbeauRedoubtText_Intro
 	waitbutton
 	closetext
-	winlosstext BarbeauRedoubtText_Impressed, 0; todo
+	winlosstext BarbeauRedoubtText_Impressed, 0
 	loadtrainer BARBEAU, 2
 	startbattle
 	reloadmapafterbattle
 .FightDone:
-	writetext Text_BarbeauRedoubt2; todo
+	writetext Text_BarbeauRedoubt2
 	setevent EVENT_BEAT_BARBEAU_REDOUBT
 	promptbutton
 	closetext
