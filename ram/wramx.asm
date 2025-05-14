@@ -1034,38 +1034,38 @@ wStadiumGroundsSceneID:: db ; formerly wbattlefacilitysceneid
 wAnarresHoltGateSceneID:: db ; used 
 wBellchimeTrailSceneID:: db ; used 
 wCharcoalKilnSceneID:: db ; used 
-wBurnedTower1FSceneID:: db 
-wBurnedTowerB1FSceneID:: db ; UNUSED 
+wBurnedTower1FSceneID:: db  ; keep 
+wBurnedTowerB1FSceneID:: db ; keep 
 wTinderGardenSceneID:: db ; used 
 wAnarresTower3FSceneID:: db ; used 
 wAzaleaPokecenter1FSceneID:: db  ; used 
 wHollysHoltSceneID:: db ; used 
 wCianwoodCitySceneID:: db  ; used? 
 wMistyBasinSceneID:: db ; used 
-wColosseumSceneID:: db  ; used?
+wUnused1SceneID:: db   
 wAnarresHouseSceneID:: db ; used 
-wDayCareSceneID:: db ; ; used 
-wDragonsDenB1FSceneID:: db ; used?
+wDayCareSceneID:: db ; used 
+wEerieHamletSceneID:: db  ; trade quest 
 wTimelessTapestrySceneID:: db  ; dragon shrine 
-wEcruteakGymSceneID:: db
-wEcruteakHouseSceneID:: db
-wEcruteakPokecenter1FSceneID:: db
-wTinTowerOld1FSceneID:: db ; UNUSED: NOT NEEDED 
-wFarawayIslandSceneID:: db
-wFastShip1FSceneID:: db
-wFastShipB1FSceneID:: db
-wGiovannisCaveSceneID:: db
-wGoldenrodCitySceneID:: db
-wGoldenrodGymSceneID:: db
-wGoldenrodMuseum1FSceneID:: db
+wEcruteakCherishBallHouseSceneID:: db ; trade 
+wEcruteakDestinyKnotHouseSceneID:: db ; trade quest 
+wUnused3SceneID:: db
+wGauldenrodHouseSceneID:: db ; trade quest 
+wUnused2SceneID:: db
+wUnused4SceneID:: db
+wUnused5SceneID:: db
+wUnused6SceneID:: db
+wUnused8SceneID:: db ; possibly unused 
+wUnused9SceneID:: db ; possibly unused 
+wGoldenrodMuseum2FSceneID:: db
 wHallOfFameSceneID:: db ; probably used?
 wIlexForestSceneID:: db ; used 
 wLakeOfRageSceneID:: ; wKarensRoomSceneID:: db
-wKogasRoomSceneID:: db
+wUnused7SceneID:: db
 wKurtsHouseSceneID:: db ;changed from playershouse
-wLancesRoomSceneID:: db
-wLavenderTownSceneID:: db
-wMahoganyMart1FSceneID:: db
+wUnused10SceneID:: db
+wLandingHouse2SceneID:: db ; trade quest 
+wUnused11SceneID:: db
 wMahoganyTownSceneID:: db
 wMountMoon1FSceneID:: db
 wMrPokemonsHouseSceneID:: db

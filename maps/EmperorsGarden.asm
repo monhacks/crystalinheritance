@@ -368,7 +368,7 @@ AdrinnaMoves4:
 	step_down
 	step_end
 
-EmperorsGardenAdrinnaScene: ; todo - revise 
+EmperorsGardenAdrinnaScene:
 	showemote EMOTE_HAPPY, EMPERORS_GARDEN_ADRINNA_4, 10
 	turnobject EMPERORS_GARDEN_ADRINNA_4, DOWN
 	turnobject PLAYER, UP

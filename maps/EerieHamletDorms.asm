@@ -21,7 +21,7 @@ EerieHamletDorms_MapScriptHeader:
 	bg_event  0,  5, BGEVENT_READ, HamletDormsBed
 
 	def_object_events
-	object_event 1, 1, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, HamletDormsKurtScript, EVENT_BEAT_AMOS ; TODO fix dialogue 
+	object_event 1, 1, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, HamletDormsKurtScript, EVENT_BEAT_AMOS
 	
 	object_event 6,  6, SPRITE_GRANNY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, EerieDormsSleepTalkScript, -1 
 	object_event 13, 3, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, HamletDormsNPC1Text, -1
@@ -184,7 +184,7 @@ HamletDormsKurtScript:
 	endtext
 	end
 
-KurtEHDormsText: ; todo need to fix this dialogue 
+KurtEHDormsText:
 	text "<PLAYER>, these"
 	line "dorms are a good"
 	cont "place to rest."
@@ -195,10 +195,9 @@ KurtEHDormsText: ; todo need to fix this dialogue
 	
 	para "But I believe "
 	line "Johto can still"
-	cont "save itself and"
-	
-	para "reject Mejimi's"
-	line "anti-tradition!"
+	para "save its tradit-"
+	line "ions from being"
+	cont "wiped away!"
 	done
 	
 KurEHDormsText2:

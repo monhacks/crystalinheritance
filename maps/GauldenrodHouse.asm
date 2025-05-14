@@ -1,5 +1,6 @@
 GauldenrodHouse_MapScriptHeader:
 	def_scene_scripts
+	scene_script GauldenrodHouseTradeQuestTrigger 
 
 	def_callbacks
 
@@ -18,20 +19,10 @@ GauldenrodHouse_MapScriptHeader:
 	const LEMONADE_HOUSE_LADY
 
 
-
-	faceplayer
-	opentext	
-	writetext NeedAMintLeafText
-	waitbutton
-	checkitem MINT_LEAF
-	iffalse_jumpopenedtext Text_NoMintLeaf
-	writetext Text_MintLeafQuestion ;;
-	yesorno
-	iffalse_jumpopenedtext Text_NoMintLeaf
-	takeitem MINT_LEAF
-	verbosegiveitem TINYMUSHROOM
-	iffalse_endtext
-	jumpopenedtext GiveTinyMushroomText 
+GauldenrodHouseTradeQuestTrigger:
+	showemote EMOTE_HAPPY, LEMONADE_HOUSE_LADY, 30
+	setscene $1
+	end
 	
 LemonadeHouseLadyScript:
 	faceplayer

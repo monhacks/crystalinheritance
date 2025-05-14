@@ -29,7 +29,7 @@ HerbalistWifeText:
 	cont "up together."
 	done
 
-EcruteakBlueMailScript: ; revised to match the anarres house format 
+EcruteakBlueMailScript: ; TRADE QUEST 
 	faceplayer
 	opentext	
 	writetext NeedABigMushroomText

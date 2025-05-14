@@ -1,5 +1,4 @@
 LandingHouse2_MapScriptHeader: 
-
 	def_scene_scripts
 
 
@@ -26,6 +25,8 @@ LandingHouse2_MapScriptHeader:
 
 
 	object_const_def
+	
+	
 
 LandingHouse2CuteGirlText:
 	text "I miss my auntie"

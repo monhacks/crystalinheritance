@@ -4,27 +4,20 @@ scene_var: MACRO
 	map_id \1
 	dw \2
 ENDM
-;ram/wramx.asm uses these
+;ram/wramx.asm uses these. todo: organize. 
 MapScenes::
 	scene_var AZALEA_TOWN,                            wAzaleaTownSceneID
 	scene_var AZALEA_POKECENTER_1F,                   wAzaleaPokecenter1FSceneID ;starts the trade quest
-	scene_var BELLCHIME_TRAIL,                        wBellchimeTrailSceneID
-	scene_var CHARCOAL_KILN,                          wCharcoalKilnSceneID ; changed from brunos room
-	scene_var BURNED_TOWER_1F,                        wBurnedTower1FSceneID
-	scene_var BURNED_TOWER_B1F,                       wBurnedTowerB1FSceneID
+	scene_var BELLCHIME_TRAIL,                        wBellchimeTrailSceneID ; USED 
+	scene_var CHARCOAL_KILN,                          wCharcoalKilnSceneID ; USED
+	scene_var BURNED_TOWER_1F,                        wBurnedTower1FSceneID ; NEED TO KEEP 
+	scene_var BURNED_TOWER_B1F,                       wBurnedTowerB1FSceneID ; NEED TO KEEP 
 	scene_var TINDER_GARDEN,                          wTinderGardenSceneID ; cerulean cape
 	scene_var ANARRES_TOWER_3F,                       wAnarresTower3FSceneID ; cerulean cave 1f
-	scene_var CIANWOOD_CITY,                          wCianwoodCitySceneID
-	scene_var DAYCARE,                                wDayCareSceneID
-	scene_var ECRUTEAK_GYM,                           wEcruteakGymSceneID
-	scene_var ECRUTEAK_HOUSE,                         wEcruteakHouseSceneID
-	scene_var ECRUTEAK_POKECENTER_1F,                 wEcruteakPokecenter1FSceneID
-	scene_var GOLDENROD_CITY,                         wGoldenrodCitySceneID
-	scene_var GOLDENROD_GYM,                          wGoldenrodGymSceneID
+	scene_var CIANWOOD_CITY,                          wCianwoodCitySceneID ; USED 
+	scene_var DAYCARE,                                wDayCareSceneID ; NEED TO KEEP 
 	scene_var ILEX_FOREST,                            wIlexForestSceneID
 	scene_var KURTS_HOUSE,                            wKurtsHouseSceneID
-	scene_var MAHOGANY_MART_1F,                       wMahoganyMart1FSceneID
-	scene_var MAHOGANY_TOWN,                          wMahoganyTownSceneID
 	scene_var OLIVINE_CITY,                           wOlivineCitySceneID
 	scene_var RADIO_TOWER_5F,                         wRadioTower5FSceneID
 	scene_var ROUTE_34_ILEX_FOREST_GATE,              wAlways0SceneID
@@ -49,7 +42,7 @@ MapScenes::
 	scene_var GAULDENROD,                             wGauldenrodSceneID
 	scene_var RADIO_TOWER_1F,                         wRadioTower1FSceneID ; YellowForestSceneID
 	scene_var EMPERORS_GARDEN,                        wEmperorsGardenSceneID ;wVermilionCitySceneID
-	scene_var TIN_TOWER_OLD_3F,                       wTinTowerOld3FSceneID ;wVermilionPortSceneID
+	scene_var GAULDENROD_HOUSE,                       wGauldenrodHouseSceneID ;wVermilionPortSceneID
 	scene_var WESTERN_CAPITAL,                        wWesternCapitalSceneID ;wVictoryRoad2FSceneID
 	scene_var HOLT_COAST_GATE,             			  wHoltCoastGateSceneID; wSeagallopFerryNavelGateSceneID
 	scene_var ROUTE_35_GOLDENROD_GATE,          	  wRoute35GoldenrodGateSceneID ; wSeagallopFerryShamoutiGateSceneID
@@ -65,4 +58,15 @@ MapScenes::
 	scene_var TRANQUIL_TARN, 						  wTranquilTarnSceneID
 	scene_var LAKE_OF_RAGE, 						  wLakeOfRageSceneID
 	scene_var TIMELESS_TAPESTRY, 					  wTimelessTapestrySceneID
+	scene_var NATIONAL_PARK, 						  wNationalParkSceneID ; todo 
+	scene_var GOLDENROD_MUSEUM_2F, 					  wGoldenrodMuseum2FSceneID ; todo 
+	scene_var VIOLET_NICKNAME_SPEECH_HOUSE, 		  wVioletNicknameSpeechHouseSceneID ; todo 
+	scene_var ECRUTEAK_DESTINY_KNOT_HOUSE, 			  wEcruteakDestinyKnotHouseSceneID ; todo 
+	scene_var ECRUTEAK_CHERISH_BALL_HOUSE, 			  wEcruteakCherishBallHouseSceneID ; TODO 
+	scene_var OLIVINE_PUNISHMENT_SPEECH_HOUSE, 		  wOlivinePunishmentSpeechHouseSceneID ; TODO 
+	scene_var LANDING_HOUSE_2, 						  wLandingHouse2SceneID ; todo
+	scene_var OLIVINE_CAFE, 						  wOlivineCafeSceneID ; todo 
+	scene_var EERIE_HAMLET, 						  wEerieHamletSceneID ; todo 
+	scene_var MAHOGANY_TOWN,                          wMahoganyTownSceneID ; TODO 
+	scene_var TIN_TOWER_OLD_1F, 					  wTinTowerOld1FSceneID ; todo 
 	db -1

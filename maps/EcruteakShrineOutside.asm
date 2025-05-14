@@ -25,7 +25,7 @@ EcruteakShrineOutside_MapScriptHeader:
 	object_event  2,  4, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, EcruteakShrineRadiantOpalScript, -1 ; apricorn trader 
 
 
-EcruteakShrineOutsideTwinText: ;TODO FIX THIS
+EcruteakShrineOutsideTwinText:
 	text "My #mon's"
 	line "Foresight helps"
 	cont "shoo away ghosts."
@@ -93,17 +93,10 @@ EcruteakPhotoStudioFishingGuruScript:
 	jumpopenedtext PhotoStudioEggPictureText
 
 PhotoStudioGreetingText:
-	text "Hey folks! Step"
-	line "right up - catch"
-	cont "those ancient"
-	cont "vibes!"
+	text "Step right up!"
 
 	para "Get your memories"
-	line "frozen in time,"
-	cont "complete with"
-	cont "complimentary"
-	cont "spiritual"
-	cont "ambiance."
+	line "frozen in time!"
 	done
 
 PhotoStudioWhichMonText:
@@ -183,13 +176,7 @@ PearlForRadiantOpalText:
 	line "ancient art of"
 	cont "alchemy!"
 	
-	para "You know those"
-	line "machines at am-"
-	cont "usement parks"
-	para "that turn coins"
-	line "into tokens?"
-	
-	para "Same, but I turn"
+	para "I turn ordinary"
 	line "BIG PEARLs into"
 	cont "Radiant Opals."
 	done
@@ -216,3 +203,4 @@ NoPearlForRadiantOpalText:
 	text "Oh, you don't"
 	line "have any."
 	done
+	

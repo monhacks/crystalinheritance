@@ -206,18 +206,18 @@ PryceGroup:
 ; ================================
 ; ================
 
-	; PRYCE ; french meal themed because why not 
+	; PRYCE ; meal themed because why not 
 	db "Pryce@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
 	; party
 	db 41, CLOYSTER, FOCUS_BAND, "Aperifrizo@"
 		db SPIKES, EXPLOSION, HAIL, NO_MOVE
-	db 42, LAPRAS, NO_ITEM, "dOeuvRas@"
+	db 42, LAPRAS, NO_ITEM, "Raspberry@"
 		db CALM_MIND, THUNDER_WAVE, THUNDERBOLT, ICE_BEAM
-	db 43, MAMOSWINE, NO_ITEM, "MainoSwine@"
+	db 43, MAMOSWINE, NO_ITEM, "Baconator@"
 		db ICE_SHARD, EARTHQUAKE, STOMP, ROAR
-	db 44, JYNX, NEVERMELTICE, "DameBlanch@"
-		db PSYCHIC_M, ICE_BEAM, CALM_MIND, DRAIN_KISS
+	db 44, SNEASEL, FOCUS_BAND, "SneaSalt@"
+		db SWORDS_DANCE, ICICLE_CRASH, NIGHT_SLASH, ICE_SHARD
 	db -1 ; end
 
 ; ================

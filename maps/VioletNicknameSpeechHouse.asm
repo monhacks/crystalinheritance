@@ -80,7 +80,7 @@ ParasectVioletText:
 	
 
 
-VioletPickyEaterScript:
+VioletPickyEaterScript: ; TRADE QUEST 
     faceplayer
     opentext
 	writetext NeedRageCandyBarText

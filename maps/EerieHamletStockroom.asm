@@ -17,13 +17,11 @@ EerieHamletStockroom_MapScriptHeader:
 
 
 	def_object_events; from here 
-	object_event 2, 3, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, EHStockroomNPC1Text, -1 ; TODO FIX 
-	object_event 5, 2, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptext, EHStockroomNPC2Text, -1 ; TODO FIX 
-	object_event 6, 2, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptext, EHStockroomNPC3Text, -1 ; TODO FIX 
+	object_event 2, 3, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, EHStockroomNPC1Text, -1
+	object_event 5, 2, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptext, EHStockroomNPC2Text, -1 
+	object_event 6, 2, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptext, EHStockroomNPC3Text, -1 
 	object_event  9,  0, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, pokemart, MARTTYPE_STANDARD, MART_EERIE_HAMLET, -1
 
-
-	object_const_def
 
 
 EHStockroomNPC1Text:
@@ -41,10 +39,8 @@ EHStockroomNPC2Text:
 
 EHStockroomNPC3Text:
 	text "I'm telling you,"
-	line "we have to stay!"
-	para "This is our home,"
-	line "won't you fight"
-	cont "for it?"
+	line "we have to fight"
+	cont "for our home!"
 	done
 
 
