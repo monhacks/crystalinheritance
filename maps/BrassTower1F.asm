@@ -21,6 +21,8 @@ BrassTower1F_MapScriptHeader:
 	object_event 7, 13, SPRITE_AMOS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, BrassTowerAmosScript, -1 ; done
 	object_event  5,  13, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_COMMAND, pokemart, MARTTYPE_STANDARD, MART_WESTERN_CAPITAL_PREP, -1
 	object_event 9, 13, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, BrassTowerHealScript, -1 ; done
+	object_event  5,  5, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptext, BrassTowerKurtJournalText, -1
+
 
 	object_const_def
 
@@ -82,10 +84,6 @@ BrassHealedPokemon:
 
 TowerKurtScript: 
 	faceplayer
-	opentext
-	writetext KurtHearAStoryQuestionTower ; todo, move this to the roof 
-	waitbutton
-.AskPC
 	writetext TowerKurtPCQuestion
 	yesorno
 	iffalse_jumpopenedtext KurtTowerDeclineText
@@ -93,16 +91,6 @@ TowerKurtScript:
 	promptbutton
 	special PokemonCenterPC
 	end
-
-KurtHearAStoryQuestionTower:
-	text "Would you like"
-	line "to hear a story?"
-	
-	para "It's the last I"
-	line "was here, at the"
-	cont "burned tower in"
-	cont "our time."
-	done
 
 TowerKurtPCQuestion:
 	text "Do you need me to"
@@ -130,4 +118,19 @@ KurtTowerText2:
 	text "I can run back"
 	line "to manage your"
 	cont "party."
+	done
+
+BrassTowerKurtJournalText:
+	text "Kurt's Journal"
+	line "Brass Tower"
+	
+	para "In this city, I'm"
+	line "reminded of the"
+	cont "last time I was"
+	cont "here..."
+	
+	para "..."
+	
+	para "Hm? He hasn't"
+	line "finished it."
 	done

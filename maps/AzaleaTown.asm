@@ -136,13 +136,6 @@ AzaleaGymSignText:
 SlowpokeWellSignText:
 	text "Slowpoke Well"
 
-	para "Also known as the"
-	line "Rainmaker Well."
-
-	para "Locals believe"
-	line "that a Slowpoke's"
-	cont "yawn summons rain."
-
 	para "Records show that"
 	line "a Slowpoke's yawn"
 
@@ -303,7 +296,7 @@ Movement_PokefanFBringsYouBack2_AT:
 Movement_PokefanFBringsYouBack1_AT:
 	step_right
 	turn_head_left
-	step_end ;todo check the head on both of these
+	step_end 
 	
 Movement_GrampsRunsToYou1_AT:
 	step_right
@@ -320,7 +313,7 @@ Movement_GrampsBringsYouBack2_AT:
 Movement_GrampsBringsYouBack1_AT:
 	step_left
 	turn_head_right
-	step_end ;todo check the head on both of these
+	step_end 
 
 PokemonMemoriesNPCScript:
     faceplayer

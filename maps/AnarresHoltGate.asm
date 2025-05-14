@@ -1,4 +1,4 @@
-AnarresHoltGate_MapScriptHeader: ; todo add a wram flag ?
+AnarresHoltGate_MapScriptHeader:
 	def_scene_scripts
 	scene_script AnarresHoltGateHollisScene
 

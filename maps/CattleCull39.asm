@@ -1,4 +1,4 @@
-CattleCull39_MapScriptHeader: ;TODO putthe locations of everything 
+CattleCull39_MapScriptHeader: 
 	def_scene_scripts
 
 

@@ -12,8 +12,8 @@ AnarresHouse_MapScriptHeader:
 	def_coord_events
 
 
-	def_bg_events ;todo add a journal or something
-;	bg_event 22, 12, BGEVENT_JUMPTEXT, TinTowerSignText
+	def_bg_events 
+
 
 	def_object_events
 	object_event  5,  4, SPRITE_NOMAD_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AnarresHouseMushroomScript, -1 

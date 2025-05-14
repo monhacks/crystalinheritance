@@ -15,7 +15,6 @@ CianwoodGym_MapScriptHeader:
 
 
 	def_object_events
-	; NPC TO RESET THE TRAINERS TODO 
 	object_event  3, 10, SPRITE_BLACK_BELT, SPRITEMOVEDATA_SPINCLOCKWISE, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerBlackbeltYoshi, -1
 	object_event  3, 7, SPRITE_BLACK_BELT, SPRITEMOVEDATA_SPINCLOCKWISE, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerBlackbeltLao, -1
 	object_event  6, 3, SPRITE_BLACK_BELT, SPRITEMOVEDATA_SPINCLOCKWISE, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerBlackbeltNob, -1
@@ -130,6 +129,7 @@ CianwoodGymResetScript:
 	clearevent EVENT_BEAT_BLACKBELT_NOB
 	clearevent EVENT_BEAT_BLACKBELT_LAO
 	clearevent EVENT_BEAT_BLACKBELT_YOSHI
+	reloadmap
 	done
 
 ResetCianwoodGymText:

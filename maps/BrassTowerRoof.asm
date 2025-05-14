@@ -97,14 +97,14 @@ BrassTowerRoofScript:
 	applyonemovement BRASS_TOWER_ROOF_MEJIMI, step_down
 	turnobject BRASS_TOWER_ROOF_MEJIMI, LEFT 
 	showtext TowerRoofMejimiText1_9
-	applymovement BRASS_TOWER_ROOF_LUGIA, BrassTowerLugiaFleesMovement ; todo 
+	applymovement BRASS_TOWER_ROOF_LUGIA, BrassTowerLugiaFleesMovement 
 	disappear BRASS_TOWER_ROOF_LUGIA
 	showemote EMOTE_SHOCK, BRASS_TOWER_ROOF_MEJIMI, 10
 ; another lightning bolt, 	moveobject BRASS_TOWER_ROOF_LIGHTNING_1, 10,  3?
 ; changeblock 10, 6, $0F ; fire, todo 	
 	turnobject BRASS_TOWER_ROOF_MEJIMI, RIGHT 
 	showtext TowerRoofMejimiText1_9_2
-	applymovement BRASS_TOWER_ROOF_HOOH, BrassTowerHoOhMovement1 ; todo , go up two spaces 
+	applymovement BRASS_TOWER_ROOF_HOOH, BrassTowerHoOhMovement1
 	showtext TowerRoofMejimiText1_10
 	; more flames 
 	turnobject PLAYER, RIGHT
@@ -122,7 +122,7 @@ BrassTowerRoofScript:
 
 	special FadeOutPalettes
 	waitsfx
-; 	clearevent TODO 
+; 	clearevents todo, all events related to the brass tower from when you enter 2F 
 	warp TIMELESS_TAPESTRY,  9, 26
 	end
 
@@ -302,7 +302,7 @@ AcceptedAdrinnaRoofScript:
 	special Special_CelebiShrineEvent ; todo check that this is OK 
 	showemote EMOTE_SHOCK, BRASS_TOWER_ROOF_KURT, 10
 	showtext TinTowerRoofText2_Celebi
-	setevent EVENT_YES_ADRINNA_BATTLE_KURT ; TODO CLEAR THESE EVENTS WHEN YOU BATTLE BOBESH THE FIRST TIME 
+	setevent EVENT_YES_ADRINNA_BATTLE_KURT
 ; BATTLE MEJIMI 
 	winlosstext TowerRoofText2_16, 0
 	loadtrainer KURT, KURT13

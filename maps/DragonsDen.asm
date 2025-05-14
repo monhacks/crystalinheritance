@@ -18,7 +18,6 @@ DragonsDen_MapScriptHeader:
 
 
 	def_object_events
-; two dragon tamers, todo 
 	object_event  10, 13, SPRITE_DRAGON_TAMER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerDragonTamerDarin, -1
 	object_event  13, 13, SPRITE_DRAGON_TAMER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerDragonTamerPaul, -1
 ;warper 
