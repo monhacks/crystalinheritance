@@ -185,6 +185,10 @@ _OakTimeWokeUpText::
 
 SECTION "_OakTimeWhatTimeIsItText", ROMX
 _OakTimeWhatTimeIsItText::
+	text_high
+    text "Kurt:"
+	next
+	text_start 
 	text "What time is it?"
 	done
 
@@ -746,7 +750,6 @@ SECTION "_BenFernText1", ROMX
 _BenFernText1::
 	text_start
 	line "Today's "
-	text_today
 	text ","
 	done
 
@@ -4054,7 +4057,7 @@ _CardFlipDarnText::
 
 SECTION "_GearTodayText", ROMX
 _GearTodayText::
-	text_today
+	text "Sunday"
 	text_end
 
 SECTION "_GearEllipseText", ROMX
