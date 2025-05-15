@@ -109,7 +109,7 @@ NomadReinaAfterText:
 
 
 GenericTrainerNomadFAlina:
-	generictrainer NOMAD_F, ALINA, EVENT_BEAT_NOMAD_F_ALINA, NomadAlinaSeenText, NomadAlinaBeatenText
+	generictrainer NOMAD_F, NOMAD_F_ALINA, EVENT_BEAT_NOMAD_F_ALINA, NomadAlinaSeenText, NomadAlinaBeatenText
 
 	text "Our people moved"
 	line "with storms."

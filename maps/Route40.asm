@@ -118,7 +118,7 @@ RazorScavengerScript: ; check route 31 script if not working
 	closetext
 	winlosstext .BeatenText, 0
 	setlasttalked ROUTE40_SCAVENGER
-	loadtrainer SWIMMER_M, GEORGE
+	loadtrainer SWIMMERM, GEORGE
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_SWIMMERM_GEORGE

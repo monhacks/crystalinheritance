@@ -64,7 +64,7 @@ StadiumGroundsFloodCallback:
 .Done:
 	endcallback
 
-StadiumGroundsBobeshScene:
+StadiumGroundsToxicroakScene:
 	applymovement PLAYER, PlayerWalksDownMovement
 	pause 15
 	showemote EMOTE_SHOCK, STADIUMGROUNDS_BOBESH, 10

@@ -37,7 +37,7 @@ StadiumBoxScene_warp1:
 	applyonemovement PLAYER, step_up
 	applyonemovement PLAYER, step_up
 	applyonemovement PLAYER, step_up
-	StadiumBoxScene
+	sjump StadiumBoxScene
 
 StadiumBoxScene_warp3:
 	applyonemovement PLAYER, step_down
@@ -47,7 +47,7 @@ StadiumBoxScene_warp3:
 	applyonemovement PLAYER, step_down
 	applyonemovement PLAYER, step_down
 	applyonemovement PLAYER, step_right
-	StadiumBoxScene	
+	sjump StadiumBoxScene	
 
 StadiumBoxScene:
 	; cut the sound 

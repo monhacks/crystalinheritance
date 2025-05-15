@@ -5,7 +5,7 @@ WhirlIslandLugiaChamber_MapScriptHeader:
 	scene_script WhirlIslandKurtLugiaScript
 
 	def_callbacks
-	callback MAPCALLBACK_OBJECTS, WhirlIslandLugiaChamberLugia
+
 
 	def_warp_events
 	warp_event  9, 13, WHIRL_ISLAND_B3F, 3

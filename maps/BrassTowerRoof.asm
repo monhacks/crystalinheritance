@@ -259,7 +259,7 @@ AcceptedAdrinnaRoofScript:
 	pause 10
 	turnobject BRASS_TOWER_ROOF_MEJIMI, UP
 	showemote EMOTE_SHOCK, BRASS_TOWER_ROOF_MEJIMI, 10
-	showtext TowerRoofMejimiText1_0
+	showtext TowerRoofMejimiText2_0
 	appear BRASS_TOWER_ROOF_KURT
 	applymovement BRASS_TOWER_ROOF_KURT, BTR_KurtStepsDownMovement2
 	showemote EMOTE_QUESTION, BRASS_TOWER_ROOF_KURT, 10 
@@ -377,7 +377,7 @@ BTR_PlayerToFrontMovement:
 	step_down
 	step_end
 
-TowerRoofMejimiText1_0: 
+TowerRoofMejimiText2_0: 
 	text "Mejimi: Adrinna,"
 	line "why are you with"
 	cont "this child?"
@@ -412,7 +412,7 @@ TowerRoofText2_7:
 	cont "you, <PLAYER>!"
 	done
 
-TowerRoofText2_8: 
+TowerRoofMejimiText2_8: 
 	text "Mejimi: My "
 	line "#mon… How "
 	cont "could I lose?"

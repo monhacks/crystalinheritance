@@ -212,7 +212,7 @@ TrainerScientistJoseph:
 
 
 TrainerBlackBeltWai:
-	generictrainer BLACKBELT, WAI, EVENT_BEAT_BLACKBELT_WAI, .SeenText2, .BeatenText2
+	generictrainer BLACK_BELT, WAI, EVENT_BEAT_BLACKBELT_WAI, .SeenText2, .BeatenText2
 	
 .BeatenText2:
 	text "I wonder if any-"

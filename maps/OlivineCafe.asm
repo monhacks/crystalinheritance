@@ -34,9 +34,9 @@ OlivineCafe1Script: ; 5000
 	writetext OlivineCafe1Text
 	special PlaceMoneyTopRight
 	yesorno
-	iffalse_jumpopenedtext .Text4
+	iffalse_jumpopenedtext OlivineCafeText4
 	checkmoney $0, 5000
-	ifequal $2, .NotEnoughMoney
+	ifequal $2, OlivineCafeNotEnoughMoney
 	promptbutton
 	loadmenu .Cafe1PokemonMenuHeader
 	verticalmenu
@@ -136,11 +136,11 @@ OlivineCafe1Text:
 	para "Buy for ¥4000?"
 	done
 
-.Text4:
+OlivineCafeText4:
 	text "Have a nice day!"
 	done
 
-.NotEnoughMoney:
+OlivineCafeNotEnoughMoney:
 	jumpthisopenedtext
 
 	text "You don't have"

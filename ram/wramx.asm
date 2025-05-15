@@ -1062,6 +1062,7 @@ wMahoganyTownSceneID:: db
 wMistyBasinSceneID:: db 
 wNationalParkSceneID:: db
 wOlivineCafeSceneID:: db 
+wOlivineCityDesal1FSceneID:: db
 wOlivineLighthouse1F:: db
 wOlivineLighthouse6F:: db
 wOlivinePunishmentSpeechHouseSceneID:: db
@@ -1081,6 +1082,7 @@ wRuinsOfAlphKabutoChamberSceneID:: db
 wRuinsOfAlphOmanyteChamberSceneID:: db
 wRuinsOfAlphOutsideSceneID:: db
 wRuinsOfAlphResearchCenterSceneID:: db
+wRusalkaRuinsB1FSceneID:: db
 wShimmerSaddleSceneID:: db
 wSproutTower3FSceneID:: db 
 wTimelessTapestrySceneID:: db  
@@ -1094,8 +1096,6 @@ wUndergroundPathSwitchRoomEntrancesSceneID:: db
 wVioletNicknameSpeechHouseSceneID:: db 
 wWesternCapitalSceneID:: db 
 wWhirlIslandLugiaChamberSceneID:: db 
-wRusalkaRuinsB1FSceneID:: db ; sorta new 
-wUnused11SceneID:: db
 wUnused12SceneID:: db
 wUnused13SceneID:: db
 wUnused15SceneID:: db  
@@ -1116,7 +1116,7 @@ wUnused7SceneID:: db
 wUnused8SceneID:: db 
 wUnused9SceneID:: db ;
 ;sceneids should only go through 1117 line. 
-; fight counts, these are essentially unused but would be annoying to scrap 
+; fight counts, these are essentially unused but could be annoying to scrap 
 wJackFightCount::    db
 wBeverlyFightCount:: db ; unused
 wHueyFightCount::    db

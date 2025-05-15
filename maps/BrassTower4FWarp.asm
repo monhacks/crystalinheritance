@@ -28,7 +28,7 @@ BrassTowerAdrinna:
 	iftrue_jumptextfaceplayer AdrinnaAfterText
 	checkpoke CELEBI
 	iftrue .DeclinedCelebi 
-	showtextfaceplayer .SeenText
+	showtextfaceplayer AdrinnaTowerSeenText
 	pause 10
 	yesorno
 	iftrue .YesToAdrinna
@@ -90,7 +90,7 @@ AdrinnaSeenText0:
 	done
 
 
-.SeenText:
+AdrinnaTowerSeenText:
 	text "I knew your tal-"
 	line "ents would rise"
 	cont "you to the top."

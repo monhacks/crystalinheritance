@@ -16,8 +16,8 @@ RusalkaRuinsB1F_MapScriptHeader:
 
 	def_coord_events
 ; todo stalking spiritomb 
-	coord_event 0, 0, 0, Rusalka_B1F_Spiritomb_1 ; setscene $1
-	coord_event 0, 0, 1, Rusalka_B1F_Spiritomb_2 ; setscene $2 
+;	coord_event 0, 0, 0, Rusalka_B1F_Spiritomb_1 ; setscene $1
+;	coord_event 0, 0, 1, Rusalka_B1F_Spiritomb_2 ; setscene $2 
 
 
 	def_bg_events
@@ -25,8 +25,8 @@ RusalkaRuinsB1F_MapScriptHeader:
 
 
 	def_object_events
-	object_event  0,  0, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, SPIRITOMB, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_RUSALKA_B1F_SPIRITOMB_1
-	object_event  0,  0, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, SPIRITOMB, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_RUSALKA_B1F_SPIRITOMB_2
+;	object_event  0,  0, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, SPIRITOMB, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_RUSALKA_B1F_SPIRITOMB_1
+;	object_event  0,  0, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, SPIRITOMB, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_RUSALKA_B1F_SPIRITOMB_2
 	object_event  1,  10, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptext, CaptainsLog01, -1
 	object_event  8,  10, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptext, CaptainsLog02, -1
 	object_event  13,  6, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptext, CaptainsLog03, -1
@@ -36,8 +36,8 @@ RusalkaRuinsB1F_MapScriptHeader:
 	bg_event 27, 13, BGEVENT_ITEM + X_SPEED, EVENT_RUSALKA_B1F_X_SPEED
 
 	object_const_def
-	const RUSALKA_B1F_SPIRITOMB_1
-	const RUSALKA_B1F_SPIRITOMB_2
+;	const RUSALKA_B1F_SPIRITOMB_1
+;	const RUSALKA_B1F_SPIRITOMB_2
 
 CaptainsLog01:
 	text "Captain's Log 1"

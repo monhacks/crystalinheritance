@@ -211,7 +211,7 @@ HollysHoltNPC1Text:
 	done
 
 HollysHoltNPC2Script:
-	checkevent EVENT_YELLOW_FOREST_MIRACLE_SEED
+	checkevent EVENT_HOLT_MIRACLE_SEED
 	iftrue_jumptextfaceplayer HHNPC2_GotSeed
 	faceplayer
 	opentext
