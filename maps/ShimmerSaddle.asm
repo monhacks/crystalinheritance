@@ -4,8 +4,8 @@ ShimmerSaddle_MapScriptHeader:
 	def_callbacks
 
 	def_warp_events ; should be ok 
-	warp_event  6, 32, GAULDENROD, 9 ; 1
-	warp_event  6, 33, GAULDENROD, 9 ; 2 
+	warp_event  6, 32, GAULDENROD, 10 ; 1
+	warp_event  6, 33, GAULDENROD, 10 ; 2 
 ; first cave
 	warp_event 40, 5, SHIMMER_SADDLE, 4 ; 3 
 ; second cave set
@@ -25,6 +25,7 @@ ShimmerSaddle_MapScriptHeader:
 	warp_event 26, 19, SHIMMER_SADDLE, 11  ; 14
 	warp_event 22, 19, SHIMMER_SADDLE, 12 ; 15
 	warp_event 22, 7, SHIMMER_SADDLE, 9  ; 16 
+ 
 
 	def_coord_events
 	coord_event 	 9,	33, 0, ShimmerSaddle_Scene1_ManHZ
@@ -65,6 +66,9 @@ ShimmerSaddle_MapScriptHeader:
 ;strengthboulders
 	strengthboulder_event 13, 20 
 	strengthboulder_event 18, 8 
+;fruittrees
+	fruittree_event 24, 30, FRUITTREE_SADDLE_1, LIECHI_BERRY, PAL_NPC_RED
+	fruittree_event 49, 34, FRUITTREE_SADDLE_2, SALAC_BERRY, PAL_NPC_RED
 
 	object_const_def
 	const SHIMMER_GRAMPS_1
@@ -149,8 +153,9 @@ ShimmerGramps1Move2:
 ShimmerSaddle_Scene2_HZOnly:
 	pause 10
 	applymovement SHIMMER_HZ_2, ShimmerHZ2_Stalks
-	showemote EMOTE_SHOCK, SHIMMER_MON_2, 10 
-	; sfx slash todo 
+	showemote EMOTE_SHOCK, SHIMMER_MON_2, 10 ; RIP 
+	playsound SFX_CUT
+	waitsfx
 	disappear SHIMMER_MON_2
 	setevent EVENT_SHIMMER_MANKEY_2
 	disappear SHIMMER_HZ_2
@@ -203,9 +208,7 @@ ShimmerSaddle_Scene3_ManHZ:
 	warp GAULDENROD, 15, 17 
 	end
 	
-; TODO finish 
-	
-	
+
 ShimmerGramps2Text1:
 	text "You moved it!"
 	line "Let's get to the"

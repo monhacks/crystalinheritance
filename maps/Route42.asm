@@ -40,7 +40,7 @@ Route42_MapScriptHeader:
 	itemball_event  7, 13, ULTRA_BALL, 1, EVENT_ROUTE_42_ULTRA_BALL
 	itemball_event 33,  8, HYPER_POTION, 1, EVENT_ROUTE_42_SUPER_POTION
 	tmhmball_event 10, 2, TM_SCALD, EVENT_GOT_TM_SCALD 
-
+	fruittree_event 25, 5, FRUITTREE_ROUTE_42, HOLLOW_ROCK, PAL_NPC_BLUE
 
 	object_const_def
 	const ROUTE_42_EUSINE

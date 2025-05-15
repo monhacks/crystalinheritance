@@ -133,6 +133,7 @@ StadiumGroundsBobeshScene:
 	clearevent EVENT_STADIUM_BOX_ADRINNA
 	clearevent EVENT_GAULDENROD_ELDER 
 	setscene $1
+	setmapscene STADIUM_BOX, $1
 	end
 
 StadiumGroundsBobeshScript:

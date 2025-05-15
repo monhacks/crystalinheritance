@@ -192,7 +192,7 @@ EMOTE_FROM_MEM EQU -1
 ;Geode		HOLLOW ROCK		xx		Yy
 ;Love Ball	PNK APRICORN	xxx
 
-; fruittree arguments
+; fruittree arguments -- seems like it can go in any order?
 ; FruitTreeItems indexes (see data/items/fruit_trees.asm) ; not sure where this is?... 
 	const_def 1
 ; Apricorn trees come first, then Berry trees
@@ -208,7 +208,7 @@ EMOTE_FROM_MEM EQU -1
 	const FRUITTREE_HOLLYS_HOLT     ; 0a tough leaves
 	const FRUITTREE_MISTYBASIN      ; 0b radiant opal
 FIRST_BERRY_TREE EQU const_value
-;	const FRUITTREE_ROUTE_29        ; todo, check if these can be removed at next build 
+;	const FRUITTREE_ROUTE_29        ; todo: check if these can be removed at next build 
 ;	const FRUITTREE_ROUTE_30_1      ; 
 ;	const FRUITTREE_ROUTE_30_2      ; 
 ;	const FRUITTREE_ROUTE_31        ; 
@@ -217,11 +217,11 @@ FIRST_BERRY_TREE EQU const_value
 	const FRUITTREE_CATTLE_CULL_39  	; 0e sitrus berry 
 	const FRUITTREE_ROUTE_35        	; 0f shore foam
 	const FRUITTREE_ROUTE_36        	; 10 wht apricorn
-	const FRUITTREE_ROUTE_38        	; 11 TODO fixed charge on brass tower exterior in western capital 
+	const FRUITTREE_WESTERN_CAPITAL     ; 11 fixed charge on brass tower exterior in western capital 
 	const FRUITTREE_ROUTE_39        	; 12 pnk apricorn
 	const FRUITTREE_ROUTE_43        	; 13 lum berry 
-	const FRUITTREE_ROUTE_44        	; 14 TODO hollow rock in Union Cave B1F North 
-	const FRUITTREE_ROUTE_45        	; 15 TODO tough leaves at lake of rage
+	const FRUITTREE_UNION_CAVE_2       	; 14 hollow rock in Union Cave B1F North 
+	const FRUITTREE_LAKE_OF_RAGE        ; 15 tough leaves at lake of rage
 	const FRUITTREE_KAJO_ACQUIFER     	; 16 radiant opal  
 	const FRUITTREE_ROUTE_KAJO      	; 17 hollow rock 
 	const FRUITTREE_EMPERORS_GARDEN_1 	; 18 wht apricorn 
@@ -231,9 +231,9 @@ FIRST_BERRY_TREE EQU const_value
 	const FRUITTREE_TRANQIL_TARN_1    	; 1c tough leaves 
 	const FRUITTREE_TRANQIL_TARN_2   	; 1d radiant opal
 	const FRUITTREE_GOLDENROD_CITY   	; 1e fixed charge
-	const FRUITTREE_ROUTE_2         	; 1f todo stat-raising berry on shimmer saddle
-	const FRUITTREE_ROUTE_1         	; 20 todo hollow rock at route 40 outside mount mortar
-	const FRUITTREE_LUCKY_ISLAND    	; 21 todo stat-raising berry on shimmer saddle 
+	const FRUITTREE_SADDLE_1         	; 1f salac berry on shimmer saddle
+	const FRUITTREE_ROUTE_42         	; 20 hollow rock at route 40 outside mount mortar
+	const FRUITTREE_SADDLE_2    	    ; 21 liechi berry on shimmer saddle 
 	const FRUITTREE_CALM_COAST_1 		; 22 sitrus berry
 	const FRUITTREE_CALM_COAST_2        ; 23 lum berry
 NUM_FRUIT_TREES EQU const_value - 1

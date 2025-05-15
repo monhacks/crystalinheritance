@@ -3,7 +3,7 @@ Gauldenrod_MapScriptHeader:
 
 	def_callbacks
 	callback MAPCALLBACK_NEWMAP, GauldenrodFlyPoint
-
+	callback MAPCALLBACK_TILES, Gauldenrod_Saddle_AccessCallback
 
 	def_warp_events
 	warp_event 18, 27, GAULDENROD_DORMS, 1
@@ -15,6 +15,7 @@ Gauldenrod_MapScriptHeader:
 	warp_event 23, 3, GAULDENROD_SERENE_SPRINGS_GATE, 1
 	warp_event 24, 3, GAULDENROD_SERENE_SPRINGS_GATE, 2
 	warp_event  9, 15, GAULDENROD_TOWER_1F, 1
+	warp_event 40, 11, SHIMMER_SADDLE, 1
 
 	def_coord_events
 	coord_event 22, 35, 0, GauldenrodBobeshScene
@@ -64,6 +65,13 @@ Gauldenrod_MapScriptHeader:
 
 GauldenrodFlyPoint:
 	setflag ENGINE_FLYPOINT_GAULDENROD
+	endcallback
+	
+Gauldenrod_Saddle_AccessCallback:
+	checkevent EVENT_GRAMPS_SADDLE
+	iffalse .Done 
+	changeblock 36, 10, $44 ; fence is opened 
+.Done:
 	endcallback
 
 GauldenrodNPC1Script:
@@ -604,6 +612,7 @@ GauldenrodNPC9Script:
 	yesorno
 	iffalse_jumptext GauldenrodElderQuestNo
 	showtext GauldenrodElderThanks
+	setevent EVENT_GRAMPS_SADDLE 
 	warp SHIMMER_SADDLE, 7, 33
 	end
 
