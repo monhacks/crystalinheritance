@@ -443,6 +443,7 @@ TextCommands::
 	dw TextCommand_SOUND         ; $06 <SOUND>
 	dw TextCommand_DAY           ; $07 <DAY>
 	dw TextCommand_FAR           ; $08 <FAR>
+	dw TextCommand_HIGH			 ; $09 <HIGH> ; TEXTHIGH 051525
 	assert_table_length NGRAMS_START
 
 _ImplicitlyStartedText:
@@ -458,6 +459,10 @@ TextCommand_START::
 	ld l, e
 	inc hl
 	ret
+
+;TextCommand_HIGH:
+;	bccoord TEXTBOX_INNERX, TEXTBOX_INNERY - 2
+;	ret 
 
 TextCommand_RAM::
 ; write text from a ram address

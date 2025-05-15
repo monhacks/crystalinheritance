@@ -219,7 +219,7 @@ HollysHoltNPC2Script:
 	promptbutton
 	verbosegiveitem MIRACLE_SEED
 	iffalse_endtext
-	setevent EVENT_YELLOW_FOREST_MIRACLE_SEED
+	setevent EVENT_HOLT_MIRACLE_SEED
 	jumpthisopenedtext
 
 HHNPC2_GotSeed:

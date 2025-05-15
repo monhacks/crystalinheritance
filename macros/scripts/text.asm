@@ -7,7 +7,8 @@ cont   EQUS "db \"<CONT>\","  ; Scroll to the next line.
 para   EQUS "db \"<PARA>\","  ; Start a new paragraph.
 done   EQUS "db \"<DONE>\""   ; End a text box.
 prompt EQUS "db \"<PROMPT>\"" ; Prompt the player to end a text box (initiating some other event).
-page   EQUS "db \"@\","       ; Start a new Pokedex page.
+page   			EQUS "db \"@\","       ; Start a new Pokedex page.
+;text_high		EQUS "db " 		; writes text at a higher y coordinate
 
 text_ram: MACRO
 	db "<RAM>"
