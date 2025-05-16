@@ -1,0 +1,242 @@
+polychrome_item_update_both_colors_per_palette
+
+--- a/vary_colors.asm
++++ b/vary_colors.asm
+@@ -113,11 +113,12 @@
+ 	ldh [rSVBK], a
+ 
+ 	ld bc, wColorVaryDVs
+-; todo: polychrome item should actually check if the held item is the polychrome 
++; todo: polychrome item should actually check if the held item is the polychrome
+ 	ld a, [wColorVarySpecies]
+ 	cp PORYGON ; t
+ 	jr z, .Smeargle
+ 
++; Standard Pokemon color variation starts here
+ ;;; LiteRed ~ HPDV, aka, rrrrr ~ hhhh
+ ; store HPDV in e
+ 	ld a, [bc]
+@@ -150,7 +151,7 @@
+ 	inc hl
+ 	inc hl
+ 
+-.Finish:
++.Finish: ; Dark color variation for standard Pokemon starts here
+ ;;; DarkRed ~ SpdDV, aka, RRRRR ~ ssss
+ ; store SpdDV in e
+ 	ld a, [bc]
+@@ -176,10 +177,12 @@
+ ; vary DarkBlu by e
+ 	call VaryBlueByDV
+ 
++.PorygonColorSetDone: ; Common exit point for Porygon and normally varied Pokemon
+ 	pop af
+ 	ldh [rSVBK], a
+ 	ret
+ 
++; Porygon's unique color setting logic:
+ ; could do: vary paint color with unused DV bits
+ ; * DarkRed' = DarkRed + (HPDV & %0100 >> 2) - (HPDV & %1000 >> 3)
+ ; * DarkGrn' = DarkGrn + (AtkDV & %0100 >> 2) - (AtkDV & %1000 >> 3)
+@@ -194,43 +197,104 @@
+ 	swap a
+ 	and %11
+ 	or d
+-; d, e = base paint color
+-	ld e, a
++	ld e, a ; e = final index (0-15) for palettes
+ 	ld d, 0
+-	push hl
+-	ld hl, .SmearglePals
++	; d = 0, so de pair effectively holds the index for 'add hl, de' trick later
++
++	push de ; Save index de (d=0, e=index)
++	push hl ; Save pointer to Pokemon's color data (colors[0])
++
++; Get Porygon's Dark Colors (Store in b, c)
++	ld hl, .SmearglePalsDark ; Changed from .SmearglePals
+ 	ld a, [wColorVaryShiny]
+ 	and SHINY_MASK
+-	jr z, .not_shiny
+-	ld hl, .SmeargleShinyPals
+-.not_shiny:
++	jr z, .not_shiny_porygon_dark
++	ld hl, .SmeargleShinyPalsDark ; Changed from .SmeargleShinyPals
++.not_shiny_porygon_dark:
++	pop de      ; Restore index de
++	push de     ; Save index de again (for lite colors)
+ 	add hl, de
+ 	add hl, de
+ 	ld a, [hli]
+-	ld d, a
+-	ld a, [hl]
+-	ld e, a
+-	pop hl
+-;;; DarkRGB = base paint color
+-	inc hl
+-	inc hl
+-	inc hl
+-	ld a, e
+-	ld [hld], a
+-	ld a, d
+-	ld [hld], a
+-	dec hl
+-;;; LiteRGB ~ Spd,SAt,SDfDVs
+-	jr .Finish
++	ld b, a     ; b = DarkColorByte1
++	ld a, [hl]
++	ld c, a     ; c = DarkColorByte2
++
++; Get Porygon's Lite Colors (Store in d, e - reusing d, e registers)
++	ld hl, .SmearglePalsLite ; NEW LITE PALETTE
++	ld a, [wColorVaryShiny]
++	and SHINY_MASK
++	jr z, .not_shiny_porygon_lite
++	ld hl, .SmeargleShinyPalsLite ; NEW SHINY LITE PALETTE
++.not_shiny_porygon_lite:
++	pop de      ; Restore index de (d=0, e=index)
++	; de is not pushed again as it's the last use of the index
++	add hl, de  ; hl += index
++	add hl, de  ; hl += index (total hl += index * 2)
++	ld a, [hli] ; LiteColorByte1
++	ld d, a     ; d now holds LiteColorByte1
++	ld a, [hl]  ; LiteColorByte2
++	ld e, a     ; e now holds LiteColorByte2
++
++	pop hl      ; Restore pointer to Pokemon's color data (hl points to colors[0])
++
++; Store Porygon's Lite Colors (d = LiteColorByte1, e = LiteColorByte2)
++	; colors[0] (gggr:rrrr) is LiteColorByte1
++	; colors[1] (0bbb:bbgg) is LiteColorByte2
++	ld a, d
++	ld [hli], a ; Store LiteColorByte1 into colors[0], hl now points to colors[1]
++	ld a, e
++	ld [hl], a  ; Store LiteColorByte2 into colors[1]
++
++; Store Porygon's Dark Colors (b = DarkColorByte1, c = DarkColorByte2)
++	; colors[2] (GGGR:RRRR) is DarkColorByte1
++	; colors[3] (0BBB:BBGG) is DarkColorByte2
++	inc hl      ; hl now points to colors[2] (DarkRed)
++	ld a, b
++	ld [hli], a ; Store DarkColorByte1 into colors[2], hl now points to colors[3]
++	ld a, c
++	ld [hl], a  ; Store DarkColorByte2 into colors[3]
++
++	jp .PorygonColorSetDone ; Skip .Finish, go to common exit for Porygon
++
+ 
+ ; red and blue channels: no 0 or 31
+ ; green channel: no 0, 7, 8, 15, 16, 23, 24, or 31
+ ; need to be able to add or subtract 1 without overflow/underflow
+ 
+-.SmearglePals: ; from smeargle 
++.SmearglePalsDark: ; Renamed from .SmearglePals
+ if !DEF(MONOCHROME)
+ 	RGB 14, 05, 06 ; maroon (fighting)
+ 	RGB 27, 09, 26 ; lavender (flying)
+ 	RGB 29, 05, 06 ; red (poison)
+ 	RGB 26, 26, 26 ; white (ground)
+ 	RGB 18, 11, 05 ; brown (rock)
+ 	RGB 16, 28, 01 ; lime (bug)
+ 	RGB 14, 06, 27 ; purple (ghost)
+ 	RGB 14, 14, 18 ; gray (steel)
+ 	RGB 29, 13, 02 ; orange (fire)
+ 	RGB 01, 09, 28 ; blue (water)
+ 	RGB 04, 19, 01 ; green (grass)
+ 	RGB 30, 25, 01 ; yellow (electric)
+ 	RGB 30, 10, 13 ; pink (psychic)
+ 	RGB 02, 22, 26 ; teal (ice)
+ 	RGB 07, 11, 30 ; indigo (dragon)
+ 	RGB 08, 06, 06 ; black (dark)
+ else
++rept 16
+ 	RGB_MONOCHROME_DARK
++endr
++endc
++
++.SmeargleShinyPalsDark: ; Renamed from .SmeargleShinyPals ; TODO: Fill with actual shiny dark values
++if !DEF(MONOCHROME)
++	RGB 14, 05, 06 ; maroon (fighting)
++	RGB 27, 09, 26 ; lavender (flying)
++	RGB 29, 05, 06 ; red (poison)
++	RGB 26, 26, 26 ; white (ground)
++	RGB 18, 11, 05 ; brown (rock)
++	RGB 16, 28, 01 ; lime (bug)
++	RGB 14, 06, 27 ; purple (ghost)
++	RGB 14, 14, 18 ; gray (steel)
++	RGB 29, 13, 02 ; orange (fire)
++	RGB 01, 09, 28 ; blue (water)
++	RGB 04, 19, 01 ; green (grass)
++	RGB 30, 25, 01 ; yellow (electric)
++	RGB 30, 10, 13 ; pink (psychic)
++	RGB 02, 22, 26 ; teal (ice)
++	RGB 07, 11, 30 ; indigo (dragon)
++	RGB 08, 06, 06 ; black (dark)
++else
++rept 16
++	RGB_MONOCHROME_DARK
++endr
++endc
++
++.SmearglePalsLite: ; New palette for Porygon Lite colors
++if !DEF(MONOCHROME)
++rept 16
++	RGB 0,0,0 ; Placeholder Lite Colors
++endr
++else
++rept 16
++	RGB 0,0,0 ; Placeholder Lite Colors (Monochrome)
++endr
++endc
++
++.SmeargleShinyPalsLite: ; New palette for Porygon Shiny Lite colors ; TODO: Fill with actual shiny lite values
++if !DEF(MONOCHROME)
++rept 16
++	RGB 0,0,0 ; Placeholder Shiny Lite Colors
++endr
++else
++rept 16
++	RGB 0,0,0 ; Placeholder Shiny Lite Colors (Monochrome)
++endr
+ endc
+ 
+-.SmeargleShinyPals: ; TODO
+-if !DEF(MONOCHROME)
+-	RGB 14, 05, 06 ; maroon (fighting)
+-	RGB 27, 09, 26 ; lavender (flying)
+-	RGB 29, 05, 06 ; red (poison)
+-	RGB 26, 26, 26 ; white (ground)
+-	RGB 18, 11, 05 ; brown (rock)
+-	RGB 16, 28, 01 ; lime (bug)
+-	RGB 14, 06, 27 ; purple (ghost)
+-	RGB 14, 14, 18 ; gray (steel)
+-	RGB 29, 13, 02 ; orange (fire)
+-	RGB 01, 09, 28 ; blue (water)
+-	RGB 04, 19, 01 ; green (grass)
+-	RGB 30, 25, 01 ; yellow (electric)
+-	RGB 30, 10, 13 ; pink (psychic)
+-	RGB 02, 22, 26 ; teal (ice)
+-	RGB 07, 11, 30 ; indigo (dragon)
+-	RGB 08, 06, 06 ; black (dark)
+-else
+-	RGB_MONOCHROME_DARK
+-	RGB_MONOCHROME_DARK
+-	RGB_MONOCHROME_DARK
+-	RGB_MONOCHROME_DARK
+-	RGB_MONOCHROME_DARK
+-	RGB_MONOCHROME_DARK
+-	RGB_MONOCHROME_DARK
+-	RGB_MONOCHROME_DARK
+-	RGB_MONOCHROME_DARK
+-	RGB_MONOCHROME_DARK
+-	RGB_MONOCHROME_DARK
+-	RGB_MONOCHROME_DARK
+-	RGB_MONOCHROME_DARK
+-	RGB_MONOCHROME_DARK
+-	RGB_MONOCHROME_DARK
+-	RGB_MONOCHROME_DARK
+-endc
+-
+ VaryBGPal0ByTempMonDVs:
+ 	ld hl, wBGPals1 palette 0 + 2
+ 	jr VaryBGPalByTempMonDVs
