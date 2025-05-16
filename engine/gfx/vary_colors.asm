@@ -187,7 +187,7 @@ endc
 
 	ld bc, wColorVaryDVs
 ; todo: polychrome item should actually check if the held item is the polychrome 
-	ld a, [wColorVarySpecies]
+	ld a, [wColorVarySpecies] ; wCurItem, cp POLYCHROME ? 
 	cp PORYGON ; t
 	jr z, .Smeargle
 
@@ -367,7 +367,7 @@ endr
 endc
 
 
-.SmeargleShinyPalsDark: ; Renamed from .SmeargleShinyPals ; TODO: Fill with actual shiny dark values
+.SmeargleShinyPalsDark: ; Renamed from .SmeargleShinyPals ; could do: Fill with actual shiny dark values
 if !DEF(MONOCHROME)
 	RGB 14, 05, 06 ; maroon (fighting)
 	RGB 27, 09, 26 ; lavender (flying)

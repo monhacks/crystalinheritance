@@ -510,6 +510,7 @@ BreederText:
 DebugWonderTradeScript: 
 	faceplayer
 	opentext
+	givepoke PORYGON, 5
 	writetext DebugWonderTradeIntroText
 	waitbutton
 	writetext DebugWonderTradeExplanationText
