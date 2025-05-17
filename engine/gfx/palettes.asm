@@ -1402,8 +1402,8 @@ if !DEF(MONOCHROME)
 	RGB 00, 00, 00
 ; Marsh Badge - ice crystal
 	RGB 31, 31, 31
-	RGB 14, 22, 31
-	RGB 08, 16, 31
+	RGB 31, 08, 02 ; red strips, cf 
+	RGB 14, 22, 31 ; light gray body 
 	RGB 00, 00, 00
 ; Soul Badge - eyeball
 	RGB 31, 31, 31
