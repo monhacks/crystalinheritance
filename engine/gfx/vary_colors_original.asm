@@ -1,4 +1,4 @@
-CopyDVsToColorVaryDVs: ; claude 051625
+CopyDVsToColorVaryDVs:
 ; e = HPAtkDV
 	ld a, [hli]
 	ld e, a
@@ -187,104 +187,10 @@ endc
 
 	ld bc, wColorVaryDVs
 
-	; Check if POLYCHROME item is in use
-	push hl
-	push bc
-	ld a, [wCurItem]
-	cp POLYCHROME
-	jr z, .PolychromeEffect
-	; If not POLYCHROME, check if species is Porygon
 	ld a, [wColorVarySpecies]
-	cp PORYGON
-	jr z, .PolychromeEffect
-	pop bc
-	pop hl
-	jr .StandardColors
+	cp PORYGON ; PORYGON CHANGES COLORS? maybe it's cool... 
+	jr z, .Smeargle
 
-.PolychromeEffect:
-	pop bc
-	pop hl
-
-;;; Use Porygon/Polychrome palette logic
-; a = (AtkDV & %11) << 2 | (DefDV & %11)
-	ld a, [bc]
-	and %11
-	add a
-	add a
-	ld d, a
-	inc bc
-	ld a, [bc]
-	swap a
-	and %11
-	or d
-; d, e = base paint color
-	ld e, a
-	ld d, 0
-	push hl
-	push bc
-	; Get both light and dark colors for Porygon
-	; First the light color
-	ld hl, .SmearglePalsLite
-	ld a, [wColorVaryShiny]
-	and SHINY_MASK
-	jr z, .not_shiny_lite
-	ld hl, .SmeargleShinyPalsLite
-.not_shiny_lite
-	add hl, de
-	add hl, de
-	ld a, [hli]
-	ld d, a
-	ld a, [hl]
-	ld e, a
-	pop bc
-	pop hl
-	; Store lite RGB
-	ld a, e
-	ld [hli], a
-	ld a, d
-	ld [hli], a
-	
-	; Now get the dark color
-	push hl
-	push bc
-	ld bc, wColorVaryDVs
-	ld a, [bc]
-	and %11
-	add a
-	add a
-	ld d, a
-	inc bc
-	ld a, [bc]
-	swap a
-	and %11
-	or d
-	ld e, a
-	ld d, 0
-	ld hl, .SmearglePalsDark
-	ld a, [wColorVaryShiny]
-	and SHINY_MASK
-	jr z, .not_shiny_dark
-	ld hl, .SmeargleShinyPalsDark
-.not_shiny_dark
-	add hl, de
-	add hl, de
-	ld a, [hli]
-	ld d, a
-	ld a, [hl]
-	ld e, a
-	pop bc
-	pop hl
-	; Store dark RGB
-	ld a, e
-	ld [hli], a
-	ld a, d
-	ld [hl], a
-	
-	pop af
-	ldh [rSVBK], a
-	ret
-
-.StandardColors:
 ;;; LiteRed ~ HPDV, aka, rrrrr ~ hhhh
 ; store HPDV in e
 	ld a, [bc]
@@ -318,6 +224,7 @@ endc
 	inc hl
 	inc hl
 
+.Finish:
 ;;; DarkRed ~ SpdDV, aka, RRRRR ~ ssss
 ; store SpdDV in e
 	ld a, [bc]
@@ -354,8 +261,52 @@ endc
 ; * DarkRed' = DarkRed + (HPDV & %0100 >> 2) - (HPDV & %1000 >> 3)
 ; * DarkGrn' = DarkGrn + (AtkDV & %0100 >> 2) - (AtkDV & %1000 >> 3)
 ; * DarkBlu' = DarkBlu + (DefDV & %0100 >> 2) - (DefDV & %1000 >> 3)
+.Smeargle:
+; a = (AtkDV & %11) << 2 | (DefDV & %11)
+	ld a, [bc]
+	and %11
+	add a
+	add a
+	ld d, a
+	inc bc
+	ld a, [bc]
+	swap a
+	and %11
+	or d
+; d, e = base paint color
+	ld e, a
+	ld d, 0
+	push hl
+	ld hl, .SmearglePals
+	ld a, [wColorVaryShiny]
+	and SHINY_MASK
+	jr z, .not_shiny
+	ld hl, .SmeargleShinyPals
+.not_shiny
+	add hl, de
+	add hl, de
+	ld a, [hli]
+	ld d, a
+	ld a, [hl]
+	ld e, a
+	pop hl
+;;; DarkRGB = base paint color
+	inc hl
+	inc hl
+	inc hl
+	ld a, e
+	ld [hld], a
+	ld a, d
+	ld [hld], a
+	dec hl
+;;; LiteRGB ~ Spd,SAt,SDfDVs
+	jr .Finish
 
-.SmearglePalsDark:
+; red and blue channels: no 0 or 31
+; green channel: no 0, 7, 8, 15, 16, 23, 24, or 31
+; need to be able to add or subtract 1 without overflow/underflow
+
+.SmearglePals:
 if !DEF(MONOCHROME)
 	RGB 14, 05, 06 ; maroon (fighting)
 	RGB 27, 09, 26 ; lavender (flying)
@@ -392,81 +343,7 @@ else
 	RGB_MONOCHROME_DARK
 endc
 
-.SmearglePalsLite:
-if !DEF(MONOCHROME)
-	RGB 14, 05, 06 ; maroon (fighting)
-	RGB 27, 09, 26 ; lavender (flying)
-	RGB 29, 05, 06 ; red (poison)
-	RGB 26, 26, 26 ; white (ground)
-	RGB 18, 11, 05 ; brown (rock)
-	RGB 16, 28, 01 ; lime (bug)
-	RGB 14, 06, 27 ; purple (ghost)
-	RGB 14, 14, 18 ; gray (steel)
-	RGB 29, 13, 02 ; orange (fire)
-	RGB 01, 09, 28 ; blue (water)
-	RGB 04, 19, 01 ; green (grass)
-	RGB 30, 25, 01 ; yellow (electric)
-	RGB 30, 10, 13 ; pink (psychic)
-	RGB 02, 22, 26 ; teal (ice)
-	RGB 07, 11, 30 ; indigo (dragon)
-	RGB 08, 06, 06 ; black (dark)
-else
-	RGB_MONOCHROME_DARK
-	RGB_MONOCHROME_DARK
-	RGB_MONOCHROME_DARK
-	RGB_MONOCHROME_DARK
-	RGB_MONOCHROME_DARK
-	RGB_MONOCHROME_DARK
-	RGB_MONOCHROME_DARK
-	RGB_MONOCHROME_DARK
-	RGB_MONOCHROME_DARK
-	RGB_MONOCHROME_DARK
-	RGB_MONOCHROME_DARK
-	RGB_MONOCHROME_DARK
-	RGB_MONOCHROME_DARK
-	RGB_MONOCHROME_DARK
-	RGB_MONOCHROME_DARK
-	RGB_MONOCHROME_DARK
-endc
-
-.SmeargleShinyPalsDark:
-if !DEF(MONOCHROME)
-	RGB 14, 05, 06 ; maroon (fighting)
-	RGB 27, 09, 26 ; lavender (flying)
-	RGB 29, 05, 06 ; red (poison)
-	RGB 26, 26, 26 ; white (ground)
-	RGB 18, 11, 05 ; brown (rock)
-	RGB 16, 28, 01 ; lime (bug)
-	RGB 14, 06, 27 ; purple (ghost)
-	RGB 14, 14, 18 ; gray (steel)
-	RGB 29, 13, 02 ; orange (fire)
-	RGB 01, 09, 28 ; blue (water)
-	RGB 04, 19, 01 ; green (grass)
-	RGB 30, 25, 01 ; yellow (electric)
-	RGB 30, 10, 13 ; pink (psychic)
-	RGB 02, 22, 26 ; teal (ice)
-	RGB 07, 11, 30 ; indigo (dragon)
-	RGB 08, 06, 06 ; black (dark)
-else
-	RGB_MONOCHROME_DARK
-	RGB_MONOCHROME_DARK
-	RGB_MONOCHROME_DARK
-	RGB_MONOCHROME_DARK
-	RGB_MONOCHROME_DARK
-	RGB_MONOCHROME_DARK
-	RGB_MONOCHROME_DARK
-	RGB_MONOCHROME_DARK
-	RGB_MONOCHROME_DARK
-	RGB_MONOCHROME_DARK
-	RGB_MONOCHROME_DARK
-	RGB_MONOCHROME_DARK
-	RGB_MONOCHROME_DARK
-	RGB_MONOCHROME_DARK
-	RGB_MONOCHROME_DARK
-	RGB_MONOCHROME_DARK
-endc
-
-.SmeargleShinyPalsLite:
+.SmeargleShinyPals: ; TODO
 if !DEF(MONOCHROME)
 	RGB 14, 05, 06 ; maroon (fighting)
 	RGB 27, 09, 26 ; lavender (flying)

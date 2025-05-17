@@ -166,8 +166,8 @@ ItemDescriptions:
 	dw GripClawDesc
 	dw LifeOrbDesc
 	dw LightClayDesc
-	dw RoyalBlessingDesc ;to become RoyalBlessing
 	dw MuscleBandDesc
+	dw PolychromeDesc ;to become RoyalBlessing
 	dw ProtectPadsDesc
 	dw RockyHelmetDesc
 	dw SafeGogglesDesc
@@ -920,9 +920,9 @@ LightClayDesc:
 	db   "Extends duration"
 	next "of barrier moves.@"
 
-RoyalBlessingDesc:
-	db   "Proof of"
-	next "pedigree.@"
+PolychromeDesc:
+	db   "Hidden color"
+	next "revealed.@"
 
 ProtectPadsDesc:
 	db   "Protects from"

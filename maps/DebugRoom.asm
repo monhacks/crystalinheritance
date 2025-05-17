@@ -511,6 +511,7 @@ DebugWonderTradeScript:
 	faceplayer
 	opentext
 	givepoke PORYGON, 5
+	giveitem POLYCHROME, 1
 	writetext DebugWonderTradeIntroText
 	waitbutton
 	writetext DebugWonderTradeExplanationText
