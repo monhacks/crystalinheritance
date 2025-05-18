@@ -69,6 +69,10 @@ SECTION "PidgeotPokedexEntry", ROMX
 PidgeotPokedexEntry::
 INCLUDE "data/pokemon/dex_entries/018.asm";;
 
+SECTION "NoctowlPokedexEntry", ROMX
+NoctowlPokedexEntry::
+INCLUDE "data/pokemon/dex_entries/019.asm";;
+
 SECTION "EkansPokedexEntry", ROMX
 EkansPokedexEntry::
 INCLUDE "data/pokemon/dex_entries/023.asm";;

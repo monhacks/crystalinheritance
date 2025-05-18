@@ -21,6 +21,7 @@ MenuMonIconColors:: ;TEAL, GREEN, RED, PINK, GRAY, BLUE, GREEN, BROWN, PURPLE,
 	iconpal BROWN, RED ; PIDGEY
 	iconpal BROWN, RED ; PIDGEOTTO
 	iconpal BROWN, RED ; PIDGEOT
+	iconpal PURPLE, BLUE ; NOCTOWL	
 	iconpal PURPLE, BROWN ; EKANS
 	iconpal PURPLE, BROWN ; ARBOK
 	iconpal RED, BLUE ; PIKACHU

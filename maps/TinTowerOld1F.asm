@@ -40,12 +40,12 @@ TinTowerOld1FNPC1Text:
 TinTowerOld1FNPC2Text:
 	text "The towers are a"
 	line "veritable maze"
-	cont "from Samsara's"
+	cont "from Vespera's"
 	cont "#mon powers."
 	done
 
 TinTowerOld1FNPC3Text:
-	text "Samsara is the"
+	text "Vespera is the"
 	line "chief priestess."
 	
 	para "She determines "
@@ -88,7 +88,7 @@ NeedSweetHoneyText:
 
 Text_HoneyQuestion:
 	text "Oh, you are the"
-	line "one Samsara told"
+	line "one Vespera told"
 	cont "me about!"
 	
 	para "And that aroma-"

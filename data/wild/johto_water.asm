@@ -176,8 +176,8 @@
 	end_water_wildmons
 
 	def_water_wildmons OLIVINE_CITY
-	db 2 percent ; encounter rate
-	wildmon 30, OCTILLERY
+	db 0 percent ; encounter rate
+	wildmon 30, TENTACRUEL
 	wildmon 35, TENTACRUEL
 	wildmon 30, TENTACRUEL
 	end_water_wildmons

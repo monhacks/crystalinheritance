@@ -263,6 +263,8 @@ ScriptCommandTable:
 	dw Script_givebp                     ; cc
 	dw Script_takebp                     ; cd
 	dw Script_checkbp                    ; ce
+	dw Script_italictypeface              ; cf	
+	dw Script_micrtypeface              ; cf		
 	assert_table_length NUM_EVENT_COMMANDS
 
 StartScript:
@@ -2498,6 +2500,22 @@ Script_unowntypeface:
 	ld [wOptionsBuffer], a
 	and $ff - FONT_MASK
 	or UNOWN_FONT
+	ld [wOptions2], a
+	jmp LoadStandardFont
+	
+Script_italictypeface:
+	ld a, [wOptions2]
+	ld [wOptionsBuffer], a
+	and $ff - FONT_MASK
+	or ITALIC_FONT
+	ld [wOptions2], a
+	jmp LoadStandardFont
+	
+Script_micrtypeface:
+	ld a, [wOptions2]
+	ld [wOptionsBuffer], a
+	and $ff - FONT_MASK
+	or MICR_FONT
 	ld [wOptions2], a
 	jmp LoadStandardFont
 

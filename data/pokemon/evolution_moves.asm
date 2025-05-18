@@ -17,6 +17,7 @@ EvolutionMoves::
 	db NO_MOVE		;PIDGEY   ; 0f
 	db NO_MOVE		;PIDGEOTTO     ; 10
 	db HURRICANE	;PIDGEOT  ; 11
+	db NO_MOVE	    ;NOCTOWL  ; 11
 	db NO_MOVE		;EKANS    ; 12
 	db GLARE		;ARBOK    ; 13
 	db NO_MOVE		;PIKACHU   ; 14

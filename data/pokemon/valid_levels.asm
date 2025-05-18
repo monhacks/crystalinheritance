@@ -19,6 +19,7 @@ ValidPokemonLevels: ; for Wonder Trade
 	db	 1,	 25	;	pidgey
 	db	 1,	 25	;	pidgeotto
 	db	 1,	 25	;	pidgeot
+	db	 1,	 25	;	noctowl
 	db	 1,	 25	;	ekans
 	db	 1,	 25	;	arbok
 	db	 1,	 25	;	pikachu

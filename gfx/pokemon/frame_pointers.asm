@@ -17,6 +17,7 @@ FramesPointers:
 	dw PidgeyFrames
 	dw PidgeottoFrames
 	dw PidgeotFrames
+	dw NoctowlFrames	
 	dw EkansFrames
 	dw ArbokFrames
 	dw PikachuFrames

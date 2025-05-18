@@ -17,6 +17,7 @@ AnimationPointers:
  dw PidgeyAnimation
  dw PidgeottoAnimation
  dw PidgeotAnimation
+ dw NoctowlAnimation
  dw EkansAnimation
  dw ArbokAnimation
  dw PikachuAnimation

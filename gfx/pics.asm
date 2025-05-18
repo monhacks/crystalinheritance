@@ -644,7 +644,8 @@ Ho_OhBackpic: 				INCBIN "gfx/pokemon/ho_oh/back.2bpp.lz"
 CelebiFrontpic: 			INCBIN "gfx/pokemon/celebi/front.animated.2bpp.lz"
 CelebiBackpic: 				INCBIN "gfx/pokemon/celebi/back.2bpp.lz"
 EggPic:                   	INCBIN "gfx/pokemon/egg/front.animated.2bpp.lz"
-
+NoctowlFrontpic: 			INCBIN "gfx/pokemon/noctowl/front.animated.2bpp.lz"
+NoctowlBackpic: 			INCBIN "gfx/pokemon/noctowl/back.2bpp.lz"
 
 SECTION "Unown Pics 1", ROMX
 

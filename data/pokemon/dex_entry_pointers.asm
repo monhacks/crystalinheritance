@@ -18,6 +18,7 @@ PokedexDataPointerTable:
 	dba	PidgeyPokedexEntry
 	dba	PidgeottoPokedexEntry
 	dba	PidgeotPokedexEntry
+	dba	NoctowlPokedexEntry
 	dba	EkansPokedexEntry
 	dba	ArbokPokedexEntry
 	dba	PikachuPokedexEntry

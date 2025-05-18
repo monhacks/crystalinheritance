@@ -510,8 +510,8 @@ BreederText:
 DebugWonderTradeScript: 
 	faceplayer
 	opentext
-	givepoke PORYGON, 5
-	giveitem POLYCHROME, 1
+	givepoke NOCTOWL, 5
+;	giveitem POLYCHROME, 1
 	writetext DebugWonderTradeIntroText
 	waitbutton
 	writetext DebugWonderTradeExplanationText

@@ -5,6 +5,7 @@ AzaleaGym_MapScriptHeader: ;removed benny josh amy+may trainers
 
 	def_warp_events
 	warp_event  4, 15, AZALEA_TOWN, 5
+	warp_event  4, 15, AZALEA_TOWN, 5
 	warp_event  5, 15, AZALEA_TOWN, 5
 
 	def_coord_events
@@ -12,10 +13,10 @@ AzaleaGym_MapScriptHeader: ;removed benny josh amy+may trainers
 	def_bg_events
 	bg_event  3, 13, BGEVENT_READ, AzaleaGymStatue
 	bg_event  6, 13, BGEVENT_READ, AzaleaGymStatue
-	bg_event  0, 1, BGEVENT_READ, DebugRoomPortal
+	bg_event  0,  1, BGEVENT_READ, DebugRoomPortal
 
 	def_object_events
-	object_event  5,  7, SPRITE_BUGSY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AzaleaGymBugsyScript, -1
+	object_event  5, 7, SPRITE_BUGSY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AzaleaGymBugsyScript, -1
 
 
 AzaleaGymStatue:

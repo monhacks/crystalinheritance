@@ -541,8 +541,8 @@ SamsaraGroup:
 ; ================================
 ; ================
 
-	; Samsara
-	db "Samsara@"
+	; Samsara renamed to vespera 
+	db "Vespera@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
 	; party
 	db 34, STANTLER, ZOOM_LENS, "Pallbearer@"
@@ -2774,7 +2774,7 @@ BirdKeeperGroup:
 	; party
 	db 20, XATU
 	db 23, SKIPLOOM
-	db 25, GLIGAR
+	db 25, NOCTOWL
 	db -1 ; end
 
 ; ================
@@ -6175,7 +6175,7 @@ ElderGroup:
 	db 46, MACHAMP
 	db 48, POLIWRATH	
 	db 49, SUDOWOODO	
-	db 48, TOXICROAK
+	db 48, NOCTOWL
 	db 51, H__DECIDUEYE
 	db -1 ; end
 	

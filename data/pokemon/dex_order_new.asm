@@ -19,6 +19,7 @@ NewPokedexOrder:
 	db	PIDGEY
 	db	PIDGEOTTO
 	db	PIDGEOT
+	db	NOCTOWL
 	db	EKANS
 	db	ARBOK
 	db	PIKACHU

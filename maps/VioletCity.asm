@@ -28,6 +28,10 @@ VioletCity_MapScriptHeader:
 	bg_event 27, 21, BGEVENT_JUMPTEXT, EarlsPokemonAcademySignText
 	bg_event 37, 18, BGEVENT_ITEM + NUGGET, EVENT_VIOLET_CITY_HIDDEN_HYPER_POTION
 	bg_event 21, 13, BGEVENT_ITEM + NUGGET, EVENT_VIOLET_CITY_HIDDEN_POKE_BALL
+	bg_event  1,  0, BGEVENT_JUMPTEXT, VioletTombstoneText
+	bg_event  5,  0, BGEVENT_JUMPTEXT, VioletTombstoneText
+	bg_event  3,  0, BGEVENT_READ, NoctowlTombstone
+
 
 	def_object_events
 	object_event 28, 32, SPRITE_CUTE_GIRL, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletCityLassText, -1 ; 
@@ -162,3 +166,25 @@ VioletCityTowerBlockingText:
 	cont "with Elder Li's"
 	cont "blessing."
 	done
+
+VioletTombstoneText:
+	text "The tombstone is"
+	line "covered in moss."
+	done
+
+NoctowlTombstone
+	checkevent EVENT_HEARD_ABOUT_HEIRLOOM
+	iffalse_jumpopenedtext VioletTombstoneText
+	opentext
+	writetext AskToVentureText
+	yesorno
+	iffalse_jumpopenedtext NoVentureText
+	writetext VenturingText
+	waitbutton
+	closetext
+	playsound SFX_WARP_TO
+	special FadeOutPalettes
+	waitsfx
+	warp VIOLET_CATACOMBS,  0,  0
+	end
+	

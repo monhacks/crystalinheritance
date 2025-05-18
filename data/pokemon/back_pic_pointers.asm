@@ -17,6 +17,7 @@ BackPicPointers::
 	dba	PidgeyBackpic
 	dba	PidgeottoBackpic
 	dba	PidgeotBackpic
+	dba	NoctowlBackpic
 	dba	EkansBackpic
 	dba	ArbokBackpic
 	dba	PikachuBackpic

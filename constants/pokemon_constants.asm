@@ -38,6 +38,7 @@
 	const PIDGEY   ; 0f
 	const PIDGEOTTO     ; 10
 	const PIDGEOT  ; 11
+	const NOCTOWL 
 	const EKANS    ; 12
 	const ARBOK    ; 13
 	const PIKACHU   ; 14

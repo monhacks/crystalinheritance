@@ -560,7 +560,7 @@ AmosSuspectsYouText:
 	text "Who are you? I"
 	line "have seen you now"
 	cont "with Hollis, then"
-	cont "Samsara, always"
+	cont "Sandra, always"
 	
 	para "as things are at"
 	line "their worst."
