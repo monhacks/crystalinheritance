@@ -17,7 +17,7 @@ BellchimeTrail_MapScriptHeader:
 
 	def_object_events
 	object_event 14,  4, SPRITE_REI, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BellchimeTrailEmiScript, -1
-	object_event 21, 10, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, BellchimeBlockerText, EVENT_BEAT_PRYCE_GYM ;
+	object_event 21, 10, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, BellchimeBlockerText, EVENT_GOT_TM30_SHADOW_BALL ;beat morty 
 
 	object_const_def
 	
@@ -231,7 +231,9 @@ BellChimeTrailYesTimeTravelText:
 	done
 
 BellchimeBlockerText:
-	text "The tower is off-"
-	line "limits without a"
-	cont "Clear Bell."
+	text "The Tin Tower is"
+	line "off-limits. Only"
+	para "a few have been"
+	line "granted access by"
+	cont "Leader Morty."
 	done

@@ -178,6 +178,10 @@ MortyText_FogBadgeSpeech:
 	line "you can find a"
 	cont "way on unfamil-"
 	cont "iar paths."
+	
+	para "It also grants"
+	line "you acces to the"
+	cont "Tin Tower."
 	done
 
 MortyFightDoneText:
