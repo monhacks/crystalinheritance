@@ -1,5 +1,6 @@
 EcruteakCherishBallHouse_MapScriptHeader:
 	def_scene_scripts
+	scene_script EcruteakCherishBallTrigger 
 
 	def_callbacks
 
@@ -13,23 +14,29 @@ EcruteakCherishBallHouse_MapScriptHeader:
 	bg_event  2,  1, BGEVENT_JUMPSTD, radio2
 
 	def_object_events
-	object_event  2,  3, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldLeafMotherText, -1
 	object_event  5,  4, SPRITE_RICH_BOY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakGoldLeafScript, -1
+	object_event  2,  3, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldLeafMotherText, -1
 
+
+	object_const_def
+	const ECRUTEAK_CHERISH_HOUSE_BOY
+
+EcruteakCherishBallTrigger:
+	sdefer .TradeQuest
+	end
+	
+.TradeQuest:
+	showemote EMOTE_HEART, ECRUTEAK_CHERISH_HOUSE_BOY, 30
+	end
 
 
 GoldLeafMotherText: 
-	text "Why does my son"
-	line "insist on being"
-	cont "so... pedestrian"
-	cont "about our status?"
-
-	para "That charming girl"
-	line "of his could be"
-	cont "summering in"
-	cont "Kalos instead of"
-	cont "withering in"
-	cont "Olivine."
+	text "If my son wasn't"
+	line "so bashful, his"
+	para "girlfriend could"
+	line "be summering in"
+	para "Kalon instead of"
+	line "Olivine!"
 	done
 
 EcruteakGoldLeafScript:
@@ -44,6 +51,7 @@ EcruteakGoldLeafScript:
 	iffalse_jumpopenedtext NoLiteBlueMailText
 	takeitem LITEBLUEMAIL
 	verbosegiveitem GOLD_LEAF
+	setscene $1
 	iffalse_endtext
 	jumpopenedtext GiveGoldLeafText 
 

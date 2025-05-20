@@ -31,7 +31,6 @@ AzaleaPokeCenterMintLeafTrigger:
 	
 .MintLeafScript:
 	showemote EMOTE_HAPPY, AZALEA_POKECENTER_1F_MINTY, 30 ;this is to get you to talk to her
-	setscene $1
 	end
 
 PokemonJournalBugsyScript:
@@ -125,6 +124,7 @@ AzaleaPokeCenter1FPokefanScript:
 	writetext MintLeafGiftText
 	promptbutton
 	verbosegiveitem MINT_LEAF
+	setscene $1
 	iffalse_endtext
 	jumpopenedtext GiveMintLeafText 
 

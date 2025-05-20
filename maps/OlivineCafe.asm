@@ -1,5 +1,6 @@
 OlivineCafe_MapScriptHeader:
 	def_scene_scripts
+	scene_script OlivineCafeTrigger 
 
 	def_callbacks
 
@@ -13,13 +14,24 @@ OlivineCafe_MapScriptHeader:
 
 
 	def_object_events
+	object_event  4,  5, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, CafeSurfMailScript, -1 
 	object_event 9, 1, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OlivineCafe1Script, -1
 ;	object_event 9, 2, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OlivineCafe2Script, -1
 ;	object_event 9, 3, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OlivineCafe3Script, -1
 
-	object_event  4,  5, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, CafeSurfMailScript, -1 
+
 
 	object_const_def
+	const OLIVINE_CAFE_FISHER_1
+
+OlivineCafeTrigger:
+	sdefer .TradeQuest
+	end
+	
+.TradeQuest:
+	showemote EMOTE_BOLT, OLIVINE_CAFE_FISHER_1, 30
+	end
+	
 	
 	
 	
@@ -168,6 +180,7 @@ CafeSurfMailScript:
 	iffalse_jumpopenedtext Text_NoPearl
 	takeitem PEARL
 	verbosegiveitem SURF_MAIL
+	setscene $1
 	iffalse_endtext
 	jumpopenedtext GiveSurfMailText 
 

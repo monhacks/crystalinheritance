@@ -1,5 +1,6 @@
 GoldenrodMuseum2F_MapScriptHeader:
 	def_scene_scripts
+	scene_script GoldenrodMuseum2FTrigger 
 
 	def_callbacks
 
@@ -27,10 +28,21 @@ GoldenrodMuseum2F_MapScriptHeader:
     bg_event 12,  0, BGEVENT_READ, GoldenrodMuseum2FExhibit4
 
 	def_object_events
+    object_event  10,  6, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GoldenrodMuseum2FScientistScript, -1
     object_event 11,  2, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GoldenrodMuseum2FNPC3Script, -1
     object_event 12,  2, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GoldenrodMuseum2FNPC4Script, -1
     object_event  5,  5, SPRITE_LASS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GoldenrodMuseum2FNPC5Script, -1
-    object_event  7,  3, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GoldenrodMuseum2FScientistScript, -1
+	
+	object_const_def
+	const GOLDENROD_MUSEUM_2F_SCIENTIST
+
+GoldenrodMuseum2FTrigger:
+	sdefer .TradeQuestScript
+	end
+	
+.TradeQuestScript:
+	showemote EMOTE_SAD, GOLDENROD_MUSEUM_2F_SCIENTIST, 30
+	end
 
 LugiaPaintingScript:
 	refreshscreen
@@ -145,6 +157,7 @@ GoldenrodMuseum2FScientistScript:
 	iffalse_jumpopenedtext Text_NoBrickPiece
 	takeitem BRICK_PIECE
 	verbosegiveitem RAGECANDYBAR
+	setscene $1
 	iffalse_endtext
 	jumpopenedtext GiveRageCandyBarText
 	

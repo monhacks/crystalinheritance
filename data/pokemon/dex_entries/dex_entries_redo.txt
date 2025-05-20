@@ -611,37 +611,11 @@ New: During they day, they may raid Noctowl nests looking for shiny objects.
 
 --- 079.asm --- ; slowpoke
 
-
-
-	db "Dopey@" ; species name
-	dw 311, 790 ; height, width
-
-	db   "It is always so"
-	next "absent-minded that"
-	next "it won't react,"
-	page "even if its"
-	next "flavorful tail is"
-	next "bitten.@"
-
 New: A rare and tasty mushroom called the Slowpoketail has caused this species much distress. 
-
 
 --- 080.asm --- ; slowbro
 
-
-
-	db "Hermit Crab@" ; species name
-	dw 503, 1730 ; height, width
-
-	db   "An attached"
-	next "Shellder won't let"
-	next "go because of the"
-	page "tasty flavor that"
-	next "oozes out of its"
-	next "tail.@"
-
 New: It is occasionally driven mad trying to scratch the tail underneath the shell. 
-
 
 --- 081.asm --- ; magnemite
 
@@ -1837,7 +1811,7 @@ New: Genetic analysis and fossils suggest that Yanma's ancestors were part Drago
 	next "pain.@"
 
 
---- 195.asm --- ; slowking
+--- 195.asm --- ; slowking: FIX TYPO todo 
 
 
 
@@ -1848,10 +1822,8 @@ New: Genetic analysis and fossils suggest that Yanma's ancestors were part Drago
 	next "whose intellect"
 	next "was augmented"
 	page "by the toxins"
-	next "from the crature"
+	next "from the creature"
 	next "on its head.@"
-
-New: done 
 
 
 --- 196.asm --- ; espeon
@@ -1928,21 +1900,7 @@ New: done
 	next "have a variety of"
 	next "abilities.@"
 
-
---- 202.asm --- ; wobbuffet
-
-
-
-	db "Patient@" ; species name
-	dw 403, 630 ; height, width
-
-	db   "In order to con-"
-	next "ceal its black"
-	next "tail, it lives in"
-	page "a dark cave and"
-	next "only moves about"
-	next "at night.@"
-
+New: 
 
 --- 203.asm --- ; girafarig
 
@@ -1961,34 +1919,9 @@ New: done
 
 --- 204.asm --- ; pineco
 
-
-
-	db "Bagworm@" ; species name
-	dw 200, 160 ; height, width
-
-	db   "It spits out a"
-	next "fluid that it uses"
-	next "to glue tree bark"
-	page "to its body. The"
-	next "fluid hardens when"
-	next "it touches air.@"
-
-
 New: Pineco cocoons secrete a caustic adhesive that allows them to absorb nutrients from a tree.
 
 --- 205.asm --- ; forretress
-
-
-
-	db "Bagworm@" ; species name
-	dw 311, 2770 ; height, width
-
-	db   "Usually found"
-	next "hanging on to a"
-	next "fat tree trunk. It"
-	page "shoots out bits of"
-	next "its shell when it"
-	next "sees action.@"
 
 New: In iron-rich soils, pineco will develop a metallic shell and evolve into Forretress.
 
@@ -3314,6 +3247,8 @@ New: Always on guard from Beedrill attacks. They disguise the smell of their hon
 	next "treat many"
 	next "ailments.@"
 
+New: They are easily driven into a frenzy by the color pink. 
+
 
 --- 348.asm --- ; snover
 
@@ -3328,6 +3263,8 @@ New: Always on guard from Beedrill attacks. They disguise the smell of their hon
 	page "instead playing"
 	next "with the children"
 	next "of the group.@"
+
+New:
 
 
 --- 349.asm --- ; abomasnow 
@@ -3541,20 +3478,7 @@ New: No change
 
 --- 363.asm --- ; heatran 
 
-
-
-	db "LavaDome@" ; species name
-	dw 507, 9480 ; height, width
-
-	db   "This #mon is"
-	next "born from boiling"
-	next "magma. The steel"
-	page "on its body melts"
-	next "and hardens"
-	next "continuously.@"
-
 New: The core temperature will melt any material. It moves through rock like a fish in water. 
-
 
 --- 429.asm --- ; mismagius  
 

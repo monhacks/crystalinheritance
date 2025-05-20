@@ -12,22 +12,28 @@ MahoganyTown_MapScriptHeader:
 	warp_event  9,  1, ROUTE_43_MAHOGANY_GATE, 3
 
 	def_coord_events
-
+	coord_event 9, 2, 0, MahoganyTradeQuestTrigger
 
 	def_bg_events
 	bg_event  1,  5, BGEVENT_JUMPTEXT, MahoganyTownSignText
 	bg_event  9,  7, BGEVENT_READ, MahoganyTownSouvenirShopSign
 	bg_event  3, 13, BGEVENT_JUMPTEXT, MahoganyGymSignText
+	bg_event  8,  2, BGEVENT_JUMPTEXT, SilphSpringsAheadText
 
 	def_object_events
-	object_event  5,  7, SPRITE_GRAMPS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, MahoganyTownGrampsScript, -1 ; trade quest 
-	object_event  6, 14, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, MahoganyTownFisherText, -1
+	object_event  11,  3, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, MahoganyTownGrampsScript, -1 ; trade quest 
+	object_event  6,  7, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, MahoganyTownFisherText, -1
 	object_event 12,  8, SPRITE_CUTE_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, MahoganyTownLassText, -1
 	object_event  7, 14, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MahoganyKurtScript, EVENT_LISTENED_TO_KURT_4 ; 
 	object_event 10,  9, SPRITE_GRANNY, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, MahoganyTownGrannyText, -1
-
+	object_event  9, 3, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, MahoganyTownOfficerText, EVENT_BEAT_PRYCE
+	
 	object_const_def
+	const MAHOGANY_TOWN_GRAMPS
 
+MahoganyTradeQuestTrigger:
+	showemote EMOTE_SAD, MAHOGANY_TOWN_GRAMPS, 30
+	end
 
 MahoganyTownFlyPoint:
 	setflag ENGINE_FLYPOINT_MAHOGANY
@@ -61,6 +67,7 @@ MahoganyTownGrampsScript:
 	iffalse_jumpopenedtext Text_NoSurfMail
 	takeitem SURF_MAIL
 	verbosegiveitem OLD_AMBER
+	setscene $1
 	iffalse_endtext
 	jumpopenedtext GiveOldAmberText 
 
@@ -154,7 +161,7 @@ MahoganyKurtScript:
 	yesorno
 	iffalse_jumpopenedtext MahoganyDeclineKurtStoryText
 	writetext MahoganyKurtStoryText
-	setevent EVENT_LISTENED_TO_KURT_4; FOR USE IN KURTS HOUSE
+	setevent EVENT_LISTENED_TO_KURT_4
 	waitbutton
 	end
 
@@ -188,4 +195,20 @@ MahoganyKurtStoryText:
 	line "I noticed some "
 	cont "paint was wearing"
 	cont "off the apricorn."
+	done
+
+MahoganyTownOfficerText:
+	text "There's a report"
+	line "of an aggressive"
+	para "#mon ahead."
+	line "Only those with a"
+	para "Mahogany Badge"
+	line "can pass."
+	done	
+
+SilphSpringsAheadText:
+	text "Silph Springs:"
+	line "Sustainable water"
+	para "for all of Johto"
+	line "and beyond!"
 	done

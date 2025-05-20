@@ -13,7 +13,7 @@ EerieHamlet_MapScriptHeader:
 
 
 	def_coord_events
-
+	coord_event  9, 5, 0, EerieHamletTradeQuestScene
 
 	def_bg_events
 	bg_event  4,  6, BGEVENT_JUMPTEXT, HamletText
@@ -29,7 +29,11 @@ EerieHamlet_MapScriptHeader:
 	object_event 10, 14, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, EerieHamletNPC4, -1
 
 	object_const_def
+	const EERIE_HAMLET_ENGINEER
 
+EerieHamletTradeQuestScene:
+	showemote EMOTE_SLEEP, EERIE_HAMLET_ENGINEER, 30
+	end
 
 EerieHamletFlyPoint:
 	setflag ENGINE_FLYPOINT_EERIE_HAMLET
@@ -103,6 +107,7 @@ EerieHamletHoneyScript:
 	iffalse_jumpopenedtext Text_NoFossil
 	takeitem OLD_AMBER
 	verbosegiveitem SWEET_HONEY
+	setscene $1
 	iffalse_endtext
 	jumpopenedtext GiveSweetHoneyText 
 

@@ -28,7 +28,6 @@ AnarresHouseTinyMushroomTrigger:
 	
 .TinyMushroomScript:
 	showemote EMOTE_FISH, ANARRES_HOUSE_CHEF, 30
-	setscene $1
 	end
 	
 
@@ -44,6 +43,7 @@ AnarresHouseMushroomScript:
 	iffalse_jumpopenedtext Text_NoMintLeaf
 	takeitem MINT_LEAF
 	verbosegiveitem TINYMUSHROOM
+	setscene $1
 	iffalse_endtext
 	jumpopenedtext GiveTinyMushroomText 
 

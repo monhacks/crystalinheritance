@@ -10,6 +10,11 @@ NationalPark_MapScriptHeader:
 	warp_event 13, 47, ROUTE_35_NATIONAL_PARK_GATE, 2
 
 	def_coord_events
+	coord_event 18, 36, 0, NationalParkTradeScene
+	coord_event 19, 36, 0, NationalParkTradeScene
+	coord_event 18, 38, 0, NationalParkTradeScene
+	coord_event 19, 38, 0, NationalParkTradeScene	
+	
 	; n and s of the picnicker 
 
 	def_bg_events
@@ -19,6 +24,7 @@ NationalPark_MapScriptHeader:
 	bg_event  8, 47, BGEVENT_ITEM + FULL_HEAL, EVENT_NATIONAL_PARK_HIDDEN_FULL_HEAL
 
 	def_object_events
+	object_event  19, 37, SPRITE_PICNICKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ThirstyCamperScript, -1
 	object_event 17, 24, SPRITE_PICNICKER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, NationalParkLassText, -1 ; ok
 	object_event 16,  4, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_COMMAND, jumptextfaceplayer, NationalParkPokefanFText, -1 ; ok
 	object_event 29, 40, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NationalParkTeacher1Script, -1 ; ok
@@ -31,11 +37,17 @@ NationalPark_MapScriptHeader:
 	object_event 10, 14, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerLassKrise, -1
 	object_event 28, 13, SPRITE_BUG_MANIAC, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBugManiacLou, -1
 	object_event  4, 19, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OfficermKeithScript, -1
-	object_event  19, 37, SPRITE_PICNICKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ThirstyCamperScript, -1
 	itemball_event 37, 12, SHINY_STONE, 1, EVENT_NATIONAL_PARK_SHINY_STONE
 	itemball_event 37, 21, DESTINY_KNOT, 1, EVENT_NATIONAL_PARK_DESTINY_KNOT
 	tmhmball_event  3, 43, TM_DIG, EVENT_NATIONAL_PARK_TM_DIG
     object_event 20, 44, SPRITE_POKEFAN_F, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, NationalParkWhtApricornScript, -1
+
+	object_const_def
+	const NATIONAL_PARK_PICNICKER
+
+NationalParkTradeScene:
+	showemote EMOTE_HAPPY, NATIONAL_PARK_PICNICKER, 30
+	end
 
 NationalParkTeacher1Script:
 	faceplayer
@@ -441,6 +453,7 @@ ThirstyCamperScript:
 	iffalse_jumpopenedtext Text_NoLemonade
 	takeitem LEMONADE
 	verbosegiveitem BRICK_PIECE
+	setscene $1
 	iffalse_endtext
 	jumpopenedtext GiveBrickPieceText
 

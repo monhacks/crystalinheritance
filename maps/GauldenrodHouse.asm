@@ -20,8 +20,11 @@ GauldenrodHouse_MapScriptHeader:
 
 
 GauldenrodHouseTradeQuestTrigger:
+	sdefer .TradeQuestScript
+	end
+	
+.TradeQuestScript:
 	showemote EMOTE_HAPPY, LEMONADE_HOUSE_LADY, 30
-	setscene $1
 	end
 	
 LemonadeHouseLadyScript:
@@ -35,6 +38,8 @@ LemonadeHouseLadyScript:
 	yesorno
 	iffalse_jumpopenedtext Text_NoMushroom
 	takeitem TINYMUSHROOM
+	verbosegiveitem LEMONADE	
+	setscene $1
 	iffalse_endtext
 	jumpopenedtext GivingLemonadeText 
 	
