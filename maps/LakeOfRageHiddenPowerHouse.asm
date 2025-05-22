@@ -1,4 +1,4 @@
-LakeOfRageHiddenPowerHouse_MapScriptHeader:
+LakeOfRageHiddenPowerHouse_MapScriptHeader: ; pryce's cabin 
 	def_scene_scripts
 
 
@@ -23,6 +23,7 @@ LakeOfRageHiddenPowerHouse_MapScriptHeader:
 	def_object_events
 	object_event  3,  3, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BasculegionBlessingScript, -1
 	object_event  3,  4, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptext, PryceCabinText2, -1
+	object_event  2,  4, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptext, PryceCabinText1, -1
 
 	object_const_def
 
@@ -119,3 +120,44 @@ BasculegionBlessingText:
 	line "their magnificent"
 	cont "capability."
 	done
+
+PryceCabinText2:
+	text "To Kurt"
+	line "From Pryce"
+	
+	para "I'm sorry that so"
+	line "few Azaleans came"
+	cont "to the ceremony."
+	
+	para "And I hear you"
+	line "are more agitated"
+	cont "every day."
+	
+	para "Please, remember"
+	line "that you shape"
+	cont "<PLAYER>."
+	
+	para "You can't shape"
+	line "the whole world."
+	done
+	
+PryceCabinText1:
+	text "To Pryce"
+	line "From Kurt"
+	
+	para "How much longer"
+	line "can I do this?"
+	
+	para "I feel like an"
+	line "old Granbull that"
+	
+	para "doesn't see or"
+	line "hear things right"
+	cont "anymore,"
+	
+	para "Barking at noth-"
+	line "ing and getting"
+	cont "told to shut it"
+	cont "and go away."
+	done
+	
