@@ -24,26 +24,6 @@ LakeOfRageHiddenPowerHouse_MapScriptHeader: ; pryce's cabin
 	object_event  3,  4, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, PryceCabinText2, -1
 	object_event  2,  4, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, PryceCabinText1, -1
 
-PryceCabinText2:
-	text "To Kurt"
-	line "From Pryce"
-	
-	para "I'm sorry that so"
-	line "few Azaleans came"
-	cont "to the ceremony."
-	
-	para "And I hear you"
-	line "are more agitated"
-	cont "every day."
-	
-	para "Please, remember"
-	line "that you shape"
-	cont "<PLAYER>."
-	
-	para "You can't shape"
-	line "the whole world."
-	done
-
 BasculegionBlessingScript:
 	opentext
 	writetext ReadBasculegionTextQuestion
@@ -127,7 +107,6 @@ BasculegionBlessingText:
 	cont "capability."
 	done
 
-
 PryceCabinText2:
 	opentext
 	writetext ItsALetterText
@@ -192,3 +171,4 @@ PryceCabinText2Text:
 	para "You can't shape"
 	line "the whole world."
 	done
+	
