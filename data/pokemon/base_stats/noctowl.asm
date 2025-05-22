@@ -4,7 +4,7 @@
 	db FLYING, GHOST ; type
 	db 90 ; catch rate
 	db 162 ; base exp
-	db NO_ITEM ; item 1
+	db ALWAYS_ITEM_2 ; item 1
 	db AMULET_COIN ; item 2
 	dn GENDER_F50, 3 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/noctowl/front.dimensions"

@@ -91,6 +91,11 @@ LandingDocksScene:
 	reloadmapafterbattle ; OBJECTS IN THE RIGHT SPOT?
 ; start of kensey section 
 	showtext Docks_Text12
+	playsound SFX_GET_BADGE
+	waitsfx
+	setflag ENGINE_RAINBOWBADGE
+	promptbutton
+	showtext Docks_Text12_2
 	playmusic MUSIC_HEAL
 	special HealParty
 	special SaveMusic	
@@ -290,7 +295,19 @@ BarbeauBeatenText1:
 	done
 
 Docks_Text12:
-	text "Kurt: Excellent,"
+	text "Barbeau: I cannot"
+	line "condone what you"
+	para "did. But tradit-"
+	line "ion dictates that"
+	para "I must give you "
+	line "this badge,"
+	para "marking you as"
+	line "worthy to lead"
+	cont "expeditions."
+	done
+
+Docks_Text12_2:
+	para "Kurt: Excellent,"
 	line "<PLAYER>. I'll"
 	cont "heal you again."
 
