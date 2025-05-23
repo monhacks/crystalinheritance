@@ -186,7 +186,7 @@ _OakTimeWokeUpText::
 SECTION "_OakTimeWhatTimeIsItText", ROMX
 _OakTimeWhatTimeIsItText::
 	text_high
-    text "Kurt:"
+    text " Kurt: "
 	next
 	text_start 
 	text "What time is it?"
@@ -3262,6 +3262,10 @@ _InitialOptionsText::
 
 SECTION "_ElmText1", ROMX ; being used, i think in intro_meu.asm as elmtext1?
 _ElmText1::
+	text_high
+    text " Kurt: "
+	next
+	text_start 
 	text "Wake up, sleepy-"
 	line "head! Today is"
 	cont "your ceremony!"
@@ -3288,8 +3292,13 @@ _ElmText1::
 	cont "too."
 	prompt
 
+
 SECTION "_ElmText2", ROMX
 _ElmText2::
+	text_high
+    text " Kurt: "
+	next
+	text_start 
 	text "It's the start"
 	line "of your #mon"
 	cont "journey."
@@ -3302,8 +3311,13 @@ _ElmText2::
 	cont "Cyndaquil!@"
 	text_end
 
+
 SECTION "_ElmText4", ROMX
 _ElmText4::
+	text_high
+    text " Kurt: "
+	next
+	text_start 
 	text "We will rebuild"
 	line "the Ilex Shrine,"
 	
@@ -3321,16 +3335,21 @@ _ElmText4::
 	cont "forest."
 	prompt
 
+
 SECTION "_ElmText5", ROMX
 _ElmText5::
+	text_high
+    text " Kurt: "
+	next
+	text_start 
 	text "This drought..."
 	line "I hope it breaks"
 	cont "soon. People are"
 	cont "turning to Silph"
 	cont "technology."
 	
-	para "Your parents too,"
-	line "I fear. But we"
+	para "Your parents too."
+	line "But I-er, we"
 	cont "know better."
 	
 	para "Can Silph's inve-"
@@ -3343,14 +3362,23 @@ _ElmText5::
 	prompt
 
 
+
 SECTION "_ElmText6", ROMX
 _ElmText6::
+	text_high
+    text " Kurt: "
+	next
+	text_start 
 	text "What should we"
 	line "call you today?"
 	prompt
 
 SECTION "_ElmText7", ROMX
 _ElmText7::
+	text_high
+    text " Kurt: "
+	next
+	text_start 
 	text "The bond between"
 	line "us and #mon,"
 	para "past and future-"
@@ -3362,10 +3390,11 @@ _ElmText7::
 	cont "and dreams of all"
 	cont "who came before."
 	
-	para "If the tree rings"
-	line "I know you will"
-	cont "answer."
+	para "When the tree"
+	line "rings, I know you"
+	cont "will answer."
 	done
+
 
 SECTION "_WarnVBAText", ROMX
 _WarnVBAText::

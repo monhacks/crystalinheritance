@@ -51,11 +51,11 @@ CharcoalKilnGettingReadyTrigger:
 	turn_head_up
 	step_end
 
-.CharcoalKilnLookingText:
-	text "Where is it? Oh,"
-	line "Under your messy"
-	cont "glassware and"
-	cont "burners."
+.CharcoalKilnLookingText
+	text "Where is it? Why"
+	line "can't you ever"
+	para "clean your stupid"
+	line "chemistry kits?"
 	done
 
 .Movement2:
@@ -70,9 +70,8 @@ CharcoalKilnGettingReadyTrigger:
 	step_end
 	
 .CharcoalKilnSoonText:
-	text  "Ah, <PLAYER>."
-	line "We will be there"
-	cont "soon."
+	text  "Ah, <PLAYER>. We"
+	line "are almost ready."
 	done
 	
 CharcoalKilnBoss:
@@ -128,6 +127,5 @@ CharcoalKilnStillText:
 	cont "from Apricorns."
 	
 	para "Looks like a"
-	line "lot of work"
-	cont "went into it."
+	line "lot of work!"
 	done
