@@ -149,7 +149,6 @@ ElderLiBeatenText:
 	cont "others!"
 	done
 
-
 AcademyKurtScript: ; will this work?....
 	faceplayer
 	opentext
@@ -157,6 +156,7 @@ AcademyKurtScript: ; will this work?....
 	yesorno
 	iffalse .AskToBattle
 	writetext AcademyKurtText
+	clearevent EVENT_KURTS_HOUSE_BOOK_3
 	waitbutton
 .AskToBattle
 	writetext EarlKurtBattleQuestion
@@ -217,10 +217,15 @@ AcademyKurtText: ; need to ask the player if htey want to hear a story
 	cont "was a memory of"
 	cont "an adventure."
 ;	
-;	para "At nights, I'd"
-;	line "find him under"
-;	cont "the covers, the"
-;	cont "glow of his ap-"
-;	cont "ricorn giving"
-;	cont "him away."
+	para "At nights, I'd"
+	line "find him under"
+	cont "the covers, the"
+	cont "glow of his ap-"
+	cont "ricorn giving"
+	cont "him away."
+
+	para "If you ever want"
+	line "to hear it again,"
+	para "check the journal"
+	line "in my house."
 	done

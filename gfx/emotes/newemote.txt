@@ -1,0 +1,27 @@
+ellipsis: NOGO 
+__shock
+__question
+X: NOGO
+__sleep
+
+star: ADD 
+__heart
+broken heart: ADD 
+__fish
+__bolt
+
+stare: NOGO 
+unsure: NOGO 
+blushing
+wow
+silly_smile
+
+__happy1
+happy2
+__sad: REVISE CURRENT SAD TO THIS ONE 
+verysad: NOGO 
+despondent: NOGO 
+
+frustrated
+urgh
+monster

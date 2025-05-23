@@ -172,7 +172,26 @@ BrigaderNAME7BeatenText:
 	done
 
 CalmCoastKurtScript:
-	jumptextfaceplayer CalmCoastKurtText
+	faceplayer
+	opentext
+	writetext HearAStory_1Text
+	yesorno
+	iffalse SomeOtherTime_1Text
+	writetext CalmCoastKurtText
+	clearevent EVENT_KURTS_HOUSE_BOOK_1 ; now it appears 
+	closetext
+	end
+
+HearAStory_1Text:
+	text "<PLAYER>, would"
+	line "you like to hear"
+	cont "another story"
+	cont "about your dad?"
+	done
+
+SomeOtherTime_1Text:
+	text "Some other time."
+	done
 
 CalmCoastKurtText:
 	text "So this is how"
@@ -185,21 +204,26 @@ CalmCoastKurtText:
 
 	para "Once, on the way"
 	line "back to Azalea, he"
-	cont "was playing with"
-	para "an apricorn and"
-	line "caught"
-	cont "a Cyndaquil."
+	para "was playing with"
+	line "an apricorn and"
+	para "caught"
+	line "a Cyndaquil!"
 	
 	para "The apricorn had"
 	line "a soft glow in"
-	cont "his hands with the"
-	cont "#mon inside!"
+	para "his hands with the"
+	line "#mon inside!"
 
 	para "I'll never for-"
 	line "get his beaming"
-	cont "face. We had so"
-	cont "much time ahead"
+	para "face. We had so"
+	line "much time ahead"
 	cont "of us."
+	
+	para "If you ever want"
+	line "to hear it again,"
+	para "check the journal"
+	line "in my house."
 	done
 
 CalmCoastDartrixText:

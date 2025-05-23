@@ -22,7 +22,7 @@ CattleCull39_MapScriptHeader:
 	object_event 13, 20, SPRITE_NOMAD_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 4, GenericTrainerNomadMJacob, -1
 	object_event 7,  7, SPRITE_NOMAD_F, SPRITEMOVEDATA_SPINCOUNTERCLOCKWISE, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, GenericTrainerNomadFMarlene, -1
 	object_event 5,  29, SPRITE_NOMAD_F, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, GenericTrainerNomadFRin, -1
-	object_event 13, 10, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, CattleCullKurtText, EVENT_TALKED_TO_BARBEAU
+	object_event 13, 10, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CattleCullKurtScript, EVENT_TALKED_TO_BARBEAU
 	pokemon_event  5, 10, TAUROS, -1, -1, PAL_NPC_RED, TaurosText, -1;
 	pokemon_event  4, 11, MILTANK, -1, -1, PAL_NPC_RED, Miltank39Text, -1;
 	pokemon_event  9, 12, MILTANK, -1, -1, PAL_NPC_RED, Miltank39Text, -1;
@@ -130,7 +130,38 @@ CattleCull39SignText:
 	line "Trader's Landing"
 	done
 
-CattleCullKurtText:
+CattleCullKurtScript:
+	faceplayer
+	opentext
+	writetext HearAStory_4Text
+	yesorno
+	iffalse DontHearHearStory4
+	writetext KurtCattleCullStoryText
+	clearevent EVENT_KURTS_HOUSE_BOOK_4
+	closetext
+	end
+
+DontHearHearStory4:
+	writetext SomeOtherTime_4Text
+	closetext
+	end
+
+HearAStory_4Text:
+	text "This reminds me"
+	line "of the first time"
+	
+	para "I was in Olivine"
+	line "with your dad."
+	
+	para "Want to hear "
+	line "about it?"
+	done
+
+SomeOtherTime_4Text:
+	text "Some other time."
+	done
+
+KurtCattleCullStoryText:
 	text "I keep thinking"
 	line "about your dad's"
 	cont "Apricorn."
@@ -150,9 +181,14 @@ CattleCullKurtText:
 	para "left the Cynda-"
 	line "quil for me to"
 	cont "take care."
+
+	para "If you ever want"
+	line "to hear it again,"
+	para "check the journal"
+	line "in my house."
 	done
 
-CattleCull39HoneClaws: ;CF THE ROUTE34GATE TEACHER
+CattleCull39HoneClaws:
 	checkevent EVENT_GOT_HONE_CLAWS
 	iftrue_jumptextfaceplayer NomadF_GotHoneClaws
 	faceplayer

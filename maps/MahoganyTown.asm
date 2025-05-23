@@ -157,27 +157,36 @@ MahoganyGymSignText:
 MahoganyKurtScript: 
 	faceplayer
 	opentext
-	writetext KurtHearAStoryQuestionMahogany
+	writetext HearAStory_5Text
 	yesorno
-	iffalse_jumpopenedtext MahoganyDeclineKurtStoryText
-	writetext MahoganyKurtStoryText
-	setevent EVENT_LISTENED_TO_KURT_4
-	waitbutton
+	iffalse DontHearHearStory5
+	writetext KurtMahoganyStoryText
+	clearevent EVENT_KURTS_HOUSE_BOOK_5
+	closetext
 	end
 
-KurtHearAStoryQuestionMahogany:
+DontHearHearStory5:
+	writetext SomeOtherTime_4Text
+	closetext
+	end
+
+HearAStory_5Text:
 	text "Would you like"
 	line "to hear a story?"
 	
 	para "When I was here,"
 	line "with your dad?"
 	done
-	
+
+SomeOtherTime_4Text:
+	text "Some other time."
+	done
+
 MahoganyDeclineKurtStoryText:
 	text "Some other time."
 	done
 	
-MahoganyKurtStoryText:
+KurtMahoganyStoryText:
 	text "I invited your"
 	line "dad to celebrate"
 	cont "winter festival,"
@@ -195,6 +204,11 @@ MahoganyKurtStoryText:
 	line "I noticed some "
 	cont "paint was wearing"
 	cont "off the apricorn."
+
+	para "If you ever want"
+	line "to hear it again,"
+	para "check the journal"
+	line "in my house."
 	done
 
 MahoganyTownOfficerText:

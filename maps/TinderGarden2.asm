@@ -53,6 +53,8 @@ TinderGarden2Script:
 	waitbutton
 	closetext
 
+	clearevent EVENT_KURTS_HOUSE_BOOK_6
+
 	applyonemovement TINDER_GARDEN_2_PRYCE, step_up
 	turnobject TINDER_GARDEN_2_PRYCE, DOWN
 	
@@ -120,7 +122,7 @@ TG2_Text_Kurt5:
 
 	para "was here, at the"
 	line "burned tower, was"
-	para "For the new year"
+	para "for the new year"
 	line "celebration befo-"
 	cont "re you were born,"
 
