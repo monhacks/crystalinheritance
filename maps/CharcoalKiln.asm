@@ -39,6 +39,7 @@ CharcoalKilnGettingReadyTrigger:
 	applymovement CHARCOAL_BLACK_BELT, .Movement2
 	applymovement CHARCOAL_RIVAL, .Movement3
 	writetext .CharcoalKilnSoonText
+	waitbutton
 	closetext
 	setscene $1
 	setevent EVENT_CHARCOAL_TALKED

@@ -166,7 +166,7 @@ MahoganyKurtScript:
 	end
 
 DontHearHearStory5:
-	writetext SomeOtherTime_4Text
+	writetext SomeOtherTime_5Text
 	closetext
 	end
 
@@ -178,7 +178,7 @@ HearAStory_5Text:
 	line "with your dad?"
 	done
 
-SomeOtherTime_4Text:
+SomeOtherTime_5Text:
 	text "Some other time."
 	done
 

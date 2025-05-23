@@ -179,7 +179,7 @@ KurtText_Intro:
 	para "I see <RIVAL>"
 	line "came without his"
 	cont "clunky glassware."
-;	text_end
+	text_end
 
 	text_high
     text " <RIVAL>: "
@@ -189,7 +189,7 @@ KurtText_Intro:
 	line "can save Azalea!"
 	para "It harvests more"
 	line "10x more oils -- "
-;	text_end
+	text_end
 
 	text_high
     text " Kurt: "
@@ -936,7 +936,7 @@ TGRivalChallengeText:
 	text "<PLAYER>, now"
 	line "that we both"
 	para "have #mon,"
-	cont "let's battle!"
+	line "let's battle!"
 	
 	para "I'll show you,"
 	line "your gramps, and"
@@ -1045,8 +1045,8 @@ KurtThinksTheyreCuttingTreesText:
 	line "need to stop them!"
 	
 	para "With a #mon, you"
-	cont "can catch more"
-	cont "nearby.”
+	line "can catch more"
+	cont "nearby."
 	
 	para "Hang on, Ilex!"
 	line "I’m on my way!"

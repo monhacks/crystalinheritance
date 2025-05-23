@@ -173,6 +173,10 @@ _CameToItsSensesText::
 
 SECTION "_OakTimeWokeUpText", ROMX
 _OakTimeWokeUpText::
+	text_high
+    text " Kurt: "
+	next
+	text_start 
 	text "………………………………"
 	line "………………………………"
 
@@ -2452,17 +2456,29 @@ _AskItemMoveText::
 
 SECTION "Text_AreYouABoyOrAreYouAGirl", ROMX
 Text_AreYouABoyOrAreYouAGirl::
+	text_high
+    text " Kurt: "
+	next
+	text_star
 	text "Go as a boy?"
 	line "Or a girl?"
 	done
 
 SECTION "Text_SoYoureABoy", ROMX
 Text_SoYoureABoy::
+	text_high
+    text " Kurt: "
+	next
+	text_star
 	text "So you're a boy?"
 	done
 
 SECTION "Text_SoYoureAGirl", ROMX
 Text_SoYoureAGirl::
+	text_high
+    text " Kurt: "
+	next
+	text_star
 	text "So you're a girl?"
 	done
 
@@ -3266,9 +3282,9 @@ _ElmText1::
     text " Kurt: "
 	next
 	text_start 
-	text "Wake up, sleepy-"
-	line "head! Today is"
-	cont "your ceremony!"
+	text "Are you excited?"
+	line "Today is your"
+	cont "ceremony!"
 	
 	para "It means that you"
 	line "are ready to care"
@@ -3349,7 +3365,7 @@ _ElmText5::
 	cont "technology."
 	
 	para "Your parents too."
-	line "But I-er, we"
+	line "But I - um, we"
 	cont "know better."
 	
 	para "Can Silph's inve-"

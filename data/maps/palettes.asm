@@ -819,19 +819,6 @@ endr
 	RGB_MONOCHROME_BLACK
 endc
 
-CinnabarLabPalette:
-if !DEF(MONOCHROME)
-INCLUDE "maps/CinnabarLab.pal"
-else
-rept 7
-	MONOCHROME_RGB_FOUR
-endr
-	RGB_MONOCHROME_WHITE
-	RGB_MONOCHROME_WHITE
-	RGB_MONOCHROME_DARK
-	RGB_MONOCHROME_BLACK
-endc
-
 
 BrassTowerRoofPalette:
 if !DEF(MONOCHROME)
