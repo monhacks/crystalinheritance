@@ -9,6 +9,7 @@ LakeOfRage_MapScriptHeader:
 	def_warp_events
 	warp_event  7,  3, LAKE_OF_RAGE_HIDDEN_POWER_HOUSE, 1 ; pryce's cabin 
 	warp_event 27, 31, LAKE_OF_RAGE_MAGIKARP_HOUSE, 1
+	warp_event  6, 14, HIDDEN_TREE_GROTTO, 1
 
 	def_coord_events
 	coord_event 16, 18, 0, LakeHursalunaScript
@@ -20,7 +21,8 @@ LakeOfRage_MapScriptHeader:
 	bg_event 35,  2, BGEVENT_ITEM + ULTRA_BALL, EVENT_LAKE_OF_RAGE_HIDDEN_RARE_CANDY
 	bg_event 10, 13, BGEVENT_ITEM + MAX_POTION, EVENT_LAKE_OF_RAGE_HIDDEN_MAX_POTION
 	bg_event 11, 28, BGEVENT_ITEM + FULL_RESTORE, EVENT_LAKE_OF_RAGE_HIDDEN_FULL_RESTORE
-
+	bg_event  6, 13, BGEVENT_JUMPSTD, treegrotto, HIDDENGROTTO_LAKE_OF_RAGE
+	bg_event  7, 13, BGEVENT_JUMPSTD, treegrotto, HIDDENGROTTO_LAKE_OF_RAGE
 
 	def_object_events
 	object_event 17, 3, SPRITE_PRYCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT,0, LakePryceScript, -1 ;
@@ -422,8 +424,8 @@ GenericTrainerSightseerMGareth:
 
 .BeatenText4:
 	text "You never know"
-	line "what will come"
-	cont "out of the blue."
+	line "what's hidden"
+	cont "around you."
 	done
 
 .SeenText4:

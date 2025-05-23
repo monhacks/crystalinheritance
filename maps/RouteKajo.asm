@@ -1,10 +1,10 @@
-RouteKajo_MapScriptHeader: ; trainer parties, check warps
+RouteKajo_MapScriptHeader: ; todo: event set in historic route kajo allows you to save the girl, with some callback 
     def_scene_scripts
 
     def_callbacks
-	
+	; mapcallback tiles 
 
-    def_warp_events ; DONE
+    def_warp_events
     warp_event 6, 32, GOLDENROD_MAGNET_TRAIN_STATION, 4
     warp_event 6, 33, GOLDENROD_MAGNET_TRAIN_STATION, 5
     warp_event 41, 5, KAJO_ACQUIFER, 1
@@ -14,8 +14,9 @@ RouteKajo_MapScriptHeader: ; trainer parties, check warps
     warp_event 23, 19, KAJO_CABIN, 1
     warp_event 55, 18, RUINS_OF_ALPH_OUTSIDE, 11
     warp_event 55, 19, RUINS_OF_ALPH_OUTSIDE, 12
+	warp_event 47, 26, HIDDEN_TREE_GROTTO, 1
 
-    def_coord_events ; done
+    def_coord_events
 
     def_bg_events
     bg_event 26, 28, BGEVENT_ITEM + HYPER_POTION, EVENT_ROUTE_KAJO_HIDDEN_HYPER_POTION
@@ -28,7 +29,8 @@ RouteKajo_MapScriptHeader: ; trainer parties, check warps
     bg_event  8, 21, BGEVENT_JUMPTEXT, RouteKajoPetroglyph4
     bg_event  8, 32, BGEVENT_JUMPTEXT, RouteKajoSignpost
     bg_event 21, 21, BGEVENT_JUMPTEXT, RouteKajoCabinSign
-
+	bg_event 46, 25, BGEVENT_JUMPSTD, treegrotto, HIDDENGROTTO_ROUTE_KAJO
+	bg_event 47, 25, BGEVENT_JUMPSTD, treegrotto, HIDDENGROTTO_ROUTE_KAJO
     
 	def_object_events
     object_event 48, 15, SPRITE_SCHOOLGIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, LostKajoGirlScript, EVENT_TALKED_TO_LOST_KAJO_GIRL ; 	
