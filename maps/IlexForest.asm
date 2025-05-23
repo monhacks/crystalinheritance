@@ -8,6 +8,7 @@ IlexForest_MapScriptHeader:
 	warp_event  3,  7, ROUTE_34_ILEX_FOREST_GATE, 3
 	warp_event  5, 44, ILEX_FOREST_AZALEA_GATE, 1
 	warp_event  5, 45, ILEX_FOREST_AZALEA_GATE, 2
+	warp_event  11,  6, HIDDEN_TREE_GROTTO, 1
 
 	def_coord_events
 	coord_event  7, 26, 1, IlexForestKurtEngineerScript
@@ -23,6 +24,9 @@ IlexForest_MapScriptHeader:
 	bg_event  2, 31, BGEVENT_ITEM + SILVER_LEAF, EVENT_ILEX_FOREST_HIDDEN_SILVER_LEAF_1
 	bg_event 15, 17, BGEVENT_ITEM + SILVER_LEAF, EVENT_ILEX_FOREST_HIDDEN_SILVER_LEAF_2 
 	bg_event 10, 24, BGEVENT_READ, IlexForestShrineScript
+	bg_event 11,  5, BGEVENT_JUMPSTD, treegrotto, HIDDENGROTTO_ILEX_FOREST
+	bg_event 12,  5, BGEVENT_JUMPSTD, treegrotto, HIDDENGROTTO_ILEX_FOREST
+
 
 
 	def_object_events 
