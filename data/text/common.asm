@@ -2459,7 +2459,7 @@ Text_AreYouABoyOrAreYouAGirl::
 	text_high
     text " Kurt: "
 	next
-	text_star
+	text_start
 	text "Go as a boy?"
 	line "Or a girl?"
 	done
@@ -2469,7 +2469,7 @@ Text_SoYoureABoy::
 	text_high
     text " Kurt: "
 	next
-	text_star
+	text_start
 	text "So you're a boy?"
 	done
 
@@ -2478,7 +2478,7 @@ Text_SoYoureAGirl::
 	text_high
     text " Kurt: "
 	next
-	text_star
+	text_start
 	text "So you're a girl?"
 	done
 
