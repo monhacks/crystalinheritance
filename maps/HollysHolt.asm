@@ -3,7 +3,7 @@ HollysHolt_MapScriptHeader:
 	scene_script HollysHoltTrigger
 
 	def_callbacks
-; PINECOS 
+
 
 	def_warp_events 
 	warp_event  7, 44, ANARRES_HOLT_GATE, 3
@@ -12,7 +12,7 @@ HollysHolt_MapScriptHeader:
 	warp_event  5,  6, HOLT_COAST_GATE, 2
 	warp_event  24,  46, KIMONO_CABIN, 1
 	warp_event  25,  46, KIMONO_CABIN, 1
-	warp_event  10,  25, DEBUG_ROOM, 2 ; UNUSED 
+
 	
 	def_coord_events
 
@@ -92,7 +92,7 @@ HollysHoltScript1:
 	waitbutton
 	closetext
 	setevent EVENT_TALKED_TO_HOLLIS
-	setscene $1 ;shouldn't let you see it multiple times
+	setscene $1
 	end
 
 HollysHoltKurtScript:
@@ -374,10 +374,10 @@ HHTutorHeadbuttScript:
 	special Special_MoveTutor
 	ifequal $0, .TeachMove
 .TutorRefused
-	jumpopenedtext Text_HHTutorRefused ;; 
+	jumpopenedtext Text_HHTutorRefused
 
 .TeachMove
-	jumpopenedtext Text_HHTutorTaught ;;
+	jumpopenedtext Text_HHTutorTaught
 	
 Text_HeadbuttIntro: 
 	text "Hi, <PLAYER>."

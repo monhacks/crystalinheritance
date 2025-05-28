@@ -19,14 +19,16 @@ EerieHamlet_MapScriptHeader:
 	bg_event  4,  6, BGEVENT_JUMPTEXT, HamletText
 	bg_event 14,  8, BGEVENT_JUMPTEXT, RedoubtSignText
 	bg_event  3, 13, BGEVENT_JUMPTEXT, HamletStockroomText
+	bg_event  6,  7, BGEVENT_ITEM + ENERGYPOWDER, EVENT_HAMLET_ENERGYPOWDER
+	bg_event  7,  7, BGEVENT_ITEM + IRON, EVENT_HAMLET_IRON
 
 	def_object_events
-	object_event  8, 5, SPRITE_ENGINEER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, EerieHamletHoneyScript, -1 ; trade quest 
-	object_event  1, 6, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_DOWN, 0, 1, -1, -1, 0, OBJECTTYPE_COMMAND, jumptext, EerieHamletRoadblockText1, EVENT_BEAT_AMOS
-	object_event  1, 7, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_UP, 0, 1, -1, -1, 0, OBJECTTYPE_COMMAND, jumptext, EerieHamletRoadblockText2, EVENT_BEAT_AMOS
+	object_event  8, 5, SPRITE_ENGINEER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, PAL_NPC_BROWN, 	OBJECTTYPE_SCRIPT, 0, EerieHamletHoneyScript, -1 ; trade quest 
+	object_event  1, 6, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_DOWN, 0, 1, -1, -1, 0, 				OBJECTTYPE_COMMAND, jumptext, EerieHamletRoadblockText1, EVENT_BEAT_AMOS ; roadblock 
+	object_event  1, 7, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_UP, 0, 1, -1, -1, 0, 					OBJECTTYPE_COMMAND, jumptext, EerieHamletRoadblockText2, EVENT_BEAT_AMOS; roadblock 
 
-	object_event 12, 9, SPRITE_GRANNY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, EerieHamletNPC3, -1
-	object_event 10, 14, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, EerieHamletNPC4, -1
+	object_event 12, 9, SPRITE_GRANNY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, 							OBJECTTYPE_SCRIPT, 0, EerieHamletNPC3, -1
+	object_event 10, 14, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, 					OBJECTTYPE_SCRIPT, 0, EerieHamletNPC4, -1
 
 	object_const_def
 	const EERIE_HAMLET_ENGINEER
@@ -40,12 +42,28 @@ EerieHamletFlyPoint:
 	endcallback
 
 EerieHamletNPC3:
+	checkevent EVENT_BEAT_AMOS
+	iftrue_jumptextfaceplayer .Text1
+	jumpthistextfaceplayer
+
 	text "The brigaders all"
 	line "find this place"
 	cont "a bit eerie."
 	done
 
+.Text1:
+	text "My bones ache."
+	line "There must be a"
+	para "big thunderstorm"
+	line "rolling in soon."
+	done
+
+
 EerieHamletNPC4:
+	checkevent EVENT_BEAT_AMOS
+	iftrue_jumptextfaceplayer .Text2
+	jumpthistextfaceplayer
+
 	text "Not many venture"
 	line "this far East."
 	
@@ -57,6 +75,12 @@ EerieHamletNPC4:
 	para "Further east, the"
 	line "villages are even"
 	cont "more reclusive."
+	done
+
+.Text2:
+	text "There's quite a"
+	line "ruckus over at"
+	cont "the mine!"
 	done
 
 HamletText:
@@ -76,8 +100,8 @@ HamletStockroomText:
 EerieHamletRoadblockText1:
 	text "The compasses are"
 	line "fine - we need to"
-	cont "stick to their"
-	cont "North!"
+	para "stick to their"
+	line "North!"
 	
 	para "How could they be"
 	line "shifting?"
@@ -86,14 +110,12 @@ EerieHamletRoadblockText1:
 EerieHamletRoadblockText2:
 	text "The compasses are"
 	line "shifting! My rec-"
-	cont "ords show that"
-	
-	para "true north keeps"
-	line "shifting every "
-	para "time we go deeper"
-	line "into the mine."
+	para "ords show that"
+	line "true north keeps"
+	para "shifting every "
+	line "time we go deeper"
+	cont "into the mine."
 	done
-
 
 EerieHamletHoneyScript:
 	faceplayer
@@ -114,8 +136,8 @@ EerieHamletHoneyScript:
 NeedAFossilText: 
 	text "Cripes, Adrinna"
 	line "will be so mad"
-	cont "at me. I should"
-	cont "be digging at the"
+	para "at me. I should"
+	line "be digging at the"
 	
 	para "mine, but I just"
 	line "need one more pot"
@@ -123,8 +145,8 @@ NeedAFossilText:
 	
 	para "If I had a little"
 	line "artifact from the"
-	cont "ground, that'd"
-	cont "show that I was"
+	para "ground, that'd"
+	line "show that I was"
 	cont "working hard,"
 	
 	para "and get Adrinna"
@@ -139,7 +161,6 @@ Text_FossilQuestion:
 	line "some Sweet Honey"
 	cont "for it."
 	done
-
 	
 GiveSweetHoneyText: 
 	text "Thanks, this"

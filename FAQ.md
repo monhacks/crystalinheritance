@@ -2,7 +2,7 @@
 
 If you have a question about Crystal Inheritance, or think you've found a bug, please read this FAQ first.
 
-You can report bugs on the discord or to me on Reddit by DM, u/dwg6m9
+You can report bugs on the discord or to me on Reddit by DM, u/dwg6m9.
 
 ### Which file do I need to play?
 
@@ -12,6 +12,12 @@ This is the ROM you should use for patching:
   (`md5: 9f2922b235a5eeb78d65594e82ef5dde`)
 
 It's identical to the one built by the [pokecrystal](https://github.com/pret/pokecrystal) project.
+
+### Where did this Pokémon go?
+
+Many first forms were removed to make room for more evolutionary lines. 
+
+Evolution lines whose types were already overrepresented (normal-flying, for example) were cut.
 
 
 ### Is there documentation for all the {Pokémon, items, moves, etc}?
@@ -77,14 +83,25 @@ Full spreadsheet is at: TODO
 
 TODO: Post spreadsheet
 
-### What do blessings and photographs do?
+### What do photographs do?
 
-They make your Pokémon happier, just like haircuts or grooming.
-
+They make your Pokémon happier, just like haircuts. There is a photographer in the Ecruteak Shrine north of Ecruteak City. 
 
 ### What is the Judge Machine?
 
 The Judge Machine in Goldenrod City's PokéCom Center shows your Pokémon's EVs (effort) and IVs (potential). 
+
+
+### What do the new balls do?
+
+Material 		-- PokeBall 	-- Effect
+Radiant Opal 	-- Jeze Ball 	-- Better catch rate for Dark, Psychic, Fairy 
+Shore Foam 		-- Bub Ball 	-- Better catch rate for Ice, Water 
+Fixed Charge 	-- Deci Ball 	-- Better catch rate for Electric
+Tough Leaves 	-- Herb Ball 	-- Better catch rate for Poison, Bug, Grass
+Hollow Rock 	-- Geode 		-- Better catch rate for Steel, Ground, Rock 
+Red Apricorn 	-- Love Ball 	-- Better catch rate for opposite gender & increases friendship (combines Love Ball and Friend Ball effect from vanilla) 
+White Apricorn 	-- Fast Ball 	-- Vanilla behavior
 
 ### What are suggested level caps?
 
@@ -105,22 +122,42 @@ Final Gauntlet:
 Final Boss:
 
 
-
 ### Spoilers below!
+
+
+
+### Wait, what's going on in historic Johto?
+
+The plot is partially inspired by the time of the Meiji Restoration in Japan ca. 1860. 
+
+Outsiders have landed at the western port, demanding free access. 
+It is known to the Emperor and his generals that Kanto surrendered to the outsiders and is in danger of becoming completely subsumed by the outsiders. 
+
+Emperor Mejimi is influenced by General Adrinna to form an empire in Johto that will be united in its resistance to the outsiders. 
+General Adrinna believes that the traditional attitudes of Johto are holding it back. 
+Emperor Mejimi will assume a divine role to make his status unquestionable. 
+Over time, General Adrinna grows more frustrated with Emperor Mejimi as she sees that he is not truly reforming Johto. 
+
+The emperor's plan is opposed by the leaders of various towns in Johto. 
+The resistance is organized by the character of Amos. 
 
 
 ### Wait, who is this character?
 
 Hollis: Elder of Anarres Town. 
-Mejimi: Emperor of Historic Johto. Loosely inspired by Emperor Meiji of Japan.
+Amos: Leader of resistance to Mejimi. 
+
+Mejimi: Emperor of Historic Johto.
+Adrinna: General and aide to Mejimi, overseer of mining operation in historic Mt Mortar. Attempts to influence the player. 
+
 Bobesh: General and aide to Mejimi, overseer of Gauldenrod. 
 Kensey: General and aide to Mejimi, overseer of Trader's Landing. 
-Adrinna: General and aide to Mejimi, overseer of mining operation in historic Mt Mortar.
-Samsara: Spiritual aide to Mejimi. 
+
 Sandra: Elder of Gauldenrod. 
+Vespera: Western Capital religious leader. 
 Barbeau: Elder of Trader's Landing. 
-Kanna: Hisuian leader. 
-Amos: Leader of resistance to Mejimi. 
+Kanna: Hisuian expedition leader. 
+
 
 
 ### Where do I get the legendary Pokémon?
@@ -133,6 +170,8 @@ Legendary pokemon not encountered as part of the plot are found in the locations
 *Lugia: Historic Whirl Islands (Sheltered Shores), requires waterfall
 *Ho-Oh: Show Morty any of the legendary beasts, defeat him, to get Rainbow Wing; acquire Clear Bell from Pryce; ascend Tin Tower. 
 *Celebi: Timeless Tapestry
+
+Legendary pokemon cannot be reset. 
 
 ### I'm stuck on the trade quest for the master ball!
 
@@ -155,6 +194,8 @@ Legendary pokemon not encountered as part of the plot are found in the locations
 
 Puzzle solutions are posted on youtube: (TODO)
 
+Ruins of Alph Puzzles: 
+
 Kimono puzzles:
 	Kimono 1:
 	Kimono 2:
@@ -173,9 +214,3 @@ Grottoed Glacier:
 Western Glacier:
 
 Brass Tower:
-
-### Where did this Pokémon go?
-
-Many first forms were removed to make room for more evolutionary lines. 
-
-Evolution lines whose types were already overrepresented (normal-flying, for example) were cut.

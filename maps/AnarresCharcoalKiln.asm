@@ -12,11 +12,11 @@ AnarresCharcoalKiln_MapScriptHeader:
 	def_coord_events
 
 
-	def_bg_events
+	def_bg_events ; todo: bg events? 
 ;	bg_event 22, 12, BGEVENT_JUMPTEXT, TinTowerSignText
 
 	def_object_events
-	object_event 7, 4, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, jumptextfaceplayer, AnarresKilnCharcoalScript, -1 ; gives the charcoal
+	object_event 7, 4, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AnarresKilnCharcoalScript, -1 
 	object_event 2, 5, SPRITE_BLACK_BELT, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, AnarresKilnNPC2Text, -1 ;
 	object_event 5, 5, SPRITE_BLACK_BELT, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, AnarresKilnNPC3Text, -1 ;
 
@@ -39,12 +39,9 @@ AnarresKiln_GotCharcoal:
 	text "It's Charcoal."
 	line "Smells good, no?"
 	
-	para "Maybe one day,"
-	line "someone will"
-	cont "invent something"
-	cont "a way to store"
-	cont "aromas without"
-	cont "all this ash."
+	para "I just wish there"
+	line "wasn't so much"
+	cont "ash."
 	done
 
 
@@ -52,15 +49,13 @@ AnarresKiln_GiveCharcoal:
 	text "The trees smell"
 	line "so wonderful."
 	
-	para "We process the"
-	line "bark in this"
-	cont "oven to make"
-	cont "charcoal."
+	para "We use this oven"
+	line "to make Charcoal."
 	
 	para "Here, take some"
 	line "to remember this"
-	cont "place by. Don't"
-	cont "mind the soot."
+	para "place by. Don't"
+	line "mind the soot."
 	done
 
 AnarresKilnNPC2Text:
@@ -70,16 +65,12 @@ AnarresKilnNPC2Text:
 	
 	para "But he always"
 	line "gives himself"
-	cont "the easiest jobs."
+	cont "the easiest jobs!"
 	done
 
 AnarresKilnNPC3Text:
-	text "The elder is the"
-	line "only one who can"
-	cont "use Cut."
-	
-	para "How will we save"
-	line "the forest if"
-	cont "we can't remove"
-	cont "the sick trees?"
+	text "We have more bark"
+	line "than we can proc-"
+	para "ess with all the"
+	line "dying trees."
 	done

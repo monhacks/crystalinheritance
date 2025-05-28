@@ -37,30 +37,6 @@ AnarresTown_MapScriptHeader:
 
 	object_const_def
 
-; example script 
-;AzaleaTownYoungsterScript:
-;	checkevent EVENT_GOT_A_POKEMON
-;	iftrue_jumptextfaceplayer .Text4
-;	jumpthistextfaceplayer
-;
-;	text "I'm surprised"
-;	line "<RIVAL> is doing"
-;	para "the ceremony. He"
-;	line "doesn't seem to"
-;	para "get along with"
-;	line "Kurt."
-;	done
-;
-;.Text4:
-;	text "If I had my own"
-;	line "#mon, I would"
-;	cont "go exploring."
-;	
-;	para "I've never even"
-;	line "been to Slowpoke"
-;	cont "Well or Route 33."
-;	done
-
 AnarresTownFlypointCallback:
 	setflag ENGINE_FLYPOINT_ANARRES_TOWN
 	endcallback
