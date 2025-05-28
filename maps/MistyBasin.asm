@@ -1,4 +1,4 @@
-MistyBasin_MapScriptHeader: ; should be like  "BurnedTowerB1F_MapScriptHeader"
+MistyBasin_MapScriptHeader: ; todo add a hidden item and fix the dialogues 
 	def_scene_scripts
 
 
@@ -13,10 +13,9 @@ MistyBasin_MapScriptHeader: ; should be like  "BurnedTowerB1F_MapScriptHeader"
 
 
 	def_bg_events
-
+	bg_event 15, 13, BGEVENT_ITEM + FRESH_WATER, EVENT_MISTY_BASIN_FRESH_WATER ;todo 
 
 	def_object_events
-
 	object_event  4, 13, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSageChow, EVENT_BEAT_TAMMY 
 	object_event  5,  4, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSageNico, EVENT_BEAT_TAMMY
 	object_event 13,  3, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerMediumMartha, EVENT_BEAT_TAMMY
@@ -43,40 +42,28 @@ MistyBasonMatronScript:
 	iffalse_endtext
 	setevent EVENT_GOT_WATER_PULSE
 	jumpthisopenedtext
-	
-	text "Use that"
-	line "technique to"
-	cont "turn your"
-	cont "opponent's"
-	cont "strength against"
-	cont "themselves."
-	done
-
-
-MistyBasinGiveWaterPulse:
-	text "Water is the"
-	line "lifeblood of all"
-	cont "living things."
-
-	para "If you can"
-	line "disrupt their"
-	cont "water, you can"
-	cont "disrupt your"
-	cont "opponent. Here,"
-	cont "take this."
-	done
 
 
 MatronYawnText:
 	text "A slowpoke yawn"
 	line "causes rain. Ten"
-	cont "elders ago,"
-	cont "there was a"
-	cont "drought, and it"
-	cont "broke once we"
-	cont "revered the"
-	cont "simple act of a"
-	cont "slowpoke yawn."
+	para "elders ago,"
+	line "there was a"
+	para "drought, and it"
+	line "broke once we"
+	para "revered the"
+	line "simple act of a"
+	cont "Slowpoke yawn."
+	done
+
+MistyBasinGiveWaterPulse:
+	text "Water is life!"
+	line "Disrupt the water"
+	para "and you take it"
+	line "out of balance."
+	
+	para "Take this so you"
+	line "don't forget."
 	done
 
 GenericTrainerSageChow:
@@ -142,7 +129,7 @@ TammyScript:
 	faceplayer
 	showtext TammySeenText
 	winlosstext TammyBeatenText, 0
-	loadtrainer TAMMY, 1 ; call the right trainer?
+	loadtrainer TAMMY, 1 
 	startbattle
 	reloadmapafterbattle
 	opentext
@@ -162,7 +149,7 @@ TammyScript:
 	disappear MISTY_BASIN_TAMMY
 	end
 
-TammyAfterBattleText:
+TammyAfterBattleText: ; todo plot copy 
 	text "I invented a way"
 	line "to teach"
 	cont "techniques,"

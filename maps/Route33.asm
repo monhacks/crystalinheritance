@@ -59,8 +59,7 @@ SchoolgirlImogenBeatenText:
 
 Route33SignText:
 	text "Danger: no"
-	line "unauthorized"
-	cont "spelunking!"
+	line "spelunking!"
 	done
 
 Route33PayDayScript:
@@ -100,14 +99,14 @@ Text_PayDayIntro:
 	
 	para "I don't know"
 	line "why, I was just"
-	cont "using cold water"
-	cont "to rinse the"
+	para "using cold water"
+	line "to rinse the"
 	cont "dishes."
 	
 	para "Anyway, now"
 	line "we are farming"
-	cont "Pay Day to "
-	cont "make rent."
+	para "Pay Day to "
+	line "make rent."
 	done
 
 Text_Route33TutorPayDay:
