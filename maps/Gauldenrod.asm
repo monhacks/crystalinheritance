@@ -120,38 +120,70 @@ GauldenrodNPC2Script:
 	done 
 
 GauldenrodNPC3Script:
-	jumptextfaceplayer GauldenrodNPC3Text
+	checkevent EVENT_BEAT_BOBESH
+	iftrue_jumptextfaceplayer .Text3
+	jumpthistextfaceplayer
 
-GauldenrodNPC3Text:
-	text "Check out the"
-	line "bazaar. Traveling"
-	cont "traders might have"
-	cont "something new for"
-	cont "sale."
+	text "There's cool stuff"
+	line "at the bazaar!"
+	
+	para "Apparently from"
+	line "the Trader's"
+	cont "Landing."
 	done
 
+.Text3: 
+	text "Without Bobesh,"
+	line "will the bazaar"
+	cont "close?"
+	done 
+	
 GauldenrodNPC4Script:
-	jumptextfaceplayer GauldenrodNPC4Text
+	checkevent EVENT_BEAT_BOBESH
+	iftrue_jumptextfaceplayer .Text4
+	jumpthistextfaceplayer
 
-GauldenrodNPC4Text:
 	text "I used to resent"
 	line "the emperor taking"
-	cont "over the city, but"
-	cont "I appreciate the"
-	cont "stadium."
+	para "over, but the"
+	line "stadium is cool."
 	done
+
+.Text4: 
+	text "I've seen some"
+	line "weird stuff on"
+	para "the mountain. No"
+	line "way am I going"
+	cont "to do my quest."
+	done 
 
 GauldenrodNPC5Script:
-	jumptextfaceplayer GauldenrodNPC5Text
+	checkevent EVENT_BEAT_BOBESH
+	iftrue_jumptextfaceplayer .Text5
+	jumpthistextfaceplayer
 
-GauldenrodNPC5Text:
-	text "The stadium is so"
-	line "fun. Some trainer"
-	cont "drones against the"
-	cont "emperor, and then"
-	cont "their #mon get"
-	cont "stomped."
+	text "Our ritual is put"
+	line "on hold due to"
+	cont "the Brigaders."
+	
+	para "I didn't really"
+	line "want to carry an"
+	para "old lady up the"
+	line "mountain, though,"
+	cont "so I'm happy."
 	done
+
+.Text5: 
+	text "I hope I get to"
+	line "do my ritual."
+	
+	para "It could be the"
+	line "last time I get"
+	para "to spend quality"
+	line "time with my"
+	cont "grandma."
+	done 
+	
 
 GauldenrodNPC6Script:
 	jumptextfaceplayer GauldenrodNPC6Text
