@@ -165,72 +165,112 @@ TGOakMovesBackMovement:
 	step_end
 
 KurtText_Intro:
+	text_high
+    text " Kurt: "
+	next
+	text_start 
 	text "Kurt: Surprise!"
 	line "Oak is here."
 	
 	para "Pryce couldn't"
 	line "make it. I'm sure"
-	cont "you will see him"
-	cont "later."
+	cont "he'll come later."
+	
+	para "I see <RIVAL>"
+	line "came without his"
+	cont "clunky glassware."
+	text_end
+
+	text_high
+    text " <RIVAL>: "
+	next
+	text_start 	
+	text "Hey! My distiller"
+	line "can save Azalea!"
+	para "It harvests more"
+	line "10x more oils -- "
+	text_end
+
+	text_high
+    text " Kurt: "
+	next
+	text_start 
+	text "Take a joke,"
+	line "spaz!"
 	done
 	
 OakText_Pokedex:
+	text_high
+    text " Oak: "
+	next
+	text_start 
 	text "Now that you're"
 	line "old enough, you"
 	cont "should have this."
 	
 	para "It's a #dex!"
-	
-	para "It automatically"
-	line "records data on"
-
-	para "#mon you've"
-	line "seen or caught."
-
-	para "It's a hi-tech"
-	line "encyclopedia!"
 	done
 
+
 OakText_Balls:
+	text_high
+    text " Oak: "
+	next
+	text_start 
 	text "And you will"
 	line "want these to"
 	cont "fill it up."
 	done
 
 OakText_PokedexRival:
+	text_high
+    text " Oak: "
+	next
+	text_start 
 	text "I brought one"
 	line "for you as well."
 	done
 
 CatchAll:
+	text_high
+    text " Oak: "
+	next
+	text_start 
 	text "Best of luck!"
 	done
 	
-KurtLetsBegin:
+KurtLetsBegin:	
+	text_high
+    text " Kurt: "
+	next
+	text_start 
 	text "Let's begin."
 	done
 	
 KurtLetsBegin2:	
+	text_high
+    text " Kurt: "
+	next
+	text_start 
 	text "Ilex, we honor"
-	line "this tree, symbol"
-	cont "of life's cycles."
+	line "this tree."
 
-	para "Yearly, your fruit"
+	para "Yearly, its fruit"
 	line "and leaves go red,"
 	
 	para "as if going down"
-	line "in flames. But - "
+	line "in flames."
 	
-	para "These leaves and"
-	line "fruit enrich soil,"
+	para "They fall and en-"
+	line "rich the soil,"
 
 	para "So the next gene-"
 	line "ration can rise"
-	cont "in an inheritance"
+	para "in an inheritance"
 	
-	para "of fallen leaves"
-	line "like a phoenix"
-	cont "from the ashes."
+	line "of fallen leaves"
+	para "like a phoenix"
+	line "from the ashes."
 	done
 
 TGOakBeginMovement:
@@ -244,7 +284,11 @@ TinderGardenTryToLeaveScript:
 	end
 
 WasThatCelebiText:
-	text "Kurt: Was that"
+	text_high
+    text " Kurt: "
+	next
+	text_start 
+	text "Was that..."
 	line "Celebi?"
 	
 	para "And there are"
@@ -252,25 +296,32 @@ WasThatCelebiText:
 	cont "over there..."
 	done
 
-WasThatCelebiTextOak:	
-	text "Oak: My #dex"
+WasThatCelebiTextOak:
+	text_high
+    text " Oak: "
+	next
+	text_start 
+	text "My #dex"
 	line "doesn't recognize"
 	cont "two of them."
 	done
 
 WasThatCelebiTextKurt:
-	text "Kurt: Wait, I"
+	text_high
+    text " Kurt: "
+	next
+	text_start
+	text "Hold on, I"
 	line "know these from"
-	cont "an old book."
-	cont "These three were"
-	cont "carried by visi-"
-	cont "tors from Hisui"
-	cont "long ago."
+	para "an old book."
+	line "These three were"
+	para "carried a hero"
+	line "from Hisui."
 	
 	para "Kurt: Celebi"
 	line "brought them for"
-	cont "us. You both"
-	cont "should pick one!"
+	para "us. You both"
+	line "should pick one!"
 	done
 
 TGKurtMovesAway:
@@ -474,8 +525,12 @@ RowletPokeBallScript:
 	setscene $3
 	end
 	
-TakeCyndaquilText:
-	text "Kurt: You want"
+TakeCyndaquilText:	
+	text_high
+    text " Kurt: "
+	next
+	text_start
+	text "So, you want"
 	line "Cyndaquil, the"
 	cont "fire #mon?"
 	
@@ -485,29 +540,41 @@ TakeCyndaquilText:
 	done
 
 TakeOshawottText:
-	text "Kurt: Do you want"
+	text_high
+    text " Kurt: "
+	next
+	text_start
+	text "So, you want"
 	line "Oshawott, the"
 	cont "water #mon?"
 	done
 
 TakeRowletText:
-	text "Kurt: You like"
+	text_high
+    text " Kurt: "
+	next
+	text_start
+	text "So, you want"
 	line "Rowlet, the"
 	cont "grass #mon?"
 	done
 
 DidntChooseStarterText:
-	text "Kurt: Think"
-	line "carefully."
-
-	para "Your partner is"
+	text_high
+    text " Kurt: "
+	next
+	text_start
+	text "Your partner is"
 	line "important."
 	done
 
 ChoseStarterText:
-	text "Kurt: I think"
-	line "that's a great"
-	cont "#mon too!"
+	text_high
+    text " Kurt: "
+	next
+	text_start
+	text "That's a great"
+	line "#mon!"
 	done
 
 ReceivedStarterText:
@@ -531,12 +598,20 @@ RivalReceivedStarterText:
 	done
 
 KurtGreatJobText:
-	text "Kurt: Wonderful."
-	line "You both have"
+	text_high
+    text " Kurt: "
+	next
+	text_start
+	text "Wonderful! Now,"
+	line "you both have"
 	cont "great #mon."
 	done
 
 KurtDontLoseItText:
+	text_high
+    text " Kurt: "
+	next
+	text_start
 	text "Let's hope that"
 	line "he doesn't lose"
 	cont "this one in the"
@@ -681,8 +756,14 @@ CelebiPokeBallText:
 	done
 
 CelebiHeroText:
-	text "Celebi: Found"
-	line "you, hero!"
+	text_high
+    text " Celebi: "
+	next
+	text_start 
+	text "Something unnat-"
+	line "ural threatens"
+	para "my forest!"
+	line "Help!"
 	done
 
 OakScript:
@@ -710,45 +791,64 @@ PryceScript:
 	end
 
 PryceWatchKurtPleaseText1:
+	text_high
+    text " Pryce: "
+	next
+	text_start
 	text "<PLAYER>, please"
 	line "look after Kurt."
-	cont "He means well."
 	
-	para "The world's been"
+	para "The world's"
 	line "changing fast, so"
 	cont "not everyone sees"
 	para "eye-to-eye with"
 	line "him - even those"
-	cont "he is closest to."
+	cont "he’s closest to."
 	
-	para "Let's just say he"
-	line "took it very hard"
+	para "He"
+	line "took it hard"
 	cont "when your Dad"
 	cont "moved away."
 	done
 
+
 PryceWatchKurtPleaseText3:
+	text_high
+    text " Pryce: "
+	next
+	text_start
 	text "Kurt's always been"
 	line "steadfast, but I"
-	cont "see a rigidity as"
-	para "he wields tradit-"
-	line "ion as a sword,"
-	cont "rather than the"
-	cont "bridge it should"
-	cont "be, <PLAYER>."
+	para "see a rigidity as"
+	line "he wields tradit-"
+	para "ion as a sword,"
+	line "rather than the"
+	para "bridge it should"
+	line "be, <PLAYER>."
 	done
 
 PryceWatchKurtPleaseText4:
+	text_high
+    text " Pryce: "
+	next
+	text_start
 	text "He's not entirely"
 	line "wrong, mind you."
-	para "The other Gym"
-	line "Leaders should"
-	cont "slow down, given"
-	cont "the path they're"
-	cont "headed down."
+	
+	para "Johto could use "
+	line "more people who "
+	para "care about their"
+	line "community's leg-"
+	cont "acy, not their"
+	cont "own legacy."
 	done
 
+
 PrycePokemonText:
+	text_high
+    text " Pryce: "
+	next
+	text_start
 	text "Oh, <PLAYER>!"
 	line "Look at you now!"
 
@@ -765,6 +865,10 @@ PrycePokemonText:
 	done
 
 PryceWatchKurtPleaseText2:
+	text_high
+    text " Pryce: "
+	next
+	text_start
 	text "<PLAYER>, please"
 	line "look out for Kurt"
 	cont "for me, alright?"
@@ -792,14 +896,14 @@ CharcoalScript:
 CharcoalCuttingText:
 	text "They've been"
 	line "building this"
-	cont "shrine every 20"
-	cont "years for many"
+	para "shrine every 20"
+	line "years for many"
 	cont "generations."
 
 	para "But now, it's"
 	line "uncertain. The"
-	cont "forest is so"
-	cont "thin, we can't"
+	para "forest is so"
+	line "thin, we can't"
 	cont "make Charcoal."
 	
 	para "How will we go"
@@ -818,26 +922,36 @@ RivalScript:
 	jumpopenedtext RivalIndependentText
 
 RivalIndependentText:
-	text "I can't wait"
-	line "to be more ind-"
-	cont "ependent. No one"
+	text_high
+    text " <RIVAL>: "
+	next
+	text_start
+	text "No one"
 	para "appreciates my"
 	line "ingenuity."
 	done
 
 TGRivalChallengeText:
+	text_high
+    text " <RIVAL>: "
+	next
+	text_start
 	text "<PLAYER>, now"
 	line "that we both"
-	cont "have #mon,"
-	cont "let's battle!"
+	para "have #mon,"
+	line "let's battle!"
 	
 	para "I'll show you,"
 	line "your gramps, and"
-	cont "this whole town"
-	cont "that I'm capable!"
+	para "this whole town"
+	line "that I'm capable!"
 	done
 
 TGRivalLoseText:
+	text_high
+    text " <RIVAL>: "
+	next
+	text_start
 	text "Showed you."
 	
 	para "Oh, Kurt, I"
@@ -847,16 +961,24 @@ TGRivalLoseText:
 	done
 
 TGRivalWinText:
+	text_high
+    text " <RIVAL>: "
+	next
+	text_start
 	text "I'm only going"
 	line "to get stronger."
 	
 	para "Oh, Kurt, I"
 	line "heard that jab"
-	cont "about losing this"
-	cont "#mon."
+	para "about losing this"
+	line "#mon."
 	done
 
 TGRivalText_YouWon:
+	text_high
+    text " <RIVAL>: "
+	next
+	text_start
 	text "I've been trea-"
 	line "ted like I can't"
 	cont "do anything."
@@ -866,6 +988,10 @@ TGRivalText_YouWon:
 	done
 	
 TGRivalText_YouLost:
+	text_high
+    text " <RIVAL>: "
+	next
+	text_start
 	text "This is just"
 	line "the beginning."
 	
@@ -877,26 +1003,21 @@ TGRivalText_YouLost:
 	done
 
 TGRivalGoodbyeText:
+	text_high
+    text " <RIVAL>: "
+	next
+	text_start
 	text "With my own"
 	line "#mon, I'm"
 	cont "leaving."
 	
 	para "My invention could"
-	line "have saved us, if"
-	para "you, Kurt, hadn't"
-	line "kept me down."
+	line "have saved us."
 	
 	para "Who put you in"
 	line "charge, anyway?"
-	
-	para "Kurt: <RIVAL>,"
-	line "you're always in"
-	cont "a rush to prove"
-	cont "yourself!"
-	
-	para "You never let us"
-	line "teach you!"
 	done
+
 
 
 PlayerMovesForRivalBattle:
@@ -910,32 +1031,30 @@ TGRivalLeavesMovement:
 	step_down
 	step_end ; should be enough?
 
-KurtThinksTheyreCuttingTreesText:
+KurtThinksTheyreCuttingTreesText:	
+	text_high
+    text " Kurt: "
+	next
+	text_start
 	text "What's that?"
 	
-	para "It sounds like"
-	line "they are cutting"
-	cont "trees near the"
-	cont "shrine!"
-	
+	para "Are they cutting"
+	cont "by the shrine?"
+
 	para "That's against"
 	line "the agreement!"
 	
 	para "<PLAYER>, we"
 	line "need to stop them!"
 	
-	para "Now that you have"
-	line "a #mon, you"
-	cont "can catch more"
-	cont "around Azaela."
+	para "With a #mon, you"
+	line "can catch more"
+	cont "nearby."
 	
-	para "I will see"
-	line "you in Ilex"
-	cont "Forest!"
-	
-	para "We have to fight"
-	line "for our home!"
+	para "Hang on, Ilex!"
+	line "I’m on my way!"
 	done
+
 
 KurtMovesForward:
 	step_down
@@ -992,17 +1111,17 @@ TinderGardernWatchTheLoggersScript:
 GardenEngineerText1:
 	text "Is this the one?"
 	line "I couldn't find"
-	cont "any other blossom"
-	cont "trees."
+	para "any other blossom"
+	line "trees."
 	done
 	
 GardenEngineerText2:
 	text "Yup, this is the"
 	line "it. Probably the"
-	cont "last one in all"
-	cont "of Johto. This'll"
-	cont "probably net us"
-	cont "a few months pay."
+	para "last one in all"
+	line "of Johto. This'll"
+	para "probably net us"
+	line "a few months pay."
 	done
 	
 Celebi2Text:
@@ -1017,19 +1136,18 @@ GardenEngineerText3:
 GardenEngineerText4:
 	text "Hoenn wants the"
 	line "lumber. They're"
-	cont "building an extr-"
-	cont "avagant dragon"
-	cont "shrine, and all"
-	cont "their trees were"
-	cont "burned down in"
-	cont "a freak wildfire."
+	para "building an extr-"
+	line "avagant dragon"
+	para "shrine, and all"
+	line "their trees were"
+	para "burned down in"
+	line "a freak wildfire."
 	
 	para "Reminds me of the"
 	line "kid who toppled"
-	cont "the emperor in"
-	cont "the Burned Tower."
+	para "the emperor in"
+	line "the Burned Tower."
 	done
-
 
 LittleGiddingText:
 	text "We shalln't cease"

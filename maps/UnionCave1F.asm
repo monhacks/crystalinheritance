@@ -35,8 +35,8 @@ GenericTrainerScientistLowell:
 
 	text "Poison type"
 	line "#mon help"
-	cont "us leach the"
-	cont "precious metals."
+	para "us leach the"
+	line "precious metals."
 	done
 
 ScientistLowellSeenText:
@@ -98,7 +98,6 @@ UnionHealerScript:
 	special RestoreMusic
 	end
 	
-
 .WantToHeal:
 	text "It's tough work"
 	line "in the mines."
@@ -107,7 +106,6 @@ UnionHealerScript:
 	line "back in tip-top"
 	cont "shape!"
 	done
-
 
 .HealedPokemon:
 	text "Your #mon"

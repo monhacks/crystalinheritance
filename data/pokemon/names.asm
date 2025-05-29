@@ -18,6 +18,7 @@ PokemonNames::
 	rawchar "Pidgey@@@@"
 	rawchar "Pidgeotto@"
 	rawchar "Pidgeot@@@"
+	rawchar "Noctowl@@@"
 	rawchar "Ekans@@@@@"
 	rawchar "Arbok@@@@@"
 	rawchar "Pikachu@@@"

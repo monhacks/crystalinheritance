@@ -19,6 +19,7 @@ IconPointers:
 	dba PidgeyIcon	;PIDGEY   ; 0f
 	dba PidgeottoIcon ;PIDGEOTTO     ; 10
 	dba PidgeotIcon ;PIDGEOT  ; 11
+	dba NoctowlIcon ;NOCTOWL  ; 11
 	dba EkansIcon ;EKANS    ; 12
 	dba ArbokIcon ;ARBOK    ; 13
 	dba PikachuIcon ;PIKACHU   ; 14

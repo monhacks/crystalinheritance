@@ -475,6 +475,10 @@ ReceivedHeavensBadgeText:
 	done
 	
 SamsaraIntroText:
+	text_high
+    text " Vespera: " ; note the space before and after the text for better readability 
+	next
+	text_start 
 	text "So, you're here"
 	line "to stop Mejimi"
 	cont "and preserve"
@@ -527,6 +531,10 @@ SamsaraWinLossText:
 	done
 
 SamsaraAfterText:
+	text_high
+    text " Vespera: " ; note the space before and after the text for better readability 
+	next
+	text_start 
 	text "There is still"
 	line "time to change"
 	cont "the Emperor."

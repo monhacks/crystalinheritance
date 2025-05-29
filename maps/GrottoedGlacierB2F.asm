@@ -102,7 +102,7 @@ GrottoedGlacierB1FScene1:
 	writetext KannaWaterfallText
 	playsound SFX_GET_BADGE
 	waitsfx
-	setflag ENGINE_MARSHBADGE ; TO CHECK 
+	setflag ENGINE_MARSHBADGE
 	verbosegivetmhm HM_WATERFALL	
 	writetext KannaTellAmosText	
 	closetext

@@ -17,6 +17,5 @@
 	*Contact for more info
 * More music
    * Custom Theme for Emperor and Generals
-* Dive areas
 * Better cutscene implementation
 * Signs tell you which pokemon are in a given area 

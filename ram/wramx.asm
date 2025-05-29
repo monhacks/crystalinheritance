@@ -1063,8 +1063,8 @@ wMistyBasinSceneID:: db
 wNationalParkSceneID:: db
 wOlivineCafeSceneID:: db 
 wOlivineCityDesal1FSceneID:: db
-wOlivineLighthouse1F:: db
-wOlivineLighthouse6F:: db
+wOlivineLighthouse1FSceneID:: db
+wOlivineLighthouse6FSceneID:: db
 wOlivinePunishmentSpeechHouseSceneID:: db
 wPokecenter2FSceneID:: db 
 wRadioTower1FSceneID:: db 

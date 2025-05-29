@@ -1,4 +1,4 @@
---- 012.asm --- ; butterfree
+--- 012.asm --- ; example 
 
 
 
@@ -11,150 +11,6 @@
 	page "It can even"
 	next "identify distant"
 	next "flowers in bloom.@"
-
-New: Their migration patterns last three generations. The path to follow is passed down by psychic waves. 
-
-
---- 015.asm --- ; beedrill
-
-
-
-	db "Poison Bee@" ; species name
-	dw 303, 650 ; height, width
-
-	db   "It uses sharp,"
-	next "poisonous stings"
-	next "to defeat prey,"
-	page "then takes the"
-	next "victim back to its"
-	next "nest for food.@"
-
-New: If it smells vespiquen honey, it enters a vicious rage until it eats the sweet syrup. 
-
-
---- 016.asm --- ; pidgey
-
-
-
-	db "Tiny Bird@" ; species name
-	dw 100, 40 ; height, width
-
-	db   "It rapidly flaps"
-	next "its wings in the"
-	next "grass, stirring up"
-	page "a dust cloud that"
-	next "drives insect prey"
-	next "out into the open.@"
-
-New: Pidgey will cover their legs in mud to safely land on power lines. 
-
-TODO: hidden ability: lightning rod
-
---- 017.asm --- ; pidgeotto
-
-
-
-	db "Bird@" ; species name
-	dw 307, 660 ; height, width
-
-	db   "It slowly flies in"
-	next "a circular pat-"
-	next "tern, all the"
-	page "while keeping a"
-	next "sharp lookout for"
-	next "prey.@"
-
-New: Fierce rival to Furret, they are always out to prove themselves. 
-
-TODO: hidden ability: lightning rod
-
-
---- 018.asm --- ; pidgeot
-
-
-
-	db "Bird@" ; species name
-	dw 411, 870 ; height, width
-
-	db   "Its outstanding"
-	next "vision allows it"
-	next "to spot splashing"
-	page "Magikarp, even"
-	next "while flying at"
-	next "3300 feet.@"
-
-
-New: Its powerful wings can move clouds and cause hurricanes. 
-
-TODO: hidden ability: lightning rod
-
-
---- 021.asm --- ; marill
-
-
-
-	db "Aqua Mouse@" ; species name
-	dw 104, 190 ; height, width
-
-	db   "The fur on its"
-	next "body naturally"
-	next "repels water. It"
-	page "can stay dry, even"
-	next "when it plays in"
-	next "the water.@"
-
-New: They love to play in sand. If an oshawott builds a sand castle, Marill will rollout to knock it over.
-
-
---- 022.asm --- ; azumarill
-
-
-
-	db "Aqua Rabbit@" ; species name
-	dw 207, 630 ; height, width
-
-	db   "The bubble-like"
-	next "pattern on its"
-	next "stomach helps it"
-	page "camouflage itself"
-	next "when it's in the"
-	next "water.@"
-
-New: Azumarill spend their lives migrating from fiery mountain hot springs to glaciers.
-
-
---- 023.asm --- ; ekans
-
-
-
-	db "Snake@" ; species name
-	dw 607, 150 ; height, width
-
-	db   "It flutters the"
-	next "tip of its tongue"
-	next "to seek out the"
-	page "scent of prey,"
-	next "then swallows the"
-	next "prey whole.@"
-
-New: The forked shape of their tongue allows them to locate scents quickly. 
-
-
---- 024.asm --- ; arbok
-
-
-
-	db "Cobra@" ; species name
-	dw 1106, 1430 ; height, width
-
-	db   "To intimidate"
-	next "foes, it spreads"
-	next "its chest wide and"
-	page "makes eerie sounds"
-	next "by expelling air"
-	next "from its mouth.@"
-
-New: Their association with Team Rocket has caused wild populations to fall.  
 
 --- 025.asm --- ; pikachu
 
@@ -170,79 +26,8 @@ New: Their association with Team Rocket has caused wild populations to fall.
 	next "the pouches in its"
 	next "cheeks.@"
 
-New: TODO 
-
-
---- 026.asm --- ; raichu
-
-
-
-	db "Mouse@" ; species name
-	dw 207, 660 ; height, width
-
-	db   "If its electric"
-	next "pouches run empty,"
-	next "it raises its tail"
-	page "to gather electri-"
-	next "city from the"
-	next "atmosphere.@"
-
-
-New: Regions dependent on solar or wind energy use Raichu to load-balance their grids. 
-
---- 030.asm --- ; nidorina
-
-
-
-	db "Poison Pin@" ; species name
-	dw 207, 440 ; height, width
-
-	db   "It has a docile"
-	next "nature. If it is"
-	next "threatened with"
-	page "attack, it raises"
-	next "the barbs that are"
-	next "all over its body.@"
-
-New: To compensate for its weak body, Nidorina's poison's strength is inversely proportional to its age. 
-
-
---- 031.asm --- ; nidoqueen
-
-
-
-	db "Drill@" ; species name
-	dw 403, 1320 ; height, width
-
-	db   "The hard scales"
-	next "that cover its"
-	next "strong body serve"
-	page "as excellent"
-	next "protection from"
-	next "any attack.@"
-
-New: Strong matriarchs capable of many techniques, they watch over expectant members of their clan. 
-
---- 033.asm --- ; nidorino
-
-
-
-	db "Poison Pin@" ; species name
-	dw 211, 430 ; height, width
-
-	db   "It is easily"
-	next "agitated and uses"
-	next "its horn for"
-	page "offense as soon as"
-	next "it notices an"
-	next "attacker.@"
-
-New: Carries itself with a swagger. Always trying to impress Nidorina with displays of strength. 
-
 
 --- 034.asm --- ; nidoking
-
-
 
 	db "Drill@" ; species name
 	dw 407, 1370 ; height, width
@@ -254,7 +39,6 @@ New: Carries itself with a swagger. Always trying to impress Nidorina with displ
 	next "combat is its"
 	next "specialty.@"
 
-New: TODO 
 
 
 --- 035.asm --- ; clefairy
@@ -271,8 +55,6 @@ New: TODO
 	next "on the night of a"
 	next "full moon.@"
 
-Todo: TODO 
-
 
 --- 036.asm --- ; clefable
 
@@ -287,59 +69,6 @@ Todo: TODO
 	page "type of fairy has"
 	next "a strong aversion"
 	next "to being seen.@"
-
-New: TODO 
-
-
---- 037.asm --- ; vulpix
-
-
-
-	db "Fox@" ; species name
-	dw 200, 220 ; height, width
-
-	db   "As its body grows"
-	next "larger, its six"
-	next "warm tails become"
-	page "more beautiful,"
-	next "with a more luxur-"
-	next "ious coat of fur.@"
-
-
-New: Vulpix pups love to mimic children. They seems to anticipate every move. 
-
---- 038.asm --- ; ninetales
-
-
-
-	db "Fox@" ; species name
-	dw 307, 440 ; height, width
-
-	db   "It is said to live"
-	next "a thousand years,"
-	next "and each of its"
-	page "tails is loaded"
-	next "with supernatural"
-	next "powers.@"
-
-
-nEW: It coerces its prey into vulnerable positions by the movements of its tail.  
-
---- 039.asm --- ; jigglypuff
-
-
-
-	db "Balloon@" ; species name
-	dw 108, 120 ; height, width
-
-	db   "It rolls its cute"
-	next "eyes as it sings a"
-	next "soothing lullaby."
-	page "Its gentle song"
-	next "puts anyone who"
-	next "hears it to sleep.@"
-
-New: A pop star was cut when paparazzi found he was lip-syncing a Jigglypuff. 
 
 
 --- 040.asm --- ; wigglytuff
@@ -356,24 +85,7 @@ New: A pop star was cut when paparazzi found he was lip-syncing a Jigglypuff.
 	next "who feels it can't"
 	next "stop touching it.@"
 
-New: TODO 
 
-
---- 041.asm --- ; zubat
-
-
-
-	db "Bat@" ; species name
-	dw 207, 170 ; height, width
-
-	db   "During the day, it"
-	next "gathers with"
-	next "others and hangs"
-	page "from the ceilings"
-	next "of old buildings"
-	next "and caves.@"
-
-New: Genetic sequences show that some human diseases originate in Zubat.
 
 
 --- 042.asm --- ; golbat
@@ -395,37 +107,7 @@ New: It uses its long tongue to
 
 --- 044.asm --- ; gloom
 
-
-
-	db "Weed@" ; species name
-	dw 207, 190 ; height, width
-
-	db   "The smell from its"
-	next "drool-like syrup"
-	next "and the pollen on"
-	page "its petals is so"
-	next "bad, it may make"
-	next "opponents faint.@"
-
-New: Recent evidence shows that exposure to Gloom at a young age is correlated with higher levels of crime as adults. 
-
-
---- 045.asm --- ; vileplume
-
-
-
-	db "Flower@" ; species name
-	dw 311, 410 ; height, width
-
-	db   "By shaking its big"
-	next "petals, it scat-"
-	next "ters toxic pollen"
-	page "into the air,"
-	next "turning the air"
-	next "yellow.@"
-
-New: Just one whiff of its pollen will give even a trained monk evil impulses. 
-
+New: TODO  
 
 --- 046.asm --- ; paras
 
@@ -440,21 +122,6 @@ New: Just one whiff of its pollen will give even a trained monk evil impulses.
 	page "orders it to"
 	next "extract juice from"
 	next "tree trunks.@"
-
-
---- 047.asm --- ; parasect
-
-
-
-	db "Mushroom@" ; species name
-	dw 303, 650 ; height, width
-
-	db   "When nothing's"
-	next "left to extract"
-	next "from the bug, the"
-	page "mushrooms on its"
-	next "back leave spores"
-	next "on the bug's egg.@"
 
 
 --- 048.asm --- ; venonat
@@ -515,21 +182,6 @@ New: Just one whiff of its pollen will give even a trained monk evil impulses.
 	page "level. No one"
 	next "knows what it's"
 	next "like underground.@"
-
-
---- 052.asm --- ; meowth
-
-
-
-	db "Scratch Cat@" ; species name
-	dw 104, 90 ; height, width
-
-	db   "It loves things"
-	next "that sparkle. When"
-	next "it sees a shiny"
-	page "object, the gold"
-	next "coin on its head"
-	next "shines too.@"
 
 
 --- 053.asm --- ; persian
@@ -862,57 +514,6 @@ New: Just one whiff of its pollen will give even a trained monk evil impulses.
 	next "will become.@"
 
 
---- 079.asm --- ; slowpoke
-
-
-
-	db "Dopey@" ; species name
-	dw 311, 790 ; height, width
-
-	db   "It is always so"
-	next "absent-minded that"
-	next "it won't react,"
-	page "even if its"
-	next "flavorful tail is"
-	next "bitten.@"
-
-New: A rare and tasty mushroom called the Slowpoketail has caused this species much distress. 
-
-
---- 080.asm --- ; slowbro
-
-
-
-	db "Hermit Crab@" ; species name
-	dw 503, 1730 ; height, width
-
-	db   "An attached"
-	next "Shellder won't let"
-	next "go because of the"
-	page "tasty flavor that"
-	next "oozes out of its"
-	next "tail.@"
-
-New: It is occasionally driven mad trying to scratch the tail underneath the shell. 
-
-
---- 081.asm --- ; magnemite
-
-
-
-	db "Magnet@" ; species name
-	dw 100, 130 ; height, width
-
-	db   "The electricity"
-	next "emitted by the"
-	next "units on each side"
-	page "of its body cause"
-	next "it to become a"
-	next "strong magnet.@"
-
-New: Origins unknown, but it travels to other regions on the hull of boats like a barnacle. 
-
-
 --- 082.asm --- ; magneton
 
 
@@ -929,56 +530,6 @@ New: Origins unknown, but it travels to other regions on the hull of boats like 
 
 New: TODO 
 
-
---- 083.asm --- ; farfetch'd
-
-
-
-	db "Wild Duck@" ; species name
-	dw 207, 330 ; height, width
-
-	db   "In order to pre-"
-	next "vent their"
-	next "extinction, more"
-	page "people have made"
-	next "an effort to breed"
-	next "these #mon.@"
-
-New: KEEP 
-
-
---- 088.asm --- ; grimer
-
-
-
-	db "Sludge@" ; species name
-	dw 211, 660 ; height, width
-
-	db   "When two of these"
-	next "#mon's bodies"
-	next "are combined"
-	page "together, new"
-	next "poisons are"
-	next "created.@"
-
-New: This pokemon's cells do not appear divisible under a microscope. 
-
-
---- 089.asm --- ; muk
-
-
-
-	db "Sludge@" ; species name
-	dw 311, 660 ; height, width
-
-	db   "As it moves, a"
-	next "very strong poison"
-	next "leaks from it,"
-	page "making the ground"
-	next "there barren for"
-	next "three years.@"
-
-New: Naturalists appreciate that Muk absorb toxins from rivers and lakes. 
 
 --- 091.asm --- ; cloyster
 
@@ -1061,23 +612,6 @@ New: TODO
 
 New: TODO eels?
 
---- 100.asm --- ; voltorb
-
-
-
-	db "Ball@" ; species name
-	dw 108, 230 ; height, width
-
-	db   "During the study"
-	next "of this #mon,"
-	next "it was discovered"
-	page "that its compo-"
-	next "nents are not"
-	next "found in nature.@"
-
-New: It collects static electricity. They can violently discharge without warning. 
-
-
 --- 101.asm --- ; electrode
 
 
@@ -1093,22 +627,6 @@ New: It collects static electricity. They can violently discharge without warnin
 	next "likely to explode.@"
 
 New: todo 
-
---- 102.asm --- ; exeggcute
-
-
-
-	db "Egg@" ; species name
-	dw 104, 60 ; height, width
-
-	db   "If even one is"
-	next "separated from the"
-	next "group, the energy"
-	page "bond between the"
-	next "six will make them"
-	next "rejoin instantly.@"
-
-New: Each egg has a brain, but the receptors appear to detect sensations on a different egg. 
 
 --- 103.asm --- ; exeggutor
 
@@ -1126,22 +644,6 @@ New: Each egg has a brain, but the receptors appear to detect sensations on a di
 
 New: todo 
 
-
---- 106.asm --- ; hitmonlee
-
-
-
-	db "Kicking@" ; species name
-	dw 411, 1100 ; height, width
-
-	db   "It is also called"
-	next "the Kick Master."
-	next "It uses its"
-	page "elastic legs to"
-	next "execute every"
-	next "known kick.@"
-
-New: Do not fear the #mon who practiced 10k kicks once, but fear the one who practiced one kick 10k times. 
 
 --- 107.asm --- ; hitmonchan
 
@@ -1235,23 +737,6 @@ New: todo
 	next "be found.@"
 
 
---- 114.asm --- ; tangela
-
-
-
-	db "Vine@" ; species name
-	dw 303, 770 ; height, width
-
-	db   "During battle, it"
-	next "constantly moves"
-	next "the vines that"
-	page "cover its body in"
-	next "order to annoy its"
-	next "opponent.@"
-
-New: Resembling kudzu, novice gardeners can be whipped by it if they mistakenly spray it with herbicide.
-
-
 --- 115.asm --- ; kangaskhan
 
 
@@ -1300,20 +785,7 @@ New:
 
 New: 
 
---- 118.asm --- ; togepi
 
-
-
-	db "Spike Ball@" ; species name
-	dw 100, 30 ; height, width
-
-	db   "It is considered"
-	next "to be a symbol of"
-	next "good luck. Its"
-	page "shell is said to"
-	next "be filled with"
-	next "happiness.@"
-n/a
 
 --- 119.asm --- ; togetic
 
@@ -1524,37 +996,6 @@ n/a
 	next "and perfectly to"
 	next "any environment.@"
 
-
---- 134.asm --- ; vaporeon
-
-
-
-	db "Bubble Jet@" ; species name
-	dw 303, 640 ; height, width
-
-	db   "As it uses the"
-	next "fins on the tip"
-	next "of its tail to"
-	page "swim, it blends"
-	next "with the water"
-	next "perfectly.@"
-
-
---- 135.asm --- ; jolteon
-
-
-
-	db "Lightning@" ; species name
-	dw 207, 540 ; height, width
-
-	db   "The negatively"
-	next "charged ions"
-	next "generated in its"
-	page "fur create a"
-	next "constant sparking"
-	next "noise.@"
-
-
 --- 136.asm --- ; flareon
 
 
@@ -1568,6 +1009,7 @@ n/a
 	page "body temperature"
 	next "can reach up to"
 	next "1700 degrees.@"
+
 
 
 --- 137.asm --- ; porygon
@@ -1599,6 +1041,7 @@ n/a
 	next "rotten food will"
 	next "not affect it.@"
 
+New: something about grizzly bears? 
 
 --- 147.asm --- ; dratini
 
@@ -1690,22 +1133,6 @@ n/a
 	next "relaxing in a"
 	next "sunny forest.@"
 
-
---- 155.asm --- ; cyndaquil
-
-
-
-	db "Fire Mouse@" ; species name
-	dw 108, 170 ; height, width
-
-	db   "The fire that"
-	next "spouts from its"
-	next "back burns hottest"
-	page "when it is angry."
-	next "The flaring flames"
-	next "intimidate foes.@"
-
-New: They are prized partners for their ability to clear dead underbrush in forests.
 
 
 --- 156.asm --- ; quilava
@@ -2040,41 +1467,6 @@ New: TODO
 	next "desperately at its"
 	next "attacker.@"
 
-
---- 192.asm --- ; sunflora
-
-
-
-	db "Sun@" ; species name
-	dw 207, 190 ; height, width
-
-	db   "As the hot season"
-	next "approaches, the"
-	next "petals on this"
-	page "#mon's face"
-	next "become more vivid"
-	next "and lively.@"
-
-
-New: Highly absorbent crystals in its petals concentrate sunlight into 1000-degree packets of energy. 
-
---- 193.asm --- ; yanma
-
-
-
-	db "Clear Wing@" ; species name
-	dw 311, 840 ; height, width
-
-	db   "It can see in all"
-	next "directions without"
-	next "moving its big"
-	page "eyes, helping it"
-	next "spot attackers and"
-	next "food right away.@"
-
-New: Genetic analysis and fossils suggest that Yanma's ancestors were part Dragon. 
-
-
 --- 194.asm --- ; wooper
 
 
@@ -2090,7 +1482,7 @@ New: Genetic analysis and fossils suggest that Yanma's ancestors were part Drago
 	next "pain.@"
 
 
---- 195.asm --- ; slowking
+--- 195.asm --- ; slowking: FIX TYPO todo 
 
 
 
@@ -2101,10 +1493,8 @@ New: Genetic analysis and fossils suggest that Yanma's ancestors were part Drago
 	next "whose intellect"
 	next "was augmented"
 	page "by the toxins"
-	next "from the crature"
+	next "from the creature"
 	next "on its head.@"
-
-New: done 
 
 
 --- 196.asm --- ; espeon
@@ -2181,21 +1571,7 @@ New: done
 	next "have a variety of"
 	next "abilities.@"
 
-
---- 202.asm --- ; wobbuffet
-
-
-
-	db "Patient@" ; species name
-	dw 403, 630 ; height, width
-
-	db   "In order to con-"
-	next "ceal its black"
-	next "tail, it lives in"
-	page "a dark cave and"
-	next "only moves about"
-	next "at night.@"
-
+New: 
 
 --- 203.asm --- ; girafarig
 
@@ -2211,39 +1587,6 @@ New: done
 	next "to drive away the"
 	next "enemy.@"
 
-
---- 204.asm --- ; pineco
-
-
-
-	db "Bagworm@" ; species name
-	dw 200, 160 ; height, width
-
-	db   "It spits out a"
-	next "fluid that it uses"
-	next "to glue tree bark"
-	page "to its body. The"
-	next "fluid hardens when"
-	next "it touches air.@"
-
-
-New: Pineco cocoons secrete a caustic adhesive that allows them to absorb nutrients from a tree.
-
---- 205.asm --- ; forretress
-
-
-
-	db "Bagworm@" ; species name
-	dw 311, 2770 ; height, width
-
-	db   "Usually found"
-	next "hanging on to a"
-	next "fat tree trunk. It"
-	page "shoots out bits of"
-	next "its shell when it"
-	next "sees action.@"
-
-New: In iron-rich soils, pineco will develop a metallic shell and evolve into Forretress.
 
 --- 206.asm --- ; dunsparce
 
@@ -2514,22 +1857,6 @@ New: In iron-rich soils, pineco will develop a metallic shell and evolve into Fo
 	next "use that force to"
 	next "swim backward.@"
 
-
---- 224.asm --- ; octillery
-
-
-
-	db "Jet@" ; species name
-	dw 211, 630 ; height, width
-
-	db   "Its instinct is to"
-	next "bury itself in"
-	next "holes. It often"
-	page "steals the nesting"
-	next "holes of others to"
-	next "sleep in them.@"
-
-New: Capable of diving for miles, they learn to imitate deep sea vents for defense. 
 
 
 --- 226.asm --- ; mantine
@@ -2816,24 +2143,6 @@ New: Capable of diving for miles, they learn to imitate deep sea vents for defen
 	next "shake and moun-"
 	next "tains crumble.@"
 
-
---- 249.asm --- ; lugia
-
-
-
-	db "Diving@" ; species name
-	dw 1701, 4760 ; height, width
-
-	db   "It has an incred-"
-	next "ible ability to"
-	next "calm raging sto-"
-	page "rms. It is said"
-	next "that Lugia appears"
-	next "when storms start.@"
-
-
-New: Recently, a lost sailor on a lifeboat said that he saw an image of Lugia guide him to shore. 
-
 --- 250.asm --- ; ho-oh
 
 
@@ -2849,22 +2158,6 @@ New: Recently, a lost sailor on a lifeboat said that he saw an image of Lugia gu
 	next "bow-colored wings.@"
 
 New: 
-
---- 251.asm --- ; celebi
-
-
-
-	db "Time Travel@" ; species name
-	dw 200, 110 ; height, width
-
-	db   "Revered as a"
-	next "guardian of the"
-	next "forest, Celebi"
-	page "appears wherever"
-	next "beautiful forests"
-	next "exist.@"
-
-New: Celebi represents all extents of a forest in time and space. 
 
 
 --- 301.asm --- ; hisuian typhlosion
@@ -2938,22 +2231,6 @@ New: Celebi represents all extents of a forest in time and space.
 	page "in a harshly cold"
 	next "environment.@"
 
-
---- 306.asm --- ; oshawott
-
-
-
-	db "Otter@" ; species name
-	dw 108, 130 ; height, width
-
-	db   "The shell on its"
-	next "belly is a weapon"
-	next "to open berries,"
-	page "or can be used"
-	next "to cut down foes.@"
-
-
-New: Extremely dexterous, they proudly build crude structures from sand and clay using a shell as a tool.
 
 --- 307.asm --- ; dewott
 
@@ -3355,22 +2632,6 @@ New: Extremely dexterous, they proudly build crude structures from sand and clay
 	next "defense against"
 	next "all attacks.@"
 	
-
---- 334.asm --- ; vespiquen
-
-
-
-	db "Beehive@" ; species name
-	dw 311, 849 ; height, width
-
-	db   "Commands subjects"
-	next "to build its hive."
-	next "It dispatches"
-	page "interlopers that"
-	next "would steal its"
-	next "honey.@"
-
-New: Always on guard from Beedrill attacks. They disguise the smell of their honey with toxins. 
 	
 
 --- 335.asm --- ; ambipom
@@ -3553,20 +2814,6 @@ New: Always on guard from Beedrill attacks. They disguise the smell of their hon
 	next "sturdy shell.@"
 
 
---- 347.asm --- ; toxicroak 
-
-
-
-	db "ToxicMouth@" ; species name
-	dw 403, 979 ; height, width
-
-	db   "The toxin in"
-	next "its mouth can be"
-	next "made into a tonic"
-	page "when diluted to"
-	next "treat many"
-	next "ailments.@"
-
 
 --- 348.asm --- ; snover
 
@@ -3581,6 +2828,8 @@ New: Always on guard from Beedrill attacks. They disguise the smell of their hon
 	page "instead playing"
 	next "with the children"
 	next "of the group.@"
+
+New:
 
 
 --- 349.asm --- ; abomasnow 
@@ -3672,20 +2921,6 @@ New: Always on guard from Beedrill attacks. They disguise the smell of their hon
 	next "flatlands.@"
 
 
---- 355.asm --- ; basculegion 
-
-
-
-	db "BigFish@" ; species name
-	dw 910, 2425 ; height, width
-
-	db   "Clad itself in" 
-	next "the souls of its"
-	next "comrades that"
-	page "perished before"
-	next "finishing the"
-	next "journey upstream.@"
-New: No change 
 
 --- 356.asm --- ; hisuian breviary  
 
@@ -3790,23 +3025,6 @@ New: No change
 	page "intense battles."
 	next "Heedless of its"
 	next "own safety.@"
-
-
---- 363.asm --- ; heatran 
-
-
-
-	db "LavaDome@" ; species name
-	dw 507, 9480 ; height, width
-
-	db   "This #mon is"
-	next "born from boiling"
-	next "magma. The steel"
-	page "on its body melts"
-	next "and hardens"
-	next "continuously.@"
-
-New: The core temperature will melt any material. It moves through rock like a fish in water. 
 
 
 --- 429.asm --- ; mismagius  
@@ -4046,4 +3264,3 @@ New: TODO
 	next "calm fights.@"
 
 New: 
-

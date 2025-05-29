@@ -173,6 +173,10 @@ _CameToItsSensesText::
 
 SECTION "_OakTimeWokeUpText", ROMX
 _OakTimeWokeUpText::
+	text_high
+    text " Kurt: "
+	next
+	text_start 
 	text "………………………………"
 	line "………………………………"
 
@@ -185,6 +189,10 @@ _OakTimeWokeUpText::
 
 SECTION "_OakTimeWhatTimeIsItText", ROMX
 _OakTimeWhatTimeIsItText::
+	text_high
+    text " Kurt: "
+	next
+	text_start 
 	text "What time is it?"
 	done
 
@@ -746,7 +754,6 @@ SECTION "_BenFernText1", ROMX
 _BenFernText1::
 	text_start
 	line "Today's "
-	text_today
 	text ","
 	done
 
@@ -2449,17 +2456,29 @@ _AskItemMoveText::
 
 SECTION "Text_AreYouABoyOrAreYouAGirl", ROMX
 Text_AreYouABoyOrAreYouAGirl::
+	text_high
+    text " Kurt: "
+	next
+	text_start
 	text "Go as a boy?"
 	line "Or a girl?"
 	done
 
 SECTION "Text_SoYoureABoy", ROMX
 Text_SoYoureABoy::
+	text_high
+    text " Kurt: "
+	next
+	text_start
 	text "So you're a boy?"
 	done
 
 SECTION "Text_SoYoureAGirl", ROMX
 Text_SoYoureAGirl::
+	text_high
+    text " Kurt: "
+	next
+	text_start
 	text "So you're a girl?"
 	done
 
@@ -3259,9 +3278,13 @@ _InitialOptionsText::
 
 SECTION "_ElmText1", ROMX ; being used, i think in intro_meu.asm as elmtext1?
 _ElmText1::
-	text "Wake up, sleepy-"
-	line "head! Today is"
-	cont "your ceremony!"
+	text_high
+    text " Kurt: "
+	next
+	text_start 
+	text "Are you excited?"
+	line "Today is your"
+	cont "ceremony!"
 	
 	para "It means that you"
 	line "are ready to care"
@@ -3285,8 +3308,13 @@ _ElmText1::
 	cont "too."
 	prompt
 
+
 SECTION "_ElmText2", ROMX
 _ElmText2::
+	text_high
+    text " Kurt: "
+	next
+	text_start 
 	text "It's the start"
 	line "of your #mon"
 	cont "journey."
@@ -3299,8 +3327,13 @@ _ElmText2::
 	cont "Cyndaquil!@"
 	text_end
 
+
 SECTION "_ElmText4", ROMX
 _ElmText4::
+	text_high
+    text " Kurt: "
+	next
+	text_start 
 	text "We will rebuild"
 	line "the Ilex Shrine,"
 	
@@ -3318,16 +3351,21 @@ _ElmText4::
 	cont "forest."
 	prompt
 
+
 SECTION "_ElmText5", ROMX
 _ElmText5::
+	text_high
+    text " Kurt: "
+	next
+	text_start 
 	text "This drought..."
 	line "I hope it breaks"
 	cont "soon. People are"
 	cont "turning to Silph"
 	cont "technology."
 	
-	para "Your parents too,"
-	line "I fear. But we"
+	para "Your parents too."
+	line "But I - um, we"
 	cont "know better."
 	
 	para "Can Silph's inve-"
@@ -3340,14 +3378,23 @@ _ElmText5::
 	prompt
 
 
+
 SECTION "_ElmText6", ROMX
 _ElmText6::
+	text_high
+    text " Kurt: "
+	next
+	text_start 
 	text "What should we"
 	line "call you today?"
 	prompt
 
 SECTION "_ElmText7", ROMX
 _ElmText7::
+	text_high
+    text " Kurt: "
+	next
+	text_start 
 	text "The bond between"
 	line "us and #mon,"
 	para "past and future-"
@@ -3359,10 +3406,11 @@ _ElmText7::
 	cont "and dreams of all"
 	cont "who came before."
 	
-	para "If the tree rings"
-	line "I know you will"
-	cont "answer."
+	para "When the tree"
+	line "rings, I know you"
+	cont "will answer."
 	done
+
 
 SECTION "_WarnVBAText", ROMX
 _WarnVBAText::
@@ -4054,7 +4102,7 @@ _CardFlipDarnText::
 
 SECTION "_GearTodayText", ROMX
 _GearTodayText::
-	text_today
+	text "Sunday"
 	text_end
 
 SECTION "_GearEllipseText", ROMX

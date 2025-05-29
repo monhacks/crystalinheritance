@@ -1,9 +1,9 @@
-	db "Aqua Mouse@" ; species name
+	db "Aqua Mouse@" ; species name marill 
 	dw 104, 190 ; height, width
 
-	db   "The fur on its"
-	next "body naturally"
-	next "repels water. It"
-	page "can stay dry, even"
-	next "when it plays in"
-	next "the water.@"
+	db   "They love to play"
+	next "in sand. If an"
+	next "oshawott builds"
+	page "a castle, it will"
+	next "rollout to knock"
+	next "it over.@"

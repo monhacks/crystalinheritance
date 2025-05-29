@@ -1,10 +1,9 @@
 	db "Beehive@" ; species name
 	dw 311, 849 ; height, width
 
-	db   "Commands subjects"
-	next "to build its hive."
-	next "It dispatches"
-	page "interlopers that"
-	next "would steal its"
-	next "honey.@"
-	
+	db   "Always on guard"
+	next "from Beedrill at-"
+	next "tacks. They dis-"
+	page "guise the smell of"
+	next "their honey with"
+	next "toxins.@"

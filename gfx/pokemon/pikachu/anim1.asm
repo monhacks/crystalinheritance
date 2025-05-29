@@ -1,10 +1,10 @@
-	setrepeat 3
-	frame 0, 05
-	frame 5, 05
-	dorepeat 1
-	setrepeat 2
-	frame 0, 05
-	frame 4, 05
-	dorepeat 5
+	frame 1, 10
+	frame 2, 10
+	frame 3, 10
+	frame 4, 10
+	frame 5, 10
+	frame 6, 10
+	frame 7, 10
+	frame 8, 10
+	frame 9, 10
 	endanim
-; 0xd19ba

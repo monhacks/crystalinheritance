@@ -153,6 +153,7 @@ AlphabeticalPokedexOrder:
 	db	NIDORINA
 	db	NIDORINO
 	db	NINETALES
+	db	NOCTOWL
 	db	OCTILLERY
 	db	ONIX
 	db	OSHAWOTT

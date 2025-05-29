@@ -9,7 +9,7 @@
 	charmap "<NUM>",    $04
 	charmap "<PAUSE>",  $05
 	charmap "<SOUND>",  $06
-	charmap "<DAY>",    $07
+	charmap "<TEXTHIGH>", $07 ; New. Old:	charmap "<DAY>",    $07
 	charmap "<FAR>",    $08
 
 	; n-grams: $09 - $52 (defined below)

@@ -16,13 +16,13 @@ SlowpokeWellB2F_MapScriptHeader:
 
 
 	def_object_events
-	object_event 5, 2, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, SlowpokeWellB2FGuardScript, SLOWPOKE_WELL_MOVED_ASIDE
+	object_event 5, 2, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, SlowpokeWellB2FGuardScript, EVENT_SLOWPOKE_WELL_B2F_SCHOOLBOY
 	strengthboulder_event   6, 2
 	strengthboulder_event  4, 2
 
 
 	object_const_def
-	const SLOWPOKE_WELL_B1F_SCHOOLBOY ;fixed?
+	const SLOWPOKE_WELL_B2F_SCHOOLBOY
 
 SlowpokeWellB2FCallBack:
 	checkevent EVENT_MISTY_BASIN_B1F_BLACKBELT
@@ -64,8 +64,8 @@ SlowpokeWellB2FGuardScript:
 SlowpokeWellImGuardingText:
 	text "The miners in Un-"
 	line "ion cave want to"
-	cont "expand to Slowpoke"
-	cont "well. I won't let"
+	para "exploit Slowpoke"
+	line "well. I won't let"
 	cont "anyone do that!"
 	done
 
@@ -77,10 +77,8 @@ MovesAsideMovement:
 
 SlowpokeWellMovesAsideText:
 	text "Oh, you stopped"
-	line "the clear-cutters"
-	cont "in Ilex?"
+	line "the Ilex loggers?"
 	
-	para "That's cool. If"
-	line "you want to pass,"
-	cont "you can."
+	para "Cool! You can"
+	line "pass through."
 	done

@@ -441,9 +441,8 @@ TextCommands::
 	dw TextCommand_DECIMAL       ; $04 <NUM>
 	dw TextCommand_PAUSE         ; $05 <PAUSE>
 	dw TextCommand_SOUND         ; $06 <SOUND>
-	dw TextCommand_DAY           ; $07 <DAY>
+	dw TextCommand_SetHigher     ; $07 <TEXTHIGH> ; New old: 	dw TextCommand_DAY           ; $07 <DAY>
 	dw TextCommand_FAR           ; $08 <FAR>
-	dw TextCommand_HIGH			 ; $09 <HIGH> ; TEXTHIGH 051525
 	assert_table_length NGRAMS_START
 
 _ImplicitlyStartedText:
@@ -459,10 +458,6 @@ TextCommand_START::
 	ld l, e
 	inc hl
 	ret
-
-;TextCommand_HIGH:
-;	bccoord TEXTBOX_INNERX, TEXTBOX_INNERY - 2
-;	ret 
 
 TextCommand_RAM::
 ; write text from a ram address
@@ -498,6 +493,10 @@ TextCommand_FAR::
 	pop af
 	rst Bankswitch
 	ret
+
+TextCommand_SetHigher:
+	bccoord TEXTBOX_INNERX, TEXTBOX_INNERY - 2 ; Set coordinates 2 lines higher
+	ret      
 
 TextCommand_PROMPT_BUTTON::
 ; wait for button press; show arrow

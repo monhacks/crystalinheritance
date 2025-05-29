@@ -18,7 +18,6 @@ SlowpokeWellB3F_MapScriptHeader:
 	const SLOWPOKE_WELL_B3F_SLOWBRO
 
 SlowpokeWellSlowbro:
-	faceplayer
 	cry SLOWBRO
 	pause 15
 	loadwildmon SLOWBRO, 30

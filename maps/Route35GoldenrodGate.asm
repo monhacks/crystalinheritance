@@ -18,6 +18,8 @@ Route35GoldenrodGate_MapScriptHeader:
 	object_event  0,  4, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, RandyScript, -1
 	object_event  6,  4, SPRITE_BREEDER, SPRITEMOVEDATA_WALK_UP_DOWN, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route35GoldenrodGatePokefanFScript, -1
 	object_event  3,  2, SPRITE_SCIENTIST, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route35GoldenrodGateFisherText, -1
+	object_event  4,  3, SPRITE_KURT,  SPRITEMOVEDATA_WALK_UP_DOWN, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KurtGoldenrodGateScript, -1
+
 
 WhitneyRadioShowScript:
 	showtext WhitneyRadioShowText
@@ -212,6 +214,7 @@ KurtGoldenrodGateScript:
 	yesorno
 	iffalse DontHearHearStory2
 	writetext KurtGoldenrodGateText
+	clearevent EVENT_KURTS_HOUSE_BOOK_2
 	closetext
 	end
 	
@@ -252,4 +255,9 @@ KurtGoldenrodGateText:
 	line "ghed every time"
 	cont "the barber had to"
 	cont "work around it."
+	
+	para "If you ever want"
+	line "to hear it again,"
+	para "check the journal"
+	line "in my house."
 	done

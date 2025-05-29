@@ -1,9 +1,9 @@
 	db "Bird@" ; species name
-	dw 307, 660 ; height, width
+	dw 307, 660 ; height, width pidgeotto
 
-	db   "It slowly flies in"
-	next "a circular pat-"
-	next "tern, all the"
-	page "while keeping a"
-	next "sharp lookout for"
-	next "prey.@"
+	db   "Fierce rival to"
+	next "Furret, they are"
+	next "always out to"
+	page "prove themselves"
+	next "by dishing out"
+	next "Flying attacks.@"

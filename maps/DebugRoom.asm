@@ -175,17 +175,43 @@ Breeder1Script:
 	loadmem wPartyMon2Moves+2, EARTHQUAKE
 	loadmem wPartyMon2Moves+3, THUNDERPUNCH
 	; hm mules
-	givepoke H__SAMUROTT, NO_FORM, 100, LEFTOVERS
-	givepoke H__DECIDUEYE, NO_FORM, 100, LEFTOVERS
-	givepoke ALAKAZAM, NO_FORM, 100, LEFTOVERS
-	givepoke PIDGEY, NO_FORM, 5, NO_ITEM ; CHECK FAINTING BEHAVIOR 
+;	givepoke H__SAMUROTT, NO_FORM, 100, LEFTOVERS
+;	givepoke H__DECIDUEYE, NO_FORM, 100, LEFTOVERS
+;	givepoke ALAKAZAM, NO_FORM, 100, LEFTOVERS
+;	givepoke PIDGEY, NO_FORM, 5, NO_ITEM ; CHECK FAINTING BEHAVIOR 
 ;SPRITE CHECKS 
-	givepoke H__GOODRA, NO_FORM, 100
-	givepoke HEATRAN, NO_FORM, 5
 	givepoke AMBIPOM, NO_FORM, 5
-	givepoke EMPOLEON, NO_FORM, 5 
-	givepoke VESPIQUEN, NO_FORM, 5 
+	givepoke BASCULEGION, NO_FORM, 5
+	givepoke BEEDRILL, NO_FORM, 5
+	givepoke CROBAT, NO_FORM, 5 
+	givepoke DRATINI, NO_FORM, 5 
+	givepoke DUGTRIO, NO_FORM, 5 
+	givepoke EEVEE, NO_FORM, 5 	
+	givepoke EMPOLEON, NO_FORM, 5 		
+	givepoke FORRETRESS, NO_FORM, 5 		
+	givepoke GABITE, NO_FORM, 5 		
+	givepoke GASTLY, NO_FORM, 5 		
+	givepoke GLOOM, NO_FORM, 5 		
+	givepoke GYARADOS, NO_FORM, 5 		
+	givepoke H__ARCANINE, NO_FORM, 5 		
+	givepoke HEATRAN, NO_FORM, 5 		
+	givepoke H__ELECTRODE, NO_FORM, 5 		
+	givepoke H__GOODRA, NO_FORM, 5 		
+	givepoke H__SLIGGOO, NO_FORM, 5 		
+	givepoke MAGCARGO, NO_FORM, 5 		
+	givepoke NATU, NO_FORM, 5 		
+	givepoke OVERQWIL, NO_FORM, 5 		
+	givepoke PIKACHU, NO_FORM, 5 		
+	givepoke SCYTHER, NO_FORM, 5 		
 	givepoke SKUNTANK, NO_FORM, 5 
+	givepoke SNEASLER, NO_FORM, 5 
+	givepoke TANGELA, NO_FORM, 5 	
+	givepoke VESPIQUEN, NO_FORM, 5 	
+	givepoke VICTREEBEL, NO_FORM, 5 	
+	givepoke VOLTORB, NO_FORM, 5 	
+	givepoke WEEPINBELL, NO_FORM, 5 	
+	givepoke WYRDEER, NO_FORM, 5 	
+	givepoke XATU, NO_FORM, 5 	
 ; END SPRITE CHECKS 
 	loadmem wPartyMon2Moves+0, SURF
 	loadmem wPartyMon2Moves+1, CRUNCH
@@ -510,9 +536,8 @@ BreederText:
 DebugWonderTradeScript: 
 	faceplayer
 	opentext
-	givepoke PORYGON
-	givepoke PORYGON
-	givepoke PORYGON
+	givepoke NOCTOWL, 5
+;	giveitem POLYCHROME, 1
 	writetext DebugWonderTradeIntroText
 	waitbutton
 	writetext DebugWonderTradeExplanationText

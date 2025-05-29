@@ -337,11 +337,11 @@ Prologue_Text7:
 	
 	para "Mejimi: Oh,"
 	line "here's Chronicler"
-	cont "Samsara."
+	cont "Vespera."
 	done
 
 Prologue_Text8:
-	text "Samsara:"
+	text "Vespera:"
 	line "Adrinna? This"
 	cont "site is holy."
 	para "How did you get"
@@ -352,7 +352,7 @@ Prologue_Text8:
 	cont "towers' const-"
 	cont "ruction?"
 
-	para "Samsara: the"
+	para "Vespera: the"
 	line "Hisuians have"
 	cont "blessed the" 
 	para "Tin Tower, but"
@@ -368,7 +368,7 @@ Prologue_Text9:
 	para "My presence"
 	line "is holy enough!"
 
-	para "Samsara: Your"
+	para "Vespera: Your"
 	line "majesty, that"
 	cont "is a novel idea."
 
@@ -566,7 +566,7 @@ WCSignText:
 	text "Western Capital"
 	line "Protected by"
 	para "Chronicler"
-	line "Samsara"
+	line "Vespera"
 	done
 	
 WC_AmosWantedSign:

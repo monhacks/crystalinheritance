@@ -3,7 +3,7 @@ HollysHolt_MapScriptHeader:
 	scene_script HollysHoltTrigger
 
 	def_callbacks
-; PINECOS 
+
 
 	def_warp_events 
 	warp_event  7, 44, ANARRES_HOLT_GATE, 3
@@ -12,7 +12,7 @@ HollysHolt_MapScriptHeader:
 	warp_event  5,  6, HOLT_COAST_GATE, 2
 	warp_event  24,  46, KIMONO_CABIN, 1
 	warp_event  25,  46, KIMONO_CABIN, 1
-	warp_event  10,  25, DEBUG_ROOM, 2 ; UNUSED 
+
 	
 	def_coord_events
 
@@ -92,7 +92,7 @@ HollysHoltScript1:
 	waitbutton
 	closetext
 	setevent EVENT_TALKED_TO_HOLLIS
-	setscene $1 ;shouldn't let you see it multiple times
+	setscene $1
 	end
 
 HollysHoltKurtScript:
@@ -112,7 +112,11 @@ HollysHoltHollisScript:
 	end
 
 HH_HollisHello:
-	text "Hollis:"
+	text_high
+    text " Hollis: "
+	next
+	text_start
+
 	line "Hello! How did"
 	cont "you get behind"
 	cont "the shrine?"
@@ -129,61 +133,69 @@ HH_HollisHello:
 	cont "shrine."
 	
 	para "You will see that"
-	line "Pineco are a pox"
-	cont "on the trees."
+	line "Pineco are a bit"
+	cont "out of control."
 	
 	para "I'm the only one"
 	line "who can safely"
 	cont "remove them."
 	done
+
 	
 HH_KurtExplains:
-	text "Kurt: Ah, we're"
-	line "here to stop"
-	cont "Steel types from"
-	cont "entering Johto."
+	text_high
+    text " Kurt: "
+	next
+	text_start
+	text "Ah, we're here to"
+	line "...fortify Johto's"
+	cont "traditions."
 	
-	para "They are an"
-	line "unnatural type,"
-	cont "intrinsically"
-	cont "damaging."
+	para "There are some"
+	line "dangerous inven-"
+	para "tions taking root"
+	line "from elsewhere."
 	done
+
 
 HH_HollisPinecos:
-	text "Hollis: Steel?"
-
-	line "The Hisuians had"
-	cont "some of those,"
-	cont "but they weren't"
-	cont "a problem."
+	text_high
+    text " Hollis: "
+	next
+	text_start
 	
-	para "Oh, but they did"
-	line "say that some"
-	cont "steel types were"
-	cont "being brought in"
-	cont "through the West-"
-	cont "ern port."
+	text "Hm? The Hisuians"
+	line "are no enemy."
+	
+	para "But there was a"
+	line "rumor of visitors"
+	para "at the Landing,"
+	line "to the west of"
+	cont "the Capital."
 
 	para "I wish I could"
-	line "stay and chat"
-	cont "more, but I am"
-	cont "so tired from"
-	cont "this work."
+	line "stay, but I am"
+	para "so tired from"
+	line "this work."
 	done
 
+
 HH_KurtHasAPlan:
-	text "Kurt: <PLAYER>!"
+	text_high
+    text " Kurt: "
+	next
+	text_start
+	text "<PLAYER>!"
 	line "Of course, the"
-	cont "steel types are"
-	cont "being brought"
-	cont "through Olivine!"
+	para "corruption comes"
+	line "from historic "
+	cont "Olivine."
 	
-	para "We have to get"
-	line "there. We will"
-	cont "need to find a"
-	cont "way north of"
-	cont "this forest."
+	para "We have to find"
+	line "a way out of this"
+	cont "forest."
 	done
+
 	
 HH_HollisSpins:
 	turn_head_down
@@ -374,10 +386,10 @@ HHTutorHeadbuttScript:
 	special Special_MoveTutor
 	ifequal $0, .TeachMove
 .TutorRefused
-	jumpopenedtext Text_HHTutorRefused ;; 
+	jumpopenedtext Text_HHTutorRefused
 
 .TeachMove
-	jumpopenedtext Text_HHTutorTaught ;;
+	jumpopenedtext Text_HHTutorTaught
 	
 Text_HeadbuttIntro: 
 	text "Hi, <PLAYER>."

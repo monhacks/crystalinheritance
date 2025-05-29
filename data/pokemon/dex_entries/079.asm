@@ -1,9 +1,9 @@
 	db "Dopey@" ; species name
 	dw 311, 790 ; height, width
 
-	db   "It is always so"
-	next "absent-minded that"
-	next "it won't react,"
-	page "even if its"
-	next "flavorful tail is"
-	next "bitten.@"
+	db   "A rare and tasty"
+	next "mushroom called"
+	next "the Slowpoketail"
+	page "has caused this"
+	next "species much"
+	next "distress.@"

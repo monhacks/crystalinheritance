@@ -334,6 +334,22 @@ PidgeotEvosAttacks:
 	db 60, HURRICANE
 	db 0 ; no more level-up moves
 	
+NoctowlEvosAttacks: ; encountered first at level 25 
+	db 0 ; no more evolutions
+	db 1, PAY_DAY
+	db 8, HYPNOSIS ; Sand Attack → similar move
+	db 15, REFLECT
+	db 20, NIGHT_SHADE
+	db 23, WING_ATTACK	
+	db 26, THIEF
+	db 30, SHADOW_CLAW
+	db 35, DREAM_EATER
+	db 35, KNOCK_OFF
+	db 41, HAZE
+	db 45, HEX
+	db 55, PAIN_SPLIT
+	db 0 ; no more level-up moves	
+	
 EkansEvosAttacks:
 	db EVOLVE_LEVEL, 16, ARBOK
 	db 0 ; no more evolutions

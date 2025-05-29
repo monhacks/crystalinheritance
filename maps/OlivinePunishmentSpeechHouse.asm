@@ -1,5 +1,7 @@
 OlivinePunishmentSpeechHouse_MapScriptHeader:
 	def_scene_scripts
+	scene_script OlivineHouseTrigger 
+
 
 	def_callbacks
 
@@ -12,10 +14,22 @@ OlivinePunishmentSpeechHouse_MapScriptHeader:
 	def_bg_events
 
 	def_object_events
+	object_event  2,  5, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 2, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OlivineLightBallScript, -1
 	object_event  1,  2, SPRITE_POKEFAN_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BROWN,  OBJECTTYPE_SCRIPT, 0, VoltSwitchScript, -1
 	object_event  5,  5, SPRITE_BEAUTY, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 2, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, jumptextfaceplayer, OlivinePunishmentSpeechHouseDaughterText, -1
-	object_event  2,  5, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 2, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OlivineLightBallScript, -1
+
+
+	object_const_def
+	const OLIVINE_HOUSE_LASS
+
+OlivineHouseTrigger:
+	sdefer .TradeQuest
+	end
 	
+.TradeQuest:
+	showemote EMOTE_HEART, OLIVINE_HOUSE_LASS, 30
+	end
+
 
 
 VoltSwitchScript:
@@ -80,19 +94,15 @@ OlivineLightBallScript:
 	iffalse_jumpopenedtext NoGoldLeafText
 	takeitem GOLD_LEAF
 	verbosegiveitem LIGHT_BALL, 2
+	setscene $1
 	iffalse_endtext
 	jumpopenedtext GiveLightBallText 
 
 NeedAGoldLeafText:
-	text "My boyfriend is"
-	line "so shallow. His"
-	cont "family cares so"
-	cont "much about appea-"
-	cont "rances."
-	
-	para "I need to impress"
-	line "them with my next"
-	cont "letter."
+	text "I need to impress"
+	line "my boyfriend's"
+	para "family."
+	line "They're so gaudy!"
 	done
 
 NoGoldLeafText:
@@ -107,14 +117,14 @@ Text_GoldLeafMailQuestion:
 	para "I'll give you my"
 	line "best beach toy,"
 	
-	para "A Light Ball to"
+	para "2 Light Balls to"
 	line "play volleyball"
 	cont "with!"
 	done
 
 GiveLightBallText:
-	text "That ball is sure"
+	text "Those are sure"
 	line "to attract people"
-	cont "and #mon"
-	cont "at the beach!"
+	para "and #mon"
+	line "at the beach!"
 	done

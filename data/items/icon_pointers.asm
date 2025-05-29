@@ -167,8 +167,8 @@ ItemIconPointers:
 	dba GripClawIcon
 	dba LifeOrbIcon
 	dba LightClayIcon
-	dba RoyalBlessingIcon
 	dba MuscleBandIcon
+	dba PolychromeIcon
 	dba ProtectPadsIcon
 	dba RockyHelmetIcon
 	dba SafeGogglesIcon

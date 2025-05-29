@@ -27,29 +27,30 @@ AzaleaTown_MapScriptHeader:
 	bg_event 22,  8, BGEVENT_JUMPTEXT, AzaleaTownSignText
 	bg_event 10,  9, BGEVENT_JUMPTEXT, KurtsHouseSignText
 	bg_event 14, 15, BGEVENT_JUMPTEXT, AzaleaGymSignText
-	bg_event 29,  8, BGEVENT_JUMPTEXT, SlowpokeWellSignText ;TODO EDIT THIS
+	bg_event 29,  8, BGEVENT_JUMPTEXT, SlowpokeWellSignText
 	bg_event 19, 13, BGEVENT_JUMPTEXT, CharcoalKilnSignText
 	bg_event  3,  9, BGEVENT_JUMPTEXT, AzaleaTownIlexForestSignText
-	bg_event 31,  6, BGEVENT_ITEM + FULL_HEAL, EVENT_AZALEA_TOWN_HIDDEN_FULL_HEAL ; hidden item
+	bg_event 31,  6, BGEVENT_ITEM + FULL_HEAL, EVENT_AZALEA_TOWN_HIDDEN_FULL_HEAL
 
 	def_object_events
-	object_event 18, 10, SPRITE_GRAMPS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AzaleaTownGrampsScript, -1
-	object_event 26,  9, SPRITE_GRAMPS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, PokemonMemoriesNPCScript, -1
-	object_event  7, 10, SPRITE_POKEFAN_F, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AzaleaTownPokefanFScript, -1
-	object_event 12, 16, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_DOWN, 0, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AzaleaTownMatronScript, -1
-	object_event 13,  8, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KurtAZScript, EVENT_CHARCOAL_TALKED
-	object_event 13, 11, SPRITE_CAMPER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, AzaleaTownYoungsterText, -1
-	object_event  8, 17, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, SLOWPOKE, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AzaleaTownSlowpokeScript, -1
-	object_event 29,  9, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, SLOWPOKE, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AzaleaTownSlowpokeScript, -1
-	object_event 15, 15, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, SLOWPOKE, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AzaleaTownSlowpokeScript, -1
+	object_event 18, 10, SPRITE_GRAMPS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, 			OBJECTTYPE_SCRIPT, 0, AzaleaTownGrampsScript, -1
+	object_event  7, 10, SPRITE_POKEFAN_F, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, -1, -1, PAL_NPC_BLUE, 		OBJECTTYPE_SCRIPT, 0, AzaleaTownPokefanFScript, -1
+; others 
+	object_event 26,  9, SPRITE_GRAMPS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 			PAL_NPC_BLUE, 		OBJECTTYPE_SCRIPT, 0, PokemonMemoriesNPCScript, -1
+	object_event 12, 16, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_DOWN, 0, 1, -1, -1, 0, 						OBJECTTYPE_SCRIPT, 0, AzaleaTownMatronScript, -1
+	object_event 13,  8, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, 						OBJECTTYPE_SCRIPT, 0, KurtAZScript, EVENT_CHARCOAL_TALKED
+	object_event 13, 11, SPRITE_CAMPER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, 							OBJECTTYPE_SCRIPT, 0, AzaleaTownYoungsterScript, -1
+; others 
+	object_event  8, 17, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, SLOWPOKE, -1, -1, PAL_NPC_RED, 		OBJECTTYPE_SCRIPT, 0, AzaleaTownSlowpokeScript, -1
+	object_event 29,  9, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, SLOWPOKE, -1, -1, PAL_NPC_RED, 		OBJECTTYPE_SCRIPT, 0, AzaleaTownSlowpokeScript, -1
+	object_event 15, 15, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, SLOWPOKE, -1, -1, PAL_NPC_RED, 		OBJECTTYPE_SCRIPT, 0, AzaleaTownSlowpokeScript, -1
 	fruittree_event  8,  2, FRUITTREE_AZALEA_TOWN, WHT_APRICORN, PAL_NPC_SILVER
 
 
 	object_const_def
 	const AZALEATOWN_GRAMPS
 	const AZALEATOWN_POKEFAN_F
-	const AZALEATOWN_CAMPER
-	const AZALEATOWN_KURT
+
 
 AzaleaTownFlypointCallback:
 	setflag ENGINE_FLYPOINT_AZALEA
@@ -185,8 +186,8 @@ KurtAZScript:
 	
 	text "Follow this path"
 	line "when you have"
-	cont "talked to the"
-	cont "Charcoal family."
+	para "talked to the"
+	line "Charcoal family."
 	done
 
 AzaleaTownPokefanFScript:
@@ -207,14 +208,28 @@ AzaleaTownPokefanFScript:
 	
 	para "Azaleans dug"
 	line "for water. A"
-	cont "Slowpoke crawled"
-	cont "out of the hole,"
-	cont "yawned, and a"
-	cont "rain started for"
+	para "Slowpoke crawled"
+	line "out of the hole,"
+	para "yawned, and a"
+	line "rain started for"
 	cont "thirty days!"
 	done
 
-AzaleaTownYoungsterText:
+
+AzaleaTownYoungsterScript:
+	checkevent EVENT_GOT_A_POKEMON
+	iftrue_jumptextfaceplayer .Text4
+	jumpthistextfaceplayer
+
+	text "I'm surprised"
+	line "<RIVAL> is doing"
+	para "the ceremony. He"
+	line "doesn't seem to"
+	para "get along with"
+	line "Kurt."
+	done
+
+.Text4:
 	text "If I had my own"
 	line "#mon, I would"
 	cont "go exploring."
@@ -222,12 +237,6 @@ AzaleaTownYoungsterText:
 	para "I've never even"
 	line "been to Slowpoke"
 	cont "Well or Route 33."
-	
-	para "My dad says that"
-	line "he hears a mad"
-	cont "Slowbro at the"
-	cont "bottom of the"
-	cont "Well."
 	done
 
 AzaleaTownMatronScript:
@@ -237,8 +246,8 @@ AzaleaTownMatronScript:
 	
 	text "Bugsy has been"
 	line "so down. No one"
-	cont "is interested in"
-	cont "his research."
+	para "is interested in"
+	line "his research."
 	done
 	
 .BugsyIsHappyText
@@ -256,8 +265,8 @@ AzaleaTownSlowpokeScript:
 	writethistext
 		text "A robotic foun-"
 		line "tain sculpture"
-		cont "of a Slowpoke"
-		cont "yawning."
+		para "of a Slowpoke"
+		line "yawning."
 		
 		para "But there's no"
 		line "water, just some"
@@ -277,8 +286,8 @@ Text_WhatDoYouThinkYoureDoing:
 Text_ItsDangerousToGoAlone:
 	text "Aren't you and"
 	line "the charcoal boy"
-	cont "in a ceremony"
-	cont "today?"
+	para "in a ceremony"
+	line "today?"
 	done
 
 Movement_PokefanFRunsToYou1_AT:
@@ -395,103 +404,92 @@ AzaleaUsedToBeATrainerText: ; works
 	
 	para "I used to be"
 	line "one, just like"
-	cont "you. I still"
-	cont "have a lot of"
-	cont "items. If you"
-	cont "show me some of"
-	cont "my favorites,"
-	cont "I'll pass them"
+	para "you. I still"
+	line "have a lot of"
+	para "items. If you"
+	line "show me some of"
+	para "my favorites,"
+	line "I'll pass them"
 	cont "down to you."
 	done
 
 AskForTeddiursaText:
     text "Can you show me"
     line "the little bear"
-    cont "#mon that only"
-    cont "drifts away from"
-    cont "its mother to"
-    cont "gather honey?"
+    para "#mon that only"
+    line "drifts away from"
+    para "its mother to"
+    line "gather honey?"
     done
 
 DontHaveTeddiursaText:
     text "Oh, you don't have"
     line "one? That's okay."
-    cont "Come back if you"
-    cont "find one!"
+    para "Come back if you"
+    line "find one!"
     done
 
 GiveSilkScarfText:
     text "Oh, Teddiursa!"
     line "How adorable!"
     para "Here, take this"
-    line "Silk Scarf as"
-    cont "thanks!"
+    line "Silk Scarf!"
     done
 
 AskForPidgeyText:
     text "Next, can you show"
     line "me the little bird"
-    cont "#mon that kicks"
-    cont "up dust to avoid"
-    cont "fighting?"
+    para "#mon that kicks"
+    line "up dust?"
     done
 
 DontHavePidgeyText:
     text "No? That's"
-    line "alright. They're"
-    cont "common, so I'm"
-    cont "sure you'll find"
-    cont "one soon!"
+    line "alright"
     done
 
 GiveSharpBeakText:
     text "Ah, Pidgey! It"
     line "brings back so"
-    cont "many memories!"
-    para "Here's a Sharp"
-    line "Beak for you!"
+    para "many memories!"
+    line "Here's a Sharp"
+    cont "Beak for you!"
     done
 
 AskForEkansText:
     text "Lastly, can you"
     line "show me the"
-    cont "#mon whose name"
-    cont "is evoked by this"
+    para "#mon whose name"
+    line "is evoked by this"
     cont "phrase:"
     para "A man, a plan,"
-    line "a canal-Panama!"
+    line "a canal, Panama!"
     done
 
 DontHaveEkansText:
     text "No? It's a"
     line "tricky one! Come"
-    cont "back when you've"
-    cont "caught one!"
+    para "back when you've"
+    line "caught one!"
     done
 
 GivePoisonBarbText:
     text "Ekans! You got it!"
     line "Quite the"
-    cont "palindrome, eh?"
-    para "Here's a Poison"
-    line "Barb for you!"
+    para "palindrome, eh?"
+    line "Here's a Poison"
+    cont "Barb for you!"
     done
 
 AllDoneText:
     text "Thank you for"
     line "indulging an old"
-    cont "trainer's"
-    cont "memories!"
-    para "May your journey"
-    line "be filled with"
-    cont "wonderful #mon"
-    cont "encounters!"
+    para "trainer's"
+    line "memories!"
     done
 
 BagFullText:
     text "Oh! Your Bag is"
-    line "full. Make some"
-    cont "room and come"
-    cont "back for your"
-    cont "gift!"
+    line "full!"
     done
+	

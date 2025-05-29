@@ -31,7 +31,7 @@ ProfOaksAide1Script:
 	waitbutton
 	countseencaught
 	readvar VAR_DEXCAUGHT
-	ifgreater 5, .HereYouGo ; greater, not greater or equal to
+	ifgreater 5, .HereYouGo
 .UhOh
 	jumpopenedtext ProfOaksAide1UhOhText
 
@@ -159,13 +159,11 @@ IlexForestAzaleaGateOfficer_GotThief:
 	done
 	
 IlexForestAzaleaGateOfficerText:
-	text "Watch out."
-	
-	para "There's reports of"
+	text "There's reports of"
 	line "groups stealing"
-	cont "equipment in Ilex"
-	cont "Forest. If you see"
-	cont "them, can you"
-	cont "steal it back?"
+	para "equipment in Ilex"
+	line "Forest. If you see"
+	para "them, can you"
+	line "steal it back?"
 	done
 	

@@ -197,8 +197,8 @@
 	const GRIP_CLAW    ; a4
 	const LIFE_ORB     ; a5
 	const LIGHT_CLAY   ; a6
-	const POLYCHROME  ; a7 ; METRONOME 
 	const MUSCLE_BAND  ; a8
+	const POLYCHROME  ; a7 ; METRONOME 
 	const PROTECT_PADS ; a9
 	const ROCKY_HELMET ; aa
 	const SAFE_GOGGLES ; ab
@@ -444,7 +444,6 @@ endc
 	const NAM_MENTAL_HERB
 	const NAM_METAL_COAT
 	const NAM_METAL_POWDER
-	const NAM_ROYAL_BLESSING
 	const NAM_MINT_LEAF
 	const NAM_MIRACLE_SEED
 	const NAM_MOOMOO_MILK
@@ -471,6 +470,7 @@ endc
 	const NAM_POISON_BARB
 	const NAM_POKE_BALL
 	const NAM_POKE_DOLL
+	const NAM_POLYCHROME
 	const NAM_POMEG_BERRY
 	const NAM_POTION
 	const NAM_POWER_ANKLET

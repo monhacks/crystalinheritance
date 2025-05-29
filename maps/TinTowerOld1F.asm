@@ -1,5 +1,6 @@
-TinTowerOld1F_MapScriptHeader: ;	def_scene_scripts
-
+TinTowerOld1F_MapScriptHeader: 
+	def_scene_scripts
+	scene_script TinTowerOldMasterBallTrigger ;she should have a happy emote t
 
 	def_callbacks
 
@@ -21,14 +22,22 @@ TinTowerOld1F_MapScriptHeader: ;	def_scene_scripts
 
 
 	def_object_events
+	object_event  7,  13, SPRITE_SAGE, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, MasterBallScript, -1
 	object_event 7, 12, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, TinTowerOld1FNPC1Text, -1 ; done
 	object_event 11, 12, SPRITE_SAGE, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, TinTowerOld1FNPC2Text, -1 ; done
 	object_event 13, 2, SPRITE_GRANNY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, TinTowerOld1FNPC3Text, -1 ; done
-	object_event  7,  13, SPRITE_SAGE, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, MasterBallScript, -1
-
 
 	object_const_def
+	const TIN_TOWER_OLD_1F_MASTER_BALL_SAGE 
 
+	
+TinTowerOldMasterBallTrigger:
+	sdefer .TradeScript
+	end
+	
+.TradeScript:
+	showemote EMOTE_HAPPY, TIN_TOWER_OLD_1F_MASTER_BALL_SAGE, 20
+	end
 
 TinTowerOld1FNPC1Text:
 	text "This tower was"
@@ -40,12 +49,12 @@ TinTowerOld1FNPC1Text:
 TinTowerOld1FNPC2Text:
 	text "The towers are a"
 	line "veritable maze"
-	cont "from Samsara's"
+	cont "from Vespera's"
 	cont "#mon powers."
 	done
 
 TinTowerOld1FNPC3Text:
-	text "Samsara is the"
+	text "Vespera is the"
 	line "chief priestess."
 	
 	para "She determines "
@@ -69,6 +78,7 @@ MasterBallScript:
 	takeitem SWEET_HONEY
 	verbosegiveitem MASTER_BALL
 	setevent EVENT_GAVE_MASTER_BALL
+	setscene $1
 	iffalse_endtext
 	jumpopenedtext TextGaveMasterBall 
 
@@ -88,7 +98,7 @@ NeedSweetHoneyText:
 
 Text_HoneyQuestion:
 	text "Oh, you are the"
-	line "one Samsara told"
+	line "one Vespera told"
 	cont "me about!"
 	
 	para "And that aroma-"

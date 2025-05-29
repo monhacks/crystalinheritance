@@ -1,4 +1,4 @@
-ROUTE43GATE_TOLL EQU 1000 ; don't want to delete... 
+ROUTE43GATE_TOLL EQU 1000 ; need to keep 
 
 Route43Gate_MapScriptHeader:
 	def_scene_scripts
@@ -36,7 +36,7 @@ OfficerScript_GuardWithSludgeBomb:
 	special Special_FadeBlackQuickly
 	special Special_ReloadSpritesNoPalettes
 	playmusic MUSIC_SCARY_HOUSE_XY
-	pause 60
+	pause 120
 	special Special_FadeInQuickly
 	special RestartMapMusic
 	opentext
@@ -62,7 +62,7 @@ NotTheOne:
 	
 PoisonJabbarText:
 	text "This box contains"
-	line "the Poison Jabbar"
+	line "a Poison Jabbar,"
 	cont "or instant death."
 	
 	para "An animal would"

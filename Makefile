@@ -1,5 +1,5 @@
-NAME := polishedcrystal
-VERSION := 3.0.0-beta
+NAME := crystal_inheritance
+VERSION := 0.0.2-beta
 
 TITLE := PKPCRYSTAL
 MCODE := PKPC

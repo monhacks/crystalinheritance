@@ -17,7 +17,7 @@ GoldenrodGym_MapScriptHeader:
 	object_event  1,  1, SPRITE_CUTE_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSrandjrJoandcath1, EVENT_BEAT_WHITNEY
 	object_event  9, 13, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerLassCathy, EVENT_BEAT_WHITNEY
 	object_event  9,  6, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerBeautyVictoria, EVENT_BEAT_WHITNEY
-	object_event  8,  3, SPRITE_PRYCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PryceScriptGoldenrod, EVENT_BEAT_WHITNEY
+	object_event  2,  15, SPRITE_PRYCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PryceScriptGoldenrod, EVENT_BEAT_WHITNEY
 	object_event  8,  4, SPRITE_WHITNEY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, WhitneyScript, EVENT_WHITNEY_GYM
 
 	object_const_def
@@ -85,11 +85,12 @@ BeautyVictoriaBeatenText:
 PryceScriptGoldenrod:
     faceplayer
     opentext
-    writetext PryceText
+    writetext PryceTextGoldenrod
+	waitbutton
     closetext
     end
 
-PryceText:
+PryceTextGoldenrod:
     text "Pryce: <PLAYER>…"
     line "what are you"
     cont "doing here?"

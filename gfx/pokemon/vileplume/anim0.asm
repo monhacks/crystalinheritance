@@ -1,10 +1,14 @@
-	frame 1, 07
-	frame 2, 25
-	frame 3, 05
-	frame 1, 05
-	frame 0, 05
-	frame 1, 05
-	frame 0, 07
-	frame 1, 07
+	frame 1, 10
+	frame 2, 10
+	frame 3, 10
+	frame 4, 10
+	frame 5, 10
+	frame 6, 10
+	frame 7, 10
+	frame 8, 10
+	frame 9, 10
+	frame 10, 10
+	frame 11, 10
+	frame 12, 10	
+	frame 13, 10		
 	endanim
-; 0xd0b46

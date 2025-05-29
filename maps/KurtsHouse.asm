@@ -26,8 +26,14 @@ KurtsHouse_MapScriptHeader:
 	object_event  7,  3, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, IlexExcelsiorV5Script, EVENT_KURTS_HOUSE_NOTEBOOK
 	object_event  8,  4, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, FiddlerBookScript, -1	
 	pokemon_event  14,  4, SHUCKLE, -1, -1, PAL_NPC_RED, KurtsHouseShuckleText, -1
-
-
+; kurt's books 
+	object_event  0,  1, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, KurtsJournal1Script, EVENT_KURTS_HOUSE_BOOK_1 ; INITIALLY SET TODO 
+	object_event  0,  2, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, KurtsJournal2Script, EVENT_KURTS_HOUSE_BOOK_2 ; INITIALLY SET TODO 
+	object_event  0,  3, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, KurtsJournal3Script, EVENT_KURTS_HOUSE_BOOK_3 ; INITIALLY SET TODO 
+	object_event  0,  4, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, KurtsJournal4Script, EVENT_KURTS_HOUSE_BOOK_4 ; INITIALLY SET TODO 
+	object_event 12,  3, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, KurtsJournal5Script, EVENT_KURTS_HOUSE_BOOK_5 ; INITIALLY SET TODO 
+	object_event 12,  4, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, KurtsJournal6Script, EVENT_KURTS_HOUSE_BOOK_6 ; INITIALLY SET TODO 	
+	
 	object_const_def
 	const KURTSHOUSE_KURT
 	const KURTSHOUSE_NOTEBOOK
@@ -248,7 +254,6 @@ KurtsHouseCelebiStatueText:
 	cont "tector."
 	done
 
-
 DebugRadio:
 	opentext
 	setflag ENGINE_POKEGEAR
@@ -450,7 +455,6 @@ endr
 	ifequal WHT_APRICORN, .Wht
 	ifequal HOLLOW_ROCK, .Blk
 	ifequal PNK_APRICORN, .Pnk
-;.Red yes this should be commented out
 	setevent EVENT_GAVE_KURT_RED_APRICORN
 	sjump .GaveKurtApricorns
 
@@ -623,8 +627,307 @@ FiddlerBookScript:
 
 FiddlerBookText:
 	text "What's this book?"
-	line "The cover shows a"
+	line "The cover has a"
 	para "man on the roof"
-	line "with a small str-"
-	cont "ing instrument."
+	line "with a fiddle."
+	done
+
+KurtsJournal1Script:
+	opentext
+	writetext ItsKurtsJournal1Text
+	yesorno
+	iffalse_jumpopenedtext NoReadKurtText
+	closetext
+	italictypeface
+	showtext KurtsJournal1Text ; calm coast , done  
+	restoretypeface
+	special MapCallbackSprites_LoadUsedSpritesGFX
+	end	
+	
+ItsKurtsJournal1Text:
+	text "Kurt's Journal,"
+	line "marked #1."
+	
+	para "Read it?"
+	done
+
+NoReadKurtText:
+	text "Put it down."
+	done
+
+KurtsJournal1Text:
+	text "So this is how"
+	line "Route 34 looked"
+	cont "160 years ago."
+
+	para "Your father helped"
+	line "at the day care"
+	cont "when he was young."
+
+	para "Once, on the way"
+	line "back to Azalea, he"
+	cont "was playing with"
+	para "an apricorn and"
+	line "caught"
+	cont "a Cyndaquil."
+	
+	para "The apricorn had"
+	line "a soft glow in"
+	cont "his hands with the"
+	cont "#mon inside!"
+
+	para "I'll never for-"
+	line "get his beaming"
+	cont "face. We had so"
+	cont "much time ahead"
+	cont "of us."
+	done
+
+
+KurtsJournal2Script:
+	opentext
+	writetext ItsKurtsJournal2Text
+	yesorno
+	iffalse_jumpopenedtext NoReadKurtText
+	closetext
+	italictypeface
+	showtext KurtsJournal2Text
+	restoretypeface
+	special MapCallbackSprites_LoadUsedSpritesGFX
+	end	
+
+ItsKurtsJournal2Text:
+	text "Kurt's Journal,"
+	line "marked #2."
+	
+	para "Read it?"
+	done
+
+KurtsJournal2Text:
+	text "Underground, we'd"
+	line "come for haircuts."
+	
+	para "The trip from"
+	line "Azalea was so"
+	line "long. He would"
+	cont "hold his apricorn"
+	cont "all the way, its"
+	cont "glow visible in"
+	cont "his hands."
+	
+	para "At the haircut, "
+	line "Cyndaquil's flame"
+	cont "grew and shrank"
+	cont "in the mirror,"
+	
+	para "and your dad lau-"
+	line "ghed every time"
+	cont "the barber had to"
+	cont "work around it."
+	done
+
+
+KurtsJournal3Script: ;earls academy 
+	opentext
+	writetext ItsKurtsJournal3Text
+	yesorno
+	iffalse_jumpopenedtext NoReadKurtText
+	closetext
+	italictypeface
+	showtext KurtsJournal3Text
+	restoretypeface
+	special MapCallbackSprites_LoadUsedSpritesGFX
+	end	
+
+ItsKurtsJournal3Text:
+	text "Kurt's Journal,"
+	line "marked #3."
+	
+	para "Read it?"
+	done
+
+KurtsJournal3Text:
+	text "This was your"
+	line "dad's school."
+	
+	para "After class, we"
+	line "walked around the"
+	para "ponds, your dad"
+	line "walking side by"
+	para "side with his"
+	line "partner, holding"
+	cont "his apricorn."
+	
+	para "#seals were"
+	line "pretty new back"
+	para "then, so we dec-"
+	line "orated it with"
+	
+	para "vibrant colors."
+	line "Each scrape and"
+	para "chip in the coat"
+	line "was a memory of"
+	cont "an adventure."
+	
+	para "At nights, I'd"
+	line "find him under"
+	para "the covers, the"
+	line "glow of his ap-"
+	para "ricorn giving"
+	line "him away."
+	done
+
+KurtsJournal4Script:
+	opentext
+	writetext ItsKurtsJournal4Text
+	yesorno
+	iffalse_jumpopenedtext NoReadKurtText
+	closetext
+	italictypeface
+	showtext KurtsJournal4Text
+	restoretypeface
+	special MapCallbackSprites_LoadUsedSpritesGFX
+	end	
+
+ItsKurtsJournal4Text:
+	text "Kurt's Journal,"
+	line "marked #4."
+	
+	para "Read it?"
+	done
+
+KurtsJournal4Text: ; cattle cull 39 
+	text "I keep thinking"
+	line "about your dad's"
+	cont "Apricorn."
+	
+	para "The problem was,"
+	line "they don't hold"
+	cont "forever."
+	
+	para "If you stop"
+	line "interacting, "
+	cont "the #mon"
+	cont "inside will go."
+	
+	para "So when your Dad"
+	line "went off to work"
+	cont "in Olivine, he"
+	para "left the Cynda-"
+	line "quil for me to"
+	cont "take care."
+	done
+
+KurtsJournal5Script:
+	opentext
+	writetext ItsKurtsJournal5Text
+	yesorno
+	iffalse_jumpopenedtext NoReadKurtText
+	closetext
+	italictypeface
+	showtext KurtsJournal5Text
+	restoretypeface
+	special MapCallbackSprites_LoadUsedSpritesGFX
+	end	
+
+ItsKurtsJournal5Text:
+	text "Kurt's Journal,"
+	line "marked #5."
+	
+	para "Read it?"
+	done
+
+KurtsJournal5Text: ; mahogany town 
+	text "I invited your"
+	line "dad to celebrate"
+	cont "winter festival,"
+
+	para "but he couldn't"
+	line "make it. We'd met"
+	cont "up to walk his"
+
+	para "#mon every"
+	line "month, but this"
+	cont "was the first he"
+	cont "couldn't make."
+
+	para "When I got home,"
+	line "I noticed some "
+	cont "paint was wearing"
+	cont "off the apricorn."
+	done
+	
+KurtsJournal6Script:
+	opentext
+	writetext ItsKurtsJournal6Text
+	yesorno
+	iffalse_jumpopenedtext NoReadKurtText
+	closetext
+	italictypeface
+	showtext KurtsJournal6Text
+	restoretypeface
+	special MapCallbackSprites_LoadUsedSpritesGFX
+	end	
+
+ItsKurtsJournal6Text:
+	text "Kurt's Journal,"
+	line "marked #6."
+	
+	para "Read it?"
+	done
+
+KurtsJournal6Text: ; tinder garden 2
+	text "Last I was at the"
+	line "burned tower was"
+	para "for the new year"
+	line "celebration befo-"
+	cont "re you were born,"
+
+	para "your dad and I "
+	line "met here. I was "
+	cont "so excited."
+
+	para "I wanted to rem-"
+	line "ind him of his "
+	cont "#mon,"
+	
+	para "since he was abo-"
+	line "ut to have you."
+	
+	para "While I waited,"
+	line "I looked in the "
+	para "bag and found his"
+	line "apricorn."
+	
+	para "The paint was ne-"
+	line "arly all chipped"
+	para "off, so only he "
+	line "and I would know"
+	cont "what it once was." 
+	
+	para "When I picked it"
+	line "up it was cold"
+	para "and still - not"
+	line "as it should be."
+	
+	para "When I opened it,"
+	line "the inside was "
+	para "dark. I tried re-"
+	line "opening it to no"
+	cont "avail."
+	
+	para "I closed it for"
+	line "the last time,"
+	para "marking the end"
+	line "of that part of"
+	cont "my life."
+
+	para "I still think of"
+	line "those good days"
+	cont "whenever I see"
+	cont "an apricorn, "
+	
+	para "wishing I could"
+	line "see him catch his"
+	cont "first one again."
 	done

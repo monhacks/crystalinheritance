@@ -1,14 +1,14 @@
-text_start EQUS "db \"<START>\"" ; Enter text writing mode.
-text   EQUS "db "             ; Start writing text.
-next1  EQUS "db \"<LNBRK>\"," ; Move one screen row down.
-next   EQUS "db \"<NEXT>\","  ; Move one line down (two rows).
-line   EQUS "db \"<LINE>\","  ; Start writing at the bottom line.
-cont   EQUS "db \"<CONT>\","  ; Scroll to the next line.
-para   EQUS "db \"<PARA>\","  ; Start a new paragraph.
-done   EQUS "db \"<DONE>\""   ; End a text box.
-prompt EQUS "db \"<PROMPT>\"" ; Prompt the player to end a text box (initiating some other event).
-page   			EQUS "db \"@\","       ; Start a new Pokedex page.
-;text_high		EQUS "db " 		; writes text at a higher y coordinate
+text_start  EQUS "db \"<START>\"" ; Enter text writing mode.
+text   		EQUS "db "             ; Start writing text.
+next1  		EQUS "db \"<LNBRK>\"," ; Move one screen row down.
+next   		EQUS "db \"<NEXT>\","  ; Move one line down (two rows).
+line   		EQUS "db \"<LINE>\","  ; Start writing at the bottom line.
+cont   		EQUS "db \"<CONT>\","  ; Scroll to the next line.
+para   		EQUS "db \"<PARA>\","  ; Start a new paragraph.
+done   		EQUS "db \"<DONE>\""   ; End a text box.
+prompt 		EQUS "db \"<PROMPT>\"" ; Prompt the player to end a text box (initiating some other event).
+page   		EQUS "db \"@\","       ; Start a new Pokedex page.
+
 
 text_ram: MACRO
 	db "<RAM>"
@@ -17,6 +17,10 @@ ENDM
 
 text_promptbutton: MACRO
 	db "<WAIT>"
+ENDM
+
+text_high: MACRO
+    db "<TEXTHIGH>" ; This inserts the byte for <TEXTHIGH> ($07)
 ENDM
 
 text_asm: MACRO
@@ -38,9 +42,9 @@ text_sound: MACRO
 	db \1 ; sfx
 ENDM
 
-text_today: MACRO
-	db "<DAY>"
-ENDM
+;text_today: MACRO
+;	db "<DAY>"
+;ENDM
 
 text_far: MACRO
 	db "<FAR>"

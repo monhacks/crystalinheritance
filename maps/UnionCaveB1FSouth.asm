@@ -31,8 +31,8 @@ GenericTrainerHikerParry:
 
 	text "The first step"
 	line "in mining is"
-	cont "blasting the"
-	cont "rocks."
+	para "blasting the"
+	line "rocks."
 	done
 
 HikerParrySeenText:
@@ -81,4 +81,3 @@ HikerPhillipBeatenText:
 	text "Hey, now we"
 	line "can't crush."
 	done
-

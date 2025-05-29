@@ -17,6 +17,7 @@ FrontPicPointers::
 	dba	PidgeyFrontpic
 	dba	PidgeottoFrontpic
 	dba	PidgeotFrontpic
+	dba	NoctowlFrontpic
 	dba	EkansFrontpic
 	dba	ArbokFrontpic
 	dba	PikachuFrontpic

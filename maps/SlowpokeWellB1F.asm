@@ -53,14 +53,13 @@ SlowpokeWellTutorRolloutScript:
 Text_RolloutIntro: 
 	text "Some say that"
 	line "Unova-style pizza"
-	cont "is best. But I"
-	cont "prefer Azalea"
+	para "is best. But I"
+	line "prefer Azalea"
 	cont "style! Why?"
 	
 	para "Because the dough"
 	line "is rolled out"
-	cont "here in Slowpoke"
-	cont "Well!"
+	cont "in Slowpoke Well!"
 
 	para "...?"
 	
@@ -102,8 +101,8 @@ Text_RolloutTutorRefused:
 Text_RolloutTutorTaught:
 	text "Rolling out"
 	line "your own dough"
-	cont "is great. Once"
-	cont "you start, it's"
+	para "is great. Once"
+	line "you start, it's"
 	cont "hard to stop!"
 	done
 
@@ -115,18 +114,10 @@ SlowpokeWellB1FText:
 
 	para "past: a shifted"
 	line "rock, a different"
-	cont "current - would"
-
-	para "have opened new"
-	line "chambers."
+	para "current, would"
+	line "change its shape."
 	
-	para "I wonder what sec-"
-	line "rets these walls"
-	cont "hide... just bec-"
-
-	para "ause water chose"
-	line "one path over"
-	cont "another."
-	
+	para "All because water"
+	line "chose one path"
+	cont "over another!"
 	done
-

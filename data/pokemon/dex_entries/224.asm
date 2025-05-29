@@ -1,9 +1,8 @@
 	db "Jet@" ; species name
 	dw 211, 630 ; height, width
 
-	db   "Its instinct is to"
-	next "bury itself in"
-	next "holes. It often"
-	page "steals the nesting"
-	next "holes of others to"
-	next "sleep in them.@"
+	db   "Capable of diving"
+	next "for miles, they"
+	next "learn to imitate"
+	page "deep sea vents for"
+	next "defense.@"

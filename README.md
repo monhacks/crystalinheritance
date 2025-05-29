@@ -5,7 +5,7 @@ The game was built using Polished Crystal 3.0.0 as a base by dwg (Reddit usernam
 
 ## How To Patch
 
-This game should be patched to ... 
+TODO This game should be patched to ... 
 
 ## About Crystal Inheritance
 
@@ -32,14 +32,34 @@ Nothing is inevitable - what path will you choose?
 
 ## Screenshots
 
-To-Do:
+Todo: 
 Starter Selection
-New apricorns
+
+New apricorns x5 
+
 New Town Map
+
 Historic Town Map
+
 Title Screen
+
+Mejimi vs Adrinna
+
+Bobesh, Sandra, Toxicroak 
+
+Kensey, Barbeau at Docks
+
+Ruins of Alph Celebi Puzzle 
+
+New Colors
+
 Debug Room (Spoiler)
-Mejimi "i am the ..."
 
 Example format below: 
-![seafoam-islands](screenshots/seafoam-islands.png)
+![seafoam-islands](screenshots/seafoam-islands.png) ; (screenshots/gameplay/<file_name>.png)
+
+
+## Spotify Playlist
+
+Curated playlist: https://open.spotify.com/playlist/1yUCVhCgMnO10MIXvMtyh4?si=fc0b8107a7724a80
+

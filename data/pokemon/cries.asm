@@ -23,6 +23,7 @@ PokemonCries::
 	mon_cry CRY_PIDGEY,      $0df,  $084 ; Pidgey
 	mon_cry CRY_PIDGEOTTO,   $028,  $140 ; Pidgeotto
 	mon_cry CRY_PIDGEOTTO,   $011,  $17f ; Pidgeot
+	mon_cry CRY_TOGETIC,     $011,  $17f ; Noctowl
 	mon_cry CRY_EKANS,       $012,  $0c0 ; Ekans
 	mon_cry CRY_EKANS,       $0e0,  $090 ; Arbok
 	mon_cry CRY_BULBASAUR,   $0ee,  $081 ; Pikachu

@@ -14,7 +14,28 @@ OlivineGym_MapScriptHeader:
 
 	def_object_events
 	object_event  5,  3, SPRITE_JASMINE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OlivineGymJasmineScript, EVENT_JASMINE_GYM ; NOT HERE UNTIL AFTER BEATING CHUCK 
+	object_event  4,  13, SPRITE_PRYCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PryceScriptOlivine, EVENT_BEAT_CHUCK 
 
+PryceScriptOlivine:
+    faceplayer
+    opentext
+    writetext PryceTextOlivine
+	waitbutton
+    closetext
+    end
+
+PryceTextOlivine:
+    text "Pryce: <PLAYER>!"
+    line "Good to see you."
+	
+	para "I came here to"
+	line "confront Jasmine"
+	para "about the Desal"
+	line "plant wrecking"
+	para "livelihoods, but"
+	line "she won't leave"
+	cont "the lighthouse."
+    done
 
 
 OlivineGymJasmineScript:

@@ -1312,4 +1312,14 @@ checkbp: MACRO
 	dw \1 ; bp
 ENDM
 
+	const italictypeface_command
+italictypeface: MACRO
+	db italictypeface_command
+ENDM
+
+	const micrtypeface_command
+micrtypeface: MACRO
+	db micrtypeface_command
+ENDM
+
 NUM_EVENT_COMMANDS EQU const_value

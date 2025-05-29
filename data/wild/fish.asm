@@ -13,7 +13,7 @@ FishGroups:
 	fishgroup 55 percent + 1, 65 percent + 1, .Pond_Old,             .Pond_Good,             .Pond_Super
 	fishgroup 60 percent + 1, 70 percent + 1, .Dratini_Old,          .Dratini_Good,          .Dratini_Super ;'corresponds to alpine lake at KaJo
 	fishgroup 60 percent + 1, 70 percent + 1, .Qwilfish_Swarm_Old,   .Qwilfish_Swarm_Good,   .Qwilfish_Swarm_Super ;unused
-	fishgroup 60 percent + 1, 70 percent + 1, .Remoraid_Swarm_Old,   .Remoraid_Swarm_Good,   .Remoraid_Swarm_Super ;unused
+	fishgroup 60 percent + 1, 70 percent + 1, .Remoraid_Swarm_Old,   .Remoraid_Swarm_Good,   .Remoraid_Swarm_Super ;olivine city 
 	fishgroup 60 percent + 1, 70 percent + 1, .Gyarados_Old,         .Gyarados_Good,         .Gyarados_Super ; LoR and TT
 	fishgroup 60 percent + 1, 70 percent + 1, .Dratini_2_Old,        .Dratini_2_Good,        .Dratini_2_Super  ;dratini_2, polluted 
 	fishgroup 60 percent + 1, 70 percent + 1, .WhirlIslands_Old,     .WhirlIslands_Good,     .WhirlIslands_Super
@@ -113,19 +113,17 @@ FishGroups:
 	db 100 percent,     QWILFISH,   40
 
 .Remoraid_Swarm_Old:
-	db  70 percent + 1, MAGIKARP,   10
-	db  85 percent + 1, MAGIKARP,   10
-	db 100 percent,     OCTILLERY,   10
+	db  70 percent + 1, MAGIKARP,   5
+	db  85 percent + 1, MAGIKARP,   5
+	db 100 percent,     MAGIKARP,   5
 .Remoraid_Swarm_Good:
-	db  35 percent,     OCTILLERY,   20
-	db  70 percent,     OCTILLERY,   20
-	db  90 percent + 1, OCTILLERY,   20
-	db 100 percent,     0, 12
+	db  70 percent + 1, MAGIKARP,   5
+	db  85 percent + 1, MAGIKARP,   5
+	db 100 percent,     MAGIKARP,   5
 .Remoraid_Swarm_Super:
-	db  40 percent,     OCTILLERY,   40
-	db  70 percent,     0, 13
-	db  90 percent + 1, OCTILLERY,   40
-	db 100 percent,     OCTILLERY,   40
+	db  70 percent + 1, MAGIKARP,   5
+	db  85 percent + 1, MAGIKARP,   5
+	db 100 percent,     MAGIKARP,   5
 
 .Gyarados_Old:
 	db  70 percent + 1, MAGIKARP,   10

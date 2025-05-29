@@ -1,9 +1,10 @@
 	db "Bird@" ; species name
 	dw 411, 870 ; height, width
 
-	db   "Its outstanding"
-	next "vision allows it"
-	next "to spot splashing"
-	page "Magikarp, even"
-	next "while flying at"
-	next "3300 feet.@"
+	db   "Its powerful"
+	next "wings can move"
+	next "clouds and cause"
+	page "hurricanes. They"
+	next "are despised by"
+	next "meteorologists.@"
+	

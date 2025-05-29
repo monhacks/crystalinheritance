@@ -131,8 +131,8 @@ EcruteakGymPryceScript:
 	
 	para "He's in the Burned"
 	line "Tower, chasing his"
-	cont "trail hunting a"
-	cont "legendary beast,"
+	para "trail hunting a"
+	line "legendary beast,"
 	
 	para "hoping it will"
 	line "draw guests."
@@ -145,16 +145,16 @@ EcruteakGymPryceScript:
 MortyIntroText:
 	text "<PLAYER>. Thank"
 	line "you for showing"
-	cont "me the need to"
-	cont "reflect, without"
+	para "me the need to"
+	line "reflect, without"
 	cont "distraction."
 	
 	para "I was caught up"
 	line "making spectacles,"
-	cont "I forgot that real"
-	cont "reflection comes"
-	cont "from deep, auth-"
-	cont "entic connections."
+	para "I forgot that real"
+	line "reflection comes"
+	para "from deep, auth-"
+	line "entic connections."
 	
 	para "Battle me, and"
 	line "show me your"
@@ -164,8 +164,8 @@ MortyIntroText:
 MortyWinLossText:
 	text "I see. Your"
 	line "connection is"
-	cont "even stronger"
-	cont "than I thought."
+	para "even stronger"
+	line "than I thought."
 	done
 
 Text_ReceivedFogBadge:
@@ -176,8 +176,12 @@ Text_ReceivedFogBadge:
 MortyText_FogBadgeSpeech:
 	text "It shows that"
 	line "you can find a"
-	cont "way on unfamil-"
-	cont "iar paths."
+	para "way on unfamil-"
+	line "iar paths."
+	
+	para "It also grants"
+	line "you acces to the"
+	cont "Tin Tower."
 	done
 
 MortyFightDoneText:

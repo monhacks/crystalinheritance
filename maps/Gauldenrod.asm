@@ -33,28 +33,32 @@ Gauldenrod_MapScriptHeader:
 	bg_event 22, 22, BGEVENT_READ, GauldenrodNoFishingSign
 
 	def_object_events
+	; cutscene 
 	object_event  23, 30, SPRITE_BOBESH, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0,  OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_GAULDENROD_BOBESH
 	pokemon_event 24, 32, FLAREON, -1, -1, PAL_NPC_RED, ObjectEvent, EVENT_GAULDENROD_FLAREON
 	object_event  23, 33, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PURPLE,  OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_GAULDENROD_BRIGADER_CINDY
 	object_event  24, 33, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_GAULDENROD_BRIGADER_CINDY
-
-	object_event 31, 24, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GauldenrodNPC1Script, EVENT_GAULDENROD_CIVILIANS
+	; marts etc 
 	object_event 34, 20, SPRITE_FIREBREATHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GauldenrodHisuiTraderScript, EVENT_GAULDENROD_CIVILIANS
 	mart_clerk_event  27, 25, MARTTYPE_STANDARD, MART_GAULDENROD_1	
 	mart_clerk_event  27, 20, MARTTYPE_STANDARD, MART_GAULDENROD_2	
 	object_event  34,  24, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, pokemart, MARTTYPE_TM, MART_GAULDENROD_3, EVENT_GAULDENROD_CIVILIANS
-	object_event 23, 6, SPRITE_POKEFAN_F, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GauldenrodNPC2Script, EVENT_GAULDENROD_CIVILIANS
-	object_event 23, 29, SPRITE_LASS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GauldenrodNPC3Script, EVENT_GAULDENROD_CIVILIANS
-	object_event 17,  9, SPRITE_MATRON, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GauldenrodNPC4Script, EVENT_GAULDENROD_CIVILIANS
-	object_event 23, 12, SPRITE_LASS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GauldenrodNPC5Script, EVENT_GAULDENROD_CIVILIANS
-	object_event 13,  9, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 2, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GauldenrodNPC6Script, EVENT_GAULDENROD_CIVILIANS
-	object_event 19, 17, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GauldenrodNPC7Script, EVENT_GAULDENROD_CIVILIANS
-	object_event 12, 17, SPRITE_LASS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GauldenrodNPC8Script, EVENT_GAULDENROD_CIVILIANS
-	object_event 14, 13, SPRITE_ELDER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GauldenrodNPC9Script, EVENT_GAULDENROD_ELDER ; initialized until after bobesh defeated 
-
-	fruittree_event  36, 7, FRUITTREE_GAULDENROD, RADIANT_OPAL, PAL_NPC_RED
+	; roadblocks 
 	object_event 23, 4, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BrigaderScript, EVENT_GAULDENROD_TUNNELERS
 	object_event 24, 4, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BrigaderScript, EVENT_GAULDENROD_TUNNELERS
+	; npcs 
+	object_event 31, 24, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, 			OBJECTTYPE_SCRIPT, 0, GauldenrodNPC1Script, EVENT_GAULDENROD_CIVILIANS
+	object_event 23, 6, SPRITE_POKEFAN_F, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BROWN, 			OBJECTTYPE_SCRIPT, 0, GauldenrodNPC2Script, EVENT_GAULDENROD_CIVILIANS
+	object_event 23, 29, SPRITE_LASS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, 				OBJECTTYPE_SCRIPT, 0, GauldenrodNPC3Script, EVENT_GAULDENROD_CIVILIANS
+	object_event 17,  9, SPRITE_MATRON, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, 				OBJECTTYPE_SCRIPT, 0, GauldenrodNPC4Script, EVENT_GAULDENROD_CIVILIANS
+	object_event 23, 12, SPRITE_LASS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, 				OBJECTTYPE_SCRIPT, 0, GauldenrodNPC5Script, EVENT_GAULDENROD_CIVILIANS
+	object_event 13,  9, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 2, -1, -1, PAL_NPC_RED, 		OBJECTTYPE_SCRIPT, 0, GauldenrodNPC6Script, EVENT_GAULDENROD_CIVILIANS
+	object_event 19, 17, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN,	OBJECTTYPE_SCRIPT, 0, GauldenrodNPC7Script, EVENT_GAULDENROD_CIVILIANS
+	object_event 12, 17, SPRITE_LASS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, 				OBJECTTYPE_SCRIPT, 0, GauldenrodNPC8Script, EVENT_GAULDENROD_CIVILIANS
+	; quest 
+	object_event 14, 13, SPRITE_ELDER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, 				OBJECTTYPE_SCRIPT, 0, GauldenrodNPC9Script, EVENT_GAULDENROD_ELDER ; initialized until after bobesh defeated 
+	fruittree_event  36, 7, FRUITTREE_GAULDENROD, RADIANT_OPAL, PAL_NPC_RED
+
 
 
 	object_const_def
@@ -75,9 +79,10 @@ Gauldenrod_Saddle_AccessCallback:
 	endcallback
 
 GauldenrodNPC1Script:
-	jumptextfaceplayer GauldenrodNPC1Text
+	checkevent EVENT_BEAT_BOBESH_STADIUM
+	iftrue_jumptextfaceplayer .Text1
+	jumpthistextfaceplayer
 
-GauldenrodNPC1Text:
 	text "Have you tried"
 	line "the new #-"
 	cont "balls?"
@@ -87,74 +92,98 @@ GauldenrodNPC1Text:
 	cont "than apricorns."
 	done
 
-GauldenrodBerrySalesmanScript:
-	jumptextfaceplayer GauldenrodBerrySalesmanText
+.Text1: 
+	text "It's too bad that"
+	line "the Stadium is"
+	cont "flooded."
+	
+	para "Maybe there'll be"
+	line "sporting there"
+	cont "again one day."
+	done 
 
-GauldenrodBerrySalesmanText:
-	text "Berries berries!"
-	done
-
-GauldenrodApricornSalesScript:
-	jumptextfaceplayer GauldenrodApricornSalesText
-
-GauldenrodApricornSalesText:
-	text "Need an apricorn?"
-	done
-
-GauldenrodTMSalesScript:
-	jumptextfaceplayer GauldenrodTMSalesText
-
-GauldenrodTMSalesText:
-	text "Upgrade your"
-	line "battle prowess"
-	cont "for the stadium?"
-	done
 
 GauldenrodNPC2Script:
-	jumptextfaceplayer GauldenrodNPC2Text
+	checkevent EVENT_BEAT_BOBESH_STADIUM
+	iftrue_jumptextfaceplayer .Text2
+	jumpthistextfaceplayer
 
-GauldenrodNPC2Text:
 	text "If you need some"
 	line "food, they offer"
 	cont "it at the stadium."
-	cont "The emperor"
-	cont "provides for us"
-	cont "that way."
 	done
+
+.Text2: 
+	text "I'm going to take"
+	line "a dip at the"
+	cont "hot springs!"
+	done 
 
 GauldenrodNPC3Script:
-	jumptextfaceplayer GauldenrodNPC3Text
+	checkevent EVENT_BEAT_BOBESH_STADIUM
+	iftrue_jumptextfaceplayer .Text3
+	jumpthistextfaceplayer
 
-GauldenrodNPC3Text:
-	text "Check out the"
-	line "bazaar. Traveling"
-	cont "traders might have"
-	cont "something new for"
-	cont "sale."
+	text "There's cool stuff"
+	line "at the bazaar!"
+	
+	para "Apparently from"
+	line "the Trader's"
+	cont "Landing."
 	done
 
+.Text3: 
+	text "Without Bobesh,"
+	line "will the bazaar"
+	cont "close?"
+	done 
+	
 GauldenrodNPC4Script:
-	jumptextfaceplayer GauldenrodNPC4Text
+	checkevent EVENT_BEAT_BOBESH_STADIUM
+	iftrue_jumptextfaceplayer .Text4
+	jumpthistextfaceplayer
 
-GauldenrodNPC4Text:
 	text "I used to resent"
 	line "the emperor taking"
-	cont "over the city, but"
-	cont "I appreciate the"
-	cont "stadium."
+	para "over, but the"
+	line "stadium is cool."
 	done
+
+.Text4: 
+	text "I've seen some"
+	line "weird stuff on"
+	para "the mountain. No"
+	line "way am I going"
+	cont "to do my quest."
+	done 
 
 GauldenrodNPC5Script:
-	jumptextfaceplayer GauldenrodNPC5Text
+	checkevent EVENT_BEAT_BOBESH_STADIUM
+	iftrue_jumptextfaceplayer .Text5
+	jumpthistextfaceplayer
 
-GauldenrodNPC5Text:
-	text "The stadium is so"
-	line "fun. Some trainer"
-	cont "drones against the"
-	cont "emperor, and then"
-	cont "their #mon get"
-	cont "stomped."
+	text "Our ritual is put"
+	line "on hold due to"
+	cont "the Brigaders."
+	
+	para "I didn't really"
+	line "want to carry an"
+	para "old lady up the"
+	line "mountain, though,"
+	cont "so I'm happy."
 	done
+
+.Text5: 
+	text "I hope I get to"
+	line "do my ritual."
+	
+	para "It could be the"
+	line "last time I get"
+	para "to spend quality"
+	line "time with my"
+	cont "grandma."
+	done 
+	
 
 GauldenrodNPC6Script:
 	jumptextfaceplayer GauldenrodNPC6Text
@@ -162,8 +191,8 @@ GauldenrodNPC6Script:
 GauldenrodNPC6Text:
 	text "I stay away from"
 	line "the stadium. It"
-	cont "gets people so"
-	cont "riled up."
+	para "gets people so"
+	line "riled up."
 	done
 
 GauldenrodNPC7Script:
@@ -173,7 +202,7 @@ GauldenrodNPC7Text:
 	text "I always forget my"
 	line "worries watching"
 	cont "some battles at"
-	cont "the stadium."
+	line "the stadium."
 	done
 
 GauldenrodNPC8Script:
@@ -182,10 +211,10 @@ GauldenrodNPC8Script:
 GauldenrodNPC8Text:
 	text "The Tower has work"
 	line "for all sorts of"
-	cont "people. After my"
-	cont "dad broke his leg,"
-	cont "they gave him a"
-	cont "job cleaning"
+	para "people. After my"
+	line "dad broke his leg,"
+	para "they gave him a"
+	line "job cleaning"
 	cont "statues."
 	done
 
@@ -193,7 +222,7 @@ GauldenrodTowerSign:
 	jumptext GauldenrodTowerSignText
 
 GauldenrodTowerSignText:
-	text "Gauldenrod Tower"
+	text "Gauldenrod Tower:"
 	line "Reaching for the"
 	cont "Sky"
 	done
@@ -226,13 +255,8 @@ AmosWantedSign:
 
 	text "WANTED: This man"
 	line "is wanted for"
-	cont "crimes against"
-	cont "the emperor."
-
-	para "If you see him,"
-	line "please notify a"
-	cont "brigader"
-	cont "immediately."
+	para "crimes against"
+	cont "the emperor!"
 
 	para "Known alias:"
 	line "Amos."
@@ -368,54 +392,45 @@ GauldenrodHisuiTraderRememberText:
 GauldenrodHisuiTraderText:
 	text "Hello! Rare"
 	line "#mon! Gifts"
-	cont "from Hisui. Which"
-	cont "would you like?"
+	para "from Hisui. Which"
+	line "would you like?"
 	done
 
 GauldenrodHisuiTraderLuxioText:
 	text "Ah, Luxio!"
 	line "Its static dis-"
-	cont "charge can light"
-	cont "up any DARK area."
+	para "charge can light"
+	line "up the dark!"
 	done
 
 GauldenrodHisuiTraderRoseliaText:
-	text "Roselia, so love-"
-	line "ly! This Grass and"
-	cont "Poison-type will"
-	cont "be a thorn in the"
-	cont "side of your"
-	cont "rivals!"
+	text "Roselia, lovely!"
+	line "It'll be a thorn"
+	para "in your foe's"
+	line "side!"
 	done
 
 GauldenrodHisuiTraderStaraviaText:
 	text "Staravia, excel-"
-	line "lent! If you get"
-	cont "CLOSE enough, it"
-	cont "will show you how"
-	cont "BRAVE it can be!"
+	line "lent! One of the"
+	cont "bravest birds!"
 	done
 	
 GauldenrodHisuiTraderVespiquenText:
-	text "Oh Vespiquen!"
-	line "There's quite a"
-	cont "BUZZ about its"
-	cont "honey!"
+	text "Oh, Vespiquen!"
+	line "There's a buzz"
+	cont "about its honey!"
 	done
 
 GauldenrodHisuiTraderPartyFullText:
 	text "Oh! Your party is"
-	line "full. Please make"
-	cont "room and come"
-	cont "back if you'd like"
-	cont "a Hisui #MON."
+	line "full."
 	done
 
 GauldenrodHisuiTraderNoThanksText:
-	text "No problem! Feel"
-	line "free to come back"
-	cont "if you change"
-	cont "your mind!"
+	text "No problem! Come"
+	line "back if you cha-"
+	cont "nge your mind!"
 	done
 
 GauldenrodBobeshScene:

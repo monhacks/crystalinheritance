@@ -1,5 +1,6 @@
 VioletNicknameSpeechHouse_MapScriptHeader:
 	def_scene_scripts
+	scene_script VioletHouseTrigger 
 
 	def_callbacks
 
@@ -12,11 +13,22 @@ VioletNicknameSpeechHouse_MapScriptHeader:
 	def_bg_events
 
 	def_object_events
+	object_event  0,  2, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, VioletPickyEaterScript, -1
 	object_event  2,  3, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, jumptextfaceplayer, VioletNicknameSpeechHouseTeacherScript, -1
 	object_event  6,  4, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletNicknameSpeechHouseLassText, -1
 	pokemon_event  6,  2, TANGELA, -1, -1, PAL_NPC_GREEN, TangelaVioletText, -1
-	object_event  0,  2, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, VioletPickyEaterScript, -1
 	pokemon_event  0,  3, PARASECT, -1, -1, PAL_NPC_GREEN, ParasectVioletText, -1
+
+	object_const_def
+	const VIOLET_HOUSE_TWIN
+
+VioletHouseTrigger:
+	sdefer .TradeQuestScript
+	end
+	
+.TradeQuestScript:
+	showemote EMOTE_HAPPY, VIOLET_HOUSE_TWIN, 30
+	end
 
 
 VioletNicknameSpeechHouseTeacherScript: 
@@ -63,24 +75,28 @@ VioletNicknameSpeechHouseLassText:
 	done
 
 TangelaVioletText:
-	text "Tangela: La!"
+	text "AngelaHair:"
+	line "La la laa!"
+	
+	para "It has a vibrant"
+	line "disposition!"
 	done
 
 ParasectVioletText:
-	text "There are spoon-"
-	line "sized divits and"
-	cont "condiment residue"
-	cont "all over its "
-	cont "mushroom..."
+	text "Portosect: "
+	line "... "
 	
-	para "Yet it waddles"
-	line "along with a"
-	cont "vacant grin."
+	para "It waddles with a"
+	line "vacant smile."
+		
+	para "Condiment residue"
+	line "is all over its"
+	cont "mushroom."
 	done
 	
 
 
-VioletPickyEaterScript: ; TRADE QUEST 
+VioletPickyEaterScript:
     faceplayer
     opentext
 	writetext NeedRageCandyBarText
@@ -92,6 +108,7 @@ VioletPickyEaterScript: ; TRADE QUEST
 	iffalse_jumpopenedtext Text_NoCandyBar
 	takeitem RAGECANDYBAR
 	verbosegiveitem BIG_MUSHROOM
+	setscene $1
 	iffalse_endtext
 	jumpopenedtext GiveBigMushroomText
 	

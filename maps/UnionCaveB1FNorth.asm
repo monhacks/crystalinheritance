@@ -29,8 +29,8 @@ GenericTrainerHikerLeonard:
 
 	text "The boss got"
 	line "his start with"
-	cont "the Underground"
-	cont "in Sinnoh."
+	para "the Underground"
+	line "in Sinnoh."
 	done
 
 HikerLeonardSeenText:
@@ -48,8 +48,8 @@ GenericTrainerFirebreatherOtis:
 
 	text "My greatest wish?"
 	line "See the fire-"
-	cont "steel type #-"
-	cont "mon that lives"
+	para "steel type #-"
+	line "mon that lives"
 	cont "in volcanos."
 	done
 
@@ -61,8 +61,8 @@ FireBreatherOtisSeenText:
 FireBreatherOtisBeatenText:
 	text "The boss is"
 	line "ahead. He's not"
-	cont "happy that we"
-	cont "were battling."
+	para "happy that we"
+	line "were battling."
 	done
 
 GenericTrainerRuin_maniacPetry:
@@ -70,8 +70,8 @@ GenericTrainerRuin_maniacPetry:
 
 	text "Some group hara-"
 	line "ssed us last"
-	cont "week. We just got"
-	cont "back online when"
+	para "week. We just got"
+	line "back online when"
 	cont "you got here."
 	done
 
@@ -84,8 +84,8 @@ RuinManiacPetrySeenText:
 RuinManiacPetryBeatenText:
 	text "Some group hara-"
 	line "ssed us last"
-	cont "week. We just got"
-	cont "back online when"
+	para "week. We just got"
+	line "back online when"
 	cont "you got here."
 	done
 	
@@ -101,6 +101,3 @@ BastiodonText:
 	line "be eating rocks."
 	done
 	
-
-
-
