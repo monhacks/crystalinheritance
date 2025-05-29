@@ -16,7 +16,7 @@ SlowpokeWellB2F_MapScriptHeader:
 
 
 	def_object_events
-	object_event 5, 2, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, SlowpokeWellB2FGuardScript, SLOWPOKE_WELL_MOVED_ASIDE
+	object_event 5, 2, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, SlowpokeWellB2FGuardScript, EVENT_SLOWPOKE_WELL_B2F_SCHOOLBOY
 	strengthboulder_event   6, 2
 	strengthboulder_event  4, 2
 

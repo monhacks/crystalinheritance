@@ -65,8 +65,8 @@ GenericTrainerFirebreatherJay:
 FirebreatherJaySeenText:
 	text "You again?"
 	line "We won't be"
-	cont "stopped so easy"
-	cont "this time!"
+	para "stopped so easy"
+	line "this time!"
 	done
 
 FirebreatherJayBeatenText:
@@ -80,8 +80,8 @@ GenericTrainerFirebreatherOleg:
 
 	text "Lost my cool."
 	line "Petry is up"
-	cont "ahead, he will"
-	cont "not be happy"
+	para "ahead, he will"
+	line "not be happy"
 	para "that we were"
 	line "battling."
 	done
@@ -95,8 +95,8 @@ FirebreatherOlegSeenText:
 FirebreatherOlegBeatenText:
 	text "Lost my cool."
 	line "Petry is up"
-	cont "ahead, he will"
-	cont "not be happy"
+	para "ahead, he will"
+	line "not be happy"
 	para "that we were"
 	line "battling."
 	done
@@ -152,8 +152,8 @@ GenericTrainerHikerTimothy:
 HikerTimothySeenText:
 	text "I've dug this"
 	line "tunnel, you'd"
-	cont "barely be a"
-	cont "bump to me!"
+	para "barely be a"
+	line "bump to me!"
 	
 	para "I'm an unstop-"
 	line "able force!"
@@ -194,15 +194,8 @@ GenericTrainerRuin_maniacGlynn:
 RuinManiacGlynnSeenText:
 	text "You! You're the"
 	line "one that threw"
-	cont "off our opera-"
-	cont "tion last time!"
-	
-	para "We're nearly at"
-	line "the heart of the"
-	cont "mountain, and "
-	
-	para "here you are,"
-	line "battling!"
+	para "off our opera-"
+	line "tion last time!"
 	
 	para "I'm not taking"
 	line "it easy on you"
@@ -213,9 +206,6 @@ RuinManiacGlynnSeenText:
 	cont "just give it up."
 	
 	para "So! Battle me!"
-	
-	para "Winner takes"
-	line "all!"
 	done
 
 RuinManiacGlynnBeatenText:
@@ -239,8 +229,8 @@ RuinManiacGlynnBeatenText:
 	
 	para "If you battle"
 	line "one, the other"
-	cont "will probably be"
-	cont "scared and flee."
+	para "will probably be"
+	line "scared and flee."
 	
 	para "It's clear you"
 	line "would be a better"

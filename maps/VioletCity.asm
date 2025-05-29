@@ -36,7 +36,7 @@ VioletCity_MapScriptHeader:
 	def_object_events
 	object_event 28, 32, SPRITE_CUTE_GIRL, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_GREEN, 					OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletCityLassText, -1 
 	object_event 26, 18, SPRITE_ACE_TRAINER_M, SPRITEMOVEDATA_WANDER, 2, 1, -1, 0, 0, 							OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletCityCooltrainerM1Text, -1 
-	object_event 26, 18, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_WANDER, 2, 1, -1, 0, 0, 							OBJECTTYPE_SCRIOT, 0, VioletCityCooltrainerFScript, -1 ; todo 
+	object_event 26, 18, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_WANDER, 2, 1, -1, 0, 0, 							OBJECTTYPE_SCRIPT, 0, VioletCityCooltrainerFScript, -1 ; todo 
 	object_event 17, 24, SPRITE_GRAMPS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, 0, 						OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletCityGrampsText, -1 ;
 	object_event  5, 22, SPRITE_ACE_TRAINER_M, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 2, -1, -1, PAL_NPC_GREEN, 	OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletCityCooltrainerM2Text, -1 ;
 	object_event 26, 20, SPRITE_FAT_GUY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, 				OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletCityFisherText, -1 ;
@@ -81,21 +81,21 @@ VioletCityCooltrainerM1Text:
 	done
 
 VioletCityCooltrainerFScript:
-	checkevent EVENT_BEAT_BOBESH
+	checkevent EVENT_BEAT_FALKNER
 	iftrue_jumptextfaceplayer .Text1
 	jumpthistextfaceplayer
 
 	text "They want Bronz-"
 	line "ong atop the tower"
-	para "for rain dance."
-	line "But I think it's"
-	para "going to be a 
+	cont "for a rain dance."
 	done
 
 .Text1: 
-	text "I haven't heard"
-	line "the Bronzong in"
-	para "some time. 
+	text "I'm kinda sad that"
+	line "there won't be a"
+	para "Bronzong. I've"
+	line "always admired"
+	cont "campaniles."
 	done 
 
 

@@ -102,13 +102,13 @@ Text_IlexForestSignpost0:
 Text_IlexForestSignpost1:
 	text "Report any susp-"
 	line "icious activity"
-	cont "to Goldenrod"
-	cont "police or to"
+	para "to Goldenrod"
+	line "police or to"
 	
 	para "Silph Forestry,"
 	line "on behalf of"
-	cont "Violet City Gym"
-	cont "Leader Falkner." 
+	para "Violet City Gym"
+	line "Leader Falkner." 
 	done
 
 Text_IlexForestShrine:
@@ -124,9 +124,9 @@ GenericTrainerBug_catcherWade:
 	generictrainer BUG_CATCHER, WADE1, EVENT_BEAT_BUG_CATCHER_WADE, Bug_catcherWadeSeenText, Bug_catcherWadeBeatenText
 
 	text "If I find a"
-	line "tinymushroom,"
-	cont "could I grow"
-	cont "it to a Paras?"
+	line "Tinymushroom,"
+	para "could I grow"
+	line "it to a Paras?"
 	done
 
 Bug_catcherWadeSeenText:
@@ -169,8 +169,8 @@ GenericTrainerBug_catcherArnie:
 Bug_catcherArnieSeenText:
 	text "The rarer the"
 	line "#mon, the"
-	cont "cooler you are"
-	cont "to girls!"
+	para "cooler you are"
+	line "to girls!"
 	done
 
 Bug_catcherArnieBeatenText:
@@ -181,7 +181,7 @@ GenericTrainerYoungsterMikey:
 	generictrainer YOUNGSTER, MIKEY, EVENT_BEAT_YOUNGSTER_MIKEY, YoungsterMikeySeenText, YoungsterMikeyBeatenText
 	text "I always carry"
 	line "antidotes when"
-	cont "training EKANS."
+	cont "training Ekans."
 	done
 	
 YoungsterMikeySeenText:
@@ -195,20 +195,19 @@ YoungsterMikeyBeatenText:
 	line "no good."
 	done
 	
-	
 GenericTrainerPicnickerLiz:
 	generictrainer PICNICKER, LIZ1, EVENT_BEAT_PICNICKER_LIZ, PicnickerLizSeenText, PicnickerLizBeatenText
 	text "There used to be"
 	line "way more campsites"
-	cont "before Silph sta-"
-	cont "rted logging."
+	para "before Silph sta-"
+	line "rted logging."
 	done
 	
 	PicnickerLizSeenText:
 	text "When camping in"
 	line "the forest, you"
-	cont "need to put out"
-	cont "your fire!"
+	para "need to put out"
+	line "your fire!"
 	done
 	
 	PicnickerLizBeatenText:
@@ -248,8 +247,8 @@ GenericTrainerOfficerMKeith:
 	OfficerMKeithBeatenText:
 	text "There's been a"
 	line "lot of vandalism"
-	cont "here. Let me know"
-	cont "if you see"
+	para "here. Let me know"
+	line "if you see"
 	cont "anything."
 	done
 	
@@ -343,14 +342,17 @@ PlayerMovesBelowKurtMovement:
 	step_end
 	
 KurtText1:
+	text_high
+    text " Kurt: "
+	next
+	text_start 
 	text "This place is"
 	line "sacred!"
 	
-	para "You very nearly"
-	line "destroyed this"
-	para "artifact under"
-	line "the shrine!"
+	para "You nearly broke"
+	line " this artifact!"
 	done
+
 	
 CamdenMoves1:
 	step_down
@@ -358,51 +360,49 @@ CamdenMoves1:
 	step_end
 	
 CamdenText1:
+	text_high
+    text " Camden: "
+	next
+	text_start 
 	text "We need this lum-"
 	line "ber for the Vio-"
-	cont "let tower. They"
-	cont "are putting a "
-	cont "very heavy"
-	cont "#mon on top."
+	cont "let tower!"
 	done
 
 KurtText2:
-	text "Your steel types"
-	line "are abominations!"
+	text_high
+    text " Kurt: "
+	next
+	text_start 
+	text "Your tech is an"
+	line "abomination!"
 	
-	para "Azalea got by"
-	line "without Steels un-"
-	cont "til now, and we"
-	cont "don't need them!"
-	
-	para "You cut down so"
-	line "many trees.  Just"
-	cont "look at what"
-	cont "you've dug up!"
-	
-	para "This ball honors"
-	line "the forest's"
-	cont "protector."
-
-	para "I will take it"
-	line "for safe keeping."
+	para "Azalea has always"
+	line "gotten by without"
+	para "it. Look at what"
+	line "you almost broke!"
 	done
+
 	
 CamdenMoves2:
 	step_left
 	step_end
 	
 CamdenText2:
-	text "Steel types are"
-	line "natural, just as"
+	text_high
+    text " Camden: "
+	next
+	text_start 
+
+	text "Progress is"
+	line "natural, as I"
 	cont "I naturally"
 	cont "beat you."
 	
-	para "Ah? You have some"
+	para "Oh? You have some"
 	line "reinforcements?"
-	cont "How cute. I'll"
-	cont "dispatch you too!"
 	done
+
 
 CamdenWinText:
 	text "Impressive to"
@@ -411,13 +411,18 @@ CamdenWinText:
 	done
 
 CamdenLeavingText:
+	text_high
+    text " Camden: "
+	next
+	text_start 
+	
 	text "We will be back"
 	line "later. Progress"
 	
 	para "isn't all bad,"
 	line "look at this pro-"
-	cont "totype Silph is"
-	cont "working on."
+	para "totype Silph is"
+	line "working on."
 	done
 
 CamdenExitMovement:
@@ -447,57 +452,49 @@ PlayerMovesToShrine:
 
 	
 KurtExplainsGSBallText:
-	text "Only recently did"
-	line "steel types take"
-	cont "over Johto."
-	
-	para "Skarmory & Forr-"
-	line "etress were so"
-	para "rare, and magne-"
-	line "mite kept near"
-	cont "Olivine Port."
-	
-	para "Now, Silph uses"
-	line "steel types for"
-	cont "everything!"
-	
-	para "Just look at what"
-	line "Steel types do to"
-	cont "the forest!"
-	
-	para "They nearly"
-	line "destroyed this"
-	cont "artifact..."
+	text_high
+    text " Kurt: "
+	next
+	text_start 
+	text "When did progress"
+	line "at all costs bec-"
+	para "come Johto's"
+	line "religion?"
+
+	para "Just look, they"
+	line "nearly destroyed"
+	cont "this artifact."
 		
 	para "I wish we could"
 	line "go back in time"
-	cont "and make it so"
-	cont "they never were."
+	para "to keep Johto"
+	line "from modernizing…"
 	done
+
 	
 KurtExplainsGSBallText2:
+	text_high
+    text " Kurt: "
+	next
+	text_start 
 	text "<PLAYER>!"
 	line "This is the GS"
-	cont "Ball, used to"
-	cont "summon Celebi."
-	
-	para "It just needs an"
-	line "inscription. If"
-	para "I had a copy of"
-	line "ancient, holy"
-	cont "words, I could"
-	para "restore it to"
-	line "summon Celebi."
+	cont "Ball!"
+
+	para "With the right"
+	line "inscription, we"
+	cont "can call Celebi."
 	
 	para "<PLAYER>, you"
 	line "need to go to"
 	para "the Ruins of"
-	line "Alph, and then"
-	cont "we can summon"
-	para "Celebi to go"
-	line "back in time!"
+	line "Alph, get a copy"
+	para "of the ancient,"
+	line "holy words, so"
+	para "we can summon"
+	line "Celebi to go"
+	cont "back in time!"
 	done
-
 
 WantToHeal:
 	text "Did you battle"
@@ -505,21 +502,16 @@ WantToHeal:
 	cont "heal your #mon."
 	done
 
-
 IlexHealedPokemon:
 	text "Your #mon"
 	line "were healed!"
 	done
 
 EngineerCamdenScript: ;shouldn't be able to access this
-	faceplayer
+
 	done
 	
 GSBallScript: ;shouldn't be able to access this
-	opentext
-	writetext GSBallText
-	waitbutton
-	closetext
 	done
 	
 GSBallText: ;shouldn't be able to access this
@@ -684,34 +676,38 @@ YesTimeTravelText:
 RuinsOfAlphText:
 	text "The GS Ball needs"
 	line "an inscription"
-	cont "of ancient wri-"
-	cont "ting. I need you"
-	cont "to get a sample"
-	cont "from the Ruins"
-	cont "of Alph."
+	para "of ancient wri-"
+	line "ting. I need a"
+	para "sample from the"
+	line "Ruins of Alph."
 	done
 
 GotTheUnownReport:
+	text_high
+    text " Kurt: "
+	next
+	text_start 
 	text "Ah, <PLAYER>!"
 	line "Great work."
 	
 	para "Let's ask Celebi"
 	line "to take us back"
-	cont "in time to stop"
-	cont "steel types from"
-	cont "entering Azalea."
+	para "in time to keep"
+	line "Johto from "
+	cont "modernizing."
 	
 	para "I'll inscribe"
-	line "the ball with"
-	cont "the ancient"
-	cont "markings..."
+	line "the words…"
 	done
+
 	
 InsertingGSBallText:
-	text "Perfect. The ball"
-	line "goes onto the"
-	cont "stage of the"
-	cont "shrine, like so."
+	text_high
+    text " Kurt: "
+	next
+	text_start 
+	text "It goes on the"
+	line "stage just so..."
 	done
 
 IlexCelebiMovement:
@@ -729,15 +725,18 @@ IlexRivalWalksToShrine:
 
 
 WhatIsNaturalText:
-	text "Celebi: An"
-	line "unnatural inv-"
-	cont "ention destroys"
+	text_high
+    text " Celebi: "
+	next
+	text_start 
+	text "An unnatural inv-"
+	line "ention destroys"
 	cont "my forest."
 	
 	para "If you decide"
 	line "to help me, it"
-	cont "will take you"
-	cont "to unexpected"
+	para "will take you"
+	line "to unexpected"
 	cont "places."	
 	done
 
@@ -758,6 +757,10 @@ PlayerMovesToShrine2:
 	step_end	
 
 IlexRivalWhatDoing:
+	text_high
+    text " <RIVAL>: "
+	next
+	text_start 
 	text "Hey, what are"
 	line "you doing?"
 	done
@@ -768,24 +771,31 @@ KurtMovesRival:
 	step_end
 
 KurtStayOutOfThis:
+	text_high
+    text " Kurt: "
+	next
+	text_start 
 	text "Stay out of this."
 	
-	para "We're going to"
-	line "get rid of"
-	cont "steel types. It"
-	cont "is unnatural to"
-	cont "destroy so many"
-	cont "trees!"
+	para "We’re following"
+	line "Celebi, stopping"
+	para "the unnatural"
+	line "technologies!"
 	done
+
 	
 RivalRespondsToKurt:
-	text "Eh? Silph's tech"
-	line "is the only way"
-	cont "out of here."
-
-	para "I won't let you"
-	line "do that!"
+	text_high
+    text " <RIVAL>: "
+	next
+	text_start 
+	text "Preposterous!"
+	line "Celebi looked at"
+	para "me! And I have an"
+	line "actual plan."
+	cont "I’ll show you!"
 	done
+
 
 RivalWalksToYou:
 	step_up
@@ -803,14 +813,17 @@ IlexForestLossText:
 	done
 
 RivalLeavesHumiliated:
+	text_high
+    text " <RIVAL>: "
+	next
+	text_start 
 	text "Hmph."
 	
-	para "You might have"
-	line "beaten me this"
-	cont "time, but I'm"
-	cont "only getting str-"
-	cont "onger."
+	para "You beat me now,"
+	line "but I'm only"
+	cont "getting better."
 	done
+
 	
 IlexRivalLeavesMovement:
 	step_down
@@ -823,15 +836,15 @@ IlexRivalLeavesMovement:
 	step_end
 
 IlexKurtBackToIt:
-	text "Now that he is"
-	line "gone, let's go"
-	cont "back to the"
-	cont "shrine."
+	text_high
+    text " Kurt: "
+	next
+	text_start 
+	text "Back to it, then."
 	
 	para "Celebi!"
 	line "Are you there?"
 	done
-	
 
 IlexOfficer2InvestigationText:
 	text "Sorry. Can't"
@@ -842,6 +855,6 @@ IlexOfficer2InvestigationText:
 	
 	para "There's some"
 	line "noise about a"
-	cont "troublesome group"
-	cont "in Goldenrod."
+	para "troublesome group"
+	line "in Goldenrod."
 	done

@@ -79,7 +79,7 @@ Gauldenrod_Saddle_AccessCallback:
 	endcallback
 
 GauldenrodNPC1Script:
-	checkevent EVENT_BEAT_BOBESH
+	checkevent EVENT_BEAT_BOBESH_STADIUM
 	iftrue_jumptextfaceplayer .Text1
 	jumpthistextfaceplayer
 
@@ -104,7 +104,7 @@ GauldenrodNPC1Script:
 
 
 GauldenrodNPC2Script:
-	checkevent EVENT_BEAT_BOBESH
+	checkevent EVENT_BEAT_BOBESH_STADIUM
 	iftrue_jumptextfaceplayer .Text2
 	jumpthistextfaceplayer
 
@@ -120,7 +120,7 @@ GauldenrodNPC2Script:
 	done 
 
 GauldenrodNPC3Script:
-	checkevent EVENT_BEAT_BOBESH
+	checkevent EVENT_BEAT_BOBESH_STADIUM
 	iftrue_jumptextfaceplayer .Text3
 	jumpthistextfaceplayer
 
@@ -139,7 +139,7 @@ GauldenrodNPC3Script:
 	done 
 	
 GauldenrodNPC4Script:
-	checkevent EVENT_BEAT_BOBESH
+	checkevent EVENT_BEAT_BOBESH_STADIUM
 	iftrue_jumptextfaceplayer .Text4
 	jumpthistextfaceplayer
 
@@ -158,7 +158,7 @@ GauldenrodNPC4Script:
 	done 
 
 GauldenrodNPC5Script:
-	checkevent EVENT_BEAT_BOBESH
+	checkevent EVENT_BEAT_BOBESH_STADIUM
 	iftrue_jumptextfaceplayer .Text5
 	jumpthistextfaceplayer
 

@@ -797,20 +797,20 @@ PryceWatchKurtPleaseText1:
 	text_start
 	text "<PLAYER>, please"
 	line "look after Kurt."
-	cont "He means well."
 	
-	para "The world's been"
+	para "The world's"
 	line "changing fast, so"
-	para "not everyone sees"
-	line "eye-to-eye with"
-	para "him - even those"
-	line "he is closest to."
+	cont "not everyone sees"
+	para "eye-to-eye with"
+	line "him - even those"
+	cont "he’s closest to."
 	
-	para "Let's just say he"
-	line "took it very hard"
-	para "when your Dad"
-	line "moved away."
+	para "He"
+	line "took it hard"
+	cont "when your Dad"
+	cont "moved away."
 	done
+
 
 PryceWatchKurtPleaseText3:
 	text_high
@@ -834,12 +834,15 @@ PryceWatchKurtPleaseText4:
 	text_start
 	text "He's not entirely"
 	line "wrong, mind you."
-	para "The other Gym"
-	line "Leaders should"
-	para "slow down, given"
-	line "the path they're"
-	cont "headed down."
+	
+	para "Johto could use "
+	line "more people who "
+	para "care about their"
+	line "community's leg-"
+	cont "acy, not their"
+	cont "own legacy."
 	done
+
 
 PrycePokemonText:
 	text_high

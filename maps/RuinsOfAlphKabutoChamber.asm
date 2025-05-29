@@ -111,8 +111,8 @@ RuinsScientistMovesToYou:
 Scientist_TakeThisReport:
 	text "You solved the"
 	line "mosaic! We have"
-	cont "been trying to"
-	cont "solve it for"
+	para "been trying to"
+	line "solve it for"
 	cont "years."
 	
 	para "As a token of"
@@ -128,16 +128,16 @@ ScientistDescribesUnownReport:
 	
 	para "Of course, the"
 	line "Ruins are so fra-"
-	cont "gile that no one"
-	cont "is allowed in the"
+	para "gile that no one"
+	line "is allowed in the"
 	cont "main chamber."
 	done
 	
 Scientist_TakeThisUnown:
 	text "Oh, you have a"
 	line "#dex. Would"
-	cont "you like to have"
-	cont "an Unown?"
+	para "you like to have"
+	line "an Unown?"
 	
 	para "We have dozens"
 	line "of them at the"
@@ -155,8 +155,8 @@ ScientistText_PartyAndBoxFull:
 ScientistText_TakeCareOfIt:
 	text "Take care of it!"
 	line "I hear that some"
-	cont "people find them"
-	cont "fascinating."
+	para "people find them"
+	line "fascinating."
 	done
 
 ScientistText_GotUnown:
@@ -236,7 +236,7 @@ MapRuinsofAlphKabutoChamberSignpost5Script:
 	special MapCallbackSprites_LoadUsedSpritesGFX
 	end
 
-RuinsOfAlphKabutoChamberReceptionistText:
+RuinsOfAlphKabutoChamberReceptionistText: ; unused? 
 	text "Welcome to this"
 	line "chamber."
 

@@ -56,7 +56,7 @@ New Colors
 Debug Room (Spoiler)
 
 Example format below: 
-![seafoam-islands](screenshots/seafoam-islands.png)
+![seafoam-islands](screenshots/seafoam-islands.png) ; (screenshots/gameplay/<file_name>.png)
 
 
 ## Spotify Playlist

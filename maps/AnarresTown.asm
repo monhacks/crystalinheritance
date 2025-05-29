@@ -29,9 +29,9 @@ AnarresTown_MapScriptHeader:
 	object_event  5,  9, SPRITE_BLACK_BELT, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, 		OBJECTTYPE_SCRIPT, 0, AnarresNPC1Script, -1 ; todo 
 	object_event 17, 14, SPRITE_BLACK_BELT, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, 		OBJECTTYPE_SCRIPT, 0, AnarresNPC2Script, -1 
 	object_event 12,  6, SPRITE_BUG_MANIAC, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, 		OBJECTTYPE_SCRIPT, 0, AnarresNPC3Script, -1 
-	object_event 15, 13, SPRITE_SAGE, 		SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, 		OBJECTTYPE_SCRIPT, 0, AnarresNPC4Script, -1 
+	object_event 15, 13, SPRITE_SAGE, 		SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, 		OBJECTTYPE_COMMAND, jumptextfaceplayer, AnarresNPC4Text, -1 
 ; blocker
-	object_event 11, 15, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, 	OBJECTTYPE_COMMAND, 0, AnarresNPC5Text, EVENT_BEAT_TAMMY
+	object_event 11, 15, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, 	OBJECTTYPE_COMMAND, jumptextfaceplayer, AnarresNPC5Text, EVENT_BEAT_TAMMY
 ; others 
 	fruittree_event  6,  3, FRUITTREE_AZALEA_TOWN, PNK_APRICORN, PAL_NPC_RED
 
