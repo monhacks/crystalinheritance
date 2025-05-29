@@ -46,17 +46,17 @@ GoldenrodCity_MapScriptHeader:
 
 	def_object_events
 	; tutor 
-	object_event 16, 22, SPRITE_POKEFAN_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MoveTutor, -1 ; no changes
+	object_event 16, 22, SPRITE_POKEFAN_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MoveTutor, -1
 	; roadblock
 	object_event  9, 16, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 1, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodCityOfficerText, EVENT_FOUGHT_RADIO_TOWER_RIVAL ; done
 	; npcs 
-	object_event 27,  8, SPRITE_CUTE_GIRL, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 2, -1, -1, 0, 			OBJECTTYPE_SCRIPT, 0, GoldenrodCityGymLassText, -1 ; todo 
-	object_event 38, 24, SPRITE_BEAUTY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, 						OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodCityBeautyText, -1 ; ok 
-	object_event 11, 18, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, 	OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodCityPokefanMText, -1 ; ok 
-	object_event 38, 17, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 2, -1, -1, 0, 			OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodCityYoungster1Text, -1 ; ok 
-	object_event 16, 16, SPRITE_BATTLE_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GoldenrodCityCooltrainerF1Script, -1  ; todo 
-	object_event 25, 17, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, 			OBJECTTYPE_SCRIPT, 0, GoldenrodCityYoungster2Script, -1 ; todo 
-	object_event 20, 10, SPRITE_GRAMPS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1,PAL_NPC_GREEN, 	OBJECTTYPE_SCRIPT, 0, GoldenrodCityGramps1Script, -1 ; todo 
+	object_event 27,  8, SPRITE_CUTE_GIRL, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 2, -1, -1, 0, 			OBJECTTYPE_SCRIPT, 0, GoldenrodCityGymLassText, -1
+	object_event 38, 24, SPRITE_BEAUTY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, 						OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodCityBeautyText, -1
+	object_event 11, 18, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, 	OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodCityPokefanMText, -1 
+	object_event 38, 17, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 2, -1, -1, 0, 			OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodCityYoungster1Text, -1
+	object_event 16, 16, SPRITE_BATTLE_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GoldenrodCityCooltrainerF1Script, -1
+	object_event 25, 17, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, 			OBJECTTYPE_SCRIPT, 0, GoldenrodCityYoungster2Script, -1 
+	object_event 20, 10, SPRITE_GRAMPS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1,PAL_NPC_GREEN, 	OBJECTTYPE_SCRIPT, 0, GoldenrodCityGramps1Script, -1 
 	object_event 15, 27, SPRITE_GRAMPS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, 0,				OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodCityGrampsText, -1 
 
 	; fruittree
@@ -144,8 +144,6 @@ GoldenrodCityCooltrainerF1Script:
 GoldenrodCityYoungster2Script:
 	faceplayer
 	opentext
-	checktime (1 << EVE) | (1 << NITE)
-	iftrue_jumpopenedtext GoldenrodCityYoungster2Text
 	jumpopenedtext GoldenrodCityYoungsterDayText
 
 GoldenrodCityPokefanMText:
@@ -192,9 +190,16 @@ GoldenrodCityYoungsterDayText:
 	cont "paintings."
 	done
 
-GoldenrodCityYoungster2Text:
-    text "..." ; todo 
-    done
+GoldenrodCityGramps1Script:
+	jumpthistextfaceplayer
+
+	text "Whitney's radio"
+	line "asks nothing of"
+	para "the listener!"
+	line "How can that be"
+	para "the basis of a"
+	line "moral life?"
+	done
 
 GoldenrodCityLassText:
 	text "Whitney has lots"

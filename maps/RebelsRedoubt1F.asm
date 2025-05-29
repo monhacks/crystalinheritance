@@ -17,7 +17,6 @@ RebelsRedoubt1F_MapScriptHeader: ; need a callback a la ruins of alph
 	def_bg_events
 
 
-
 	def_object_events
 	object_event 2, 3, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RedoubtKnockOffTutorScript, -1
 	object_event  3,  3, SPRITE_BALL_CUT_FRUIT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_COMMAND, jumptext, RR_1F_BallText, EVENT_LISTENED_TO_KNOCK_OFF_INTRO

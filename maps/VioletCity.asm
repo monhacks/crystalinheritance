@@ -34,22 +34,22 @@ VioletCity_MapScriptHeader:
 
 
 	def_object_events
-	object_event 28, 32, SPRITE_CUTE_GIRL, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletCityLassText, -1 ; 
-	object_event 26, 18, SPRITE_ACE_TRAINER_M, SPRITEMOVEDATA_WANDER, 2, 1, -1, 0, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletCityCooltrainerM1Text, -1 ;
-	object_event 26, 18, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_WANDER, 2, 1, -1, 0, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletCityCooltrainerFText, -1 ;
-	object_event 17, 24, SPRITE_GRAMPS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletCityGrampsText, -1 ;
-	object_event  5, 22, SPRITE_ACE_TRAINER_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletCityCooltrainerM2Text, -1 ;
-	object_event 26, 20, SPRITE_FAT_GUY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletCityFisherText, -1 ;
+	object_event 28, 32, SPRITE_CUTE_GIRL, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_GREEN, 					OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletCityLassText, -1 
+	object_event 26, 18, SPRITE_ACE_TRAINER_M, SPRITEMOVEDATA_WANDER, 2, 1, -1, 0, 0, 							OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletCityCooltrainerM1Text, -1 
+	object_event 26, 18, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_WANDER, 2, 1, -1, 0, 0, 							OBJECTTYPE_SCRIOT, 0, VioletCityCooltrainerFScript, -1 ; todo 
+	object_event 17, 24, SPRITE_GRAMPS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, 0, 						OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletCityGrampsText, -1 ;
+	object_event  5, 22, SPRITE_ACE_TRAINER_M, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 2, -1, -1, PAL_NPC_GREEN, 	OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletCityCooltrainerM2Text, -1 ;
+	object_event 26, 20, SPRITE_FAT_GUY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, 				OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletCityFisherText, -1 ;
+	; road blocks 
 	object_event  6, 16, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletCityImmigrationText, -1; ROUTE 36 
 	object_event  7, 16, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletCityImmigrationText, -1; ROUTE 36
 	object_event 34, 30, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletCityImmigrationText, -1; ; ROUTE 31 
 	object_event 34, 31, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletCityImmigrationText, -1; ; ROUTE 31
  	object_event 12, 31, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletCityImmigrationText, -1; 	ROUTE 32 
 	object_event 13, 31, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletCityImmigrationText, -1; 	ROUTE 32 
-
 	object_event 23, 10, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletCityTowerBlockingText, EVENT_BEAT_FALKNER; 
 	object_event 24, 10, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletCityTowerBlockingText, EVENT_BEAT_FALKNER; 	
-
+	; others 
 	cuttree_event  8, 33, EVENT_VIOLET_CITY_CUT_TREE
 	smashrock_event 16, 34	
 	smashrock_event 16, 35	
@@ -57,7 +57,6 @@ VioletCity_MapScriptHeader:
 	itemball_event 10,  6, PP_MAX, 1, EVENT_VIOLET_CITY_PP_UP
 	itemball_event 35, 12, RARE_CANDY, 1, EVENT_VIOLET_CITY_RARE_CANDY
 
-	object_const_def
 
 
 VioletCityFlyPoint:
@@ -67,36 +66,44 @@ VioletCityFlyPoint:
 VioletCityLassText:
 	text "The drought's so"
 	line "bad, Bellsprout"
-	cont "roots couldn't"
-	cont "hold the tower!"
+	para "roots couldn't"
+	line "hold the tower!"
 	para "Thank goodness"
-	line "Falkner renovated"
-	cont "it in time."
+	line "it was renovated."
 	done
 
 VioletCityCooltrainerM1Text:
 	text "People think"
 	line "Falkner's self-"
-	cont "made, but he"
-	para "started with his"
-	line "dad's #mon."
+	para "made, but he"
+	line "started with his"
+	cont "dad's #mon."
 	done
 
-VioletCityCooltrainerFText:
+VioletCityCooltrainerFScript:
+	checkevent EVENT_BEAT_BOBESH
+	iftrue_jumptextfaceplayer .Text1
+	jumpthistextfaceplayer
+
 	text "They want Bronz-"
 	line "ong atop the tower"
-	cont "for rain dance."
-	para "But it's not"
-	line "working. Seems"
-	cont "they're just"
-	cont "hurting it..."
+	para "for rain dance."
+	line "But I think it's"
+	para "going to be a 
 	done
+
+.Text1: 
+	text "I haven't heard"
+	line "the Bronzong in"
+	para "some time. 
+	done 
+
 
 VioletCityGrampsText:
 	text "Falkner pushed"
 	line "out the sages to"
-	cont "build his weather"
-	cont "tower."
+	para "build his weather"
+	line "tower."
 	done
 
 VioletCityFisherText:
@@ -111,48 +118,43 @@ VioletCityFisherText:
 VioletCityCooltrainerM2Text:
 	text "Falkner's been"
 	line "trying to fix the"
-	cont "drought forever."
-	para "He raised alarm"
-	line "long before it"
-	cont "was mainstream."
+	para "drought forever."
+	line "He raised alarm"
+	para "long before it"
+	para "was mainstream."
 	done
 
 VioletCitySignText:
 	text "Violet City"
-
-	para "The City of"
-	line "Nostalgic Scents"
+	line "Conserve Water!"
 	done
 
 VioletGymSignText:
 	text "Violet City"
 	line "#mon Gym"
-	cont "Leader: Falkner"
 
-	para "The Elegant Master"
-	line "of Flying #mon"
+	para "Closed until"
+	line "further notice"
 	done
 
 SproutTowerSignText:
 	text "Violet Weather"
 	line "Institute"
-
 	done
 
 EarlsPokemonAcademySignText:
-	text "#mon Academy:"
+	text "#mon Academy"
 	
 	para "Management by"
 	line "Elder Li"
-
 	done
 
 
 VioletCityImmigrationText:
 	text "We limit entrance"
 	line "to Violet City "
-	cont "due to the low"
-	cont "water levels."
+	para "due to the low"
+	line "water levels."
 	
 	para "Only trainers who"
 	line "can contribute"
@@ -163,8 +165,8 @@ VioletCityImmigrationText:
 VioletCityTowerBlockingText:
 	text "Sprout Tower is"
 	line "only accessible"
-	cont "with Elder Li's"
-	cont "blessing."
+	para "with Elder Li's"
+	line "blessing."
 	done
 
 VioletTombstoneText:
