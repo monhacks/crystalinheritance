@@ -1,9 +1,8 @@
 	db "Scratch Cat@" ; species name
 	dw 104, 90 ; height, width
 
-	db   "It loves things"
-	next "that sparkle. When"
-	next "it sees a shiny"
-	page "object, the gold"
-	next "coin on its head"
-	next "shines too.@"
+	db   "During they day,"
+	next "they may raid"
+	next "Noctowl nests"
+	page "looking for shiny"
+	next "objects.@"

@@ -191,8 +191,8 @@ GauldenrodNPC6Script:
 GauldenrodNPC6Text:
 	text "I stay away from"
 	line "the stadium. It"
-	cont "gets people so"
-	cont "riled up."
+	para "gets people so"
+	line "riled up."
 	done
 
 GauldenrodNPC7Script:
@@ -202,7 +202,7 @@ GauldenrodNPC7Text:
 	text "I always forget my"
 	line "worries watching"
 	cont "some battles at"
-	cont "the stadium."
+	line "the stadium."
 	done
 
 GauldenrodNPC8Script:
@@ -211,10 +211,10 @@ GauldenrodNPC8Script:
 GauldenrodNPC8Text:
 	text "The Tower has work"
 	line "for all sorts of"
-	cont "people. After my"
-	cont "dad broke his leg,"
-	cont "they gave him a"
-	cont "job cleaning"
+	para "people. After my"
+	line "dad broke his leg,"
+	para "they gave him a"
+	line "job cleaning"
 	cont "statues."
 	done
 
@@ -222,7 +222,7 @@ GauldenrodTowerSign:
 	jumptext GauldenrodTowerSignText
 
 GauldenrodTowerSignText:
-	text "Gauldenrod Tower"
+	text "Gauldenrod Tower:"
 	line "Reaching for the"
 	cont "Sky"
 	done
@@ -255,13 +255,8 @@ AmosWantedSign:
 
 	text "WANTED: This man"
 	line "is wanted for"
-	cont "crimes against"
-	cont "the emperor."
-
-	para "If you see him,"
-	line "please notify a"
-	cont "brigader"
-	cont "immediately."
+	para "crimes against"
+	cont "the emperor!"
 
 	para "Known alias:"
 	line "Amos."
@@ -397,54 +392,45 @@ GauldenrodHisuiTraderRememberText:
 GauldenrodHisuiTraderText:
 	text "Hello! Rare"
 	line "#mon! Gifts"
-	cont "from Hisui. Which"
-	cont "would you like?"
+	para "from Hisui. Which"
+	line "would you like?"
 	done
 
 GauldenrodHisuiTraderLuxioText:
 	text "Ah, Luxio!"
 	line "Its static dis-"
-	cont "charge can light"
-	cont "up any DARK area."
+	para "charge can light"
+	line "up the dark!"
 	done
 
 GauldenrodHisuiTraderRoseliaText:
-	text "Roselia, so love-"
-	line "ly! This Grass and"
-	cont "Poison-type will"
-	cont "be a thorn in the"
-	cont "side of your"
-	cont "rivals!"
+	text "Roselia, lovely!"
+	line "It'll be a thorn"
+	para "in your foe's"
+	line "side!"
 	done
 
 GauldenrodHisuiTraderStaraviaText:
 	text "Staravia, excel-"
-	line "lent! If you get"
-	cont "CLOSE enough, it"
-	cont "will show you how"
-	cont "BRAVE it can be!"
+	line "lent! One of the"
+	cont "bravest birds!"
 	done
 	
 GauldenrodHisuiTraderVespiquenText:
-	text "Oh Vespiquen!"
-	line "There's quite a"
-	cont "BUZZ about its"
-	cont "honey!"
+	text "Oh, Vespiquen!"
+	line "There's a buzz"
+	cont "about its honey!"
 	done
 
 GauldenrodHisuiTraderPartyFullText:
 	text "Oh! Your party is"
-	line "full. Please make"
-	cont "room and come"
-	cont "back if you'd like"
-	cont "a Hisui #MON."
+	line "full."
 	done
 
 GauldenrodHisuiTraderNoThanksText:
-	text "No problem! Feel"
-	line "free to come back"
-	cont "if you change"
-	cont "your mind!"
+	text "No problem! Come"
+	line "back if you cha-"
+	cont "nge your mind!"
 	done
 
 GauldenrodBobeshScene:

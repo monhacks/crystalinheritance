@@ -1,9 +1,8 @@
 	db "Bagworm@" ; species name
 	dw 311, 2770 ; height, width
 
-	db   "Usually found"
-	next "hanging on to a"
-	next "fat tree trunk. It"
-	page "shoots out bits of"
-	next "its shell when it"
-	next "sees action.@"
+	db   "In iron-rich"
+	next "soils, pineco will"
+	next "develop a metallic"
+	page "shell and evolve"
+	next "into Forretress.@"

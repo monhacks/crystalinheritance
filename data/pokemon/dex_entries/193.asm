@@ -1,9 +1,8 @@
 	db "Clear Wing@" ; species name
 	dw 311, 840 ; height, width
 
-	db   "It can see in all"
-	next "directions without"
-	next "moving its big"
-	page "eyes, helping it"
-	next "spot attackers and"
-	next "food right away.@"
+	db   "Genetic analysis"
+	next "and fossils sug-"
+	next "gest that Yanma's"
+	page "ancestors were"
+	next "part Dragon.@"

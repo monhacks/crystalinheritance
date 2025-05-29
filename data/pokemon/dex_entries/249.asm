@@ -1,9 +1,9 @@
 	db "Diving@" ; species name
 	dw 1701, 4760 ; height, width
 
-	db   "It has an incred-"
-	next "ible ability to"
-	next "calm raging sto-"
-	page "rms. It is said"
-	next "that Lugia appears"
-	next "when storms start.@"
+	db   "Famously, a lost"
+	next "sailor on a life-"
+	next "boat said that he"
+	page "saw an image of"
+	next "Lugia guide him"
+	next "to shore.@"

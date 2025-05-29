@@ -1,9 +1,10 @@
 	db "Mushroom@" ; species name
 	dw 303, 650 ; height, width
 
-	db   "When nothing's"
-	next "left to extract"
-	next "from the bug, the"
-	page "mushrooms on its"
-	next "back leave spores"
-	next "on the bug's egg.@"
+	db   "The mushroom on"
+	next "its back is packed"
+	next "with nutrients."
+	page "The mushroom will"
+	next "grow back if"
+	next "damaged.@"
+	

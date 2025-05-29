@@ -1,9 +1,8 @@
 	db "ToxicMouth@" ; species name
 	dw 403, 979 ; height, width
 
-	db   "The toxin in"
-	next "its mouth can be"
-	next "made into a tonic"
-	page "when diluted to"
-	next "treat many"
-	next "ailments.@"
+	db   "When they see the"
+	next "color pink, their"
+	next "blades portrude"
+	page "and venom drips"
+	next "like a faucet.@"
