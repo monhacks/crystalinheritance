@@ -66,41 +66,63 @@ HollisExitMovement:
 	step_end
 
 TammyDialogue1:
-	text "Tammy: Hollis,"
-	line "don't you see? The"
-	cont "Pineco get worse"
-	cont "and worse."
+	text_high
+    text " Tammy: "
+	next
+	text_start
+	text "The pineco are an"
+	line "infestation! The"
+	para "predators from"
+	line "the north aren’t"
+	para "here, for some"
+	line "reason. The Holt"
+	cont "is unbalanced!"
 	done
 
 HollisDialogue1:
-	text "Hollis: Of course"
-	line "I see. But -- "
-
-	para "The forest is"
-	line "too sensitive!"
-	
-	para "We can't afford"
-	line "any mistakes."
+	text_high
+    text " Hollis: "
+	next
+	text_start
+	text "Of course I see."
+	line "The forest is"
+	para "too sensitive!"
+	line "We can't afford"
+	para "any mistakes."
+	line "That means your"
+	line "invention, by"
+	cont "the way."
 	done
+
 
 TammyDialogue2:
-	text "Tammy: The mist-"
-	line "ake is not"
-	cont "adapting!"
+	text_high
+    text " Tammy: "
+	next
+	text_start
+	text "The mistake is"
+	line "not adapting!"
 
-	para "Just admit your"
-	line "mistake. You're"
-	cont "human, like the"
-	cont "rest of us."
+	para "You're human,"
+	line "like everyone"
+	cont "else."
 	done
 
+
 HollisDialogue2:
-	text "Hollis: Such"
-	line "disrespect!"
+	text_high
+    text " Hollis: "
+	next
+	text_start
+	text "Such disrespect!"
 	done
 
 TammyDialogue3:
-	text "Tammy: Urrg!"
+	text_high
+    text " Tammy: "
+	next
+	text_start
+	text "Urrg!"
 	done
 
 AnarresHoltGateTammyScript:
@@ -147,19 +169,11 @@ AnarresHoltGateNPCScript:
     end
 
 AnarresHoltGateNPCText:
-    text "When the Hisuians"
-    line "visited, they"
-    cont "brought the most"
-    cont "incredible"
-    cont "#mon!"
-    para "I saw one that"
-    line "looked like a"
-    cont "Voltorb, but made"
-    cont "of wood!"
-    para "I wonder what"
-    line "other mystical"
-    cont "#mon exist in"
-    cont "far-off regions?"
+    text "The Hisuians had"
+	line "such mystical"
+	cont "#mon!"
+    para "I saw a wooden"
+	line "Voltorb!"
     para "Oh! Speaking of"
     line "mystical things,"
     cont "take this!"

@@ -144,32 +144,26 @@ GauldenrodUndergroundNPC4Text:
 	text "I didn't know we"
 	line "had more help."
 	
-	para "We're digging a"
-	line "tunnel underneath"
-	cont "the tower in case"
-	cont "Sandra ever needs"
-	cont "a quick escape."
-	
-	para "But I think we"
+	para "We dug a tunnel"
+	line "for Sandra to "
+	para "escape, but we"
 	line "were too late."
 	done
 
+
 GauldenrodUndergroundNPC5Text:
-	text "Hey, we're getting"
-	line "word that some-"
-	cont "thing is going on"
+	text "Hey, Some-"
+	line "thing is going on"
 	cont "at the stadium!"
-	
-	para "We have to stop"
-	line "Bobesh!"
 	done
+
 	
 GauldenrodUndergroundNPC5Text2:
 	text "You were pretty"
 	line "tough. We could"
-	cont "use someone like"
-	cont "you."
+	cont "use you."
 	done
+
 
 GauldenrodUndergroundNPC5Movement:
 	step_down

@@ -103,37 +103,42 @@ GauldenrodTower4FSandraScript:
 	end
 
 SandraIntroText:
-	text "Sandra: Why"
-	line "have you come"
-	cont "to me?"
+	text_high
+    text " Sandra: "
+	next
+	text_start
+	text "Why are you here?"
+	line "Seeking Ho-Oh?"
+
+	para "I'm afraid he has"
+	line "not perched here"
+	cont "in some time."
 	
 	para "..."
 	
-	para "Ah, you seek"
-	line "entrance to"
-	cont "Trader's Landing"
-	cont "to stop steel"
-	cont "types from"
-	cont "entering Johto."
-
-	para "Tell me, is it the"
-	line "steel types or"
-	cont "something else"
-	cont "that causes"
-	cont "destruction?"
+	para "Ah, you seek to"
+	line "stop outside"
+	para "technologies from"
+	line "entering Johto."
+	
+	para "Tell me, what is"
+	line "the most destruc-"
+	cont "tive innovation?"
 
 	para "Ha, you will learn"
 	line "soon enough."
-
-	para "Would you like"
-	line "a lesson?"
 	done
+
 
 SandraChallengeText:
+	text_high
+    text " Sandra: "
+	next
+	text_start
 	text "Show me your"
-	line "connection with"
-	cont "your #mon!"
+	line "connection!"
 	done
+
 
 SandraWinText:
 	text "Magnificent"
@@ -141,57 +146,79 @@ SandraWinText:
 	done
 
 SandraAfterText:
+	text_high
+    text " Sandra: "
+	next
+	text_start
 	text "Take this."
 	
 	para "It's the Sonder"
-	line "badge. It should"
-	cont "remind you that"
-	para "everyone deserves"
-	line "dignity."
-	
-	para "With its blessing"
-	line "you can use the"
-	cont "HM Strength."
-	
-	para "Lastly, please"
+	line "badge. It reminds"
+	cont "you of everyone's"
+	cont "dignity."
+
+	para "There's an inter-"
+	line "dependence from"
+	cont "me to you." 
+
+	para "Also, please"
 	line "accept this Rain-"
-	cont "bow wing."
+	cont "bow Wing."
 	
 	para "It is a feather of"
 	line "the mighty Ho-Oh."
-	
-	para "It signifies that"
-	line "you are pure of"
-	cont "heart."
+
+	para "I used to award"
+	line "them to youth who"
+	para "carried an elder"
+	line "up to the Alpine"
+	cont "Lakes."
 	done
 
 SandraRefusedText:
+	text_high
+    text " Sandra: "
+	next
+	text_start
 	text "I see. Perhaps"
 	line "you're not ready"
 	cont "yet."
 	done
 
 BrigaderInterruptText:
-	text "Brigader:"
-	line "Sandra! You must"
-	cont "come with us, now!"
+	text_high
+    text " Brigader: "
+	next
+	text_start
+	text "Come with us!"
 	done
 
+
 SandraResponseText:
-	text "Sandra:"
-	line "What's this?"
+	text_high
+    text " Sandra: "
+	next
+	text_start
+	text "What's this?"
 	done
 
 BrigaderExplanationText:
-	text "Brigader:"
-	line "You'll see!"
+	text_high
+    text " Brigader: "
+	next
+	text_start
+	text "You'll see!"
 	
 	para "General Bobesh"
-	line "summones you!"
+	line "summons you!"
 	done
 
 SandraAgreementText:
-	text "Sandra:"
+	text_high
+    text " Sandra: "
+	next
+	text_start
+
 	line "Very well."
 	
 	para "I have wanted to"
@@ -200,37 +227,39 @@ SandraAgreementText:
 	done
 
 AmosText:
-	text "Amos: Excuse me,"
+	text_high
+    text " Amos: "
+	next
+	text_start
+	
+	text "Excuse me,"
 	line "have you seen"
 	cont "Sandra?"
 	
 	para "..."
 
-	para "Oh, you were just"
+	para "Oh, you were"
 	line "with her before"
-	cont "the brigaders"
-	cont "took her away to"
+	cont "they"
+	cont "took her to"
 	cont "the stadium?"
-
-	para "Then I was just a"
-	line "little too late."
 
 	para "Say, you look"
 	line "familiar."
 
 	para "Oh, right! You"
-	line "were in Anarres"
-	cont "Town, interrupting"
+	line "were interrupting"
 	cont "my conversation"
 	cont "with Hollis."
 	
 	para "..."
 
-	para "Well, I'd better"
-	line "get out of here,"
-	cont "before any"
-	cont "brigaders find me."
+	para "I'd better"
+	line "get out,"
+	para "before any brig-"
+	line "aders find me."
 	done
+
 
 BrigaderApproachMovement:
 	step_left
@@ -312,33 +341,27 @@ GauldenrodClefairyText:
 	done
 
 AdrinnaGauldenrodTowerText:
-	text "Adrinna: So you're"
-	line "the one my bird-"
-	cont "ies are all"
-	cont "worked up over."
+	text_high
+    text " Adrinna: "
+	next
+	text_start
+	text "My spies are all"
+	line "worked up about"
+	para "you. My name is"
+	line "General Adrinna."
 
-	para "Don't be alarmed,"
-	line "I'm not here to"
-	cont "fight."
+	para "I'm not here to"
+	line "fight."
 
-	para "My name is Gen-"
-	line "eral Adrinna."
+	para "What say you of"
+	line "Bobesh's stadium?"
 	
-	para "What do you th-"
-	line "ink of Bobesh's"
-	cont "stadium?"
-	
-	para "Hm, do you ever"
-	line "see the strong-"
-	cont "est trainers"
-	cont "watching it?"
-	
-	para "You look like a"
-	line "strong trainer."
+	para "Do strong"
+	cont "trainers"
+	cont "attend?"
+
+	para "Think about it."
 	cont "This might be"
 	cont "of use to you."
 	done
-	
-	
-	
 	

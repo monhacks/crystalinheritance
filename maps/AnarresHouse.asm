@@ -53,21 +53,21 @@ NeedAMintLeafText:
 	
 	para "I tried to get"
 	line "these people to"
-	cont "appreciate the"
-	cont "taste of fish,"
-	cont "but they all say"
-	cont "my breath smells."
+	para "appreciate the"
+	line "taste of fish,"
+	para "but they all say"
+	line "my breath smells."
 	
 	para "No one wants to"
 	line "come over to"
-	cont "eat. I picked"
-	cont "two buckets"
+	para "eat. I picked"
+	line "two buckets"
 	cont "of mushrooms!"
 	
 	para "Do you have any"
 	line "item that might"
-	cont "make my breath"
-	cont "smell better?"	
+	para "make my breath"
+	line "smell better?"	
 
 	para "I'll give you a"
 	line "savory mushroom"
@@ -86,8 +86,8 @@ Text_MintLeafQuestion:
 GiveTinyMushroomText: 
 	text "Give that tiny-"
 	line "mushroom to"
-	cont "someone who"
-	cont "needs to make"
+	para "someone who"
+	line "needs to make"
 	cont "a great dish."
 	done
 
@@ -177,38 +177,31 @@ AnarresHouseHexManiacScript:
 HexManiacIntroText:
     text "I once guided"
     line "others through"
-	cont "perilous waters"
-	cont "using the stars"
-	cont "and my third"
-	cont "eye."
+	cont "perilous waters."
+	
+	para "Spirits used to"
+	line "guide me through"
+	cont "the rocks..."
 		
     para "But I left that"
-	line "all behind when"
-	cont "the Emperor took"
-	cont "over our beach."
-		
-    para "Oh, how I miss"
-	line "seeing into the"
-	cont "spirit world."	
+	line "all behind."	
+	
+	para "If you remind me"
+	line "of those days,"
+	para "I may have some"
+	line "gifts for you."
     done
 
 HexManiacAskGastlyText:
     text "I long to see the"
     line "ghost type #-"
-    cont "mon that avoids"
-    cont "the wind."
-	
-	para "It would bring"
-	line "me so much joy"
-	cont "to see it just"
-	cont "one more time."
+    para "mon that avoids"
+    line "the wind."
     done
 
 HexManiacNoGastlyText:
-    text "Oh, the spirits"
-    line "are silent. I"
-    cont "cannot see that"
-    cont "#mon yet."
+    text "Oh, how I long"
+	line "to see it!"
     done
 
 HexManiacGiveSpellTagText:
@@ -221,16 +214,15 @@ HexManiacGiveSpellTagText:
 HexManiacAskNatuText:
     text "I long to see the"
     line "psychic #mon"
-    cont "that hops and"
-    cont "stares."
+    para "that hops and"
+    line "stares."
     done
 
 HexManiacNoNatuText:
-    text "The future is"
-    line "clouded. I cannot"
-    cont "see that #mon"
-    cont "yet."
+    text "Oh, how I long"
+	line "to see it!"
     done
+
 
 HexManiacGiveTwistedSpoonText:
     text "Natu! It sees"
@@ -242,22 +234,20 @@ HexManiacGiveTwistedSpoonText:
 HexManiacAskMurkrowText:
     text "I long to see the"
     line "dark #mon that"
-    cont "stashes shiny"
-    cont "objects."
+    para "stashes shiny"
+    line "objects."
     done
 
 HexManiacNoMurkrowText:
-    text "The darkness"
-    line "doesn't reveal"
-    cont "that #mon to"
-    cont "me yet."
+    text "Oh, how I long"
+	line "to see it!"
     done
 
 HexManiacGiveBlackGlassesText:
     text "Murkrow! Ornery"
-	line "familiar that"
+	line "creature that"
 	cont "led me down many"
-	cont "unfamiliar paths."
+	cont "circular paths!"
 	
 	para "Ah, such memories."
 	line "Thank you."
@@ -269,14 +259,9 @@ HexManiacGiveBlackGlassesText:
 HexManiacThankYouText:
     text "Thank you. I feel"
     line "more at home now."
-    para "The spirits are"
-    line "with us always."
     done
 
 HexManiacBagFullText:
     text "Your Bag is full."
-    line "The spirits can-"
-    cont "not bless you"
-    cont "right now."
     done
 	

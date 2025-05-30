@@ -20,24 +20,12 @@ AnarresDorms_MapScriptHeader:
 
 	def_object_events
 	object_event 2, 1, SPRITE_KURT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AnarresDormsKurtScript, -1 ;
-;	object_event 5, 2, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, AnarresDormsNPC1Text, -1 ;
 	object_event 5, 3, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, AnarresDormsNPC2Text, -1 ;
 	object_event 3, 3, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, AnarresDormsNPC3Text, -1 ;
 	
 	object_const_def
 	
 
-;AnarresDormsNPC1Text:
-;	text "I heard that"
-;	line "someone made a"
-;	cont "way to tutor new"
-;	cont "techniques."
-;	
-;	para "I remember the"
-;	line "old days, when"
-;	cont "bug types had no"
-;	cont "STAB coverage."
-;	done
 	
 AnarresDormsNPC2Text:
 	text "The Pineco are"
@@ -45,16 +33,15 @@ AnarresDormsNPC2Text:
 	
 	para "It's natural for"
 	line "them to glom on"
-	cont "to as many as"
-	cont "they can."
+	para "to as many as"
+	line "they can."
 	
 	para "They don't know"
 	line "that if they"
-	cont "eat the whole"
-	cont "forest, then"
-	cont "they'll end up"
-	cont "with nothing to"
-	cont "eat."
+	para "eat the whole"
+	line "forest, then"
+	para "they won't have"
+	line "anything to eat."
 	done
 	
 AnarresDormsNPC3Text:
@@ -64,8 +51,8 @@ AnarresDormsNPC3Text:
 
 	para "They keep a"
 	line "#mon as long"
-	cont "as you continue"
-	cont "to interact."
+	para "as you continue"
+	line "to interact."
 	done
 
 AnarresDormsBed:
@@ -90,7 +77,7 @@ BedText2:
 	line "restored!"
 	done
 
-AnarresDormsKurtScript: ; will this work?....
+AnarresDormsKurtScript:
 	faceplayer
 	opentext
 	writetext KurtAnarresDormsText
@@ -107,7 +94,7 @@ AnarresDormsKurtScript: ; will this work?....
 .AnarresKurtPC
 	writetext KurAnarresDormsText2
 	promptbutton
-	special PokemonCenterPC ; per engine/events/std_scripts.asm this is how it should be done. 
+	special PokemonCenterPC
 	endtext
 	end
 
@@ -116,14 +103,19 @@ KurtAnarresDormsText:
 	line "dorms are a good"
 	cont "place to rest."
 	
+	para "We need to see"
+	line "the Elder about"
+	cont "the Cut HM, but"
+	cont "he's holed up!"
+	
 	para "I can run back to"
 	line "our time for a PC"
 	cont "if you need."
 	
 	para "Oh! I found some"
 	line "neat #mon in"
-	cont "the wild areas"
-	cont "around here."
+	para "the wild areas"
+	line "around here."
 
 	para "Want to battle?"
 	done

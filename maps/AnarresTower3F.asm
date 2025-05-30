@@ -68,7 +68,7 @@ AnarresTower3FEvent:
 	showtext TammyText2
 ;	waitbutton
 	showemote EMOTE_QUESTION, ANARRES_TOWER_HOLLIS, 10
-	showtext HollisHmm
+;	showtext HollisHmm
 ;	waitbutton
 	turnobject ANARRES_TOWER_TAMMY, DOWN
 	pause 5
@@ -133,20 +133,23 @@ TammyMovesToHollis:
 	step_end
 
 HollisPastGuards:
-	text "HOLLIS: Tammy-"
-	line "how are you here?"
-	
-	para "We have been"
-	line "through this."
-	
+	text_high
+    text " Hollis: "
+	next
+	text_start
+	text "How'd you two get"
+	line "here? We're done"
+	cont "talking."
 	para "My watch has kept"
 	line "us safe so far."
-	
-	para "And why is"
-	line "<PLAYER> here?"
 	done
 
 HollisChallengesText:
+	text_high
+    text " Hollis: "
+	next
+	text_start
+	
 	text "No one else has"
 	line "my experience!"
 
@@ -157,24 +160,20 @@ HollisChallengesText:
 	line "start with you!"
 	done
 
+
 TammyExplains:
-	text "TAMMY: Won't"
-	line "you just listen?"
-	
-	para "<PLAYER> and I"
-	line "both think that"
-	cont "you need help."
-	
-	para "The problems in"
-	line "the Holt require"
-	cont "more than one"
-	cont "perspective to"
-	cont "solve, and the"
-	cont "Hisuians say the"
-	cont "Emperor will"
-	cont "soon bring us in"
-	cont "to the Empire."
+	text_high
+    text " Tammy: "
+	next
+	text_start
+	text "Listen! The Pine-"
+	line "co infestation"
+	para "requires more"
+	line "than one perspe-"
+	cont "ctive to restore"
+	cont "balance!"
 	done
+
 
 HollisToYou:
 	step_up
@@ -183,67 +182,90 @@ HollisToYou:
 
 HollisBeatenText:
 	text "Fine. I'll listen"
-	line "to what you have"
-	cont "to say."
+	line "for a moment."
 	done
+
 	
 TammyText2:
-	text "I've been"
-	line "thinking about"
-	cont "the forest."
-	cont "You've managed"
-	cont "it well, but the"
-	cont "situation may"
-	cont "get out of"
-	cont "hand."
+	text_high
+    text " Tammy: "
+	next
+	text_start
+	text "You've managed"
+	line "other conflicts"
+	para "well, but this"
+	line "is getting out"
+	cont "of hand."
 	done
 
-HollisHmm:
-	text "HOLLIS: I..."
-	line "I'm listening."
-	done
+
+;HollisHmm:
+;	text_high
+;    text " HOllis: "
+;	next
+;	text_start
+;	text "HOLLIS: I..."
+;	line "I'm listening."
+;	done
 
 TammyText3:
+	text_high
+    text " Tammy: "
+	next
+	text_start
 	text "The forest binds"
-	line "us all. Past,"
-	cont "present, future."
+	line "us all."
 
 	para "My technique lets"
 	line "everyone be a"
 	cont "guardian."
 	done
 
-HollisAbuse:
+
+HollisAbuse:'
+	text_high
+    text " Hollis: "
+	next
+	text_start
 	text "But what if"
-	line "people misuse"
-	cont "this power?"
+	line "it's misused?"
 	done
 	
 TammyText4:
-	text "People will learn"
-	line "how to use it"
-	cont "from those who"
-	cont "are responsible."
-	
-	para "We will review"
+	text_high
+    text " Tammy: "
+	next
+	text_start
+	text "We will review"
 	line "at yearly"
-	cont "rituals."
+	para "rituals that you"
+	line "could lead."
 	done
+
 
 HollisHM:
-	text "I... I see your"
-	line "point. My method"
-	cont "is too harsh."
+	text_high
+    text " Hollis: "
+	next
+	text_start
+	text "I've been selfish"
+	line "with my power."
 
-	para "We'll try your"
-	line "way, carefully."
-
-	para "It's time I"
-	line "learned to trust"
-	cont "others again."
+	para "Hopefully, we can"
+	line "balance the Holt"
+	cont "with your help."
+	
+	para "Please, teach"
+	line "others your"
+	cont "invention."
 	done
 
+
 TammyThanks:
+	text_high
+    text " Tammy: "
+	next
+	text_start
 	text "Thank you! I'll"
 	line "begin at once."
 	done
@@ -258,6 +280,10 @@ TammyWalksOutMovement:
 	step_end
 
 HollisCongratulates:
+	text_high
+    text " Hollis: "
+	next
+	text_start
 	text "Congratulations"
 	line "on your victory."
 
@@ -270,15 +296,6 @@ HollisCongratulates:
 	cont "from others,"
 	cont "not just teach."
 
-	para "Together, we"
-	line "might build"
-	cont "something"
-	cont "greater than"
-	cont "I imagined."
-
-	para "You've proven"
-	line "yourself worthy."
-
 	para "I grant you the"
 	line "Growth badge."
 	
@@ -287,9 +304,16 @@ HollisCongratulates:
 	cont "ring over another"
 	para "towards the sky."
 
-	para "Please, accept"
+	Para "each ring has its"
+	line "day in the sun… "
+	para "but then it's time"
+	line "to support the"
+	cont "trunk."
+
+	para "Also, please, accept"
 	line "this HM."
 	done
+
 
 AnarresTowerTammyScript:
 	faceplayer
@@ -303,23 +327,14 @@ TextHollisAfterBattle:
 	text "You've opened"
 	line "my eyes."
 
-	para "I thought I was"
-	line "protecting us,"
-	cont "but I was just"
-	cont "holding us back."
-
-	para "This HM... it's"
-	line "powerful, but"
-	cont "it needs wisdom"
-	cont "to use right."
-
-	para "Maybe together,"
-	line "we can find that"
-	cont "wisdom. And heal"
-	cont "more than just"
-	cont "the forest."
+	para "I'd been too"
+	line "selfish, holding"
+	para "on to my power."
+	line "I hope I haven't"
+	para "lost the forest"
+	line "for future"
+	cont "generations."
 	done
-
 
 AnarresTower3FTammyScript:
 	faceplayer
@@ -348,8 +363,11 @@ AmosWalksAwayMovement:
 	step_end
 
 AmosSaysHelloText:
-	text "A flunkie to"
-	line "throw me out?"
+	text_high
+    text " Amos: "
+	next
+	text_start
+	text "A flunkie?"
 
 	para "..."
 
@@ -358,31 +376,22 @@ AmosSaysHelloText:
 
 	para "I'm Amos. I've"
 	line "been trying to"
-	cont "get Hollis to"
-	cont "see reason about"
-	cont "the Emperor's"
-	cont "threat."
+	para "get Hollis to"
+	line "take the emperor's"
+	cont "threat seriously."
 
-	para "But he'd rather"
-	line "hide in his"
-	cont "tower than help"
-	cont "his neighbors"
-	cont "prepare."
+	para "But he's stuck in"
+	line "his tower like a"
+	para "cocoon, afraid of"
+	line "a changing world."
 
 	para "..."
 
-	para "Fine. Let him"
-	line "cling to what"
-	cont "remains of the"
-	cont "forest, while"
-	cont "the rest of us"
-	cont "fight for our"
-	cont "future."
-
-	para "I've wasted"
-	line "enough time"
-	cont "here."
+	para "I won’t give up"
+	line "on him. I hope"
+	cont "his ideas evolve."
 	done
+
 
 AnarresTower3FHollisScript:
 	faceplayer

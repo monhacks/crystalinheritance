@@ -24,13 +24,13 @@ AnarresTower2F_MapScriptHeader: ; should be like  "BurnedTowerB1F_MapScriptHeade
 	object_const_def
 
 
-GenericTrainerBugCatcherAl:
+GenericTrainerBugCatcherAl: ; Scott 
 	generictrainer BUG_CATCHER, AL, EVENT_BEAT_BUG_CATCHER_AL, BugCatcherAlSeenText, BugCatcherAlBeatenText
 
 	text "I need to put"
 	line "a few more"
-	cont "thoughts into"
-	cont "my battles."
+	para "thoughts into"
+	line "my battles."
 	done
 
 BugCatcherAlSeenText:

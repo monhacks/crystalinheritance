@@ -1,4 +1,4 @@
-MistyBasin_MapScriptHeader: ; todo add a hidden item and fix the dialogues 
+MistyBasin_MapScriptHeader:
 	def_scene_scripts
 
 
@@ -13,14 +13,14 @@ MistyBasin_MapScriptHeader: ; todo add a hidden item and fix the dialogues
 
 
 	def_bg_events
-	bg_event 15, 13, BGEVENT_ITEM + FRESH_WATER, EVENT_MISTY_BASIN_FRESH_WATER ;todo 
+	bg_event 15, 13, BGEVENT_ITEM + FRESH_WATER, EVENT_MISTY_BASIN_FRESH_WATER 
 
 	def_object_events
 	object_event  4, 13, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSageChow, EVENT_BEAT_TAMMY 
 	object_event  5,  4, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSageNico, EVENT_BEAT_TAMMY
 	object_event 13,  3, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerMediumMartha, EVENT_BEAT_TAMMY
 	object_event 14,  2, SPRITE_TAMMY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TammyScript, EVENT_BEAT_TAMMY
-	object_event 14, 13, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, MistyBasonMatronScript, -1 ;
+	object_event 14, 13, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, MistyBasonMatronScript, -1 
 
 
 	object_const_def
@@ -28,8 +28,6 @@ MistyBasin_MapScriptHeader: ; todo add a hidden item and fix the dialogues
 	const MISTY_BASIN_NICO
 	const MISTY_BASIN_MARTHA
 	const MISTY_BASIN_TAMMY
-
-
 
 MistyBasonMatronScript:
 	checkevent EVENT_GOT_WATER_PULSE
@@ -71,8 +69,8 @@ GenericTrainerSageChow:
 
 	text "The Elder hoards"
 	line "the HM Cut for"
-	cont "himself. It's"
-	cont "not right!"
+	para "himself. It's"
+	line "not right!"
 	done
 
 SageChowSeenText:
@@ -109,8 +107,8 @@ GenericTrainerMediumMartha:
 
 	text "Tammy developed"
 	line "a method of"
-	cont "hitting the"
-	cont "trees to knock"
+	para "hitting the"
+	line "trees to knock"
 	cont "off Pineco."
 	done
 
@@ -150,41 +148,42 @@ TammyScript:
 	end
 
 TammyAfterBattleText: ; todo plot copy 
+	text_high
+    text " Tammy: "
+	next
+	text_start
 	text "I invented a way"
-	line "to teach"
-	cont "techniques,"
-	cont "ramming a tree."
-	
-	para "It shakes off"
-	line "pineco without"
-	cont "damaging the"
-	cont "tree. The elder"
-	cont "says it's"
+	line "to shake pineco"
+	para "off, without"
+	line "hurting the"
+	para "tree. Hollis"
+	line "says it's"
 	cont "unnatural."
 	
-	para "I want to talk,"
+	para "I want to help,"
 	line "but he just"
-	cont "sits on top of"
-	cont "the tower. Since"
-	cont "you're so"
-	cont "strong, and you"
-	cont "need the HM too,"
-	cont "can you talk to"
-	cont "him with me?"
+	para "sits on top of"
+	line "the tower. Since"
+	para "you want the HM"
+	line "as well, can you"
+	cont "help me?"
 	done
 
 TammySeenText:
-	text "You've found our"
-	line "secret meeting."
-	cont "We've organized"
-	cont "to confront the"
+	text_high
+    text " Tammy: "
+	next
+	text_start
+	text "We're organized"
+	line "to confront the"
 	cont "Elder. Oh?"
-	cont "You're also"
-	cont "trying to get"
-	cont "the HM? Let's"
-	cont "see if you're"
+	para "You're also"
+	line "trying to get"
+	para "the HM? Let's"
+	line "see if you're"
 	cont "strong enough."
 	done
+
 
 TammyBeatenText:
 	text "You've proven"
@@ -217,6 +216,10 @@ TammyMovementBasin:
 	step_end
 
 TammySeeYaText:	
+	text_high
+    text " Tammy: "
+	next
+	text_start
 	text "See you at the"
 	line "tower!"
 	done

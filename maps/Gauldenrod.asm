@@ -478,102 +478,98 @@ BrigaderText1:
     done
 
 CindyText1:
-    text "Cindy: I told"
-    line "you! I don't"
-    cont "know!"
+    text "I told you,"
+	line "I don't know!"
     done
 
 BobeshText1:
-    text "Bobesh: Order!"
-    line "Order! What's"
-    cont "going on here?"
+	text_high
+    text " Bobesh: "
+	next
+	text_start
+
+    text "Order! What's"
+	line "going on?"
     done
 
 BrigaderText2:
-    text "Brigader: General"
-    line "Bobesh. She"
-    cont "is harboring"
-    cont "the anarchist"
-    cont "Amos."
+    text "She harbors the"
+	line "anarchist Amos!"
     done
 
 CindyText2:
-    text "Cindy: No!"
+    text "No! He's lying!"
     done
 
 BobeshText2:
-    text "Bobesh: Such"
-    line "claims against"
-    cont "a respected"
-    cont "matriarch."
-	
-	para "Tell me,"
-    line "how is your"
-    cont "husband?"
+	text_high
+    text " Bobesh: "
+	next
+	text_start
+    text "Such claims!"
+	line "Say, your husband"
+	para "works by the"
+	line "tower, madam?"
+	cont "How is he?"
     done
 
 CindyText3:
-    text "Cindy: He"
-    line "still gardens."
-	
-	para "By the tower."
+    text "He has enough"
+	line "energy to garden"
+	cont "by the tower."
+
+	para "It's the only"
+	line "place to teach"
+	para "botany to newer"
+	line "generations,"
+	para "now that you've"
+	line "put an end to"
+	cont "our ritual."
     done
 
+
 BobeshText3:
-    text "Bobesh: What a"
-    line "convenient"
-    cont "vantage at the"
-    cont "old religion's"
-    cont "temple."
+	text_high
+    text " Bobesh: "
+	next
+	text_start
+	
+    text "Madam. Brigaders"
+	line "heard Amos at the"
+	para "tower. We know he"
+	line "didn't report it."
+	
+	para "Speaks volumes,"
+	line "don't you think?"
+	
+	para "Listen! Johto is"
+	line "facing a threat"
+	para "from outsiders."
+	line "We can't allow"
+	para "these factional"
+	line "rituals."
     done
 
 CindyText4:
-    text "Cindy: These"
-    line "days he is busy"
-    cont "pulling weeds."
-
-    para "There's some"
-    line "ugly red ones."
-    done
+    text "No! It's how we"
+	line "enshrine our"
+	para "values. It's a"
+	line "rebirth, honoring"
+	cont "Ho-Oh!"
+	done
 
 BobeshText4:
-    text "Bobesh: Soldiers"
-    line "heard Amos at"
-    cont "the tower. Your"
-    cont "husband's silence"
-    cont "damns you both."
+	text_high
+    text " Bobesh: "
+	next
+	text_start
 	
-    para "Cindy- Johto"
-    line "faces threats."
+    text "Brigader! Take"
+	line "her away to the"
+	cont "stadium."
 	
-    para "We can't allow"
-    line "division."
-	
-	para "I'm in charge of"
-	line "this city, and "
-	cont "I'll make sure"
-	cont "we don't fall"
-	cont "to the brutes."
-    done
-
-CindyText5:
-    text "Cindy: ..."
-    done
-
-BobeshText5:
-    text "Bobesh: Brigader!"
-    line "Take her away"
-    cont "to the stadium."
-    para "She will submit"
-    line "to Levi, or be"
-	
-    para "returned to a"
-    line "a state of"
-    cont "nature."
-    done
-
-CindyText6:
-    text "Cindy: No!"
+	para "I've heard"
+	line "enough."
     done
 
 PlayerMovesToWatchScene:

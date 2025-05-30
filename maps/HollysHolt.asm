@@ -20,8 +20,8 @@ HollysHolt_MapScriptHeader:
 	def_bg_events
 	bg_event  5, 19, BGEVENT_JUMPTEXT, HH_Sign1Text
 	bg_event 25, 25, BGEVENT_JUMPTEXT, HH_Sign2Text
-	bg_event 21, 41, BGEVENT_ITEM + SILVERPOWDER, EVENT_HOLLYS_HOLT_HIDDEN_SILVERPOWDER ;ok
-	bg_event 16,  2, BGEVENT_ITEM + REVIVAL_HERB, EVENT_HOLLYS_HOLT_HIDDEN_REVIVAL_HERB ;ok
+	bg_event 21, 41, BGEVENT_ITEM + SILVERPOWDER, EVENT_HOLLYS_HOLT_HIDDEN_SILVERPOWDER
+	bg_event 16,  2, BGEVENT_ITEM + REVIVAL_HERB, EVENT_HOLLYS_HOLT_HIDDEN_REVIVAL_HERB
 	bg_event 10, 24, BGEVENT_READ, HollysHoltShrineScript 
 	bg_event 23, 43, BGEVENT_JUMPTEXT, HH_Sign3Text
 
@@ -45,7 +45,7 @@ HollysHolt_MapScriptHeader:
 	itemball_event 19, 16, REVIVAL_HERB, 1, EVENT_ILEX_FOREST_REVIVAL_HERB
 	tmhmball_event 24, 33, TM_X_SCISSOR, EVENT_GOT_TM_X_SCISSOR
 	cuttree_event 25, 5, EVENT_HOLLYS_HOLT_CUT_TREE
-	pokemon_event  18, 37, PINECO, -1, -1, PAL_NPC_BLUE, HollysHoltBagwormText, -1 ; by tammy  ;;;; 
+	pokemon_event  18, 37, PINECO, -1, -1, PAL_NPC_BLUE, HollysHoltBagwormText, -1 ; by tammy
 	fruittree_event  9,  8, FRUITTREE_HOLLYS_HOLT, TOUGH_LEAVES, PAL_NPC_GREEN
 
 	object_const_def
@@ -241,8 +241,8 @@ HHNPC2_GotSeed:
 	
 	para "A grass-type"
 	line "#mon would"
-	cont "be happy to"
-	cont "hold it."
+	para "be happy to"
+	line "hold it."
 	done
 
 
@@ -256,10 +256,10 @@ HHNPC2_GiveSeed:
 	
 	para "When the forest"
 	line "is threatened,"
-	cont "Celebi protects"
-	cont "it. When it is"
-	cont "damaged, Celebi"
-	cont "will heal it."
+	para "Celebi protects"
+	line "it. When it is"
+	para "damaged, Celebi"
+	line "will heal it."
 	
 	para "When we honor"
 	line "Celebi, we"
@@ -278,12 +278,12 @@ HollysHoltNPC3Text:
 	line "get on a tree,"
 	cont "they destroy it."
 	
-	para "The bagworms"
+	para "The pinecos"
 	line "can't help but"
-	cont "reproduce this"
-	cont "way. We have to"
-	cont "find a way to"
-	cont "restore balance."
+	para "reproduce this"
+	line "way. We have to"
+	para "find a way to"
+	line "restore balance."
 	done
 
 HollysHoltNPC4Text: 
@@ -303,13 +303,13 @@ HollysHoltNPC4Text:
 HollysHoltNPC5Text:
 	text "Celebi isn't"
 	line "just the forest"
-	cont "protector. It is"
-	cont "the forest."
+	para "protector. It is"
+	line "the forest."
 	
 	para "Like a Tangela"
 	line "vine, it exists"
-	cont "at all times"
-	cont "and extents of"
+	para "at all times"
+	line "and extents of"
 	cont "the forest."
 
 	para "At least that's"
@@ -318,15 +318,19 @@ HollysHoltNPC5Text:
 	done
 
 HH_HollisHello2:
+	text_high
+    text " Hollis: "
+	next
+	text_start
 	text "Please, visit"
 	line "Anarres Town."
 	
 	para "The town isn't"
 	line "as lively as"
-	cont "usual, due to"
-	cont "the bagworms"
-	cont "damaging so"
-	cont "many of the"
+	para "usual, due to"
+	line "the bagworms"
+	para "damaging so"
+	line "many of the"
 	cont "trees."
 	done
 
@@ -376,9 +380,9 @@ HollysHoltTammyScript:
 	waitbutton
 	setevent EVENT_LISTENED_TO_HEABUTT_INTRO
 HHTutorHeadbuttScript:
-	writetext Text_HHTutorHeadbutt ;;
+	writetext Text_HHTutorHeadbutt 
 	waitbutton
-	writetext Text_HHTutorQuestion ;;
+	writetext Text_HHTutorQuestion 
 	yesorno
 	iffalse .TutorRefused
 	setval HEADBUTT
@@ -394,13 +398,13 @@ HHTutorHeadbuttScript:
 Text_HeadbuttIntro: 
 	text "Hi, <PLAYER>."
 	line "Thanks again for"
-	cont "your help talking"
-	cont "to Hollis."
+	para "your help talking"
+	line "to Hollis."
 	
 	para "Now, I can teach"
 	line "everyone how to"
-	cont "use Headbutt to"
-	cont "rattle trees!"
+	para "use Headbutt to"
+	line "rattle trees!"
 	done
 
 Text_HHTutorHeadbutt:
@@ -430,14 +434,7 @@ HollysHoltNPC6Text:
 	text "Tammy is showing"
 	line "me how to use"
 	cont "Headbutt."
-	
-	para "Soon, we can"
-	line "knock off the"
-	cont "Pineco to get"
-	cont "the forest back"
-	cont "to a healthy"
-	cont "equilibrium."
-	
+
 	para "Tending nature"
 	line "is part of pro-"
 	cont "tecting it."
@@ -446,8 +443,8 @@ HollysHoltNPC6Text:
 HollysHoltBagwormText:
 	text "It's a Pineco."
 	line "The leaves are"
-	cont "decimated by"
-	cont "bug bites."
+	para "decimated by"
+	line "bug bites."
 	done
 
 HH_Hollis_Leaves:

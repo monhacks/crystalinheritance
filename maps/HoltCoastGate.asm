@@ -38,10 +38,8 @@ HoltCoastGateNPCScript:
 	jumptextfaceplayer HoltCoastGateNPCText
 
 HoltCoastGateNPCText:
-	text "I've heard stories"
-	line "the brigaders."
-
-	para "I wonder when"
-	line "they'll come to"
-	cont "Anarres Town?"
+	text "I wonder when the"
+	line "Emperor will"
+	para "try to annex"
+	line "Anarres Town."
 	done

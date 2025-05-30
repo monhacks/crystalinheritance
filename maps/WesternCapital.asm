@@ -214,171 +214,96 @@ Prologue_Text0:
 	line "Western Capital:"
 	done
 
-
 Prologue_Text1:
-	text "Emperor Mejimi:"
+	text_high
+    text " Mejimi: "
+	next
+	text_start
+
 	line "Guide me father."
 	para "How would you"
 	line "deal with the"
 	cont "outsiders?"
-	para "... Are your"
-	line "ways still"
-	cont "enough?"
 	done
 
 Prologue_Text2:
-	text "Mejimi: General"
-	line "Adrinna! I have"
-	para "three meetings"
+	text_high
+    text " Mejimi: "
+	next
+	text_start
+	text "Ah --  General"
+	line "Adrinna! I had"
+	para "two meetings"
 	line "before yours."
+	done
+
+Prologue_Text2_2:
+	text_high
+    text " Adrinna: "
+	next
+	text_start	
 	
-	para "Adrinna: It's"
+	text "Your majesty. It's"
 	line "urgent. Your"
 	para "strata-Um, the"
-	line "other strageies."
+	line "other strategies."
 	
 	para "The other cities"
-	line "resist us, des-"
-	cont "pite the prot-"
-	para "ection we would"
-	line "offer against"
-	cont "the outsiders."
+	line "resist us."
+	done
+
+Prologue_Text2_3:	
+	text_high
+    text " Mejimi: "
+	next
+	text_start
 	
-	para "Mejimi: We've"
-	line "never coerced."
-	
-	para "That's how my"
-	line "father handled"
-	cont "the famine."
+	text "What are you say-"
+	line "ing? We've never"
+	cont "used force."
 	done
 
 Prologue_Text3:
-	text "General Kensey:"
-	line "Adrinna, why"
-	cont "are you here?"
-
-	para "Mejimi: never"
-	line "mind her."
+	text_high
+    text " Adrinna: "
+	next
+	text_start	
 	
-	para "How are things"
-	line "with the out-"
-	cont "siders at the"
-	cont "Western Port?"
-
-	para "Kensey: their"
-	line "#balls are..."
-	para "Barbaric! But"
-	line "incredible."
-	para "We must produce"
-	line "our own."
+	text "With the threat"
+	line "of the outsiders,"
+	para "you have a chance"
+	line "to remake Johto."
 	
-	para "Mejimi: Very"
-	line "well."
+	para "A blank slate to"
+	line "build an empire. "
+	
+	para "The region will"
+	line "come around."
 	done
 
 Prologue_Text4:
-	text "Adrinna: Kensey"
-	line "deceives! The"
-	cont "coast nomads"
-
-	para "will never fol-"
-	line "low bean counters"
-	cont "like Kensey."
-
-	para "His plan is a"
-	line "farce!"
+	text_high
+    text " Mejimi: "
+	next
+	text_start	
+	text "This is true…"
+	line "but would my "
+	para "ancestors condone"
+	line "my actions?"
 	done
+
 
 Prologue_Text5:
-	text "General Bobesh:"
-	line "Eh, Adrinna?"
-	para "Don't you know"
-	line "your place?"
-
-	para "Mejimi: Bobesh,"
-	line "you address me."
-
-	para "Please, tell me"
-	line "about the South."
-
-	para "Bobesh: the"
-	line "stadium shows"
-	cont "our strength."
-
-	para "Anarres can be"
-	line "brought in soon."
-
-	para "Mejimi: ..."
-	line "Very well..."
-	done
-
-Prologue_Text6:
-	text "Mejimi: But..."
-	line "the instigator"
+	text_high
+    text " Adrinna: "
+	next
+	text_start	
 	
-	para "Amos is still"
-	line "on the loose!"
-	
-	para "If you do not"
-	line "find him soon,"
-
-	para "you may be the"
-	line "one fighting"
-	cont "feral pokemon"
-	cont "in your stad-"
-	cont "ium."
-	done
-
-Prologue_Text7:
-	text "Adrinna: Now,"
-	line "that evoked an"
-	cont "Aeroblast or"
-	cont "Sacred Fire!"
-	
-	para "Mejimi: Oh,"
-	line "here's Chronicler"
-	cont "Vespera."
-	done
-
-Prologue_Text8:
-	text "Vespera:"
-	line "Adrinna? This"
-	cont "site is holy."
-	para "How did you get"
-	line "back here?"
-	
-	para "Mejimi: Quickly."
-	line "How go the"
-	cont "towers' const-"
-	cont "ruction?"
-
-	para "Vespera: the"
-	line "Hisuians have"
-	cont "blessed the" 
-	para "Tin Tower, but"
-	line "they need more"
-	para "time for the"
-	line "Brass Tower."
-	done
-	
-Prologue_Text9:
-	text "Mejimi: I am"
-	line "the emperor!"
-	
-	para "My presence"
-	line "is holy enough!"
-
-	para "Vespera: Your"
-	line "majesty, that"
-	cont "is a novel idea."
-
-	para "Would your Father"
-	line "condone it?"
-	done
-	
-Prologue_Text10:
-	text "Mejimi: how"
-	line "dare you."
+	text "Your ancestors"
+	line "stagnated their"
+	para "inheritance."
+	line "You have a chance"
+	cont "to reshape yours."
 	done
 
 WC_AdrinnaMovement1:
@@ -389,31 +314,6 @@ WC_AdrinnaMovement1:
 	turn_head_down
 	step_end
 	
-WC_KenseyMovement1:
-	step_up
-	step_up	
-	turn_head_right
-	step_end
-
-WC_KenseyMovement2:
-	step_down	
-	step_down
-	step_end
-
-WC_BobeshMovement1:
-	step_up
-	step_up
-	turn_head_right
-	step_end
-
-WC_BobeshMovement2:
-	step_down
-	step_down
-	step_end
-	
-WC_SamsaraMovement1:
-	step_up
-	step_end
 
 WesternCapitalNPC1Text:
 	faceplayer
