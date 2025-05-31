@@ -103,33 +103,26 @@ RadioTowerRivalRetreatMovement:
 RadioTowerRivalBeforeText:
     text "Hey, <PLAYER>. I"
     line "see you finally"
-    cont "made it out of"
-    cont "Azalea."
+    cont "made it out."
 	
 	para "Bet this power"
 	line "outage makes"
-	cont "you feel right"
-	cont "at home, eh?"
+	para "you feel right"
+	line "at home, eh?"
 	
     para "Whitney invited me"
     line "on her show to"
-    cont "talk about my"
-    cont "inventions -"
-	
-    para "the apricorn oil"
-    line "distiller that"
-    cont "your grandpa"
-    cont "mocked."
-
-    para "It's nice to be"
-    line "supported by"
-    cont "Silph, for once."
+    para "talk about my"
+    line "distiller – the"
+	para "one your grandpa"
+	line "mocked."
 
     para "We're building a"
     line "new world - you"
-    cont "and your grandpa"
-    cont "are just relics!"
+    para "and your grandpa"
+    line "are just relics!"
     done
+
 
 RadioTowerRivalWinText:
     text "Tch. Makes sense"
@@ -145,9 +138,10 @@ RadioTowerRivalLossText:
     done
 
 RadioTowerRivalAfterText:
-    text "I must be going..."
-    line "Silph says my"
-    cont "distiller could be"
-    cont "used for"
-    cont "desalination."
+    text "I must be going."
+    line "Silph wants to"
+	para "meet me in"
+	line "Ectureak to talk"
+	para "about my distill-"
+	line "er. See ya never."
     done

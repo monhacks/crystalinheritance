@@ -115,18 +115,14 @@ GenericTrainerPicnickerRoute36:
 
 Route36KurtText:
 	text "<PLAYER>: Drat!"
-	line "They've blocked"
-	cont "the route into"
-	cont "Ecruteak…"
-	para "We'll have to find"
-	line "another way"
-	cont "around."
+	line "The route is "
+	para "blocked."
+	para "We have to find"
+	line "another way."
 	
-	para "I have some, eh,"
-	line "associates in "
-	cont "the city."
-	para "I bet they can"
-	line "can help."
+	para "I know some folks"
+	line "in the city that"
+	cont "could help."
 	
 	para "Oh, I have some"
 	line "#mon from"

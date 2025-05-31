@@ -178,47 +178,30 @@ SandraExitMovement:
 	step_end
 
 BobeshIntroText:
-	text "Bobesh: Eh? Who"
-	line "are you?"
+	text_high
+    text " Bobesh: "
+	next
+	text_start
+	text "Eh? Who are you?"
 	
-	para "No matter."
-
 	para "I am General"
-	line "Bobesh, sent by"
-	cont "the emperor to"
-	cont "bring order by"
-	cont "my strength."
-
-	para "These are trying"
-	line "times for Johto."
+	line "Bobesh, sent to"
+	para "bring order by"
+	line "my strength."
 
 	para "This woman - she"
 	line "naively believes"
-	cont "all #mon have"
-	cont "equal value."
-	
-	para "When I take over"
-	line "the tower, my"
-	cont "#mon will"
-	cont "control the"
-	cont "narrative."
-	
-	para "People will asp-"
-	line "ire to our"
-	cont "strength."
-
-	para "You're here to"
-	line "help? Fool!"
+	para "all #mon have"
+	line "equal value."
 
 	para "This Toxicroak"
-	line "will show her"
-	cont "futility ."
+	line "will show her she"
+	cont "is wrong."
 
-	para "She'll surrender"
-	line "the tower, and"
-	cont "order will "
-	cont "prevail!"
+	para "Order will"
+	line "prevail!"
 	done
+
 
 ToxicroakChallengeText:
 	text "Toxicroak:"
@@ -226,34 +209,35 @@ ToxicroakChallengeText:
 	done
 
 SandraThankYouText:
-	text "Sandra:"
-	line "Thank you for"
-	cont "fighting the"
-	cont "Toxicroak..."
-
-	para "But I pack a few"
-	line "psychic techniques"
-	cont "and could have"
-	cont "handled myself."
-	
-	para "Oh, and I see"
-	line "that my friends"
-	cont "have made some"
-	cont "renovations."
+	text_high
+    text " Sandra: "
+	next
+	text_start
+	text "Thank you."
+	line "Oh, I see the"
+	para "stadium has some"
+	line "renovations."
 	done
 
 SandraNegotiateText:
+	text_high
+    text " Sandra: "
+	next
+	text_start
 	text "Now, let's go"
 	line "negotiate."
 	done
 
 BobeshBattleText:
+	text_high
+    text " Bobesh: "
+	next
+	text_start
 	text "Grr, I thought"
-	line "that feral Toxi-"
-	cont "croak would rip"
+	line "that would rip"
 	cont "you to shreds."
 
-	para "And whoa- where"
+	para "Whoa- where"
 	line "did that water"
 	cont "come from?"
 
@@ -261,16 +245,21 @@ BobeshBattleText:
 	line "you escape!"
 	done
 
+
 BobeshWinText:
 	text "Impossible!"
 	line "How could I lose?"
 	done
 
 BobeshDefeatText:
+	text_high
+    text " Bobesh: "
+	next
+	text_start
 	text "Grr, I wish I"
 	line "could battle you"
-	cont "again, but my"
-	cont "fire types don't"
+	para "again, but my"
+	line "fire types don't"
 	cont "like this water…"
 
 	para "You haven't seen"
@@ -427,47 +416,43 @@ StadiumGroundsSandra2Script:
 	end
 
 StadiumGroundsSandraAsksToTimeTravel:
-	text "<PLAYER>. You seek"
-	line "entrance to the"
-	cont "Trader's Landing"
-	cont "port to block"
-	cont "Steel types, but"
-	cont "you cannot find a"
-	cont "path there from"
-	cont "here."
+	text_high
+    text " Sandra: "
+	next
+	text_start
 
+	text "<PLAYER>."
 	para "Would you like to"
-	line "summon Celebi to"
+	line "pray to Celebi to"
 	cont "bring you forward"
 	cont "to your time?"
 	done
 
 
+
 StadiumGroundsNoTimeTravel:
-	text "I see. Please take"
-	line "your time and"
-	cont "return if you"
-	cont "would like to"
-	cont "honor Celebi."
+	text_high
+    text " Sandra: "
+	next
+	text_start
+	text "I see."
 	done
+
 
 StadiumGroundsTimeTravel:
+	text_high
+    text " Sandra: "
+	next
+	text_start
 	text "Celebi, in this"
 	line "place of super-"
-	cont "iority, help us to"
-	cont "be humble and"
-	cont "recognize that the"
-	cont "highest branch and"
-	cont "deepest roots are"
-	cont "each important."
-
-	para "We wish that the"
-	line "wind will blow the"
-	cont "clouds to see more"
-	cont "clearly how we"
-	cont "depend on each"
-	cont "other."
+	para "iority, help us "
+	line "to recognize the"
+	para "importance of the"
+	line "highest branch"
+	cont "and deepest root."
 	done
+
 
 PlayerWalksDownMovement:
 	step_right

@@ -241,41 +241,32 @@ WonderTradeForGSBallPichuText2:
 	done
 
 KurtHasSomeFansText:
-    text "<PLAYER> - "
-	line "I can't tell you"
-	cont "all the details."
-	
-	para "But I have some"
-	line "contacts here."
+    text "<PLAYER>, I have"
+	line "some contacts."
 	
 	para "They can get us"
 	line "east of the city"
 	cont "if we help them."
-	
-	para "In Goldenrod,"
-	line "Whitney's show"
-	cont "is noxious!"
-	
-	para "She cultivates"
-	line "a parasocial"
-	cont "relationship,"
-	
-	para "She convinces "
-	line "them that their"
-	cont "families and ne-"
-	cont "ighbors aren't"
-	cont "like them."
 
-	para "So, our 'fans'"
+	para "They're concerned"
+	line "with Whitney’s"
+	cont "show."
+	
+	para "It’s so divisive."
+	line "She tells them"
+	para "that their"
+	line "families and ne-"
+	para "ighbors aren't"
+	line "like them."
+
+	para "So, my contacts"
 	line "would like our"
-	cont "help stopping"
+	para "help stopping"
 	cont "her broadcast."
 
 	para "Meet me in the"
-	line "Goldenrod Under-"
-	cont "ground."
+	line "Underground."
     done
-
 
 IlexExcelsiorV3Script:
 	opentext
@@ -305,3 +296,4 @@ IlexExcelsiorV3Text:
 	line "frequency radio"
 	cont "by going low"	
 	done
+	

@@ -1,4 +1,4 @@
-ShimmerSaddle_MapScriptHeader:
+ShimmerSaddle_MapScriptHeader: ; todo add a boulder and 
 	def_scene_scripts
 
 	def_callbacks
@@ -25,7 +25,9 @@ ShimmerSaddle_MapScriptHeader:
 	warp_event 26, 19, SHIMMER_SADDLE, 11  ; 14
 	warp_event 22, 19, SHIMMER_SADDLE, 12 ; 15
 	warp_event 22, 7, SHIMMER_SADDLE, 9  ; 16 
- 
+; hole
+	warp_event 44, 9, SHIMMER_SADDLE, 18
+	warp_event 44, 9, SHIMMER_SADDLE, 18	
 
 	def_coord_events
 	coord_event 	 9,	33, 0, ShimmerSaddle_Scene1_ManHZ

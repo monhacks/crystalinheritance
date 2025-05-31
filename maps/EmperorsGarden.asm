@@ -1,4 +1,4 @@
-EmperorsGarden_MapScriptHeader: ;	def_scene_scripts
+EmperorsGarden_MapScriptHeader: 
 	def_scene_scripts
 	scene_script EmperorsGardenMejimiScene
 
@@ -92,10 +92,10 @@ EmperorsGardenMejimiScene:
 	pause 10 
 	; START SCENE
 	applymovement EMPERORS_GARDEN_MEJIMI, MejimiWalksInMovement
-	refreshscreen
-	trainerpic MEJIMI
-	waitbutton
-	closepokepic
+;	refreshscreen
+;	trainerpic MEJIMI
+;	waitbutton
+;	closepokepic
 	pause 30
 	showemote EMOTE_QUESTION, EMPERORS_GARDEN_MEJIMI, 10
 	showtext EG_Text1
@@ -111,10 +111,19 @@ EmperorsGardenMejimiScene:
 	turnobject EMPERORS_GARDEN_MEJIMI, DOWN
 	showtext EG_Text4
 	waitbutton
+	showtext EG_Text4_2
+	waitbutton
 	showtext EG_Text5
+	waitbutton
+	showtext EG_Text5_2	
 	applyonemovement EMPERORS_GARDEN_MEJIMI, step_left ; in front of adrinna
 	turnobject EMPERORS_GARDEN_MEJIMI, DOWN
+	refreshscreen
+	trainerpic MEJIMI
 	showtext EG_Text6
+	pause 30
+	waitbutton
+	closepokepic
 	applymovement EMPERORS_GARDEN_MEJIMI, MejimiLeavesMovement
 	disappear EMPERORS_GARDEN_MEJIMI
 	applymovement EMPERORS_GARDEN_BOBESH, GeneralsLeaveMovement
@@ -144,63 +153,112 @@ MejimiWalksInMovement:
 
 
 EG_Text1:
-	text "Emperor Mejimi:"
-	line "Ah, my generals."
+	text_high
+    text " Mejimi: "
+	next
+	text_start
+	text "Ah, my generals."
 	done
 
 EG_Text11:
-	text "Mejimi: How"
-	line "goes it in"
-	cont "Gauldenrod?"
+	text_high
+    text " Mejimi: "
+	next
+	text_start
+	text "How goes it in"
+	line "Gauldenrod?"
 	done
 
 EG_Text2:
-	text "Bobesh: My"
-	line "liege - the"
-	cont "stadium... it..."
+	text_high
+    text " Mejimi: "
+	next
+	text_start
+	text "My liege. The"
+	cont "stadium... it"
 	para "fell into a"
 	line "sinkhole."
 	done
 
 EG_Text3:
-	text "Mejimi: A"
-	line "sinkhole?"
-	para "Bobesh: Yes. No"
-	line "brigaders were"
-	cont "lost."
-	para "Mejimi: I see."
+	text_high
+    text " Mejimi: "
+	next
+	text_start
+	text "Disastrous! But"
 	line "I trust you won't"
 	cont "fail me again."
 	done
 
-EG_Text4:
-	text "And the port?"
-	cont "We need metals."
 
-	para "Kensey: We have"
-	line "traded for 100"
-	cont "tons of Tin and"
-	cont "Brass."
+EG_Text4:
+	text_high
+    text " Mejimi: "
+	next
+	text_start
+	text "And the port?"
+	line "We need metals."
+	done
+
+EG_Text4_2:
+	text_high
+    text " Kensey: "
+	next
+	text_start
+	para "My liege, we have"
+	line "traded for Tin"
+	cont "and Brass."
 	para "The Hisuians"
 	line "will teach us"
 	cont "to smelt it."
 	done
+
 	
 EG_Text5:
-	text "Mejimi: And in"
-	line "the mine?"
-	para "Kensey: All are"
+	text_high
+    text " Mejimi: "
+	next
+	text_start
+	text "What about the"
+	line "eastern mine?"
+	done
+	
+
+EG_Text5_2:
+	text_high
+    text " Adrinna: "
+	next
+	text_start
+	text "The locals are"
 	line "still unaware"
 	cont "of our plans."
 	done
 
+
 EG_Text6:
-	text "Mejimi: Good."
+	text_high
+    text " Mejimi: "
+	next
+	text_start
+	text "Excellent news."
 	line "General Adrinna,"
 
 	para "please review"
 	line "their plans."
+
+	para "From the west-"
+	line "ern islands to"
+	
+	para "the eastern"
+	line "mountains and"
+
+	para "the southern"
+	line "forests,"
+
+	para "I will remake Jo-"
+	line "hto in my image!"
 	done
+
 
 MejimiLeavesMovement:
 	step_left
@@ -228,6 +286,10 @@ GeneralsLeaveMovement:
 EmperorsGardenBobeshScene:
 	showemote EMOTE_BOLT, EMPERORS_GARDEN_ADRINNA_2, 10
 	showtext EG_Bobesh_Text1
+	waitbutton
+	showtext EG_Bobesh_Text1_2
+	waitbutton
+	showtext EG_Bobesh_Text1_3
 	closetext
 	applymovement EMPERORS_GARDEN_ADRINNA_2, AdrinnaMoves2
 	disappear EMPERORS_GARDEN_ADRINNA_2
@@ -238,28 +300,46 @@ EmperorsGardenBobeshScene:
 	end	
 
 EG_Bobesh_Text1:
-	text "Adrinna: You"
-	line "lied to the"
-	cont "emperor."
+	text_high
+    text " Adrinna: "
+	next
+	text_start
+	text "You lied to him."
+	line "Your hubris let"
+	cont "sabateurs in."
 	
-	para "Bobesh: A white"
-	line "lie."
-
-	para "Adrinna: Your"
-	line "venue was a"
-	cont "place for"
-	cont "minds to rot,"
-
-	para "and yours did"
-	line "too."
-
-	para "We need to fend"
-	line "off the enemy."
-
-	para "We need strong"
-	line "individuals,"
-	cont "not drones!"
+	para "I thought you had"
+	line "the Strength HM"
+	cont "only for your"
+	cont "brigaders?"
 	done
+	
+EG_Bobesh_Text1_2:
+	text_high
+    text " Bobesh: "
+	next
+	text_start
+	text "It was a white"
+	line "lie. It won't"
+	cont "happen again."
+	
+	para "If we had an even"
+	line "bigger stadium,"
+	cont "we could've..."
+	done
+; todo new tests 
+
+EG_Bobesh_Text1_3:
+	text_high
+    text " Adrinna: "
+	next
+	text_start
+	para "Shut it. Your"
+	line "venue rotted"
+	cont "minds. Maybe"
+	cont "yours, too."
+	done
+
 
 AdrinnaMoves2:
 	step_down
@@ -278,6 +358,10 @@ EmperorsGardenKenseyScene:
 	pause 30
 	showemote EMOTE_QUESTION, EMPERORS_GARDEN_ADRINNA_3, 10
 	showtext EG_Kensey_Text_1
+	waitbutton
+	showtext EG_Kensey_Text_1_2
+	waitbutton
+	showtext EG_Kensey_Text_1_3	
 	closetext
 	applymovement EMPERORS_GARDEN_ADRINNA_3, AdrinnaMoves3
 	pause 15
@@ -304,36 +388,42 @@ PlayerHidesFromKenseyMovement:
 	step_end
 
 EG_Kensey_Text_1:
-	text "Adrinna: We"
-	line "trade with those"
-	cont "barbarians?"
+	text_high
+    text " Adrinna: "
+	next
+	text_start
+	text "Trading with"
+	line "outsiders?"
+	done
 	
-	para "Kensey: We trade"
-	line "our safe port"
-	cont "for their metals."
-
-	para "Adrinna: ..."
-
-	para "Kensey: There"
-	line "are now"
-	cont "hundreds on"
-	cont "our dole!"
+EG_Kensey_Text_1_2:
+	text_high
+    text " Kensey: "
+	next
+	text_start
+	text "We trade our"
+	line "port for their"
+	cont "metals."
+	
+	para "We have hundreds"
+	line "on our dole!"
 
 	para "Under my plans,"
-	cont "skills have"
-	cont "never been"
-	cont "sharper!"
-
-	para "Adrinna: But"
-	line "how will we"
-	cont "remain dynamic?"
-
-	para "Kensey: I'll"
-	line "oversee it."
-
-	para "Adrinna: I'm"
-	line "sure you will."
+	line "skills are sharp!"
 	done
+
+EG_Kensey_Text_1_3:
+	text_high
+    text " Adrinna: "
+	next
+	text_start
+	text "Your plan lacks"
+	line "dynamism."
+	
+	para "You plan to guide"
+	line "them forever?"
+	done
+
 
 EG_FamiliarSmellText:
 	text "What is that"
@@ -393,29 +483,32 @@ EG_AdrinnaMove3:
 	step_end
 
 EG_AdrinnaText1:
-	text "<PLAYER>? What"
-	line "are you doing"
-	cont "here?"
-
-	para "Fufufu..."
-	line "enjoying the"
+	text_high
+    text " Adrinna: "
+	next
+	text_start
+	text "<PLAYER>!"
+	line "Fufufu..."
+	cont "enjoying the"
 	cont "garden?"
 
 	para "This garden was"
-	line "shaped from dirt."
-	para "by an architect."
+	line "scuplted by a"
 	
-	para "A visionary arch-"
-	line "itect that did"
-	line "away with taditi-"
-	cont "onal landscaping."
-	
+	para "visionary arch-"
+	line "itect, who wiped"
+	para "away the land-"
+	line "scape and built"
+	para "something better"
+	line "in its place."
+
 	para "I see the dirt"
 	line "on your nails - "
 	
 	para "show me, what"
 	line "is your vision?"
 	done
+
 
 EG_AdrinnaText2:
 	text "For entertaining"
@@ -429,10 +522,9 @@ EG_AdrinnaText2:
 EG_AdrinnaText3:
 	text "Now, please"
 	line "relax, maybe on"
-	cont "the beaches"
-	cont "west of here."
+	para "the beaches"
+	line "west of here."
 	done
-
 
 EG_SeedBombMT:
 	faceplayer
@@ -474,7 +566,7 @@ Text_SeedBombIntro:
 	
 	para "When Bobesh asked"
 	line "me to make some"
-	cont "SEED BOMBs for"
+	cont "seed bombs for"
 	cont "the army,"
 	
 	para "I knew just what"
@@ -487,7 +579,7 @@ Text_SeedBombIntro:
 	
 Text_EG_TutorSeedBomb:
 	text "Grass #mon"
-	line "use SEED BOMBs"
+	line "use seed bombs"
 	cont "in combat."
 	done
 
@@ -512,8 +604,8 @@ Text_EG_TutorRefused:
 
 Text_EG_TutorTaught:
 	text "There! Now you"
-	line "can used SEED"
-	cont "BOMBs like me!"
+	line "can used seed"
+	cont "bombs like me!"
 	done
 
 AdrinnaWinText:
@@ -553,15 +645,15 @@ AmosGardenScript:
 	end
 
 AmosSuspectsYouText:
-	text "Who are you? I"
-	line "have seen you now"
+	text_high
+    text " Amos: "
+	next
+	text_start
+	text "You! You’ve been"
 	cont "with Hollis, then"
-	cont "Sandra, always"
+	cont "Sandra, "
 	
-	para "as things are at"
-	line "their worst."
-	
-	para "Now, you meet"
+	para "And you meet"
 	line "General Adrinna"
 	cont "in secret?"
 	

@@ -122,31 +122,28 @@ GenericTrainerElderLi:
     done
 
 ElderLiSeenText: 
-	text "Seek Falkner? His"
-	line "heart has strayed,"
-	cont "chasing heights,"
-	cont "forgetting roots."
+	text "You seek Falkner?"
 
-	para "We guard his tower"
-	line "not by choice, but"
-	cont "duty. Yet I see a"
-	cont "chance to shape"
-	cont "his legacy."
+	para "We guard his"
+	line "tower by duty,"
+	para "not by choice,"
+	line "but I hope we can"
+	cont "still shape him."
 
 	para "Can you be the"
-	line "mirror Falkner"
-	cont "needs? Show me,"
-	cont "trainer!"
+	line "mirror he"
+	cont "needs?"
 	done
+
 
 ElderLiBeatenText:
 	text "Your spirit speaks"
 	line "volumes. You may"
 	cont "pass. "
 
-	para "Show him that true"
-	line "power elevatess"
-	cont "others!"
+	para "Show him that the"
+	line "tallest trees have"
+	cont "the strongest roots."
 	done
 
 AcademyKurtScript: ; will this work?....

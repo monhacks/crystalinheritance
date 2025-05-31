@@ -65,119 +65,120 @@ WhitneyScriptRadioTower5F:
     end
 
 WhitneyIntroText:
-    text "Whitney: "
-	line "Oh? Are you the"
-	cont "one responsible"
-	cont "for cutting my"
-	cont "broadcast short?"
-	
+	text_high
+    text " Whitney: "
+	next
+	text_start
+	text "Oh? Are you the"
+	line "one who cut off"
+	cont "my show?"
+
 	para "Jealous of my"
 	line "popularity?"
 	
-    para "I started off as"
-    line "a picnicker. I got"
-    cont "stomped because my"
-    cont "cute #mon"
-    cont "weren't taken"
-    cont "seriously."
+    para "I started as a"
+    line "picnicker. I got"
+    para "stomped because"
+    line "my cute #mon"
+    para "weren't taken"
+    line "seriously."
 	
     para "Now, I'm an"
     cont "inspiration!"
     done
 
+
 KurtConfrontationText:
-    text "Kurt: Whitney."
-    line "Your show..."
-    para "It brings out"
-	line "the worst in"
-	cont "people."
+	text_high
+    text " Kurt: "
+	next
+	text_start
+    line "You used to make"
+	line "people feel"
+	cont "heard."
 	
-	para "You drifted too"
-	line "far from your"
-	cont "heritage."
+	para "Now, yours is the"
+	line "only voice you"
+	cont "want to hear."
     done
 
 WhitneyResponseText:
-    text "Whitney: Please. I"
-    line "have the top rated"
-    cont "show in all of"
-    cont "Johto."
+	text_high
+    text " Whitney: "
+	next
+	text_start
+    text "People tune in."
 
-    para "Do you know why"
+   	para "Do you know why"
 	line "no one comes to"
-	cont "the ceremony?"
+	cont "the ceremonies?"
 	
-    para "Because it"
-	line "is boring."
+    para "They’re boring."
+	line "Pure stasis."
 
-	para "Blah blah,"
-	line "perfect harmony,"
-    cont "yadda yadda."
-	
-	para "People want"
-	line "conflict."
-	
+	para "Does anything"
+	line "ever happen?"
+		
 	para "People want to"
-	line "channel someone"
-	cont "like me, stomping"
-	cont "on everyone they"
-	cont "don't like!"
-    done
+	line "see me, stomping"
+	cont "their enemies!"
+   	done
+
 
 WhitneyBeatenText:
     text "I'm flattened…"
     line "So this is what"
-    cont "it feels like to"
-    cont "lose."
+    cont "it feels like."
 	
-    para "All those"
-    line "relationships"
-    cont "because of how"
-    cont "I never wanted"
-	cont "to see the good"
-	cont "in anyone else."
+    para "I lost all those"
+	line "relationships be-"
+	cont "cause I didn't"
+	para "try to see the"
+	line "good in anyone"
+	cont "else."
     done
+
 	
 WhitneyAttractText:
-	text "<PLAYER>, you"
-	line "beat me. Please,"
+	text_high
+    text " Whitney: "
+	next
+	text_start
+	text "<PLAYER>, please,"
 	cont "take this badge"
 	cont "and TM."
 	
 	para "You reminded me"
-	line "that as a gym"
-	cont "leader, I should"
+	line "that I should"
 	cont "uplift others."
 	done
+
 	
 WhitneyAfterBattleText:
-	text "Thank you for"
-	line "showing me my"
-	cont "effect on others."
-	
-	para "Maybe it isn't"
+	text_high
+    text " Whitney: "
+	next
+	text_start
+	text "Maybe it isn't"
 	line "too late to"
 	cont "re-make my gym."
+	done
 
 KurtFinalText:
-    text "Kurt: <PLAYER>,"
-    line "let's go."
-	
-	para "Whitney showed"
-	line "remorse, but"
-	cont "I know her type."
-	
-	para "People like her"
-	line "can't change."
-	
-    para "Take that fire"
-    line "ladder, and then"
-    cont "we can take the"
-    cont "mountain path."
+	text_high
+    text " Kurt: "
+	next
+	text_start
+    text "<PLAYER>, let's go."
+
+    para "Take that ladder,"
+	line "and then follow"
+	cont "the tracks."
 	
 	para "I'll heal your"
 	line "party."
-    done
+    Done
+
 
 KurtEnterMovement:
 	step_down

@@ -59,7 +59,7 @@ BellchimeTrailPanUpTrigger:
 	step_end
 
 TinTowerSignText:
-	text "Bell Tower"
+	text "Tin Tower"
 
 	para "A legendary #-"
 	line "mon is said to"
@@ -120,22 +120,22 @@ KimonoGirlEmiIntroText:
 	line "way to save"
 	cont "your heritage."
 	
-	para "You have already"
+	para "You’ve"
 	line "brought people"
 	cont "together in"
 	cont "Goldenrod and"
 	
 	para "calmed the"
-	line "gales in"
-	cont "Violet, and now"
+	line "Violet gales, so"
 	
 	para "you seek the"
 	line "blossom tree"
 	cont "here…"
 	
-	para "Hahaha, so many"
+	para "Haha, so many"
 	line "similarities!"
 	done
+
 
 EmiBattleText:
 	text "Eh, you want to"
@@ -176,33 +176,36 @@ KimonoGirlEmiRewardText:
 	cont "strike…"
 	
 	para "It struck the"
-	line "Brass tower just"
-	cont "as the emperor"
-	cont "raised his"
-	cont "hands…"
+	line "Brass tower as"
+	para "the Emperor"
+	line "raised his"
+	cont "hands."
+
+	para "His ambitions,"
+	line "to rise above"
+	para "nature itself,"
+	line "made the tower"
+	cont "imbalanced."
 	
+	para "Of course it"
+	line "could not stand."	
 	para "But few know"
-	line "of the other"
-	cont "figure there"
-	cont "that day…"
+	line "of the others"
+	cont "there that day."
 	
-	para "Standing in the"
-	line "shadows was"
-	cont "someone with"
-	cont "hair like"
-	cont "spring leaves."
+	para "Right behind him,"
+	line "someone with"
+	para "hair like"
+	line "spring leaves."
 	
-	para "After those"
-	line "events, visit-"
-	cont "ors from Hisui"
-	cont "stopped coming."
-	
-	para "Some of the only"
-	line "evidence we"
-	cont "have is in"
-	cont "unique stones"
-	cont "like this."
+	para "For your patience"
+	line "I give you this"
+	para "stone. Many like"
+	line "it have been"
+	para "found under the"
+	line "Tin Tower."
 	done
+
 
 EmiHealsYouText:
 	text "Please, let me"
@@ -219,6 +222,7 @@ BellchimeTrailAskToTimeTravelText:
 	text "Would you like to"
 	line "see for yourself?"
 	done
+
 
 BellChimeTrailNoTimeTravelText:
 	text "Come see me when"

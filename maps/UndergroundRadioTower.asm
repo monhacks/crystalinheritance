@@ -221,11 +221,7 @@ BeautyJuliaAfterText:
     done
 
 KurtThankYouText:
-    text "<PLAYER>,"
-    line "thank you for"
-    cont "coming."
-
-	para "There might be"
+    text "There might be"
 	line "a few fights up"
 	cont "ahead."
 	
@@ -233,36 +229,26 @@ KurtThankYouText:
     line "#mon."
     done
 
-KurtAfterHealText:
-    text "These trainers,"
-	line "eh, we have a"
-	cont "common cause."
-	
-	para "We're going to"
-	line "take out the"
-	cont "power here."
-	
-	para "We're going to"
-	line "take Whitney's"
-	cont "show off the air"
-	para "and then sneak"
-	line "out of the city"
-	cont "through the pass"
-	cont "to the East."
 
-    para "Her show..."
-	line "It makes people"
-	cont "think their fan-"
-	cont "dom of Whitney"
-	
-	para "is more import-"
-	line "ant than their"
-	cont "family or heri-"
-	cont "tage!"
+KurtAfterHealText:
+   	text "These trainers"
+	line "will cut power"
+	para "to the radio"
+	line "tower, so we can"
+	para "sneak past onto"
+	line "the Magnet Train"
+	cont "tracks to the "
+	cont "East."
+
+   	para "Her Radio show"
+	line "gets listeners"
+	para "so riled up… "
+	line "yet another vile"
+	cont "Silph technology."
 
     para "Are you ready?"
-
     done
+
 
 
 
@@ -279,10 +265,9 @@ KurtReadyText:
 	
 	para "While the lights"
 	line "are off, we can"
-	cont "sneak past the"
-	cont "guards."
-	
+	cont "sneak through."
     done
+
 
 KurtAfterFlyText:
 	text "By the way, you"

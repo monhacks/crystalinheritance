@@ -67,14 +67,14 @@ StadiumBoxScene:
 	applymovement STADIUMBOX_KURT, StadiumBoxKurtWalksToPlayer
 	turnobject PLAYER, DOWN
 	opentext
-	writetext KurtDialogue
+	writetext KurtDialogueStadiumBox
 	waitbutton
-	writetext SandraDialogue
+	writetext SandraDialogueStadiumBox
 	waitbutton
 	turnobject STADIUMBOX_KURT, UP
-	writetext KurtDialogue2
+	writetext KurtDialogue2StadiumBox
 	waitbutton
-	writetext SandraDialogue2
+	writetext SandraDialogue2StadiumBox
 	waitbutton
 	closetext
 	applymovement STADIUMBOX_SANDRA, BoxSandraExitMovement
@@ -93,65 +93,70 @@ BoxSandraExitMovement:
 	step_down
 	step_end
 
-KurtDialogue:
-	text "KURT: We need to"
-	line "get to Olivine"
-	cont "port, to stop the"
-	cont "steel from enter-"
-	cont "ing Johto. Is"
-	cont "there any way to"
-	cont "get there?"
+KurtDialogueStadiumBox:
+	text_high
+    text " Kurt: "
+	next
+	text_start
+	text "<PLAYER>, nice"
+	line "work."
+	para "General Bobesh"
+	line "was such a tyrant"
+	para "to force everyone"
+	line "to follow him,"
+	
+	para "always believing"
+	line "he was right."
+
+	para "Now, we need to"
+	line "get to the port"
+	para "to stop the outs-"
+	line "iders technology."
+
+	para "Johto depends on"
+	line "it! Sandra, how"
+	cont "can we get there?"
 	done
 
-SandraDialogue:
-	text "SANDRA: You mean"
-	line "the Trader's"
-	cont "Landing? You would"
-	cont "have to get inside"
-	cont "the capital. I"
-	cont "hear that there is"
-	cont "a path that goes"
-	cont "there."
+SandraDialogueStadiumBox:
+	text_high
+    text " Sandra: "
+	next
+	text_start
+	text "A port: you mean"
+	line "Trader's Landing?"
+	para "You'd have to"
+	line "pass through the"
+	cont "Capital."
 	
 	para "However, the path"
-	line "from here to the"
-	cont "capital is very"
-	cont "tightly guarded."
-	
-	para "You will need to"
-	line "find a way in"
-	cont "to the capital"
-	cont "from your own"
-	cont "time period."
+	line "is guarded."
 	done
 
-KurtDialogue2:
-	text "KURT: <PLAYER>."
+KurtDialogue2StadiumBox:
+	text_high
+    text " Kurt: "
+	next
+	text_start
+	text "<PLAYER>."
 	line "We must get"
-	cont "into Ecruteak."
-	cont "Then we can get" 
-	cont "to old Olivine"
-	cont "port and stop the"
-	cont "shipment."
-	
-	para "We will go back"
-	line "in time from"
-	cont "modern Ecruteak"
-	cont "to get to the"
-	cont "port."
+	para "to Ecruteak."
+	line "Then we can pray"
+	para "to Celebi to take"
+	line "us back in time."
 	done
 
-SandraDialogue2:
-	text "SANDRA: Celebi? We"
-	line "used to build"
-	cont "shrines from the"
-	cont "blossom trees in"
-	cont "this area."
-
-	para "I think there is a"
-	line "blossom tree"
-	cont "around here. I"
-	cont "will meet you"
+SandraDialogue2StadiumBox:
+	text_high
+    text " Sandra: "
+	next
+	text_start
+	text "Celebi? We once"
+	line "built shrines by"
+	para "the blossom trees"
+	line "near the stadium."
+	para "There’s one left."
+	line "I will meet you"
 	cont "there."
 	done
 
@@ -164,36 +169,23 @@ StadiumBoxKurtScript:
 	end
 
 AdrinnaDialogueStadium:
-	text "Adrinna:"
-	line "Your victory over"
-	cont "Bobesh was..."
+	text_high
+    text " Adrinna: "
+	next
+	text_start
+	line "Your victory was"
 	cont "extraordinary."
 
 	para "You achieved it"
 	line "through your own"
-	cont "merit, not relying"
-	para "on those subpar"
-	line "minds cowering"
-	cont "below."
+	cont "merit."
 
-	para "I see in you the"
-	line "potential for"
-	cont "greatness,"
-	para "unburdened by the"
-	line "misguided ideal of"
-	cont "self-sacrifice."
+	para "You have some"
+	line "potential, if you"
+	para "let go of your"
+	line "misguided ideals."
+	Done
 
-	para "Remember, <PLAYER>:"
-	line "The world is full"
-	cont "of unrealized"
-	para "potential, waiting"
-	line "for those with the"
-	cont "will to seize it."
-
-	para "I'll be observing"
-	line "your progress with"
-	cont "great interest."
-	done
 	
 StadiumBoxSandraWalksToPlayer:
 	step_up

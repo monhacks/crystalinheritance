@@ -91,12 +91,17 @@ TheatreRivalBeforeText:
 	
 	para "is offering me a"
 	line "big project in"
-	cont "Olivine. I won't"
+	para "Olivine to filter"
+	line "water due to the"
+	cont "drought."
 	
-	para "have to live in"
-	line "Kurt's world, so"
-	cont "skewed towards"
-	cont "the past -"
+	para "I feel like this"
+	line "is was Celebi"
+	para "wanted me to do!"
+	line "What have you and"
+	para "your grandpa done"
+	line "for the drought?"
+
 	
 	para "I owe the future"
 	line "a way to actually"
@@ -240,10 +245,11 @@ TheatreElderExplainsText:
 	line "battle you back"
 	cont "to back, "
 	
+		
 	para "delivering the "
-	line "story of how a"
-	cont "young child kept"
-	cont "Johto from being"
-	cont "ruled by an evil"
-	cont "emperor!"
+	line "story of how"
+	para "Johto's unique"
+	line "traditions were"
+	cont "kept alive."
 	done
+	

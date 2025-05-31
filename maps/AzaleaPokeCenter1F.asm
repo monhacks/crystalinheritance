@@ -31,6 +31,7 @@ AzaleaPokeCenterMintLeafTrigger:
 	
 .MintLeafScript:
 	showemote EMOTE_HAPPY, AZALEA_POKECENTER_1F_MINTY, 30
+	setscene $1
 	end
 
 PokemonJournalBugsyScript:

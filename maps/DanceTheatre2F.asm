@@ -58,45 +58,34 @@ GenericTrainerKimono_girlNaoko: ; leafeon
 
 	text "The hero of old"
 	line "hailed from"
-	cont "Azalea town."
-	para "The hero united"
-	line "the town during"
-	cont "a time when the"
-	cont "forest was"
-	cont "threatened."
-	para "Say… you are"
-	line "from Azalea,"
-	cont "no?"
+	cont "the South."
+	para "They united"
+	line "the town to"
+	cont "address a threat."
 	done
+	
 Kimono_girl_1NaokoSeenText:
 	text "Our story starts"
-	line "deep in the"
-	cont "forest, long"
-	cont "ago!"
+	line "long ago in the"
+	cont "forest!"
 	done
 
 Kimono_girl_1NaokoBeatenText:
 	text "The hero of old"
 	line "hailed from"
-	cont "Azalea town."
-	para "The hero united"
-	line "the town during"
-	cont "a time when the"
-	cont "forest was"
-	cont "threatened."
-	para "Say… you are"
-	line "from Azalea,"
-	cont "no?"
+	cont "the South."
+	para "They united"
+	line "the town to"
+	cont "address a threat."
 	done
+
 
 GenericTrainerKimono_girlSayo:
 	generictrainer KIMONO_GIRL_1, SAYO, EVENT_BEAT_KIMONO_GIRL_SAYO, Kimono_girl_1SayoSeenText, Kimono_girl_1SayoBeatenText
 
-	text "When the nearby"
-	line "town of Gauld-"
-	cont "enrod was cast"
-	cont "into pieces by"
-	cont "the power-"
+	text "When Gauld-"
+	cont "enrod was divided"
+	cont "by the power-"
 	cont "hungry emperor,"
 
 	para "the hero showed"
@@ -109,17 +98,16 @@ Kimono_girl_1SayoSeenText:
 	done
 
 Kimono_girl_1SayoBeatenText:
-	text "When the nearby"
-	line "town of Gauld-"
-	cont "enrod was cast"
-	cont "into pieces by"
-	cont "the power-"
+	text "When Gauld-"
+	cont "enrod was divided"
+	cont "by the power-"
 	cont "hungry emperor,"
 
 	para "the hero showed"
 	line "them their"
 	cont "similar needs."
 	done
+
 
 GenericTrainerKimono_girlZuki:
 	generictrainer KIMONO_GIRL_2, ZUKI, EVENT_BEAT_KIMONO_GIRL_ZUKI, Kimono_girl_1ZukiSeenText, Kimono_girl_1ZukiBeatenText
@@ -148,35 +136,24 @@ Kimono_girl_1ZukiSeenText:
 	done
 
 Kimono_girl_1ZukiBeatenText:
-	text "The hero slipped"
-	line "into the Western"
-	cont "Capital, and"
+	text "Our hero slipped"
+	line "into the Capital, and"
 	para "learned of the"
-	line "emperor's plans"
-	cont "without his"
-	cont "knowing."
-	para "At that time,"
-	line "the towers were"
-	cont "still home to"
-	para "Lugia and Ho-Oh,"
-	line "but Ho-Oh was"
-	cont "growing restless"
-	para "from the emper-"
-	line "or's drumbeat"
-	cont "of war."
+	line "emperor's plans."
 	done
+
 
 GenericTrainerKimono_girlIzumi:
 	generictrainer KIMONO_GIRL_4, IZUMI, EVENT_BEAT_KIMONO_GIRL_IZUMI, Kimono_girl_1IzumiSeenText, Kimono_girl_1IzumiBeatenText
-	text "At that time, a"
-	line "harsh storm kept"
-	cont "boats out of"
-	cont "the harbor."
+
+	text "A harsh storm"
+	line "destroyed the"
+	cont "emperor's port."
 	para "Now, the emperor"
-	line "could only"
-	cont "expand to the"
-	cont "east."
+	line "had to expand to"
+	cont "the east."
 	done
+
 
 Kimono_girl_1IzumiSeenText:
 	text "Strike like a"
@@ -184,25 +161,22 @@ Kimono_girl_1IzumiSeenText:
 	done
 
 Kimono_girl_1IzumiBeatenText:
-	text "At that time, a"
-	line "harsh storm kept"
-	cont "boats out of"
-	cont "the harbor."
+	text "A harsh storm"
+	line "destroyed the"
+	cont "emperor's port."
 	para "Now, the emperor"
-	line "could only"
-	cont "expand to the"
-	cont "east."
+	line "had to expand to"
+	cont "the east."
 	done
+
 
 GenericTrainerKimono_girlKuni:
 	generictrainer KIMONO_GIRL_4, KUNI, EVENT_BEAT_KIMONO_GIRL_KUNI, Kimono_girl_1KuniSeenText, Kimono_girl_1KuniBeatenText
 
 	text "The hero made"
 	line "a coalition"
-	para "north of the"
-	line "Lake of Rage to"
-	cont "organize"
-	cont "against the"
+	para "in the Northeast"
+	line "against the"
 	cont "emperor."
 	done
 
@@ -214,12 +188,11 @@ Kimono_girl_1KuniSeenText:
 Kimono_girl_1KuniBeatenText:
 	text "The hero made"
 	line "a coalition"
-	para "north of the"
-	line "Lake of Rage to"
-	cont "organize"
-	cont "against the"
+	para "in the Northeast"
+	line "against the"
 	cont "emperor."
 	done
+
 	
 GenericTrainerKimono_gir1Miki:
 	generictrainer KIMONO_GIRL_5, MIKI, EVENT_BEAT_KIMONO_GIRL_MIKI, Kimono_girl_1MikiSeenText, Kimono_girl_1MikiBeatenText
@@ -246,22 +219,15 @@ Kimono_girl_1MikiSeenText:
 	done
 
 Kimono_girl_1MikiBeatenText:
-	text "Back then, Mount"
-	line "Mortar's volcan-"
-	cont "ic activity was"
-
-	para "a lightningrod"
-	line "for the emper-"
-	cont "or's self-"
-	cont "aggrandizing."
-
-	para "So the emperor's"
-	line "reach was cut"
-	cont "off from the"
-
-	para "south, the west,"
-	line "and the east."
+	text "The eastern mine"
+	line "was pillaged."
+	para "The emperor, cut"
+	line "off from all"
+	para "sides, had to "
+	line "make a daring"
+	cont "display."
 	done
+
 
 GenericTrainerKimono_girlAkari:
 	generictrainer KIMONO_GIRL_1, AKARI, EVENT_BEAT_KIMONO_GIRL_AKARI, Kimono_girl_1AkariSeenText, Kimono_girl_1AkariBeatenText
@@ -293,8 +259,8 @@ Kimono_girl_1AkariSeenText:
 Kimono_girl_1AkariBeatenText:
 	text "Flames filled"
 	line "the tower,"
-	cont "undoing the"
-	cont "emperor's work."
+	para "undoing the"
+	line "emperor's work."
 	para "The legendary"
 	line "#mon refuse"
 	cont "to put it out."

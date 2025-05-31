@@ -1,12 +1,20 @@
-	setrepeat 8
-	frame 3, 02
-	frame 1, 01
-	frame 2, 01
-	frame 1, 02
-	dorepeat 1
-	setrepeat 2
-	frame 0, 10
+	frame 1, 10
+	frame 2, 10
 	frame 3, 10
-	dorepeat 7
+	frame 4, 10
+	frame 5, 10
+	frame 6, 10
+	frame 7, 10
+	frame 8, 10
+	frame 9, 10
+	frame 10, 10
+	frame 11, 10
+	frame 10, 10
+	frame 11, 10
+	frame 12, 10
+	frame 13, 10	
+	frame 14, 10
+	frame 15, 10	
+	frame 16, 10
+	frame 17, 10
 	endanim
-; 0xd0954

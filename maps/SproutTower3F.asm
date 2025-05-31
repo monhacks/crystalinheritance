@@ -94,59 +94,77 @@ VioletGymFalknerScript:
 	jumpopenedtext FalknerAfterText
 
 FalknerIntroText:
-	text "I've seen you"
-	line "coming, player."
-	cont "But you're too"
-	cont "late to stop me."
-
-	para "The Bronzong is"
+	text "My #mon saw"
+	line "you coming."
+	
+	Para "You took down"
+	line "Whitney in her"
+	para "tower in your"
+	line "crusade."
+	
+	para "Presumably, you're"
+	line "here for me."
+	
+	para "But you're too"
+	line "late. The Bronzor"
+	para "is almost"
+	line "unearthed."
+	para "Its tones will"
+	line "pull raindrops "
+	cont "from miles away."
+	
+	para "The Bronzor is"
 	line "nearly unearthed."
-	cont "Its tones will"
-	cont "bring rains for"
+	para "Its tones will"
+	line "bring rains for"
 	cont "many weeks."
 
-	para "Yes, there are"
-	line "costs. The old"
-	cont "tower, perhaps my"
-	cont "own integrity."
-
-	para "But I'll ensure"
-	line "water for some."
-	cont "That's all that"
-	cont "matters now!"
-	
-FalknerWinLossText:
-	text "Your #mon's"
-	line "teamwork... It's"
-	cont "opened my eyes."
-
-	para "My actions would"
-	cont "harm all of Johto."
-
-	para "Pushing clouds,"
-	line "stealing rain,"
-	cont "it's not sustain-"
-	cont "able."
+	para "Once I tore out"
+	line "the roots of this"
+	para "tower, it was"
+	line "ready to be tran-"
+	cont "sformed for me!"
 	done
+
+
+FalknerWinLossText:
+	text "It's like your"
+	line "#mon knew"
+	cont "your thoughts!"
+	para "You must have"
+	line "trained deeply."
+
+	para "Maybe my renova-"
+	line "tions are mis-"
+	cont "guided." 
+	
+	para "Without a strong"
+	line "foundation, my"
+	para "project would be"
+	line "top-heavy and"
+	para "collapse. I was"
+	line "taking nature out"
+	cont "of balance."
+	done
+
 
 ReceivedZephyrBadgeText:
 	text "Please, take this"
-	line "TM  and badge."
-	cont "Use it wisely."
+	line "TM and badge."
 	done
+
 
 FalknerAfterText:
 	text "I need to reassess"
-	line "my approach. Work"
-	cont "with nature, not"
-	cont "against it."
+	line "my approach."
+
+	para "I've destroyed so"	
+    line "much of meaning"
+	para "in and around"
+	line "Violet City."
 
 	para "I'll halt the"
 	line "excavation on"
 	cont "Route 32 at once."
-
-	para "Thank you for this"
-	line "... valuable"
-	cont "lesson, trainer."
 	done
 	
