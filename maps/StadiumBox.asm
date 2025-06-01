@@ -155,7 +155,7 @@ SandraDialogue2StadiumBox:
 	line "built shrines by"
 	para "the blossom trees"
 	line "near the stadium."
-	para "There’s one left."
+	para "There's one left."
 	line "I will meet you"
 	cont "there."
 	done
@@ -184,7 +184,7 @@ AdrinnaDialogueStadium:
 	line "potential, if you"
 	para "let go of your"
 	line "misguided ideals."
-	Done
+	done
 
 	
 StadiumBoxSandraWalksToPlayer:

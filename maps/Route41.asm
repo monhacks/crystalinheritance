@@ -79,17 +79,15 @@ Route41SageImpressedText:
 	done
 
 Route41SageText2:
-	text "We don't know how"
-	line "you got it - but"
-	para "clearly you honor"
-	line "Lugia enough to"
-	para "preserve one of"
-	line "her feathers."
+	para "Clearly you honor"
+	line "Lugia if you"
+	para "preserve of"
+	line "her feather."
 	
-	para "We will grant you"
-	line "passage to the"
-	cont "Whirl Islands."
+	para "We grant you"
+	line "passage."
 	done
+
 
 Route41SageScript2:
 	faceplayer

@@ -122,47 +122,56 @@ TL_Scene_Part_1_Script:
 	end
 
 TL_Text1:
-	text "Kensey: You must"
-	line "get your sailors"
-	cont "to help!"
-
-	para "We promised the"
-	line "outsiders a port."
+	text_high
+    text " Kensey: " 
+	next
+	text_start 
+	text "Your navigators"
+	line "must help!"
+	
+	para "We promised them!"
 	done
 
 TL_Text2:
-	text "Barbeau: How?"
-	line "They refuse."
-
-	para "The guardian of"
-	line "the sea protects"
-	cont "us."
+	text_high
+    text " Barbeau: " 
+	next
+	text_start 
+	text "How? They refuse."
+	line "They know that"
+	cont "Lugia guards us."
 	done
 
 TL_Text3:
-	text "Kensey: Urgh!"
-	line "Yes, Lugia is the"
-	para "guardian of the"
-	line "sea, but she also"	
-	cont "serves Mejimi."
-
-	para "Do you know what"
-	line "is at stake?"
+	text_high
+    text " Kensey: " 
+	next
+	text_start 
+	text "You're being so"
+	line "difficult."
+	
+	para "Lugia now serves"
+	line "the Emperor."
 	done
 
 TL_Text4:
-	text "Barbeau: We're "
-	line "between your heel"
-	cont "and their cannon."
-
-	para "I have faith she"
-	line "will choose us."
+	text_high
+    text " Barbeau: " 
+	next
+	text_start 
+	text "When the time"
+	line "comes, I have"
+	para "faith that she'll"
+	line "choose us!"
 	done
 
 TL_Text5:
-	text "Kensey: Ugh! If"
-	line "the ships don't"
-	cont "make passage,"
+	text_high
+    text " Kensey: " 
+	next
+	text_start 
+	text "You fool! If they"
+	line "can't port, then"
 	
 	para "the outsiders"
 	line "will see it as an"
@@ -173,28 +182,48 @@ TL_Text5:
 	done
 
 TL_Text6:
-	text "Barbeau: (sighs)"
-	line "Guide me, mother."
+	text_high
+    text " Barbeau: " 
+	next
+	text_start 
+	text "(sigh)"
 	done
 	
 
 TL_Text7:
-	text "Kurt: Excuse me!"
-	line "Are you the elder"
-	para "here? We need to"
-	line "stop the imports,"
-	para "and we may be"
-	line "able to help you."
+	text_high
+    text " Kurt: " 
+	next
+	text_start 
+	text "Excuse me! Are"
+	line "you the elder?"
+	
+	para "We're trying to"
+	line "block the outsi-"
+	cont "ders, and we may"
+	cont "be able to help." 
 	done
 
 TL_Text8:
-	text "Barbeau: Hush!"
-	line "If you're serious"
-	para "then meet me by "
-	line "the shrine."
+	text_high
+    text " Barbeau: " 
+	next
+	text_start 
+	text "Wait… is that a"
+	line "Silver Wing?"
+	
+	para "Are you a friend"
+	line "of Lugia?"
+	
+	para "Meet me by the"
+	line "shrine."
 	done
 
 TL_Text9:
+	text_high
+    text " Kurt: " 
+	next
+	text_start 
 	text "Kurt: <PLAYER>:"
 	line "Lugia in this "
 	para "timeline is with"
@@ -240,49 +269,47 @@ TL_Scene_2_R:
 	end
 
 TL_2_Text1:
-	text "Barbeau: You"
-	line "made it to our"
-	cont "shrine."
-	
-	para "But where's your"
+	text_high
+    text " Barbeau: " 
+	next
+	text_start 
+	text "Oh, where's your"
 	line "grandpa?"
 	done
 
 TL_2_Text2:
-	text "Kurt: Mister"
-	line "Barbeau! We are on"
-	para "a quest given by"
-	line "Celebi, from a"
-	cont "time away."
-	
-	para "We share the same"
-	line "goal: stop those"
-	cont "ships landing."
-	
-	para "In our time, we"
-	line "are threatened"
-	cont "by an onslaught"
-	cont "of Steel types."
-	
+	text_high
+    text " Kurt: " 
+	next
+	text_start 
+	text "We come from far"
+	line "away, but share"	
+	cont "the same goal:"
+	para "stop those ships."
+	line "The future of "
+	para "Johto depends on"
+	line "blocking them!"
+		
 	para "I believe if you"
 	line "pray here, we can"
-	cont "bring Lugia back"
-	cont "to help you."
+	para "bring Lugia back"
+	line "to help you."
 	done
+
 	
 TL_2_Text3:
-	text "Barbeau: You are"
-	line "my best shot."
-	
-	para "We're stuck with"
-	line "brutal outsiders"
-	cont "on one side, and"
-	
-	para "brutal General"
-	line "Kensey on the"
-	cont "other side."
-	
-	para "Just promise me:"
+	text_high
+    text " Barbeau: " 
+	next
+	text_start 
+
+	text "The Silver Wing"
+	line "marks you as an"
+	para "ally of Lugia,"
+	line "which means you"
+	para "are our ally. If"
+	line "I do this, will"
+	para "you promise me"
 	line "you will look"
 	cont "after Lugia?"
 	
@@ -291,36 +318,39 @@ TL_2_Text3:
 	para "it would be..."
 	line "devastating."
 	
-	para "Lugia is not a"
-	line "machine to be"
-	cont "used."
+	para "We rely on her to"
+	line "guide us back"
+	cont "from the islands."
 	done
 
+
 TL_2_Text4:
-	text "Kurt: I promise,"
-	line "I will respect"
-	cont "her limits."
-	
-	para "We even have a"
-	line "Silver Wing."
-	
-	para "You can trust"
-	line "us."
+	text_high
+    text " Kurt: " 
+	next
+	text_start 
+	text "Of course. You"
+	line "can trust us."
 	done
 	
 TL_2_Text5:
-	text "Barbeau: "
-	line "Without waypoint,"; keep these lines 
-	cont "Clouds shroud all" 
+	text_high
+    text " Barbeau: " 
+	next
+	text_start 
+	text "Very well. Let us"
+	line "pray:"
+		
+	para "Without waypoint,"
+
+	para "Clouds shroud all" 
+	line "sight,"
 	
-	para "Our minds muddled" ; maybe revise?
-	line "Fear enthralled"
+	para "Beseech thee"
+	line "moon,"
 
-	para "Beseech thee moon" ; keep these lines
-	line "Show us the way,"
-
-	para "Pierce shadows" ; maybe revise?
-	line "Until dawn's ray."	
+	para "Guide us with"
+	line "your light!"
 	done
 	
 

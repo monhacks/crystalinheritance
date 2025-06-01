@@ -777,7 +777,7 @@ KurtStayOutOfThis:
 	text_start 
 	text "Stay out of this."
 	
-	para "We’re following"
+	para "We're following"
 	line "Celebi, stopping"
 	para "the unnatural"
 	line "technologies!"
@@ -793,7 +793,7 @@ RivalRespondsToKurt:
 	line "Celebi looked at"
 	para "me! And I have an"
 	line "actual plan."
-	cont "I’ll show you!"
+	cont "I'll show you!"
 	done
 
 

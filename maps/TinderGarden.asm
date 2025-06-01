@@ -803,11 +803,10 @@ PryceWatchKurtPleaseText1:
 	cont "not everyone sees"
 	para "eye-to-eye with"
 	line "him - even those"
-	cont "he’s closest to."
+	cont "he's closest to."
 	
-	para "He"
-	line "took it hard"
-	cont "when your Dad"
+	para "He took it hard"
+	line "when your Dad"
 	cont "moved away."
 	done
 
@@ -1052,7 +1051,7 @@ KurtThinksTheyreCuttingTreesText:
 	cont "nearby."
 	
 	para "Hang on, Ilex!"
-	line "I’m on my way!"
+	line "I'm on my way!"
 	done
 
 

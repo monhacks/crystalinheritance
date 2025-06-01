@@ -426,39 +426,36 @@ TinTower3FSamsaraScript:
 
 
 TinTower3FStudyHarderText:
+	text_high
+    text " Vespera: "
+	next
+	text_start
 	text "You would like to"
 	line "leave the city?"
 	
 	para "As the chief"
-	line "Chronicler, I am"
-	para "responsible for"
-	line "protecting it."
+	line "Chronicler, I"
+	cont "protect it."
 	
 	para "If I help you,"
 	line "more may leave,"
 	cont "putting us in an"
-	cont "even more dire"
-	cont "situation."
+	cont "even worse spot.”
 	
-	para "The three sages"
-	line "and I are in an"
-	cont "ontological cri-"
-	cont "sis. Please come"
+	para "We are in a"
+	cont "crisis. Come”
 	
-	para "back when we can"
-	line "resolve it."
+	para "back when we have"
+	line "resolved it."
 	done
 
+
 ReceivedHeavensBadgeText:
-	text "There is still"
-	line "time to change"
-	cont "him. Take this"
-	cont "HM, head west."
-
-	para "You will find "
-	line "the port there."
-
-	para "Also, take this"
+	text_high
+    text " Vespera: "
+	next
+	text_start
+	text "Now, take this"
 	line "Heavens badge."
 	
 	para "It symbolizes the"
@@ -476,7 +473,7 @@ ReceivedHeavensBadgeText:
 	
 SamsaraIntroText:
 	text_high
-    text " Vespera: " ; note the space before and after the text for better readability 
+    text " Vespera: "
 	next
 	text_start 
 	text "So, you're here"
@@ -512,6 +509,7 @@ SamsaraIntroText:
 	cont "will help you."
 	done	
 	
+	
 SamsaraWinLossText:
 	text "Your #mon"
 	line "do not fear the"
@@ -519,20 +517,23 @@ SamsaraWinLossText:
 	
 	para "They know they "
 	line "will persevere"
-	cont "as a team, all"
 	cont "with their uni-"
 	cont "que talents."
 
 	para "This is what Mej-"
-	line "imi forgot, power"
-	cont "should be passed"
-	cont "down, not hoar-"
-	cont "ded."
+	line "imi forgot."
+	
+	para "His ancestors"
+	line "were not revered"
+	para "for taking, but"
+	line "by giving of"
+	cont "themselves."
 	done
+
 
 SamsaraAfterText:
 	text_high
-    text " Vespera: " ; note the space before and after the text for better readability 
+    text " Vespera: " 
 	next
 	text_start 
 	text "There is still"
@@ -559,7 +560,7 @@ TinTowerHTyphlosionScript:
 	done
 	
 TinTowerHTyphlosionText:
-	text "H. Typhlosion:"
+	text "Charon:"
 	line "Scarrooo!"
 	done
 	

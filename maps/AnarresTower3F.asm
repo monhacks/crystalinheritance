@@ -222,7 +222,7 @@ TammyText3:
 	done
 
 
-HollisAbuse:'
+HollisAbuse:
 	text_high
     text " Hollis: "
 	next
@@ -304,7 +304,7 @@ HollisCongratulates:
 	cont "ring over another"
 	para "towards the sky."
 
-	Para "each ring has its"
+	para "each ring has its"
 	line "day in the sun… "
 	para "but then it's time"
 	line "to support the"
@@ -387,7 +387,7 @@ AmosSaysHelloText:
 
 	para "..."
 
-	para "I won’t give up"
+	para "I won't give up"
 	line "on him. I hope"
 	cont "his ideas evolve."
 	done

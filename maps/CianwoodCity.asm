@@ -131,37 +131,36 @@ CianwoodEusineScript:
 	end
 	
 CianwoodShpeelText:
-	text "Eusine: The storm"
+	text_high
+    text " Barbeau: " 
+	next
+	text_start 
+	text "Absurd. The storm"
 	line "was a malevolent"
 	cont "force of nature."
 	
-	para "In a few short"
-	line "hours, its anger"
-	cont "grew from a tant-"
-	cont "rum to a terror."
+	para "In a few hours"
+	line "it grew to a"
+	cont "terror."	
 	
-	para "I spent my life"
-	line "chasing nature's"
-	cont "beauty, but she"
+	para "I used to admire"
+	line "nature, but then
 	
-	para "spurned this idy-"
-	line "llic city for no"
-	cont "good reason."
+	para "she spurned Cian-"
+	line "wood - why?"
 	
 	para "Chuck tried to"
 	line "save it, but they"
 	cont "couldn't raise a"
-	cont "seawall."
+	cont "seawall in time."
 	
-	para "I've sought only"
-	line "beauty in nature."
-	cont "Perhaps I've been"
-	cont "blind all along."
+	para "Was I naïve to "
+	line "only see beauty?"
 	
 	para "I long to see the"
-	line "divine, the pure."
-	cont "Show me there's"
-	cont "still hope here."
+	line "sublime."
+	para "I want to hope"
+	line "again."
 	done
 
 	
@@ -201,17 +200,25 @@ CC_Move_Kurt_2:
 	step_up
 
 CC_KurtText1:
-	text "Kurt: I felt a"
-	line "similar cynicism,"
-	cont "but now, I feel"
-	para "empowered. Like"
-	line "I'm fulfilling my"
-	cont "destiny."
+	text_high
+    text " Kurt: " 
+	next
+	text_start 
+	text "You know, I felt"
+	line "a similar cynicism"
+	para "but now, I feel"
+	line "empowered. Like"
+	para "I'm fulfilling my"
+	line "destiny."
 	done
 	
 CC_EusineText1:
-	text "Eusine: Lugia!"
-	line "What majesty!"
+	text_high
+    text " Eusine: " 
+	next
+	text_start 
+	text "Lugia!"
+	para "What majesty!"
 
 	para "The glyphs on the"
 	line "rock showed her"
@@ -219,7 +226,11 @@ CC_EusineText1:
 	done
 	
 CC_KurtText2:
-	text "Kurt: <PLAYER>,"
+	text_high
+    text " Kurt: " 
+	next
+	text_start 
+	text "<PLAYER>, I think"
 	line "we should pray."
 	para "It may cause us"
 	line "to go backwards"
@@ -227,6 +238,10 @@ CC_KurtText2:
 	done
 	
 CC_KurtPrayer:
+	text_high
+    text " Eusine: " 
+	next
+	text_start 
 	text "So this is my"
 	line "guardian of the"
 	cont "sea."
@@ -234,16 +249,16 @@ CC_KurtPrayer:
 	para "Lugia: In this"
 	line "darkest hour,"
 	
-	para "upon this"
+	para "on this"
 	line "tattered atoll,"
 	
 	para "Bring a cleansing"
 	line "shower,"
 	
-	para "Make what's broken"
+	para "Make the broken"
 	line "whole!"
 	done
-	
+
 CianwoodCityShrineScript: ; revise: show painting of lugia
 	refreshscreen
 	paintingpic LUGIA_PAINTING

@@ -385,7 +385,7 @@ TowerRoofMejimiText2_0:
 
 TowerRoofText2_4: 
 	text "Kurt: <PLAYER>,"
-	line "what’s going on?"
+	line "what's going on?"
 	done
 
 TowerRoofText2_5: 

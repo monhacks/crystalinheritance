@@ -73,7 +73,7 @@ TammyDialogue1:
 	text "The pineco are an"
 	line "infestation! The"
 	para "predators from"
-	line "the north aren’t"
+	line "the north aren't"
 	para "here, for some"
 	line "reason. The Holt"
 	cont "is unbalanced!"
