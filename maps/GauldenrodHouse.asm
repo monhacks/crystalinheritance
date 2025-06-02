@@ -25,6 +25,7 @@ GauldenrodHouseTradeQuestTrigger:
 	
 .TradeQuestScript:
 	showemote EMOTE_HAPPY, LEMONADE_HOUSE_LADY, 30
+	setscene $1
 	end
 	
 LemonadeHouseLadyScript:
@@ -39,36 +40,32 @@ LemonadeHouseLadyScript:
 	iffalse_jumpopenedtext Text_NoMushroom
 	takeitem TINYMUSHROOM
 	verbosegiveitem LEMONADE	
-	setscene $1
 	iffalse_endtext
 	jumpopenedtext GivingLemonadeText 
 	
 
 WantLemonadeText:
-	text "I just wrote"
-	line "letters to all my"
-	cont "favorite battlers"
-	cont "at the stadium,"
-	cont "but I forgot to"
-	cont "get postage."
-
-	para "When I asked one"
-	line "of the brigaders,"
-	cont "he told me it"
-	cont "needs a mushroom"
-	cont "stamp."
+	text "I'm trying to kick"
+	line "my caffeine habit"
+	
+	para "now that the bri-"
+	line "gaders levy taxes"
+	cont "on tea."
+	
+	para "My friends say"
+	line "I should brew a"
+	para "tinymushroom to"
+	line "get a smoother"
+	cont "buzz."
 	done
 
 Text_MushroomQuestion:
 	text "Do you have a"
-	line "mushroom that"
-	cont "would be small"
-	cont "enough?"
+	line "tinymushroom?"
 
 	para "I would give you"
-	line "some fresh"
-	cont "lemonade from my"
-	cont "garden."
+	line "a fresh lemonade"
+	cont "from my garden."
 	done
 
 GivingLemonadeText:
@@ -76,9 +73,7 @@ GivingLemonadeText:
 	line "Thank you so much!"
 
 	para "Here, take this"
-	line "lemonade. I made"
-	cont "it from the fruit"
-	cont "in my backyard!"
+	line "lemonade!"
 	done
 
 Text_NoMushroom:

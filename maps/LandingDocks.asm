@@ -19,8 +19,8 @@ LandingDocks_MapScriptHeader:
 
 
 
-	def_object_events ; objects placed 
-	object_event  9, 16, SPRITE_KURT, 	SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_DOCKS_KURT ; initialize 
+	def_object_events
+	object_event  9, 16, SPRITE_KURT, 	SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_DOCKS_KURT
 	object_event 15, 12, SPRITE_KENSEY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_DOCKS_KENSEY
 	object_event 14, 11, SPRITE_BARBEAU, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_DOCKS_BARBEAU
 	object_event 14, 12, SPRITE_SURGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED,OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_DOCKS_SURGE
@@ -143,29 +143,39 @@ LandingDocksScene:
 	end
 
 Docks_Text1:
-	text "Captain: You must"
-	line "send rafts out!"
+	text_high
+    text " Outsider: " 
+	next
+	text_start 
+	text "Send the boats"
+	line "now! My men need"
+	cont "your help!"
 	
-	para "We agreed! I have"
-	line "pidgey mail to my"
-	cont "other ships."
-	
-	para "If they don't get"
-	line "more, they will"
-	cont "send the big ones"
-	cont "to your port!"
-	
-	para "Kensey: We are"
-	line "trying!"
-	
-	para "Captain: That's"
-	line "all you can say?"
+	para "If you refuse, my"
+	line "superiors will"
+	para "send even more"
+	line "aggressive ships"
+	cont "to you!"
 	done
 
+
+Docks_Text1_2:
+	text_high
+    text " Kensey: " 
+	next
+	text_start 
+	text "We are trying!"
+	line  "Right, Barbeau?"
+	done
+
+
 Docks_Text2:
-	text "Kensey: Told you,"
-	line "Barbeau! What of"
-	cont "your faith now?"
+	text_high
+    text " Barbeau: " 
+	next
+	text_start 
+	text "I still believe"
+	line "Lugia will come!"
 	done
 
 Docks_KurtMove1:
@@ -182,12 +192,13 @@ Docks_KurtMove1:
 	step_end
 
 Docks_Text3:
-	text "Kurt: You'll have"
-	line "no more steel!"
-	
-	para "Lugia, I command"
-	line "you, run their"
-	cont "ships aground!"
+	text_high
+    text " Kurt: " 
+	next
+	text_start 
+	text "Begone! Lugia,"
+	line "Aeroblast their"
+	cont "ships!"
 	done
 
 Docks_LugiaMove1:
@@ -201,14 +212,25 @@ Docks_LugiaMove1:
 	step_end
 
 Docks_Text4:
-	text "Barbeau: You..."
-	line "The Guardian of"
-	cont "the sea!?"
+	text_high
+    text " Barbeau: " 
+	next
+	text_start 
+	text "The guardian of"
+	line "the sea?..."
+	done
 
-	para "Kurt: Outsider,"
-	line "get to your life-"
-	cont "boat, while you"
-	cont "still can."
+Docks_Text4_2:
+	text_high
+    text " Kurt: " 
+	next
+	text_start 
+	text "Outsider, get to"
+	line "your lifeboat,"
+
+	para "while you still"
+	line "can. And don't"
+	cont "come back."
 	done
 
 Docks_CaptainMove1:
@@ -227,75 +249,115 @@ Docks_CaptainMove1:
 	step_end
 
 Docks_Text5:
-	text "Barbeau: I told:"
-	line "you so!"
-	
-	para "Lugia saved us!"
+	text_high
+    text " Barbeau: " 
+	next
+	text_start 
+	text "See! I told you"
+	line "so, Kensey!"
 	done
 
 Docks_Text6:
+	text_high
+    text " Kensey: " 
+	next
+	text_start 
 	text "Kensey: I don't"
 	line "understand - isn't"
 	cont "she with Mejimi?"
-	
+	done
+
+
+Docks_Text6_2:
+	text_high
+    text " Barbeau: " 
+	next
+	text_start 
+	text "She chose us!"
+	done
+
 	para "Barbeau: Lugia"
 	line "chose us!"	
 	done
 
 Docks_Text7:
-	text "Kensey: No, she"
-	line "chose this bloke."
+	text_high
+    text " Kensey: " 
+	next
+	text_start 
+	text "No, she chose this"
+	line "old bloke."
 	
-	para "Do you have any"
-	line "idea what you've"
-	cont "done, fool?"
+	para "Do you know what"
+	line "you've done?"
 	done
 
 Docks_Text8:
-	text "Kurt: This is for"
-	line "the greater good."
-	
-	para "I captured Lugia"
-	line "for the good of"
-	cont "Johto."
+	text_high
+    text " Kurt: " 
+	next
+	text_start 
+	text "I captured Lugia"
+	line "for Johto. Her"
+	para "power is mine."
+	line "Johto's future"
+	para "depends on block-"
+	line "ing those ships."
 	done
 
 Docks_Text9:
-	text "Barbeau: CAPTURED"
-	line "Lugia?"
+	text_high
+    text " Barbeau: " 
+	next
+	text_start 
+	text "CAPTURED Lugia?"
 	done
 	
 Docks_Text10:
-	text "Kurt: Indeed."
+	text_high
+    text " Kurt: " 
+	next
+	text_start 
+	text "Indeed."
 	done
 
 Docks_Text11:
-	text "Barbeau: She is"
-	line "sacred! I cannot"
-	cont "fathom you would"
-	
-	para "keep her locked"
-	line "up! Battle me, or"
-	cont "choose your"
-	cont "champion!"
+	text_high
+    text " Barbeau: " 
+	next
+	text_start 
+	text "She is sacred!"
+	line "You must release"
+	para "her. Battle me,"
+	line "or choose a"
+	cont "champion."
+	done
 
-	para "Kurt: <PLAYER>,"
-	line "please show him"
-	cont "what good we've"
-	cont "done for him."
+Docks_Text11_2:
+	text_high
+    text " Kurt: " 
+	next
+	text_start 
+	text "Lugia is mine."
+	line "<PLAYER>, please"
+	para "address his con-"
+	line "cern."
 
 	para "I'll heal your"
 	line "#mon."
 	done
 
 BarbeauBeatenText1:
-	text "Unbelievable... "
-	line "Lugia is no more"
-	cont "in the ocean."
+	text "So Lugia is gone"
+	line "from the ocean."
 	done
 
 Docks_Text12:
-	text "Barbeau: I cannot"
+	text_high
+    text " Barbeau: " 
+	next
+	text_start 
+	text "<PLAYER>, I cannot"
 	line "condone what you"
 	para "did. But tradit-"
 	line "ion dictates that"
@@ -303,22 +365,29 @@ Docks_Text12:
 	line "this badge,"
 	para "marking you as"
 	line "worthy to lead"
-	cont "expeditions."
+	cont "an expedition."
 	done
 
-Docks_Text12_2:
+Docks_Text12_2: ; todo all the other _2 texts here 
 	para "Kurt: Excellent,"
 	line "<PLAYER>. I'll"
 	cont "heal you again."
 
-	para "We've halted the"
-	line "flow of steel!"
+	para "We've stopped the"
+	line "outsiders' boats!"
+	
+	para "Johto is saved"
+	line "from their tech!"
 	done
 
 ; heal party 
 
-Docks_Text13:		
-	text "Kensey: Useless!"
+Docks_Text13:
+	text_high
+    text " Kensey: " 
+	next
+	text_start 
+	text "You are useless!"
 	line "You fight without"
 	cont "thought, Barbeau!"
 	
@@ -326,52 +395,86 @@ Docks_Text13:
 	line "these docks, and"
 	cont "save the port!"
 	done
-	
-; battle KEnsey
 
 KenseyBeaten1:
 	text "You have a talent"
 	line "for battling. But"
-	cont "Steel will still"
-	cont "flow."
+	para "I don't think we"
+	line "have seen the"
+	para "last of the out-"
+	line "siders yet."
+	
+	para "The emperor has a"
+	line "mine to the East"
+	para "where we are dev-"
+	line "eloping tech that"
+	para "can compete with"
+	line "the outsiders'."
 	done
 
 Docks_Text14:
+	text_high
+    text " Kensey: " 
+	next
+	text_start 
 	text "Kensey: There is"
 	line "a mine east of"
 	cont "the capital."
+
+	para "Adrinna is becom-"
+	line "ing a capable"
+	cont "metallurgist."
+
+	para "Johto will master"
+	line "one field after "
+	cont "another."
 	
 	para "You only delay"
 	line "the inevitable."
 	done
 
+
 Docks_Text15:
-	text "Barbeau: Kurt,"
-	line "why don't you"
-	cont "call back Lugia?"
+	text_high
+    text " Barbeau: " 
+	next
+	text_start 
+	text "why don't you"
+	line "call back Lugia?"
 	done
 
 Docks_Text16:
-	text "Kurt: Oh, where"
-	line "did she go?"
+	text_high
+    text " Kurt: " 
+	next
+	text_start 
+	text "Oh, where did"
+	line "she go?"
 	done
 
 Docks_Text17:
-	text "Barbeau: I saw"
-	line "her dive beneath"
-	cont "the waves, but "
+	text_high
+    text " Barbeau: " 
+	next
+	text_start 
+	text "She dove beneath"
+	line "the waves, but"
 	
 	para "the sea is still."
 	line "Is she OK? Was I"
-	cont "the last of us to"
-	cont "see her?"
+	para "the last of us to"
+	line "see her?"
 	done
 
 Docks_Text18:
-	text "Kensey: Now, you"
+	text_high
+    text " Kensey: " 
+	next
+	text_start 
+	text "Maybe now you"
 	line "will see sense!"
-	para "Now you have to"
-	line "learn some maps!"
+	para "Your whole clan"
+	line "will learn maps!"
 	
 	para "And you, old man,"
 	line "I will tell the"
@@ -392,31 +495,36 @@ Docks_KenseyMoves1:
 	step_end
 
 Docks_Text19: 
-	text "Barbeau: Kurt,"
-	line "<PLAYER>. You did"
-	cont "what you said,"
+	text_high
+    text " Barbeau: " 
+	next
+	text_start 
+	text "Kurt, you did"
+	cont "what you said."
 	
-	para "At great cost."
 	line "I wonder if it"
 	cont "was worth it."
 	
 	para "A few weeks time"
-	line "against possibly"
-	cont "Lugia's life?"
+	line "against Lugia?"
 
 	para "... Say, do you"
 	line "also smell Holly"
 	cont "in the air?"
 	done
 
-; celebi scene 
-
-Docks_Text20: ; really need to revise this to be about building up independents, ... 
-	text "Celebi: You mis-"
-	line "use #mon as"
-	cont "means to your end"
+Docks_Text20:
+	text_high
+    text " Celebi: " 
+	next
+	text_start 
+	text "Time is running"
+	line "short. Your"
+	para "hubris put nature"
+	line "further into"
+	cont "imbalance!" 
 	
 	para "Are you still"
-	line "worthy to help me?"
+	line "worthy?"
 	done
 	

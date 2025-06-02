@@ -21,29 +21,24 @@ GauldenrodGuildNPC1Script:
 	jumptextfaceplayer GauldenrodGuildNPC1Text
 
 GauldenrodGuildNPC1Text:
-	text "I used to get a"
-	line "lot of business"
-	cont "helping people"
-	cont "repair their wood"
-	cont "houses."
+	text "I used to help"
+	line "people repair"
+	cont "their wood homes."
 
 	para "If the emperor's"
 	line "plan to import"
-	cont "Steel happens,"
-	para "then I'll be out"
-	line "of work!"
+	para "Steel happens,"
+	line "what'll I do?"
 	done
 
 GauldenrodGuildNPC2Script:
 	jumptextfaceplayer GauldenrodGuildNPC2Text
 
 GauldenrodGuildNPC2Text:
-	text "Some of the guild"
-	line "members here are"
-	cont "able to take"
-	cont "something old and"
-	cont "make it look"
-	cont "fresh."
+	text "Guild members can"
+	line "take something"
+	para "old and make it"
+	line "look new again."
 	done
 
 GauldenrodGuildNPC3Script:
@@ -59,6 +54,6 @@ GauldenrodGuildNPC3Text:
 	
 	para "The brigade makes"
 	line "sure no one tries"
-	cont "to talk about"
-	cont "that, though."
+	para "to talk about"
+	line "that, though."
 	done

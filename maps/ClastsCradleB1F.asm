@@ -164,156 +164,204 @@ CradleCutscene_Text0:
 	done
 
 CradleCutscene_Text1:
-	text "Adrinna: Brigader"
-	line "Tyson, update!"
+	text_high
+    text " Adrinna: " 
+	next
+	text_start 
+	text "Brigader Tyson,"
+	line "update!"
 	done
 
 CradleCutscene_Text2:
-	text "Tyson: There were"
+	text_high
+    text " Tyson: " 
+	next
+	text_start 
+	text "Madam. There were"
 	line "some unexpected"
 	cont "toxic gases."
 	
 	para "Some Hisuians"
 	line "lost #mon."
 	
-	para "Their engineers"
-	line "want to give up"
-	cont "on the mine."
+	para "They suddenly"
+	line "want to give up."
 	done
+
 	
 CradleCutscene_Text3:
-	text "Adrinna: Those"
-	line "Hisuians - they"
-	cont "are so weak."
+	text_high
+    text " Adrinna: " 
+	next
+	text_start 
+	text "The Hisuians are"
+	line "so weak. They"
+	para "need a taste of"
+	line "raw power."
 	
-	para "I wonder if they"
-	line "just need a taste"
-	para "of raw power to"
-	line "see what they're"
-	cont "capable of..."
+	para "We must be very"
+	line "close to the"
+	cont "source?"
 	done
 
 CradleCutscene_Text4:
-	text "Mejimi: Shoo,"
-	line "soldier. Adrinna,"
+	text_high
+    text " Mejimi: " 
+	next
+	text_start 
+	text "Shoo!"
 	
-	para "your soldiers are"
-	line "so lively, unlike"
-	cont "Kensey's."
+	para "Adrinna, your"
+	line "soldiers are more"
+	para "lively than"
+	line "Kensey's."
 	done
 
 CradleCutscene_Text5:
-	text "Adrinna: Hello,"
-	line "Emperor."
-	
-	para "How is General"
-	line "Kensey?"
+	text_high
+    text " Adrinna: " 
+	next
+	text_start 
+	text "Say, how is"
+	line "General Kensey?"
 	done
 	
 CradleCutscene_Text6:
-	text "Mejimi: His port"
-	line "was destroyed in"
-	cont "a storm."
-	
-	para "He blames it on"
-	line "a storm caused by"
-	cont "my Lugia - Ha!"
-	
-	para "Lugia has been by"
+	text_high
+    text " Mejimi: " 
+	next
+	text_start 
+	text "His port - it"
+	line "was destroyed!"
+
+	para "Says an old man"
+	line "stole my Lugia."
+	para "But she’s been by"
 	line "side dutifully!"
-	
-	para "What an absurd"
-	line "excuse."
+	cont "How absurd."
 	done
 
+
 CradleCutscene_Text7:
-	text "Adrinna: How..."
-	line "unfortunate..."
+	text_high
+    text " Adrinna: " 
+	next
+	text_start 
+	text "Another project,"
+	line "lost. How tragic!"
+	
+	para "Now, this mine is"
+	line "your only hope."
 	done
 
 CradleCutscene_Text8:
-	text "Mejimi: Worse, I"
-	line "was counting on"
-	cont "the port for some"
+	text_high
+    text " Mejimi: " 
+	next
+	text_start 
+	text "What's worse, I"
+	line "hoped the port"
+	para "would bring metals"
+	line "for my sculptures."
 	
-	para "metals to build"
-	line "my sculptures."
-	
-	para "Johto must be"
-	line "united around me."
+	para "Johto must unite"
+	line "around me."
 	done
 
+
 CradleCutscene_Text9:
-	text "Adrinna: I told-"
+	text_high
+    text " Adrinna: " 
+	next
+	text_start 
+	text "Emperor, I- Er,"
 	line "you told me that"
-	para "we were done with"
-	line "traditions?"
+	para "traditions should"
+	line "be wiped clean?"
 	done
 
 CradleCutscene_Text10:
-	text "Mejimi: They'll"
-	line "be repurposed."
+	text_high
+    text " Mejimi: " 
+	next
+	text_start 
+	text "They'll be updated"
+	line "to honor me! Ha."
 	
-	para "We need gold for"
-	line "my coronation."
+	para "That's why we must"
+	line "focus on more"
+	cont "gold, less steel."
 	done
 
 CradleCutscene_Text11:
-	text "Adrinna: We're so"
-	line "close to a major"
-	cont "iron ore vein!"
-	
-	para "One wrong move..."
-	line "The mountain dies."
-	done
-	
-CradleCutscene_Text12: ;  
-	text "Mejimi: No, your"
-	line "plan can wait."
-	
-	para "My coronation"
-	line "plans will revive"
-	cont "this region."
-	
-	para "See to it."
+	text_high
+    text " Adrinna: " 
+	next
+	text_start 
+	text "Your majesty. We"
+	line "are so close to"
+	para "the #mon that"
+	line "can shape Johto"
+	para "to how I –Er,"
+	line "you want!" 
 	done
 
-CradleCutscene_Text13: ;  
+CradleCutscene_Text12:
+	text_high
+    text " Mejimi: " 
+	next
+	text_start 
+	text "Your plans can"
+	line "wait."
+	
+	para "A coronation will"
+	line "revive Johto."
+	
+	para "See to it!"
+	done
+
+CradleCutscene_Text13: 
+	text_high
+    text " Adrinna: " 
+	next
+	text_start 
 	text "Adrinna: How I"
 	line "misjudged you..."
-	
-	para "You don't end the"
-	line "old ways, merely" 
-
-	para "shape them to fit"
-	line "your own legacy."
 	done
 
-CradleCutscene_Text14:	
-	text "Tyson: General"
-	line "Adrinna, what"
-	cont "should we do?"
+CradleCutscene_Text14:
+	text_high
+    text " Tyson: " 
+	next
+	text_start 
+	text "What are your"
+	line "next orders?"
 	done
 
-CradleCutscene_Text15: ;  
-	text "Adrinna: We will"
-	line "temper ourselves-"
-	
-	para "not decorate with"
-	line "gold leaf."
-		
+CradleCutscene_Text15: 
+	text_high
+    text " Adrinna: " 
+	next
+	text_start 
+	text "We will temper"
+	line "ourselves-"
+
 	para "I have a plan to"
 	line "lure back the" 
 
 	para "Hisuians with what"
 	line "they can't resist."
 
-	para "We'll reach the" 
-	line "mine's iron heart"
+	para "Then, reach the" 
+	line "mountain’s heart"
 
-	para "and forge a new"
+	para "to forge a new"
 	line "destiny for Johto."
-	done
+	
+	para "With or without"
+	line "the emperor..."
+	Done
+
 
 CC_MejimiMoves1: ;6left 5 UP
 	step_left
