@@ -20,25 +20,16 @@ GauldenrodSereneSpringsGateNPCScript:
 	jumptextfaceplayer GauldenrodSereneSpringsGateNPCText
 
 GauldenrodSereneSpringsGateNPCText:
-	text "Did you know an"
-	line "old myth about"
+	text "Did you know the"
+	line "reason for the"
 	cont "Serene Springs?"
 
-	para "They say when"
-	line "there's seismic"
-	cont "activity nearby,"
-
-	para "the springs bubble"
-	line "up more strongly."
-
-	para "Some think it's"
-	line "Earth relieving"
-	cont "pressure."
-
-	para "Others say it's"
-	line "ancient #mon"
-	cont "stirring deep"
-	cont "underground."
+	para "The bubbles are"
+	line "said to be steam"
+	para "coming off of a"
+	line "powerful #mon"
+	para "swimming through"
+	line "the bedrock."
 
 	para "..."
 

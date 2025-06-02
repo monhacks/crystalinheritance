@@ -56,16 +56,25 @@ Lighthouse6FScene:
 	end
 ;
 LighthouseJasmineText1:
-	text "Jasmine: How"
-	line "can you do this!"
+	text_high
+    text " Jasmine: "
+	next
+	text_start
+	text "You're sick!"
+	line "How can you do"
+	cont "this?"
 	done
 
 LighthouseChuckText1:
-	text "Chuck: It doesn't"
+	text_high
+    text " Chuck: "
+	next
+	text_start
+	text "Look. It doesn't"
 	line "matter - The"
 	cont "struggle is how"
 	
-	para "The Slowking's"
+	para "OMLAS Slowking's"
 	line "brain gets more"
 	cont "powerful!"
 	
@@ -74,9 +83,13 @@ LighthouseChuckText1:
 	done
 
 LighthouseKurtText1:
-	text "Kurt: <PLAYER>,"
-	line "do something!"
-
+	text_high
+    text " Kurt: "
+	next
+	text_start
+	text "<PLAYER>, do"
+	line "something!"
+	done
 
 Lighthouse6FScene3:
 	applyonemovement PLAYER, step_up

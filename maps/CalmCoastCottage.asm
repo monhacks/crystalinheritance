@@ -24,14 +24,12 @@ CalmCoastCottageDayCareManScript:
 CalmCoastCottageDayCareManText:
 	text "A Hisuian left me"
 	line "a Dartrix. It is"
-	cont "interested in my"
-	cont "wife's Pidgeotto."
+	para "interested in my"
+	line "wife's Pidgeotto."
 	
-	para "If they make an"
-	line "egg, I wonder"
-	cont "what #mon will"
-	cont "come out?"
-	
+	para "If they will"
+	line "make an egg."
+
 	para "Wouldn't that be"
 	line "a Hoot!"
 	done
@@ -44,8 +42,8 @@ CalmCoastCottageChildText:
 	line "ing our berries."
 	para "So my parents"
 	line "hired a kid"
-	cont "from the city"
-	cont "to guard our"
+	para "from the city"
+	line "to guard our"
 	cont "garden."
 	done
 
@@ -100,8 +98,8 @@ SchoolgirlIntroText:
 
 	para "I always keep a"
 	line "little bell on"
-	cont "them so I can find"
-	cont "them easily."
+	para "them so I can find"
+	line "them easily."
 
 	para "It's really handy!"
 
@@ -111,23 +109,17 @@ SchoolgirlIntroText:
 	done
 
 SchoolgirlAfterText:
-	text "Great! That's a"
-	line "Shell Bell."
-
-	para "When your #mon"
-	line "holds it, they'll"
-	para "recover a bit of"
-	line "HP when they deal"
-	cont "damage in battle."
+	text "That Shell Bell"
+	line "will keep your"
+	para "#mon healthy"
+	line "during battles!"
 	done
 
 SchoolgirlRemindText:
-	text "How's that Shell"
-	line "Bell working out?"
-
-	para "It's like a"
-	line "reward for their"
-	cont "efforts!"
+	text "It's comforting"
+	line "to hear the chime"
+	para "of my #mon's"
+	line "bell outside."
 	done
 
 SchoolgirlBagFullText:

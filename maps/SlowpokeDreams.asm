@@ -44,19 +44,17 @@ SlowkingDreamsScript:
 	
 SlowkingWiseText:
 	text "You peer inside"
-	line "my mind hole?"
+	line "my mind?"
 	
-	para "My sacrifice: ten"
-	line "thousand LD50 of"
-	cont "Tentacruel poison"
-	cont "course my veins."
+	para "My sacrifice:" 
+	line "Tentacruel poison"
+	cont "in my veins."
 
 	para "I see every poss-"
-	line "ible outcome,"
+	line "ible outcome:"
 	para "every butterfly"
 	line "wing flap is like"
-	para "a concussion on"
-	line "my cerebellum."
+	cont "a concussion."
 	
 	para "Though I am in "
 	line "such pain, I can"
@@ -64,13 +62,13 @@ SlowkingWiseText:
 	
 	para "My analytical an-"
 	line "xiety saves you"
-	cont "from yourselves,"
-	cont "for now."
+	para "from yourselves,"
+	line "for now."
 	
 	para "Two hurricanes,"
-	line "smothered in the"
-	cont "tropics before"
-	cont "making landfall."
+	line "I smothered in"
+	para "tropics before"
+	line "making landfall."
 	
 	para "But eventually, "
 	line "I will pass on."
@@ -80,27 +78,20 @@ SlowkingWiseText:
 	cont "world without me?"
 	done
 
-
 SlowkingAfterText:
 	text "Ha! Though I saw"
-	line "so many worlds, I"
-	cont "failed to account"
-	cont "for this."
+	line "so much, I failed"
+	cont "to see this."
 	
 	para "It is time for me"
 	line "to step back."
 	
 	para "My false sense of"
-	line "security may have"
-	cont "been a curse, not"
-	cont "a blessing."
+	line "security was a"
+	cont "curse on you."
 	
 	para "A changing world"
 	line "is not doomed - "
 	para "it is an invita-"
 	line "tion to build."
-	
-	para "Go forth. The"
-	line "future is yours"
-	cont "to shape."
 	done

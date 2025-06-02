@@ -505,12 +505,12 @@ ProfOaksAide3Script:
 
 ProfOaksAide3HiText:
     text "Hi! I'm one of"
-    line "PROF.OAK's AIDES."
+    line "Prof Oak's Aides."
 
     para "If you've caught"
     line "25 or more kinds"
-    cont "of #MON, I'm"
-    cont "supposed to give"
+    para "of #mon, I'm"
+    line "supposed to give"
     cont "you a reward."
     done
 
@@ -521,7 +521,7 @@ ProfOaksAide3UhOhText:
     para "caught "
     text_decimal hScriptVar, 1, 3
     text " kinds"
-    line "of #MON."
+    line "of #mon."
 
     para "Come back when"
     line "you've caught 25"
@@ -535,7 +535,7 @@ ProfOaksAide3HereYouGoText:
     para "caught "
     text_decimal hScriptVar, 1, 3
     text " kinds"
-    line "of #MON."
+    line "of #mon."
 
     para "Congratulations!"
     line "Here you go!"
@@ -543,26 +543,20 @@ ProfOaksAide3HereYouGoText:
 
 ProfOaksAide3ItemFinderText:
     text "<PLAYER> received"
-    line "ITEMFINDER!"
+    line "Itemfinder!"
     done
 
 ProfOaksAide3ExplainText:
-    text "ITEMFINDER will"
+    text "Itemfinder will"
     line "help you locate"
     cont "hidden items."
 
     para "Just use it, and"
     line "it'll show you if"
-    cont "any items are"
-    cont "hidden nearby!"
+    para "any items are"
+    line "hidden nearby!"
     done
 
 ProfOaksAide3NoRoomText:
-    text "Oh! I see you"
-    line "don't have any"
-    cont "room for this."
-
-    para "Please make room"
-    line "in your PACK and"
-    cont "come back."
+    text "Ha! No room?"
     done

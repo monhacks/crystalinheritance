@@ -10,25 +10,23 @@ OlivineLighthouse1F_MapScriptHeader:
 
 
 	def_coord_events
-    coord_event 11, 15, 0, LighthouseRivalTrigger1 ; step up, fallthru 
+    coord_event 11, 15, 0, LighthouseRivalTrigger1
     coord_event 11, 14, 0, LighthouseRivalTrigger2
 
 	def_bg_events
 
 
 	def_object_events ; black belts 
-	object_event 14, 9, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, 	ObjectEvent, EVENT_RIVAL_LIGHTHOUSE; elec 
-	object_event 11, 17, SPRITE_KURT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, 	ObjectEvent, EVENT_KURT_LIGHTHOUSE_1; elec 
+	object_event 14, 9, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, 	ObjectEvent, EVENT_RIVAL_LIGHTHOUSE 
+	object_event 11, 17, SPRITE_KURT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, 	ObjectEvent, EVENT_KURT_LIGHTHOUSE_1 
 
-	object_event  5,  4, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, 	TrainerScientistJoseph, -1; elec
+	object_event  5,  4, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, 	TrainerScientistJoseph, -1
 	object_event 13,  5, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, 	TrainerBlackBeltWai, -1
 	object_event  2,  4, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, 	TrainerEngineerLang, -1
 
 	object_const_def 
 	const LIGHTHOUSE_RIVAL
 	const LIGHTHOUSE_KURT
-
-
 
 
 LighthouseRivalTrigger1:
@@ -115,24 +113,44 @@ LighthouseRivalRetreatMovement:
     step_end
 
 LighthouseRivalBeforeText:
-    text "<RIVAL>: Oh, it's"
-	line "you two."
+	text_high
+    text " <RIVAL>: "
+	next
+	text_start
+    text "Oh, it's you."
+	done
 
-	para "Kurt: <RIVAL>,"
-	line "you're polluting"
-	cont "the sea with your"
-	cont "distiller!"
+LighthouseRivalBeforeText_2:
+	text_high
+    text " Kurt: "
+	next
+	text_start
 	
-	para "<RIVAL>: I didn't"
-	line "know Silph would"
-	cont "do it like this!"
-	para "I wanted to bring"
-	line "us back into bal-"
-	cont "ance with nature."
-	para "Whil you looked"
-	line "back, I looked"
-	cont "forward!"
-    done
+	text "Hey! Your invent-"
+	line "ion pollutes the"
+	para "sea with its"
+	line "discharge!"
+	done
+
+
+LighthouseRivalBeforeText_3:
+	text_high
+    text " <RIVAL>: "
+	next
+	text_start
+	
+	text "I didn't know"
+	line "they would do"
+	cont "this!"
+	
+	para "I just wanted to"
+	line "let us come into"
+	para "a balance with"
+	line "nature. As you"
+	para "As you look back,"
+	line "I look forward!"	
+	done
+
 
 LighthouseRivalWinText:
     text "All my plans..."
@@ -143,24 +161,30 @@ LighthouseRivalLossText:
     done
 
 LighthouseRivalAfterText:
-    text "<RIVAL>: I didn't"
+	text_high
+    text " <RIVAL>: "
+	next
+	text_start
+	
+    text "I know. I didn't"
 	line "want to be their"
-	cont "pawn. And I had"
-	para "no idea what they"
-	line "were doing on the"
-	cont "top floor..."
+	para "pawn. And I had"
+	line "no idea what they"
+	para "were doing on the"
+	line "top floor..."
 
 	para "Don't follow me"
 	line "any more."
     done
 
 LighthouseKurtEndText:
-	text "Kurt: What's that"
-	line "about the top"
-	cont "floor?..."
+	text_high
+    text " Kurt: "
+	next
+	text_start
 	
-	para "We have to get"
-	line "up there!"
+	text "We have to get"
+	line "to the top!"
 	done
 
 Kurt_LighthouseMove1:
@@ -181,7 +205,12 @@ LighthouseKurtGoesUpMovement:
 	step_end
 
 Kurt_LighthouseText1:	
-	text "Kurt: <PLAYER>, I"
+	text_high
+    text " Kurt: "
+	next
+	text_start
+	
+	text "<PLAYER>, I"
 	line "have learned that"
 	para "Chuck is doing"
 	line "something awful"
@@ -193,7 +222,7 @@ Kurt_LighthouseText1:
 	line "him to end it!"
 	
 	para "He uses #mon"
-	line "brutally, for his" ; brutal 
+	line "brutally, for his" 
 	cont "own plans!"
 	done
 
@@ -202,12 +231,12 @@ TrainerScientistJoseph:
 
 .BeatenText1:
 	text "My colleague is"
-	line "not so bright.";  
+	line "not so bright." 
 	done
 
 .SeenText1:
 	text "Candela is the"
-	line "proper unit!";  
+	line "proper unit!" 
 	done
 
 
@@ -239,4 +268,3 @@ TrainerEngineerLang:
 	line "we measure it in"
 	cont "Lumens!"
 	done
-

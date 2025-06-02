@@ -33,6 +33,54 @@ DebugRoom_MapScriptHeader: ; should be like  "BurnedTowerB1F_MapScriptHeader"
 
 
 DebugCPU:
+	refreshscreen
+	trainerpic BOBESH
+	pause 10
+	waitbutton
+	closepokepic
+
+	refreshscreen
+	trainerpic ADRINNA
+	pause 10
+	waitbutton
+	closepokepic
+	
+	refreshscreen
+	trainerpic KENSEY
+	pause 10
+	waitbutton
+	closepokepic
+	
+	refreshscreen
+	trainerpic NOMAD_M
+	pause 10
+	waitbutton
+	closepokepic
+
+	refreshscreen
+	trainerpic NOMAD_F
+	pause 10
+	waitbutton
+	closepokepic
+
+	refreshscreen
+	trainerpic NINJA
+	pause 10
+	waitbutton
+	closepokepic
+		
+	refreshscreen
+	trainerpic MEJIMI
+	pause 10
+	waitbutton
+	closepokepic
+	
+	refreshscreen
+	trainerpic SWIMMER_M
+	pause 10
+	waitbutton
+	closepokepic
+
 	opentext
 	writetext DebugCPUText
 	; time

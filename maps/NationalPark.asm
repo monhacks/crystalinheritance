@@ -89,8 +89,8 @@ GenericTrainerBugManiacLou:
 
 	text "My girlfriend"
 	line "wanted to go camp-"
-	cont "ing, but she is"
-	cont "so squeamish of"
+	para "ing, but she is"
+	line "so squeamish of"
 	cont "bug #mon."
 	done
 	
@@ -124,8 +124,8 @@ GameboyKidComplainText:
 	
     para "I'm trying to"
     line "beat this level,"
-    cont "but I can't"
-    cont "focus!"
+    para "but I can't"
+    line "focus!"
 	
     para "Hey, you're a"
     line "#mon trainer,"
@@ -136,8 +136,8 @@ GameboyKidComplainText:
 GameboyKidGaveTMText:
     text "That's Leech"
     line "Life. Give those"
-    cont "bugs a taste of"
-    cont "their own"
+    para "bugs a taste of"
+    line "their own"
     cont "medicine!"
     done
 
@@ -152,11 +152,6 @@ GameboyKidAfterText:
 
 GameboyKidBagFullText:
     text "Your bag is full."
-	
-    para "Come back when"
-    line "you have space."
-    cont "These bugs"
-    cont "won't wait!"
     done
 
 GenericTrainerPokefanmWilliam:
@@ -300,13 +295,13 @@ SchoolboyJohnnyBeatenText:
 NationalParkTeacher2Text:
 	text "The drought has"
 	line "caused the water"
-	cont "to be shut off"
-	cont "from the fountain."
+	para "to be shut off"
+	line "from the fountain."
 	
 	para "But I heard that"
 	line "Falkner may have"
-	cont "some way to get"
-	cont "more water."
+	para "some way to get"
+	line "more water."
 	done
 
 NationalParkPersianText:
@@ -468,9 +463,8 @@ GiveBrickPieceText:
 	para "Seems historic."
 	done
 
-
 Text_NoLemonade:
-	text "Oh, you don't have"
+	text "You don't have"
 	line "any Lemonade?"
 
 	para "That's too bad."
@@ -486,38 +480,38 @@ ThirstyCamperIntroText:
 Text_LemonadeQuestion:
 	text "Hey, you wouldn't"
 	line "happen to have a"
-	cont "Lemonade, would"
-	cont "you?"
+	para "Lemonade, would"
+	line "you?"
 
 	para "I found this old"
 	line "Brick Piece while"
-	cont "digging. I'll"
-	cont "trade you for it!"
+	para "digging. I'll"
+	line "trade you for it!"
 	done
 
 
 NationalParkWhtApricornScript:
 	faceplayer
 	opentext
-	writetext PearlForWhtApricornText ;;
+	writetext PearlForWhtApricornText
 	waitbutton
 	checkitem BIG_PEARL
 	iffalse .NoBigPearl
-	writetext PearlForWhtApricornQuestionText ;;
+	writetext PearlForWhtApricornQuestionText
 	yesorno
 	iffalse .NoBigPearl
 	takeitem BIG_PEARL
-	giveapricorn WHT_APRICORN, 5 ; ez mode
-	jumpopenedtext PearlForWhtApricornEndText ;;
+	giveapricorn WHT_APRICORN, 5
+	jumpopenedtext PearlForWhtApricornEndText
 
 .NoBigPearl
-	jumpopenedtext NoPearlForWhtApricornText ;;
+	jumpopenedtext NoPearlForWhtApricornText
 
 PearlForWhtApricornText:
 	text "I wanted to make"
 	line "pearl jewelry, "
-	cont "but all I have"
-	para "are these white"
+	para "but all I have"
+	line "are these white"
 	line "apricorns."
 	done
 

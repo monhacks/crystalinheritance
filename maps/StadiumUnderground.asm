@@ -72,8 +72,8 @@ StadiumUndergroundNPC1Text:
 	
 	para "We've nearly"
 	line "finished divert-"
-	cont "ing the under-"
-	cont "ground river."
+	para "ing the under-"
+	line "ground river."
 	
 	para "The rocks can be"
 	line "pretty rough on"
@@ -87,27 +87,24 @@ StadiumUndergroundNPC1Text:
 StadiumUndergroundNPC1GaveItemText:
 	text "Once we get the"
 	line "last boulder in"
-	cont "place, the basin"
-	cont "will fill and"
-	cont "a geyser will"
-	cont "erupt in the"
+	para "place, the basin"
+	line "will fill and"
+	para "a geyser will"
+	line "erupt in the"
 	cont "stadium."
 	done
 
 StadiumUndergroundNPC1AfterText:
 	text "I can't wait to"
 	line "see the look on"
-	cont "Bobesh's face when"
-	cont "we flood the"
+	para "Bobesh's face when"
+	line "we flood his"
 	cont "stadium."
 	done
 
 StadiumUndergroundNPC1BagFullText:
 	text "Oh? Your bag is"
-	line "full. Come back"
-	cont "when you have"
-	cont "some space for"
-	cont "the Protect Pads."
+	line "full."
 	done
 
 StadiumUndergroundNPC2Script:
@@ -117,11 +114,6 @@ StadiumUndergroundNPC2Text:
 	text "I don't know if I"
 	line "can go through"
 	cont "with this…"
-
-	para "If we hurt anyone,"
-	line "it will be hard"
-	cont "to explain"
-	cont "myself."
 	done
 
 StadiumUndergroundHealerScript:
@@ -190,8 +182,8 @@ LetsRescueSandraText:
 StadiumUndergroundBoulderText:
 	text "We need to fill"
 	line "in that hole to"
-	cont "divert the under-"
-	cont "water springs"
+	para "divert the under-"
+	line "water springs"
 	cont "into the stadium."
 	done
 	
@@ -200,8 +192,8 @@ StadiumUndergroundMovesAsideText:
 	
 	para "The underground"
 	line "springs are now"
-	cont "being diverted"
-	cont "underneath the"
+	para "being diverted"
+	line "underneath the"
 	cont "stadium."
 	
 	para "Soon, we will"
@@ -209,5 +201,5 @@ StadiumUndergroundMovesAsideText:
 	cont "General Bobesh!"
 	
 	para "Let's go save"
-	line "Sandra."
+	line "Sandra!"
 	done

@@ -33,8 +33,8 @@ GenericTrainerAromaLadyDahlia:
 
 	text "The elders have"
 	line "been trying to"
-	cont "talk the emperor"
-	cont "out of tearing"
+	para "talk the emperor"
+	line "out of tearing"
 	cont "down their tower."
 
 	para "I don't think"
@@ -50,8 +50,8 @@ AromaLadyDahliaSeenText:
 AromaLadyDahliaBeatenText:
 	text "If Sandra ble-"
 	line "ssed you, then"
-	cont "I suppose you"
-	cont "can be here."
+	para "I suppose you"
+	line "can be here."
 	done
 
 GenericTrainerFirebreatherDick:
@@ -59,8 +59,8 @@ GenericTrainerFirebreatherDick:
 
 	text "There's an aquifer"
 	line "under the stadium."
-	cont "That's all I'll"
-	cont "say."
+	para "That's all I'll"
+	line "say."
 	done
 
 FirebreatherDickSeenText:
@@ -69,8 +69,10 @@ FirebreatherDickSeenText:
 	done
 
 FirebreatherDickBeatenText:
-	text "I need more"
-	line "training."
+	text "There's an aquifer"
+	line "under the stadium."
+	para "That's all I'll"
+	line "say."
 	done
 
 GenericTrainerTamerBrett:
@@ -78,8 +80,8 @@ GenericTrainerTamerBrett:
 
 	text "I was supposed to"
 	line "take these on my"
-	cont "quest but the"
-	cont "mountain pass was"
+	para "quest but the"
+	line "mountain pass was"
 	cont "closed."
 	done
 
@@ -89,9 +91,11 @@ TamerBrettSeenText:
 	done
 
 TamerBrettBeatenText:
-	text "Maybe I don't know"
-	line "enough about them"
-	cont "yet."
+	text "I was supposed to"
+	line "take these on my"
+	para "quest but the"
+	line "mountain pass was"
+	cont "closed."
 	done
 
 GenericTrainerCooltrainerFBeth:

@@ -27,8 +27,8 @@ GauldenrodTower1FBrigader1Script:
 GauldenrodTower1FBrigader1Text:
 	text "The emperor says"
 	line "we'll tear down"
-	cont "this tower and"
-	cont "build a steel one"
+	para "this tower and"
+	line "build a metal one"
 	cont "in its place."
 	done
 
@@ -38,7 +38,7 @@ GauldenrodTower1FBrigader2Script:
 GauldenrodTower1FBrigader2Text:
 	text "What are you"
 	line "looking at?"
-	cont "Scram, before"
-	cont "the rest of us"
+	para "Scram, before"
+	line "the rest of us"
 	cont "get here."
 	done
