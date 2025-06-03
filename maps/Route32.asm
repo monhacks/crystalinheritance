@@ -1,13 +1,13 @@
-Route32_MapScriptHeader: ; convert all to generictrainers, freida to give venoshock; some of the trainers further south should be engineers upset that their work keeps getting wrecked
+Route32_MapScriptHeader:
 	def_scene_scripts
 
 	def_callbacks
 
 
 	def_warp_events
-	warp_event 11, 73, ROUTE_32_POKECENTER_1F, 1 ; ok 
-	warp_event  4,  2, ROUTE_32_RUINS_OF_ALPH_GATE, 3 ; ok 
-	warp_event  4,  3, ROUTE_32_RUINS_OF_ALPH_GATE, 4 ; ok 
+	warp_event 11, 73, ROUTE_32_POKECENTER_1F, 1
+	warp_event  4,  2, ROUTE_32_RUINS_OF_ALPH_GATE, 3  
+	warp_event  4,  3, ROUTE_32_RUINS_OF_ALPH_GATE, 4 
 
 
 	def_coord_events
@@ -23,25 +23,21 @@ Route32_MapScriptHeader: ; convert all to generictrainers, freida to give venosh
 
 	def_object_events
 	object_event 19,  8, SPRITE_ACE_TRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route32CooltrainermPetrieScript, -1 
-	object_event 16, 18, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerYoungsterAlbert, -1 ; OK 
-	object_event  4, 36, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerYoungsterGordon, -1 ; bayleef, etc OK 
-	object_event 11, 45, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerFisherJustin, -1 ; OK 
-	object_event  9, 49, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerFisherHenry, -1 ; OK 
+	object_event 16, 18, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerYoungsterAlbert, -1 
+	object_event  4, 36, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerYoungsterGordon, -1
+	object_event 11, 45, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerFisherJustin, -1  
+	object_event  9, 49, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerFisherHenry, -1 
 	object_event 13, 56, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerFisherTully, -1 ; new fisher, add SCRIPT 
 	object_event  4, 66, SPRITE_CAMPER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerCamperLloyd, -1 ; renamed to lloyd
 	object_event 12, 67, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, FriedaScript, -1 ; venoshock
-	object_event  6, 68, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBird_keeperPeter, -1 ; OK 
-	object_event 10, 84, SPRITE_BAKER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route32SlowpokeTailScript, -1 ; todo 
+	object_event  6, 68, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBird_keeperPeter, -1  
+	object_event 10, 84, SPRITE_BAKER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route32SlowpokeTailScript, -1  
 	smashrock_event 6, 82
 	smashrock_event 7, 83
 	itemball_event 6, 83, GEODE, 5, EVENT_ROUTE_32_REPEL
 	itemball_event 10, 14, BUB_BALL, 5, EVENT_ROUTE_32_GREAT_BALL
 	cuttree_event 10, 19, EVENT_ROUTE_32_CUT_TREE
-	fruittree_event 3, 31, FRUITTREE_ROUTE_32, FIXED_CHARGE, PAL_NPC_RED;OK
-
-	object_const_def
-
-
+	fruittree_event 3, 31, FRUITTREE_ROUTE_32, FIXED_CHARGE, PAL_NPC_RED
 
 
 Route32CooltrainermPetrieScript: ; fix 
@@ -382,8 +378,7 @@ Route32SlowpokeTailScript:
 
 Route32Slowpoketail2Text:
 	text "Try it with a"
-	line "dab of ketchup,"
-	cont "or mustard."
+	line "dab of ketchup!"
 	done
 
 Route32AmenitiesText:

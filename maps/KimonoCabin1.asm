@@ -1,4 +1,4 @@
-KimonoCabin1_MapScriptHeader: ; should be like  "BurnedTowerB1F_MapScriptHeader"
+KimonoCabin1_MapScriptHeader:
 	def_scene_scripts
 
 
@@ -8,19 +8,16 @@ KimonoCabin1_MapScriptHeader: ; should be like  "BurnedTowerB1F_MapScriptHeader"
 	def_warp_events
 	warp_event  19, 19, KIMONO_CABIN, 1
 
-
 	def_coord_events
-
 
 
 	def_bg_events
 
 
-
 	def_object_events
 	object_event  5,  0, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, DRATINI, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, KimonoCabin1Dratini, EVENT_KIMONO_CABIN_DRATINI
-	object_event  19, 18, SPRITE_SCHOOLGIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE,  OBJECTTYPE_SCRIPT, 0, KimonoCabin11Script, -1 ; "Vera" , revise dialogue to be a scared little girl
-	tmhmball_event  18, 19, TM_ROCK_SMASH, EVENT_UNION_CAVE_B1F_NORTH_X_DEFEND ;brick break, disappears if you already have it
+	object_event  19, 18, SPRITE_SCHOOLGIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE,  OBJECTTYPE_SCRIPT, 0, KimonoCabin11Script, -1 
+	tmhmball_event  18, 19, TM_ROCK_SMASH, EVENT_UNION_CAVE_B1F_NORTH_X_DEFEND
 	smashrock_event 18, 10
 	smashrock_event 13, 5
 	smashrock_event 13, 11
@@ -30,12 +27,11 @@ KimonoCabin1_MapScriptHeader: ; should be like  "BurnedTowerB1F_MapScriptHeader"
 	smashrock_event  11, 11
 	itemball_event  4, 0, MOON_STONE, 1, EVENT_KIMONO_CABIN_SITRUS
 	itemball_event  4, 1, FAST_BALL, 1, EVENT_KIMONO_CABIN_FAST_BALLS
-	itemball_event  0, 0, CARBOS, 5, EVENT_KIMONO_CABIN_1_CARBOS ; TODO PLACE 
 
 	object_const_def
-	const KIMONO_CABIN_1_DRATINI ;  
+	const KIMONO_CABIN_1_DRATINI 
 	
-KimonoCabin1Dratini: ; TODO have vera give you the carbos and then warp you back at the end 
+KimonoCabin1Dratini:
 	faceplayer
 	cry DRATINI
 	pause 15
@@ -81,8 +77,8 @@ Kimono11ThanksForHelpingText:
 Kimono11HelpedText:
 	text "You did it! That"
 	line "worm was probably"
-	cont "just uncomfy here"
-	cont "in the cellar."
+	para "just uncomfy here"
+	line "in the cellar."
 	
 	para "And now I know"
 	line "how to smash"

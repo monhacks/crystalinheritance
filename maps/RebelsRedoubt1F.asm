@@ -21,7 +21,7 @@ RebelsRedoubt1F_MapScriptHeader: ; need a callback a la ruins of alph
 	object_event 2, 3, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RedoubtKnockOffTutorScript, -1
 	object_event  3,  3, SPRITE_BALL_CUT_FRUIT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_COMMAND, jumptext, RR_1F_BallText, EVENT_LISTENED_TO_KNOCK_OFF_INTRO
 	object_event 5, 4, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Redoubt1FScript, -1 ;
-	object_event 4, 7, SPRITE_KURT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_REDOUBT_KURT ; todo initialize
+	object_event 4, 7, SPRITE_KURT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_REDOUBT_KURT
 
 	object_const_def
 	const REDOUBT_1B_NINJA

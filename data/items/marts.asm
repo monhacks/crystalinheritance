@@ -123,7 +123,7 @@ Goldenrod2FMart2Eevee:
 
 Goldenrod3FMart:
 Celadon5FMart2:
-	db 10 ; # items
+	db 9 ; # items
 	db FIRE_STONE
 	db WATER_STONE
 	db THUNDERSTONE
@@ -133,7 +133,6 @@ Celadon5FMart2:
 	db ICE_STONE
 	db DUSK_STONE
 	db SHINY_STONE
-	db UP_GRADE
 	db -1
 
 Goldenrod4FMart:
@@ -160,7 +159,7 @@ Goldenrod5FTMMart:
 	dbw TM_HYPER_BEAM,    50000
 	db -1
 
-GoldenrodBallsMart:
+GoldenrodBallsMart: ; todo is this actually anywhere? 
 	db 7 ; # items
 	db REPEAT_BALL
 	db NET_BALL
@@ -252,6 +251,8 @@ WesternCapitalMart:
 
 WesternCapitalMart_TM:
 	db 10 ; # items
+	db RARE_CANDY
+	db MAX_REPEL
 	db GREAT_BALL
 	db ULTRA_BALL
 	db DUSK_BALL
@@ -259,9 +260,6 @@ WesternCapitalMart_TM:
 	db MAX_POTION
 	db FULL_HEAL
 	db REVIVE
-	db MAX_REPEL
-	db X_DEFEND
-	db X_ATTACK
 	db -1
 
 TradersLandingMart_TM:
@@ -297,7 +295,7 @@ GauldenrodMart1: ; normal items
 	db -1
 	
 GauldenrodMart2: ; berries
-	db 9 ; # items
+	db 7 ; # items
 	db CHERI_BERRY
 	db CHESTO_BERRY
 	db PECHA_BERRY
@@ -305,8 +303,6 @@ GauldenrodMart2: ; berries
 	db RAWST_BERRY
 	db ASPEAR_BERRY
 	db PERSIM_BERRY
-	db LUM_BERRY
-	db SITRUS_BERRY
 	db -1
 
 GauldenrodMart3: ; TMs, HMs
@@ -346,8 +342,8 @@ EerieHamletMart:
 	db 11 ; # items
 	db RARE_CANDY
 	db MAX_REPEL
-	db FULL_RESTORE
-	db REVIVE
+	db ENERGYPOWDER
+	db REVIVAL_HERB
 	db JEZE_BALL
 	db BUB_BALL
 	db DECI_BALL
@@ -420,15 +416,14 @@ OlivineBattleMart:
 	db TOXIC_ORB
 	db -1
 
-SinjohCrossroadsMonMart: ; UNUSED
-	db 4 ; # items
+SinjohCrossroadsMonMart: ; todo ADD THIS 
+	db 3 ; # items
 	db DRAGON_SCALE
-	db SCOPE_LENS
 	db FOCUS_BAND
 	db FOCUS_SASH
 	db -1
 
-GauldenrodTMMart: ; UNUSED
+GauldenrodTMMart: ; 
 	db 3 ; # items
 	db POWER_HERB
 	db WHITE_HERB

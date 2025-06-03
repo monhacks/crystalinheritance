@@ -105,7 +105,6 @@ Lighthouse6FScene1:
 	showtext LighthouseChuckText2
 	showemote EMOTE_QUESTION, LIGHTHOUSE_JASMINE, 10
 	showtext LighthouseJasmineText2
-	showtext LighthouseChuckText2
 	showemote EMOTE_BOLT, LIGHTHOUSE_CHUCK, 10
 	showtext LighthouseChuckText3
 	winlosstext ChuckLossText, 0
@@ -135,7 +134,7 @@ Lighthouse6FScene1:
 	applymovement LIGHTHOUSE_JASMINE, LighthouseChuckLeavesMovement
 	disappear LIGHTHOUSE_JASMINE
 	
-;
+	
 LighthouseChuckText2:
 	text_high
     text " Chuck: "
@@ -150,7 +149,7 @@ LighthouseChuckText2:
 	cont "perfect control!"
 	done
 
-LighthouseJasmineText2: ; todo 
+LighthouseJasmineText2:
 	text_high
     text " Jasmine: "
 	next
