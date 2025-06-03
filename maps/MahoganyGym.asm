@@ -61,16 +61,13 @@ MahoganyGymPryceScript:
 	end
 
 PryceText_Intro: ; done 
-	text "<PLAYER>, Kurt"
-	line "told me about the"
+	text "I heard about the"
 	cont "troubles you two"
 	cont "faced together."
-	para "I know his heart"
-	line "was in the right"
-	cont "place, but I hope"
-	para "you will show"
-	line "better judgement"
-	cont "if you ever get"
+	para "I hope that you"
+	line "you will show"
+	para "better judgement"
+	line "if you ever get"
 	cont "the same choice."
 
 	para "...So you want to"
@@ -79,31 +76,27 @@ PryceText_Intro: ; done
 	cont "quest."
 	
 	para "I'm of two minds."
-	para "Changing the past"
-	line "to fix today..."
-	cont "It's tempting."
+	line "Changing the past"
+	cont "to fix today..."
+
 	para "But what about"
 	line "staying here to"
-	cont "build a better"
-	cont "future?"
-	para "...I'll help you"
+	para "build a better"
+	line "future?"
+	para "I'll help you"
 	line "on one condition:"
 	para "Prove your #mon"
 	line "have the spirit"
-	cont "to inspire change"
-	para "in the hearts of"
-	line "others."
-	para "Show me that"
-	line "power!"
+	para "to inspire change"
+	line "in others!"
 	done
+
 
 PryceText_Impressed:
-	text "Your #mon"
-	line "fight as a team!"
-
-	para "You are worthy of"
+	text "You are worthy of"
 	line "this Badge!"
 	done
+
 
 Text_ReceivedGlacierBadge:
 	text "<PLAYER> received"
@@ -121,23 +114,18 @@ PryceText_CalmMindText: ; revise, fix
 
 	para "Some meditation"
 	line "before challenges"
-	cont "will put you on"
-	cont "firm ground!"	
-	
-	para "Oh, one more"
-	line "thing for you."
+	para "will put you on"
+	line "firm ground!"	
 	done
 
 PryceText_MeetYouAtTheLake:
-	text "Now make haste!"
-	line "Meet me on the"
-	cont "north shore of"
-	cont "the Lake."
+	text "Now, meet me on"
+	line "the north shore."	
 	
-	para "It's a long trek"
-	line "so make sure you"
+	para "Make sure you"
 	cont "have supplies."
 	done
+
 
 GenericTrainerSkierRoxanne:
 	generictrainer SKIER, ROXANNE, EVENT_BEAT_SKIER_ROXANNE, SkierRoxanneSeenText, SkierRoxanneBeatenText

@@ -131,32 +131,40 @@ GlacierB2F_Text1:
 	done
 
 GlacierB2F_Text2:
-	text "Kanna: Our"
-	line "culture is"
-	cont "strong. We know"
+	text_high
+    text " Kanna: " 
+	next
+	text_start 
+	text "Our culture is"
+	line "strong. We know"
 	para "that discipline"
 	line "needs sacrifice."
-
-	para "Adrinna: Tsk,"
-	line "Tsk."
 	done
 
 GlacierB2F_Text3:
-	text "Kanna: We revere"
-	line "the Basculegion."
-	para "The symbol of"
+	text_high
+    text " Kanna: " 
+	next
+	text_start 
+	text "We admire the"
+	line "Basculegion."
+	para "A symbol of"
 	line "sacrifice. We"
 	cont "owe it to our"
 	para "ancestors to"
-	line "persevere"
-	cont "struggles."
+	line "persevere."
 	para "You know nothing"
 	line "of it - you"
 	para "destroy what"
 	line "gives their"
 	cont "lives meaning."
 
-	para "Adrinna: I find"
+GlacierB2F_Text3_2: ; todo 
+	text_high
+    text " Adrinna: " 
+	next
+	text_start 
+	text "So wrong! I find"
 	line "meaning for"
 	para "myself. How sad"
 	line "that you can't."
@@ -164,7 +172,11 @@ GlacierB2F_Text3:
 
 
 GlacierB2F_Text4:
-	text "Kanna: It's time"
+	text_high
+    text " Kanna: " 
+	next
+	text_start 
+	text "General, it's time"
 	line "you saw how"
 	para "strong our"
 	line "foundation is."
@@ -173,37 +185,54 @@ GlacierB2F_Text4:
 
 
 GlacierB2F_Text5:
-	text "Adrinna: Well"
-	line "done, <PLAYER>."
+	text_high
+    text " Adrinna: " 
+	next
+	text_start
+	text "Well done,"
+	line "<PLAYER>."
 	done
 
-GlacierB2F_Text6:
-	text "Kanna: Who is"
-	line "this?"
-	para "Adrinna: You"
-	line "impress me more"
-	cont "each time."
+GlacierB2F_Text6::
+	text_high
+    text " Kanna: " 
+	next
+	text_start
+	text "Who is this?"
 	done
 
 GlacierB2F_Text7:
-	para "Kanna: Your"
+	text_high
+    text " Kanna: " 
+	next
+	text_start
+	text "Are they your"
 	line "lieutenant? I'll"
-	cont "start with you!"
-	para "Adrinna: <PLAYER>,"
-	line "let me heal you."
-	cont "She's hardly"
+	para "start with you!"
+	done
+
+GlacierB2F_Text7_2:
+	text_high
+    text " Kanna: " 
+	next
+	text_start
+	text "Let me heal you."
+	line "She's hardly"
 	cont "being fair."
 	done
 
 KannaWinText:
-	text "Kanna: Your"
-	line "technique - was"
-	para "it passed down"
-	line "from generations."
+	text "Your technique"
+	line "appears time-"
+	cont "honored."
 	done
 
 Text_ReceivedKannaBadge:
-	text "Kanna: Having"
+	text_high
+    text " Kanna: " 
+	next
+	text_start
+	text "A-hem. Having"
 	line "defeated me, I"
 	para "am obligated by"
 	line "duty to give you"
@@ -212,38 +241,66 @@ Text_ReceivedKannaBadge:
 	done
 
 GlacierB2F_Text8:
-	text "Kanna: What's"
+	text_high
+    text " Kanna: " 
+	next
+	text_start
+	text "Whoa! What's"
 	line "that? It sounds"
 	para "like the glacier"
 	line "is cracking!"
-	para "Adrinna: Just my"
+	done
+
+GlacierB2F_Text8_2: ; todo 
+	text_high
+    text " Adrinna: " 
+	next
+	text_start
+	para "Oh, it's just my"
 	line "Gyarados letting"
 	para "loose. My"
 	line "brigaders are"
 	para "showing your"
 	line "people what power"
 	cont "feels like."
-	para "Kanna: But..."
-	line "without glaciers"
-	cont "to traverse, how"
-	cont "will our regions"
-	cont "meet?"
+	done
+
+GlacierB2F_Text8_3: ; todo 
+	text_high
+    text " Kanna: " 
+	next
+	text_start
+	text "Without glaciers"
+	line "to traverse, how"
+	para "will our regions"
+	line "meet?"
 	para "Generations of"
 	line "knowledge,"
 	cont "destroyed!"
-	para "Adrinna: It was"
-	cont "a nice try to"
+	done
+
+GlacierB2F_Text8_4: ; todo 
+	text_high
+    text " Adrinna: " 
+	next
+	text_start
+	text "You know, it was"
+	line "a nice try to"
 	cont "ambush me here."
-	cont "Goodbye."
 	done
 
 GlacierB2F_Text9:
-	text "Kanna: We have"
+	text_high
+    text " Kanna: " 
+	next
+	text_start
+	text "Heavens! We have"
 	line "to leave, before"
-	cont "anything else..."
+	para "anything else"
+	line "happens..."
 	done
 	
-KannaWaterfallText:
+KannaWaterfallText: ;  todo other text 
 	text "I hate that you"
 	line "beat me, but I"
 	para "took an oath. You"

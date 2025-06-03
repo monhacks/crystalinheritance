@@ -72,63 +72,54 @@ TinTowerRoofSilverScript:
 
 TinTowerRoofSilverIntroText:
 	text "Look at those be-"
-	line "autiful fabrics"
-	cont "given to you."
+	line "autiful fabrics."
 	
 	para "I was wrapped in"
 	line "spite and malice."
 	
 	para "I fled, but I co-"
-	line "uldn't stop myse-"
-	cont "lf draping my"
+	line "uldn't keep from"
+	cont "draping my"
 	para "#mon in the"
-	line "same bitter thr-"
-	cont "eads I knew."
+	line "same threads I knew."
 	
 	para "But one day, I"
 	line "saw the pain in"
 	para "their bloodshot"
-	line "eyes, a long red"
-	cont "tapestry of our"
-	cont "collective abuse."
+	line "eyes. Deep red"
+	para "threads of our"
+	line "collective abuse."
 	
 	para "I wept. My tears"
 	line "washed it clean."
 	para "I gave them love,"
-	line "and they gave me"
-	cont "a second chance"
-	cont "at life."
+	line "and I got a"
+	cont "second chance."
 	
 	para "My travels brou-"
 	line "ght me to Ho-Oh."
 	para "It saw my heart"
 	line "had been reborn."
 	
-	para "Do you think you"
-	line "are worthy of its"
-	para "presence? Battle"
-	line "me, let's see!"
+	para "Let’s see if you"
+	line "are worthy!"
 	done
 
 	
 SilverWinText:
-	text "You are deserv-"
-	line "ing of those"
-	cont "robes."
+	text "You deserve"
+	line "your robes."
 	done
+
 	
 SilverAfterBattleText:
 	text "I claim no owner-"
 	line "ship of Ho-Oh."
 	
-	para "I've learned all"
-	line "I need to."
-	
 	para "Now, it is your"
-	line "turn. Perhaps our"
-	cont "stories will"
-	cont "interweave again."
+	line "turn."
 	done
+
 	
 HoOhNotBeatSilverText:
 	text "Shaoooh!"

@@ -155,24 +155,23 @@ Route42CharcoalKilnBossText:
 	line "you seen <RIVAL>?"
 	
 	para "I haven't seen"
-	line "him since he left"
-	cont "with his #mon."
+	line "him in weeks."
 	
 	para "Our Farfetch'd"
-	line "tracked him down"
-	cont "to here."
+	line "tracked to here."
 	
 	para "He started an"
 	line "apricorn orchard"
-	para "in this secret"
-	line "area to supply"
-	cont "his distiller..."
+	para "to supply"
+	line "his distiller..."
 	
 	para "Where is he now?"
 	line "I wish I had been"
 	cont "more supportive."
-	done
 
+	para "I just want to"
+	line "know he's OK."
+	done
 
 GenericTrainerFisherKyle:
 	generictrainer FISHER, KYLE, EVENT_BEAT_FISHER_KYLE, .SeenText2, .BeatenText2

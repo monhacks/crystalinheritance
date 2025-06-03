@@ -174,6 +174,10 @@ RedoubtAmosScript:
 
 
 AmosText_Intro:
+	text_high
+    text " Amos: " 
+	next
+	text_start
 	text "...<PLAYER>. Each"
 	line "time we meet, you"
 	cont "cause some havoc."
@@ -187,6 +191,13 @@ AmosText_Intro:
 	line "the Elders from"
 	cont "around Johto that"
 	cont "you're no spy."
+
+	Para "And through my"
+	line "channels,"
+	
+	para "Vespera tells me"
+	line "you've impressed"
+	cont "the Tower's sages."
 	
 	para "But I still see a"
 	line "coin perched on"
@@ -195,10 +206,10 @@ AmosText_Intro:
 	para "where it wants to"
 	line "fall."
 	
-	para "No more! Battle"
-	line "me, so I can see"
-	cont "your soul!"
+	para "Battle me, so I"
+	line "can see you!"
 	done
+
 	
 AmosText_Impressed:
 	text "You see the full"
@@ -207,6 +218,11 @@ AmosText_Impressed:
 	done
 
 Text_ReceivedVisionBadge:
+AmosText_Intro:
+	text_high
+    text " Amos: " 
+	next
+	text_start
 	text "As proof of my"
 	line "acceptance, take"
 	cont "the Vision Badge."
@@ -214,6 +230,11 @@ Text_ReceivedVisionBadge:
 
 	
 AmosText_LegacyBadgeSpeech:
+AmosText_Intro:
+	text_high
+    text " Amos: " 
+	next
+	text_start
 	text "With it, our"
 	line "soldiers will see"
 	cont "you're one of us."
@@ -224,15 +245,15 @@ AmosText_LegacyBadgeSpeech:
 	
 	para "If she gets to"
 	line "the powerful"
-	cont "#mon, then who"
-	cont "knows what she"
-	cont "will do with it."
+	para "#mon within,"
+	line "who knows what"
+	cont "she'd do."
 	
 	para "After that, we"
 	line "will disrupt the"
-	cont "coronation of"
-	cont "Emperor Mejimi."
+	para "coronation of"
+	line "Emperor Mejimi."
 
-	para "Let's go! To the"
-	line "mine!"
+	para "To the mine!"
 	done
+

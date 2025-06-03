@@ -129,18 +129,23 @@ ClairScript:
 
 .ClairText1:
 	text "Faster! Stronger!"
-	line "Why can't you be"
-	cont "like Lance's?"
+	line "Like Lance's!"
 	done
 
+
 .SeenText:
-	text "Clair: You inte-"
-	line "rrupted my "
-	cont "training."
+	text "You interrupted"
+	line "my training."
 	
 	para "Dragons require" 
-	line "intense focus to"
-	cont "reach perfection."
+	line "intense focus."
+	
+	para "In these hard"
+	line "times, I feel"
+	para "that we must turn"
+	line "to the mightiest"
+	para "#mon to get us"
+	line "through."
 
 	para "You seem quite"
 	line "confident in your"
@@ -150,22 +155,23 @@ ClairScript:
 	line "justified!"
 	done
 
+
 .BeatenText:
 	text "Beaten, again."
 	line "Every time I try"
 	cont "to climb up the"
 	
 	para "ranks to become"
-	line "an Elite Four, I"
+	line "an Elite Four,"
 	
-	para "I falter, as if"
-	line "my ambition is"
-	cont "too heavy to bear."
+	para "I falter. Is my "
+	line "drive too much?"
 
 	para "You've earned the"
 	line "Rising Badge and" 
 	cont "this TM. Take it."
 	done
+
 
 .AfterClairText:
 	text "If I'm going to"
@@ -176,8 +182,8 @@ ClairScript:
 	
 	para "You showed me the"
 	line "power of belie-"
-	cont "ving in my"
-	cont "#mon,"
+	para "ving in my"
+	line "#mon,"
 
 	para "even if they are"
 	line "not strong in the"

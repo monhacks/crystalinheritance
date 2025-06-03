@@ -145,17 +145,10 @@ EcruteakGymPryceScript:
 MortyIntroText:
 	text "<PLAYER>. Thank"
 	line "you for showing"
-	para "me the need to"
-	line "reflect, without"
-	cont "distraction."
-	
-	para "I was caught up"
-	line "making spectacles,"
-	para "I forgot that real"
-	line "reflection comes"
-	para "from deep, auth-"
-	line "entic connections."
-	
+	para "me that there is"
+	line "subline in the"
+	cont "ordinary."
+
 	para "Battle me, and"
 	line "show me your"
 	cont "bonds!"

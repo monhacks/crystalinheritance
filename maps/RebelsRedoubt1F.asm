@@ -153,8 +153,8 @@ RR_1F_BallText:
 	
 	para "Appears to be"
 	line "hundreds of years"
-	cont "old, or from a"
-	cont "distant land."
+	para "old, or from a"
+	line "distant land."
 
 	para "Its double-layer"
 	line "glass is thinner"
@@ -208,28 +208,23 @@ RR_1F_KurtText1:
 	text "Kurt: You don't"
 	line "understand!"
 	
-	para "There was a mis-"
-	line "understanding."
-	
 	para "We're on your"
-	line "side, the elders"
-	cont "of Johto can"
-	cont "vouch for us!"
+	line "side, look at all"
+	cont "of these badges!"
 	done
 
 RR_1F_NinjaText2:
-	text "Hmm... OK, I'll"
-	line "let you through."
-	
-	para "The others will"
+	text "Hmm. others will"
 	line "battle you to get"
 	cont "a better look."
 	done
+
 
 RR_1F_KurtText2:
 	text "Thank you!"
 	line "<PLAYER>, let's"
 	cont "go down."
+	done
 
 RR_1F_DownTheHatchText:
 	text "Amos is waiting."

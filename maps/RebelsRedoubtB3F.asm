@@ -51,47 +51,47 @@ RedoubtHollisScript:
 
 
 HollisRedoubtText_Intro:
-	text "<PLAYER>, you've"
-	line "come so far from"
-	cont "the Holt."
+	text_high
+    text " Hollis: " 
+	next
+	text_start
+	text "<PLAYER>, you're"
+	line "far from home."
 	
 	para "I wanted to stay"
-	line "out of Mejimi's"
-	cont "politics, but I"
-	
-	para "realized that was"
-	line "not possible for"
-	cont "ever."
-	
-	para "You wanted me to"
-	line "share my duties"
-	cont "and power - so"
+	line "out of politics,"
+	para "but that's not"
+	line "possible."	
+	para "From you, I lea-"
+	line "rned to share my"
+	cont "power."
 	
 	para "why does Amos say"
-	line "you want to help"
-	cont "Adrinna entrench"
-	cont "her power?"
+	line "you would help"
+	para "Adrinna entrench"
+	line "herself?"
 	
-	para "Show me if you"
-	line "are true to your"
-	cont "roots!"
+	para "Are you true to your"
+	cont "roots?"
 	done
+
 
 HollisRedoubtText_Impressed:
 	text "Ha! I knew you"
-	line "were true to the"
-	cont "forest."
+	line "were true!"
 	done
 
+
 Text_HollisRedoubt2:
+	text_high
+    text " Hollis: " 
+	next
+	text_start
 	text "I'll tell Amos"
 	line "you are a trust-"
 	cont "worthy partner."
-	
-	para "You should talk"
-	line "to the other"
-	cont "elders."
 	done
+
 
 RedoubtSandraScript: 
 	refreshscreen
@@ -117,6 +117,10 @@ RedoubtSandraScript:
 	end
 
 SandraRedoubtText_Intro:
+	text_high
+    text " Sandra: " 
+	next
+	text_start
 	text "<PLAYER>, please"
 	line "take no offense,"
 	
@@ -150,20 +154,22 @@ SandraRedoubtText_Intro:
 	cont "same!"
 	done
 
+
 SandraRedoubtText_Impressed:
 	text "Mmm... I knew you"
 	line "were true."
 	done
 
 Text_SandraRedoubt2:
+	text_high
+    text " Sandra: " 
+	next
+	text_start
 	text "I'll tell Amos"
 	line "you are a trust-"
 	cont "worthy partner."
-	
-	para "You should talk"
-	line "to the other"
-	cont "elders."
 	done
+
 
 RedoubtBarbeauScript: 
 	refreshscreen
@@ -189,9 +195,13 @@ RedoubtBarbeauScript:
 	end
 
 BarbeauRedoubtText_Intro:
+	text_high
+    text " Barbeau: " 
+	next
+	text_start
 	text "<PLAYER>, you and"
 	line "your grandfather"
-	cont "are still famous"
+	cont "are infamous"
 	
 	para "in the Landing"
 	line "for what happened"
@@ -201,24 +211,22 @@ BarbeauRedoubtText_Intro:
 	line "Kurt piloted her,"
 	para "so reckless, I "
 	line "cannot shore up"
-	cont "support for you"
-	cont "without seeing"
+	para "support for you"
+	line "without seeing"
 	para "how you treat"
 	line "your own #mon"
 	cont "in battle."
 	
 	para "One day, you will"
 	line "have to stand at"
-	cont "a shore, watching"
-	para "your descendants"
-	line "sail away - would"
-	cont "they come back to"
-	cont "sustain you in"
-	cont "the next season?"
-	
-	para "Have you earned"
-	line "that right?"
+	para "a shore, watching"
+	line "your descendants"
+	para "sail away - would"
+	line "they come back to"
+	para "sustain you in"
+	line "the next season?"
 	done
+
 
 BarbeauRedoubtText_Impressed:
 	text "Magnificent! Your"
@@ -228,11 +236,12 @@ BarbeauRedoubtText_Impressed:
 	done
 
 Text_BarbeauRedoubt2:
+	text_high
+    text " Barbeau: " 
+	next
+	text_start
 	text "I'll tell Amos"
 	line "you are a trust-"
 	cont "worthy partner."
-	
-	para "You should talk"
-	line "to the other"
-	cont "elders."
 	done
+

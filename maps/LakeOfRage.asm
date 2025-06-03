@@ -166,33 +166,57 @@ LakeRivalBattleScript:
     jumptext LakeRivalAfterText
 
 LakeRivalText1:
+	text_high
+    text " <RIVAL>: "
+	next
+	text_start
 	text "What're you"
 	line "doing here?"
 	done
 	
 LakeKurtText1:
-	text "Kurt: <RIVAL>,"
-	line "here to destroy"
-	cont "something else?"
+	text_high
+    text " Kurt: "
+	next
+	text_start
+	text "Here to destroy"
+	line "something else?"
 	done
 
 LakeRivalText2:
-	text "<RIVAL>: Just"
-	line "getting material"
-	cont "for my distiller."
+	text_high
+    text " <RIVAL>: "
+	next
+	text_start
+	text "No, just getting"
+	line "material for my"
+	cont "distiller."
 	
 	para "I had to leave"
-	line "Olivine."
-	
-	para "KURT: See your"
+	line "Olivine. I could"
+	para "not bear to see"
+	line "Silph any more."
+	done
+
+LakeRivalText2_2: ; todo 
+	text_high
+    text " Kurt: "
+	next
+	text_start
+	para "Aha! So, you see"
 	line "inventions upset"
 	cont "the balance! You"
 	
-	para "should go"
+	para "ought to head"
 	line "home."
-;	done
+	done
+
 ; fallthru 
-;LakeRivalText3:
+LakeRivalText2_3:
+	text_high
+    text " <RIVAL>: "
+	next
+	text_start
 	text "You're the one"
 	line "who is upsetting"
 	cont "balance!"
@@ -209,8 +233,8 @@ LakeRivalText2:
 	
 	para "We are part of"
 	line "nature. Our niche"
-	cont "is to be reflect-"
-	cont "ive stewards."
+	para "is to be reflect-"
+	line "ive stewards."
 	
 	para "I'll show you how"
 	line "strong I am with-"
@@ -218,12 +242,15 @@ LakeRivalText2:
 	done
 
 LakeRivalWinText:
-	text "I wish I was an"
-	line "entire region"
-	cont "away from you."
+	text "I'm done living in"
+	line "your shadow."
 	done
 
 LakeRivalAfterText:
+	text_high
+    text " <RIVAL>: "
+	next
+	text_start
 	text "You're only gett-"
 	line "ing weaker, like"
 	
@@ -231,14 +258,15 @@ LakeRivalAfterText:
 	line "fades every 20"
 	cont "years. Unlike a"
 	
-	para "Pineco in its"
-	line "shell, or you hi-"
-	para "ding behind self-"
-	line "righteousness, or"
-	para "Silph hiding beh-"
-	line "ind a balance"
-	cont "sheet, "
-
+	para "Pineco hiding in"
+	line "a shell, "
+	para "Or you hiding in"
+	line "righteousness,"
+	
+	para "Or Silph hiding"
+	line "behind fake"
+	cont "altruism,"
+	
 	para "I can see my eff-"
 	line "ect. I walked aw-"
 	para "ay when it wasn't"
@@ -247,6 +275,89 @@ LakeRivalAfterText:
 	para "<PLAYER>, when"
 	line "will you?"
 	done
+
+LakeKurtAfterRivalText: ; todo 
+	text_high
+    text " Kurt: "
+	next
+	text_start
+
+	text "Is what he said"
+	line "true? I thought"
+	para "tradition meant"
+	line "repeating the"
+	cont "past."
+	done
+
+LakePryceAfterRivalText: ; todo 
+	text_high
+    text " Pyrce: "
+	next
+	text_start	
+	
+	text "Nature goes in"
+	line "cycles. Before"
+	para "the rampaging"
+	line "Gyarados, this"
+	
+	para "was a muddy Tarn."
+	line "It took decades"
+	para "to learn methods"
+	line "that could rest-"
+	cont "ore balance."
+	
+	para "Silph has changed"
+	line "it again, harming"
+	para "untold numbers of"
+	line "#mon. We"
+	para "can only try to"
+	line "restore natural"
+	para "cycles. That's our"
+	line "role as stewards."
+	done
+
+LakeKurtAfterRivalText_2: ; todo 
+	text_high
+    text " Kurt: "
+	next
+	text_start
+
+	text "Maybe. But! I"
+	line "still think I can"
+	para "save Johto from"
+	line "modernizing infl-"
+	cont "uences."
+	
+	para "Please, Pryce."
+	line "You said you'd"
+	cont "pray."
+	done
+	
+LakePryceAfterRivalText_2: ; todo 
+	text_high
+    text " Pryce: "
+	next
+	text_start
+	
+	text "Very well. It's"
+	line "been so long!"
+	
+	para "How does it go?"
+	
+	para "The flow of time"
+	line "shapes us,"
+	
+	para "As a downpour or"
+	line "a sprinkle,"
+	
+	para "Don't panic,"
+	line "have prudence!"
+
+	para "So we can choose"
+	line "our wrinkles."
+	done
+	
+
 
 LakeRivalToPlayer:
 	step_left

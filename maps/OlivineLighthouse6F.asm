@@ -137,32 +137,44 @@ Lighthouse6FScene1:
 	
 ;
 LighthouseChuckText2:
-	text "Chuck: Hey,"
-	line "what gives?"
+	text_high
+    text " Chuck: "
+	next
+	text_start
+	text "What did you do?"
+	line "That Slowking was"
+	cont "our forecaster!"
+	
+	para "We had perfect"
+	line "knowledge. I had"
+	cont "perfect control!"
 	done
 
-LighthouseJasmineText2:
-	text "Jasmine: You"
-	line "tell me!"
+LighthouseJasmineText2: ; todo 
+	text_high
+    text " Jasmine: "
+	next
+	text_start
+	text "Why did you keep"
+	line "me blind to this?"
 	
-	para "Chuck: I had per-"
-	line "fect knowledge,"
-	cont "perfect control!"
-	
-	para "Jasmine: You kept"
-	line "me blind to it!"
+	para "That Slowking was"
+	line "in such pain!"
+	done
 
 LighthouseChuckText3:
-	text "Chuck: I'd have"
-	line "mapped the future"
-	cont "for you."
+	text_high
+    text " Chuck: "
+	next
+	text_start
+	text "I'd have mapped"
+	line "the future."
+	para "You think you'd"
+	line "be better alone?"
 	
-	para "You'd rather do"
-	line "without?"
-	
-	para "I've lost one"
-	line "home to the whims"
-	cont "of fate."
+	para "I lost one home"
+	line "to the whims of"
+	cont "fate."
 	
 	para "I won't lose an-"
 	line "other. You child,"
@@ -173,8 +185,13 @@ ChuckLossText:
 	text "Bested by you?"
 	line "I thought I knew"
 	cont "it all..."
+	done
 
 GetStormBadgeText:
+	text_high
+    text " Chuck: "
+	next
+	text_start
 	text "Cianwood washed"
 	line "away, but not my"
 	cont "duty. You deserve"
@@ -182,31 +199,49 @@ GetStormBadgeText:
 	done
 	
 LighthouseJasmineText3:
-	text "Jasmine: You told"
+	text_high
+    text " Jasmine: "
+	next
+	text_start
+	text "You convinced"
 	line "me progress was"
 	cont "always good, but"
 	
 	para "you limited us."
 	line "Running the desal"
-	cont "at its original"
-	cont "level, it may"
+	para "at its original"
+	line "level, it may"
 	
 	para "take generations"
 	line "for the shore to"
 	cont "recover."
+	
+	para "Your Slowking did"
+	line "not bring us into"
+	para "balance, it made"
+	line "us even more"
+	cont "unsteady."
 	done
 
 LighthouseChuckText4:
-	text "Chuck: Let's go."
-	line "We can talk about"
-	cont "next steps."
+	text_high
+    text " Chuck: "
+	next
+	text_start
+	text "Maybe you're"
+	line "right. Let's go."
 	done
 
 LighthouseJasmineText4:
-	text "If you have some"
-	line "time, I'd like to"
-	cont "meet you at my"
-	cont "Gym."
+	text_high
+    text " Jasmine: "
+	next
+	text_start
+	text "That was very"
+	line "brave. If you'd"
+	para "like, you can"
+	line "meet me at my"
+	cont "gym."
 	done
 
 LighthouseChuckLeavesMovement:
@@ -245,6 +280,10 @@ LighthouseKurtScript:
 	end 
 
 LighthouseKurtText0:
+	text_high
+    text " Kurt: "
+	next
+	text_start
 	text "Do you hear what"
 	line "Chuck is doing in"
 	cont "there?"
@@ -262,6 +301,10 @@ LighthouseKurtText0:
 	done
 	
 LighthouseKurtAfterChuck:
+	text_high
+    text " Kurt: "
+	next
+	text_start
 	text "I'm ashamed to"
 	line "say that I recog-"
 	cont "nized the look in"
@@ -269,8 +312,8 @@ LighthouseKurtAfterChuck:
 	
 	para "It's the same one"
 	line "that was in my"
-	cont "reflection, when"
-	cont "I commanded Lugia"
+	para "reflection, when"
+	line "I commanded Lugia"
 	cont "at the port."
 	
 	para "A lack of aware-"
@@ -283,8 +326,8 @@ LighthouseKurtAfterChuck:
 	
 	para "Hopefully, Celebi"
 	line "was watching, and"
-	cont "will see that I"
-	cont "have learned."
+	para "will see that I"
+	line "have learned."
 	done
 	
 Lighthouse6FScientistScript:
