@@ -97,7 +97,7 @@ FalknerIntroText:
 	text "My #mon saw"
 	line "you coming."
 	
-	Para "You took down"
+	para "You took down"
 	line "Whitney in her"
 	para "tower in your"
 	line "crusade."

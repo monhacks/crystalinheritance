@@ -113,7 +113,7 @@ WhitneyResponseText:
 	line "no one comes to"
 	cont "the ceremonies?"
 	
-    para "They’re boring."
+    para "They're boring."
 	line "Pure stasis."
 
 	para "Does anything"
@@ -177,7 +177,7 @@ KurtFinalText:
 	
 	para "I'll heal your"
 	line "party."
-    Done
+    done
 
 
 KurtEnterMovement:

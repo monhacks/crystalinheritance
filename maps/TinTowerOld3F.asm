@@ -440,10 +440,10 @@ TinTower3FStudyHarderText:
 	para "If I help you,"
 	line "more may leave,"
 	cont "putting us in an"
-	cont "even worse spot.”
+	cont "even worse spot."
 	
 	para "We are in a"
-	cont "crisis. Come”
+	cont "crisis. Come"
 	
 	para "back when we have"
 	line "resolved it."

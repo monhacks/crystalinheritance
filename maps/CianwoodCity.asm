@@ -144,7 +144,7 @@ CianwoodShpeelText:
 	cont "terror."	
 	
 	para "I used to admire"
-	line "nature, but then
+	line "nature, but then"
 	
 	para "she spurned Cian-"
 	line "wood - why?"
@@ -154,7 +154,7 @@ CianwoodShpeelText:
 	cont "couldn't raise a"
 	cont "seawall in time."
 	
-	para "Was I naïve to "
+	para "Was I naive to"
 	line "only see beauty?"
 	
 	para "I long to see the"

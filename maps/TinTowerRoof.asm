@@ -101,7 +101,7 @@ TinTowerRoofSilverIntroText:
 	para "It saw my heart"
 	line "had been reborn."
 	
-	para "Let’s see if you"
+	para "Let's see if you"
 	line "are worthy!"
 	done
 

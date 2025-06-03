@@ -236,7 +236,7 @@ CradleCutscene_Text6:
 
 	para "Says an old man"
 	line "stole my Lugia."
-	para "But she’s been by"
+	para "But she's been by"
 	line "side dutifully!"
 	cont "How absurd."
 	done
@@ -302,7 +302,7 @@ CradleCutscene_Text11:
 	line "are so close to"
 	para "the #mon that"
 	line "can shape Johto"
-	para "to how I –Er,"
+	para "to how I-Er,"
 	line "you want!" 
 	done
 
@@ -353,14 +353,14 @@ CradleCutscene_Text15:
 	line "they can't resist."
 
 	para "Then, reach the" 
-	line "mountain’s heart"
+	line "mountain's heart"
 
 	para "to forge a new"
 	line "destiny for Johto."
 	
 	para "With or without"
 	line "the emperor..."
-	Done
+	done
 
 
 CC_MejimiMoves1: ;6left 5 UP

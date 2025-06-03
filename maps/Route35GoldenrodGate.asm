@@ -37,10 +37,19 @@ WhitneyRadioShowText:
 	para "special guest,"
 	line "<RIVAL>."
 	
+	para "She asks: What's"
+	line "causing this"
+	cont "drought?"
+	
+	para "Are the wrong"
+	line "type of people"
+	para "using too much"
+	line "of YOUR water?"
+	
 	para "Listen in, and"
 	line "remember - "
 	
-	para "stomp or get"
+	para "Stomp or get"
 	line "stomped!"
 	done
 

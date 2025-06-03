@@ -113,7 +113,7 @@ RadioTowerRivalBeforeText:
     para "Whitney invited me"
     line "on her show to"
     para "talk about my"
-    line "distiller – the"
+    line "distiller. The"
 	para "one your grandpa"
 	line "mocked."
 

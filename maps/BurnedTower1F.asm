@@ -51,33 +51,24 @@ BurnedTower1FMortyScript:
 	showemote EMOTE_SHOCK, BURNED_TOWER_1F_MORTY, 15
 	jumpthisopenedtext
 
-	text "That legendary"
-	line "#mon- it isn't"
-	cont "putting on a show."
+	text "Sublime! But..."
+	line "That #mon."
 
 	para "It was just..."
 	line "being."
 
 	para "Like an elite"
-	line "gymnat who makes"
-	cont "the extraordinary"
-	cont "look routine."
+	line "gymnast who makes"
+	para "the extraordinary"
+	line "look routine."
 
-	para "I understand now."
-	line "My gym doesn't"
-	cont "need spectacle."
+	para "The profound is a"
+	line "simple act."
 
-	para "The profound is in"
-	line "simple acts -"
-	cont "lighting incense,"
-	cont "saying prayers,"
-	cont "remembering those"
-	cont "who came before."
-
-	para "In the quiet"
+	para "It's the daily"
 	line "routines that"
-	cont "connect us to"
-	cont "something greater."
+	para "connect us to"
+	line "something bigger."
 	
 	para "I will return"
 	cont "to my Gym."
@@ -85,20 +76,17 @@ BurnedTower1FMortyScript:
 
 Morty1FIntroText:
 	text "Oh, have you come"
-	line "for my badge? I'm"
-	cont "afraid the gym"
-	cont "is closed now."
+	line "for my badge? The"
+	cont "gym is closed."
 
-	para "People used to"
-	line "come here to honor"
-	cont "their ancestors,"
-	cont "find peace..."
+	para "I feel I need"
+	line "something drama-"
+	cont "tic to bring"
+	para "people closer to"
+	line "the sublime."
 
-	para "I need something"
-	line "more dramatic to"
-	cont "draw them back -"
-	cont "a legendary"
-	cont "#mon would do."
+	para "A legendary"
+	line "#mon would do."
 	done
 
 Text_MortyMorose:
@@ -106,9 +94,6 @@ Text_MortyMorose:
 	line "studying to find"
 	cont "one."
 	done
-
-
-
 
 BurnedTower1FScientistText:
 	text "The three are only"

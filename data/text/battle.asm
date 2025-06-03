@@ -1620,8 +1620,8 @@ MortyFinalPkmnText:
 	prompt
 
 ChuckFinalPkmnText:
-	text "We haven't lost"
-	line "yet!"
+	text "You won't expect"
+	line "what's next!"
 	prompt
 
 JasmineFinalPkmnText:
@@ -1631,8 +1631,8 @@ JasmineFinalPkmnText:
 	prompt
 
 PryceFinalPkmnText:
-	text "Humph… You are"
-	line "quite the Trainer."
+	text "You've learned"
+	line "much from Kurt!"
 	prompt
 
 ClairFinalPkmnText:
@@ -1680,10 +1680,6 @@ BrockFinalPkmnText:
 SamsaraFinalPkmnText:
 	text "Hard times are"
 	line "part of battles."
-	
-	para "Do you have the"
-	line "loyalty to see"
-	cont "things through?"
 	prompt
 
 LtSurgeFinalPkmnText:
@@ -1922,8 +1918,8 @@ CynthiaFinalPkmnText:
 	prompt
 
 AmosFinalPkmnText:
-	text "Is this a new"
-	line "beginning?..."
+	text "I still see a way"
+	line "to win!"
 	prompt
 
 CherylFinalPkmnText:
@@ -1980,8 +1976,8 @@ AdrinnaFinalPkmnText:
 	prompt
 
 BarbeauFinalPkmnText:
-	text "You're good!"
-	line "No doubt about it!"
+	text "I will find a"
+	line "way to win!"
 	prompt
 
 FlanneryFinalPkmnText:
@@ -1990,16 +1986,12 @@ FlanneryFinalPkmnText:
 	prompt
 
 KannaFinalPkmnText:
-	text "This isn't the"
-	line "end, my friend!"
+	text "I can persevere!"
 	prompt
 
 SkylaFinalPkmnText:
 	text "This is my last"
 	line "#mon…"
-
-	para "But I'll never"
-	line "give up hope!"
 	prompt
 
 ValerieFinalPkmnText:
@@ -2017,9 +2009,8 @@ BillFinalPkmnText:
 	prompt
 
 TammyFinalPkmnText:
-	text "My last #mon…"
-	line "Lend me your"
-	cont "power!"
+	text "I can still come"
+	line "out ahead!"
 	prompt
 
 WalkerFinalPkmnText:

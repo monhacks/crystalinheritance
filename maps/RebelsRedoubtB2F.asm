@@ -184,15 +184,15 @@ AmosText_Intro:
 	
 	para "I've been trying"
 	line "to organize an"
-	cont "opposition to "
-	cont "Mejimi."
+	para "opposition to "
+	line "Mejimi."
 	
 	para "You've convinced"
 	line "the Elders from"
-	cont "around Johto that"
-	cont "you're no spy."
+	para "around Johto that"
+	line "you're no spy."
 
-	Para "And through my"
+	para "And through my"
 	line "channels,"
 	
 	para "Vespera tells me"
@@ -218,7 +218,6 @@ AmosText_Impressed:
 	done
 
 Text_ReceivedVisionBadge:
-AmosText_Intro:
 	text_high
     text " Amos: " 
 	next
@@ -230,7 +229,6 @@ AmosText_Intro:
 
 	
 AmosText_LegacyBadgeSpeech:
-AmosText_Intro:
 	text_high
     text " Amos: " 
 	next

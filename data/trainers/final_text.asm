@@ -1,5 +1,5 @@
 FinalTextList_TriplePhrases:
-	dbw RIVAL0, .FinalText_Rival0 ; TODO
+	dbw RIVAL0, .FinalText_Rival0 
 	dbw RIVAL1, .FinalText_Rival1
 	dbw RIVAL2, .FinalText_Rival2
 	dbw LYRA2,  .FinalText_Lyra2
@@ -8,14 +8,14 @@ FinalTextList_TriplePhrases:
 .FinalText_Rival0: ;these are said right before the last pokemon comes out. 04-27-24
 	dw Rival1_1FinalPkmnText
 
-.FinalText_Rival1: ;todo
-	dw Rival1_2FinalPkmnText ; TODO
+.FinalText_Rival1: 
+	dw Rival1_2FinalPkmnText 
 	dw Rival1_3FinalPkmnText
 	dw Rival1_4FinalPkmnText
 	dw Rival1_5FinalPkmnText
 
 .FinalText_Rival2:
-	dw Rival2_1FinalPkmnText ; TODO
+	dw Rival2_1FinalPkmnText 
 	dw Rival2_2FinalPkmnText
 
 .FinalText_Lyra2:
@@ -36,14 +36,14 @@ FinalText_TeamRocket:
 FinalText_SinglePhrases:
 	dw CarrieFinalPkmnText
 	dw CalFinalPkmnText
-	dw FalknerFinalPkmnText ;TODO
-	dw BugsyFinalPkmnText ;TODO
-	dw WhitneyFinalPkmnText ;TODO
-	dw MortyFinalPkmnText ;TODO
-	dw ChuckFinalPkmnText ;TODO
-	dw JasmineFinalPkmnText ;TODO
-	dw PryceFinalPkmnText ;
-	dw ClairFinalPkmnText ;
+	dw FalknerFinalPkmnText
+	dw BugsyFinalPkmnText 
+	dw WhitneyFinalPkmnText
+	dw MortyFinalPkmnText 
+	dw ChuckFinalPkmnText 
+	dw JasmineFinalPkmnText
+	dw PryceFinalPkmnText 
+	dw ClairFinalPkmnText
 	dw KurtFinalPkmnText
 	dw MejimiFinalPkmnText
 	dw BrunoFinalPkmnText
@@ -55,7 +55,7 @@ FinalText_SinglePhrases:
 	dw ErikaFinalPkmnText
 	dw JanineFinalPkmnText
 	dw SabrinaFinalPkmnText
-	dw HollisFinalPkmnText ; new
+	dw HollisFinalPkmnText
 	dw BlueFinalPkmnText
 	dw RedFinalPkmnText
 	dw LeafFinalPkmnText
@@ -63,7 +63,7 @@ FinalText_SinglePhrases:
 	dw ProfOakFinalPkmnText
 	dw ProfElmFinalPkmnText
 	dw ProfIvyFinalPkmnText
-	dw MysticalManFinalPkmnText ;ok
+	dw MysticalManFinalPkmnText 
 	dw KarateKingFinalPkmnText
 	dw PalmerFinalPkmnText
 	dw JessieJamesFinalPkmnText

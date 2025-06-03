@@ -120,17 +120,17 @@ KimonoGirlEmiIntroText:
 	line "way to save"
 	cont "your heritage."
 	
-	para "You’ve"
+	para "You haveve"
 	line "brought people"
-	cont "together in"
-	cont "Goldenrod and"
+	para "together in"
+	line "Goldenrod and"
 	
 	para "calmed the"
 	line "Violet gales, so"
 	
 	para "you seek the"
 	line "blossom tree"
-	cont "here…"
+	cont "here."
 	
 	para "Haha, so many"
 	line "similarities!"
