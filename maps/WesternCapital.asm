@@ -33,9 +33,6 @@ WesternCapital_MapScriptHeader: ; todo the NPCs need to say something dependin g
 ; cutsceners
 	object_event 11, 21, SPRITE_MEJIMI, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_PROLOGUE_MEJIMI
 	object_event  9, 23, SPRITE_ADRINNA, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_PROLOGUE_ADRINNA 
-	object_event  9, 23, SPRITE_KENSEY, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1
-	object_event  9, 23, SPRITE_BOBESH, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1
-	object_event  9, 23, SPRITE_SAMSARA, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1
 	pokemon_event  10, 19, LUGIA, -1, -1, PAL_NPC_BLUE, WC_pkmn_text, EVENT_PROLOGUE_MEJIMI ; by tammy  ;;;; 
 	pokemon_event  12, 19, HO_OH, -1, -1, PAL_NPC_RED, WC_pkmn_text, EVENT_PROLOGUE_MEJIMI ; by tammy  ;;;; 
 ; civilians
@@ -52,9 +49,6 @@ WesternCapital_MapScriptHeader: ; todo the NPCs need to say something dependin g
 	object_const_def
 	const WESTERN_CAPITAL_MEJIMI
 	const WESTERN_CAPITAL_ADRINNA
-	const WESTERN_CAPITAL_KENSEY
-	const WESTERN_CAPITAL_BOBESH
-	const WESTERN_CAPITAL_SAMSARA
 
 
 WesternCapitalCemeteryScene: ; SOME OF THIS C.F. MRPOKEMONSHOUSE.ASM IN POLISHED 
@@ -91,115 +85,42 @@ WesternCapitalCemeteryScene: ; SOME OF THIS C.F. MRPOKEMONSHOUSE.ASM IN POLISHED
 	writetext Prologue_Text2 ; YOUR STRATEGIES... 
 	waitbutton
 	closetext
-	
-    playsound SFX_EXIT_BUILDING
-    appear WESTERN_CAPITAL_KENSEY
-    waitsfx
-    applymovement WESTERN_CAPITAL_KENSEY, WC_KenseyMovement1
-	
-	refreshscreen
-	trainerpic KENSEY
-	waitbutton
-	closepokepic
-	
-	turnobject WESTERN_CAPITAL_MEJIMI, LEFT
-	turnobject WESTERN_CAPITAL_ADRINNA, LEFT
 
+	; todo emotes 
+	
 	opentext
-	writetext Prologue_Text3 ; HOW ARE THINGS 
+	writetext Prologue_Text3
 	waitbutton
 	closetext
 	
-    applymovement WESTERN_CAPITAL_KENSEY, WC_KenseyMovement2
-    playsound SFX_ENTER_DOOR
-	disappear WESTERN_CAPITAL_KENSEY
-	turnobject WESTERN_CAPITAL_ADRINNA, DOWN
-	turnobject WESTERN_CAPITAL_MEJIMI, UP
+	; todo emotes 
 	
 	opentext
 	writetext Prologue_Text4 ; KENSEY DECEIVES!
 	waitbutton
 	closetext	
 	
-
-    playsound SFX_EXIT_BUILDING
-    appear WESTERN_CAPITAL_BOBESH
-    waitsfx
-    applymovement WESTERN_CAPITAL_BOBESH, WC_BobeshMovement1
-	
-	refreshscreen
-	trainerpic BOBESH
-	waitbutton
-	closepokepic
-	
-	turnobject WESTERN_CAPITAL_MEJIMI, LEFT
+	; todo emotes 
 
 	opentext
 	writetext Prologue_Text5 ; eh adrinna?
 	waitbutton
 	closetext	
 
-	turnobject WESTERN_CAPITAL_ADRINNA, DOWN
-
-	opentext
-	writetext Prologue_Text6 ; BUT,,, YOU STILL HAVE NOT! 
-	waitbutton
-	closetext	
-
-    applymovement WESTERN_CAPITAL_BOBESH, WC_BobeshMovement2
-    playsound SFX_ENTER_DOOR
-	disappear WESTERN_CAPITAL_BOBESH
-	applyonemovement WESTERN_CAPITAL_MEJIMI, step_left
-	applyonemovement WESTERN_CAPITAL_MEJIMI, step_left
-	applyonemovement WESTERN_CAPITAL_ADRINNA, step_down
-	turnobject WESTERN_CAPITAL_MEJIMI, RIGHT
-	turnobject WESTERN_CAPITAL_ADRINNA, LEFT
-
-	opentext
-	writetext Prologue_Text7 ; now that evoked! 
-	waitbutton
-	closetext	
-
-    playsound SFX_EXIT_BUILDING
-    appear WESTERN_CAPITAL_SAMSARA
-    waitsfx
-    applymovement WESTERN_CAPITAL_SAMSARA, WC_SamsaraMovement1
-	turnobject WESTERN_CAPITAL_MEJIMI, DOWN
-	showemote EMOTE_SHOCK, WESTERN_CAPITAL_SAMSARA, 10 
-	
-	opentext
-	writetext Prologue_Text8 ; THIS SITE IS HOLY 
-	waitbutton
-	closetext
-	
-	showemote EMOTE_BOLT, WESTERN_CAPITAL_MEJIMI, 20 
-
-	pause 10
+	; todo emotes 
 	
 	refreshscreen
 	trainerpic MEJIMI
 	waitbutton
 	closepokepic
 
-	opentext
-	writetext Prologue_Text9 ; I AM THE EMPEROR 
-	waitbutton
-	closetext	
-
-	applyonemovement WESTERN_CAPITAL_MEJIMI, step_left
+	; todo emotes 
 	
-	opentext
-	writetext Prologue_Text10 ; how dare you 
-	waitbutton
-	closetext	
 
 	special Special_FadeBlackQuickly
 	
 	setevent EVENT_PROLOGUE_MEJIMI
 	setevent EVENT_PROLOGUE_ADRINNA
-	setevent EVENT_PROLOGUE_BOBESH
-	setevent EVENT_PROLOGUE_KENSEY
-	setevent EVENT_PROLOGUE_SAMSARA
 
 	setscene $1
 	warp HOLT_COAST_GATE,  3, 5

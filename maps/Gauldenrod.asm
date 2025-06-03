@@ -454,9 +454,6 @@ GauldenrodBobeshScene:
     turnobject GAULDENROD_MATRON, DOWN
     showtext CindyText4
     showtext BobeshText4
-    showtext CindyText5
-    showtext BobeshText5
-    showtext CindyText6 ; 
 	setevent EVENT_GAULDENROD_BOBESH
 	setevent EVENT_GAULDENROD_FLAREON
 	setevent EVENT_GAULDENROD_BRIGADER_CINDY

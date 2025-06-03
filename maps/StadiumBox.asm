@@ -163,7 +163,7 @@ SandraDialogue2StadiumBox:
 StadiumBoxKurtScript:
 	faceplayer
 	opentext
-	writetext KurtDialogue2
+	writetext KurtDialogue2StadiumBox
 	waitbutton
 	closetext
 	end

@@ -76,7 +76,7 @@ DebugCPU:
 	closepokepic
 	
 	refreshscreen
-	trainerpic SWIMMER_M
+	trainerpic SWIMMERM
 	pause 10
 	waitbutton
 	closepokepic
