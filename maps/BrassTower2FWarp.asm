@@ -37,49 +37,43 @@ BrassTowerBobesh:
 
 
 .SeenText:
-	text "Oh? What are you"
-	line "doing in my"
-	cont "sanctum? Were my"
-	cont "guards defeated?"
+	text_high
+    text " Bobesh: " 
+	next
+	text_start
+	text "What're you doing"
+	line "in my sanctum?"
 	
-	para "You ruined my pl-"
-	line "ans at the stad-"
-	cont "ium. Gauldenrod:"
+	para "You ruined my"
+	line "stadium!"
 	
-	para "Its chaos was"
-	line "calmed by my pat-"
-	cont "ernal hands!"
+	para "I made order"
+	line "from anarchy!"	
 	
-	para "Then you petulant"
-	line "child and Samsara"
-	cont "showed up. The"
-	para "Emperor never"
-	line "trusted me again."
-	
-	para "I'm not letting"
-	line "you get away this"
-	cont "time! I will have"
-	cont "my revenge!"
+	para "I will have"
+	line "my revenge!"
 	done
+
 
 .BeatenText:
 	text "Impossible... How"
 	line "can disorder"
-	cont "triumph over"
-	cont "strength?"
+	cont "triumph?"
 	done
 
 .AfterText:
-	text "Perhaps I was"
-	line "blind... But no-"
-
-	para "Without absolute"
+	text_high
+    text " Bobesh: " 
+	next
+	text_start
+	text "Without absolute"
 	line "power, society"
 	cont "will crumble."
 	
 	para "I have no right"
 	line "to history, now."
-	cont "But Kensey will"
-	cont "succeed where I"
+	para "But Kensey will"
+	line "succeed where I"
 	cont "failed."
 	done
+

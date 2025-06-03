@@ -57,31 +57,28 @@ BrassTowerAdrinna:
 	end
 
 AdrinnaSeenText0:
+	text_high
+    text " Adrinna: " 
+	next
+	text_start
 	text "I knew your tal-"
 	line "ents would rise"
 	cont "you to the top."
 	
-	para "The world is best"
-	line "when the strong"
-	cont "can sort thems-"
-	cont "elves into power."
-	
 	para "<PLAYER>. You"
 	line "could be so much"
-	cont "more without your"
-	cont "bleeding-heart"
-	cont "grandfather."
+	para "more without your"
+	line "grandfather."
 	
 	para "If you shed those"
 	line "antiquated bonds,"
-	cont "you would gain"
-	cont "fame from Anarres"
-	cont "to the Landing"
-	cont "and beyond!"
+	para "you'd be revered"
+	line "around the world!"
 	
-	para "You know that tr-"
-	line "dition serves the"
-	cont "leeching elders."
+	para "What do you say?"
+	line "Join with"
+	para "me. We only need"
+	line "a cult of self."
 	
 	para "Hm? I can see in"
 	line "your eyes, you're"
@@ -91,80 +88,91 @@ AdrinnaSeenText0:
 
 
 AdrinnaTowerSeenText:
+	text_high
+    text " Adrinna: " 
+	next
+	text_start
 	text "I knew your tal-"
 	line "ents would rise"
 	cont "you to the top."
 	
-	para "The world is best"
-	line "when the strong"
-	cont "can sort thems-"
-	cont "elves into power."
-	
 	para "<PLAYER>. You"
 	line "could be so much"
-	cont "more without your"
-	cont "bleeding-heart"
-	cont "grandfather."
+	para "more without your"
+	line "grandfather."
 	
 	para "If you shed those"
 	line "antiquated bonds,"
-	cont "you would gain"
-	cont "fame from Anarres"
-	cont "to the Landing"
-	cont "and beyond!"
-	
-	para "You know that tr-"
-	line "dition serves the"
-	cont "leeching elders."
+	para "you'd be revered"
+	line "around the world!"
 	
 	para "What do you say?"
-	line "Burn it down with"
-	cont "me. We only need"
-	cont "a cult of self."
+	line "Join with"
+	para "me. We only need"
+	line "a cult of self."
 	done
+
 
 BeatenTextAdrinnaWarp:
 	text "Unbelievable."
-	line "I gathered the"
-	cont "strongest #mon"
-	cont "and it got me"
-	para "nothing. Your"
-	line "bond... how does"
-	cont "it overcome me?"
+	line "I had the"
+	para "strongest #mon"
+	line "and still lost."
+
+	para "Your bonds..."
+	line "how do they"
+	cont "overcome me?"
 	done
+
 
 AdrinnaAfterText:
+	text_high
+    text " Adrinna: " 
+	next
+	text_start
 	text "Goodbye <PLAYER>."
-	line "I know that one"
-	cont "day, you'll look"
-	cont "up at a diseased,"
-	para "spoiled politic,"
-	line "and wish that"
-	cont "you had taken my"
-	cont "chance to smother"
-	cont "that it when you"
-	cont "had the chance."
+	line "One day, you'll"
+	line "look around and"
+	para "see corruption"
+	line "metastasize, and"
+	para "you'll wish that"
+	line "you had excised"
+	para "it when you had"
+	line "the chance."
 	done
 
+
 AdrinnaTakesOverText:
+	text_high
+    text " Adrinna: " 
+	next
+	text_start
 	text "Excellent. Meet"
 	line "me on the roof."
-	para "We need to show"
-	line "everyone that how"
-	cont "the emperor"
-	cont "manipulates them."
+	para "We will show"
+	line "them how little"
+	para "they need an"
+	line "Emperor."
 	done
 
 AreYouSureAdrinna:
+	text_high
+    text " Adrinna: " 
+	next
+	text_start
 	text "Really? You will"
-	line "join me in burn-"
+	line "join me in tear-"
 	cont "ing down Johto's"
 	cont "traditions?"
 	done
 
 NoToAdrinnaText:
+	text_high
+    text " Adrinna: " 
+	next
+	text_start
 	text "Disappointing."
 	line "No matter - I'll"
-	cont "dispatch you, and"
+	cont "destroy you, and"
 	cont "then the emperor!"
 	done

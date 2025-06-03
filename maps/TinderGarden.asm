@@ -1110,18 +1110,17 @@ TinderGardernWatchTheLoggersScript:
 GardenEngineerText1:
 	text "Is this the one?"
 	line "I couldn't find"
-	para "any other blossom"
-	line "trees."
+	cont "any other blossom"
+	cont "trees."
 	done
+
 	
 GardenEngineerText2:
-	text "Yup, this is the"
-	line "it. Probably the"
-	para "last one in all"
-	line "of Johto. This'll"
-	para "probably net us"
-	line "a few months pay."
+	text "Yup, it may be the"
+	cont "last one in"
+	cont "Johto."
 	done
+
 	
 Celebi2Text:
 	text "..."
@@ -1134,19 +1133,18 @@ GardenEngineerText3:
 
 GardenEngineerText4:
 	text "Hoenn wants the"
-	line "lumber. They're"
-	para "building an extr-"
-	line "avagant dragon"
-	para "shrine, and all"
-	line "their trees were"
-	para "burned down in"
-	line "a freak wildfire."
+	line "them for an extr-"
+	cont "avagant shrine."
 	
-	para "Reminds me of the"
-	line "kid who toppled"
-	para "the emperor in"
-	line "the Burned Tower."
-	done
+	para "I'm glad Johto"
+	line "doesn't have such"
+	para "wasteful things"
+	line "ever since that"
+	para "kid toppled the"
+	line "emperor some"
+	cont "160 years ago."
+	Done
+
 
 LittleGiddingText:
 	text "We shalln't cease"

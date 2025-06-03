@@ -138,6 +138,10 @@ BTR_KurtStepsDownMovement:
 	step_end
 
 TowerRoofMejimiText1_0: 
+	text_high
+    text " Mejimi: " 
+	next
+	text_start
 	text "Johto! We will be"
 	line "united under my"
 	cont "rule!"
@@ -154,35 +158,56 @@ TowerRoofMejimiText1_0:
 	done
 
 TowerRoofMejimiText1_1:
+	text_high
+    text " Mejimi: " 
+	next
+	text_start
 	text "Hm? How did my"
 	line "generals fail me?"
 	done
 
 TowerRoofMejimiText1_4:
-	text "Kurt: we are all"
-	line "part of nature."
+	text_high
+    text " Kurt: " 
+	next
+	text_start
+	text "You're wrong."
+	line "We are all"
+	cont "part of nature."
 	para "When you set"
 	line "yourself above,"
-	cont "you become unnatural."
+	para "you become"
+	line "the unnatural."
 	done
 
 TowerRoofMejimiText1_5:
-	text "Mejimi: Who are "
-	line "you to say?"
+	text_high
+    text " Mejimi: " 
+	next
+	text_start
+	text "Silence at once!"
 	done
 	
 TowerRoofMejimiText1_6: 
-	text "Kurt: You claim"
-	line "today and tomo-"
-	cont "rrow."
+	text_high
+    text " Kurt: " 
+	next
+	text_start
+	text "You want to own"
+	line "today while you"
+	para "steal from"
+	line "tomorrow."
 
 	para "By then, there"
 	line "will be nothing."
 	done
 
 TowerRoofMejimiText1_7: 
-	text "Silence!"
-	para "I'll end you"
+	text_high
+    text " Mejimi: " 
+	next
+	text_start
+	text "I'll end you"
 	line "here and now!"
 	done
 
@@ -191,15 +216,23 @@ TowerRoofMejimiText1_8:
 	done
 
 TowerRoofMejimiText1_9: 
-	text "Mejimi: Lugia,"
-	line "put it out!"
+	text_high
+    text " Mejimi: " 
+	next
+	text_start
+	text "Lugia, put out"
+	line "the flames!"
 	done
 
 
 TowerRoofMejimiText1_9_2:
-	text "Mejimi: Absurd!"
-	para "Ho-Oh, save me,"
-	line "the pure of heart!"
+	text_high
+    text " Mejimi: " 
+	next
+	text_start
+	text "This is absurd!"
+	line "Ho-Oh, save me,"
+	cont "the pure of heart!"
 	done
 
 TowerRoofMejimiText1_10:
@@ -207,27 +240,39 @@ TowerRoofMejimiText1_10:
 	line "Johto is watching."
 	para "We've shown them"
 	line "the most ruinous"
-	cont "invention is"
-	cont "selfishness."
+	para "invention is"
+	line "selfishness."
 
 	para "We're part of an"
 	line "endless cycle,"
-	cont "borrowing from"
-	cont "the next."
+	para "borrowing from"
+	line "the next."
 
 	para "This tower will"
-	line "fall - only room"
-	cont "for you on Ho-Oh."
+	line "fall. There's only"
+	para "room for you on"
+	line "Ho-Oh."
 
-	para "When you get back"
-	line "to our time, tell"
-	para "everyone about"
-	line "how it happened."
-
-	para "How we united for"
-	line "a better future,"
-	cont "despite all"
-	cont "dangers."
+	para "When we began,"
+	line "I wanted to pass"
+	para "down a Johto that"
+	line "could support you"
+	cont "in your life."
+	
+	para "On this unsturdy"
+	line "tower, I get to"
+	para "make the ultimate"
+	line "sacrifice to give"
+	para "you a chance to"
+	line "build a stronger"
+	cont "community."
+	
+	para "Please, tell them"
+	line "the whole story."
+	
+	para "How we united to"
+	line "build a better"
+	cont "future."
 	done
 
 BrassTowerLugiaFleesMovement:
@@ -378,20 +423,31 @@ BTR_PlayerToFrontMovement:
 	step_end
 
 TowerRoofMejimiText2_0: 
-	text "Mejimi: Adrinna,"
-	line "why are you with"
+	text_high
+    text " Mejimi: " 
+	next
+	text_start
+	text "Adrinna, why are"
+	line "you here with"
 	cont "this child?"
 	done
 
 TowerRoofText2_4: 
-	text "Kurt: <PLAYER>,"
+	text_high
+    text " Kurt: " 
+	next
+	text_start
+	text "<PLAYER>,"
 	line "what's going on?"
 	done
 
 TowerRoofText2_5: 
-	text "Adrinna: <PLAYER>"
-	line "is done with your"
-	cont "traditions."
+	text_high
+    text " Adrinna: " 
+	next
+	text_start
+	text "Johto is done"
+	line "with traditions!"
 	
 	para "Soon, all Johto"
 	line "will see what a"
@@ -407,30 +463,44 @@ TowerRoofText2_5:
 	done
 
 TowerRoofText2_7: 
-	text "Mejimi: Traitor!"
-	line "I'll start with"
-	cont "you, <PLAYER>!"
+	text_high
+    text " Mejimi: " 
+	next
+	text_start
+	text "Traitor!"
+	para "I'll start with"
+	line "you, <PLAYER>!"
 	done
 
 TowerRoofMejimiText2_8: 
-	text "Mejimi: My "
-	line "#mon… How "
-	cont "could I lose?"
+	text "My #mon, how"
+	line "could I lose?"
 	done
 	
 TowerRoofText2_8_1: 
-	text "Mejimi: Impossible."
-	line "I must convene"
-	cont "with the sages."
+	text_high
+    text " Mejimi: " 
+	next
+	text_start
+	text "I must convene"
+	line "with the sages."
 	done
 
 TowerRoofText2_9: 
-	text "Kurt: <PLAYER>, is"
-	line "this who you are?"
+	text_high
+    text " Kurt: " 
+	next
+	text_start
+	text "<PLAYER>, is this"
+	line "who you are?"
 	done
 
 TowerRoofText2_10: 
-	text "Adrinna: Johto!"
+	text_high
+    text " Adrinna: " 
+	next
+	text_start
+	text "See! Johto!"
 	line "Anyone can rise"
 	para "to the level of"
 	line "the emperor, with"
@@ -448,7 +518,11 @@ TowerRoofText2_10:
 	done
 
 TowerRoofText2_11: 
-	text "Kurt: No! <PLAYER>,"
+	text_high
+    text " Kurt: " 
+	next
+	text_start
+	text "No! <PLAYER>,"
 	line "I was misguided."
 
 	para "I wanted the fu-"
@@ -467,24 +541,36 @@ TowerRoofText2_11:
 	done
 
 TowerRoofText2_12: 
-	text "Adrinna: Enough."
-	line "Show him out." 
+	text_high
+    text " Adrinna: " 
+	next
+	text_start
+	text "That's enough."
+	line "Show him out."
 	done
 
 TowerRoofText2_13: 
-	text "Kurt: I will"
-	line "fight for my"
-	cont "home!"
+	text_high
+    text " Kurt: " 
+	next
+	text_start
+	text "I will fight"
+	line "for my home!"
+	done
 
 TinTowerRoofText2_Celebi: 
+	text_high
+    text " Celebi: " 
+	next
+	text_start
 	text "Humans are not "
 	line "above or below "
 	cont "nature - "
 	
 	para "you are nature."
 	line "Just as a forest"
-	cont "needs growth and"
-	cont "decay,"
+	para "needs growth and"
+	line "decay,"
 	
 	para "society needs"
 	line "tradition and"
@@ -505,11 +591,20 @@ TinTowerRoofText2_Celebi:
 	done
 
 TowerRoofText2_16: 
-	text "Kurt: So this"
-	line "is the end…"
+	text_high
+    text " Kurt: " 
+	next
+	text_start
+	text "So this is the"
+	line "end."
+	done
 
 TowerRoofText2_16_2: 
-	text "Kurt: I… I don't"
+	text_high
+    text " Kurt: " 
+	next
+	text_start
+	text "I… I don't really"
 	line "know where I go"
 	cont "from here."
 	
@@ -527,6 +622,7 @@ TowerRoofText2_16_2:
 	
 	para "I can't guide"
 	line "you any more."	
+	done
 
 TowerRoofText2_18: 
 	text "Adrinna: Thank"

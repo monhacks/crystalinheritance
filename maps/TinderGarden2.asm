@@ -32,8 +32,6 @@ TG2Text:
 	text "..."
 	end
 
-
-
 TinderGarden2Script:
 	opentext
 	showtext TG2_Text1
@@ -73,7 +71,11 @@ TG2_Text1:
 	done
 	
 TG2_Text2:
-	text "<PLAYER>: We are"	
+	text_high
+    text " <PLAYER>: " 
+	next
+	text_start
+	text "Children. We're"	
 	line "here to honor"
 	cont "nature's cycles."
 	
@@ -116,17 +118,23 @@ TG2_Text_Kurt5:
 	line "it to you."
 		
 	para "Eh-Hem."
-		
-	para "Kurt's Journal:"
+	done
+
+TG2_Text_Kurt5_2: ; todo 
+	text_high
+    text " Kurt's Journal: " 
+	next
+	text_start		
+	text "Dear <PLAYER>."
 	line "The last time I"
 
 	para "was here, at the"
-	line "burned tower, was"
+	line "Burned Tower, was"
 	para "for the new year"
 	line "celebration befo-"
-	cont "re you were born,"
+	cont "re you were born."
 
-	para "your dad and I "
+	para "Your dad and I "
 	line "met here. I was "
 	cont "so excited."
 
@@ -134,24 +142,31 @@ TG2_Text_Kurt5:
 	line "ind him of his "
 	cont "#mon,"
 	
+	para "That cuddly, cute"
+	line "Cyndaquil,"
+	
 	para "since he was abo-"
 	line "ut to have you."
 	
 	para "While I waited,"
 	line "I looked in the "
-	para "bag and found his"
+	para "bag and found the"
 	line "apricorn."
 	
-	para "The paint was ne-"
-	line "arly all chipped"
-	para "off, so only he "
-	line "and I would know"
-	cont "what it once was." 
+	para "The paint we had"
+	line "put on was nearly"
+	cont "all chipped away,"
+	
+	para "only our memories"
+	line "could remind us"
+	cont "what it once was."
+
 	
 	para "When I picked it"
 	line "up it was cold"
 	para "and still - not"
 	line "as it should be."
+
 	
 	para "When I opened it,"
 	line "the inside was "
@@ -167,12 +182,20 @@ TG2_Text_Kurt5:
 
 	para "I still think of"
 	line "those good days"
-	cont "whenever I see"
-	cont "an apricorn, "
+	para "whenever I see"
+	line "an apricorn, "
 	
 	para "wishing I could"
 	line "see him catch his"
 	cont "first one again."
+	done
+
+
+TG2_Text_Kurt5_3: ; todo 
+	text "<RIVAL>'s Father:"
+	line "Kurt would be so"
+	para "proud of you,"
+	line "<PLAYER>."
 	done
 
 TG2_Text3:

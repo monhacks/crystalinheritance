@@ -491,8 +491,6 @@ Crade_Scene3: ; just in case you lose to adrinna after heatran
 	warp WHISPERS_WAY, 10, 4
 	end
 	
-
-
 Player_CCB1F_Move1:
 	step_up
 	step_up
@@ -517,42 +515,53 @@ CradleKurtMovesToYou:
 	step_end
 
 CradleAdrinnaText1:
+	text_high
+    text " Adrinna: " 
+	next
+	text_start
 	text "<PLAYER>, I knew"
 	line "you would come."
 	
 	para "We are held back"
 	line "by tradition."
 	
-	para "Consider: Hollis,"
+	para "Consider: Hollis"
 	line "holds back his"
 	cont "best trainers."
 	
-	para "Gauldenrod's rit-"
-	line "ual that wastes"
-	para "energy carrying" 
-	line "sick and lame."
+	para "Sandra saddles"
+	line "youth with the"
+	cont "sick and lame."
 	
-	para "The nomads that"
-	line "never track their"
-	cont "own progress."
+	para "Barbeau rejects"
+	line "maps for his own"
+	cont "memories."
 	
-	para "Ten generations of"
-	line "emperors missing"
-	para "the chance to tap"
+	para "All the while,"
 	line "this mountain's"
-	cont "luscious steel!"
+	para "luscious iron"
+	line "lay idle."
 	
 	para "The #mon here"
-	line "can wipe the"
-	cont "region clean."
+	line "is liquid steel."
+
+	para "We can remake"
+	line "Johto from the"
+	cont "bedrock up."
 	
 	para "<PLAYER>, I want"
 	line "you to have it."
+	
+	para "Heatran, rise!"
 	done
 
 
 CradleAdrinnaText2:
-	text "Adrinna: I knew"
+	text_high
+    text " Adrinna: " 
+	next
+	text_start
+	text "<PLAYER>, I knew"
 	line "you could do it."
 	
 	para "No more elders to"
@@ -565,82 +574,69 @@ CradleAdrinnaText2:
 	
 	
 CradleKurtText1:
-	text "Kurt: She's wrong!"
-	line "I have been wrong"
-	para "to be so against"
-	line "technologies."
+	text_high
+    text " Kurt: " 
+	next
+	text_start
+	text "Don't listen!"
+	line "I've been wrong."
 	
-	para "When I could have"
-	line "helped <RIVAL>'s"
-	para "distiller to let"
-	line "us make do during"
-	cont "the drought,"
+	para "When we could've"
+	line "used <RIVAL>'s"
+	para "invention to man-"
+	line "age the forest's"
+	cont "decline,"
 	
-	para "I pushed him out."
-	line "I was scared of"
-	cont "change. But every"
-	
-	para "generation has"
-	line "its own challenge"
-	cont "to overcome."
-	
-	para "The greatest gift"
-	line "I could leave you"
-	cont "is adaptability."
-	
-	para "That's what our"
-	line "traditions are"
-	para "really about: "
-	line "reminding us that"
-	para "our ancestors"
-	line "persevered, and"
-	cont "we can, too."
-	
-	para "Show her that she"
-	line "is wrong!"
-	
-	para "I'll heal your"
-	line "#mon!"
+	para "I push him away."
+	line "I was scared. But"
+	para "I forgot that I"
+	line "was doing it for"
+	para "you. Show Adrinna"
+	line "that she's wrong!"
 	done
 	
 
 CradleAdrinnaText3: 
-	text "Adrinna: Come at"
-	line "me, see if you"
-	line "can defeat the"
-	
-	para "strongest team"
-	line "I've assembled!"
+	text_high
+    text " Adrinna: " 
+	next
+	text_start
+	text "Come at me! I'm"
+	line "stronger than"
+	cont "ever!"
 	done
 	
 CradleAdrinnaText4:
-	text "Adrinna: So you"
-	line "are tough."
+	text "So you are tough."
 	done
 	
 CradleAdrinnaText5:
-	text "Adrinna: This"
-	line "changes nothing."
+	text_high
+    text " Adrinna: " 
+	next
+	text_start
+	text "This changes"
+	line "nothing."
 	
-	para "Emperor Mejimi"
-	line "has no idea what's"
-	para "coming at his co-"
-	line "ronation at the"
-	cont "Brass Tower."
-	
-	para "Think about my"
-	line "offer, <PLAYER>." 
+	para "The Emperor has"
+	line "no idea what's"
+
+	para "coming at his"
+	line "coronation."
+
+	para "Goodbye, for now."  
 	done
 	
 CradleKurtText2:
-	text "Kurt: <PLAYER>,"
-	line "what was that?"
-
-	para "The Brass Tower?"
-	line "Amos told me to"
-	para "regroup south of"
-	line "the capital."
+	text_high
+    text " Kurt: " 
+	next
+	text_start
+	text "<PLAYER>, what was"
+	line "that about?"
 	
-	para "I'll take us"
-	line "there now..."
+	para "Amos says he'll"
+	line "regroup south"
+	para "of the capital."
+	line "Let's head there."
 	done

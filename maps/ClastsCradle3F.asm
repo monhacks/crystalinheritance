@@ -13,17 +13,13 @@ ClastsCradle3F_MapScriptHeader:
 	def_coord_events
 
 
-
 	def_bg_events
 
 
-
 	def_object_events
-	; AMOS heals you 
 	object_event 3, 3, SPRITE_AMOS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AmosScriptCC, EVENT_BEAT_ADRINNA_MINE
-	pokemon_event  4, 3, GALLADE, -1, -1, PAL_NPC_BLUE, GalladeText, -1
+	pokemon_event  4, 3, GALLADE, -1, -1, PAL_NPC_BLUE, GalladeText, EVENT_BEAT_ADRINNA_MINE
 
-	object_const_def
 
 GalladeText:
 	text "Galloo!"
@@ -50,27 +46,23 @@ AmosScriptCC:
 
 
 AmosCradleText1:
-	text "<PLAYER>, the"
-	line "ninjas from the"
-	cont "hideout will hold"
-	para "Adrinna's troops"
-	line "back. Kurt is in"
+	text "<PLAYER>, Kurt is in"
 	cont "the mine already."
 	
-	para "We need to get to"
-	line "Adrinna before he"
-	para "can reach Mount"
-	line "Mortar's heart,"
-	
-	para "or he may be able"
-	line "to capture an in-"
-	cont "credibly strong"
+	para "Adrinna is after"
+	line "a powerful"
 	cont "#mon."
+
+	para "The brigaders"
+	line "think there's"
+	para "nothing that can"
+	line "withstand it."
 	done
+
 	
 AmosHealsText:
 	text "I'm sorry that I"
-	line "doubted you,"
+	line "doubted you"
 	cont "earlier."
 	
 	para "Let me heal your"

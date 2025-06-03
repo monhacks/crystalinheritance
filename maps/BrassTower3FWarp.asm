@@ -37,6 +37,10 @@ BrassTowerKensey:
 
 
 .SeenText:
+	text_high
+    text " Kensey: " 
+	next
+	text_start
 	text "Egad! How did the"
 	line "winds of fate"
 	cont "bring YOU here?"
@@ -44,18 +48,14 @@ BrassTowerKensey:
 	para "Were my traps not"
 	line "confusing enough?"
 	
-	para "You and your gra-"
-	line "ndfather are mis-"
-	cont "guided."
-	
 	para "The flywheel of"
 	line "progress will"
 	cont "lift all boats!"
 	
 	para "I'll guide it."
-	line "A new age awaits." 
 	cont "It's inevitable!"
 	done
+
 
 .BeatenText:
 	text "How? How could"
@@ -63,10 +63,15 @@ BrassTowerKensey:
 	done
 
 .AfterText:
+	text_high
+    text " Kensey: " 
+	next
+	text_start
 	text "I have no more"
-	line "designs to stop"
-	para "you. But the arc"
+	line "ways to stop"
+	para "you. The arc"
 	line "of the universe"
-	cont "will arrest you"
-	cont "soon enough."
+	para "will arrest you"
+	line "soon enough."
 	done
+

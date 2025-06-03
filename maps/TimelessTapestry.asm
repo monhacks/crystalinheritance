@@ -89,6 +89,10 @@ TapestrySceneFinale: ; if you helped all the kimono girls then piper gets to com
 	end
 
 TapestryTextAmos:
+	text_high
+    text " Amos: " 
+	next
+	text_start
 	text "The other elders"
 	line "agree. We'll meet"
 	
@@ -106,8 +110,13 @@ TapestryTextAmos:
 	para "What will you "
 	cont "inscribe here?"
 	done
+
 	
 TapestryTextSamsara:
+	text_high
+    text " Vespera: " 
+	next
+	text_start
 	text "The events of the"
 	line "Burned Tower."
 	
@@ -115,18 +124,20 @@ TapestryTextSamsara:
 	line "rejected the idea"
 	
 	para "that anyone could"
-	line "own tomorrow,"
+	line "own tomorrow."
 		
-	para "that each genera-"
-	line "tion is just a"
-	cont "caretaker."
+	para "A time when we"
+	line "affirmed that"
+	para "each generation"
+	line "borrows from"
+	cont "the future."
 	
 	para "Johto should know"
 	line "about the ones"
-	para "who sacrificed it"
-	line "all for them."
+	para "whose lives were"
+	line "given to making a"
+	cont "better future."
 	done
-
 
 TapestryVera:
 	text "Vera: Finally, I"
@@ -163,15 +174,12 @@ TapestryPiper:
 SummonCelebiText:
 	text "Piper: My great-"
 	line "grandma taught me"
-	cont "how to summon"
+	para "how to summon"
+	line "Celebi."
 	
-	para "Celebi. Amos told"
-	line "me you are a very"
-	cont "strong trainer-"
-	
-	para "Shall we summon"
-	line "Celebi?"
+	para "Shall we proceed?"
 	done
+
 
 PiperNoCatchCelebiText:
 	text "Oh, you didn't"
@@ -182,6 +190,7 @@ PiperNoCatchCelebiText:
 	cont "in all of you!"
 	done
 
+
 NoCelebiText:
 	text "Oh, I understand."
 	done
@@ -191,15 +200,12 @@ PiperCaughtCelebiText:
 	line "Celebi! I knew"
 	cont "you could."
 	done
+
 	
 PiperAfterText:
-	text "Piper: These Kim-"
-	line "onos... Their "
-	cont "threads tell a"
-	cont "story."
-
-	para "I'm ready for the"
-	line "responsibility."
+	text "This Kimono feels"
+	line "heavy. Each fiber"
+	cont "is a story."
 	done
 	
 TapestryMorphea:
