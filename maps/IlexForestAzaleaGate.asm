@@ -18,9 +18,6 @@ IlexForestAzaleaGate_MapScriptHeader:
 	object_event  1,  6, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, jumptextfaceplayer, IlexForestAzaleaGateGrannyScript, -1 ; GIVE false swipe
 	object_event  8,  3, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ProfOaksAide1Script, -1
 
-	object_const_def
-	const ILEXFORESTGATE_OFFICER
-	const ILEXFORESTGATE_GRANNY
 
 ProfOaksAide1Script:
 	faceplayer

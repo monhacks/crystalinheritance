@@ -31,18 +31,19 @@ WesternCapital_MapScriptHeader: ; todo the NPCs need to say something dependin g
 
 	def_object_events
 ; cutsceners
-	object_event 11, 21, SPRITE_MEJIMI, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_PROLOGUE_MEJIMI
-	object_event  9, 23, SPRITE_ADRINNA, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_PROLOGUE_ADRINNA 
+	object_event 11, 21, SPRITE_MEJIMI, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PURPLE, 	OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_PROLOGUE_MEJIMI
+	object_event  9, 23, SPRITE_ADRINNA, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, 				OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_PROLOGUE_ADRINNA 
 	pokemon_event  10, 19, LUGIA, -1, -1, PAL_NPC_BLUE, WC_pkmn_text, EVENT_PROLOGUE_MEJIMI ; by tammy  ;;;; 
 	pokemon_event  12, 19, HO_OH, -1, -1, PAL_NPC_RED, WC_pkmn_text, EVENT_PROLOGUE_MEJIMI ; by tammy  ;;;; 
 ; civilians
-	object_event 16, 16, SPRITE_FISHER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, WesternCapitalNPC1Text, EVENT_WESTERN_CAPITAL_CIVILIAN ; done
-	object_event 26, 27, SPRITE_FISHER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, WesternCapitalHisuiText1, EVENT_BEAT_ADRINNA_MINE ; done
-	object_event 28, 19, SPRITE_BEAUTY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, WesternCapitalNPC2Text, EVENT_WESTERN_CAPITAL_CIVILIAN ; done
-	object_event 16, 21, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, WesternCapitalNPC3Text, EVENT_WESTERN_CAPITAL_CIVILIAN ; done
-	object_event 18, 26, SPRITE_SAGE, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, WesternCapitalNPC4Text, EVENT_WESTERN_CAPITAL_CIVILIAN ; done
-	object_event 9, 17, SPRITE_GRANNY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, WesternCapitalNPC5Text, EVENT_WESTERN_CAPITAL_CIVILIAN ; done
-	object_event 5, 6, SPRITE_BRIGADER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, WCBrigaderText, EVENT_WESTERN_CAPITAL_CIVILIAN ; done
+	object_event 16, 16, SPRITE_FISHER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, 	OBJECTTYPE_SCRIPT, 0, WesternCapitalNPC1Text, EVENT_WESTERN_CAPITAL_CIVILIAN
+	object_event 26, 27, SPRITE_FISHER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, 	OBJECTTYPE_SCRIPT, 0, WesternCapitalHisuiText1, EVENT_BEAT_ADRINNA_MINE
+	object_event 28, 19, SPRITE_BEAUTY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, 	OBJECTTYPE_SCRIPT, 0, WesternCapitalNPC2Text, EVENT_WESTERN_CAPITAL_CIVILIAN 
+	object_event 16, 21, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, 		OBJECTTYPE_SCRIPT, 0, WesternCapitalNPC3Text, EVENT_WESTERN_CAPITAL_CIVILIAN 
+	object_event 18, 26, SPRITE_SAGE, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, 	OBJECTTYPE_SCRIPT, 0, WesternCapitalNPC4Text, EVENT_WESTERN_CAPITAL_CIVILIAN 
+	object_event 9, 17, SPRITE_GRANNY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, 	OBJECTTYPE_SCRIPT, 0, WesternCapitalNPC5Text, EVENT_WESTERN_CAPITAL_CIVILIAN 
+	object_event 5, 6, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, WCBrigaderText, -1
+
 	fruittree_event 6, 5, FRUITTREE_WESTERN_CAPITAL, FIXED_CHARGE, PAL_NPC_RED
 
 
@@ -51,7 +52,7 @@ WesternCapital_MapScriptHeader: ; todo the NPCs need to say something dependin g
 	const WESTERN_CAPITAL_ADRINNA
 
 
-WesternCapitalCemeteryScene: ; SOME OF THIS C.F. MRPOKEMONSHOUSE.ASM IN POLISHED 
+WesternCapitalCemeteryScene:
 	special Special_FadeBlackQuickly
 	special Special_ReloadSpritesNoPalettes
 	disappear PLAYER
@@ -281,8 +282,8 @@ WesternCapitalNPC3Text:
 	jumpthistext
 	text "The metal in our"
 	line "towers lets them"
-	cont "stand taller than"
-	cont "others in Johto."
+	para "stand taller than"
+	line "others in Johto."
 	done
 
 WesternCapitalNPC3Text_2:
@@ -299,17 +300,12 @@ WesternCapitalNPC4Text:
 	jumpthistext
 	text "The outsiders at"
 	line "Trader's Landing"
-	cont "claim to have"
-	para "towers even taller"
+	para "claim to have"
+	line "towers even taller"
 	cont "than these!"
 	done
 
 WesternCapitalNPC4Text_2:
-	faceplayer
-	checkevent EVENT_BEAT_ADRINNA_MINE
-	iftrue_jumptext WesternCapitalNPC4Text_2
-
-	jumpthistext
 	text "Something weird"
 	line "is going on."
 	

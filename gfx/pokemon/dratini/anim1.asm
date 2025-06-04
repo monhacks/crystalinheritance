@@ -6,5 +6,4 @@
 	frame 6, 10
 	frame 7, 10
 	frame 8, 10
-	frame 9, 10
 	endanim

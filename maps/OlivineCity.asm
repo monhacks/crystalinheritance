@@ -32,68 +32,102 @@ OlivineCity_MapScriptHeader:
 	bg_event 49, 29, BGEVENT_ITEM + SOFT_SAND, EVENT_OLIVINE_CITY_HIDDEN_SOFT_SAND
 
 	def_object_events
-	object_event 20,  8, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineCityYoungster1Text, -1
-	object_event 26, 22, SPRITE_SAILOR, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 2, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineCitySailor1Text, -1
-	object_event 11, 23, SPRITE_POKEFAN_F, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 2, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineCityPokefanFText, -1
-	object_event 23, 17, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineCitySchoolBoyText, -1
-	object_event 23, 17, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineCityPokefanMText, -1
+    object_event 19, 20, SPRITE_POKEFAN_F, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OlivineCityPnkApricornScript, -1
+
+	object_event 20,  8, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, 	OBJECTTYPE_SCRIPT, 0, OlivineCityYoungster1Script, -1 ; todo 
+	object_event 26, 22, SPRITE_SAILOR, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 2, -1, -1, 0, 				OBJECTTYPE_SCRIPT, 0, OlivineCitySailor1Script, -1 ; todo 
+	object_event 23, 17, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 0, -1, -1, 0, 			OBJECTTYPE_SCRIPT, 0, OlivineCitySchoolBoyScript, -1 ; todo 
+	object_event 23, 17, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 0, -1, -1, 0, 			OBJECTTYPE_SCRIPT, 0, OlivineCityPokefanMScript, -1 ; todo 
+
+	object_event 18, 17, SPRITE_PHARMACIST, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 0, -1, -1, 0, 			OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineCityRefugeeText, -1
+	object_event 11, 23, SPRITE_POKEFAN_F, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 2, -1, -1, 0, 			OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineCityPokefanFText, -1 
+;roadblocks, their text is in route 40 
+	object_event -1, 19, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText, EVENT_BEAT_CHUCK
+	object_event -1, 18, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText, EVENT_BEAT_CHUCK
+	object_event 19, 0, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText, EVENT_BEAT_CHUCK 
+	object_event 20, 0, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText, EVENT_BEAT_CHUCK
+	; 
+	tmhmball_event 8, 3, TM_VOLT_SWITCH, EVENT_TM_VOLT_SWITCH
 	smashrock_event 52, 23
 	smashrock_event 55, 26
-    object_event 19, 20, SPRITE_POKEFAN_F, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OlivineCityPnkApricornScript, -1
-	object_event 18, 17, SPRITE_PHARMACIST, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineCityRefugeeText, -1
-;roadblocks, their text is in route 40 
-	object_event -1, 19, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText, EVENT_BEAT_CHUCK ; redo text and heal you 
-	object_event -1, 18, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText, EVENT_BEAT_CHUCK ; redo text and heal you 
-	object_event 19, 0, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText, EVENT_BEAT_CHUCK ; redo text and heal you 
-	object_event 20, 0, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText, EVENT_BEAT_CHUCK ; redo text and heal you 
-	tmhmball_event 8, 3, TM_VOLT_SWITCH, EVENT_TM_VOLT_SWITCH
-	
-
-	object_const_def
 
 
 OlivineCityFlyPoint:
 	setflag ENGINE_FLYPOINT_OLIVINE
 	endcallback
 
-OlivineCityYoungster1Text:
-	text "Super Slowking"
+OlivineCityYoungster1Script:
+	faceplayer
+	checkevent EVENT_BEAT_CHUCK
+	iftrue_jumptext OlivineCityYoungsterText2
+
+	jumpthistext
+	
+	text "OMLAS Slowking"
 	line "keeps us safe!"
 	done
 
-OlivineCitySailor1Text:
+OlivineCityYoungsterText2:
+	text "todo"
+	done
+
+OlivineCitySailor1Script:
+	faceplayer
+	checkevent EVENT_BEAT_CHUCK
+	iftrue_jumptext OlivineCitySailorText2
+
+	jumpthistext
 	text "The lighthouse"
 	line "was a natural"
 	para "place to put"
 	line "the OMLAS."
 	done
 
+OlivineCitySailorText2:
+	text "todo"
+	done
+
 OlivineCityPokefanFText:
 	text "The Desal plant"
 	line "has briny runoff,"
 	
-	para "so the only place"
-	line "to get good fish"
-	para "is at the"
-	line "Fish Market."
+	para "so I only get my"
+	line "fish from the"
+	cont "market."
 	done
 
-OlivineCitySchoolBoyText:
-	text "I'm using the Su-"
-	line "per Slowking to"
-	cont "write a perfect"
-	cont "essay."
+OlivineCitySchoolBoyScript: ; optimistic about omlas 
+	faceplayer
+	checkevent EVENT_BEAT_CHUCK
+	iftrue_jumptext OlivineCitySchoolBoyText2
+
+	jumpthistext
+	
+	text "todo"
 	done
 
-OlivineCityPokefanMText:
-	text "I have to worry"
-	line "what the future"
-	para "holds. If Super"
-	line "Slowking can do"
-	cont "what I do faster"
-	para "and cheaper, then"
-	line "why do anything"
-	cont "at all?"
+OlivineCitySchoolBoyText2:
+	text "todo"
+	done
+
+
+OlivineCityPokefanMScript: ; pessimistic about omlas 
+	faceplayer
+	checkevent EVENT_BEAT_CHUCK
+	iftrue_jumptext OlivineCityPokefanMText2
+
+	jumpthistext
+	
+	text "todo"
+	done
+
+OlivineCityPokefanMText2:
+	text "If OMLAS Slowking"
+	line "can do my job"
+	para "faster and cheap-"
+	line "er than me,"
+	para "why do anything"
+	line "at all?"
 	done
 
 OlivineCitySignText:

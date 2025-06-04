@@ -272,6 +272,7 @@ AzaleaTownSlowpokeScript:
 		line "water, just some"
 		cont "dusty leaves."
 		done
+	waitbutton
 	endtext
 
 Text_WaitPlayer:

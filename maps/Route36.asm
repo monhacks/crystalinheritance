@@ -91,9 +91,9 @@ GenericTrainerSchoolboyRoute36:
 GenericTrainerFirebreatherRoute36:
 	generictrainer FIREBREATHER, BURT, EVENT_BEAT_FIREBREATHER_BURT, Route36FirebreatherSeenText, Route36FirebreatherBeatenText
 
-	text "You can make anti-"
+	text "I make my anti-"
 	line "dotes from poison"
-	cont "type #mon."
+	cont "#mon."
 	para "It's a great exam-"
 	line "ple of Yin and"
 	cont "Yang."
@@ -117,8 +117,8 @@ Route36KurtText:
 	text "<PLAYER>: Drat!"
 	line "The route is "
 	para "blocked."
-	para "We have to find"
-	line "another way."
+	line "We have to find"
+	cont "another way."
 	
 	para "I know some folks"
 	line "in the city that"
@@ -157,10 +157,10 @@ Route36BronzongScript:
 Route36MatronAskHealText:
 	text "You look tired"
 	line "from playing at"
-	cont "the National Park."
-	para "Would you like me"
-	line "to heal your"
-	cont "#mon?"
+	para "the National Park."
+	line "Would you like me"
+	para "to heal your"
+	line "#mon?"
 	done
 
 Route36MatronHealText:
@@ -223,8 +223,8 @@ Route36PicnickerBeatenText:
 	
 	para "I hope Roland"
 	line "doesn't get"
-	cont "confused and"
-	cont "go back home."
+	para "confused and"
+	line "go back home."
 	done
 
 ArthurScript:
@@ -260,28 +260,25 @@ MeetArthurText:
 	done
 
 ArthurGivesGiftText:
-	text "Here. You can have"
-	line "this."
+	text "Take this if you"
+	line "are exploring"
+	para "the Ruins. You"
+	line "don't want to be"
+	para "buried under"
+	line "the tombs!"
 	done
 
 ArthurGaveGiftText:
 	text "Arthur: That"
 	line "technique may"
-	cont "make the foe"
-	cont "flinch."
-	
-	para "It's a powerful"
-	line "move against"
-	cont "flying type"
-	cont "#mon."
+	para "make the foe"
+	line "flinch."
 	done
 
 ArthurThursdayText:
 	text "Arthur: I'm Arthur"
 	line "of Thursday."
-
 	done
-
 
 Route36SignText:
 	text "Route 36"
@@ -298,15 +295,6 @@ Route36TrainerTips1Text:
 	para "#mon stats"
 	line "vary--even within"
 	cont "the same species."
-
-	para "Their stats may be"
-	line "similar at first."
-
-	para "However, differ-"
-	line "ences will become"
-
-	para "pronounced as the"
-	line "#mon grow."
 	done
 
 Route36TrainerTips2Text:
@@ -315,12 +303,6 @@ Route36TrainerTips2Text:
 	para "Use Dig to return"
 	line "to the entrance of"
 	cont "any place."
-
-	para "It is convenient"
-	line "for exploring"
-
-	para "caves and other"
-	line "landmarks."
 	done
 
 
@@ -355,8 +337,8 @@ YesTimeTravelTextRoute36:
 VioletImmigrantTextRoute36:
 	text "Entrance into"
 	line "Violet City is"
-	cont "limited due to"
-	cont "the drought."
+	para "limited due to"
+	line "the drought."
 	done
 
 ROUTE36_SeismicTossMT:
@@ -403,26 +385,27 @@ Text_SeismicTossIntro:
 	
 	para "It means no wo-"
 	line "rries for the"
-	cont "defense of your"
-	cont "foes,"
+	para "defense of your"
+	line "foes,"
 	
 	para "It's a defense-"
 	line "proof, "
 	para "Move I'll teach"
 	line "to you,"
 	
-	para "Seismic-Tossa!"
+	para "Seismica-Tossa!"
 	done
 	
 Text_ROUTE36_TutorSeismicToss:
 	text "Seismic Toss. "
 	line "If you're worried"
-	cont "about your foe's"
-	cont "defenses,"
+	para "about your foe's"
+	line "defenses,"
 	
 	para "This move will"
 	line "strike right"
 	cont "through them!"
+	done
 	
 Text_ROUTE36_TutorQuestion:
 	text "I'll tutor you,"
@@ -442,8 +425,8 @@ Text_ROUTE36_TutorRefused:
 Text_ROUTE36_TutorTaught:
 	text "It means no wo-"
 	line "rries for the"
-	cont "defense of your"
-	cont "foes,"
+	para "defense of your"
+	line "foes,"
 	
 	para "It's a defense-"
 	line "proof, "

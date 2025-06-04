@@ -33,10 +33,9 @@ SlowpokeWellFishingGuruScript:
 	end
 
 .IntroText:
-	text "I came to fish"
-	line "for magikarp,"
-	para "but the well"
-	line "is too dry."
+	text "I came to fish,"
+	line "but the well"
+	cont "is too dry."
 	
 	para "Looks like my"
 	line "fishing days"

@@ -133,8 +133,8 @@ AzaleaPokeCenter1FPokefanScript:
 MintLeafGiftText: 
 	text "A new trainer!"
 	line "When I was your"
-	line "age, I traveled"
-	cont "light."
+	para "age, I traveled"
+	line "light."
 	
 	para "I chewed on these"
 	line "instead of using"
@@ -148,8 +148,8 @@ GiveMintLeafText: ;;
 	
 	para "Share it with"
 	line "someone who"
-	cont "wants to freshen"
-	cont "their breath."
+	para "wants to freshen"
+	line "their breath."
 	
 	para "Just come back if"
 	line "you ever lose it."
@@ -158,9 +158,11 @@ GiveMintLeafText: ;;
 IlexExcelsiorV4Script:
 	opentext
 	writetext WeirdTextAzaleaCenter
+	waitbutton
 	closetext
 	unowntypeface
 	showtext IlexExcelsiorV4Text
+	waitbutton
 	restoretypeface
 	special MapCallbackSprites_LoadUsedSpritesGFX
 	end
@@ -174,7 +176,7 @@ IlexExcelsiorV4Text:
 	text "Ilex Excelsior"
 	
 	para "When the tree"
-	line "rings, will"
+	line "rings will"
 	cont "you answer"
 	
 	para "Fourth Edition"

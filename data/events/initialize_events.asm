@@ -50,6 +50,7 @@ InitialEvents:
 	dw EVENT_KURTS_HOUSE_BOOK_6
 	dw EVENT_WHITNEY_GYM
 	dw EVENT_JASMINE_GYM
+	dw EVENT_LANDING_KURT_2
 	dw -1
 
 InitialEngineFlags:

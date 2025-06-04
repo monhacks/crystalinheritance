@@ -1,11 +1,10 @@
-	frame 1, 10
-	frame 2, 10
-	frame 3, 10
-	frame 4, 10
-	frame 5, 10
-	frame 6, 10
-	frame 7, 10
-	frame 8, 10
-	frame 9, 10
+	frame 0, 15
+	frame 1, 15
+	frame 2, 15
+	frame 3, 15
+	frame 4, 15
+	frame 5, 15
+	frame 6, 15
+	frame 7, 15
+	frame 8, 15
 	endanim
-; 0xd0b35

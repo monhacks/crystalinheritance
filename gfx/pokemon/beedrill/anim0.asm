@@ -7,14 +7,12 @@
 	frame 7, 10
 	frame 8, 10
 	frame 9, 10
-	frame 10, 10
-	frame 11, 10
-	frame 10, 10
-	frame 11, 10
-	frame 12, 10
-	frame 13, 10	
-	frame 14, 10
-	frame 15, 10	
-	frame 16, 10
-	frame 17, 10
+;	frame 10, 10
+;	frame 11, 10
+;	frame 12, 10
+;	frame 13, 10	
+;	frame 14, 10
+;	frame 15, 10	
+;	frame 16, 10
+;	frame 17, 10
 	endanim

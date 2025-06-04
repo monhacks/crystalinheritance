@@ -16,8 +16,8 @@ KurtsHouse_MapScriptHeader:
 	bg_event  8,  0, BGEVENT_JUMPTEXT, KurtsHouseOakPhotoText
 	bg_event  9,  0, BGEVENT_JUMPTEXT, KurtsHouseOakPhotoText
 	bg_event  5,  1, BGEVENT_READ, PokemonJournalProfWestwoodScript
-	bg_event  2,  1, BGEVENT_READ, PokemonJournalProfWestwoodScript
-	bg_event  3,  1, BGEVENT_READ, PokemonJournalProfWestwoodScript
+;	bg_event  2,  1, BGEVENT_READ, PokemonJournalProfWestwoodScript
+;	bg_event  3,  1, BGEVENT_READ, PokemonJournalProfWestwoodScript
 	bg_event 14,  2, BGEVENT_READ, ApricornBenchScript
 	bg_event  4,  1, BGEVENT_JUMPTEXT, KurtsHouseCelebiStatueText
 
@@ -27,12 +27,12 @@ KurtsHouse_MapScriptHeader:
 	object_event  8,  4, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, FiddlerBookScript, -1	
 	pokemon_event  14,  4, SHUCKLE, -1, -1, PAL_NPC_RED, KurtsHouseShuckleText, -1
 ; kurt's books 
-	object_event  0,  1, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, KurtsJournal1Script, -1; EVENT_KURTS_HOUSE_BOOK_1 ; INITIALLY SET  
-	object_event  0,  2, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, KurtsJournal2Script, -1; EVENT_KURTS_HOUSE_BOOK_2 ; INITIALLY SET  
-	object_event  0,  3, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, KurtsJournal3Script, -1; EVENT_KURTS_HOUSE_BOOK_3 ; INITIALLY SET  
-	object_event  0,  4, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, KurtsJournal4Script, -1; EVENT_KURTS_HOUSE_BOOK_4 ; INITIALLY SET  
-	object_event 12,  3, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, KurtsJournal5Script, -1; EVENT_KURTS_HOUSE_BOOK_5 ; INITIALLY SET  
-	object_event 12,  4, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, KurtsJournal6Script, -1; EVENT_KURTS_HOUSE_BOOK_6 ; INITIALLY SET  	
+	object_event  0,  1, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, KurtsJournal1Script, EVENT_KURTS_HOUSE_BOOK_1 ; INITIALLY SET  
+	object_event  0,  2, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, KurtsJournal2Script, EVENT_KURTS_HOUSE_BOOK_2 ; INITIALLY SET  
+	object_event  0,  3, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, KurtsJournal3Script, EVENT_KURTS_HOUSE_BOOK_3 ; INITIALLY SET  
+	object_event  0,  4, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, KurtsJournal4Script, EVENT_KURTS_HOUSE_BOOK_4 ; INITIALLY SET  
+	object_event 12,  3, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, KurtsJournal5Script, EVENT_KURTS_HOUSE_BOOK_5 ; INITIALLY SET  
+	object_event 12,  4, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, KurtsJournal6Script, EVENT_KURTS_HOUSE_BOOK_6 ; INITIALLY SET  	
 	
 	object_const_def
 	const KURTSHOUSE_KURT
@@ -254,146 +254,6 @@ KurtsHouseCelebiStatueText:
 	cont "tector."
 	done
 
-DebugRadio:
-	opentext
-	setflag ENGINE_POKEGEAR
-	setflag ENGINE_PHONE_CARD
-	setflag ENGINE_MAP_CARD
-	setflag ENGINE_RADIO_CARD
-	setflag ENGINE_EXPN_CARD
-	; pokedex
-	setflag ENGINE_POKEDEX
-	; all key items
-for x, NUM_KEY_ITEMS
-if x != MACHINE_PART
-	givekeyitem x
-endc
-endr
-	; all tms+hms
-for x, NUM_TMS + NUM_HMS
-	givetmhm x
-endr
-	; useful items
-for x, POKE_BALL, CHERISH_BALL + 1
-if x != PARK_BALL && x != SAFARI_BALL
-	giveitem x, 99
-endc
-endr
-	giveitem MAX_POTION, 99
-	giveitem FULL_RESTORE, 99
-	giveitem MAX_REVIVE, 99
-	giveitem MAX_ELIXIR, 99
-	giveitem HP_UP, 99
-	giveitem PROTEIN, 99
-	giveitem IRON, 99
-	giveitem CARBOS, 99
-	giveitem CALCIUM, 99
-	giveitem ZINC, 99
-	giveitem RARE_CANDY, 99
-	giveitem PP_UP, 99
-	giveitem PP_MAX, 99
-	giveitem SACRED_ASH, 99
-	giveitem MAX_REPEL, 99
-	giveitem MAX_REPEL, 99
-	giveitem ESCAPE_ROPE, 99
-	giveitem ABILITY_CAP, 99
-	giveitem LEAF_STONE, 99
-	giveitem FIRE_STONE, 99
-	giveitem WATER_STONE, 99
-	giveitem THUNDERSTONE, 99
-	giveitem MOON_STONE, 99
-	giveitem SUN_STONE, 99
-	giveitem DUSK_STONE, 99
-	giveitem DAWN_STONE, 99
-	giveitem SHINY_STONE, 99
-	giveitem EXP_SHARE, 99
-	giveitem LEFTOVERS, 99
-	giveitem BIG_NUGGET, 99
-	giveitem SILVER_LEAF, 99
-	; max money
-	givemoney $0, 1000000
-	givemoney $0, 1000000
-	givemoney $0, 1000000
-	givemoney $0, 1000000
-	givemoney $0, 1000000
-	givemoney $0, 1000000
-	givemoney $0, 1000000
-	givemoney $0, 1000000
-	givemoney $0, 1000000
-	givemoney $0, 999999
-	givecoins 50000
-	; all badges
-	setflag ENGINE_ZEPHYRBADGE
-	setflag ENGINE_HIVEBADGE
-	setflag ENGINE_PLAINBADGE
-	setflag ENGINE_FOGBADGE
-	setflag ENGINE_STORMBADGE
-	setflag ENGINE_MINERALBADGE
-	setflag ENGINE_GLACIERBADGE
-	setflag ENGINE_RISINGBADGE
-	setflag ENGINE_BOULDERBADGE
-	setflag ENGINE_CASCADEBADGE
-	setflag ENGINE_THUNDERBADGE
-	setflag ENGINE_RAINBOWBADGE
-	setflag ENGINE_MARSHBADGE
-	setflag ENGINE_SOULBADGE
-	setflag ENGINE_VOLCANOBADGE
-	setflag ENGINE_EARTHBADGE
-	setevent EVENT_BEAT_FALKNER
-	setevent EVENT_BEAT_BUGSY
-	setevent EVENT_BEAT_WHITNEY
-	setevent EVENT_BEAT_MORTY_GYM
-	setevent EVENT_BEAT_CHUCK
-	setevent EVENT_BEAT_JASMINE
-	setevent EVENT_BEAT_PRYCE
-	setevent EVENT_BEAT_CLAIR
-	; fly anywhere
-	setflag ENGINE_FLYPOINT_VIOLET
-	setflag ENGINE_FLYPOINT_UNION_CAVE
-	setflag ENGINE_FLYPOINT_AZALEA
-	setflag ENGINE_FLYPOINT_GOLDENROD
-	setflag ENGINE_FLYPOINT_ECRUTEAK
-	setflag ENGINE_FLYPOINT_OLIVINE
-	setflag ENGINE_FLYPOINT_CIANWOOD
-	setflag ENGINE_FLYPOINT_MAHOGANY
-	setflag ENGINE_FLYPOINT_LAKE_OF_RAGE
-	; post-e4
-	setflag ENGINE_HAVE_SHINY_CHARM
-	; party
-	givepoke SHUCKLE, NO_FORM, 25
-	; hm slaves
-;	givepoke DUSKNOIR, NO_FORM, 100, LEFTOVERS
-;	givepoke H__AVALUGG, NO_FORM, 100, LEFTOVERS	
-;	givepoke GABITE, NO_FORM, 100, LEFTOVERS
-;	givepoke BASCULEGION, NO_FORM, 100, LEFTOVERS
-;	givepoke H__BRAVIARY, NO_FORM, 100, LEFTOVERS
-;	givepoke KIRLIA, NO_FORM, 100, LEFTOVERS
-;	givepoke GARDEVOIR, NO_FORM, 100, LEFTOVERS
-;	givepoke GALLADE, NO_FORM, 100, LEFTOVERS
-;	givepoke H__SLIGGOO, NO_FORM, 100, LEFTOVERS
-;	givepoke H__GOODRA, NO_FORM, 100, LEFTOVERS
-;	givepoke H__ZOROARK, NO_FORM, 100, LEFTOVERS	
-;	givepoke HEATRAN, NO_FORM, 100, LEFTOVERS	
-;	loadmem wPartyMon2Moves+0, FLY
-;	loadmem wPartyMon2Moves+1, SURF
-;	loadmem wPartyMon2Moves+2, STRENGTH
-;	loadmem wPartyMon2Moves+3, MAGMA_STORM
-;	loadmem wPartyMon2PP+0, 15
-;	loadmem wPartyMon2PP+1, 15
-;	loadmem wPartyMon2PP+2, 15
-;	loadmem wPartyMon2PP+3, 30
-;	loadmem wPartyMon3Moves+0, FLASH
-;	loadmem wPartyMon3Moves+1, ROCK_SMASH
-;	loadmem wPartyMon3Moves+2, HEADBUTT
-;	loadmem wPartyMon3Moves+3, WATERFALL
-;	loadmem wPartyMon3PP+0, 20
-;	loadmem wPartyMon3PP+1, 15
-;	loadmem wPartyMon3PP+2, 15
-;	loadmem wPartyMon3PP+3, 15
-	; fill pokedex
-	callasm FillPokedex
-	closetext
-	end
 
 FillPokedex:
 	ld a, 1
@@ -646,7 +506,7 @@ KurtsJournal1Script:
 	
 ItsKurtsJournal1Text:
 	text "Kurt's Journal,"
-	line "marked #1."
+	line "marked number 1."
 	
 	para "Read it?"
 	done
@@ -698,7 +558,7 @@ KurtsJournal2Script:
 
 ItsKurtsJournal2Text:
 	text "Kurt's Journal,"
-	line "marked #2."
+	line "marked number 2."
 	
 	para "Read it?"
 	done
@@ -709,21 +569,21 @@ KurtsJournal2Text:
 	
 	para "The trip from"
 	line "Azalea was so"
-	line "long. He would"
-	cont "hold his apricorn"
-	cont "all the way, its"
-	cont "glow visible in"
+	para "long. He would"
+	line "hold his apricorn"
+	para "all the way, its"
+	line "glow visible in"
 	cont "his hands."
 	
 	para "At the haircut, "
 	line "Cyndaquil's flame"
-	cont "grew and shrank"
-	cont "in the mirror,"
+	para "grew and shrank"
+	line "in the mirror,"
 	
 	para "and your dad lau-"
 	line "ghed every time"
-	cont "the barber had to"
-	cont "work around it."
+	para "the barber had to"
+	line "work around it."
 	done
 
 
@@ -741,7 +601,7 @@ KurtsJournal3Script: ;earls academy
 
 ItsKurtsJournal3Text:
 	text "Kurt's Journal,"
-	line "marked #3."
+	line "marked number 3."
 	
 	para "Read it?"
 	done
@@ -772,8 +632,8 @@ KurtsJournal3Text:
 	para "At nights, I'd"
 	line "find him under"
 	para "the covers, the"
-	line "glow of his ap-"
-	para "ricorn giving"
+	line "glow of his"
+	para "apricorn giving"
 	line "him away."
 	done
 
@@ -791,12 +651,12 @@ KurtsJournal4Script:
 
 ItsKurtsJournal4Text:
 	text "Kurt's Journal,"
-	line "marked #4."
+	line "marked number 4."
 	
 	para "Read it?"
 	done
 
-KurtsJournal4Text: ; cattle cull 39 
+KurtsJournal4Text:
 	text "I keep thinking"
 	line "about your dad's"
 	cont "Apricorn."
@@ -807,8 +667,8 @@ KurtsJournal4Text: ; cattle cull 39
 	
 	para "If you stop"
 	line "interacting, "
-	cont "the #mon"
-	cont "inside will go."
+	para "the #mon"
+	line "inside will go."
 	
 	para "So when your Dad"
 	line "went off to work"
@@ -832,7 +692,7 @@ KurtsJournal5Script:
 
 ItsKurtsJournal5Text:
 	text "Kurt's Journal,"
-	line "marked #5."
+	line "marked number 5."
 	
 	para "Read it?"
 	done
@@ -871,7 +731,7 @@ KurtsJournal6Script:
 
 ItsKurtsJournal6Text:
 	text "Kurt's Journal,"
-	line "marked #6."
+	line "marked number 6."
 	
 	para "Read it?"
 	done

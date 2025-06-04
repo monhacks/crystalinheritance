@@ -32,25 +32,26 @@ TradersLanding_MapScriptHeader:
 	bg_event 16, 18, BGEVENT_JUMPTEXT, TL_OpenForBusinessSign
 	bg_event 14, 6, BGEVENT_JUMPTEXT, TL_KenseysOfficeSign
 	bg_event 22, 12, BGEVENT_READ, TL_AmosWantedSign
-
 ;SHRINE
 
 
 
 	def_object_events
-
-	object_event 19, 5, SPRITE_BARBEAU, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LANDING_SCENE_1_BARBEAU ; ADD TO EVENTS
+	; scene 1
+	object_event 19, 5, SPRITE_BARBEAU, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LANDING_SCENE_1_BARBEAU
 	object_event 20, 5, SPRITE_KENSEY, 	SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LANDING_SCENE_1_KENSEY
 	object_event 18, 0, SPRITE_KURT, 	SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LANDING_SCENE_1_KURT
-	
-	object_event  5, 5, SPRITE_BARBEAU, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, LandingBarbeauScript, -1 ; ADD TO INITIALIZE EVENTS
-	object_event 5, 10, SPRITE_KURT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1 ; ADD TO INITIALIZE EVENTS
-
-	object_event 20, 25, SPRITE_BRIGADER, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, jumptextfaceplayer, TL_Brigader_Script, EVENT_BEAT_KENSEY_PORT
-	object_event 21, 25, SPRITE_BRIGADER, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, jumptextfaceplayer, TL_Brigader_Script, EVENT_BEAT_KENSEY_PORT
-
+	; scene 2
+	object_event  5, 5, SPRITE_BARBEAU, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, LandingBarbeauScript, -1 
+	object_event 5, 10, SPRITE_KURT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LANDING_KURT_2
+	; roadblock 
+	object_event 20, 25, SPRITE_BRIGADER, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, jumptextfaceplayer, TL_Brigader_Script, -1
+	object_event 21, 25, SPRITE_BRIGADER, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, jumptextfaceplayer, TL_Brigader_Script, -1
+	; NPCs
 	object_event 10, 19, SPRITE_FIREBREATHER, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LandingEggScript, EVENT_BEAT_KENSEY_PORT
-
+	; todos 
+	object_event  0,  0, SPRITE_NOMAD_M, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LandingNomadMScript, -1 ; todo 
+	object_event  0,  0, SPRITE_NOMAD_F, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LandingNomadFScript, -1 ; todo 
 
 	object_const_def
 	const TRADERS_LANDING_BARBEAU_1
@@ -371,7 +372,7 @@ TL_OpenForBusinessSign:
 	done
 
 TL_Brigader_Script:
-	checkevent EVENT_BEAT_KENSEY_PORT ; ADD TO EVENTS 
+	checkevent EVENT_BEAT_KENSEY_PORT
 	iftrue_jumptextfaceplayer TL_Brigader_AfterKenseyText
 	jumpthisopenedtext
 	
@@ -422,18 +423,15 @@ GivingHSliggooEggText:
 	
 	para "I gotta the egg"
 	line "smuggled outta"
-	cont "Hisui, like we"
-	cont "talked about."
-	
-	para "10k, like your"
-	line "side agreed?"
+	para "Hisui, like I"
+	line "told ya. 10k."
 	done
 	
 GotHSliggooEggText:
 	text "Now, I just need"
 	line "to escape back on"
-	cont "the Sailor's boat"
-	cont "and it's a big"
+	para "the Sailor's boat"
+	line "and it's a big"
 	cont "score."
 	
 	para "Hopefully it's"
@@ -443,6 +441,9 @@ GotHSliggooEggText:
 NoMoneyText:
 	text "Getting cheap on"
 	line "me now?"
+	
+	para "I won't be here"
+	line "forever."
 	done
 
 NoRoomText:
@@ -533,6 +534,35 @@ BarbeauLugiaText:
 	line "way to adapt"
 	cont "without her"
 	cont "presence."
+	done
+
+LandingNomadMScript:
+	faceplayer
+	checkevent EVENT_BEAT_KENSEY_PORT
+	iftrue_jumptext LandingNomadMTextAfter
+	jumpthistext
+	
+	text "todo"
+	done
+	
+
+LandingNomadMTextAfter:
+	text "todo"
+	done
+
+
+LandingNomadFScript:
+	faceplayer
+	checkevent EVENT_BEAT_KENSEY_PORT
+	iftrue_jumptext LandingNomadFTextAfter
+	jumpthistext
+	
+	text "todo"
+	done
+	
+
+LandingNomadFTextAfter:
+	text "todo"
 	done
 
 TL_AmosWantedSign:

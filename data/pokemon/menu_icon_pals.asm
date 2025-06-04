@@ -240,8 +240,8 @@ MenuMonIconColors:: ;TEAL, GREEN, RED, PINK, GRAY, BLUE, GREEN, BROWN, PURPLE,
 	iconpal GREEN, RED ; KIRLIA  ; e9
 	iconpal GREEN, RED ; GARDEVOIR   ; ea
 	iconpal GREEN, RED ;GALLADE    ; eb
-	iconpal BLUE, GRAY ; H__SLIGGOO  ; ec
-	iconpal BLUE, GRAY ; H__GOODRA     ; ed
+	iconpal RED, GRAY ; H__SLIGGOO  ; ec
+	iconpal RED, GRAY ; H__GOODRA     ; ed
 	iconpal PINK, GRAY ; H__ZOROARK ; ee
 	iconpal BLUE, PINK ; DRATINI
 	iconpal BLUE, RED ; DRAGONAIR
