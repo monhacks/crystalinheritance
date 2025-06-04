@@ -1,3 +1,4 @@
+	frame 0, 10	
 	frame 1, 10
 	frame 2, 10
 	frame 3, 10
@@ -9,6 +10,5 @@
 	frame 9, 10
 	frame 10, 10
 	frame 11, 10
-	frame 12, 10	
-	frame 13, 10		
+	frame 12, 10		
 	endanim

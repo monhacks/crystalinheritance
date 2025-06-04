@@ -35,13 +35,13 @@ GenericTrainerCamperIvan:
 	line "Azalean!"
 	para "I moved here to"
 	line "Goldenrod. It's"
-	cont "hard to be away"
-	cont "from my family,"
+	para "hard to be away"
+	line "from my family,"
 	cont "though."
 	done
 
 CamperIvanSeenText:
-	text "Oh cool, a fellow"
+	text "Oh hey, a fellow"
 	line "Azalean!"
 	done
 
@@ -55,12 +55,12 @@ GenericTrainerCooltrainerMNick:
 
 	text "It's not really a"
 	line "mystery why"
-	cont "Whitney got a"
-	cont "radio channel."
+	para "Whitney got a"
+	line "radio channel."
 	para "She claims to"
 	line "stick up for cute"
-	cont "#mon, but she's"
-	cont "just as menacing"
+	para "#mon, but she's"
+	line "just as menacing"
 	cont "as Petrel."
 	done
 
@@ -94,10 +94,10 @@ GenericTrainerPicnickerKim:
 
 	text "Now, I have to"
 	line "run back to the "
-	cont "#center"
-	cont "and it'll be too"
-	cont "late to make any"
-	cont "s'mores..."
+	para "#center"
+	line "and it'll be too"
+	para "late to make any"
+	line "s'mores..."
 	done
 
 RolandSeenText:
@@ -105,9 +105,8 @@ RolandSeenText:
 	line "you seen my"
 	cont "girlfriend Gina?"
 	
-	para "She promised me"
-	line "that we would do"
-	cont "s'mores tonight."
+	para "We're making"
+	line "s'mores tonight."
 	done
 
 RolandBeatenText:
@@ -125,8 +124,8 @@ GenericTrainerBreederTheresa:
 
 	text "I love reading"
 	line "about adventures"
-	cont "outside. I wish I"
-	cont "could go on an"
+	para "outside. I wish I"
+	line "could go on an"
 	cont "adventure."
 	done
 
@@ -145,8 +144,8 @@ GenericTrainerFirebreatherWalt:
 
 	text "Museum maps show"
 	line "there was a hot"
-	cont "spring here. It"
-	cont "must have dried up"
+	para "spring here. It"
+	line "must have dried"
 	cont "a long time ago."
 	done
 
@@ -166,8 +165,8 @@ TrainerJugglerIrwin:
 JugglerIrwinAfterBattleText:
 	text "They're saying"
 	line "that a new"
-	cont "technique is"
-	cont "going to bring"
+	para "technique is"
+	line "going to bring"
 	cont "rain."
 	done
 
@@ -186,7 +185,6 @@ JugglerIrwin1BeatenText:
 Route35SignText:
 	text "Route 35"
 	done
-	
 	
 ROUTE35_BodySlamMT:
 	faceplayer
@@ -219,8 +217,8 @@ Text_BodySlamIntro:
 		
 	para "Have you come"
 	line "to escape the"
-	cont "bustle of"
-	cont "Goldenrod?"
+	para "bustle of"
+	line "Goldenrod?"
 	
 	para "My technique will"
 	line "leave your mind"
@@ -255,13 +253,10 @@ Text_ROUTE35_TutorRefused:
 	line "fast!"
 	done
 
-
 Text_ROUTE35_TutorTaught:
 	text "There! Now you"
 	line "have the power"
 	para "to Body Slam"
 	line "your problems!"
 	done
-	
-	
 	

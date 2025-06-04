@@ -12,5 +12,4 @@
 	frame 11, 12
 	frame 12, 12
 	frame 13, 12
-	frame 14, 12
 	endanim

@@ -25,14 +25,14 @@ def extract_pokemon_names(file_path):
 file_path = 'data/pokemon/big_pic_pointers_png_092724.asm' # full list of 	dba	CyndaquilFrontpic, etc 
 
 # Extract Pokemon names
-pokemon_list = extract_pokemon_names(file_path)
+pokemon_names_list = extract_pokemon_names(file_path)
 
 # Print the list of Pokemon names
-for name in pokemon_list:
+for name in pokemon_names_list:
     print(name)
 
 # Print the total count of Pokemon
-print(f"\nTotal number of Pokemon: {len(pokemon_list)}")
+print(f"\nTotal number of Pokemon: {len(pokemon_names_list)}")
 
 
 
@@ -48,7 +48,7 @@ def read_pokemon_names(file_path):
             if line.strip().startswith('dba'):
                 name = line.split()[1].replace('Frontpic', '').lower()
                 pokemon_names.append(name)
-    return pokemon_names[:251]  # Return all 251 names
+    return pokemon_names[:-1]  # Return all names
 
 def read_pal_file(pokemon_name):
     pal_path = f"gfx/pokemon/{pokemon_name}/normal.pal"
@@ -129,7 +129,7 @@ def process_pokemon_image(pokemon_name, cell_size=56):
 def create_pokemon_grid(pokemon_names, grid_size=(12, 22), cell_size=56, border_width=2):
     grid_width = grid_size[0] * cell_size + (grid_size[0] + 1) * border_width
     grid_height = grid_size[1] * cell_size + (grid_size[1] + 1) * border_width
-    grid_img = Image.new('RGBA', (grid_width, grid_height), (0, 0, 0, 255))  # Black background
+    grid_img = Image.new('RGBA', (grid_width, grid_height), (255, 255, 255, 255))  # White background
     
     for i, name in enumerate(pokemon_names):
         try:
@@ -140,7 +140,9 @@ def create_pokemon_grid(pokemon_names, grid_size=(12, 22), cell_size=56, border_
             paste_y = row * (cell_size + border_width) + border_width
             
             grid_img.alpha_composite(pokemon_img, (paste_x, paste_y))
-            print(f"Processed {i+1}/251: {name}")
+            print(f"Processed {i+1}/{len(pokemon_names)}: {name}")
+
+
         except Exception as e:
             print(f"Error processing {name}: {str(e)}")
     
@@ -155,6 +157,6 @@ file_path = "data/pokemon/big_pic_pointers_png_092724.asm"
 pokemon_names = read_pokemon_names(file_path)
 
 if pokemon_names:
-    create_pokemon_grid(pokemon_names)
+    create_pokemon_grid(pokemon_names_list)
 else:
     print("No Pokemon names found in the list.")

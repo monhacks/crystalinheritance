@@ -1,3 +1,4 @@
+	frame 0, 10
 	frame 1, 10
 	frame 2, 10
 	frame 3, 10
@@ -14,6 +15,4 @@
 	frame 14, 10
 	frame 15, 10
 	frame 16, 10
-	frame 17, 10
 	endanim
-; 0xd0fa8

@@ -40,51 +40,39 @@ GoldenrodMuseum1FExhibit2:
 GoldenrodMuseum1FAttendantText:
     text "Enjoy your visit"
     line "to the museum,"
-    cont "brought to you"
-    cont "by Silph!"
+    para "brought to you"
+    line "by Silph!"
     done
 
 GoldenrodMuseum1FNPC1Text:
     text "I can't believe"
     line "that the national"
-    cont "park used to have"
-    cont "a stadium in it."
+    para "park used to have"
+    line "a stadium in it."
     done
 
 GoldenrodMuseum1FNPC2Text:
     text "I'm so proud that"
     line "the people of"
-    cont "Goldenrod united"
-    cont "against the"
+    para "Goldenrod united"
+    line "against the"
     cont "emperor!"
     done
 
 GoldenrodMuseum1FExhibit1Text:
     text "Archaeologists"
     line "have discovered"
-    cont "that there was"
-    cont "once a stadium in"
-    cont "the national"
-    cont "park."
-    para "Sadly, it was"
-    line "built above a hot"
-    cont "springs, and fell"
-    cont "into the mud in a"
-    cont "natural disaster."
+    para "that there was"
+    line "once a stadium in"
+    para "the National"
+    line "Park."
     done
 
 GoldenrodMuseum1FExhibit2Text:
     text "Artifacts from"
     line "Ecruteak began"
-    cont "appearing in"
-    cont "Goldenrod around"
+    para "appearing in"
+    line "Goldenrod around"
     cont "160 years ago."
-    para "Ecruteak had"
-    line "sought the upper"
-    cont "hand in negotia-"
-    cont "tions, but lost"
-    cont "it when the"
-    cont "Burned Tower was"
-    cont "struck by"
-    cont "lightning."
     done
+	

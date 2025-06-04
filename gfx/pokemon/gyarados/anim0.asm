@@ -8,8 +8,4 @@
 	frame 7, 12
 	frame 8, 12
 	frame 9, 12
-;	frame 10, 12
-;	frame 11, 12
-;	frame 12, 12
-;	frame 13, 12
 	endanim

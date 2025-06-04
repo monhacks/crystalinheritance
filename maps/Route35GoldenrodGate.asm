@@ -7,7 +7,7 @@ Route35GoldenrodGate_MapScriptHeader:
 	def_warp_events
 	warp_event  4,  0, ROUTE_35, 1
 	warp_event  5,  0, ROUTE_35, 2
-	warp_event  4,  7, GOLDENROD_CITY, 12
+	warp_event  4,  7, GOLDENROD_CITY, 12 ; check the warp numbers 
 	warp_event  5,  7, GOLDENROD_CITY, 12
 
 	def_coord_events
@@ -124,11 +124,10 @@ Route35GoldenrodGateRandyAskTakeThisMonToMyFriendText:
 	para "He's about to"
 	line "board on the"
 	cont "magnet train."
-
 	done
 
 Route35GoldenrodGateRandyThanksText:
-	text "You will? Perfect!"
+	text "You will? Great!"
 	line "Thanks, kid!"
 
 	para "My brother is"
@@ -140,13 +139,13 @@ Route35GoldenrodGateRandyThanksText:
 	
 	para "And, uh, don't"
 	line "tell anyone else"
-	cont "where you got"
-	cont "that mail, OK?"
+	para "where you got"
+	line "that mail, OK?"
 	done
 
 Route35GoldenrodGatePlayerReceivedAMonWithMailText:
 	text "<PLAYER> received"
-	line "#mon with Mail."
+	line "#mon and Mail."
 	done
 
 Route35GoldenrodGateRandyWeirdTreeBlockingRoadText:
@@ -159,8 +158,8 @@ Route35GoldenrodGateRandyWeirdTreeBlockingRoadText:
 	
 	para "And, uh, don't"
 	line "tell anyone else"
-	cont "where you got"
-	cont "that mail, OK?"
+	para "where you got"
+	line "that mail, OK?"
 	done
 
 Route35GoldenrodGateRandyCantCarryAnotherMonText:
@@ -173,26 +172,11 @@ Route35GoldenrodGateRandyOhNeverMindThenText:
 	line "then…"
 	done
 
-Route35GoldenrodGateRandySomethingForYourTroubleText:
-	text "Thanks, kid! You"
-	line "made the delivery"
-	cont "for me!"
-
-	para "Here's something"
-	line "for your trouble!"
-	done
-
-Route35GoldenrodGateRandyMyPalWasSnoozingRightText:
-	text "My pal was snooz-"
-	line "ing, right? Heh,"
-	cont "what'd I say?"
-	done
-
 Route35GoldenrodGatePokefanFText:
 	text "Isn't it weird"
 	line "how Whitney's"
-	cont "friends don't have"
-	cont "any cute #mon?"
+	para "friends don't have"
+	line "any cute #mon?"
 	done
 
 
@@ -235,8 +219,8 @@ DontHearHearStory2:
 HearAStory_2Text:
 	text "<PLAYER>, would"
 	line "you like to hear"
-	cont "another story"
-	cont "about your dad?"
+	para "another story"
+	line "about your dad?"
 	done
 
 SomeOtherTime_2Text:
@@ -249,21 +233,21 @@ KurtGoldenrodGateText:
 	
 	para "The trip from"
 	line "Azalea was so"
-	line "long. He would"
-	cont "hold his apricorn"
-	cont "all the way, its"
-	cont "glow visible in"
+	para "long. He would"
+	line "hold his apricorn"
+	para "all the way, its"
+	line "glow visible in"
 	cont "his hands."
 	
 	para "At the haircut, "
 	line "Cyndaquil's flame"
-	cont "grew and shrank"
-	cont "in the mirror,"
+	para "grew and shrank"
+	line "in the mirror,"
 	
 	para "and your dad lau-"
 	line "ghed every time"
-	cont "the barber had to"
-	cont "work around it."
+	para "the barber had to"
+	line "work around it."
 	
 	para "If you ever want"
 	line "to hear it again,"

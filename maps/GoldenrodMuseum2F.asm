@@ -165,15 +165,14 @@ GoldenrodMuseum2FScientistScript:
 NeedBrickPieceText:
     text "I tried to make"
     line "progress studying"
-    cont "the sunken"
-    cont "stadium but I"
-    cont "can't find any"
-    cont "samples."
+    para "the sunken"
+    line "stadium but I"
+    para "can't find any"
+    line "samples."
     para "Now I'm stuck"
     line "writing reports"
-    cont "about the rocket"
-    cont "hideout in"
-    cont "Mahogany town…"
+    para "about the Rocket"
+    line "Hideout."
     done
 
 Text_BrickPieceQuestion:
@@ -183,24 +182,22 @@ Text_BrickPieceQuestion:
     para "Would you please"
     line "trade it to me?"
     para "I would give you"
-    line "this one of a"
-    cont "kind RageCandyBar."
+    line "a RageCandyBar."
     done
 
 Text_NoBrickPiece:
     text "I wish I had an"
 	line "historic sample"
-	cont "from the old"
-	cont "stadium."
+	para "from the old"
+	line "stadium."
     done
 
 GiveRageCandyBarText:
     text "Thank you so much."
     line "That RageCandyBar"
-    cont "will delight even"
-	cont "a picky eater."
+    para "will delight even"
+	line "a picky eater."
     done
-
 
 GoldenrodMuseum2FExhibit3:
     jumptext GoldenrodMuseum2FExhibit3Text
@@ -214,8 +211,6 @@ GoldenrodMuseum2FNPC3Text:
     cont "could definitely"
     cont "bring back a lot"
     cont "of unown."
-    para "I would have the"
-    line "whole alphabet!"
     done
 
 GoldenrodMuseum2FNPC4Text:
@@ -228,10 +223,9 @@ GoldenrodMuseum2FNPC4Text:
 
 GoldenrodMuseum2FNPC5Text:
     text "I heard that"
-    line "Ho-Oh is sometimes"
-    cont "spotted at the"
-    cont "top of the Bell"
-    cont "Tower nowadays."
+    line "Ho-Oh is still"
+    para "spotted atop the"
+	line "Tin Tower."
     done
 
 GoldenrodMuseum2FExhibit3Text:
@@ -240,20 +234,19 @@ GoldenrodMuseum2FExhibit3Text:
     
     para "Young trainers"
     line "would journey to"
-    cont "the Ruins of"
-    cont "Alph."
+    para "the Ruins of"
+    line "Alph, carrying a"
+	cont "a village elder."
+	
+	para "Elders would tell"
+	line "them about how to"
+	para "survive from the"
+	line "local flora."
     
-    para "Their goal:"
-    line "capture an"
-    cont "unown."
-    
-    para "While some were"
-    line "thought lost,"
-    
-    para "Many simply"
-    line "left the harsh"
-	cont "city to stay in"
-	cont "historic Violet."
+    para "Sometimes, groups"
+	line "would return with"
+	para "#mon from the"
+	line "Ruins of Alph."
     done
 
 GoldenrodMuseum2FExhibit4Text:
