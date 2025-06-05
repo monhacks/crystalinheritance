@@ -1,9 +1,9 @@
 	db "Classy Cat@" ; species name
 	dw 303, 710 ; height, width
 
-	db   "Behind its lithe,"
-	next "elegant appearance"
-	next "lies a barbaric"
-	page "side. It will tear"
-	next "apart its prey on"
-	next "a mere whim.@"
+	db   "Despite the name,"
+	next "their descendants"
+	next "are traced to"
+	page "Southeast Asia,"
+	next "not the Middle"
+	next "East.@"

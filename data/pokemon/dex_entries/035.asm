@@ -1,9 +1,9 @@
 	db "Fairy@" ; species name
 	dw 200, 170 ; height, width
 
-	db   "Though rarely"
-	next "seen, it becomes"
-	next "easier to spot,"
-	page "for some reason,"
-	next "on the night of a"
-	next "full moon.@"
+	db   "They are easily"
+	next "spooked but will"
+	next "happily come out"
+	page "to play with"
+	next "unattended"
+	next "children.@"

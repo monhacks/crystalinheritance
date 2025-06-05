@@ -34,10 +34,10 @@ OlivineCity_MapScriptHeader:
 	def_object_events
     object_event 19, 20, SPRITE_POKEFAN_F, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OlivineCityPnkApricornScript, -1
 
-	object_event 20,  8, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, 	OBJECTTYPE_SCRIPT, 0, OlivineCityYoungster1Script, -1 ; todo 
-	object_event 26, 22, SPRITE_SAILOR, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 2, -1, -1, 0, 				OBJECTTYPE_SCRIPT, 0, OlivineCitySailor1Script, -1 ; todo 
-	object_event 23, 17, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 0, -1, -1, 0, 			OBJECTTYPE_SCRIPT, 0, OlivineCitySchoolBoyScript, -1 ; todo 
-	object_event 23, 17, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 0, -1, -1, 0, 			OBJECTTYPE_SCRIPT, 0, OlivineCityPokefanMScript, -1 ; todo 
+	object_event 20,  8, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, 	OBJECTTYPE_SCRIPT, 0, OlivineCityYoungster1Script, -1
+	object_event 26, 22, SPRITE_SAILOR, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 2, -1, -1, 0, 				OBJECTTYPE_SCRIPT, 0, OlivineCitySailor1Script, -1  
+	object_event 23, 17, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 0, -1, -1, 0, 			OBJECTTYPE_SCRIPT, 0, OlivineCitySchoolBoyScript, -1 
+	object_event 23, 17, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 0, -1, -1, 0, 			OBJECTTYPE_SCRIPT, 0, OlivineCityPokefanMScript, -1 
 
 	object_event 18, 17, SPRITE_PHARMACIST, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 0, -1, -1, 0, 			OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineCityRefugeeText, -1
 	object_event 11, 23, SPRITE_POKEFAN_F, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 2, -1, -1, 0, 			OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineCityPokefanFText, -1 
@@ -68,7 +68,11 @@ OlivineCityYoungster1Script:
 	done
 
 OlivineCityYoungsterText2:
-	text "todo"
+	text "I can't decide if"
+	line "I should be a"
+	para "Blackbelt or an"
+	line "Engineer when I"
+	cont "grow up."
 	done
 
 OlivineCitySailor1Script:
@@ -84,7 +88,13 @@ OlivineCitySailor1Script:
 	done
 
 OlivineCitySailorText2:
-	text "todo"
+	text "The sea smells"
+	line "less salty these"
+	cont "days."
+	
+	para "Did they reduce"
+	line "the Desal plant"
+	cont "capacity?"
 	done
 
 OlivineCityPokefanFText:
@@ -103,11 +113,21 @@ OlivineCitySchoolBoyScript: ; optimistic about omlas
 
 	jumpthistext
 	
-	text "todo"
+	text "With help from"
+	line "the OMLAS, I can"
+	para "translate books"
+	line "to my language!"
 	done
 
 OlivineCitySchoolBoyText2:
-	text "todo"
+	text "I was just about"
+	line "to finish my book"
+	para "when OMLAS was"
+	line "turned down."
+	
+	para "How am I going to"
+	line "read ancient"
+	cont "Greek without it?"
 	done
 
 
@@ -118,16 +138,19 @@ OlivineCityPokefanMScript: ; pessimistic about omlas
 
 	jumpthistext
 	
-	text "todo"
-	done
-
-OlivineCityPokefanMText2:
 	text "If OMLAS Slowking"
 	line "can do my job"
 	para "faster and cheap-"
 	line "er than me,"
 	para "why do anything"
 	line "at all?"
+	done
+
+OlivineCityPokefanMText2:
+	text "Do you know if"
+	line "anyone needs a"
+	para "tutor for ancient"
+	line "Greek?"
 	done
 
 OlivineCitySignText:

@@ -1,9 +1,9 @@
 	db "Pig Monkey@" ; species name
 	dw 303, 710 ; height, width
 
-	db   "It will beat up"
-	next "anyone who makes"
-	next "it mad, even if it"
-	page "has to chase them"
-	next "until the end of"
-	next "the world.@"
+	db   "If they find still"
+	next "water they will"
+	next "die of starvation"
+	page "in a fistfight"
+	next "against their"
+	next "reflections.@"

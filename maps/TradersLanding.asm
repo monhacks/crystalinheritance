@@ -50,8 +50,8 @@ TradersLanding_MapScriptHeader:
 	; NPCs
 	object_event 10, 19, SPRITE_FIREBREATHER, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LandingEggScript, EVENT_BEAT_KENSEY_PORT
 	; todos 
-	object_event  0,  0, SPRITE_NOMAD_M, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LandingNomadMScript, -1 ; todo 
-	object_event  0,  0, SPRITE_NOMAD_F, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LandingNomadFScript, -1 ; todo 
+	object_event 21, 15, SPRITE_NOMAD_M, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LandingNomadMScript, -1 ; todo 
+	object_event 19, 19, SPRITE_NOMAD_F, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LandingNomadFScript, -1 ; todo 
 
 	object_const_def
 	const TRADERS_LANDING_BARBEAU_1
@@ -542,12 +542,24 @@ LandingNomadMScript:
 	iftrue_jumptext LandingNomadMTextAfter
 	jumpthistext
 	
-	text "todo"
+	text "Before Kensey,"
+	line "most of us would"
+	para "set sail to the"
+	line "Sheltered Shores"
+	cont "for the summer."
+
+	para "The voyages were"
+	line "grueling!"
 	done
 	
 
 LandingNomadMTextAfter:
-	text "todo"
+	text "Hey, you're the"
+	line "one responsible"
+	cont "for losing Lugia!"
+	
+	para "Some nerve to come"
+	line "back here."
 	done
 
 
@@ -557,12 +569,22 @@ LandingNomadFScript:
 	iftrue_jumptext LandingNomadFTextAfter
 	jumpthistext
 	
-	text "todo"
+	text "Kensey won't let"
+	line "us sail anymore."
+	
+	para "It used to be"
+	line "just the oldest"
+	para "members who would"
+	line "stay back in the"
+	para "summer. He's made"
+	line "us all feel old!"
 	done
 	
-
 LandingNomadFTextAfter:
-	text "todo"
+	text "We used to guide"
+	line "by intuition."
+	para "Now, we'll rely on"
+	line "expertise."
 	done
 
 TL_AmosWantedSign:

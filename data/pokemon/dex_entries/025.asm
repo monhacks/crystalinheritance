@@ -1,9 +1,9 @@
-	db "Mouse@" ; species name
+	db "Mouse@" ; species name pikachu 
 	dw 104, 130 ; height, width
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+	db   "Their ancestors"
+	next "lived on sparse"
+	next "mountaintops,"
+	page "getting energy"
+	next "from stray"
+	next "lightning.@"

@@ -1,9 +1,7 @@
 	db "Tadpole@" ; species name
 	dw 403, 1190 ; height, width
 
-	db   "It can use its"
-	next "well-developed"
-	next "arms and legs to"
-	page "run on the surface"
-	next "of the water for a"
-	next "split second.@"
+	db   "Its punches can"
+	next "break through even"
+	next "the tough exterior"
+	page "of a Cloyster.@"

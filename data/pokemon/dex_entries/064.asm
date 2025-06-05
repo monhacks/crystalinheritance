@@ -1,9 +1,9 @@
 	db "Psi@" ; species name
 	dw 403, 1250 ; height, width
 
-	db   "When it closes its"
-	next "eyes, twice as"
-	next "many alpha parti-"
-	page "cles come out of"
-	next "the surface of its"
-	next "body.@"
+	db   "The five star"
+	next "pattern on its"
+	next "head does not"
+	page "appear in reflec-"
+	next "tions or"
+	next "photographs.@"

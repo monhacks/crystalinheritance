@@ -49,10 +49,21 @@ TinderGarden2Script:
 	writetext TG2_Text_Kurt5
 	pause 30
 	waitbutton
+	writetext TG2_Text_Kurt5_2
+	pause 30
+	waitbutton
+	writetext TG2_Text_Kurt5_3
+	pause 30
+	waitbutton
 	closetext
 
+	clearevent EVENT_KURTS_HOUSE_BOOK_1
+	clearevent EVENT_KURTS_HOUSE_BOOK_2
+	clearevent EVENT_KURTS_HOUSE_BOOK_3
+	clearevent EVENT_KURTS_HOUSE_BOOK_4
+	clearevent EVENT_KURTS_HOUSE_BOOK_5
 	clearevent EVENT_KURTS_HOUSE_BOOK_6
-
+	
 	applyonemovement TINDER_GARDEN_2_PRYCE, step_up
 	turnobject TINDER_GARDEN_2_PRYCE, DOWN
 	

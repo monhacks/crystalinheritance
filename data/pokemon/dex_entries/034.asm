@@ -1,9 +1,8 @@
 	db "Drill@" ; species name
 	dw 407, 1370 ; height, width
 
-	db   "It uses its thick"
-	next "arms, legs and"
-	next "tail to attack"
-	page "forcefully. Melee"
-	next "combat is its"
-	next "specialty.@"
+	db   "They rise early in"
+	next "the morning to"
+	next "tend the nest but"
+	page "always require an"
+	next "afternoon nap.@"

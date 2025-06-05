@@ -48,47 +48,23 @@ GoldenrodBikeShopClerkFirstRateBikesText:
 	done
 
 GoldenrodBikeShopClerkIntroText:
-	text "Clerk: Oh, a"
-	line "trainer! Say,"
-	cont "you remind me of"
-	cont "someone..."
-	
-	para "See that bike in"
+	text "See that bike in"
 	line "the corner? It's"
-	cont "from my very"
-	cont "first shipment."
-	
-	para "Back then, a"
-	line "young kid helped"
-	cont "me advertise."
+	para "from my very"
+	line "first shipment."
 
-	para "Thanks to that"
-	line "child, my shop"
-	cont "took off."
-	
 	para "But now... Well,"
 	line "I need to keep"
-	cont "up with the"
-	cont "times, you know?"
-	
-	para "E-bikes are the"
-	line "future. I've got"
-	cont "to make room"
-	cont "for progress."
+	para "up with the"
+	line "times, you know?"
 	
 	para "That old bike..."
 	line "I can't just"
-	cont "toss it. Too"
-	cont "many memories."
+	cont "toss it."
 
 	para "Say, would you"
 	line "take it? Give it"
 	cont "a new adventure?"
-	
-	para "What do you say?"
-	line "Will you help an"
-	cont "old man move"
-	cont "forward?"
 	done
 
 GoldenrodBikeShopClerkAgreedText:
