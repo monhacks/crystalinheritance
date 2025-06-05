@@ -154,7 +154,8 @@ TowerRoofMejimiText1_0:
 	cont "everlasting!"
 
 	para "We will repel the"
-	line "barbaric outsiders!"
+	line "barbaric"
+	cont "outsiders!"
 	done
 
 TowerRoofMejimiText1_1:

@@ -143,7 +143,8 @@ ElderLiBeatenText:
 
 	para "Show him that the"
 	line "tallest trees have"
-	cont "the strongest roots."
+	para "the strongest"
+	line "roots."
 	done
 
 AcademyKurtScript: ; will this work?....

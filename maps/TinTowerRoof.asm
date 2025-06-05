@@ -79,9 +79,10 @@ TinTowerRoofSilverIntroText:
 	
 	para "I fled, but I co-"
 	line "uldn't keep from"
-	cont "draping my"
-	para "#mon in the"
-	line "same threads I knew."
+	para "draping my"
+	line "#mon in the"
+	para "same threads I"
+	line "knew."
 	
 	para "But one day, I"
 	line "saw the pain in"

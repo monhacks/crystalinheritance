@@ -137,9 +137,9 @@ Kimono_girl_1ZukiSeenText:
 
 Kimono_girl_1ZukiBeatenText:
 	text "Our hero slipped"
-	line "into the Capital, and"
-	para "learned of the"
-	line "emperor's plans."
+	line "into the Capital,"
+	para "and learned the"
+	line "Emperor's plans."
 	done
 
 

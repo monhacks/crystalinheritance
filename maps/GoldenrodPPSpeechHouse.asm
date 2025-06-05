@@ -128,21 +128,19 @@ PokefanMIntroText:
     line "fill mine out."
     para "I have a few"
     line "items to share,"
-    cont "if you do."
+    cont "if you help me."
     done
 
 PokefanMAskOnixText:
     text "Do you have the"
     line "rock snake #-"
-    cont "mon that evolves"
-    cont "with a metal"
-    cont "coat?"
+    para "mon that wants to"
+	line "wear a metal"
+	cont "coat?"
     done
 
 PokefanMNoOnixText:
-    text "Oh darn! I really"
-    line "wanted to see"
-    cont "that #mon."
+    text "Oh darn!"
     done
 
 PokefanMGiveMetalCoatText:
@@ -153,16 +151,14 @@ PokefanMGiveMetalCoatText:
 PokefanMAskPrinplupText:
     text "Do you have any"
     line "#mon that look"
-    cont "like they're"
-    cont "dressed for a"
-    cont "formal dance on"
-    cont "an iceberg?"
+    para "like they're"
+    line "dressed for a"
+    para "formal dance on"
+    line "an iceberg?"
     done
 
 PokefanMNoPrinplupText:
-    text "Oh darn! I really"
-    line "wanted to see"
-    cont "that #mon."
+    text "Oh darn!"
     done
 
 PokefanMGiveNevermelticeText:
@@ -174,14 +170,12 @@ PokefanMGiveNevermelticeText:
 PokefanMAskYanmaText:
     text "Do you have the"
     line "bug #mon that"
-    cont "buzzes like a"
-    cont "dragon?"
+    para "buzzes like a"
+    line "dragon?"
     done
 
 PokefanMNoYanmaText:
-    text "Oh darn! I really"
-    line "wanted to see"
-    cont "that #mon."
+    text "Oh darn!"
     done
 
 PokefanMGiveDragonFangText:
@@ -198,7 +192,5 @@ PokefanMThankYouText:
 
 PokefanMBagFullText:
     text "Oh, your Bag is"
-    line "full. Make some"
-    cont "space and come"
-    cont "back!"
+    line "full."
     done

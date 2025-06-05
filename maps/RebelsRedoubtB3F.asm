@@ -71,8 +71,8 @@ HollisRedoubtText_Intro:
 	para "Adrinna entrench"
 	line "herself?"
 	
-	para "Are you true to your"
-	cont "roots?"
+	para "Are you true to"
+	line "your roots?"
 	done
 
 

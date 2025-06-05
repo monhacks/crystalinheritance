@@ -1028,7 +1028,7 @@ TGRivalLeavesMovement:
 	step_down
 	step_down
 	step_down
-	step_end ; should be enough?
+	step_end
 
 KurtThinksTheyreCuttingTreesText:	
 	text_high
@@ -1046,9 +1046,9 @@ KurtThinksTheyreCuttingTreesText:
 	para "<PLAYER>, we"
 	line "need to stop them!"
 	
-	para "With a #mon, you"
-	line "can catch more"
-	cont "nearby."
+	para "With a #mon,"
+	line "you can catch"
+	cont "more nearby."
 	
 	para "Hang on, Ilex!"
 	line "I'm on my way!"

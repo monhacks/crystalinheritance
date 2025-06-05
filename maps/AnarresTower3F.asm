@@ -293,16 +293,16 @@ HollisCongratulates:
 
 	para "Perhaps it's"
 	line "time I learned"
-	cont "from others,"
-	cont "not just teach."
+	para "from others,"
+	line "not just teach."
 
 	para "I grant you the"
 	line "Growth badge."
 	
 	para "It symbolizes how"
 	line "a tree grows, one"
-	cont "ring over another"
-	para "towards the sky."
+	para "ring over another"
+	line "towards the sky."
 
 	para "each ring has its"
 	line "day in the sun… "
@@ -310,8 +310,8 @@ HollisCongratulates:
 	line "to support the"
 	cont "trunk."
 
-	para "Also, please, accept"
-	line "this HM."
+	para "Also, please,"
+	line "accept this HM."
 	done
 
 

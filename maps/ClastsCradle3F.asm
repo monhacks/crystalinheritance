@@ -46,8 +46,8 @@ AmosScriptCC:
 
 
 AmosCradleText1:
-	text "<PLAYER>, Kurt is in"
-	cont "the mine already."
+	text "<PLAYER>, Kurt is"
+	line "in the mine."
 	
 	para "Adrinna is after"
 	line "a powerful"

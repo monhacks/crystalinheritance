@@ -1,4 +1,0 @@
-### kleavor
-- STEADFAST: ABIL_2
-- SWARM: ABIL_1
-- TECHNICIAN: HIDDEN

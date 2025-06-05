@@ -30,8 +30,8 @@ GoldenrodNetBallHouseYoungsterScript:
 .Text2:
 	text "My dad could"
 	line "never focus on"
-	cont "details with"
-	cont "those Wise "
+	para "details with"
+	line "those Wise "
 	cont "Glasses."
 	done
 
@@ -43,9 +43,8 @@ GoldenrodNetBallHouseYoungsterScript:
 	para "We don't need"
 	line "these anymore."
 	
-	para "Maybe they are"
-	line "of some use to"
-	cont "you?"
+	para "Maybe you can"
+	line "use them?"
 	done
 
 GoldenrodNetBallHouseBugCatcherText:
@@ -54,6 +53,6 @@ GoldenrodNetBallHouseBugCatcherText:
 	
 	para "I say, he can"
 	line "never see the"
-	cont "forest for the"
-	cont "trees!"
+	para "forest for the"
+	line "trees!"
 	done
