@@ -23,6 +23,7 @@ Route35GoldenrodGate_MapScriptHeader:
 
 WhitneyRadioShowScript:
 	showtext WhitneyRadioShowText
+	setscene $1
 	end
 
 WhitneyRadioShowText:

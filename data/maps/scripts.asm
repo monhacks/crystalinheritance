@@ -459,8 +459,10 @@ INCLUDE "maps/MagnetTrainTunnel.asm"
 INCLUDE "maps/FirstClassCabin.asm"
 INCLUDE "maps/SecondClassCabin.asm"
 INCLUDE "maps/KajoCabin.asm"
+INCLUDE "maps/RouteKajoRuinsOfAlphGate.asm"
 INCLUDE "maps/UndergroundRadioTower.asm"
 INCLUDE "maps/ShimmerSaddle.asm"
+INCLUDE "maps/VioletCatacombs.asm"
 
 SECTION "Blackthorn Scripts", ROMX
 

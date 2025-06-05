@@ -36,16 +36,16 @@ MapScenes::
 	scene_var UNDERGROUND_PATH_SWITCH_ROOM_ENTRANCES, wUndergroundPathSwitchRoomEntrancesSceneID
 	scene_var HOLLYS_HOLT,                            wHollysHoltSceneID
 	scene_var MISTY_BASIN,                            wMistyBasinSceneID 
-	scene_var ANARRES_HOUSE,                          wAnarresHouseSceneID ; check 
+	scene_var ANARRES_HOUSE,                          wAnarresHouseSceneID 
 	scene_var ANARRES_HOLT_GATE,                      wAnarresHoltGateSceneID 
 	scene_var STADIUM_GROUNDS,                        wStadiumGroundsSceneID
 	scene_var GAULDENROD,                             wGauldenrodSceneID
 	scene_var RADIO_TOWER_1F,                         wRadioTower1FSceneID 
 	scene_var EMPERORS_GARDEN,                        wEmperorsGardenSceneID 
-	scene_var GAULDENROD_HOUSE,                       wGauldenrodHouseSceneID ; todo 
+	scene_var GAULDENROD_HOUSE,                       wGauldenrodHouseSceneID
 	scene_var WESTERN_CAPITAL,                        wWesternCapitalSceneID 
 	scene_var HOLT_COAST_GATE,             			  wHoltCoastGateSceneID
-	scene_var ROUTE_35_GOLDENROD_GATE,          	  wRoute35GoldenrodGateSceneID ; todo?
+	scene_var ROUTE_35_GOLDENROD_GATE,          	  wRoute35GoldenrodGateSceneID 
 	scene_var WHIRL_ISLAND_LUGIA_CHAMBER,			  wWhirlIslandLugiaChamberSceneID 
 	scene_var CLASTS_CRADLE_B1F, 					  wClastsCradleB1FSceneID
 	scene_var GROTTOED_GLACIER_B2F, 				  wGrottoedGlacierB2FSceneID

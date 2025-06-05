@@ -29,6 +29,7 @@ Route32RuinsOfAlphGate_BlockData:
 IlexForestAzaleaGate_BlockData:
 Route38EcruteakGate_BlockData:
 Route42EcruteakGate_BlockData:
+RouteKajoRuinsOfAlphGate_BlockData:
 	INCBIN "maps/EastWestGate.ablk.lz"
 
 
@@ -1126,4 +1127,8 @@ TinderGarden2_BlockData:
 SECTION "ShimmerSaddle_BlockData", ROMX
 ShimmerSaddle_BlockData:
 	INCBIN "maps/ShimmerSaddle.ablk.lz"
+	
+SECTION "VioletCatacombs_BlockData", ROMX
+VioletCatacombs_BlockData:
+	INCBIN "maps/VioletCatacombs.ablk.lz"
 	

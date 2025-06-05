@@ -90,8 +90,8 @@ ENDM
 	map_const OLIVINE_LIGHTHOUSE_1F,                      10,  9 ; 32
 	map_const OLIVINE_LIGHTHOUSE_2F,                      10,  9 ; 33
 	map_const OLIVINE_LIGHTHOUSE_3F,                      10,  9 ; 34
-	map_const OLIVINE_LIGHTHOUSE_4F,                      10,  9 ; 35
-	map_const OLIVINE_LIGHTHOUSE_5F,                      10,  9 ; 36
+;	map_const OLIVINE_LIGHTHOUSE_4F,                      10,  9 ; 35
+;	map_const OLIVINE_LIGHTHOUSE_5F,                      10,  9 ; 36
 	map_const OLIVINE_LIGHTHOUSE_6F,                      10,  9 ; 37
 	map_const OLIVINE_LIGHTHOUSE_ROOF,                    10, 10 ; 38
 	map_const MAHOGANY_MART_1F,                            4,  4 ; 39
@@ -429,6 +429,7 @@ ENDM
 	newgroup                                                     ; 31
 	map_const TINDER_GARDEN_2, 							   	 5,  5
 	map_const SHIMMER_SADDLE, 								30, 20
+	map_const VIOLET_CATACOMBS, 							10, 15 ; TUNNEL 
 
 	newgroup                                                     ; 32
 
