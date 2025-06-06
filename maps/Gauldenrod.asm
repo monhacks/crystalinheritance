@@ -31,6 +31,10 @@ Gauldenrod_MapScriptHeader:
 	bg_event 32,  6, BGEVENT_READ, GauldenrodGuildSign
 	bg_event 16,  6, BGEVENT_READ, GauldenrodTunnelSign
 	bg_event 22, 22, BGEVENT_READ, GauldenrodNoFishingSign
+	; HIDDEN ITEMS: LANSAT AND GANLON BERRIES
+	bg_event  0, 0, BGEVENT_ITEM + LANSAT_BERRY, EVENT_GAULDENROD_HIDDEN_1
+	bg_event  0, 0, BGEVENT_ITEM + GANLON_BERRY, EVENT_GAULDENROD_HIDDEN_2
+
 
 	def_object_events
 	; cutscene 

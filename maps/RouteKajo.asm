@@ -12,8 +12,8 @@ RouteKajo_MapScriptHeader: ; todo: event set in historic route kajo allows you t
 	warp_event 55, 30, MAGNET_TRAIN_TUNNEL, 1
 	warp_event 55, 31, MAGNET_TRAIN_TUNNEL, 2
     warp_event 23, 19, KAJO_CABIN, 1
-    warp_event 55, 18, RUINS_OF_ALPH_OUTSIDE, 11
-    warp_event 55, 19, RUINS_OF_ALPH_OUTSIDE, 12
+    warp_event 55, 18, ROUTE_KAJO_RUINS_OF_ALPH_GATE, 1
+    warp_event 55, 19, ROUTE_KAJO_RUINS_OF_ALPH_GATE, 2
 	warp_event 47, 26, HIDDEN_TREE_GROTTO, 1
 
     def_coord_events

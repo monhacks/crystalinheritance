@@ -16,8 +16,8 @@ RuinsOfAlphOutside_MapScriptHeader:
 	warp_event 15, 27, ROUTE_32_RUINS_OF_ALPH_GATE, 2 ; ok 
 	warp_event 11, 41, TINDER_GARDEN, 3
 	warp_event 12, 41, TINDER_GARDEN, 4
-	warp_event  6, 26, ROUTE_KAJO, 8
-	warp_event  6, 27, ROUTE_KAJO, 9
+	warp_event  6, 26, ROUTE_KAJO_RUINS_OF_ALPH_GATE, 3
+	warp_event  6, 27, ROUTE_KAJO_RUINS_OF_ALPH_GATE, 4
 	warp_event 19, 17, RUINS_OF_ALPH_RESEARCH_CENTER, 1 ; 
 
 	def_coord_events

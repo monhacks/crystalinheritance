@@ -83,7 +83,7 @@ FlannerySpriteGFX::            INCBIN "gfx/sprites/flannery.2bpp.lz"
 KannaSpriteGFX::             INCBIN "gfx/sprites/kanna.2bpp.lz" 
 SkylaSpriteGFX::               INCBIN "gfx/sprites/skyla.2bpp.lz"
 ValerieSpriteGFX::             INCBIN "gfx/sprites/valerie.2bpp.lz"
-KukuiSpriteGFX::               INCBIN "gfx/sprites/kukui.2bpp.lz"
+ChemistrySpriteGFX::               INCBIN "gfx/sprites/chemistry.2bpp.lz" ; kukui 
 NomadFSpriteGFX::             INCBIN "gfx/sprites/nomad_f.2bpp.lz" ; uses kanna 
 DarachSpriteGFX::              INCBIN "gfx/sprites/darach.2bpp.lz"
 StevenSpriteGFX::              INCBIN "gfx/sprites/steven.2bpp.lz"

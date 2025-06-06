@@ -19,7 +19,10 @@ EmperorsGarden_MapScriptHeader:
 	def_bg_events
 	bg_event 20, 21, BGEVENT_JUMPSTD, treegrotto, HIDDENGROTTO_EMPERORS_GARDEN
 	bg_event 21, 21, BGEVENT_JUMPSTD, treegrotto, HIDDENGROTTO_EMPERORS_GARDEN
-
+	; TODO HIDDENS
+	bg_event  0, 0, BGEVENT_ITEM + LIECHI_BERRY, EVENT_GARDEN_HIDDEN_1
+	bg_event  0, 0, BGEVENT_ITEM + PETAYA_BERRY, EVENT_GARDEN_HIDDEN_2
+	bg_event  0, 0, BGEVENT_ITEM + SALAC_BERRY, EVENT_GARDEN_HIDDEN_3
 
 	def_object_events
 	; scene 1

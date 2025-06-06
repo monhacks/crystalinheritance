@@ -13,6 +13,8 @@ SereneSprings_MapScriptHeader:
 
 	def_bg_events
 	bg_event  5,  7, BGEVENT_READ, StadiumAheadSign
+	; TODO 
+	bg_event  0, 0, BGEVENT_ITEM + ELIXIR, EVENT_SPRINGS_HIDDEN_1
 
 	def_object_events
 	object_event 13, 14, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, StadiumHotSpringsReceptionistScript, EVENT_TAUGHT_COUNTER
@@ -21,8 +23,8 @@ SereneSprings_MapScriptHeader:
 	object_event 11, 22, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader5, EVENT_BEAT_BOBESH_STADIUM
 
 	itemball_event 16, 30, ROCKY_HELMET, 1, EVENT_SERENE_SPRINGS_ROCKY_HELMET ;ok
-	itemball_event 3, 23, ELIXIR, 1, EVENT_SERENE_SPRINGS_ELIXIR ;ok
-
+	itemball_event 3, 23, ETHER, 1, EVENT_SERENE_SPRINGS_ELIXIR ;ok
+	
 
 	object_const_def
 	const STADIUMHOTSPRINGS_RECEPTIONIST

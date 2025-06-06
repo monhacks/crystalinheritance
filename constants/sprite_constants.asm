@@ -70,7 +70,7 @@
 	const SPRITE_KANNA ; 42
 	const SPRITE_SKYLA ; 43
 	const SPRITE_VALERIE ; 44
-	const SPRITE_KUKUI ; 45
+	const SPRITE_CHEMISTRY ; 45 formerly kukui 
 	const SPRITE_NOMAD_F ; 46
 	const SPRITE_DARACH ; 47
 	const SPRITE_STEVEN ; 48
