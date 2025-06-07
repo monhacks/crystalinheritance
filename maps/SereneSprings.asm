@@ -13,12 +13,12 @@ SereneSprings_MapScriptHeader:
 
 	def_bg_events
 	bg_event  5,  7, BGEVENT_READ, StadiumAheadSign
-	; TODO 
-	bg_event  0, 0, BGEVENT_ITEM + ELIXIR, EVENT_SPRINGS_HIDDEN_1
+	bg_event  12, 34, BGEVENT_READ, SereneSpringsSign
+	bg_event  18, 33, BGEVENT_ITEM + ELIXIR, EVENT_SPRINGS_HIDDEN_1
 
 	def_object_events
 	object_event 13, 14, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, StadiumHotSpringsReceptionistScript, EVENT_TAUGHT_COUNTER
-	object_event 11, 34, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader3, EVENT_BEAT_BOBESH_STADIUM
+	object_event  8, 34, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader3, EVENT_BEAT_BOBESH_STADIUM
 	object_event  8, 22, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader4, EVENT_BEAT_BOBESH_STADIUM
 	object_event 11, 22, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader5, EVENT_BEAT_BOBESH_STADIUM
 
@@ -35,15 +35,15 @@ GenericTrainerBrigader3:
 
 	text "I think I'd be a"
 	line "pretty strong"
-	cont "fighter in the"
-	cont "stadium."
+	para "fighter in the"
+	line "stadium."
 	done
 
 Brigader3SeenText:
 	text "Stop right there!"
 	line "No one is allowed"
-	cont "into the stadium"
-	cont "at the moment!"
+	para "into the stadium"
+	line "at the moment!"
 	done
 
 Brigader3BeatenText:
@@ -74,10 +74,7 @@ GenericTrainerBrigader5:
 
 	text "There's a lot of"
 	line "hot springs in"
-	cont "this area. I"
-	cont "wonder if there's"
-	cont "any under the"
-	cont "stadium."
+	cont "this area."
 	done
 
 Brigader5SeenText:
@@ -87,7 +84,8 @@ Brigader5SeenText:
 	done
 
 Brigader5BeatenText:
-	text "Lost my potential."
+	text "I lost my"
+	line "potential."
 	done
 
 
@@ -133,14 +131,11 @@ StadiumHotSpringsReceptionistScript:
 	end
 
 ReceptionistIntroText:
-	text "Oh, hello there!"
-	line "Welcome to our"
-	cont "glorious hot"
-	cont "springs!"
+	text "Welcome to the"
+	line "Serene Springs!"
 
 	para "I'm the towel"
-	line "manager. It's"
-	cont "such a fun job!"
+	line "manager."
 	done
 
 ReceptionistOfferText:
@@ -148,48 +143,44 @@ ReceptionistOfferText:
 	line "someone who enjoys"
 	cont "a good challenge!"
 
-	para "How would you like"
-	line "to learn the art"
-	cont "of towel counting?"
+	para "Would you like to"
+	line "learn the art of"
+	cont "counting towels?'
 
 	para "It's thrilling!"
 
 	para "Every day is an"
 	line "adventure in"
-	cont "arithmetic, "
-	cont "making sure I"
-	cont "track down all"
-	cont "the towels the"
-	cont "brigaders used."
+	cont "arithmetic,"
+	
+	para "making sure I"
+	line "track down all"
+	para "the towels the"
+	line "brigaders used."
 
 	para "I can teach your"
-	line "#MON to Counter"
+	line "#mon to Counter"
 	cont "just like I do!"
 
 	para "All I ask is a"
-	line "Silver Leaf. It's"
-	cont "a bargain!"
+	line "Silver Leaf."
 	done
 
 ReceptionistAskTeachText:
 	text "So, what do you"
 	line "say? Want to join"
-	cont "the exciting world"
-	cont "of towel counting?"
+	para "the exciting world"
+	line "of towel counting?"
 	done
 
 ReceptionistTaughtText:
-	text "Yes! Yes! You've"
-	line "made a wise"
-	cont "choice!"
-
-	para "Your #mon now"
-	line "knows Counter!"
+	text "You made a wise"
+	line "choice!"
 
 	para "Use it wisely,"
 	line "count carefully,"
-	cont "and maybe you can"
-	cont "take over my j-"
+	para "and maybe you can"
+	line "take over my j-"
 
 	para "I mean, enjoy your"
 	line "new skill!"
@@ -232,4 +223,16 @@ StadiumAheadSign:
 
 StadiumAheadSignText:
 	text "Stadium Grounds"
+	line "Ahead"
+	
+	para "Brought to you"
+	line "by the Emperor!"
+	done
+
+SereneSpringsSign:
+	text "Serene Springs"
+	
+	para "Take a dip and"
+	line "let your worries"
+	cont "melt away"
 	done

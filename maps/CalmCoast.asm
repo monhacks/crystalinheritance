@@ -15,8 +15,8 @@ CalmCoast_MapScriptHeader:
 	bg_event 13, 33, BGEVENT_READ, CalmCoastSign1Text
 	bg_event 12,  6, BGEVENT_READ, CalmCoastSign2Text
 	; hidden items: energypowder and pp_up, ADD TO EVENTS AND PLACE ON MAP 
-	bg_event  0, 0, BGEVENT_ITEM + ENERGYPOWDER, EVENT_CALM_COAST_HIDDEN_1
-	bg_event  0, 0, BGEVENT_ITEM + PP_UP, EVENT_CALM_COAST_HIDDEN_2
+	bg_event 12, 38, BGEVENT_ITEM + ENERGYPOWDER, EVENT_CALM_COAST_HIDDEN_1
+	bg_event  6, 16, BGEVENT_ITEM + PP_UP, EVENT_CALM_COAST_HIDDEN_2
 
 	def_object_events
 	object_event 15, 10, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerYoungsterWarren, EVENT_BEAT_BOBESH_STADIUM ; 

@@ -32,7 +32,8 @@ TradersLanding_MapScriptHeader:
 	bg_event 16, 18, BGEVENT_JUMPTEXT, TL_OpenForBusinessSign
 	bg_event 14, 6, BGEVENT_JUMPTEXT, TL_KenseysOfficeSign
 	bg_event 22, 12, BGEVENT_READ, TL_AmosWantedSign
-;SHRINE
+;todo, shrine?
+	bg_event  13, 18, BGEVENT_ITEM + CALCIUM, EVENT_LANDING_HIDDEN_1
 
 
 

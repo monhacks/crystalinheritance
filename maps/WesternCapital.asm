@@ -1,4 +1,4 @@
-WesternCapital_MapScriptHeader: ; todo the NPCs need to say something dependin gon whether or not EVENT_BEAT_ADRINNA_MINE 
+WesternCapital_MapScriptHeader: ; todo 
 	def_scene_scripts
 	scene_script WesternCapitalCemeteryScene
 
@@ -28,6 +28,9 @@ WesternCapital_MapScriptHeader: ; todo the NPCs need to say something dependin g
 	bg_event 21, 11, BGEVENT_JUMPTEXT, WCGloryToMejimiText
 	bg_event 17, 23, BGEVENT_JUMPTEXT, WCSignText
 	bg_event 19, 19, BGEVENT_READ, WC_AmosWantedSign
+	; hidden items 
+	bg_event  14, 14, BGEVENT_ITEM + PP_UP, EVENT_WC_HIDDEN_1
+	bg_event  29, 27, BGEVENT_ITEM + HP_UP, EVENT_WC_HIDDEN_2
 
 	def_object_events
 ; cutsceners

@@ -15,6 +15,9 @@ CattleCull39_MapScriptHeader:
 
 	def_bg_events
 	bg_event 14,  6, BGEVENT_JUMPTEXT, CattleCull39SignText
+	bg_event 12, 31, BGEVENT_JUMPTEXT, TradersLandingAheadText
+	bg_event  10, 8, BGEVENT_ITEM + CARBOS, EVENT_CC39_HIDDEN_1
+	bg_event   6, 30, BGEVENT_ITEM + PP_MAX, EVENT_CC39_HIDDEN_2
 
 
 	def_object_events
@@ -229,4 +232,11 @@ TaurosText:
 Miltank39Text:
 	text "Miltank:"
 	line "Moooooo!"
+	done
+
+TradersLandingAheadText:
+	text "Trader's Landing"
+	line "ahead: Managed"
+	para "by the cerebral"
+	line "General Kensey"
 	done

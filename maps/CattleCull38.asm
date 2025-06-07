@@ -16,7 +16,9 @@ CattleCull38_MapScriptHeader:
 
 
 	def_bg_events
-	bg_event 33,  7, BGEVENT_JUMPTEXT, CattleCull38SignText
+	bg_event 32,  7, BGEVENT_JUMPTEXT, CattleCull38SignText
+	bg_event  25, 9, BGEVENT_ITEM + ELIXIR, EVENT_CC38_HIDDEN_1
+	bg_event  15, 5, BGEVENT_ITEM + LEPPA_BERRY, EVENT_CC38_HIDDEN_2
 
 
 	def_object_events ; nomads should have flying, psychic, water type #mon 

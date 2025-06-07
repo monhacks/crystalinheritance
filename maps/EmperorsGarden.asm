@@ -1,4 +1,4 @@
-EmperorsGarden_MapScriptHeader: 
+EmperorsGarden_MapScriptHeader: ; todo needs a strengthboulder to keep you from skipping the scenes 
 	def_scene_scripts
 	scene_script EmperorsGardenMejimiScene
 
@@ -19,10 +19,7 @@ EmperorsGarden_MapScriptHeader:
 	def_bg_events
 	bg_event 20, 21, BGEVENT_JUMPSTD, treegrotto, HIDDENGROTTO_EMPERORS_GARDEN
 	bg_event 21, 21, BGEVENT_JUMPSTD, treegrotto, HIDDENGROTTO_EMPERORS_GARDEN
-	; TODO HIDDENS
-	bg_event  0, 0, BGEVENT_ITEM + LIECHI_BERRY, EVENT_GARDEN_HIDDEN_1
-	bg_event  0, 0, BGEVENT_ITEM + PETAYA_BERRY, EVENT_GARDEN_HIDDEN_2
-	bg_event  0, 0, BGEVENT_ITEM + SALAC_BERRY, EVENT_GARDEN_HIDDEN_3
+
 
 	def_object_events
 	; scene 1
@@ -48,6 +45,7 @@ EmperorsGarden_MapScriptHeader:
 	itemball_event  27,  9, PROTEIN, 1, EVENT_EMPERORS_GARDEN_PROTEIN
 	itemball_event  21,  3, CALCIUM, 1, EVENT_EMPERORS_GARDEN_CALCIUM
 	itemball_event  13,  9, CARBOS, 1, EVENT_EMPERORS_GARDEN_CARBOS
+	strengthboulder_event 32, 15
 
 	object_const_def
 	const EMPERORS_GARDEN_MEJIMI
