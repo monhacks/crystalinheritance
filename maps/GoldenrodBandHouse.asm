@@ -17,13 +17,10 @@ GoldenrodBandHouse_MapScriptHeader:
 	object_event  2,  4, SPRITE_BATTLE_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodBandHouseBattleGirlScript, -1
 
 GoldenrodBandHouseRocker1Text:
-	text "I think we should"
-	line "become a metal"
-	cont "band."
-	
-	para "We can call our-"
-	line "selves Bloodbath"
-	cont "and Beyond."
+	text "My Mr. Mime is"
+	line "totally tone-deaf"
+	para "due to its"
+	line "ability."
 	done
 
 GoldenrodBandHouseRocker2Text:
@@ -56,18 +53,20 @@ GoldenrodBandHouseBattleGirlScript:
 .AlreadyGotItem:
 	jumpthisopenedtext
 	
-	text "Rock on with that"
-	line "Muscle Band!"
+	text "That Muscle Band"
+	line "will power up your"
+	cont "#mon's physical"
+	cont "moves."
+
+	para "It's perfect for"
+	line "a rock band!"
 	done
 
 .BagFull:
 	jumpthisopenedtext
 	
 	text "Oh, your bag is"
-	line "full. Make some"
-	cont "room and come back"
-	cont "for this sweet"
-	cont "Muscle Band!"
+	line "full."
 	done
 
 GoldenrodBandHouseBattleGirlText1:

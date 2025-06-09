@@ -203,32 +203,56 @@ _OakTimeWhatHoursText::
 
 SECTION "_OakTimeHoursQuestionMarkText", ROMX
 _OakTimeHoursQuestionMarkText::
+	text_high
+    text " Kurt: "
+	next
+	text_start
 	text "?"
 	done
 
 SECTION "_OakTimeHowManyMinutesText", ROMX
 _OakTimeHowManyMinutesText::
+	text_high
+    text " Kurt: "
+	next
+	text_start
 	text "How many minutes?"
 	done
 
 SECTION "_OakTimeWhoaMinutesText", ROMX
 _OakTimeWhoaMinutesText::
+	text_high
+    text " Kurt: "
+	next
+	text_start
 	text "Whoa!"
 	done
 
 SECTION "_OakTimeMinutesQuestionMarkText", ROMX
 _OakTimeMinutesQuestionMarkText::
+	text_high
+    text " Kurt: "
+	next
+	text_start
 	text "?"
 	done
 
 SECTION "_OakTimeOversleptText", ROMX
 _OakTimeOversleptText::
+	text_high
+    text " Kurt: "
+	next
+	text_start
 	text "!"
 	line "I overslept!"
 	done
 
 SECTION "_OakTimeYikesText", ROMX
 _OakTimeYikesText::
+	text_high
+    text " Kurt: "
+	next
+	text_start
 	text "!"
 	line "Yikes! I over-"
 	cont "slept!"
@@ -236,6 +260,10 @@ _OakTimeYikesText::
 
 SECTION "ProfElmNappedText", ROMX
 ProfElmNappedText::
+	text_high
+    text " Kurt: "
+	next
+	text_start
 	text "!"
 	line "I napped for"
 	cont "too long!"
@@ -243,6 +271,10 @@ ProfElmNappedText::
 
 SECTION "_OakTimeSoDarkText", ROMX
 _OakTimeSoDarkText::
+	text_high
+    text " Kurt: "
+	next
+	text_start
 	text "!"
 	line "No wonder it's so"
 	cont "dark!"
@@ -250,11 +282,19 @@ _OakTimeSoDarkText::
 
 SECTION "_OakTimeWhatDayIsItText", ROMX
 _OakTimeWhatDayIsItText::
+	text_high
+    text " Kurt: "
+	next
+	text_start
 	text "What day is it?"
 	done
 
 SECTION "_OakTimeIsItText", ROMX
 _OakTimeIsItText::
+	text_high
+    text " Kurt: "
+	next
+	text_start
 	text ", is it?"
 	done
 
@@ -488,7 +528,7 @@ _OPT_IntroText3::
 SECTION "_OPT_OakText1", ROMX
 _OPT_OakText1::
 	text_start
-	line "Oak: "
+	line "Kurt: "
 	text_ram wMonOrItemNameBuffer
 	text_end
 
@@ -2415,7 +2455,7 @@ _ThrewAwayText::
 
 SECTION "_OakThisIsntTheTimeText", ROMX
 _OakThisIsntTheTimeText::
-	text "Oak: <PLAYER>!"
+	text "Kurt: <PLAYER>!"
 	line "This isn't the"
 	cont "time to use that!"
 	prompt
@@ -3138,7 +3178,7 @@ _ItemsDiscardedText::
 
 SECTION "_ItemsOakWarningText", ROMX
 _ItemsOakWarningText::
-	text "Oak: <PLAYER>!"
+	text "Kurt: <PLAYER>!"
 	line "This isn't the"
 	cont "time to use that!"
 	done
@@ -4396,7 +4436,7 @@ _ItemCantUseOnEggText::
 
 SECTION "_ItemOakWarningText", ROMX
 _ItemOakWarningText::
-	text "Oak: <PLAYER>!"
+	text "Kurt: <PLAYER>!"
 	line "This isn't the"
 	cont "time to use that!"
 	prompt

@@ -34,7 +34,7 @@ HiroshiBeatenText:
 	
 HiroshiSeenText:
     text "Give yourself to"
-	line "the emperor!"
+	line "the Consul!"
     done
 
 

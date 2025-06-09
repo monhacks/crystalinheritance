@@ -148,7 +148,7 @@ GauldenrodNPC4Script:
 	jumpthistextfaceplayer
 
 	text "I used to resent"
-	line "the emperor taking"
+	line "the Consul taking"
 	para "over, but the"
 	line "stadium is cool."
 	done
@@ -260,7 +260,7 @@ AmosWantedSign:
 	text "WANTED: This man"
 	line "is wanted for"
 	para "crimes against"
-	cont "the emperor!"
+	cont "the Consul!"
 
 	para "Known alias:"
 	line "Amos."

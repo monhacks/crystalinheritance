@@ -25,7 +25,7 @@ GauldenrodTower1FBrigader1Script:
 	jumptextfaceplayer GauldenrodTower1FBrigader1Text
 
 GauldenrodTower1FBrigader1Text:
-	text "The emperor says"
+	text "The Consul says"
 	line "we'll tear down"
 	para "this tower and"
 	line "build a metal one"
@@ -38,7 +38,5 @@ GauldenrodTower1FBrigader2Script:
 GauldenrodTower1FBrigader2Text:
 	text "What are you"
 	line "looking at?"
-	para "Scram, before"
-	line "the rest of us"
-	cont "get here."
+	para "Scram!"
 	done

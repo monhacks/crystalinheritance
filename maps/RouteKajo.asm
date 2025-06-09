@@ -2,7 +2,8 @@ RouteKajo_MapScriptHeader: ; todo: event set in historic route kajo allows you t
     def_scene_scripts
 
     def_callbacks
-	; mapcallback tiles 
+	callback MAPCALLBACK_TILES, RouteKajoCallbackTiles
+
 
     def_warp_events
     warp_event 6, 32, GOLDENROD_MAGNET_TRAIN_STATION, 4
@@ -20,7 +21,7 @@ RouteKajo_MapScriptHeader: ; todo: event set in historic route kajo allows you t
 
     def_bg_events
     bg_event 26, 28, BGEVENT_ITEM + HYPER_POTION, EVENT_ROUTE_KAJO_HIDDEN_HYPER_POTION
-    bg_event  3,  5, BGEVENT_ITEM + FULL_RESTORE, EVENT_ROUTE_KAJO_HIDDEN_FULL_RESTORE
+    bg_event  4, 10, BGEVENT_ITEM + FULL_RESTORE, EVENT_ROUTE_KAJO_HIDDEN_FULL_RESTORE
     bg_event 46, 12, BGEVENT_ITEM + REVIVE, EVENT_ROUTE_KAJO_HIDDEN_REVIVE
     bg_event 56, 28, BGEVENT_ITEM + NUGGET, EVENT_ROUTE_KAJO_HIDDEN_NUGGET
     bg_event 16, 29, BGEVENT_JUMPTEXT, RouteKajoPetroglyph1
@@ -58,6 +59,13 @@ RouteKajo_MapScriptHeader: ; todo: event set in historic route kajo allows you t
 	object_const_def
 	const KAJO_SCHOOLGIRL
 	const KAJO_SUDOWOODO
+
+StadiumGroundsFloodCallback:
+	checkevent EVENT_SHIMMER_SADDLE_BOULDER
+	iffalse .Done
+	changeblock 20, 1, $72
+.Done:
+	endcallback
 
 TrainerCamperBarryScript:
     generictrainer CAMPER, BARRY, EVENT_BEAT_CAMPER_BARRY, CamperBarrySeenText, CamperBarryBeatenText

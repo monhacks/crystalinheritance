@@ -32,7 +32,7 @@ CattleCull38_MapScriptHeader:
 
 
 CattleCull38SignText:
-	text "Emperor's Road-"
+	text "Consul's Road-"
 	line "Follow through"
 	para "Cattle Cull to"
 	line "Trader's Landing"
@@ -45,7 +45,7 @@ GenericTrainerNomadMJoel:
 	line "guided our herds"
 	para "along the cliffs"
 	line "to the shores."
-	para "The Emperor says"
+	para "The Consul says"
 	line "progress needs"
 	cont "gates and guards."
 	done
@@ -67,7 +67,7 @@ NomadJoelBeatenText:
 GenericTrainerNomadMGlenn:
 	generictrainer NOMAD_M, NOMAD_M_GLENN, EVENT_BEAT_NOMAD_M_GLENN, NomadGlennSeenText, NomadGlennBeatenText
 
-	text "Emperor's ships"
+	text "The Consul's ships"
 	line "patrol our seas."
 	para "They say it keeps"
 	line "us safe, but it"
@@ -83,7 +83,7 @@ NomadGlennSeenText:
 
 NomadGlennBeatenText:
 	text "Your power flows"
-	line "like lost tides..."
+	line "like lost tides."
 	done
 
 

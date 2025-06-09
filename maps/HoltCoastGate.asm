@@ -39,7 +39,7 @@ HoltCoastGateNPCScript:
 
 HoltCoastGateNPCText:
 	text "I wonder when the"
-	line "Emperor will"
+	line "Consul will"
 	para "try to annex"
 	line "Anarres Town."
 	done

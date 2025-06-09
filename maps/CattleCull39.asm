@@ -127,7 +127,7 @@ NomadJacobBeatenText:
    done
 
 CattleCull39SignText:
-	text "Emperor's Road-"
+	text "Consul's Road-"
 	line "Follow through"
 	para "Cattle Cull to"
 	line "Trader's Landing"

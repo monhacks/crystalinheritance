@@ -97,10 +97,10 @@ AnarresNPC4Text:
 	text "I'm nervous - the"
 	line "town north of us"
 	para "is being occupied"
-	line "by the emperor."
+	line "by the Consul."
 	
 	para "It's so strange,"
-	line "Johto's emperors"
+	line "Johto's Consuls"
 	para "have never done"
 	line "anything like it."
 	done

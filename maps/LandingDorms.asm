@@ -157,8 +157,8 @@ BarbeauJournal:
 	
 	para "The people grow"
 	line "restless... Is"
-	cont "Amos' plan really"
-	para "enough to repel"
-	line "the barbarians"
-	cont "and the Emperor?"
+	para "Amos' plan really"
+	line "enough to repel"
+	para "the barbarians"
+	line "and the Consul?"
 	done

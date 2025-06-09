@@ -44,21 +44,21 @@ Valerie_GotCurse:
 ValerieCurseText:
 	text "Do you know the"
 	line "legend of our"
-	cont "emperor, 160"
-	cont "years ago?"
+	para "Consul, 160"
+	line "years ago?"
 
 	para "He took the throne"
 	line "at a young age,"
-	cont "and the power"
-	cont "corrupted him."
+	para "and the power"
+	line "corrupted him."
 
 	para "You might even say"
 	line "it was a Curse."
 
 	para "He gave something"
 	line "up in exchange"
-	cont "for becoming"
-	cont "stronger."
+	para "for becoming"
+	line "stronger."
 
 	para "Would you do the"
 	line "same?"
@@ -66,17 +66,17 @@ ValerieCurseText:
 	
 ValeriesHouseRedFairyBookText:
 	text "Just beneath the"
-	line "Tin Tower lies an"
-	cont "engineering marvel"
-	cont "that has perplexed"
+	line "Tin Tower lies a"
+	para "engineering trick"
+	line "that's perplexed"
 	cont "civil engineers."
 
 	para "Seismic imaging"
 	line "has unveiled an"
-	cont "intricate network"
-	cont "of metallic"
-	cont "filaments inter-"
-	cont "twined with its"
+	para "intricate network"
+	line "of metallic"
+	para "filaments inter-"
+	line "twined with its"
 	cont "foundation -"
 
 	para "A sophisticated"
@@ -85,8 +85,8 @@ ValeriesHouseRedFairyBookText:
 
 	para "While such"
 	line "features are well-"
-	cont "documented in"
-	cont "ancient temples"
+	para "documented in"
+	line "ancient temples"
 	cont "of Sinnoh..."
 
 	para "Their presence in"

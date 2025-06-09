@@ -112,10 +112,10 @@ GauldenrodStockroomNPC4Text:
 	line "thriving craft"
 	cont "guild."
 
-	para "But the emperor"
+	para "But the Consul"
 	line "ships cheap items,"
-	cont "and the guild had"
-	cont "to close."
+	para "and the guild had"
+	line "to close."
 	done
 
 GauldenrodStockroomNPC5Script:

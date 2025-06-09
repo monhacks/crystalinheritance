@@ -225,8 +225,8 @@ StadiumAheadSignText:
 	text "Stadium Grounds"
 	line "Ahead"
 	
-	para "Brought to you"
-	line "by the Emperor!"
+	para "Brought to you by"
+	line "Consul Urgaust!"
 	done
 
 SereneSpringsSign:

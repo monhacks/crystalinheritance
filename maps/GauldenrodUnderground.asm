@@ -33,7 +33,7 @@ GenericTrainerAromaLadyDahlia:
 
 	text "The elders have"
 	line "been trying to"
-	para "talk the emperor"
+	para "talk the Consul"
 	line "out of tearing"
 	cont "down their tower."
 

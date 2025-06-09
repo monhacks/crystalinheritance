@@ -15,9 +15,6 @@ RusalkaRuinsB1F_MapScriptHeader:
 
 
 	def_coord_events
-; todo stalking spiritomb 
-;	coord_event 0, 0, 0, Rusalka_B1F_Spiritomb_1 ; setscene $1
-;	coord_event 0, 0, 1, Rusalka_B1F_Spiritomb_2 ; setscene $2 
 
 
 	def_bg_events

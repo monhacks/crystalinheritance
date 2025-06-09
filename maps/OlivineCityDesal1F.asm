@@ -27,15 +27,6 @@ OlivineCityDesal1F_MapScriptHeader:
 	object_const_def
 
 
-Desal1FNPCText:
-	text "How horrible!"
-	line "Someone stole a"
-	cont "machine part from"
-	cont "the Desal plant."
-	done
-
-
-
 OlivineDesal_Text_1:
 	text_high
     text " Jasmine: "
@@ -133,4 +124,15 @@ OlivineDesal_Text_7:
 	cont "from this plant!"
 	done
 	
+
+
+
+
+
+Desal1FNPCText:
+	text "How horrible!"
+	line "Someone stole a"
+	cont "machine part from"
+	cont "the Desal plant."
+	done
 

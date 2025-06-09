@@ -23,10 +23,10 @@ WesternCapitalStockroom_MapScriptHeader: ;	def_scene_scripts
 WesternCapitalStockroomNPC1Text:
 	text "The presence of"
 	line "the outsiders at"
-	cont "the port corrupts"
-	cont "us with fear."
+	para "the port corrupts"
+	line "us with fear."
 	
-	para "The emperor is"
+	para "The Consul is"
 	line "the only one who"
 	cont "stays true!"	
 	done

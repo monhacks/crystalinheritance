@@ -56,7 +56,7 @@ GoldenrodMuseum1FNPC2Text:
     line "the people of"
     para "Goldenrod united"
     line "against the"
-    cont "emperor!"
+    cont "Consul!"
     done
 
 GoldenrodMuseum1FExhibit1Text:

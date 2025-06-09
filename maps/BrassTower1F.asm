@@ -103,15 +103,15 @@ KurtTowerDeclineText:
 	line "we started."
 	
 	para "If we let the"
-	line "Emperor reign,"
-	cont "Johto will be"
-	cont "on a path to"
+	line "Consul reign,"
+	para "Johto will be"
+	line "on a path to"
 	cont "destruction."
 
 	para "We need to get"
 	line "to him before we"
-	cont "get caught in the"
-	cont "rainstorm."
+	para "get caught in the"
+	line "rainstorm."
 	done
 
 KurtTowerText2:

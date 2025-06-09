@@ -153,7 +153,7 @@ TL_Text3:
 	line "difficult."
 	
 	para "Lugia now serves"
-	line "the Emperor."
+	line "the Consul."
 	done
 
 TL_Text4:
@@ -229,7 +229,7 @@ TL_Text9:
 	text "Kurt: <PLAYER>:"
 	line "Lugia in this "
 	para "timeline is with"
-	line "the emperor."
+	line "the Consul."
 	
 	para "But with your "
 	line "silver wing,"
@@ -598,7 +598,7 @@ TL_AmosWantedSign:
 	text "WANTED: This man"
 	line "is wanted for"
 	cont "crimes against"
-	cont "the emperor."
+	cont "the Consul."
 
 	para "If you see him,"
 	line "please notify a"

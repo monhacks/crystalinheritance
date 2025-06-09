@@ -53,6 +53,6 @@ TakashiBeatenText:
     done
 	
 TakashiSeenText:
-    text "The emperor must"
+    text "The Consul must"
 	line "be revered!"
 	done

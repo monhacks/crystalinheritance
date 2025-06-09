@@ -177,7 +177,7 @@ KimonoGirlEmiRewardText:
 	
 	para "It struck the"
 	line "Brass tower as"
-	para "the Emperor"
+	para "the Consul"
 	line "raised his"
 	cont "hands."
 

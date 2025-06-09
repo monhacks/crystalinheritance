@@ -151,8 +151,8 @@ AdrinnaTakesOverText:
 	line "me on the roof."
 	para "We will show"
 	line "them how little"
-	para "they need an"
-	line "Emperor."
+	para "they need"
+	line "Consul Urgaust."
 	done
 
 AreYouSureAdrinna:
@@ -174,5 +174,5 @@ NoToAdrinnaText:
 	text "Disappointing."
 	line "No matter - I'll"
 	cont "destroy you, and"
-	cont "then the emperor!"
+	cont "then the Consul!"
 	done

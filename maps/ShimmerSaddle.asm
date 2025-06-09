@@ -1,7 +1,8 @@
-ShimmerSaddle_MapScriptHeader: ; todo add a boulder and 
+ShimmerSaddle_MapScriptHeader:
 	def_scene_scripts
 
 	def_callbacks
+	callback MAPCALLBACK_STONETABLE, ShimmerSaddleBoulders
 
 	def_warp_events ; should be ok 
 	warp_event  6, 32, GAULDENROD, 10 ; 1
@@ -26,8 +27,8 @@ ShimmerSaddle_MapScriptHeader: ; todo add a boulder and
 	warp_event 22, 19, SHIMMER_SADDLE, 12 ; 15
 	warp_event 22, 7, SHIMMER_SADDLE, 9  ; 16 
 ; hole
-	warp_event 44, 9, SHIMMER_SADDLE, 18
-	warp_event 44, 9, SHIMMER_SADDLE, 18	
+	warp_event 40, 1, SHIMMER_SADDLE, 18 ; 17 
+	warp_event 44, 9, SHIMMER_SADDLE, 18 ; 18 
 
 	def_coord_events
 	coord_event 	 9,	33, 0, ShimmerSaddle_Scene1_ManHZ
@@ -60,6 +61,8 @@ ShimmerSaddle_MapScriptHeader: ; todo add a boulder and
 	object_event  13, 21, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, ShimmerSaddleGramps2Script, EVENT_SHIMMER_GRAMPS_2 ;
 	object_event  12, 5, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, H__ZOROARK, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_SHIMMER_HZ_3 ; initialize
 	object_event  12, 3, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_SHIMMER_MATRON_2 ;	
+; boulder 
+	strengthboulder_event 42, 1, EVENT_SHIMMER_SADDLE_BOULDER
 ; items, etc
 	itemball_event   2, 20, ELIXIR, 1, EVENT_SHIMMER_ITEM_1
 	itemball_event  31, 27, SITRUS_BERRY, 1, EVENT_SHIMMER_ITEM_2
@@ -68,6 +71,7 @@ ShimmerSaddle_MapScriptHeader: ; todo add a boulder and
 ;strengthboulders
 	strengthboulder_event 13, 20 
 	strengthboulder_event 18, 8 
+
 ;fruittrees
 	fruittree_event 24, 30, FRUITTREE_SADDLE_1, LIECHI_BERRY, PAL_NPC_RED
 	fruittree_event 49, 34, FRUITTREE_SADDLE_2, SALAC_BERRY, PAL_NPC_RED
@@ -81,6 +85,31 @@ ShimmerSaddle_MapScriptHeader: ; todo add a boulder and
 	const SHIMMER_GRAMPS_2
 	const SHIMMER_HZ_3
 	const SHIMER_MATRON_2
+	const SHIMMER_BOULDER_1
+
+
+ShimmerSaddleBoulders:
+	usestonetable .BoulderTable
+	endcallback
+
+.BoulderTable:
+	stonetable 18, SHIMMER_BOULDER_1, .Disappear
+	db -1 ; end
+
+.Disappear:
+	disappear SHIMMER_BOULDER_1
+	pause 30
+	playsound SFX_STRENGTH
+	earthquake 80
+	jumpthistext
+
+	text "The boulder fell"
+	line "through!"
+	
+	para "There's a sound"
+	line "of water filling"
+	cont "up a basin..."
+	done
 
 ShimmerSaddleSignText:
 	text "Shimmer Saddle:"

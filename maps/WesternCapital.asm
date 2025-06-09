@@ -145,7 +145,12 @@ Prologue_Text1:
 	next
 	text_start
 
-	line "Guide me father."
+	text "Guide me, father."
+
+	para "Being the Consul"
+	line "of Johto is a"
+	cont "heavy role."
+		
 	para "How would you"
 	line "deal with the"
 	cont "outsiders?"
@@ -171,7 +176,8 @@ Prologue_Text2_2:
 	text "Your majesty. It's"
 	line "urgent. Your"
 	para "strata-Um, the"
-	line "other strategies."
+	line "other generals'"
+	cont "strategies."
 	
 	para "The other cities"
 	line "resist us."
@@ -183,9 +189,10 @@ Prologue_Text2_3:
 	next
 	text_start
 	
-	text "What are you say-"
-	line "ing? We've never"
-	cont "used force."
+	text "What do you mean?"
+	line "The office of the"
+	para "Consul is not for"
+	line "coercion."
 	done
 
 Prologue_Text3:
@@ -200,10 +207,12 @@ Prologue_Text3:
 	line "to remake Johto."
 	
 	para "A blank slate to"
-	line "build an empire. "
-	
+	line "build an empire-"
+
 	para "The region will"
-	line "come around."
+	line "come around,"
+	para "if an emperor"
+	line "presents himself."
 	done
 
 Prologue_Text4:
@@ -398,13 +407,12 @@ WC_AmosWantedSign:
 
 	text "WANTED: This man"
 	line "is wanted for"
-	cont "crimes against"
-	cont "the emperor."
+	para "crimes against"
+	line "the Consul."
 
 	para "If you see him,"
 	line "please notify a"
-	cont "brigader"
-	cont "immediately."
+	cont "brigader!"
 
 	para "Known alias:"
 	line "Amos."

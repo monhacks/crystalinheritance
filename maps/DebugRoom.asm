@@ -1,4 +1,4 @@
-DebugRoom_MapScriptHeader: ; should be like  "BurnedTowerB1F_MapScriptHeader"
+DebugRoom_MapScriptHeader: 
 	def_scene_scripts
 
 
@@ -7,7 +7,7 @@ DebugRoom_MapScriptHeader: ; should be like  "BurnedTowerB1F_MapScriptHeader"
 
 	def_warp_events
 	warp_event  9, 0, AZALEA_TOWN, 5
-	warp_event  1, 8, ANARRES_TOWN, 7 ;
+	warp_event  1, 8, BRASS_TOWER_ROOF, 1 ; normally to anarres town 
 
 
 	def_coord_events

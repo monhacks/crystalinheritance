@@ -39,6 +39,8 @@ LandingDocksScene:
 	applyonemovement PLAYER, step_up
 	showemote EMOTE_BOLT, LANDING_DOCKS_SURGE, 10
 	showtext Docks_Text1
+	waitbutton
+	showtext Docks_Text1_2
 	turnobject LANDING_DOCKS_KENSEY, UP
 	showtext Docks_Text2
 	appear LANDING_DOCKS_KURT
@@ -56,6 +58,8 @@ LandingDocksScene:
 	setevent EVENT_DOCKS_LUGIA
 	showemote EMOTE_SHOCK, LANDING_DOCKS_BARBEAU, 30
 	showtext Docks_Text4
+	waitbutton
+	showtext Docks_Text4_2
 	showemote EMOTE_SHOCK, LANDING_DOCKS_SURGE, 10
 	applymovement LANDING_DOCKS_SURGE, Docks_CaptainMove1
 	disappear LANDING_DOCKS_SURGE
@@ -64,6 +68,8 @@ LandingDocksScene:
 	showtext Docks_Text5
 	showemote EMOTE_QUESTION, LANDING_DOCKS_KENSEY, 10
 	showtext Docks_Text6
+	waitbutton
+	showtext Docks_Text6_2
 	turnobject LANDING_DOCKS_KENSEY, DOWN
 	showtext Docks_Text7
 	applyonemovement LANDING_DOCKS_KURT, step_right
@@ -76,6 +82,8 @@ LandingDocksScene:
 	showtext Docks_Text10
 	showemote EMOTE_BOLT, LANDING_DOCKS_BARBEAU, 10
 	showtext Docks_Text11
+	waitbutton
+	showtext Docks_Text11_2
 	applyonemovement LANDING_DOCKS_KURT, step_left
 	turnobject LANDING_DOCKS_KURT, RIGHT
 	applyonemovement PLAYER, step_up
@@ -368,7 +376,7 @@ Docks_Text12:
 	cont "an expedition."
 	done
 
-Docks_Text12_2: ; todo all the other _2 texts here 
+Docks_Text12_2:
 	para "Kurt: Excellent,"
 	line "<PLAYER>. I'll"
 	cont "heal you again."
