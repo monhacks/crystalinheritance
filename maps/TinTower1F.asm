@@ -20,17 +20,9 @@ TinTower1F_MapScriptHeader:
 	object_event 11, 12, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, TinTower1FSage3Text, -1 	
 
 
-	object_const_def
-	const TINTOWER1F_SUICUNE
-	const TINTOWER1F_RAIKOU
-	const TINTOWER1F_ENTEI
-	const TINTOWER1F_EUSINE
-	const TINTOWER1F_SAGE1
-	const TINTOWER1F_SAGE2
-	const TINTOWER1F_SAGE3
 
 TinTowerStairsCallback:
-	checkevent EVENT_GOT_RAINBOW_WING
+	checkevent EVENT_GOT_TM30_SHADOW_BALL ; BEAT MORTY 
 	iftrue .NoChange
 	changeblock 8, 2, $9
 .NoChange:

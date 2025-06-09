@@ -412,7 +412,7 @@ MejimiGroup:
 ; ================
 
 	; MEJIMI
-	db "Mejimi@"
+	db "Urgaust@" ; fka mejimi 
 	db TRAINERTYPE_ITEM | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
 	; party
 	db 60, LUGIA, NO_ITEM, "Tsukitori@"

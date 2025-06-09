@@ -54,7 +54,7 @@ KurtWWText:
 	
 	para "We are getting"
 	line "close to taking"
-	cont "down Mejimi."
+	cont "down Urgaust."
 	
 	para "Want to battle,"
 	line "a quick spar?"

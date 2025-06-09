@@ -86,7 +86,7 @@ GenericTrainerKimono_girlSayo:
 	text "When Gauld-"
 	cont "enrod was divided"
 	cont "by the power-"
-	cont "hungry emperor,"
+	cont "hungry Consul,"
 
 	para "the hero showed"
 	line "them their"
@@ -101,7 +101,7 @@ Kimono_girl_1SayoBeatenText:
 	text "When Gauld-"
 	cont "enrod was divided"
 	cont "by the power-"
-	cont "hungry emperor,"
+	cont "hungry Consul,"
 
 	para "the hero showed"
 	line "them their"
@@ -116,7 +116,7 @@ GenericTrainerKimono_girlZuki:
 	line "into the Western"
 	cont "Capital, and"
 	para "learned of the"
-	line "emperor's plans"
+	line "Consul's plans"
 	cont "without his"
 	cont "knowing."
 	para "At that time,"
@@ -125,9 +125,8 @@ GenericTrainerKimono_girlZuki:
 	para "Lugia and Ho-Oh,"
 	line "but Ho-Oh was"
 	cont "growing restless"
-	para "from the emper-"
-	line "or's drumbeat"
-	cont "of war."
+	para "from the Consul's"
+	line "drumbeat of war."
 	done
 
 Kimono_girl_1ZukiSeenText:
@@ -139,7 +138,7 @@ Kimono_girl_1ZukiBeatenText:
 	text "Our hero slipped"
 	line "into the Capital,"
 	para "and learned the"
-	line "Emperor's plans."
+	line "Consul's plans."
 	done
 
 
@@ -148,10 +147,10 @@ GenericTrainerKimono_girlIzumi:
 
 	text "A harsh storm"
 	line "destroyed the"
-	cont "emperor's port."
-	para "Now, the emperor"
-	line "had to expand to"
-	cont "the east."
+	cont "Consul's port."
+	para "Now, the Consul"
+	line "had to focus on"
+	cont "the East."
 	done
 
 
@@ -163,10 +162,10 @@ Kimono_girl_1IzumiSeenText:
 Kimono_girl_1IzumiBeatenText:
 	text "A harsh storm"
 	line "destroyed the"
-	cont "emperor's port."
-	para "Now, the emperor"
+	cont "Consul's port."
+	para "Now, the consul"
 	line "had to expand to"
-	cont "the east."
+	cont "the East."
 	done
 
 
@@ -177,7 +176,7 @@ GenericTrainerKimono_girlKuni:
 	line "a coalition"
 	para "in the Northeast"
 	line "against the"
-	cont "emperor."
+	cont "Consul."
 	done
 
 Kimono_girl_1KuniSeenText:
@@ -190,7 +189,7 @@ Kimono_girl_1KuniBeatenText:
 	line "a coalition"
 	para "in the Northeast"
 	line "against the"
-	cont "emperor."
+	cont "Consul."
 	done
 
 	
@@ -201,11 +200,11 @@ GenericTrainerKimono_gir1Miki:
 	cont "ic activity was"
 
 	para "a lightningrod"
-	line "for the emper-"
-	cont "or's self-"
-	cont "aggrandizing."
+	line "for the Consul's"
+	cont "delusions of"
+	cont "grandeur."
 
-	para "So the emperor's"
+	para "So the Consul's"
 	line "reach was cut"
 	cont "off from the"
 
@@ -221,7 +220,7 @@ Kimono_girl_1MikiSeenText:
 Kimono_girl_1MikiBeatenText:
 	text "The eastern mine"
 	line "was pillaged."
-	para "The emperor, cut"
+	para "The Consul, cut"
 	line "off from all"
 	para "sides, had to "
 	line "make a daring"
@@ -235,7 +234,7 @@ GenericTrainerKimono_girlAkari:
 	text "Flames filled"
 	line "the tower,"
 	cont "undoing the"
-	cont "emperor's work."
+	cont "Consul's work."
 	para "The legendary"
 	line "#mon refuse"
 	cont "to put it out."
@@ -260,7 +259,7 @@ Kimono_girl_1AkariBeatenText:
 	text "Flames filled"
 	line "the tower,"
 	para "undoing the"
-	line "emperor's work."
+	line "Consul's work."
 	para "The legendary"
 	line "#mon refuse"
 	cont "to put it out."

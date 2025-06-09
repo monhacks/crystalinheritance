@@ -54,14 +54,14 @@ WesternCapitalCemetery_MapScriptHeader: ;	def_scene_scripts
 
 
 CemeteryNPC1Text:
-	text "Emperor Mejimi"
+	text "Consul Urgaust"
 	line "has not visited"
 	cont "in some time."
 	done
 
 CemeteryNPC2Text:
-	text "When Emperor"
-	line "Mejimi's grand-"
+	text "When Consul"
+	line "Urgaust's grand-"
 	cont "father died,"
 	
 	para "Ho-Oh graced us"
@@ -72,7 +72,7 @@ CemeteryNPC2Text:
 	line "fell into the"
 	cont "casket."
 	
-	para "When Mejimi was"
+	para "When Urgaust was"
 	line "born one year"
 	cont "afterward,"
 	
@@ -83,7 +83,7 @@ CemeteryNPC2Text:
 	
 
 CemeteryNPC3Text:
-	text "If Mejimi goes"
+	text "If Urgast goes"
 	line "through with his"
 	cont "plans for self-"
 	cont "exaltation,"
@@ -98,17 +98,17 @@ CemeteryNPC3Text:
 	
 WC_Cemetery0Text:
 	text "Glory to"
-	line "Emperor Mejimi!"
+	line "Consul Urgaust!"
 	
 	para "Builder of Tin"
 	line "and Brass Towers"
 	done
 
 WC_Cemetery1Text:
-	text "For Emperor"
+	text "For Consul"
 	line "Ambrosia,"
 	para "Father of "
-	cont "Mejimi,"
+	cont "Urgaust,"
 	
 	para "Withering as he"
 	line "guided Johto"
@@ -116,7 +116,7 @@ WC_Cemetery1Text:
 	done
 	
 WC_Cemetery2Text:
-	text "For Emperor"
+	text "For Consul"
 	line "Fabian,"
 	para "Father of "
 	line "Ambrosia,"
@@ -126,7 +126,7 @@ WC_Cemetery2Text:
 	done
 	
 WC_Cemetery3Text:
-	text "For Emperor"
+	text "For Consul"
 	line "Bronte,"
 	para "Father of "
 	line "Fabian,"
@@ -137,7 +137,7 @@ WC_Cemetery3Text:
 	done
 	
 WC_Cemetery4Text:
-	text "For Emperor"
+	text "For Consul"
 	line "Mansour,"
 	para "Father of "
 	line "Bronte,"
@@ -148,7 +148,7 @@ WC_Cemetery4Text:
 	done
 	
 WC_Cemetery5Text:
-	text "For Emperor"
+	text "For Consul"
 	line "Oscar,"
 	para "Father of "
 	line "Mansour,"
@@ -159,7 +159,7 @@ WC_Cemetery5Text:
 	done
 
 WC_Cemetery6Text:
-	text "For Emperor"
+	text "For Consul"
 	line "Leigh,"
 	para "Father of "
 	line "Oscar,"
@@ -172,7 +172,7 @@ WC_Cemetery6Text:
 	done
 	
 WC_Cemetery7Text:
-	text "For Emperor"
+	text "For Consul"
 	line "Faron,"
 	para "Father of "
 	line "Leigh,"
@@ -183,7 +183,7 @@ WC_Cemetery7Text:
 	done
 	
 WC_Cemetery8Text:
-	text "For Emperor"
+	text "For Consul"
 	line "Fiora,"
 	para "Father of "
 	line "Faron,"

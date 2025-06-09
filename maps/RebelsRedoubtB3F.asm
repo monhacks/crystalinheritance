@@ -147,7 +147,7 @@ SandraRedoubtText_Intro:
 	
 	para "back control of"
 	line "the region from"
-	cont "Emperor Mejimi."
+	cont "Consul Urgaust."
 	
 	para "We must know if"
 	line "you would do the"

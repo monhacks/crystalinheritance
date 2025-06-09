@@ -42,11 +42,11 @@ GenericTrainerElderAkira:
 AkiraBeatenText:
 	text "Oh, but I sense a"
 	line "stormcloud in"
-	cont "Mejimi's heart..."
+	cont "Urgaust's heart."
 	done
 	
 AkiraSeenText:
-    text "The emperor will"
+    text "The Consul will"
 	line "clear the sky, a"
 	cont "bright new dawn!"
     done

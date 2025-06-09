@@ -141,7 +141,7 @@ Prologue_Text0:
 
 Prologue_Text1:
 	text_high
-    text " Mejimi: "
+    text " Urgaust: "
 	next
 	text_start
 
@@ -153,7 +153,7 @@ Prologue_Text1:
 
 Prologue_Text2:
 	text_high
-    text " Mejimi: "
+    text " Urgaust: "
 	next
 	text_start
 	text "Ah --  General"
@@ -179,7 +179,7 @@ Prologue_Text2_2:
 
 Prologue_Text2_3:	
 	text_high
-    text " Mejimi: "
+    text " Urgaust: "
 	next
 	text_start
 	
@@ -208,7 +208,7 @@ Prologue_Text3:
 
 Prologue_Text4:
 	text_high
-    text " Mejimi: "
+    text " Urgaust: "
 	next
 	text_start	
 	text "This is true…"
@@ -273,8 +273,8 @@ WesternCapitalNPC2Text:
 	text "The towers are"
 	line "so tall!"
 	
-	para "Hail Emperor"
-	line "Mejimi!"
+	para "Hail Consul"
+	line "Urgaust!"
 	done
 
 WesternCapitalNPC3Text:
@@ -290,8 +290,8 @@ WesternCapitalNPC3Text:
 	done
 
 WesternCapitalNPC3Text_2:
-	text "Glory to Emperor"
-	line "Mejimi! He will"
+	text "Glory to Consul"
+	line "Urgaust! He will"
 	cont "protect Johto!"
 	done
 
@@ -349,13 +349,13 @@ WCBrigaderText:
 WCBrigaderText_2:
 	text "The tower is off-"
 	line "limits! Glory to"
-	cont "the Emperor!"
+	cont "the Consul!"
 	done
 
 WCBrassTowerText:
 	text "Brass Tower"
 	line "Devoted to"
-	cont "Emperor Mejimi"
+	cont "Consul Urgaust"
 	done
 
 WCTinTowerText:
@@ -365,7 +365,7 @@ WCTinTowerText:
 	done
 
 WCGardenText:
-	text "Emperor's Garden"
+	text "Consul's Garden"
 	line "Home to refined"
 	cont "#mon"
 	done
@@ -379,7 +379,7 @@ WCDanceText:
 WCGloryToMejimiText:
 	text "Welcome the new"
 	line "age - Glory to"
-	cont "Emperor Mejimi!"
+	cont "Consul Urgaust!"
 	done
 	
 WCSignText:

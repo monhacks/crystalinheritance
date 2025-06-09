@@ -36,8 +36,8 @@ YoshiBeatenText:
 	done
 	
 YoshiSeenText:
-    text "We follow Mejimi,"
-	line "our model of"
+    text "We follow Urgaust"
+	line "as a model of"
 	cont "virtue!"
     done
 

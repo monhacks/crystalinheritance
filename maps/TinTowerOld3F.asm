@@ -313,7 +313,7 @@ GenericTrainerSageJeffrey:
     done
 
 SageJeffreySeenText:
-    text "Mejimi says his"
+    text "Urgaust says his"
 	line "ascension will"
 	cont "bring a new era"
 	cont "of progress."
@@ -345,10 +345,10 @@ GenericTrainerSagePing:
     done
 
 SagePingSeenText:
-    text "The emperor has"
+    text "The Consul has"
 	line "always been a "
-	cont "sacred bridge"
-	cont "between heaven"
+	para "sacred bridge"
+	line "between heaven"
 	cont "and earth."
 	
 	para "But can divinity"
@@ -378,7 +378,7 @@ GenericTrainerSageJin:
     done
 
 SageJinSeenText:
-    text "Mejimi's ambition"
+    text "Urgaust's ambition"
 	line "to rise above"
 	cont "nature itself - "
 	
@@ -477,7 +477,7 @@ SamsaraIntroText:
 	next
 	text_start 
 	text "So, you're here"
-	line "to stop Mejimi"
+	line "to stop Urgaust"
 	cont "and preserve"
 	cont "Johto's culture?"
 	
@@ -497,16 +497,16 @@ SamsaraIntroText:
 	
 	para "I prayed to the"
 	line "heavens! Why does"
-	cont "Mejimi deny the"
-	para "next day its"
-	line "light in his"
-	cont "quest for Godli-"
+	para "Urgaust deny the"
+	line "next day its"
+	para "light in his"
+	line "quest for Godli-"
 	cont "ness?"
 	
 	para "Show me you und-"
 	line "erstand what he"
-	cont "does not, and I"
-	cont "will help you."
+	para "does not, and I"
+	line "will help you."
 	done	
 	
 	
@@ -517,8 +517,8 @@ SamsaraWinLossText:
 	
 	para "They know they "
 	line "will persevere"
-	cont "with their uni-"
-	cont "que talents."
+	para "with their uni-"
+	line "que talents."
 
 	para "This is what Mej-"
 	line "imi forgot."
@@ -538,7 +538,7 @@ SamsaraAfterText:
 	text_start 
 	text "There is still"
 	line "time to change"
-	cont "the Emperor."
+	cont "the Consul."
 	
 	para "Please, we are"
 	line "counting on you."

@@ -49,9 +49,9 @@ KurtExplainsTheStormText:
 	
 	para "Surely it will"
 	line "wreck any boats"
-	cont "trying to ferry"
-	cont "Steel for the"
-	cont "emperor."
+	para "trying to ferry"
+	line "Steel for the"
+	cont "Consul."
 	
 	para "Come, <PLAYER>."
 	line "We must use this"

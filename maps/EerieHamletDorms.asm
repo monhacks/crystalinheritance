@@ -36,11 +36,11 @@ EerieHamletDorms_MapScriptHeader:
 
 HamletDormsNPC1Text:
 	text "Ever since the"
-	line "Emperor started"
+	line "Consul started"
 	cont "occupying cities,"
 	
 	para "trainers have"
-	line "been coming from"
+	line "been fleeing from"
 	cont "all over Johto."
 	done
 

@@ -62,6 +62,8 @@ GrottoedGlacierB1FScene0:
 	turnobject GLACIER_B2F_KANNA, LEFT
 	showemote EMOTE_SLEEP, GLACIER_B2F_BASCULEGION_SLEEPY, 10 
 	showtext GlacierB2F_Text3
+	waitbutton
+	showtext GlacierB2F_Text3_2
 	turnobject GLACIER_B2F_KANNA, DOWN
 	showemote EMOTE_BOLT, GLACIER_B2F_KANNA, 10
 	showtext GlacierB2F_Text4
@@ -90,6 +92,8 @@ GrottoedGlacierB1FScene1:
 	showtext GlacierB2F_Text6
 	showemote EMOTE_BOLT, GLACIER_B2F_KANNA, 10 	
 	showtext GlacierB2F_Text7
+	waitbutton
+	showtext GlacierB2F_Text7_2	
 	special HealParty
 	winlosstext KannaWinText, 0
 	setlasttalked GLACIER_B2F_KANNA
@@ -108,10 +112,13 @@ GrottoedGlacierB1FScene1:
 	closetext
 	earthquake 100
 	showemote EMOTE_SHOCK, GLACIER_B2F_KANNA, 10 
-	opentext 
-	writetext GlacierB2F_Text8
+	showtext GlacierB2F_Text8
 	waitbutton
-	closetext
+	showtext GlacierB2F_Text8_2
+	waitbutton
+	showtext GlacierB2F_Text8_3
+	waitbutton
+	showtext GlacierB2F_Text8_4
 	applyonemovement GLACIER_B2F_ADRINNA, teleport_from
 	disappear GLACIER_B2F_ADRINNA
 	setevent EVENT_GLACIER_ADRINNA
@@ -159,7 +166,7 @@ GlacierB2F_Text3:
 	line "gives their"
 	cont "lives meaning."
 
-GlacierB2F_Text3_2: ; todo 
+GlacierB2F_Text3_2:
 	text_high
     text " Adrinna: " 
 	next
@@ -251,7 +258,7 @@ GlacierB2F_Text8:
 	line "is cracking!"
 	done
 
-GlacierB2F_Text8_2: ; todo 
+GlacierB2F_Text8_2:
 	text_high
     text " Adrinna: " 
 	next
@@ -265,7 +272,7 @@ GlacierB2F_Text8_2: ; todo
 	cont "feels like."
 	done
 
-GlacierB2F_Text8_3: ; todo 
+GlacierB2F_Text8_3:
 	text_high
     text " Kanna: " 
 	next
@@ -279,7 +286,7 @@ GlacierB2F_Text8_3: ; todo
 	cont "destroyed!"
 	done
 
-GlacierB2F_Text8_4: ; todo 
+GlacierB2F_Text8_4:
 	text_high
     text " Adrinna: " 
 	next
@@ -300,7 +307,7 @@ GlacierB2F_Text9:
 	line "happens..."
 	done
 	
-KannaWaterfallText: ;  todo other text 
+KannaWaterfallText:
 	text "I hate that you"
 	line "beat me, but I"
 	para "took an oath. You"

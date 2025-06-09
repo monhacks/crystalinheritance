@@ -16,4 +16,4 @@ TinTower5F_MapScriptHeader:
 	bg_event  1, 15, BGEVENT_ITEM + CARBOS, EVENT_TIN_TOWER_5F_HIDDEN_CARBOS
 
 	def_object_events
-	itemball_event  7,  9, RARE_CANDY, 1, EVENT_TIN_TOWER_5F_RARE_CANDY
+	itemball_event  7,  9, HP_UP, 1, EVENT_TIN_TOWER_5F_RARE_CANDY

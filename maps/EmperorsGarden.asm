@@ -81,8 +81,8 @@ EG_KurtText:
 	
 	para "Then, we can get"
 	line "to the port, to"
-	cont "stop that steel"
-	cont "from arriving!"
+	para "stop that steel"
+	line "from arriving!"
 	done
 
 EmperorsGardenMejimiScene:
@@ -93,10 +93,10 @@ EmperorsGardenMejimiScene:
 	pause 10 
 	; START SCENE
 	applymovement EMPERORS_GARDEN_MEJIMI, MejimiWalksInMovement
-;	refreshscreen
-;	trainerpic MEJIMI
-;	waitbutton
-;	closepokepic
+	refreshscreen
+	trainerpic MEJIMI
+	waitbutton
+	closepokepic
 	pause 30
 	showemote EMOTE_QUESTION, EMPERORS_GARDEN_MEJIMI, 10
 	showtext EG_Text1
@@ -155,7 +155,7 @@ MejimiWalksInMovement:
 
 EG_Text1:
 	text_high
-    text " Mejimi: "
+    text " Urgaust: "
 	next
 	text_start
 	text "Ah, my generals."
@@ -163,7 +163,7 @@ EG_Text1:
 
 EG_Text11:
 	text_high
-    text " Mejimi: "
+    text " Urgaust: "
 	next
 	text_start
 	text "How goes it in"
@@ -172,18 +172,18 @@ EG_Text11:
 
 EG_Text2:
 	text_high
-    text " Mejimi: "
+    text " Bobesh: "
 	next
 	text_start
-	text "My liege. The"
-	cont "stadium... it"
+	text "Consul Urgaust."
+	line "The stadium... It"
 	para "fell into a"
 	line "sinkhole."
 	done
 
 EG_Text3:
 	text_high
-    text " Mejimi: "
+    text " Urgaust: "
 	next
 	text_start
 	text "Disastrous! But"
@@ -194,7 +194,7 @@ EG_Text3:
 
 EG_Text4:
 	text_high
-    text " Mejimi: "
+    text " Urgaust: "
 	next
 	text_start
 	text "And the port?"
@@ -217,7 +217,7 @@ EG_Text4_2:
 	
 EG_Text5:
 	text_high
-    text " Mejimi: "
+    text " Urgaust: "
 	next
 	text_start
 	text "What about the"
@@ -238,7 +238,7 @@ EG_Text5_2:
 
 EG_Text6:
 	text_high
-    text " Mejimi: "
+    text " Urgaust: "
 	next
 	text_start
 	text "Excellent news."
@@ -328,7 +328,6 @@ EG_Bobesh_Text1_2:
 	line "bigger stadium,"
 	cont "we could've..."
 	done
-; todo new tests 
 
 EG_Bobesh_Text1_3:
 	text_high
@@ -512,6 +511,10 @@ EG_AdrinnaText1:
 
 
 EG_AdrinnaText2:
+	text_high
+    text " Adrinna: "
+	next
+	text_start
 	text "For entertaining"
 	line "me, a gift."
 	
@@ -521,6 +524,10 @@ EG_AdrinnaText2:
 	done
 
 EG_AdrinnaText3:
+	text_high
+    text " Adrinna: "
+	next
+	text_start
 	text "Now, please"
 	line "relax, maybe on"
 	para "the beaches"
@@ -650,8 +657,8 @@ AmosSuspectsYouText:
     text " Amos: "
 	next
 	text_start
-	text "You! You’ve been"
-	cont "with Hollis, then"
+	text "You! You've been"
+	line "with Hollis, then"
 	cont "Sandra, "
 	
 	para "And you meet"
@@ -666,11 +673,15 @@ AmosSuspectsYouText:
 AmosWLText:
 	text "Hm, I see... Your"
 	line "home is threat-"
-	cont "ened by a king of"
-	cont "a different kind."
+	para "ened by a king of"
+	line "a different kind."
 	done
 
 AmosGardenAfterBattleText:
+	text_high
+    text " Amos: "
+	next
+	text_start
 	text "I know you want"
 	line "to save your"
 	cont "home, but to me,"

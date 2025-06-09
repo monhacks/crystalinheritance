@@ -139,7 +139,7 @@ BTR_KurtStepsDownMovement:
 
 TowerRoofMejimiText1_0: 
 	text_high
-    text " Mejimi: " 
+    text " Urgaust: " 
 	next
 	text_start
 	text "Johto! We will be"
@@ -160,7 +160,7 @@ TowerRoofMejimiText1_0:
 
 TowerRoofMejimiText1_1:
 	text_high
-    text " Mejimi: " 
+    text " Urgaust: " 
 	next
 	text_start
 	text "Hm? How did my"
@@ -183,7 +183,7 @@ TowerRoofMejimiText1_4:
 
 TowerRoofMejimiText1_5:
 	text_high
-    text " Mejimi: " 
+    text " Urgaust: " 
 	next
 	text_start
 	text "Silence at once!"
@@ -205,7 +205,7 @@ TowerRoofMejimiText1_6:
 
 TowerRoofMejimiText1_7: 
 	text_high
-    text " Mejimi: " 
+    text " Urgaust: " 
 	next
 	text_start
 	text "I'll end you"
@@ -218,7 +218,7 @@ TowerRoofMejimiText1_8:
 
 TowerRoofMejimiText1_9: 
 	text_high
-    text " Mejimi: " 
+    text " Urgaust: " 
 	next
 	text_start
 	text "Lugia, put out"
@@ -228,7 +228,7 @@ TowerRoofMejimiText1_9:
 
 TowerRoofMejimiText1_9_2:
 	text_high
-    text " Mejimi: " 
+    text " Urgaust: " 
 	next
 	text_start
 	text "This is absurd!"
@@ -237,6 +237,10 @@ TowerRoofMejimiText1_9_2:
 	done
 
 TowerRoofMejimiText1_10:
+	text_high
+    text " Kurt: " 
+	next
+	text_start
 	text "<PLAYER>. All of"
 	line "Johto is watching."
 	para "We've shown them"
@@ -425,7 +429,7 @@ BTR_PlayerToFrontMovement:
 
 TowerRoofMejimiText2_0: 
 	text_high
-    text " Mejimi: " 
+    text " Urgaust: " 
 	next
 	text_start
 	text "Adrinna, why are"
@@ -460,12 +464,12 @@ TowerRoofText2_5:
 	cont "on these towers."
 	
 	para "I'm coming for"
-	line "you, Mejimi!"
+	line "you, Urgaust!"
 	done
 
 TowerRoofText2_7: 
 	text_high
-    text " Mejimi: " 
+    text " Urgaust: " 
 	next
 	text_start
 	text "Traitor!"
@@ -480,7 +484,7 @@ TowerRoofMejimiText2_8:
 	
 TowerRoofText2_8_1: 
 	text_high
-    text " Mejimi: " 
+    text " Urgaust: " 
 	next
 	text_start
 	text "I must convene"
@@ -504,7 +508,7 @@ TowerRoofText2_10:
 	text "See! Johto!"
 	line "Anyone can rise"
 	para "to the level of"
-	line "the emperor, with"
+	line "the Consul, with"
 	para "the right skills!"
 	line "See <PLAYER>,"
 	para "from a no-name"

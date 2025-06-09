@@ -159,7 +159,7 @@ CradleScene1_Mejimi:
 	end
 
 CradleCutscene_Text0:
-	text "Meanwhile, Mejimi"
+	text "Meanwhile, Urgaust"
 	line "visits his mine:"
 	done
 
@@ -206,7 +206,7 @@ CradleCutscene_Text3:
 
 CradleCutscene_Text4:
 	text_high
-    text " Mejimi: " 
+    text " Urgaust: " 
 	next
 	text_start 
 	text "Shoo!"
@@ -228,7 +228,7 @@ CradleCutscene_Text5:
 	
 CradleCutscene_Text6:
 	text_high
-    text " Mejimi: " 
+    text " Urgaust: " 
 	next
 	text_start 
 	text "His port - it"
@@ -256,7 +256,7 @@ CradleCutscene_Text7:
 
 CradleCutscene_Text8:
 	text_high
-    text " Mejimi: " 
+    text " Urgaust: " 
 	next
 	text_start 
 	text "What's worse, I"
@@ -274,7 +274,7 @@ CradleCutscene_Text9:
     text " Adrinna: " 
 	next
 	text_start 
-	text "Emperor, I- Er,"
+	text "Consul, I- Er,"
 	line "you told me that"
 	para "traditions should"
 	line "be wiped clean?"
@@ -282,7 +282,7 @@ CradleCutscene_Text9:
 
 CradleCutscene_Text10:
 	text_high
-    text " Mejimi: " 
+    text " Urgaust: " 
 	next
 	text_start 
 	text "They'll be updated"
@@ -308,7 +308,7 @@ CradleCutscene_Text11:
 
 CradleCutscene_Text12:
 	text_high
-    text " Mejimi: " 
+    text " Urgaust: " 
 	next
 	text_start 
 	text "Your plans can"
@@ -359,7 +359,7 @@ CradleCutscene_Text15:
 	line "destiny for Johto."
 	
 	para "With or without"
-	line "the emperor..."
+	line "the Consul..."
 	done
 
 
@@ -618,7 +618,7 @@ CradleAdrinnaText5:
 	text "This changes"
 	line "nothing."
 	
-	para "The Emperor has"
+	para "The Consul has"
 	line "no idea what's"
 
 	para "coming at his"

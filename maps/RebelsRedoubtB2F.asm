@@ -121,8 +121,8 @@ RedoubtKurtScript:
 KurtHealRedoubtText:
 	text "<PLAYER>, there"
 	line "is one source"
-	cont "of Steel left"
-	para "for the emperor:"
+	cont "of Steel left for"
+	para "Consul Urgaust:"
 	line "in the mine."
 	
 	para "If we join forces"
@@ -185,7 +185,7 @@ AmosText_Intro:
 	para "I've been trying"
 	line "to organize an"
 	para "opposition to "
-	line "Mejimi."
+	line "Urgaust."
 	
 	para "You've convinced"
 	line "the Elders from"
@@ -250,7 +250,7 @@ AmosText_LegacyBadgeSpeech:
 	para "After that, we"
 	line "will disrupt the"
 	para "coronation of"
-	line "Emperor Mejimi."
+	line "Consul Urgaust."
 
 	para "To the mine!"
 	done

@@ -40,7 +40,7 @@ PokemonJournalMortyScript:
 	
 	para "he has a close"
 	line "resemblance to"
-	cont "former emperors"
+	cont "former Consuls"
 	cont "of Johto."
 	done
 

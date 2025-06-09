@@ -293,8 +293,8 @@ GenericTrainerBrigader9:
 	text "General Bobesh has"
 	line "a plan to change"
 	cont "Gauldenrod tradi-"
-	cont "tions to favor the"
-	cont "emperor."
+	cont "tions to favor"
+	cont "Consul Urgaust."
 	done
 
 Brigader9SeenText:
@@ -334,12 +334,12 @@ GenericTrainerBrigader11:
 
 	text "The gladiators are"
 	line "usually rebels"
-	cont "against the"
-	cont "emperor. We make"
-	cont "sure they're weak,"
-	cont "so that they just"
-	cont "sound crazy to the"
-	cont "crowd in battle."
+	para "against the"
+	line "Consul. We make"
+	para "sure they're weak,"
+	line "so that they just"
+	para "sound crazy to the"
+	line "crowd in battle."
 	done
 
 Brigader11SeenText:
@@ -378,7 +378,7 @@ Text_StadiumSign1:
 Text_StadiumSign2:
 	text "Stadium brought"
 	line "to you by"
-	cont "Emperor Mejimi"
+	cont "Consul Urgaust"
 	done
 
 SandraInvitesToBoxText:

@@ -264,7 +264,7 @@ Docks_Text6:
 	text_start 
 	text "Kensey: I don't"
 	line "understand - isn't"
-	cont "she with Mejimi?"
+	cont "she with Urgaust?"
 	done
 
 
@@ -404,7 +404,7 @@ KenseyBeaten1:
 	para "last of the out-"
 	line "siders yet."
 	
-	para "The emperor has a"
+	para "The Consul has a"
 	line "mine to the East"
 	para "where we are dev-"
 	line "eloping tech that"
@@ -478,7 +478,7 @@ Docks_Text18:
 	
 	para "And you, old man,"
 	line "I will tell the"
-	cont "emperor that you"
+	cont "Consul that you"
 	
 	para "are the one who"
 	line "stole his Lugia!"

@@ -155,7 +155,7 @@ ExtentNPCText3:
 
 ExtentSignText:
 	text "Imperial Mandate:"
-	line "Mejimi's Ceremony"
+	line "Urguast's Ceremony"
 	para "All citizens must"
 	line "attend!"
 	done
