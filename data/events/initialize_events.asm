@@ -51,6 +51,7 @@ InitialEvents:
 	dw EVENT_WHITNEY_GYM
 	dw EVENT_JASMINE_GYM
 	dw EVENT_LANDING_KURT_2
+	dw EVENT_KILN_BOSS
 	dw -1
 
 InitialEngineFlags:

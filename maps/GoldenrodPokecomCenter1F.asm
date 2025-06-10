@@ -249,10 +249,10 @@ KurtHasSomeFansText:
 	cont "if we help them."
 
 	para "They're concerned"
-	line "with Whitney’s"
+	line "with Whitney's"
 	cont "show."
 	
-	para "It’s so divisive."
+	para "It's so divisive."
 	line "She tells them"
 	para "that their"
 	line "families and ne-"

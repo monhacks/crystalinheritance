@@ -740,6 +740,7 @@ TinderGardenRivalBattleScript1:
 	setmapscene AZALEA_TOWN, $1 ;now the people shouldn't stop you
 	setmapscene ILEX_FOREST, $1 ;ready for the fight at Ilex Forest
 	clearevent EVENT_KURTS_HOUSE_NOTEBOOK
+	clearevent EVENT_KILN_BOSS
 	setevent EVENT_ILEX_FOREST_RIVAL
 	playmapmusic
 	end

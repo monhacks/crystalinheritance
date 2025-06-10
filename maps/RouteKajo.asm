@@ -60,7 +60,7 @@ RouteKajo_MapScriptHeader: ; todo: event set in historic route kajo allows you t
 	const KAJO_SCHOOLGIRL
 	const KAJO_SUDOWOODO
 
-StadiumGroundsFloodCallback:
+RouteKajoCallbackTiles:
 	checkevent EVENT_SHIMMER_SADDLE_BOULDER
 	iffalse .Done
 	changeblock 20, 1, $72

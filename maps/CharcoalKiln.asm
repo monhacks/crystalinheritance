@@ -9,29 +9,23 @@ CharcoalKiln_MapScriptHeader:
 	warp_event  4,  7, AZALEA_TOWN, 2
 
 	def_coord_events
-	callback MAPCALLBACK_OBJECTS, CharcoalKilnCallback_MoveBlackbelt
+
 	
 	def_bg_events
 	bg_event  1,  3, BGEVENT_JUMPTEXT, CharcoalKilnStillText
 
 	def_object_events
-	object_event  3,  4, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CharcoalKilnBoss, EVENT_BEAT_CHUCK
+	object_event  3,  4, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CharcoalKilnBoss, EVENT_GOT_A_POKEMON
 	object_event  4,  4, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_LEFT, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CharcoalKilnApprentice, EVENT_GOT_A_POKEMON ; should not appear after you get a mon
 	object_event  8,  6, SPRITE_FARFETCH_D, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CharcoalKilnFarfetchdScript, -1
 	object_event  2,  3, SPRITE_CHEMISTRY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 	PAL_NPC_BROWN, 	OBJECTTYPE_COMMAND, jumptext, KilnChemistryText, -1
 	object_event  3,  3, SPRITE_CHEMISTRY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 	PAL_NPC_RED, 	OBJECTTYPE_COMMAND, jumptext, KilnChemistryText, -1	
+	object_event  4,  5, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CharcoalKilnBoss, EVENT_KILN_BOSS
+
 
 	object_const_def
 	const CHARCOAL_BLACK_BELT
 	const CHARCOAL_RIVAL
-
-CharcoalKilnCallback_MoveBlackbelt: ; TODO check this on the next new game, 
-	checkevent EVENT_GOT_A_POKEMON
-	iffalse .Skip
-	moveobject CHARCOAL_BLACK_BELT, 4, 4
-	turnobject CHARCOAL_BLACK_BELT, DOWN
-.Skip:
-	endcallback
 
 CharcoalKilnGettingReadyTrigger:
 	sdefer .Script

@@ -1,6 +1,6 @@
-EmperorsGarden_MapScriptHeader: ; todo needs a strengthboulder to keep you from skipping the scenes 
+EmperorsGarden_MapScriptHeader: 
 	def_scene_scripts
-	scene_script EmperorsGardenMejimiScene
+;	scene_script EmperorsGardenMejimiScene TODO, COMMENTED THIS OUT TO KEEP FROM ACCIDENTALLY TRIGGERING SCENES 
 
 	def_callbacks
 

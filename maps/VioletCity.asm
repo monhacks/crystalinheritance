@@ -14,10 +14,8 @@ VioletCity_MapScriptHeader:
 	warp_event 23,  5, SPROUT_TOWER_1F, 1
 	warp_event 29, 17, EARLS_POKEMON_ACADEMY, 3
 	warp_event 30, 17, EARLS_POKEMON_ACADEMY, 4
-	warp_event 39, 28, ROUTE_36_VIOLET_GATE, 1 ; NOT ACCESSIBLE
-	warp_event 39, 29, ROUTE_36_VIOLET_GATE, 2 ; NOT ACCESSIBLE
-	warp_event  2, 12, ROUTE_36_VIOLET_GATE, 3 ; NOT ACCESSIBLE 
-	warp_event  2, 13, ROUTE_36_VIOLET_GATE, 4 ; NOT ACCESSIBLE
+	warp_event 3, 2, VIOLET_CATACOMBS, 1 ; NOT ACCESSIBLE
+	
 
 	def_coord_events
 
@@ -30,7 +28,7 @@ VioletCity_MapScriptHeader:
 	bg_event 21, 13, BGEVENT_ITEM + NUGGET, EVENT_VIOLET_CITY_HIDDEN_POKE_BALL
 	bg_event  1,  0, BGEVENT_JUMPTEXT, VioletTombstoneText
 	bg_event  5,  0, BGEVENT_JUMPTEXT, VioletTombstoneText
-;	bg_event  3,  0, BGEVENT_READ, NoctowlTombstone
+	bg_event  3,  0, BGEVENT_READ, NoctowlTombstone
 
 
 	def_object_events
@@ -170,23 +168,55 @@ VioletCityTowerBlockingText:
 	done
 
 VioletTombstoneText:
-	text "The tombstone is"
-	line "covered in moss."
+	text "The tombstone has"
+	line "an inscription:"
+	
+	para "A shadow outside"
+	line "your window,"
+	
+	para "Curious claws"
+	line "test for echoes,"
+	
+	para "A faithful guide"
+	line "to the other side"
+	
+	para "For if you lived"
+	line "an honest life."
+	
+	para "Carries only four"
+	line "karat souls, it"
+	
+	para "NOCS FOR"
+	line "YOUR SOUL"
 	done
 
-;NoctowlTombstone:
-;	checkevent EVENT_HEARD_ABOUT_HEIRLOOM
-;	iffalse_jumpopenedtext VioletTombstoneText
-;	opentext
-;	writetext AskToVentureText
-;	yesorno
-;	iffalse_jumpopenedtext NoVentureText
-;	writetext VenturingText
-;	waitbutton
-;	closetext
-;	playsound SFX_WARP_TO
-;	special FadeOutPalettes
-;	waitsfx
-;	warp VIOLET_CATACOMBS,  0,  0
-;	end
+NoctowlTombstone:
+	opentext
+	writetext AskToVentureText
+	yesorno
+	iffalse_jumpopenedtext NoVentureText
+	writetext VenturingText
+	waitbutton
+	closetext
+	playsound SFX_WARP_TO
+	special FadeOutPalettes
+	waitsfx
+	warp VIOLET_CATACOMBS,  4,  26
+	end
+
+AskToVentureText:
+	text "Oh? There's a hole"
+	line "behind this"
+	cont "tombstone."
 	
+	para "Venture inside?"
+	done
+
+NoVentureText:
+	text "Who would do such"
+	line "a thing?"
+	done
+
+VenturingText:
+	text "Who wouldn't?"
+	done

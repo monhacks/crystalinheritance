@@ -173,10 +173,6 @@ _CameToItsSensesText::
 
 SECTION "_OakTimeWokeUpText", ROMX
 _OakTimeWokeUpText::
-	text_high
-    text " Kurt: "
-	next
-	text_start 
 	text "………………………………"
 	line "………………………………"
 
@@ -189,10 +185,6 @@ _OakTimeWokeUpText::
 
 SECTION "_OakTimeWhatTimeIsItText", ROMX
 _OakTimeWhatTimeIsItText::
-	text_high
-    text " Kurt: "
-	next
-	text_start 
 	text "What time is it?"
 	done
 
@@ -203,56 +195,32 @@ _OakTimeWhatHoursText::
 
 SECTION "_OakTimeHoursQuestionMarkText", ROMX
 _OakTimeHoursQuestionMarkText::
-	text_high
-    text " Kurt: "
-	next
-	text_start
 	text "?"
 	done
 
 SECTION "_OakTimeHowManyMinutesText", ROMX
 _OakTimeHowManyMinutesText::
-	text_high
-    text " Kurt: "
-	next
-	text_start
 	text "How many minutes?"
 	done
 
 SECTION "_OakTimeWhoaMinutesText", ROMX
 _OakTimeWhoaMinutesText::
-	text_high
-    text " Kurt: "
-	next
-	text_start
 	text "Whoa!"
 	done
 
 SECTION "_OakTimeMinutesQuestionMarkText", ROMX
 _OakTimeMinutesQuestionMarkText::
-	text_high
-    text " Kurt: "
-	next
-	text_start
 	text "?"
 	done
 
 SECTION "_OakTimeOversleptText", ROMX
 _OakTimeOversleptText::
-	text_high
-    text " Kurt: "
-	next
-	text_start
 	text "!"
 	line "I overslept!"
 	done
 
 SECTION "_OakTimeYikesText", ROMX
 _OakTimeYikesText::
-	text_high
-    text " Kurt: "
-	next
-	text_start
 	text "!"
 	line "Yikes! I over-"
 	cont "slept!"
@@ -260,10 +228,6 @@ _OakTimeYikesText::
 
 SECTION "ProfElmNappedText", ROMX
 ProfElmNappedText::
-	text_high
-    text " Kurt: "
-	next
-	text_start
 	text "!"
 	line "I napped for"
 	cont "too long!"
@@ -271,10 +235,6 @@ ProfElmNappedText::
 
 SECTION "_OakTimeSoDarkText", ROMX
 _OakTimeSoDarkText::
-	text_high
-    text " Kurt: "
-	next
-	text_start
 	text "!"
 	line "No wonder it's so"
 	cont "dark!"
@@ -282,19 +242,11 @@ _OakTimeSoDarkText::
 
 SECTION "_OakTimeWhatDayIsItText", ROMX
 _OakTimeWhatDayIsItText::
-	text_high
-    text " Kurt: "
-	next
-	text_start
 	text "What day is it?"
 	done
 
 SECTION "_OakTimeIsItText", ROMX
 _OakTimeIsItText::
-	text_high
-    text " Kurt: "
-	next
-	text_start
 	text ", is it?"
 	done
 
@@ -2496,29 +2448,17 @@ _AskItemMoveText::
 
 SECTION "Text_AreYouABoyOrAreYouAGirl", ROMX
 Text_AreYouABoyOrAreYouAGirl::
-	text_high
-    text " Kurt: "
-	next
-	text_start
 	text "Go as a boy?"
 	line "Or a girl?"
 	done
 
 SECTION "Text_SoYoureABoy", ROMX
 Text_SoYoureABoy::
-	text_high
-    text " Kurt: "
-	next
-	text_start
 	text "So you're a boy?"
 	done
 
 SECTION "Text_SoYoureAGirl", ROMX
 Text_SoYoureAGirl::
-	text_high
-    text " Kurt: "
-	next
-	text_start
 	text "So you're a girl?"
 	done
 
@@ -3311,6 +3251,10 @@ _InitialOptionsText::
 	line "built on the"
 	cont "Polished Crystal"
 	cont "3.0.0 by dwg."
+
+	para "Please see the"
+	line "Credits file for"
+	cont "attributions."
 		
 	para "Please choose how"
 	line "you want to play."
@@ -3318,22 +3262,22 @@ _InitialOptionsText::
 
 SECTION "_ElmText1", ROMX ; being used, i think in intro_meu.asm as elmtext1?
 _ElmText1::
-	text_high
-    text " Kurt: "
-	next
-	text_start 
 	text "Are you excited?"
 	line "Today is your"
 	cont "ceremony!"
+	
+	para "Grandpa Kurt will"
+	line "make sure it all"
+	cont "goes to plan."
 	
 	para "It means that you"
 	line "are ready to care"
 	cont "for the forest."
 	
 	para "It's how we pass"
-	line "down our values-"
-	cont "feed the saplings"
-	cont "and prune weeds."
+	line "down our values!"
+	para "Feed the saplings"
+	line "and prune weeds."
 
 	para "You're going to"
 	line "look so grown-up"
@@ -3341,20 +3285,16 @@ _ElmText1::
 	
 	para "I know I didn't"
 	line "ask your dad, but"
-	cont "some traditions"
-	para "are worth bending"
-	line "rules for. This"
-	cont "is your legacy"
+	para "some traditions"
+	line "are worth bending"
+	para "rules for. This"
+	line "is your legacy"
 	cont "too."
 	prompt
 
 
 SECTION "_ElmText2", ROMX
 _ElmText2::
-	text_high
-    text " Kurt: "
-	next
-	text_start 
 	text "It's the start"
 	line "of your #mon"
 	cont "journey."
@@ -3370,10 +3310,6 @@ _ElmText2::
 
 SECTION "_ElmText4", ROMX
 _ElmText4::
-	text_high
-    text " Kurt: "
-	next
-	text_start 
 	text "We will rebuild"
 	line "the Ilex Shrine,"
 	
@@ -3381,27 +3317,23 @@ _ElmText4::
 	line "every 20 years."
 	
 	para "We tear down the"
-	line "blossom tree and"
-	cont "thank it for its"
-	cont "lumber,"
+	line "blossom tree,"
+	para "thank it for its"
+	line "lumber,"
 	
 	para "recomitting our"
 	line "dedicatation to"
-	cont "protecting the"
-	cont "forest."
+	para "preserving the"
+	line "forest."
 	prompt
 
 
 SECTION "_ElmText5", ROMX
 _ElmText5::
-	text_high
-    text " Kurt: "
-	next
-	text_start 
 	text "This drought..."
 	line "I hope it breaks"
-	cont "soon. People are"
-	cont "turning to Silph"
+	para "soon. People are"
+	line "turning to Silph"
 	cont "technology."
 	
 	para "Your parents too."
@@ -3421,20 +3353,12 @@ _ElmText5::
 
 SECTION "_ElmText6", ROMX
 _ElmText6::
-	text_high
-    text " Kurt: "
-	next
-	text_start 
 	text "What should we"
 	line "call you today?"
 	prompt
 
 SECTION "_ElmText7", ROMX
 _ElmText7::
-	text_high
-    text " Kurt: "
-	next
-	text_start 
 	text "The bond between"
 	line "us and #mon,"
 	para "past and future-"

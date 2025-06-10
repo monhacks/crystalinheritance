@@ -7,7 +7,7 @@ DebugRoom_MapScriptHeader:
 
 	def_warp_events
 	warp_event  9, 0, AZALEA_TOWN, 5
-	warp_event  1, 8, BRASS_TOWER_ROOF, 1 ; normally to anarres town 
+	warp_event  1, 8, ILEX_FOREST, 4 ; grottos: LAKE_OF_RAGE, 3 ; ROUTE_KAJO, 10; EMPERORS_GARDEN, 3
 
 
 	def_coord_events

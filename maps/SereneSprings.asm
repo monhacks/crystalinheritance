@@ -145,7 +145,7 @@ ReceptionistOfferText:
 
 	para "Would you like to"
 	line "learn the art of"
-	cont "counting towels?'
+	cont "counting towels?"
 
 	para "It's thrilling!"
 
