@@ -16,7 +16,8 @@ ClastsCradle2F_MapScriptHeader:
 	def_bg_events
 	bg_event  17, 6, BGEVENT_READ, CC_2F_Switch
 	bg_event  3, 10, BGEVENT_READ, CC_2F_Switch	
-
+	bg_event  2,  2, BGEVENT_ITEM + ENERGYPOWDER, 	EVENT_HIDDEN_CRADLE_2
+	bg_event 12,  4, BGEVENT_ITEM + NUGGET, 		EVENT_HIDDEN_CRADLE_3
 
 
 	def_object_events

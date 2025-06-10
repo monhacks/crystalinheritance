@@ -22,7 +22,7 @@ ClastsCradle1F_MapScriptHeader:
 
 	def_bg_events
 	bg_event 25, 22, BGEVENT_READ, CC_1F_Switch1
-	bg_event 30, 11, BGEVENT_ITEM + NUGGET, EVENT_CRADLE_HIDDEN_1 ; hidden item
+	bg_event 30, 11, BGEVENT_ITEM + REVIVAL_HERB, EVENT_CRADLE_HIDDEN_1 ; hidden item
 	bg_event  4, 16, BGEVENT_ITEM + BIG_NUGGET, EVENT_CRADLE_HIDDEN_2 ; hidden item
 	bg_event 18, 43, BGEVENT_ITEM + METAL_COAT, EVENT_CRADLE_HIDDEN_3 ; hidden item
 

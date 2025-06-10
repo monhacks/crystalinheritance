@@ -13,39 +13,36 @@ SulfurSty_MapScriptHeader: ;	def_scene_scripts
 	def_coord_events
 
 
-
 	def_bg_events
-
+	bg_event 17, 11, BGEVENT_ITEM + MAX_ELIXIR, 	EVENT_HIDDEN_STY_1 
+	bg_event 40,  6, BGEVENT_ITEM + REVIVAL_HERB, 	EVENT_HIDDEN_STY_2
+	bg_event 44, 10, BGEVENT_ITEM + BIG_NUGGET, 	EVENT_HIDDEN_STY_3 
+	bg_event 46, 11, BGEVENT_ITEM + MAX_ELIXIR, 	EVENT_HIDDEN_STY_4
 
 
 	def_object_events
-; brigaders fighting ninjas
-; ninjas with heracross or ursaring, brigaders with primeape or electabuzz or scizor
-
-
-	tmhmball_event 21, 8, TM_FOCUS_BLAST, EVENT_GOT_TM_FOCUS_BLAST
-
+	; set 1
 	object_event  46,  25, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptext, Ninja1Text, EVENT_BEAT_ADRINNA_MINE ; LIKE THE GAMEBOY BOYS, FACING YOU THEN BACK
-	pokemon_event 47, 25, CROBAT, -1, -1, PAL_NPC_BLUE, StyCrobatText, -1
+	pokemon_event 47, 25, CROBAT, -1, -1, PAL_NPC_BLUE, StyCrobatText, EVENT_BEAT_ADRINNA_MINE
 	object_event  49, 25, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptext, Brigader1Text, EVENT_BEAT_ADRINNA_MINE ; LIKE THE GAMEBOY BOYS, FACING YOU THEN BACK
-	pokemon_event 48, 25, RHYPERIOR, -1, -1, PAL_NPC_BROWN, StyRhydonText, -1
-	
+	pokemon_event 48, 25, RHYPERIOR, -1, -1, PAL_NPC_BROWN, StyRhydonText, EVENT_BEAT_ADRINNA_MINE
+	; set
 	object_event  24, 23, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptext, Ninja2Text, EVENT_BEAT_ADRINNA_MINE ; LIKE THE GAMEBOY BOYS, FACING YOU THEN BACK
-	pokemon_event 25, 23, SNEASLER, -1, -1, PAL_NPC_BLUE, StySneaslerText, -1
+	pokemon_event 25, 23, SNEASLER, -1, -1, PAL_NPC_BLUE, StySneaslerText, EVENT_BEAT_ADRINNA_MINE
 	object_event  27, 23, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptext, Brigader2Text, EVENT_BEAT_ADRINNA_MINE ; LIKE THE GAMEBOY BOYS, FACING YOU THEN BACK
-	pokemon_event 26, 23, MACHAMP, -1, -1, PAL_NPC_BROWN, StyMachampText, -1
-
+	pokemon_event 26, 23, MACHAMP, -1, -1, PAL_NPC_BROWN, StyMachampText, EVENT_BEAT_ADRINNA_MINE
+	; set 
 	object_event  22,  6, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptext, Ninja3Text, EVENT_BEAT_ADRINNA_MINE ; LIKE THE GAMEBOY BOYS, FACING YOU THEN BACK
-	pokemon_event 23, 6, GRANBULL, -1, -1, PAL_NPC_RED, StyGranbullText, -1
+	pokemon_event 23, 6, GRANBULL, -1, -1, PAL_NPC_RED, StyGranbullText, EVENT_BEAT_ADRINNA_MINE
 	object_event  25,  6, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptext, Brigader3Text, EVENT_BEAT_ADRINNA_MINE ; LIKE THE GAMEBOY BOYS, FACING YOU THEN BACK
-	pokemon_event 24, 6, MAGNETON, -1, -1, PAL_NPC_BROWN, StyMagnetonText, -1
+	pokemon_event 24, 6, MAGNETON, -1, -1, PAL_NPC_BROWN, StyMagnetonText, EVENT_BEAT_ADRINNA_MINE
 
-	object_event  35, 19, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBrigader12, EVENT_BEAT_ADRINNA_MINE ; ground
+	object_event  35, 19, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBrigader21, EVENT_BEAT_ADRINNA_MINE ; ground
 	object_event  37, 16, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBrigader13, EVENT_BEAT_ADRINNA_MINE ; fighting 
 	object_event  22, 13, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBrigader14, EVENT_BEAT_ADRINNA_MINE ; flying 
 
 	tmhmball_event 10, 7, TM_STONE_EDGE, EVENT_GOT_TM_STONE_EDGE 
-
+	tmhmball_event 21, 8, TM_FOCUS_BLAST, EVENT_GOT_TM_FOCUS_BLAST
 
 	object_const_def
 

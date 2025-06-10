@@ -14,7 +14,8 @@ TimelessTapestry_MapScriptHeader:
 
 
 	def_bg_events
-
+	bg_event 10,  9, BGEVENT_ITEM + MAX_ELIXIR, 	EVENT_HIDDEN_TAPESTRY_1 
+	bg_event  7, 15, BGEVENT_ITEM + BIG_NUGGET, 	EVENT_HIDDEN_TAPESTRY_2
 
 
 	def_object_events

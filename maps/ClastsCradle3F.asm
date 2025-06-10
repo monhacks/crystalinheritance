@@ -14,7 +14,7 @@ ClastsCradle3F_MapScriptHeader:
 
 
 	def_bg_events
-
+	bg_event  3,  6, BGEVENT_ITEM + ELIXIR, EVENT_HIDDEN_CRADLE_1
 
 	def_object_events
 	object_event 3, 3, SPRITE_AMOS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AmosScriptCC, EVENT_BEAT_ADRINNA_MINE
@@ -57,24 +57,24 @@ AmosCradleText1:
 	line "think there's"
 	para "nothing that can"
 	line "withstand it."
+
+	para "I'm sorry that I"
+	line "doubted you"
+	cont "earlier."
 	done
 
 	
-AmosHealsText:
-	text "I'm sorry that I"
-	line "doubted you"
-	cont "earlier."
-	
-	para "Let me heal your"
+AmosHealsText:	
+	text "Let me heal your"
 	line "#mon."
 	done
 	
 	
 AmosCradleText2:
 	text "Adrinna is deep"
-	line "within the mine-"
+	line "within the mine."
 	
 	para "We're counting on"
 	line "you to disrupt"
-	cont "his plans!"
+	cont "her plans!"
 	done
