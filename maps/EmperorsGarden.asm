@@ -1,6 +1,6 @@
 EmperorsGarden_MapScriptHeader: 
 	def_scene_scripts
-;	scene_script EmperorsGardenMejimiScene TODO, COMMENTED THIS OUT TO KEEP FROM ACCIDENTALLY TRIGGERING SCENES 
+	scene_script EmperorsGardenMejimiScene 
 
 	def_callbacks
 
@@ -8,13 +8,13 @@ EmperorsGarden_MapScriptHeader:
 	def_warp_events
 	warp_event 20, 30, WESTERN_CAPITAL, 1
 	warp_event 20, 31, WESTERN_CAPITAL, 2
-	warp_event 21, 26, HIDDEN_TREE_GROTTO, 1
+	warp_event 21, 22, HIDDEN_TREE_GROTTO, 1
 
-	def_coord_events ; td set these 
-;	coord_event  28, 28, 	0, EmperorsGardenMejimiScene;
-	coord_event  29, 14, 	1, EmperorsGardenBobeshScene;
-	coord_event  21, 11, 	2, EmperorsGardenKenseyScene;
-	coord_event  13, 14, 	3, EmperorsGardenAdrinnaScene;
+	def_coord_events
+;	coord_event  28, 28, 	0, EmperorsGardenMejimiScene
+	coord_event  29, 14, 	1, EmperorsGardenBobeshScene
+	coord_event  21, 11, 	2, EmperorsGardenKenseyScene
+	coord_event  13, 14, 	3, EmperorsGardenAdrinnaScene
 
 	def_bg_events
 	bg_event 20, 21, BGEVENT_JUMPSTD, treegrotto, HIDDENGROTTO_EMPERORS_GARDEN
@@ -23,17 +23,17 @@ EmperorsGarden_MapScriptHeader:
 
 	def_object_events
 	; scene 1
-	object_event  	26,	30, 	SPRITE_MEJIMI, 	SPRITEMOVEDATA_STANDING_DOWN, 	0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_EMPERORS_GARDEN_MEJIMI ;
-	object_event  	29,	31, 	SPRITE_BOBESH, 	SPRITEMOVEDATA_STANDING_UP, 	0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_EMPERORS_GARDEN_MEJIMI ;
-	object_event  	28,	31,	 	SPRITE_KENSEY, 	SPRITEMOVEDATA_STANDING_UP, 	0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_EMPERORS_GARDEN_MEJIMI ;
-	object_event  	27,	31,	 	SPRITE_ADRINNA, SPRITEMOVEDATA_STANDING_UP, 	0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_EMPERORS_GARDEN_MEJIMI ;
+	object_event  	26,	30, 	SPRITE_MEJIMI, 	SPRITEMOVEDATA_STANDING_DOWN, 	0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_EMPERORS_GARDEN_MEJIMI 
+	object_event  	29,	31, 	SPRITE_BOBESH, 	SPRITEMOVEDATA_STANDING_UP, 	0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_EMPERORS_GARDEN_MEJIMI 
+	object_event  	28,	31,	 	SPRITE_KENSEY, 	SPRITEMOVEDATA_STANDING_UP, 	0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_EMPERORS_GARDEN_MEJIMI 
+	object_event  	27,	31,	 	SPRITE_ADRINNA, SPRITEMOVEDATA_STANDING_UP, 	0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_EMPERORS_GARDEN_MEJIMI 
 	; other scenes 
-	object_event  	26,	12,		SPRITE_BOBESH, 	SPRITEMOVEDATA_STANDING_RIGHT, 	0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_EMPERORS_GARDEN_BOBESH ;
-	object_event  	20,	6,	 	SPRITE_KENSEY, 	SPRITEMOVEDATA_STANDING_RIGHT, 	0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_EMPERORS_GARDEN_KENSEY ;
-	object_event  	27,	12,	 	SPRITE_ADRINNA, SPRITEMOVEDATA_STANDING_LEFT, 	0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_EMPERORS_GARDEN_BOBESH ;	
-	object_event  	21,	6,	 	SPRITE_ADRINNA, SPRITEMOVEDATA_STANDING_LEFT, 	0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_EMPERORS_GARDEN_KENSEY ;	
-	object_event  	13,	10,	 	SPRITE_ADRINNA, SPRITEMOVEDATA_STANDING_UP, 	0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_EMPERORS_GARDEN_ADRINNA ;	
-	object_event 	16, 20, 	SPRITE_AMOS, 	SPRITEMOVEDATA_STANDING_UP,  	0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AmosGardenScript, EVENT_BATTLED_AMOS_GARDEN ;	
+	object_event  	26,	12,		SPRITE_BOBESH, 	SPRITEMOVEDATA_STANDING_RIGHT, 	0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_EMPERORS_GARDEN_BOBESH 
+	object_event  	20,	6,	 	SPRITE_KENSEY, 	SPRITEMOVEDATA_STANDING_RIGHT, 	0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_EMPERORS_GARDEN_KENSEY 
+	object_event  	27,	12,	 	SPRITE_ADRINNA, SPRITEMOVEDATA_STANDING_LEFT, 	0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_EMPERORS_GARDEN_BOBESH 	
+	object_event  	21,	6,	 	SPRITE_ADRINNA, SPRITEMOVEDATA_STANDING_LEFT, 	0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_EMPERORS_GARDEN_KENSEY 	
+	object_event  	13,	10,	 	SPRITE_ADRINNA, SPRITEMOVEDATA_STANDING_UP, 	0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_EMPERORS_GARDEN_ADRINNA 	
+	object_event 	16, 20, 	SPRITE_AMOS, 	SPRITEMOVEDATA_STANDING_UP,  	0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AmosGardenScript, EVENT_BATTLED_AMOS_GARDEN 	
 	; others 
 	object_event	22,	30, 	SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_DOWN, 	0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptext, EG_Brigader_Text1, -1 ;
 	object_event	22,	31, 	SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_UP, 	0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptext, EG_Brigader_Text2, -1 ;

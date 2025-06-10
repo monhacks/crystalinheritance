@@ -1,0 +1,17 @@
+Core Files I'd Want to See:
+
+Constants/Equates file - To understand:
+
+SCREEN_WIDTH and SCREEN_HEIGHT values --> SCREEN_WIDTH = 160 PIXELSand SCREEN_HEIGH = 
+The coordinate macros (hlcoord, dbpixel, dwcoord)
+Sprite constants (dsprite macro)
+Memory locations (wMisc, wMiscEnd, vTiles1, etc.)
+
+
+Memory layout/RAM definitions - To understand:
+
+wPuzzlePieces structure and size
+wUnownPuzzleCursorPosition format
+wHoldingUnownPuzzlePiece and related variables
+
+
