@@ -20,7 +20,7 @@ ShelteredShores_MapScriptHeader:
 
 
 	def_object_events
-	itemball_event 17, 17, MAX_REVIVE, 1, EVENT_SHORES_ITEM_1 ;ok
+	itemball_event 17, 17, REVIVAL_HERB, 1, EVENT_SHORES_ITEM_1 ;ok
 	itemball_event 17, 32, SILVER_LEAF, 3, EVENT_SHORES_ITEM_2
 	itemball_event 40, 38, MAX_REPEL, 1, EVENT_SHORES_ITEM_3 ;ok
 	itemball_event 43, 16, PETAYA_BERRY, 1, EVENT_SHORES_ITEM_4

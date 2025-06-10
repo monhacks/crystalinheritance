@@ -15,7 +15,8 @@ ArduousAnchorage_MapScriptHeader:
 
 
 	def_bg_events
-
+	bg_event  4,  5, BGEVENT_ITEM + ENERGY_ROOT, EVENT_ANCHORAGE_HIDDEN_1
+	bg_event 13, 13, BGEVENT_ITEM + REVIVAL_HERB, EVENT_ANCHORAGE_HIDDEN_2
 
 
 	def_object_events

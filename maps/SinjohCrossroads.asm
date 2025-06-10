@@ -29,11 +29,11 @@ SinjohCrossroads_MapScriptHeader:
 	object_event 16, 16, SPRITE_AROMA_LADY, 	SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, SinjohNPC1Text, EVENT_BEAT_KANNA
 	object_event 23, 12, SPRITE_HIKER, 		SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, SinjohNPC2Text, EVENT_BEAT_KANNA
 	object_event 14, 6, SPRITE_SAGE, 		SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, SinjohNPC3Text, EVENT_BEAT_KANNA
-	itemball_event 4, 1, FULL_RESTORE, 1, EVENT_SINJOH_ITEM
+	itemball_event 4, 1, ENERGY_ROOT, 1, EVENT_SINJOH_ITEM
 	itemball_event  30, 20, CALCIUM, 1, EVENT_SINJOH_ITEM_2 
 	itemball_event  33, 5, ZINC, 1, EVENT_SINJOH_ITEM_3
 	
-	object_const_def
+
 
 SinjohBrigader1Script:
 	faceplayer

@@ -9,8 +9,8 @@ GrottoedGlacierB2F_MapScriptHeader:
 ; PROBABLY WILL NEED A CALLBACK TO MOVE THE PEOPLE 
 
 	def_warp_events
-	warp_event 3, 15, GROTTOED_GLACIER_B1F, 2
-	warp_event 4, 15, GROTTOED_GLACIER_B1F, 2
+	warp_event 5, 15, GROTTOED_GLACIER_B1F, 2
+	warp_event 6, 15, GROTTOED_GLACIER_B1F, 2
 
 
 	def_coord_events
@@ -26,6 +26,7 @@ GrottoedGlacierB2F_MapScriptHeader:
 	object_event  17,  6, SPRITE_ADRINNA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_GLACIER_ADRINNA
 	pokemon_event  17, 3, BASCULEGION, -1, -1, PAL_NPC_ROCK, BasculegionText, EVENT_BASCULEGION_SLEEPS
 	pokemon_event  17, 3, BASCULEGION, -1, -1, PAL_NPC_RED, BasculegionText, EVENT_BASCULEGION_LIVES ; INITIALIZE 
+	itemball_event  7, 2, CHOICE_SPECS, 1, EVENT_CHOICE_SPECS
 
 	object_const_def
 	const GLACIER_B2F_KANNA

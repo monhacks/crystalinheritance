@@ -4234,10 +4234,10 @@ LucarioEvosAttacks:
 	db 1, MACH_PUNCH
 	db 1, BULK_UP
 	db 1, CRUNCH	
-	db 41, AURA_SPHERE
-	db 44, DRAGON_PULSE
-	db 48, CLOSE_COMBAT
-	db 52, CALM_MIND
+	db 46, AURA_SPHERE
+	db 50, DRAGON_PULSE
+	db 54, CLOSE_COMBAT
+	db 58, NASTY_PLOT
 	db 0 ; no more level-up moves
 
 HippowdonEvosAttacks:

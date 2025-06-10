@@ -15,8 +15,9 @@ WesternGlacierB1F_MapScriptHeader:  ;hint: only the bottom and the left boulders
 
 
 	def_bg_events
-
-
+	bg_event  2,  2, BGEVENT_ITEM + PETAYA_BERRY, EVENT_WESTERN_GLACIER_HIDDEN_3 
+	bg_event 29,  2, BGEVENT_ITEM + SALAC_BERRY, EVENT_WESTERN_GLACIER_HIDDEN_4
+	bg_event 29, 29, BGEVENT_ITEM + LIECHI_BERRY, EVENT_WESTERN_GLACIER_HIDDEN_5
 
 	def_object_events
 	strengthboulder_event 15, 28 

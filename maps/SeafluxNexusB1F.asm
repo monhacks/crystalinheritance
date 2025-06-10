@@ -27,7 +27,7 @@ SeafluxNexusB1F_MapScriptHeader:
 	strengthboulder_event 16, 11, EVENT_NEXUS_B1F_BOULDER_1
 	strengthboulder_event 10, 3,  EVENT_NEXUS_B1F_BOULDER_2
 	itemball_event 23,  9, ESCAPE_ROPE, 1, EVENT_NEXUSB1F_ESCAPE_ROPE
-	itemball_event 12, 25, HYPER_POTION, 1, EVENT_NEXUSB1F_HYPER_POTION
+	itemball_event 12, 25, ENERGY_ROOT, 3, EVENT_NEXUSB1F_HYPER_POTION
 
 
 	object_const_def

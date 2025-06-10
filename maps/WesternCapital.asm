@@ -30,7 +30,7 @@ WesternCapital_MapScriptHeader: ; todo
 	bg_event 19, 19, BGEVENT_READ, WC_AmosWantedSign
 	; hidden items 
 	bg_event  14, 14, BGEVENT_ITEM + PP_UP, EVENT_WC_HIDDEN_1
-	bg_event  29, 27, BGEVENT_ITEM + HP_UP, EVENT_WC_HIDDEN_2
+	bg_event  29, 27, BGEVENT_ITEM + SILVER_LEAF, EVENT_WC_HIDDEN_2
 
 	def_object_events
 ; cutsceners

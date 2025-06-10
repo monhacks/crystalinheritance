@@ -30,11 +30,9 @@ EmpiresExtent_MapScriptHeader:
 	object_event  4, 31, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerNinja5, EVENT_BEAT_AMOS;echo
 	object_event  5, 31, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerNinja6, EVENT_BEAT_AMOS;dusk 
 ;items 
-	itemball_event 13, 17, REVIVE,			1,	EVENT_EXTENT_ITEM_1
-	itemball_event 10, 34, FULL_RESTORE, 	1,	EVENT_EXTENT_ITEM_2
+	itemball_event 13, 17, REVIVAL_HERB,			1,	EVENT_EXTENT_ITEM_1
+	itemball_event 10, 34, ENERGY_ROOT, 	1,	EVENT_EXTENT_ITEM_2
 	itemball_event 11, 25, BIG_NUGGET, 		1,	EVENT_EXTENT_ITEM_3
-
-	object_const_def
 
 GenericTrainerNinja1: ;shadow 
 	generictrainer NINJA, NINJA1, EVENT_BEAT_NINJA1, .SeenText1, .BeatenText1  

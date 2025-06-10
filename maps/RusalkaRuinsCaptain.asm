@@ -18,7 +18,7 @@ RusalkaRuinsCaptain_MapScriptHeader:
 
 
 	def_object_events
-	object_event  4,  3, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, SLOWBRO, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CaptainSpiritomb, EVENT_RUSALKA_SPIRITOMB
+	object_event  4,  3, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, SPIRITOMB, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CaptainSpiritomb, EVENT_RUSALKA_SPIRITOMB
 	object_event  5,  5, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptext, CaptainsLog10, -1
 	object_event 3, 3, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_ROCK, OBJECTTYPE_COMMAND, jumptext, DeadCaptainText, -1
 
@@ -26,8 +26,6 @@ RusalkaRuinsCaptain_MapScriptHeader:
 	const CAPTAIN_SPIRITOMB
 
 CaptainSpiritomb:
-	faceplayer
-	cry SPIRITOMB
 	pause 15
 	loadwildmon SPIRITOMB, 35
 	startbattle
