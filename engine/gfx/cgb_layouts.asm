@@ -31,7 +31,8 @@ LoadCGBLayout::
 	dw _CGB_TrainerCard3
 	dw _CGB_PokedexUnownMode
 	dw _CGB_BillsPC
-	dw _CGB_UnownPuzzle
+	dw _CGB_UnownPuzzle ; todo: special colors for celebi, bronzong, lugia, heatran, sliding puzzle 
+;	dw _CGB_SlidingPuzzle
 	dw _CGB_GameFreakLogo
 	dw _CGB_TradeTube
 	dw _CGB_IntroPals
@@ -1344,9 +1345,11 @@ else
 	RGB_MONOCHROME_DARK
 endc
 
+
 _CGB_FinishLayout:
 	call ApplyAttrMap
 	call ApplyPals
 	ld a, $1
 	ldh [hCGBPalUpdate], a
 	ret
+

@@ -168,15 +168,13 @@ Special_CardFlip:
 	ret c
 	ld a, BANK(_CardFlip)
 	ld hl, _CardFlip
-	; fallthrough
 
-;Special_UnusedMemoryGame:
-;	call Special_CheckCoins
-;	ret c
-;	ld a, BANK(_MemoryGame)
-;	ld hl, _MemoryGame
-;	call Special_StartGameCornerGame
-;	ret
+Special_SlidingPuzzle:  ; c.f. special_unown above 
+	call FadeToMenu
+	farcall SlidingPuzzle
+	ld a, [wSolvedUnownPuzzle]
+	ldh [hScriptVar], a
+	jmp ExitAllMenus
 
 Special_StartGameCornerGame:
 	call FarQueueScript

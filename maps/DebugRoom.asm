@@ -18,6 +18,7 @@ DebugRoom_MapScriptHeader:
 	bg_event  1,  2, BGEVENT_READ, DebugCPU ; check the items are all there 
 	bg_event  5,  2, BGEVENT_READ, DebugCPU2
 	bg_event  2,  7, BGEVENT_READ, DebugRoomTileGame
+	bg_event  0,  2, BGEVENT_UP, DebugSlidingPuzzle
 
 	def_object_events
 	object_event  4,  3, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE,  OBJECTTYPE_SCRIPT, 0, dwgDebugScript, -1
@@ -25,12 +26,30 @@ DebugRoom_MapScriptHeader:
 	object_event  7,  8, SPRITE_BREEDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE,  OBJECTTYPE_SCRIPT, 0, Breeder2Script, -1 ; gives lots of mons
 	object_event  4,  8, SPRITE_BREEDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE,  OBJECTTYPE_SCRIPT, 0, Breeder5Script, -1 ; gives lots of mons
 	object_event  6,  4, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE,  OBJECTTYPE_SCRIPT, 0, DebugWonderTradeScript, -1 ; wonder trade
+
 	
 	object_const_def
 	const DEBUG_DWG
 
 
+DebugSlidingPuzzle:
+	refreshscreen
+	setval $0
+	special Special_SlidingPuzzle
+	closetext
+	iftrue .PuzzleComplete
+	showtext NotSolvedText
+	end
 
+.PuzzleComplete:
+	jumpthistext
+	
+	text "Solved"
+	done
+
+NotSolvedText:
+	text "not solved"
+	done
 
 DebugCPU:
 	refreshscreen
