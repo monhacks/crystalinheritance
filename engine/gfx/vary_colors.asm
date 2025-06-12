@@ -1,4 +1,7 @@
-CopyDVsToColorVaryDVs: ; problem: the code cannot look at the held item. So... I will have to revise these to look at the  DVs of the mon, and then also make sure that such DV values are not possible to find in the wild, and then also make it possible to adjust the DVs by some trainer, and then also make it only happen once or twice, and then.... 
+CopyDVsToColorVaryDVs: 
+;Revise these to look at the  DVs of the mon, 
+; check if the DVs match those of the 
+; and then also make sure that such DV values are not possible to find in the wild, and then also make it possible to adjust the DVs by some trainer, and then also make it only happen once or twice, and then.... 
 ; e = HPAtkDV
 	ld a, [hli]
 	ld e, a
