@@ -22,7 +22,7 @@ MahoganyTown_MapScriptHeader:
 
 	def_object_events
 	object_event  11,  3, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 	0, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, MahoganyTownGrampsScript, -1 ; trade quest 
-	object_event  7, 14, 	SPRITE_KURT, SPRITEMOVEDATA_STANDING_RIGHT, 	0, 0, -1, -1, 0, 			OBJECTTYPE_SCRIPT, 0, MahoganyKurtScript, EVENT_LISTENED_TO_KURT_4 ; 
+	object_event  7, 14, 	SPRITE_KURT, SPRITEMOVEDATA_STANDING_RIGHT, 	0, 0, -1, -1, 0, 			OBJECTTYPE_SCRIPT, 0, MahoganyKurtScript, -1 ; 
 	object_event  9, 3, 	SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 	0, 0, -1, -1, 0, 			OBJECTTYPE_COMMAND, jumptextfaceplayer, MahoganyTownOfficerText, EVENT_BEAT_PRYCE
 	object_event  6,  7, 	SPRITE_FISHER, 		SPRITEMOVEDATA_WANDER, 	1, 1, -1, -1, 0, 			OBJECTTYPE_COMMAND, jumptextfaceplayer, MahoganyTownFisherText, -1
 	object_event 12,  8, 	SPRITE_CUTE_GIRL, 	SPRITEMOVEDATA_WANDER, 	1, 1, -1, -1, PAL_NPC_RED,	OBJECTTYPE_COMMAND, jumptextfaceplayer, MahoganyTownLassText, -1
@@ -186,14 +186,21 @@ MahoganyDeclineKurtStoryText:
 KurtMahoganyStoryText:
 	text "I invited your"
 	line "dad to celebrate"
-	para "winter festival,"
-	line "but he couldn't"
-	para "make it. We'd met"
-	line "up to walk his"
-	para "#mon every"
-	line "month, but this"
-	para "was the first he"
-	line "couldn't make."
+	cont "winter festival."
+
+	para "We'd had some big"
+	line "fights about his"
+	para "work on #-"
+	line "balls."
+
+	para "I probably said"
+	line "some things I"
+	cont "shouldn't have."
+
+	para "But this was the"
+	line "first time he"
+	para "didn't come for"
+	line "the festival."
 
 	para "When I got home,"
 	line "I noticed some "

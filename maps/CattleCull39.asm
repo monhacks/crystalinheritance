@@ -25,7 +25,7 @@ CattleCull39_MapScriptHeader:
 	object_event 13, 20, SPRITE_NOMAD_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 4, GenericTrainerNomadMJacob, -1
 	object_event 7,  7, SPRITE_NOMAD_F, SPRITEMOVEDATA_SPINCOUNTERCLOCKWISE, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, GenericTrainerNomadFMarlene, -1
 	object_event 5,  29, SPRITE_NOMAD_F, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, GenericTrainerNomadFRin, -1
-	object_event 13, 10, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CattleCullKurtScript, EVENT_TALKED_TO_BARBEAU
+	object_event 13, 10, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CattleCullKurtScript, -1
 	pokemon_event  5, 10, TAUROS, -1, -1, PAL_NPC_RED, TaurosText, -1;
 	pokemon_event  4, 11, MILTANK, -1, -1, PAL_NPC_RED, Miltank39Text, -1;
 	pokemon_event  9, 12, MILTANK, -1, -1, PAL_NPC_RED, Miltank39Text, -1;
@@ -175,15 +175,21 @@ KurtCattleCullStoryText:
 	
 	para "If you stop"
 	line "interacting, "
-	cont "the #mon"
-	cont "inside will go."
+	para "the #mon"
+	line "inside will go."
 	
 	para "So when your Dad"
-	line "went off to work"
-	cont "in Olivine, he"
-	para "left the Cynda-"
-	line "quil for me to"
-	cont "take care."
+	line "went off to start"
+	para "his career with"
+	line "for Silph's #-"
+	para "ball R&D in"
+	cont "Kanto, he left"
+	para "Cyndaquil for me"
+	line "to take care of."
+
+	para "Cyndaquil and I"
+	line "watched him sail"
+	cont "away from."
 
 	para "If you ever want"
 	line "to hear it again,"

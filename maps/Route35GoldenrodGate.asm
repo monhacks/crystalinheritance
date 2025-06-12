@@ -232,14 +232,6 @@ KurtGoldenrodGateText:
 	text "Underground, we'd"
 	line "come for haircuts."
 	
-	para "The trip from"
-	line "Azalea was so"
-	para "long. He would"
-	line "hold his apricorn"
-	para "all the way, its"
-	line "glow visible in"
-	cont "his hands."
-	
 	para "At the haircut, "
 	line "Cyndaquil's flame"
 	para "grew and shrank"
@@ -249,6 +241,12 @@ KurtGoldenrodGateText:
 	line "ghed every time"
 	para "the barber had to"
 	line "work around it."
+
+	para "We got some funny"
+	line "looks for having"
+	cont "an apricorn - "
+	para "#balls were just"
+	line "becoming common."
 	
 	para "If you ever want"
 	line "to hear it again,"

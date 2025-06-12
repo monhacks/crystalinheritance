@@ -136,69 +136,97 @@ TG2_Text_Kurt5_2: ; todo
     text " Kurt's Journal: " 
 	next
 	text_start		
-	text "Dear <PLAYER>."
-	line "The last time I"
-
-	para "was here, at the"
-	line "Burned Tower, was"
+	text "Last I was at the"
+	line "Burned Tower was"
 	para "for the new year"
 	line "celebration befo-"
 	cont "re you were born."
 
 	para "Your dad and I "
-	line "met here. I was "
-	cont "so excited."
+	line "were going to"
+	cont "meet here."
+
+	para "We hadn't talked"
+	line "in a while, but"
+	para "I thought we'd"
+	line "come to a stable"
+	para "silence about our"
+	line "disagreements."
 
 	para "I wanted to rem-"
 	line "ind him of his "
-	cont "#mon,"
-	
-	para "That cuddly, cute"
-	line "Cyndaquil,"
+	cont "first #mon,"
 	
 	para "since he was abo-"
 	line "ut to have you."
 	
 	para "While I waited,"
 	line "I looked in the "
-	para "bag and found the"
+	para "bag and found his"
 	line "apricorn."
 	
-	para "The paint we had"
-	line "put on was nearly"
-	cont "all chipped away,"
-	
-	para "only our memories"
-	line "could remind us"
-	cont "what it once was."
-
+	para "The paint was ne-"
+	line "arly all chipped"
+	para "off, so only he "
+	line "and I would know"
+	cont "what it once was." 
 	
 	para "When I picked it"
 	line "up it was cold"
-	para "and still - not"
-	line "as it should be."
-
+	para "and still."
 	
 	para "When I opened it,"
 	line "the inside was "
 	para "dark. I tried re-"
 	line "opening it to no"
-	cont "avail."
-	
+	cont "avail."	
+
 	para "I closed it for"
 	line "the last time,"
 	para "marking the end"
 	line "of that part of"
 	cont "my life."
 
+	para "Now, looking back, I"
+	line "had been so rigid"
+	para "in my thinking."
+
+	para "I should have said,"
+	line "'I am sorry.' I"
+	para "should have said,"
+	line "'I support your"
+	cont "dreams.'"
+
+	para "I should have said,"
+	line "'I love you and"
+	para "accept you as"
+	line "you are.'"
+
+	para "Instead of trying"
+	line "to make you into"
+	para "what I thought"
+	line "you should be."
+
 	para "I still think of"
 	line "those good days"
-	para "whenever I see"
-	line "an apricorn, "
-	
-	para "wishing I could"
-	line "see him catch his"
-	cont "first one again."
+	cont "whenever I see"
+	cont "an apricorn,"
+
+	para "but now I also"
+	line "think of all the"
+	para "good days we could"
+	line "have had if I'd"
+	cont "been wiser."
+
+	para "If you're listening,"
+	line "I hope you"
+	para "can forgive a"
+	line "stubborn old man."
+
+	para "And I hope you'll"
+	line "do better with"
+	para "<PLAYER> than I"
+	line "did with you."
 	done
 
 

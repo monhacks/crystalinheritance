@@ -19,7 +19,7 @@ EarlsPokemonAcademy_MapScriptHeader:
 	object_event  6,  8, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerSageTroy, -1
 	object_event  1,  6, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerSageNeal, -1
 	object_event  4,  3, SPRITE_ELDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerElderLi, -1
-	object_event  6,  14, SPRITE_KURT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AcademyKurtScript, EVENT_BEAT_FALKNER
+	object_event  6,  14, SPRITE_KURT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AcademyKurtScript, -1
 
 	object_const_def
 
@@ -198,29 +198,24 @@ AcademyKurtText: ; need to ask the player if htey want to hear a story
 	
 	para "After class, we"
 	line "walked around the"
-	cont "ponds, your dad"
-	para "walking side by"
-	line "side with his"
-	cont "partner, holding"
+	para "ponds, your dad"
+	line "walking side by"
+	para "side with his"
+	line "partner, holding"
 	cont "his apricorn."
-	
-	para "#seals were"
-	line "pretty new back"
-	cont "then, so we dec-"
-	cont "orated it with"
-	
-	para "vibrant colors."
-	line "Each scrape and"
-	cont "chip in the coat"
-	cont "was a memory of"
-	cont "an adventure."
-;	
-	para "At nights, I'd"
-	line "find him under"
-	cont "the covers, the"
-	cont "glow of his ap-"
-	cont "ricorn giving"
-	cont "him away."
+
+	para "The other kids had"
+	line "#seals for their"
+	cont "#balls,"
+
+	para "So we decorated"
+	line "the Apricorn with"
+	cont "vibrant paints!"
+
+	para "Each scrape and"
+	line "chip in the coat"
+	para "was a memory of"
+	line "an adventure."
 
 	para "If you ever want"
 	line "to hear it again,"

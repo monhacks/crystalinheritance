@@ -515,7 +515,7 @@ NoReadKurtText:
 	text "Put it down."
 	done
 
-KurtsJournal1Text:
+KurtsJournal1Text: ; calm coast 
 	text "So this is how"
 	line "Route 34 looked"
 	cont "160 years ago."
@@ -536,11 +536,9 @@ KurtsJournal1Text:
 	cont "his hands with the"
 	cont "#mon inside!"
 
-	para "I'll never for-"
-	line "get his beaming"
-	cont "face. We had so"
-	cont "much time ahead"
-	cont "of us."
+	para "It was so simple."
+	line "He caught it the"
+	cont "right way."
 	done
 
 
@@ -563,17 +561,9 @@ ItsKurtsJournal2Text:
 	para "Read it?"
 	done
 
-KurtsJournal2Text:
+KurtsJournal2Text: ; route 35 gate? 
 	text "Underground, we'd"
 	line "come for haircuts."
-	
-	para "The trip from"
-	line "Azalea was so"
-	para "long. He would"
-	line "hold his apricorn"
-	para "all the way, its"
-	line "glow visible in"
-	cont "his hands."
 	
 	para "At the haircut, "
 	line "Cyndaquil's flame"
@@ -584,6 +574,13 @@ KurtsJournal2Text:
 	line "ghed every time"
 	para "the barber had to"
 	line "work around it."
+
+	para "We got some funny"
+	line "looks for having"
+	cont "an apricorn - "
+	para "#balls were just"
+	line "becoming common."
+	
 	done
 
 
@@ -606,7 +603,7 @@ ItsKurtsJournal3Text:
 	para "Read it?"
 	done
 
-KurtsJournal3Text:
+KurtsJournal3Text: ; earls academy 
 	text "This was your"
 	line "dad's school."
 	
@@ -617,27 +614,23 @@ KurtsJournal3Text:
 	para "side with his"
 	line "partner, holding"
 	cont "his apricorn."
-	
-	para "#seals were"
-	line "pretty new back"
-	para "then, so we dec-"
-	line "orated it with"
-	
-	para "vibrant colors."
-	line "Each scrape and"
-	para "chip in the coat"
-	line "was a memory of"
-	cont "an adventure."
-	
-	para "At nights, I'd"
-	line "find him under"
-	para "the covers, the"
-	line "glow of his"
-	para "apricorn giving"
-	line "him away."
+
+	para "The other kids had"
+	line "#seals for their"
+	cont "#balls,"
+
+	para "So we decorated"
+	line "the Apricorn with"
+	cont "vibrant paints!"
+
+	para "Each scrape and"
+	line "chip in the coat"
+	para "was a memory of"
+	line "an adventure."
 	done
 
-KurtsJournal4Script:
+
+KurtsJournal4Script: ; cattle cull 39 
 	opentext
 	writetext ItsKurtsJournal4Text
 	yesorno
@@ -656,7 +649,7 @@ ItsKurtsJournal4Text:
 	para "Read it?"
 	done
 
-KurtsJournal4Text:
+KurtsJournal4Text: 
 	text "I keep thinking"
 	line "about your dad's"
 	cont "Apricorn."
@@ -671,11 +664,17 @@ KurtsJournal4Text:
 	line "inside will go."
 	
 	para "So when your Dad"
-	line "went off to work"
-	cont "in Olivine, he"
-	para "left the Cynda-"
-	line "quil for me to"
-	cont "take care."
+	line "went off to start"
+	para "his career with"
+	line "for Silph's #-"
+	para "ball R&D in"
+	cont "Kanto, he left"
+	para "Cyndaquil for me"
+	line "to take care of."
+
+	para "Cyndaquil and I"
+	line "watched him sail"
+	cont "away from."
 	done
 
 KurtsJournal5Script:
@@ -700,22 +699,28 @@ ItsKurtsJournal5Text:
 KurtsJournal5Text: ; mahogany town 
 	text "I invited your"
 	line "dad to celebrate"
-	cont "winter festival,"
+	cont "winter festival."
 
-	para "but he couldn't"
-	line "make it. We'd met"
-	cont "up to walk his"
+	para "We'd had some big"
+	line "fights about his"
+	para "work on #-"
+	line "balls."
 
-	para "#mon every"
-	line "month, but this"
-	cont "was the first he"
-	cont "couldn't make."
+	para "I probably said"
+	line "some things I"
+	cont "shouldn't have."
+
+	para "But this was the"
+	line "first time he"
+	para "didn't come for"
+	line "the festival."
 
 	para "When I got home,"
 	line "I noticed some "
-	cont "paint was wearing"
-	cont "off the apricorn."
+	para "paint was wearing"
+	line "off the apricorn."
 	done
+
 	
 KurtsJournal6Script:
 	opentext
@@ -738,18 +743,25 @@ ItsKurtsJournal6Text:
 
 KurtsJournal6Text: ; tinder garden 2
 	text "Last I was at the"
-	line "burned tower was"
+	line "Burned Tower was"
 	para "for the new year"
 	line "celebration befo-"
-	cont "re you were born,"
+	cont "re you were born."
 
-	para "your dad and I "
-	line "met here. I was "
-	cont "so excited."
+	para "Your dad and I "
+	line "were going to"
+	cont "meet here."
+
+	para "We hadn't talked"
+	line "in a while, but"
+	para "I thought we'd"
+	line "come to a stable"
+	para "silence about our"
+	line "disagreements."
 
 	para "I wanted to rem-"
 	line "ind him of his "
-	cont "#mon,"
+	cont "first #mon,"
 	
 	para "since he was abo-"
 	line "ut to have you."
@@ -767,27 +779,58 @@ KurtsJournal6Text: ; tinder garden 2
 	
 	para "When I picked it"
 	line "up it was cold"
-	para "and still - not"
-	line "as it should be."
+	para "and still."
 	
 	para "When I opened it,"
 	line "the inside was "
 	para "dark. I tried re-"
 	line "opening it to no"
-	cont "avail."
-	
+	cont "avail."	
+
 	para "I closed it for"
 	line "the last time,"
 	para "marking the end"
 	line "of that part of"
 	cont "my life."
 
+	para "Now, looking back, I"
+	line "had been so rigid"
+	para "in my thinking."
+
+	para "I should have said,"
+	line "'I am sorry.' I"
+	para "should have said,"
+	line "'I support your"
+	cont "dreams.'"
+
+	para "I should have said,"
+	line "'I love you and"
+	para "accept you as"
+	line "you are.'"
+
+	para "Instead of trying"
+	line "to make you into"
+	para "what I thought"
+	line "you should be."
+
 	para "I still think of"
 	line "those good days"
 	cont "whenever I see"
-	cont "an apricorn, "
-	
-	para "wishing I could"
-	line "see him catch his"
-	cont "first one again."
+	cont "an apricorn,"
+
+	para "but now I also"
+	line "think of all the"
+	para "good days we could"
+	line "have had if I'd"
+	cont "been wiser."
+
+	para "If you're listening,"
+	line "I hope you"
+	para "can forgive a"
+	line "stubborn old man."
+
+	para "And I hope you'll"
+	line "do better with"
+	para "<PLAYER> than I"
+	line "did with you."
 	done
