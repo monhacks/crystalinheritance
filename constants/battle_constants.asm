@@ -316,15 +316,15 @@ LINK_BATTLE_RECORD_LENGTH EQU 2 + (NAME_LENGTH - 1) + 2 * 3
 NUM_LINK_BATTLE_RECORDS EQU 5
 
 ; used in data/trainers/dvs.asm
-PERFECT_DVS EQUS "$ff, $ff, $ff"
+PERFECT_DVS EQUS "$dd, $dd, $dd" ; prevents poly-coloring 
 
 ; $00 is used instead of $ff for DVs because $ff is the end-of-trainer marker
 ; ReadTrainerParty converts $00 to $ff when reading DVs
 ; DV order: hp:atk, def:spd, sat:sdf
-FAKE_PERFECT_DVS EQUS "$00, $00, $00"
-DVS_TRICK_ROOM   EQUS "$00, $f0, $00"
+FAKE_PERFECT_DVS EQUS "$dd, $dd, $dd" ; prevents poly color 
+DVS_TRICK_ROOM   EQUS "$dd, $f0, $dd"
 
-; Hidden Power DVs ($00 is converted to $ff in regular trainer sets)
+; Hidden Power DVs ($00 is converted to $ff in regular trainer sets and in reading the DVs for varying the color)
 ; Chosen for stat importance: Speed > * > Atk
 if DEF(FAITHFUL)
 DVS_HP_FIGHTING EQUS "$00, $ee, $ee"

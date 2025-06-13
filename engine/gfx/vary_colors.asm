@@ -1,4 +1,4 @@
-CopyDVsToColorVaryDVs: 
+CopyDVsToColorVaryDVs: ; todo: add all the other HPs and palettes, then also go through all the trainers and make sure perfect dvs isn't the same as any of these 
 ;Revise these to look at the  DVs of the mon, 
 ; check if the DVs match those of the 
 ; and then also make sure that such DV values are not possible to find in the wild, and then also make it possible to adjust the DVs by some trainer, and then also make it only happen once or twice, and then.... 
@@ -160,6 +160,45 @@ VaryBlueByDV:
 	ld [hld], a
 	ret
 
+CheckDVsHPDark:
+; Check if DVs match DVS_HP_DARK pattern: $fe, $00, $00
+; Returns carry flag set if match, clear if no match
+; bc = wColorVaryDVs pointer
+	push hl
+	push de
+	push bc
+	
+	; Set up for block comparison
+	ld h, b
+	ld l, c                    ; hl = source (wColorVaryDVs)
+	ld de, .HPDarkPattern      ; de = pattern to match
+	ld b, 3                    ; compare 3 bytes
+	
+.compare_loop
+	ld a, [de]
+	cp [hl]
+	jr nz, .no_match
+	inc hl
+	inc de
+	dec b
+	jr nz, .compare_loop
+	
+	; Match found
+	scf  ; set carry flag
+	jr .done
+	
+.no_match
+	and a  ; clear carry flag
+	
+.done
+	pop bc
+	pop de
+	pop hl
+	ret
+
+.HPDarkPattern:
+	db $fe, $ff, $ff ; ~!DEF faithful 
+
 VaryColorsByDVs::
 ; hl = colors
 ; [hl+0] = gggr:rrrr
@@ -190,6 +229,10 @@ endc
 
 	ld bc, wColorVaryDVs
 
+	; First check for DVS_HP_DARK pattern
+	call CheckDVsHPDark
+	jr c, .HPDarkEffect
+
 	; Check if POLYCHROME item is in use
 	push hl
 	push bc
@@ -202,7 +245,62 @@ endc
 	jr z, .PolychromeEffect
 	pop bc
 	pop hl
-	jr .StandardColors
+	jp .StandardColors
+
+.HPDarkEffect:
+	; Apply DVS_HP_DARK special palette
+	push hl
+	push bc
+	
+	; Get light color
+	ld hl, .HPDarkPalsLite
+	ld a, [hli]
+	ld d, a
+	ld a, [hl]
+	ld e, a
+	pop bc
+	pop hl
+	
+	; Store lite RGB
+	ld a, e
+	ld [hli], a
+	ld a, d
+	ld [hli], a
+	
+	; Get dark color
+	push hl
+	push bc
+	ld hl, .HPDarkPalsDark
+	ld a, [hli]
+	ld d, a
+	ld a, [hl]
+	ld e, a
+	pop bc
+	pop hl
+	
+	; Store dark RGB
+	ld a, e
+	ld [hli], a
+	ld a, d
+	ld [hl], a
+	
+	pop af
+	ldh [rSVBK], a
+	ret
+
+.HPDarkPalsLite:
+if !DEF(MONOCHROME)
+	RGB 10, 10, 10 ; light gray
+else
+	RGB_MONOCHROME_DARK
+endc
+
+.HPDarkPalsDark:
+if !DEF(MONOCHROME)
+	RGB 20, 20, 20 ; dark gray
+else
+	RGB_MONOCHROME_DARK
+endc
 
 .PolychromeEffect:
 	pop bc
