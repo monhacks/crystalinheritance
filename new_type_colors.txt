@@ -1,4 +1,69 @@
 Bug
+RGB 4, 17, 4
+RGB 27, 2, 7
+
+Dark
+RGB 8, 6, 6
+RGB 16, 27, 30
+
+Dragon
+RGB 10, 12, 27
+RGB 30, 23, 0
+
+Electric
+RGB 5, 3, 13
+RGB 31, 26, 0
+
+Fighting
+RGB 31, 16, 0
+RGB 23, 24, 23
+
+Fire
+RGB 28, 5, 5
+RGB 31, 21, 11
+
+Flying
+RGB 0, 9, 21
+RGB 27, 28, 31
+
+Ghost
+RGB 6, 3, 5
+RGB 17, 9, 17
+
+Grass
+RGB 6, 25, 6
+RGB 25, 16, 8
+
+Ground
+RGB 18, 10, 4
+RGB 25, 24, 21
+
+Ice
+RGB 16, 25, 29
+RGB 29, 31, 31
+
+Poison
+RGB 15, 13, 29
+RGB 6, 25, 6
+
+Psychic
+RGB 9, 0, 16
+RGB 31, 2, 18
+
+Rock
+RGB 6, 10, 10
+RGB 17, 14, 10
+
+Steel
+RGB 14, 16, 18
+RGB 23, 23, 23
+
+Water
+RGB 4, 18, 31
+RGB 21, 29, 29
+
+
+Bug
 Current: #91A119 / #B8C26A (similar yellow-greens)
 Praying mantis/green beetle with striking contrast:
 #228B22 / #FF0000 - Forest green with bright red (classic mantis with red eyes)

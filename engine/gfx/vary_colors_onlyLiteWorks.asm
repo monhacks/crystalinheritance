@@ -1,6 +1,7 @@
-CopyDVsToColorVaryDVs: 
+CopyDVsToColorVaryDVs: ; todo: add all the other HPs and palettes, then also go through all the trainers and make sure perfect dvs isn't the same as any of these 
 ;Revise these to look at the  DVs of the mon, 
 ; check if the DVs match those of the 
+; and then also make sure that such DV values are not possible to find in the wild, and then also make it possible to adjust the DVs by some trainer, and then also make it only happen once or twice, and then.... 
 ; e = HPAtkDV
 	ld a, [hli]
 	ld e, a
@@ -160,19 +161,161 @@ VaryBlueByDV:
 	ret
 
 CheckDVsHPType:
-; Check if DVs match a Hidden Power type pattern
-; Input: bc = wColorVaryDVs pointer, de = pattern pointer
-; Returns: carry flag set if match, clear if no match
+; Check if DVs match any HP type pattern
+; Returns: a = HP type constant if match found, 0 if no match
+; bc = wColorVaryDVs pointer
 	push hl
 	push de
 	push bc
 	
-	; Set up for block comparison
+	; Check each HP type pattern
 	ld h, b
 	ld l, c                    ; hl = source (wColorVaryDVs)
-	; de already contains pattern pointer
-	ld b, 3                    ; compare 3 bytes
 	
+	; HP Fighting
+	ld de, .HPFightingPattern
+	call .ComparePattern
+	jr c, .foundFighting
+	
+	; HP Flying
+	ld de, .HPFlyingPattern
+	call .ComparePattern
+	jr c, .foundFlying
+	
+	; HP Poison
+	ld de, .HPPoisonPattern
+	call .ComparePattern
+	jr c, .foundPoison
+	
+	; HP Ground
+	ld de, .HPGroundPattern
+	call .ComparePattern
+	jr c, .foundGround
+	
+	; HP Rock
+	ld de, .HPRockPattern
+	call .ComparePattern
+	jr c, .foundRock
+	
+	; HP Bug
+	ld de, .HPBugPattern
+	call .ComparePattern
+	jr c, .foundBug
+	
+	; HP Ghost
+	ld de, .HPGhostPattern
+	call .ComparePattern
+	jr c, .foundGhost
+	
+	; HP Steel
+	ld de, .HPSteelPattern
+	call .ComparePattern
+	jr c, .foundSteel
+	
+	; HP Fire
+	ld de, .HPFirePattern
+	call .ComparePattern
+	jr c, .foundFire
+	
+	; HP Water
+	ld de, .HPWaterPattern
+	call .ComparePattern
+	jr c, .foundWater
+	
+	; HP Grass
+	ld de, .HPGrassPattern
+	call .ComparePattern
+	jr c, .foundGrass
+	
+	; HP Electric
+	ld de, .HPElectricPattern
+	call .ComparePattern
+	jr c, .foundElectric
+	
+	; HP Psychic
+	ld de, .HPPsychicPattern
+	call .ComparePattern
+	jr c, .foundPsychic
+	
+	; HP Ice
+	ld de, .HPIcePattern
+	call .ComparePattern
+	jr c, .foundIce
+	
+	; HP Dragon
+	ld de, .HPDragonPattern
+	call .ComparePattern
+	jr c, .foundDragon
+	
+	; HP Dark
+	ld de, .HPDarkPattern
+	call .ComparePattern
+	jr c, .foundDark
+	
+	; No match found
+	xor a
+	jr .done
+
+.foundFighting:
+	ld a, 1
+	jr .done
+.foundFlying:
+	ld a, 2
+	jr .done
+.foundPoison:
+	ld a, 3
+	jr .done
+.foundGround:
+	ld a, 4
+	jr .done
+.foundRock:
+	ld a, 5
+	jr .done
+.foundBug:
+	ld a, 6
+	jr .done
+.foundGhost:
+	ld a, 7
+	jr .done
+.foundSteel:
+	ld a, 8
+	jr .done
+.foundFire:
+	ld a, 9
+	jr .done
+.foundWater:
+	ld a, 10
+	jr .done
+.foundGrass:
+	ld a, 11
+	jr .done
+.foundElectric:
+	ld a, 12
+	jr .done
+.foundPsychic:
+	ld a, 13
+	jr .done
+.foundIce:
+	ld a, 14
+	jr .done
+.foundDragon:
+	ld a, 15
+	jr .done
+.foundDark:
+	ld a, 16
+	
+.done
+	pop bc
+	pop de
+	pop hl
+	ret
+
+.ComparePattern:
+	; Compare 3 bytes at hl with pattern at de
+	; Returns carry set if match
+	push hl
+	push bc
+	ld b, 3
 .compare_loop
 	ld a, [de]
 	cp [hl]
@@ -181,19 +324,49 @@ CheckDVsHPType:
 	inc de
 	dec b
 	jr nz, .compare_loop
-	
 	; Match found
-	scf  ; set carry flag
-	jr .done
-	
-.no_match
-	and a  ; clear carry flag
-	
-.done
 	pop bc
-	pop de
 	pop hl
+	scf
 	ret
+.no_match
+	pop bc
+	pop hl
+	and a  ; clear carry
+	ret
+
+.HPFightingPattern:
+	db $ff, $ee, $ee
+.HPFlyingPattern:
+	db $ff, $fe, $ee
+.HPPoisonPattern:
+	db $ff, $ef, $ee
+.HPGroundPattern:
+	db $ff, $ff, $ee
+.HPRockPattern:
+	db $ff, $ee, $fe
+.HPBugPattern:
+	db $ff, $fe, $fe
+.HPGhostPattern:
+	db $ff, $ef, $fe
+.HPSteelPattern:
+	db $ff, $ff, $fe
+.HPFirePattern:
+	db $ff, $ee, $ef
+.HPWaterPattern:
+	db $ff, $fe, $ef
+.HPGrassPattern:
+	db $ff, $ef, $ef
+.HPElectricPattern:
+	db $ff, $00, $ef
+.HPPsychicPattern:
+	db $ff, $ee, $ff
+.HPIcePattern:
+	db $ff, $fe, $ff
+.HPDragonPattern:
+	db $ff, $ef, $ff
+.HPDarkPattern:
+	db $fe, $ff, $ff
 
 VaryColorsByDVs::
 ; hl = colors
@@ -225,838 +398,157 @@ endc
 
 	ld bc, wColorVaryDVs
 
-	; Check each Hidden Power type in order
-	ld de, .HPFightingPattern
+	; First check for HP type patterns
 	call CheckDVsHPType
-	jp c, .HPFightingEffect
-	
-	ld de, .HPFlyingPattern
-	call CheckDVsHPType
-	jp c, .HPFlyingEffect
-	
-	ld de, .HPPoisonPattern
-	call CheckDVsHPType
-	jp c, .HPPoisonEffect
-	
-	ld de, .HPGroundPattern
-	call CheckDVsHPType
-	jp c, .HPGroundEffect
-	
-	ld de, .HPRockPattern
-	call CheckDVsHPType
-	jp c, .HPRockEffect
-	
-	ld de, .HPBugPattern
-	call CheckDVsHPType
-	jp c, .HPBugEffect
-	
-	ld de, .HPGhostPattern
-	call CheckDVsHPType
-	jp c, .HPGhostEffect
-	
-	ld de, .HPSteelPattern
-	call CheckDVsHPType
-	jp c, .HPSteelEffect
-	
-	ld de, .HPFirePattern
-	call CheckDVsHPType
-	jp c, .HPFireEffect
-	
-	ld de, .HPWaterPattern
-	call CheckDVsHPType
-	jp c, .HPWaterEffect
-	
-	ld de, .HPGrassPattern
-	call CheckDVsHPType
-	jp c, .HPGrassEffect
-	
-	ld de, .HPElectricPattern
-	call CheckDVsHPType
-	jp c, .HPElectricEffect
-	
-	ld de, .HPPsychicPattern
-	call CheckDVsHPType
-	jp c, .HPPsychicEffect
-	
-	ld de, .HPIcePattern
-	call CheckDVsHPType
-	jp c, .HPIceEffect
-	
-	ld de, .HPDragonPattern
-	call CheckDVsHPType
-	jp c, .HPDragonEffect
-	
-	ld de, .HPDarkPattern
-	call CheckDVsHPType
-	jp c, .HPDarkEffect
+	and a
+	jr nz, .HPTypeEffect
 
 	; Check if POLYCHROME item is in use
 	push hl
 	push bc
 	ld a, [wCurItem]
 	cp POLYCHROME
-	jp z, .PolychromeEffect
+	jr z, .PolychromeEffect
 	; If not POLYCHROME, check if species is Porygon
 	ld a, [wColorVarySpecies]
 	cp PORYGON
-	jp z, .PolychromeEffect
+	jr z, .PolychromeEffect
 	pop bc
 	pop hl
 	jp .StandardColors
 
-.HPFightingEffect:
+.HPTypeEffect:
+	; Apply HP type special palette based on value in a
 	push hl
 	push bc
-	ld hl, .HPFightingPalsLite
-	ld a, [hli]
+	push af
+	
+	; Calculate offset for palette table
+	dec a  ; Convert to 0-based index
+	add a  ; Multiply by 2 (word size)
 	ld e, a
+	ld d, 0
+	
+	; Get light color
+	ld hl, .HPTypePalsLite
+	add hl, de
+	ld a, [hli]
+	ld e, a          ; e = low byte
 	ld a, [hl]
-	ld d, a
+	ld d, a          ; d = high byte
+	
+	pop af
 	pop bc
 	pop hl
-	ld a, e
+	
+	; Store lite RGB (no byte swapping)
+	ld a, e          ; store low byte first
 	ld [hli], a
-	ld a, d
+	ld a, d          ; store high byte second
 	ld [hli], a
+	
+	; Get dark color
 	push hl
 	push bc
-	ld hl, .HPFightingPalsDark
-	ld a, [hli]
+	push af
+	
+	dec a  ; Convert to 0-based index again
+	add a  ; Multiply by 2
 	ld e, a
+	ld d, 0
+	
+	ld hl, .HPTypePalsDark
+	add hl, de
+	ld a, [hli]
+	ld e, a          ; e = low byte
 	ld a, [hl]
-	ld d, a
+	ld d, a          ; d = high byte
+	
+	pop af
 	pop bc
 	pop hl
-	ld a, e
+	
+	; Store dark RGB (no byte swapping)
+	ld a, e          ; store low byte first
 	ld [hli], a
-	ld a, d
+	ld a, d          ; store high byte second
 	ld [hl], a
+	
 	pop af
 	ldh [rSVBK], a
 	ret
 
-.HPFlyingEffect:
-	push hl
-	push bc
-	ld hl, .HPFlyingPalsLite
-	ld a, [hli]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	pop bc
-	pop hl
-	ld a, e
-	ld [hli], a
-	ld a, d
-	ld [hli], a
-	push hl
-	push bc
-	ld hl, .HPFlyingPalsDark
-	ld a, [hli]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	pop bc
-	pop hl
-	ld a, e
-	ld [hli], a
-	ld a, d
-	ld [hl], a
-	pop af
-	ldh [rSVBK], a
-	ret
-
-.HPPoisonEffect:
-	push hl
-	push bc
-	ld hl, .HPPoisonPalsLite
-	ld a, [hli]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	pop bc
-	pop hl
-	ld a, e
-	ld [hli], a
-	ld a, d
-	ld [hli], a
-	push hl
-	push bc
-	ld hl, .HPPoisonPalsDark
-	ld a, [hli]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	pop bc
-	pop hl
-	ld a, e
-	ld [hli], a
-	ld a, d
-	ld [hl], a
-	pop af
-	ldh [rSVBK], a
-	ret
-
-.HPGroundEffect:
-	push hl
-	push bc
-	ld hl, .HPGroundPalsLite
-	ld a, [hli]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	pop bc
-	pop hl
-	ld a, e
-	ld [hli], a
-	ld a, d
-	ld [hli], a
-	push hl
-	push bc
-	ld hl, .HPGroundPalsDark
-	ld a, [hli]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	pop bc
-	pop hl
-	ld a, e
-	ld [hli], a
-	ld a, d
-	ld [hl], a
-	pop af
-	ldh [rSVBK], a
-	ret
-
-.HPRockEffect:
-	push hl
-	push bc
-	ld hl, .HPRockPalsLite
-	ld a, [hli]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	pop bc
-	pop hl
-	ld a, e
-	ld [hli], a
-	ld a, d
-	ld [hli], a
-	push hl
-	push bc
-	ld hl, .HPRockPalsDark
-	ld a, [hli]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	pop bc
-	pop hl
-	ld a, e
-	ld [hli], a
-	ld a, d
-	ld [hl], a
-	pop af
-	ldh [rSVBK], a
-	ret
-
-.HPBugEffect:
-	push hl
-	push bc
-	ld hl, .HPBugPalsLite
-	ld a, [hli]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	pop bc
-	pop hl
-	ld a, e
-	ld [hli], a
-	ld a, d
-	ld [hli], a
-	push hl
-	push bc
-	ld hl, .HPBugPalsDark
-	ld a, [hli]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	pop bc
-	pop hl
-	ld a, e
-	ld [hli], a
-	ld a, d
-	ld [hl], a
-	pop af
-	ldh [rSVBK], a
-	ret
-
-.HPGhostEffect:
-	push hl
-	push bc
-	ld hl, .HPGhostPalsLite
-	ld a, [hli]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	pop bc
-	pop hl
-	ld a, e
-	ld [hli], a
-	ld a, d
-	ld [hli], a
-	push hl
-	push bc
-	ld hl, .HPGhostPalsDark
-	ld a, [hli]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	pop bc
-	pop hl
-	ld a, e
-	ld [hli], a
-	ld a, d
-	ld [hl], a
-	pop af
-	ldh [rSVBK], a
-	ret
-
-.HPSteelEffect:
-	push hl
-	push bc
-	ld hl, .HPSteelPalsLite
-	ld a, [hli]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	pop bc
-	pop hl
-	ld a, e
-	ld [hli], a
-	ld a, d
-	ld [hli], a
-	push hl
-	push bc
-	ld hl, .HPSteelPalsDark
-	ld a, [hli]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	pop bc
-	pop hl
-	ld a, e
-	ld [hli], a
-	ld a, d
-	ld [hl], a
-	pop af
-	ldh [rSVBK], a
-	ret
-
-.HPFireEffect:
-	push hl
-	push bc
-	ld hl, .HPFirePalsLite
-	ld a, [hli]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	pop bc
-	pop hl
-	ld a, e
-	ld [hli], a
-	ld a, d
-	ld [hli], a
-	push hl
-	push bc
-	ld hl, .HPFirePalsDark
-	ld a, [hli]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	pop bc
-	pop hl
-	ld a, e
-	ld [hli], a
-	ld a, d
-	ld [hl], a
-	pop af
-	ldh [rSVBK], a
-	ret
-
-.HPWaterEffect:
-	push hl
-	push bc
-	ld hl, .HPWaterPalsLite
-	ld a, [hli]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	pop bc
-	pop hl
-	ld a, e
-	ld [hli], a
-	ld a, d
-	ld [hli], a
-	push hl
-	push bc
-	ld hl, .HPWaterPalsDark
-	ld a, [hli]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	pop bc
-	pop hl
-	ld a, e
-	ld [hli], a
-	ld a, d
-	ld [hl], a
-	pop af
-	ldh [rSVBK], a
-	ret
-
-.HPGrassEffect:
-	push hl
-	push bc
-	ld hl, .HPGrassPalsLite
-	ld a, [hli]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	pop bc
-	pop hl
-	ld a, e
-	ld [hli], a
-	ld a, d
-	ld [hli], a
-	push hl
-	push bc
-	ld hl, .HPGrassPalsDark
-	ld a, [hli]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	pop bc
-	pop hl
-	ld a, e
-	ld [hli], a
-	ld a, d
-	ld [hl], a
-	pop af
-	ldh [rSVBK], a
-	ret
-
-.HPElectricEffect:
-	push hl
-	push bc
-	ld hl, .HPElectricPalsLite
-	ld a, [hli]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	pop bc
-	pop hl
-	ld a, e
-	ld [hli], a
-	ld a, d
-	ld [hli], a
-	push hl
-	push bc
-	ld hl, .HPElectricPalsDark
-	ld a, [hli]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	pop bc
-	pop hl
-	ld a, e
-	ld [hli], a
-	ld a, d
-	ld [hl], a
-	pop af
-	ldh [rSVBK], a
-	ret
-
-.HPPsychicEffect:
-	push hl
-	push bc
-	ld hl, .HPPsychicPalsLite
-	ld a, [hli]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	pop bc
-	pop hl
-	ld a, e
-	ld [hli], a
-	ld a, d
-	ld [hli], a
-	push hl
-	push bc
-	ld hl, .HPPsychicPalsDark
-	ld a, [hli]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	pop bc
-	pop hl
-	ld a, e
-	ld [hli], a
-	ld a, d
-	ld [hl], a
-	pop af
-	ldh [rSVBK], a
-	ret
-
-.HPIceEffect:
-	push hl
-	push bc
-	ld hl, .HPIcePalsLite
-	ld a, [hli]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	pop bc
-	pop hl
-	ld a, e
-	ld [hli], a
-	ld a, d
-	ld [hli], a
-	push hl
-	push bc
-	ld hl, .HPIcePalsDark
-	ld a, [hli]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	pop bc
-	pop hl
-	ld a, e
-	ld [hli], a
-	ld a, d
-	ld [hl], a
-	pop af
-	ldh [rSVBK], a
-	ret
-
-.HPDragonEffect:
-	push hl
-	push bc
-	ld hl, .HPDragonPalsLite
-	ld a, [hli]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	pop bc
-	pop hl
-	ld a, e
-	ld [hli], a
-	ld a, d
-	ld [hli], a
-	push hl
-	push bc
-	ld hl, .HPDragonPalsDark
-	ld a, [hli]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	pop bc
-	pop hl
-	ld a, e
-	ld [hli], a
-	ld a, d
-	ld [hl], a
-	pop af
-	ldh [rSVBK], a
-	ret
-
-.HPDarkEffect:
-	push hl
-	push bc
-	ld hl, .HPDarkPalsLite
-	ld a, [hli]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	pop bc
-	pop hl
-	ld a, e
-	ld [hli], a
-	ld a, d
-	ld [hli], a
-	push hl
-	push bc
-	ld hl, .HPDarkPalsDark
-	ld a, [hli]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	pop bc
-	pop hl
-	ld a, e
-	ld [hli], a
-	ld a, d
-	ld [hl], a
-	pop af
-	ldh [rSVBK], a
-	ret
-
-; Hidden Power DV patterns
-.HPFightingPattern:
-	db $ff, $ee, $ee
-.HPFlyingPattern:
-	db $ff, $fe, $ee
-.HPPoisonPattern:
-	db $ff, $ef, $ee
-.HPGroundPattern:
-	db $ff, $ff, $ee
-.HPRockPattern:
-	db $ff, $ee, $fe
-.HPBugPattern:
-	db $ff, $fe, $fe
-.HPGhostPattern:
-	db $ff, $ef, $fe
-.HPSteelPattern:
-	db $ff, $ff, $fe
-.HPFirePattern:
-	db $ff, $ee, $ef
-.HPWaterPattern:
-	db $ff, $fe, $ef
-.HPGrassPattern:
-	db $ff, $ef, $ef
-.HPElectricPattern:
-	db $ff, $ff, $ef
-.HPPsychicPattern:
-	db $ff, $ee, $ff
-.HPIcePattern:
-	db $ff, $fe, $ff
-.HPDragonPattern:
-	db $ff, $ef, $ff
-.HPDarkPattern:
-	db $fe, $ff, $ff
-
-; Hidden Power palettes
-.HPFightingPalsLite:
+.HPTypePalsLite:
 if !DEF(MONOCHROME)
-	RGB 23, 24, 23
+	RGB 31, 16, 0    ; Fighting
+	RGB 0, 9, 21     ; Flying
+	RGB 15, 13, 29   ; Poison
+	RGB 18, 10, 4    ; Ground
+	RGB 6, 10, 10    ; Rock
+	RGB 4, 17, 4     ; Bug : this sets correct 
+	RGB 6, 3, 5      ; Ghost
+	RGB 14, 16, 18   ; Steel
+	RGB 28, 5, 5     ; Fire
+	RGB 4, 18, 31    ; Water
+	RGB 6, 25, 6     ; Grass
+	RGB 5, 3, 13     ; Electric
+	RGB 9, 0, 16     ; Psychic
+	RGB 16, 25, 29   ; Ice
+	RGB 10, 12, 27   ; Dragon
+	RGB 8, 6, 6      ; Dark
 else
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_DARK
 	RGB_MONOCHROME_DARK
 endc
 
-.HPFightingPalsDark:
+.HPTypePalsDark:
 if !DEF(MONOCHROME)
-	RGB 31, 16, 0
+	RGB 23, 24, 23   ; Fighting
+	RGB 27, 28, 31   ; Flying
+	RGB 6, 25, 6     ; Poison
+	RGB 25, 24, 21   ; Ground
+	RGB 17, 14, 10   ; Rock
+	RGB 27, 2, 7     ; Bug: sets as 10-16-25
+	RGB 17, 9, 17    ; Ghost
+	RGB 23, 23, 23   ; Steel
+	RGB 31, 21, 11   ; Fire
+	RGB 21, 29, 29   ; Water
+	RGB 25, 16, 8    ; Grass
+	RGB 31, 26, 0    ; Electric
+	RGB 31, 2, 18    ; Psychic
+	RGB 29, 31, 31   ; Ice
+	RGB 30, 23, 0    ; Dragon: sets as 24-24-14
+	RGB 16, 27, 30   ; Dark: sets as 18-19-23
 else
 	RGB_MONOCHROME_DARK
-endc
-
-.HPFlyingPalsLite:
-if !DEF(MONOCHROME)
-	RGB 27, 28, 31
-else
 	RGB_MONOCHROME_DARK
-endc
-
-.HPFlyingPalsDark:
-if !DEF(MONOCHROME)
-	RGB 0, 9, 21
-else
 	RGB_MONOCHROME_DARK
-endc
-
-.HPPoisonPalsLite:
-if !DEF(MONOCHROME)
-	RGB 17, 9, 19
-else
 	RGB_MONOCHROME_DARK
-endc
-
-.HPPoisonPalsDark:
-if !DEF(MONOCHROME)
-	RGB 24, 6, 6
-else
 	RGB_MONOCHROME_DARK
-endc
-
-.HPGroundPalsLite:
-if !DEF(MONOCHROME)
-	RGB 25, 24, 21
-else
 	RGB_MONOCHROME_DARK
-endc
-
-.HPGroundPalsDark:
-if !DEF(MONOCHROME)
-	RGB 18, 10, 4
-else
 	RGB_MONOCHROME_DARK
-endc
-
-.HPRockPalsLite:
-if !DEF(MONOCHROME)
-	RGB 17, 14, 10
-
-else
 	RGB_MONOCHROME_DARK
-endc
-
-.HPRockPalsDark:
-if !DEF(MONOCHROME)
-	RGB 6, 10, 10
-else
 	RGB_MONOCHROME_DARK
-endc
-
-.HPBugPalsLite:
-if !DEF(MONOCHROME)
-	RGB 27, 2, 7
-else
 	RGB_MONOCHROME_DARK
-endc
-
-.HPBugPalsDark:
-if !DEF(MONOCHROME)
-	RGB 4, 17, 4
-else
 	RGB_MONOCHROME_DARK
-endc
-
-.HPGhostPalsLite:
-if !DEF(MONOCHROME)
-	RGB 17, 9, 17
-else
 	RGB_MONOCHROME_DARK
-endc
-
-.HPGhostPalsDark:
-if !DEF(MONOCHROME)
-	RGB 6, 3, 5
-else
 	RGB_MONOCHROME_DARK
-endc
-
-.HPSteelPalsLite:
-if !DEF(MONOCHROME)
-	RGB 23, 23, 23
-else
 	RGB_MONOCHROME_DARK
-endc
-
-.HPSteelPalsDark:
-if !DEF(MONOCHROME)
-	RGB 14, 16, 18
-else
 	RGB_MONOCHROME_DARK
-endc
-
-.HPFirePalsLite:
-if !DEF(MONOCHROME)
-	RGB 28, 5, 5
-else
-	RGB_MONOCHROME_DARK
-endc
-
-.HPFirePalsDark:
-if !DEF(MONOCHROME)
-	RGB 31, 21, 11 ; todo these should be orange 
-else
-	RGB_MONOCHROME_DARK
-endc
-
-.HPWaterPalsLite: ; TODO ARE THESE WRONG?
-if !DEF(MONOCHROME)
-	RGB 21, 29, 29
-else
-	RGB_MONOCHROME_DARK
-endc
-
-.HPWaterPalsDark:
-if !DEF(MONOCHROME)
-	RGB 4, 18, 31
-else
-	RGB_MONOCHROME_DARK
-endc
-
-.HPGrassPalsLite:
-if !DEF(MONOCHROME)
-	RGB 25, 16, 8
-else
-	RGB_MONOCHROME_DARK
-endc
-
-.HPGrassPalsDark:
-if !DEF(MONOCHROME)
-	RGB 6, 25, 6
-else
-	RGB_MONOCHROME_DARK
-endc
-
-.HPElectricPalsLite:
-if !DEF(MONOCHROME)
-	RGB 31, 26, 0
-else
-	RGB_MONOCHROME_DARK
-endc
-
-.HPElectricPalsDark:
-if !DEF(MONOCHROME)
-	RGB 5, 3, 13
-else
-	RGB_MONOCHROME_DARK
-endc
-
-.HPPsychicPalsLite:
-if !DEF(MONOCHROME)
-	RGB 31, 2, 18
-else
-	RGB_MONOCHROME_DARK
-endc
-
-.HPPsychicPalsDark:
-if !DEF(MONOCHROME)
-	RGB 9, 0, 16
-else
-	RGB_MONOCHROME_DARK
-endc
-
-.HPIcePalsLite:
-if !DEF(MONOCHROME)
-	RGB 29, 31, 31
-else
-	RGB_MONOCHROME_DARK
-endc
-
-.HPIcePalsDark:
-if !DEF(MONOCHROME)
-	RGB 16, 25, 29
-else
-	RGB_MONOCHROME_DARK
-endc
-
-.HPDragonPalsLite:
-if !DEF(MONOCHROME)
-	RGB 10, 12, 27
-else
-	RGB_MONOCHROME_DARK
-endc
-
-.HPDragonPalsDark:
-if !DEF(MONOCHROME)
-	RGB 30, 23, 0
-else
-	RGB_MONOCHROME_DARK
-endc
-
-.HPDarkPalsLite:
-if !DEF(MONOCHROME)
-	RGB 16, 27, 30
-else
-	RGB_MONOCHROME_DARK
-endc
-
-.HPDarkPalsDark:
-if !DEF(MONOCHROME)
-	RGB 8, 6, 6
-else
 	RGB_MONOCHROME_DARK
 endc
 

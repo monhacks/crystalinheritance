@@ -87,12 +87,12 @@ def create_pokemon_color_chart(csv_file='polychrome_colors.csv', pattern_type='c
         ax.add_patch(rect3)
         
         # Add hex codes as labels below each color
-        ax.text(x_start + col_width/2, y_pos - 0.1, f"#{row['Hex1']}", 
-                fontsize=8, ha='center', va='top')
-        ax.text(x_start + col_width + col_width/2, y_pos - 0.1, pattern_type.title(), 
-                fontsize=8, ha='center', va='top')
-        ax.text(x_start + 2*col_width + col_width/2, y_pos - 0.1, f"#{row['Hex2']}", 
-                fontsize=8, ha='center', va='top')
+#        ax.text(x_start + col_width/2, y_pos - 0.1, f"#{row['Hex1']}", 
+#                fontsize=8, ha='center', va='top')
+#        ax.text(x_start + col_width + col_width/2, y_pos - 0.1, pattern_type.title(), 
+#                fontsize=8, ha='center', va='top')
+#        ax.text(x_start + 2*col_width + col_width/2, y_pos - 0.1, f"#{row['Hex2']}", 
+#                fontsize=8, ha='center', va='top')
     
     # Set up the plot
     ax.set_xlim(0, type_col_width + 3*col_width + 0.5)
@@ -122,6 +122,44 @@ def create_pokemon_color_chart(csv_file='polychrome_colors.csv', pattern_type='c
     plt.tight_layout()
     plt.savefig('pokemon_type_colors.png', dpi=300, bbox_inches='tight')
     plt.show()
+
+
+def hex_to_standard_rgb(hex_color):
+    """Convert hex color to standard RGB (0-255 range)"""
+    hex_color = hex_color.strip().lstrip('#')
+    return tuple(int(hex_color[i:i+2], 16) for i in (0, 2, 4))
+
+def standard_rgb_to_gbc(rgb_tuple):
+    """Convert standard RGB (0-255) to GBC RGB (0-31)"""
+    return tuple(round(value * 31 / 255) for value in rgb_tuple)
+
+def convert_csv_to_gbc_format(csv_file='polychrome_colors.csv'):
+    """Read CSV and convert hex codes to GBC RGB format"""
+    # Read the CSV file
+    df = pd.read_csv(csv_file)
+    
+    # Process each row
+    for _, row in df.iterrows():
+        type_name = row.iloc[0]  # First column is the type name
+        hex1 = row.iloc[1]       # Second column is first hex code
+        hex2 = row.iloc[2]       # Third column is second hex code
+        
+        # Convert first hex to GBC RGB
+        rgb1_standard = hex_to_standard_rgb(hex1)
+        rgb1_gbc = standard_rgb_to_gbc(rgb1_standard)
+        
+        # Convert second hex to GBC RGB
+        rgb2_standard = hex_to_standard_rgb(hex2)
+        rgb2_gbc = standard_rgb_to_gbc(rgb2_standard)
+        
+        # Print in the requested format
+        print(f"{type_name}")
+        print(f"RGB {rgb1_gbc[0]}, {rgb1_gbc[1]}, {rgb1_gbc[2]}")
+        print(f"RGB {rgb2_gbc[0]}, {rgb2_gbc[1]}, {rgb2_gbc[2]}")
+        print()  # Empty line for readability
+
+if __name__ == "__main__":
+    convert_csv_to_gbc_format()
 
 if __name__ == "__main__":
     # You can choose 'checkerboard' or 'stripes'
