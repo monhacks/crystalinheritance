@@ -592,6 +592,7 @@ KRIS EQU __trainer_class__
 	const SAYO ; flareon 
 	const AKARI ; JOLTEON 
 	const MASAKO ; wc fire 
+	const KROMA ; tinder garden 
 
 	trainerclass KIMONO_GIRL_2 ; 3e, purple? 
 	const ZUKI ; ESPEON 

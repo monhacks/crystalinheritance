@@ -1,0 +1,13 @@
+pokemon data constants
+
+hyper training may be a way to do this
+
+seems like there's some loading and unloading of info
+
+vitamins another route, adding 10 or whatever
+compare the vitamin effect with the judge machine effect
+
+
+the judge machine reads potential side 
+
+hidden power guru can load dvs 

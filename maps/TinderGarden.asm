@@ -41,6 +41,7 @@ TinderGarden_MapScriptHeader: ;todo something weird happens when I stand to the 
 	object_event  3, 1, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1
 	pokemon_event  4, 3, CELEBI, -1, -1, PAL_NPC_GREEN, Celebi2Text, EVENT_TINDER_GARDEN_CELEBI_2
 
+
 	object_const_def
 	const TINDER_GARDEN_KURT
 	const TINDER_GARDEN_OAK

@@ -14,3 +14,227 @@ RuinsOfAlphKabutoWordRoom_MapScriptHeader:
 	def_bg_events
 
 	def_object_events
+	object_event 16,  8, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, KabutoWordKimonoGirlScript, EVENT_SET_DVS_1
+	
+
+	object_const_def
+	const KABUTO_WORD_ROOM_KIMONO_GIRL
+		
+KabutoWordKimonoGirlScript: ; some todos, check the menu displays and the hidden power set text  
+	faceplayer
+	opentext
+	checkevent EVENT_SET_DVS_1
+	iftrue_jumptext GreatnessLiesWithinText 
+	checkevent EVENT_BEAT_KROMA
+	iftrue .SettingDVsOptions
+	writetext KromaExplainsHiddenPowerText
+	waitbutton
+	closetext	
+	winlosstext KromaBattleText, KromaBattleText ; TODO 
+	setlasttalked KABUTO_WORD_ROOM_KIMONO_GIRL
+	loadtrainer KIMONO_GIRL_1, KROMA
+	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+	startbattle
+	reloadmapafterbattle
+	opentext
+.SettingDVsOptions:
+	writetext WhatPotentialText
+	promptbutton
+	loadmenu .PhysicalOrSpecialMenuHeader
+	verticalmenu
+	closewindow
+	ifequal 1, .PhysicalDVSettingMenus
+	ifequal 2, .SpecialDVSettingMenus
+	ifequal 3, .MaximumDVSetting
+	jumptext DV_Setting_CancelText 
+
+.MaximumDVSetting:
+	setevent EVENT_SET_DVS_1
+	loadmem wPartyMon1DVs+0, $ff
+	loadmem wPartyMon1DVs+1, $ff
+	loadmem wPartyMon1DVs+2, $ff
+	writetext GaveMaximumDVsText
+	waitbutton
+	closetext
+	end
+
+.PhysicalDVSettingMenus:	
+	loadmenu .PhysicalDVsMenuHeader
+	verticalmenu
+	closewindow
+	ifequal 1, .GiveFightingDVs ; todo all the othres 
+	ifequal 2, .GiveFightingDVs
+	ifequal 3, .GiveFightingDVs
+	ifequal 4, .GiveFightingDVs
+	ifequal 5, .GiveFightingDVs
+	ifequal 6, .GiveFightingDVs
+	ifequal 7, .GiveFightingDVs
+	ifequal 8, .GiveFightingDVs
+	jumptext DV_Setting_CancelText  ; todo check that this can cancel it 
+
+.SpecialDVSettingMenus:	
+	loadmenu .SpecialDVsMenuHeader
+	verticalmenu
+	closewindow
+	ifequal 1, .GiveFireDVs
+	ifequal 2, .GiveFireDVs
+	ifequal 3, .GiveFireDVs
+	ifequal 4, .GiveFireDVs
+	ifequal 5, .GiveFireDVs
+	ifequal 6, .GiveFireDVs
+	ifequal 7, .GiveFireDVs
+	ifequal 8, .GiveFireDVs
+	jumptext DV_Setting_CancelText  ; todo check that this can cancel it 
+
+.GiveFightingDVs:; 	db $ff, $ee, $ee
+	setevent EVENT_SET_DVS_1
+	loadmem wPartyMon1DVs+0, $ff
+	loadmem wPartyMon1DVs+1, $ee
+	loadmem wPartyMon1DVs+2, $ee
+	writetext GaveDVsText
+	waitbutton
+	closetext
+	end
+
+.GiveFireDVs: ; EQUS "$00, $ee, $ef"
+	setevent EVENT_SET_DVS_1
+	loadmem wPartyMon1DVs+0, $ff
+	loadmem wPartyMon1DVs+1, $ee
+	loadmem wPartyMon1DVs+2, $ef
+	writetext GaveDVsText
+	waitbutton
+	closetext
+	end
+
+.PhysicalOrSpecialMenuHeader:
+	db MENU_BACKUP_TILES ; flags
+	menu_coords 9, 0, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 10 ;todo proper size
+	dw .PhysicalOrSpecialMenuData
+	db 1 ; default option
+
+.PhysicalDVsMenuHeader:
+	db MENU_BACKUP_TILES ; flags
+	menu_coords 13, 0, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 1  ;todo proper size
+;	menu_coords 0, 0, 15, TEXTBOX_Y - 1 ; alternate syntax
+	dw .PhysicalMenuData
+	db 1 ; default option
+
+.PhysicalOrSpecialMenuData:
+	db STATICMENU_CURSOR | STATICMENU_WRAP
+	db 3 ; items
+	db "Physical@"
+	db "Special@"
+	db "Maximum@"
+	db "Cancel@"
+
+
+.PhysicalMenuData:
+	db STATICMENU_CURSOR | STATICMENU_WRAP
+	db 8 ; items
+	db "FGT@"
+	db "FLY@"
+	db "PSN@"
+	db "GND@"
+	db "RCK@"
+	db "BUG@"
+	db "GHT@"
+	db "STL@"
+	
+.SpecialDVsMenuHeader:
+	db MENU_BACKUP_TILES ; flags
+	menu_coords 13, 0, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 1  ;todo proper size 
+;	menu_coords 0, 0, 15, TEXTBOX_Y - 1 ; alternate syntax
+	dw .SpecialMenuData
+	db 1 ; default option
+
+.SpecialMenuData:
+	db STATICMENU_CURSOR | STATICMENU_WRAP ; flags
+	db 8 ; items
+	db "FIR@"
+	db "WTR@"
+	db "GRS@"
+	db "ELE@"
+	db "PSY@"
+	db "ICE@"
+	db "DGN@"
+	db "DRK@"
+
+
+KromaExplainsHiddenPowerText:
+	text "Congratulations"
+	line "to discover this"
+	cont "chamber."
+	
+	para "Some would rather"
+	line "turn away from"
+	para "history than see"
+	line "what lies within."
+	
+	para "You contain mult-"
+	line "itudes."
+	
+	para "Good and evil,"
+	line "past and future,"
+	cont "day and night."
+	
+	para "It's up to you to"
+	line "decide what to"
+	cont "express."
+	
+	para "#mon can be"
+	line "made sensitive to"
+	para "parts of their"
+	line "lineages."
+	
+	para "Confused? I think"
+	line "it's best if I"
+	para "demonstrate with"
+	line "a battle."
+	done
+
+KromaBattleText:
+	text "Were you watching"
+	line "closely?"
+	done
+
+WhatPotentialText:
+	text "What potential"
+	line "would you like to"
+	para "express within"
+	line "the first #mon"
+	cont "in your party?"
+	
+	para "Reorganize your"
+	line "party, if you"
+	cont "need to."
+	done
+
+GaveMaximumDVsText:
+	text "Intrinsic power"
+	line "maximized!"
+	done
+
+GaveDVsText:
+	text "Your #mon is"
+	line "now expressing"
+	para "that part of its"
+	line "lineage."
+	done
+
+DV_Setting_CancelText:
+	text "Greatness lies"
+	line "within - if you"
+	para "have the courage"
+	line "to show it!"
+	done
+
+GreatnessLiesWithinText: ; todo place five others 
+	text "Greatness lies"
+	line "within!"
+	
+	para "I'll tell my five"
+	line "sisters to be on"
+	para "the lookout for"
+	line "you."
+	done	
+	

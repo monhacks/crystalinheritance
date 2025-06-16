@@ -18,7 +18,7 @@ DebugRoom_MapScriptHeader:
 	bg_event  1,  2, BGEVENT_READ, DebugCPU ; check the items are all there 
 	bg_event  5,  2, BGEVENT_READ, DebugCPU2
 	bg_event  2,  7, BGEVENT_READ, DebugRoomTileGame
-	bg_event  0,  2, BGEVENT_UP, DebugSlidingPuzzle
+	bg_event  0,  2, BGEVENT_UP, DebugInteraction
 
 	def_object_events
 	object_event  4,  3, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE,  OBJECTTYPE_SCRIPT, 0, dwgDebugScript, -1
@@ -32,27 +32,10 @@ DebugRoom_MapScriptHeader:
 	const DEBUG_DWG
 
 
-DebugSlidingPuzzle:
-	refreshscreen
-	setval $0
-	special Special_SlidingPuzzle
-	closetext
-	iftrue .PuzzleComplete
-	showtext NotSolvedText
+DebugInteraction: ; split this into a few series of menus, first "max", "phys", "spec"
 	end
 
-.PuzzleComplete:
-	jumpthistext
-	
-	text "Solved"
-	done
-
-NotSolvedText:
-	text "not solved"
-	done
-
 DebugCPU:
-	refreshscreen
 	trainerpic BOBESH
 	pause 10
 	waitbutton
@@ -218,41 +201,41 @@ Breeder1Script:
 	iffalse_jumpopenedtext Breeder1SayNoText
 	writetext Breeder1Text	
 	; good party
-	givepoke H__TYPHLOSION, NO_FORM, 100, LEFTOVERS
-	loadmem wPartyMon2Moves+0, FLAMETHROWER
-	loadmem wPartyMon2Moves+1, SHADOW_BALL
-	loadmem wPartyMon2Moves+2, EARTHQUAKE
-	loadmem wPartyMon2Moves+3, THUNDERPUNCH
+;	givepoke H__TYPHLOSION, NO_FORM, 100, LEFTOVERS
+;	loadmem wPartyMon1Moves+0, FLAMETHROWER
+;	loadmem wPartyMon1Moves+1, SHADOW_BALL
+;	loadmem wPartyMon1Moves+2, EARTHQUAKE
+;	loadmem wPartyMon1Moves+3, THUNDERPUNCH
 	; hm mules
 ;	givepoke H__SAMUROTT, NO_FORM, 100, LEFTOVERS
 ;	givepoke H__DECIDUEYE, NO_FORM, 100, LEFTOVERS
 ;	givepoke ALAKAZAM, NO_FORM, 100, LEFTOVERS
 ;	givepoke PIDGEY, NO_FORM, 5, NO_ITEM ; CHECK FAINTING BEHAVIOR 
 ;SPRITE CHECKS 
-	givepoke QWILFISH, NO_FORM, 5
-	givepoke VILEPLUME, NO_FORM, 5
+;	givepoke QWILFISH, NO_FORM, 5
+;	givepoke VILEPLUME, NO_FORM, 5
 ; END SPRITE CHECKS 
-	loadmem wPartyMon2Moves+0, SURF
-	loadmem wPartyMon2Moves+1, CRUNCH
-	loadmem wPartyMon2Moves+2, STRENGTH
-	loadmem wPartyMon2Moves+3, WATERFALL
-	loadmem wPartyMon2PP+0, 15
-	loadmem wPartyMon2PP+1, 15
-	loadmem wPartyMon2PP+2, 15
-	loadmem wPartyMon2PP+3, 30
-	loadmem wPartyMon3Moves+0, ENERGY_BALL
-	loadmem wPartyMon3Moves+1, ROCK_SMASH
-	loadmem wPartyMon3Moves+2, CUT
-	loadmem wPartyMon3Moves+3, FLY
-	loadmem wPartyMon3PP+0, 20
-	loadmem wPartyMon3PP+1, 15
-	loadmem wPartyMon3PP+2, 15
-	loadmem wPartyMon3PP+3, 15
-	loadmem wPartyMon4Moves+0, FLASH
-	loadmem wPartyMon4Moves+1, PSYCHIC
-	loadmem wPartyMon4Moves+2, FOCUS_BLAST
-	loadmem wPartyMon4Moves+3, CALM_MIND
-	callasm FillPokedex
+;	loadmem wPartyMon2Moves+0, SURF
+;	loadmem wPartyMon2Moves+1, CRUNCH
+;	loadmem wPartyMon2Moves+2, STRENGTH
+;	loadmem wPartyMon2Moves+3, WATERFALL
+;	loadmem wPartyMon2PP+0, 15
+;	loadmem wPartyMon2PP+1, 15
+;	loadmem wPartyMon2PP+2, 15
+;	loadmem wPartyMon2PP+3, 30
+;	loadmem wPartyMon3Moves+0, ENERGY_BALL
+;	loadmem wPartyMon3Moves+1, ROCK_SMASH
+;	loadmem wPartyMon3Moves+2, CUT
+;	loadmem wPartyMon3Moves+3, FLY
+;	loadmem wPartyMon3PP+0, 20
+;	loadmem wPartyMon3PP+1, 15
+;	loadmem wPartyMon3PP+2, 15
+;	loadmem wPartyMon3PP+3, 15
+	; trying to set DVs...HP_ATK_DV from POKEMON_DATA_CONSTANTS?
+	loadmem wPartyMon1DVs+0, $fe
+	loadmem wPartyMon1DVs+1, $ff
+	loadmem wPartyMon1DVs+2, $ff
+;	callasm FillPokedex
 	closetext
 	end
 

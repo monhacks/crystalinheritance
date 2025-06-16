@@ -30,6 +30,8 @@ VioletCatacombs_MapScriptHeader:
 	const CATACOMBS_BOULDER_2
 	const CATACOMBS_NOCTOWL
 
+; sliding puzzle 
+
 
 CatacombsBoulders:
 	usestonetable .BoulderTable
@@ -70,10 +72,11 @@ CatacombsCallBackTiles:
 	
 VioletCatacombsPuzzleScript:
 	refreshscreen
-;	setval $0 
-	special Special_UnownPuzzle ; TODO need to write this puzzle script , Special_CatacombsPuzzle
+	setval $0
+	special Special_SlidingPuzzle
 	closetext
 	iftrue .PuzzleComplete
+	showtext NotSolvedText
 	end
 	
 .PuzzleComplete:
@@ -87,6 +90,12 @@ VioletCatacombsPuzzleScript:
 	waitsfx
 	pause 20
 	end
+
+NotSolvedText:
+	text "Who would make"
+	line "such a thing?"
+	done
+
 
 
 CatacombsNoctowl:	

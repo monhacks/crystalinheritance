@@ -88,8 +88,9 @@ MapRuinsofAlphKabutoChamberSignpost2Script:
 	writetext UnownSentToPC
 	promptbutton
 .unowninparty
+	writetext WhatsInKabutoWordRoomText
 	closetext
-	setevent EVENT_GOT_UNOWN ; FROM SHUCKIE
+	setevent EVENT_GOT_UNOWN
 	end	
 
 .refusetotakeunown1
@@ -303,4 +304,13 @@ DontBlameYou:
 	text "Don't blame you"
 	line "at all. They're"
 	cont "hard to train."
+	done
+
+WhatsInKabutoWordRoomText:
+	text "Say, do you feel"
+	line "a draft?"
+	
+	para "I think it's from"
+	line "the back of this"
+	cont "room."
 	done
