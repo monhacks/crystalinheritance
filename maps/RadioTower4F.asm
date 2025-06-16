@@ -47,8 +47,7 @@ RadioTower4FKurtScript:
 RadioTower4FKurtHealText:
     text "<PLAYER>!"
     line "You made it. Let"
-    cont "me heal your"
-    cont "#mon."
+    cont "me heal you."
     done
 
 RadioTower4KurtRemindText:
@@ -57,9 +56,8 @@ RadioTower4KurtRemindText:
 	
 	para "We just have to"
 	line "get past Whitney"
-	cont "and show everyone"
-	cont "how she is int-"
-	cont "rinsically bad."
+	para "and show everyone"
+	line "how bad she is."
 	
 	para "Then, her show"
 	line "will be ruined!"	
@@ -112,9 +110,7 @@ ReceiveDestinyKnotText:
     done
 
 RadioTowerBagFullText:
-    text "You found a"
-    line "Destiny Knot, but"
-    cont "your Bag is full!"
+    text "Oh, too full!"
     done
 
 WhitneyRadioText:
@@ -142,13 +138,13 @@ WhitneyRadioText:
 	
 	para "He just might be"
 	line "the one to save"
-	cont "us from this "
-	cont "drought."
+	para "us from this "
+	line "drought."
 
     para "Just another ex-"
 	line "ample of how the"
-	cont "old traditions"
-    cont "don't work in this"
+	para "old traditions"
+    line "don't work in this"
     cont "day and age."
 
     para "After all, it's"

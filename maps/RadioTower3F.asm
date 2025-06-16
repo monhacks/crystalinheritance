@@ -48,11 +48,8 @@ RadioTower3FPokemonMusicSignText:
 TrainerCooltrainerMWriter:
     generictrainer COOLTRAINERM, AARON, EVENT_BEAT_COOLTRAINERM_AARON, CooltrainerMWriterSeenText, CooltrainerMWriterBeatenText
 
-    text "My hunch says that"
-    line "they'll have the"
-    cont "power back on"
-    cont "soon. Then they'll"
-    cont "catch you."
+    text "They'll get the"
+	line "power on soon."
     done
 
 TrainerCooltrainerMLightUp:
@@ -65,14 +62,10 @@ TrainerBeautyCharm:
     generictrainer BEAUTY, VALENCIA, EVENT_BEAT_BEAUTY_VALENCIA, BeautyCharmSeenText, BeautyCharmBeatenText
 
     text "It's tough to work"
-    line "for Whitney. Very"
-    cont "few get to where"
-    cont "I am."
+    line "for Whitney. "
     para "That's why I'm"
     line "here, to prove"
-    cont "that anyone can"
-
-    cont "do it!"
+    cont "that anyone can!"
     done
 
 TrainerCooltrainerMEndurance:
@@ -80,9 +73,7 @@ TrainerCooltrainerMEndurance:
 
     text "Whitney's up"
     line "ahead. She"
-    cont "sounded pretty"
-    cont "mad that her show"
-    cont "was cut short."
+    cont "sounds mad."
     done
 
 CooltrainerMWriterSeenText:
@@ -108,15 +99,13 @@ CooltrainerMLightUpBeatenText:
 BeautyCharmSeenText:
     text "Just because I"
     line "have cute #mon"
-    cont "doesn't mean I'm"
-    cont "a pushover!"
+    para "doesn't mean I'm"
+    line "a pushover!"
     done
 
 BeautyCharmBeatenText:
     text "It's tough to work"
-    line "for Whitney. Very"
-    cont "few get to where"
-    cont "I am."
+    line "for Whitney."
     para "That's why I'm"
     line "here, to prove"
     cont "that anyone can"
@@ -131,11 +120,8 @@ CooltrainerMEnduranceSeenText:
 CooltrainerMEnduranceBeatenText:
     text "Whitney's up"
     line "ahead. She"
-    cont "sounded pretty"
-    cont "mad that her show"
-    cont "was cut short."
+    cont "sounded mad."
     done
-
 
 CardKeySlotScript::
 	end

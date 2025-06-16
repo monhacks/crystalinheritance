@@ -113,25 +113,13 @@ BirdKeeperVance1SeenText:
     done
 
 BirdKeeperVance1BeatenText:
-    text "Silph creates new"
-    line "tech, but you need"
-    cont "their whole system"
-    para "Take the flower"
-    line "shop: they own it"
-    cont "all! Is Silph that"
-    cont "much better than"
-    cont "Gloria?"
+    text "Silph just makes"
+	line "dependencies!"
     done
 
 BirdKeeperVance1AfterText:
-    text "Silph creates new"
-    line "tech, but you need"
-    cont "their whole system"
-    para "Take the flower"
-    line "shop: they own it"
-    cont "all! Is Silph that"
-    cont "much better than"
-    cont "Gloria?"
+    text "We're too reliant"
+	line "on Silph."
     done
 
 BlackbeltKenjiSeenText:
@@ -142,17 +130,11 @@ BlackbeltKenjiSeenText:
 BlackbeltKenjiBeatenText:
     text "Whitney and Silph"
     line "have all channels."
-    para "How's it free"
-    line "speech when no one"
-    cont "else can talk?"
     done
 
 BlackbeltKenjiAfterText:
     text "Whitney and Silph"
     line "have all channels."
-    para "How's it free"
-    line "speech when no one"
-    cont "else can talk?"
     done
 
 BeautySamanthaSeenText:
@@ -164,18 +146,12 @@ BeautySamanthaBeatenText:
     text "Why am I here? I"
     line "tried to 'roll in"
     cont "not roll out'."
-    para "But I can't do all"
-    line "Whitney does, I"
-    cont "lack her resources"
     done
 
 BeautySamanthaAfterText:
     text "Why am I here? I"
     line "tried to 'roll in"
     cont "not roll out'."
-    para "But I can't do all"
-    line "Whitney does, I"
-    cont "lack her resources"
     done
 
 BeautyCassieSeenText:
@@ -242,9 +218,9 @@ KurtAfterHealText:
 
    	para "Her Radio show"
 	line "gets listeners"
-	para "so riled up… "
-	line "yet another vile"
-	cont "Silph technology."
+	cont "so riled up… "
+	para "yet another vile"
+	line "Silph technology."
 
     para "Are you ready?"
     done
@@ -253,9 +229,7 @@ KurtAfterHealText:
 
 
 KurtNotReadyText:
-    text "OK. Let me know if"
-    line "you change your"
-    cont "mind."
+    text "OK."
     done
 
 KurtReadyText:
@@ -273,9 +247,8 @@ KurtAfterFlyText:
 	text "By the way, you"
 	line "should have this"
 	cont "now."
-    para "This HM will help"
-    line "us escape if"
-    cont "we need to."
+    para "This HM can help"
+    line "us escape."
     done
 
 UndergroundKurtMoves:

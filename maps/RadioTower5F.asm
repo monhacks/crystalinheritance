@@ -175,6 +175,9 @@ KurtFinalText:
 	line "and then follow"
 	cont "the tracks."
 	
+	para "We need to get"
+	line "to Ecruteak."
+	
 	para "I'll heal your"
 	line "party."
     done

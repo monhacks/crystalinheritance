@@ -20,8 +20,6 @@ GoldenrodGym_MapScriptHeader:
 	object_event  2,  15, SPRITE_PRYCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PryceScriptGoldenrod, EVENT_BEAT_WHITNEY
 	object_event  8,  4, SPRITE_WHITNEY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, WhitneyScript, EVENT_WHITNEY_GYM
 
-	object_const_def
-
 
 GenericTrainerSrandjrJoandcath1:
     generictrainer SR_AND_JR, JOANDCATH1, EVENT_BEAT_SR_AND_JR_JO_AND_CATH, SrandjrJoandcath1SeenText, SrandjrJoandcath1BeatenText
@@ -34,8 +32,7 @@ GenericTrainerSrandjrJoandcath1:
 
 SrandjrJoandcath1SeenText:
     text "We thought we had"
-    line "paradise here."
-    para "But at what cost?"
+    line "it made!"
     done
 
 SrandjrJoandcath1BeatenText:
@@ -67,14 +64,12 @@ GenericTrainerBeautyVictoria:
 
     text "My little corner"
     line "here is perfect."
-    para "No need for"
-    line "Whitney's glamour."
     done
 
 BeautyVictoriaSeenText:
     text "Welcome to our"
     line "sanctuary."
-    para "Care for a battle?"
+    cont "Care for a battle?"
     done
 
 BeautyVictoriaBeatenText:
@@ -125,21 +120,21 @@ WhitneyTextFacade:
 	
 	para "When Silph let"
 	line "me have my own"
-	cont "show, I thought"
-	cont "it would be a"
-	cont "way to let cute"
-	cont "#mon take"
+	para "show, I thought"
+	line "it would be a"
+	para "way to let cute"
+	line "#mon take"
 	cont "center stage."
 	
 	para "But over time,"
 	line "I was shifting to"
-	cont "pushing everyone"
-	cont "else away."
+	para "pushing everyone"
+	line "else away."
 	
 	para "I was putting"
 	line "up a false im-"
-	cont "age of myself"
-	cont "with that show."
+	para "age of myself"
+	line "with that show."
 
 	para "For your candid"
 	line "thoughts, please"
@@ -150,10 +145,10 @@ WhitneyTextFacade:
 WhitneyAfterText:
 	text "I need to get"
 	line "back to the rea-"
-	cont "son why I be-"
-	cont "came a Gym"
-	cont "Leader in the"
-	cont "first place-"
+	para "son why I be-"
+	line "came a Gym"
+	para "Leader in the"
+	line "first place-"
 
 	para "helping people"
 	line "see the cuteness"

@@ -174,14 +174,14 @@ ChuckGroup:
 	db "Chuck@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
 	; party
-	db 38, POLIWRATH, WIDE_LENS, "TadSwole@"
-		db SURF, HYPNOSIS, DYNAMICPUNCH, BODY_SLAM
-	db 43, PRIMEAPE, LIFE_ORB, "Pepped@"
+	db 42, PRIMEAPE, LIFE_ORB, "Pepped@"
 		db DYNAMICPUNCH, ROCK_SLIDE, SCREECH, NO_MOVE
 	db 41, GALLADE, TWISTEDSPOON, "GladAle@"
 		db ZEN_HEADBUTT, KARATE_CHOP, BULK_UP, NO_MOVE
-	db 42, TOXICROAK, POISON_BARB, "Karana@"
-		db SLASH, SWORDS_DANCE, POISON_JAB, NO_MOVE
+	db 41, TOXICROAK, POISON_BARB, "Karana@"
+		db SLASH, SWORDS_DANCE, POISON_JAB, SUCKER_PUNCH
+	db 43, POLIWRATH, MYSTIC_WATER, "TadSwole@"
+		db SURF, HYPNOSIS, DYNAMICPUNCH, BODY_SLAM
 	db -1 ; end
 
 
@@ -394,21 +394,19 @@ KurtGroup:
 	db "Kurt@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
 	; party
-	db 57, HERACROSS, SCOPE_LENS, "Ohmu@" ; nausicaa 
+	db 57, HERACROSS, SCOPE_LENS, "Ohmu@" ; nausicaa  ; hp bug 
 		db MEGAHORN, SWORDS_DANCE, CLOSE_COMBAT, EARTHQUAKE
-	db 56, UMBREON, LEFTOVERS, "Howl@" ; moving castle 
+	db 56, UMBREON, LEFTOVERS, "Howl@" ; moving castle  ; hp dark 
 		db RECOVER, CURSE, SUCKER_PUNCH, TOXIC
-	db 57, URSALUNA, FLAME_ORB, "Okkoto@" ; mononoke  
+	db 57, URSALUNA, FLAME_ORB, "Okkoto@" ; mononoke  ; hp fire 
 		db EARTHQUAKE, FACADE, REST, SLEEP_TALK
-	db 58, WYRDEER, WIDE_LENS, "Yubaba@" ; spirited away 
+	db 58, WYRDEER, WIDE_LENS, "Yubaba@" ; spirited away  ; hp psychic? 
 		db HYPNOSIS, ZEN_HEADBUTT, HI_JUMP_KICK, BODY_SLAM
-	db 59, KLEAVOR, HARD_STONE, "Piccolo@" ; porco rosso 
+	db 59, KLEAVOR, HARD_STONE, "Piccolo@" ; porco rosso ; hp fighting 
 		db ROCK_SLIDE, X_SCISSOR, QUICK_ATTACK, SWORDS_DANCE
-	db 60, CELEBI, LEFTOVERS, "@" ; no nickname?
+	db 60, CELEBI, LEFTOVERS, "@" ; no nickname? ; hp bug?
 		db CALM_MIND, PSYCHIC_M, ENERGY_BALL, RECOVER
 	db -1 ; end
-
-;	const KURT13 ; TOP OF TIN TOWER , umbreon celebi heracross ursaluna wyrdeer kleavor 
 
 ; ================
 ; ================================
@@ -536,7 +534,7 @@ SamsaraGroup:
 	db 29, DUSKNOIR, LEFTOVERS, "Yamaduta@"
 		db SHADOW_CLAW, WILL_O_WISP, CURSE, PAIN_SPLIT
 	db 36, H__TYPHLOSION, SPELL_TAG, "Charon@"
-		db FLAMETHROWER, SHADOW_BALL, SWIFT, CALM_MIND
+		db FLAME_CHARGE, SHADOW_BALL, SWIFT, CALM_MIND
 	db -1 ; end
 
 
@@ -9695,14 +9693,14 @@ BarbeauGroup:
 	; party
 	db 39, AMPHAROS, NO_ITEM, "Neonovis@"
 		db FLASH, THUNDERPUNCH, SWIFT, THUNDER_WAVE
-	db 35, LANTURN, CHESTO_BERRY, "Unfathom@"
-		db SURF, THUNDERBOLT, REST, SLEEP_TALK
+	db 35, SHUCKLE, CHESTO_BERRY, "Rumbler@"
+		db REST, DEFENSE_CURL, ROLLOUT, WRAP		
 	db 35, CORSOLA, NO_ITEM, "Cnidaran@"
 		db ROCK_BLAST, WATER_PULSE, TOXIC, RECOVER
 	db 38, STARMIE, NO_ITEM, "HangTen@"
 		db WHIRLPOOL, WATER_PULSE, RAPID_SPIN, RECOVER
-	db 40, SHUCKLE, CHESTO_BERRY, "Rumbler@"
-		db REST, DEFENSE_CURL, ROLLOUT, WRAP
+	db 40, LANTURN, CHESTO_BERRY, "Unfathom@"
+		db SURF, THUNDERBOLT, REST, SLEEP_TALK
 	db -1 ; end
 
 ; ================
@@ -9747,7 +9745,7 @@ KannaGroup:
 ; ================
 
 	; Kanna
-	db "Kanna@" ; mythic beings in sami folklore 
+	db "Kanna@" ; mythic beings in sami folklore ; todo these nicknames are too obscure 
 	db TRAINERTYPE_ITEM | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
 	; party
 	db 44, ABOMASNOW, CHOICE_SCARF, "Sarakka@" ; CONTROL WEATHER

@@ -135,10 +135,10 @@ GenericTrainerSupernerdEric:
 
 	text "I heard that"
 	line "you can get 20"
-	cont "to 1 odds of"
-	cont "Whitney's Miltank"
-	cont "hitting all five"
-	cont "rollouts in her"
+	para "to 1 odds of"
+	line "Whitney's Miltank"
+	para "hitting all five"
+	line "rollouts in her"
 	cont "next battle."
 	done
 
@@ -147,8 +147,8 @@ GenericTrainerSupernerdTeru:
 
 	text "New evolution"
 	line "methods are"
-	cont "discovered every"
-	cont "day!"
+	para "discovered every"
+	line "day!"
 	done
 
 GenericTrainerPokemaniacIssac:
@@ -166,8 +166,8 @@ GenericTrainerPokemaniacDonald:
 
 	text "The museum says"
 	line "this tunnel was"
-	cont "carved by"
-	cont "#mon."
+	para "carved by"
+linecont "#mon."
 	done
 
 GenericTrainerCosplayerClara:
@@ -415,8 +415,8 @@ PokemaniacIssacBeatenText:
 PokemaniacDonaldSeenText:
 	text "Do you think"
 	line "this tunnel has"
-	cont "any connnection"
-	cont "to Diglett's?"
+	para "any connnection"
+	line "to Diglett's?"
 	done
 
 PokemaniacDonaldBeatenText:

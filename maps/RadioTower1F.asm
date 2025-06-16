@@ -133,8 +133,8 @@ RadioTowerRivalWinText:
 RadioTowerRivalLossText:
     text "Those same old"
 	line "tired tactics"
-	cont "won't cut it"
-	cont "anymore."
+	para "won't cut it"
+	line "anymore."
     done
 
 RadioTowerRivalAfterText:

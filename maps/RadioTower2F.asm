@@ -132,11 +132,11 @@ RADIOTOWER_HyperVoiceMT:
 	waitbutton
 	setevent EVENT_LISTENED_TO_HYPER_VOICE_INTRO
 RADIOTOWER_TutorHyperVoiceScript:
-	writetext Text_RADIOTOWER_TutorHyperVoice ;;
+	writetext Text_RADIOTOWER_TutorHyperVoice
 	waitbutton
 	checkitem SILVER_LEAF
 	iffalse .NoSilverLeaf
-	writetext Text_RADIOTOWER_TutorQuestion ;;
+	writetext Text_RADIOTOWER_TutorQuestion
 	yesorno
 	iffalse .TutorRefused
 	setval HYPER_VOICE
@@ -144,38 +144,29 @@ RADIOTOWER_TutorHyperVoiceScript:
 	special Special_MoveTutor
 	ifequal $0, .TeachMove
 .TutorRefused
-	jumpopenedtext Text_RADIOTOWER_TutorRefused ;; 
+	jumpopenedtext Text_RADIOTOWER_TutorRefused
 
 .NoSilverLeaf
 	jumpopenedtext Text_RADIOTOWER_TutorNoSilverLeaf
 
 .TeachMove
 	takeitem SILVER_LEAF
-	jumpopenedtext Text_RADIOTOWER_TutorTaught ;;
+	jumpopenedtext Text_RADIOTOWER_TutorTaught
 	
 Text_HyperVoiceIntro:
-	text "Zieg: Finally!"
-	line "A NEW CRISIS!"
+	text "Finally!"
+	line "A CRISIS!"
 	para "Do you know how"
 	line "many WEEKS I've"
 	para "talked up those"
 	line "Blackthorn separ-"
 	cont "atists?"
-	
-	para "Ratings were"
-	line "PLUMMETING!"
-	
-	para "Thank Arceus."
 	done
 
 
 Text_RADIOTOWER_TutorHyperVoice:
 	text "My producer says"
-	line "Zieg - just keep"
-	cont "talking. Higher"
-	
-	para "blood pressure,"
-	line "higher ratings."
+	line "just keep going."
 	
 	para "They don't even"
 	line "care what I say-"
@@ -198,8 +189,7 @@ Text_RADIOTOWER_TutorNoSilverLeaf:
 	
 Text_RADIOTOWER_TutorQuestion:
 	text "Whaddya say?"
-	line "Join the prest-"
-	cont "igious ranks of"
+	line "Join the ranks of"
 	cont "talk radio?"
 	done
 
