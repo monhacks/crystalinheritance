@@ -164,10 +164,9 @@ GenericTrainerPokemaniacIssac:
 GenericTrainerPokemaniacDonald:
 	generictrainer POKEMANIAC, DONALD, EVENT_BEAT_POKEMANIAC_DONALD, PokemaniacDonaldSeenText, PokemaniacDonaldBeatenText
 
-	text "The museum says"
-	line "this tunnel was"
-	para "carved by"
-linecont "#mon."
+	text "I learned at the"
+	line "museum this was"
+	cont "dug by #mon."
 	done
 
 GenericTrainerCosplayerClara:
@@ -420,8 +419,9 @@ PokemaniacDonaldSeenText:
 	done
 
 PokemaniacDonaldBeatenText:
-	text "Being underground"
-	line "is so cool."
+	text "I learned at the"
+	line "museum this was"
+	cont "dug by #mon."
 	done
 
 CosplayerClaraSeenText:

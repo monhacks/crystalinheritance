@@ -20,7 +20,7 @@ RuinsOfAlphKabutoWordRoom_MapScriptHeader:
 	object_const_def
 	const KABUTO_WORD_ROOM_KIMONO_GIRL
 		
-KabutoWordKimonoGirlScript: ; some todos, check the menu displays and the hidden power set text  
+KabutoWordKimonoGirlScript: ; todos, check the menu display
 	faceplayer
 	opentext
 	checkevent EVENT_SET_DVS_1
@@ -30,7 +30,7 @@ KabutoWordKimonoGirlScript: ; some todos, check the menu displays and the hidden
 	writetext KromaExplainsHiddenPowerText
 	waitbutton
 	closetext	
-	winlosstext KromaBattleText, KromaBattleText ; TODO 
+	winlosstext KromaBattleText, KromaBattleText 
 	setlasttalked KABUTO_WORD_ROOM_KIMONO_GIRL
 	loadtrainer KIMONO_GIRL_1, KROMA
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
@@ -62,29 +62,29 @@ KabutoWordKimonoGirlScript: ; some todos, check the menu displays and the hidden
 	loadmenu .PhysicalDVsMenuHeader
 	verticalmenu
 	closewindow
-	ifequal 1, .GiveFightingDVs ; todo all the othres 
-	ifequal 2, .GiveFightingDVs
-	ifequal 3, .GiveFightingDVs
-	ifequal 4, .GiveFightingDVs
-	ifequal 5, .GiveFightingDVs
-	ifequal 6, .GiveFightingDVs
-	ifequal 7, .GiveFightingDVs
-	ifequal 8, .GiveFightingDVs
-	jumptext DV_Setting_CancelText  ; todo check that this can cancel it 
+	ifequal 1, .GiveFightingDVs
+	ifequal 2, .GiveFlyingDVs
+	ifequal 3, .GivePoisonDVs
+	ifequal 4, .GiveGroundDVs
+	ifequal 5, .GiveRockDVs
+	ifequal 6, .GiveBugDVs
+	ifequal 7, .GiveGhostDVs
+	ifequal 8, .GiveSteelDVs
+	jumptext DV_Setting_CancelText 
 
 .SpecialDVSettingMenus:	
 	loadmenu .SpecialDVsMenuHeader
 	verticalmenu
 	closewindow
 	ifequal 1, .GiveFireDVs
-	ifequal 2, .GiveFireDVs
-	ifequal 3, .GiveFireDVs
-	ifequal 4, .GiveFireDVs
-	ifequal 5, .GiveFireDVs
-	ifequal 6, .GiveFireDVs
-	ifequal 7, .GiveFireDVs
-	ifequal 8, .GiveFireDVs
-	jumptext DV_Setting_CancelText  ; todo check that this can cancel it 
+	ifequal 2, .GiveWaterDVs
+	ifequal 3, .GiveGrassDVs
+	ifequal 4, .GiveElectricDVs
+	ifequal 5, .GivePsychicDVs
+	ifequal 6, .GiveIceDVs
+	ifequal 7, .GiveDragonDVs
+	ifequal 8, .GiveDarkDVs
+	jumptext DV_Setting_CancelText
 
 .GiveFightingDVs:; 	db $ff, $ee, $ee
 	setevent EVENT_SET_DVS_1
@@ -96,11 +96,151 @@ KabutoWordKimonoGirlScript: ; some todos, check the menu displays and the hidden
 	closetext
 	end
 
-.GiveFireDVs: ; EQUS "$00, $ee, $ef"
+.GiveFlyingDVs: ; DVS_HP_FLYING   EQUS "$ff, $fe, $ee"
+	setevent EVENT_SET_DVS_1
+	loadmem wPartyMon1DVs+0, $ff
+	loadmem wPartyMon1DVs+1, $fe
+	loadmem wPartyMon1DVs+2, $ee
+	writetext GaveDVsText
+	waitbutton
+	closetext
+	end
+
+.GivePoisonDVs: ; DVS_HP_POISON   EQUS "$ff, $ef, $ee"
+	setevent EVENT_SET_DVS_1
+	loadmem wPartyMon1DVs+0, $ff
+	loadmem wPartyMon1DVs+1, $ef
+	loadmem wPartyMon1DVs+2, $ee
+	writetext GaveDVsText
+	waitbutton
+	closetext
+	end
+
+.GiveGroundDVs: ; DVS_HP_GROUND   EQUS "$ff, $ff, $ee"
+	setevent EVENT_SET_DVS_1
+	loadmem wPartyMon1DVs+0, $ff
+	loadmem wPartyMon1DVs+1, $ff
+	loadmem wPartyMon1DVs+2, $ee
+	writetext GaveDVsText
+	waitbutton
+	closetext
+	end
+
+.GiveRockDVs: ; DVS_HP_ROCK     EQUS "$ff, $ee, $fe"
+	setevent EVENT_SET_DVS_1
+	loadmem wPartyMon1DVs+0, $ff
+	loadmem wPartyMon1DVs+1, $ee
+	loadmem wPartyMon1DVs+2, $fe
+	writetext GaveDVsText
+	waitbutton
+	closetext
+	end
+
+.GiveBugDVs: ; DVS_HP_BUG      EQUS "$ff, $fe, $fe"
+	setevent EVENT_SET_DVS_1
+	loadmem wPartyMon1DVs+0, $ff
+	loadmem wPartyMon1DVs+1, $fe
+	loadmem wPartyMon1DVs+2, $fe
+	writetext GaveDVsText
+	waitbutton
+	closetext
+	end
+
+.GiveGhostDVs: ; DVS_HP_GHOST    EQUS "$ff, $ef, $fe"
+	setevent EVENT_SET_DVS_1
+	loadmem wPartyMon1DVs+0, $ff
+	loadmem wPartyMon1DVs+1, $ef
+	loadmem wPartyMon1DVs+2, $fe
+	writetext GaveDVsText
+	waitbutton
+	closetext
+	end
+
+.GiveSteelDVs: ;DVS_HP_STEEL    EQUS "$ff, $ff, $fe"
+	setevent EVENT_SET_DVS_1
+	loadmem wPartyMon1DVs+0, $ff
+	loadmem wPartyMon1DVs+1, $ff
+	loadmem wPartyMon1DVs+2, $fe
+	writetext GaveDVsText
+	waitbutton
+	closetext
+	end
+
+.GiveFireDVs: ; EQUS "$ff, $ee, $ef"
 	setevent EVENT_SET_DVS_1
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ee
 	loadmem wPartyMon1DVs+2, $ef
+	writetext GaveDVsText
+	waitbutton
+	closetext
+	end
+
+.GiveWaterDVs:;DVS_HP_WATER    EQUS "$ff, $fe, $ef"
+	setevent EVENT_SET_DVS_1
+	loadmem wPartyMon1DVs+0, $ff
+	loadmem wPartyMon1DVs+1, $fe
+	loadmem wPartyMon1DVs+2, $ef
+	writetext GaveDVsText
+	waitbutton
+	closetext
+	end
+
+.GiveGrassDVs:;DVS_HP_GRASS    EQUS "$ff, $ef, $ef"
+	setevent EVENT_SET_DVS_1
+	loadmem wPartyMon1DVs+0, $ff
+	loadmem wPartyMon1DVs+1, $ef
+	loadmem wPartyMon1DVs+2, $ef
+	writetext GaveDVsText
+	waitbutton
+	closetext
+	end
+
+.GiveElectricDVs:;DVS_HP_ELECTRIC EQUS "$ff, $ff, $ef"
+	setevent EVENT_SET_DVS_1
+	loadmem wPartyMon1DVs+0, $ff
+	loadmem wPartyMon1DVs+1, $ff
+	loadmem wPartyMon1DVs+2, $ef
+	writetext GaveDVsText
+	waitbutton
+	closetext
+	end
+
+.GivePsychicDVs:;DVS_HP_PSYCHIC  EQUS "$ff, $ee, $ff"
+	setevent EVENT_SET_DVS_1
+	loadmem wPartyMon1DVs+0, $ff
+	loadmem wPartyMon1DVs+1, $ee
+	loadmem wPartyMon1DVs+2, $ff
+	writetext GaveDVsText
+	waitbutton
+	closetext
+	end
+
+.GiveIceDVs:;DVS_HP_ICE      EQUS "$ff, $fe, $ff"
+	setevent EVENT_SET_DVS_1
+	loadmem wPartyMon1DVs+0, $ff
+	loadmem wPartyMon1DVs+1, $fe
+	loadmem wPartyMon1DVs+2, $ff
+	writetext GaveDVsText
+	waitbutton
+	closetext
+	end
+
+.GiveDragonDVs:;DVS_HP_DRAGON   EQUS "$ff, $ef, $ff"
+	setevent EVENT_SET_DVS_1
+	loadmem wPartyMon1DVs+0, $ff
+	loadmem wPartyMon1DVs+1, $ee
+	loadmem wPartyMon1DVs+2, $ff
+	writetext GaveDVsText
+	waitbutton
+	closetext
+	end
+
+.GiveDarkDVs:;DVS_HP_DARK     EQUS "$fe, $ff, $ff"
+	setevent EVENT_SET_DVS_1
+	loadmem wPartyMon1DVs+0, $fe
+	loadmem wPartyMon1DVs+1, $ff
+	loadmem wPartyMon1DVs+2, $ff
 	writetext GaveDVsText
 	waitbutton
 	closetext
@@ -127,7 +267,6 @@ KabutoWordKimonoGirlScript: ; some todos, check the menu displays and the hidden
 	db "Maximum@"
 	db "Cancel@"
 
-
 .PhysicalMenuData:
 	db STATICMENU_CURSOR | STATICMENU_WRAP
 	db 8 ; items
@@ -143,7 +282,6 @@ KabutoWordKimonoGirlScript: ; some todos, check the menu displays and the hidden
 .SpecialDVsMenuHeader:
 	db MENU_BACKUP_TILES ; flags
 	menu_coords 13, 0, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 1  ;todo proper size 
-;	menu_coords 0, 0, 15, TEXTBOX_Y - 1 ; alternate syntax
 	dw .SpecialMenuData
 	db 1 ; default option
 
@@ -159,7 +297,6 @@ KabutoWordKimonoGirlScript: ; some todos, check the menu displays and the hidden
 	db "DGN@"
 	db "DRK@"
 
-
 KromaExplainsHiddenPowerText:
 	text "Congratulations"
 	line "to discover this"
@@ -174,8 +311,8 @@ KromaExplainsHiddenPowerText:
 	line "itudes."
 	
 	para "Good and evil,"
-	line "past and future,"
-	cont "day and night."
+	line "day and night,"
+	cont "past and future,"
 	
 	para "It's up to you to"
 	line "decide what to"
