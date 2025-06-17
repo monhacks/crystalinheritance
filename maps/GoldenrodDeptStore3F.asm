@@ -22,22 +22,19 @@ GoldenrodDeptStore3F_MapScriptHeader:
 GoldenrodDeptStore3FSuperNerdText:
 	text "The attendants"
 	line "here rent their"
-	cont "space. Isn't it"
-	cont "great?"
+	para "space. Isn't it"
+	line "great?"
 	para "The best vendors"
 	line "get to stay!"
 	done
 
 GoldenrodDeptStore3FRockerText:
 	text "My mom sold"
-	line "X-items here"
-	cont "part time for"
-	cont "30 years."
-	para "But she took a"
-	line "buyout when"
-	cont "Silph made"
-	cont "everyone go"
-	cont "full time."
+	line "part time here,"
+	para "but she quit when"
+	line "Silph made"
+	para "everyone go"
+	line "full time."
 	done
 
 GoldenrodDeptStore3FDirectoryText:

@@ -23,7 +23,7 @@ Marts:
 	dw AnarresMart
 	dw GauldenrodMart1
 	dw GauldenrodMart2 ; BERRIES
-	dw GauldenrodMart3
+	dw GauldenrodMart3 ; TMS 
 	dw WesternCapitalMart
 	dw WesternCapitalMart_TM
 	dw TradersLandingMart_TM
@@ -58,20 +58,17 @@ BlackthornMart:; UNUSED
 	db -1
 
 VioletMart:
-	db 9 ; # items
+	db 6 ; # items
 	db RARE_CANDY
 	db MAX_REPEL
-	db SUPER_POTION
+	db HYPER_POTION
 	db GREAT_BALL
-	db ESCAPE_ROPE
-	db ANTIDOTE
-	db PARALYZEHEAL
-	db AWAKENING
+	db FULL_HEAL
 	db SILVER_LEAF
 	db -1
 
 AzaleaMart: ;updated
-	db 10 ; # items
+	db 9 ; # items
 	db RARE_CANDY
 	db MAX_REPEL
 	db POTION
@@ -81,11 +78,11 @@ AzaleaMart: ;updated
 	db ANTIDOTE
 	db SMOKE_BALL
 	db SILVER_LEAF
-	db CHARCOAL
 	db -1
 
 Goldenrod2FMart1:
-	db 9 ; # items
+	db 10 ; # items
+	db MAX_REPEL
 	db RARE_CANDY
 	db SUPER_POTION
 	db ANTIDOTE
@@ -98,32 +95,26 @@ Goldenrod2FMart1:
 	db -1
 
 Goldenrod2FMart2:
-	db 8 ; # items
+	db 9 ; # items
 	db POKE_BALL
-	db GREAT_BALL
 	db LUXURY_BALL
 	db TIMER_BALL
 	db QUICK_BALL
 	db ESCAPE_ROPE
-	db MAX_REPEL
-	db POKE_DOLL
+	db REPEAT_BALL
+	db NET_BALL
+	db HEAL_BALL
+	db DREAM_BALL
 	db -1
 
-Goldenrod2FMart2Eevee:
-	db 8 ; # items
+Goldenrod2FMart2Eevee: ; unused 
+	db 1 ; # items
 	db POKE_BALL
-	db GREAT_BALL
-	db LUXURY_BALL
-	db TIMER_BALL
-	db QUICK_BALL
-	db ESCAPE_ROPE
-	db MAX_REPEL
-	db POKE_DOLL
 	db -1
 
 Goldenrod3FMart:
 Celadon5FMart2:
-	db 9 ; # items
+	db 9 ; 
 	db FIRE_STONE
 	db WATER_STONE
 	db THUNDERSTONE
@@ -137,7 +128,7 @@ Celadon5FMart2:
 
 Goldenrod4FMart:
 Celadon5FMart1:
-	db 6 ; # items
+	db 7 ; # items
 	db PROTEIN
 	db IRON
 	db CARBOS
@@ -159,7 +150,7 @@ Goldenrod5FTMMart:
 	dbw TM_HYPER_BEAM,    50000
 	db -1
 
-GoldenrodBallsMart: ; todo is this actually anywhere? 
+GoldenrodBallsMart: ; todo PLACE ON ONE OF THE FLOORS  
 	db 7 ; # items
 	db REPEAT_BALL
 	db NET_BALL
@@ -182,36 +173,30 @@ UndergroundMart:
 	db -1
 
 EcruteakMart:
-	db 11 ; # items
+	db 7 ; # items
 	db RARE_CANDY
 	db MAX_REPEL
-	db POKE_BALL
 	db GREAT_BALL
-	db NEST_BALL
+	db DUSK_BALL
 	db SUPER_POTION
-	db ANTIDOTE
-	db PARALYZEHEAL
-	db AWAKENING
-	db BURN_HEAL
+	db FULL_HEAL
 	db REVIVE
 	db -1
 
 OlivineMart:
-	db 10 ; # items
+	db 8 ; # items
+	db RARE_CANDY
+	db MAX_REPEL
 	db GREAT_BALL
 	db DIVE_BALL
 	db SUPER_POTION
 	db HYPER_POTION
-	db ANTIDOTE
-	db PARALYZEHEAL
-	db AWAKENING
+	db FULL_HEAL
 	db ABILITY_CAP 
-	db MAX_REPEL
-	db RARE_CANDY
 	db -1
 
 WesternCapitalMonMart: ; in the dance theatre
-	db 7 ; # items
+	db 8 ; # items
 	db PROTECTOR
 	db ELECTIRIZER
 	db MAGMARIZER
@@ -219,17 +204,17 @@ WesternCapitalMonMart: ; in the dance theatre
 	db RAZOR_CLAW
 	db METAL_COAT
 	db KINGS_ROCK 
+	db DRAGON_SCALE
 	db -1
 
 WesternCapitalPrepMart:
-	db 7 ; # items
+	db 6 ; # items
 	db RARE_CANDY
 	db FULL_RESTORE
 	db FULL_HEAL
 	db REVIVE
 	db ULTRA_BALL
 	db MAX_ELIXIR
-	db PP_MAX	
 	db -1
 
 MahoganyMart1:
@@ -238,32 +223,23 @@ MahoganyMart1:
 	db -1
 
 WesternCapitalMart:
-	db 8 ; # items
+	db 7 ; # items
 	db RARE_CANDY
 	db MAX_REPEL
-	db POKE_BALL
-	db GREAT_BALL
-	db SUPER_POTION
+	db QUICK_BALL
 	db HYPER_POTION
 	db FULL_HEAL
 	db REVIVE
+	db SILVER_LEAF
 	db -1
 
-WesternCapitalMart_TM:
-	db 10 ; # items
+WesternCapitalMart_TM: ; unused 
+	db 1 ; # items
 	db RARE_CANDY
-	db MAX_REPEL
-	db GREAT_BALL
-	db ULTRA_BALL
-	db DUSK_BALL
-	db HYPER_POTION
-	db MAX_POTION
-	db FULL_HEAL
-	db REVIVE
 	db -1
 
 TradersLandingMart_TM:
-	db 5 ; # items
+	db 3 ; # items
 	dbw TM_FLAMETHROWER,  20000
 	dbw TM_ICE_BEAM,      20000
 	dbw TM_THUNDERBOLT,   20000
@@ -273,12 +249,12 @@ AnarresMart:
 	db 9 ; # items
 	db RARE_CANDY
 	db MAX_REPEL
+	db ORAN_BERRY 
 	db CHERI_BERRY
 	db CHESTO_BERRY
 	db PECHA_BERRY
 	db HEAL_POWDER
 	db REVIVAL_HERB
-	db ORAN_BERRY 
 	db WHITE_HERB
 	db -1
 
@@ -339,11 +315,12 @@ SinjohCrossroadsMart:
 	db -1
 
 EerieHamletMart:
-	db 11 ; # items
+	db 12 ; # items
 	db RARE_CANDY
 	db MAX_REPEL
-	db ENERGYPOWDER
+	db ODD_SOUVENIR
 	db REVIVAL_HERB
+	db ENERGYPOWDER
 	db JEZE_BALL
 	db BUB_BALL
 	db DECI_BALL
@@ -354,14 +331,13 @@ EerieHamletMart:
 	db -1
 
 WesternCapitalMart2:
-	db 7 ; # items
+	db 6 ; # items
 	db POKE_BALL
 	db GREAT_BALL
 	db ULTRA_BALL
 	db QUICK_BALL
 	db TIMER_BALL
 	db ESCAPE_ROPE
-	db MAX_REPEL
 	db -1
 
 Celadon3FTMMart:
@@ -390,7 +366,7 @@ MahoganyMart2:
 	db -1
 
 EcruteakBattleMart: ; SHRINE AREA 
-	db 9 ; # items
+	db 11 ; # items
 	db EJECT_BUTTON
 	db LAGGING_TAIL
 	db IRON_BALL
@@ -400,6 +376,8 @@ EcruteakBattleMart: ; SHRINE AREA
 	db CELL_BATTERY
 	db SNOWBALL
 	db EJECT_PACK
+	db FOCUS_BAND
+	db FOCUS_SASH
 	db -1
 
 OlivineBattleMart:
@@ -416,18 +394,14 @@ OlivineBattleMart:
 	db TOXIC_ORB
 	db -1
 
-SinjohCrossroadsMonMart: ; todo ADD THIS 
-	db 3 ; # items
-	db DRAGON_SCALE
-	db FOCUS_BAND
-	db FOCUS_SASH
+SinjohCrossroadsMonMart: ; unused 
+	db 1 ; # items
+	db POKE_BALL
 	db -1
 
-GauldenrodTMMart: ; 
-	db 3 ; # items
+GauldenrodTMMart: ; remove? 
+	db 1 ; # items
 	db POWER_HERB
-	db WHITE_HERB
-	db BIG_ROOT
 	db -1
 
 ShamoutiMart2:

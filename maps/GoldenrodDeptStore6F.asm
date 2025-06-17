@@ -34,8 +34,8 @@ GoldenrodDeptStore6FLassText:
 GoldenrodDeptStore6FSuperNerdText:
 	text "I heard that the"
 	line "Fresh Water is"
-	cont "tapped straight"
-	cont "from Slowpoke"
+	para "tapped straight"
+	line "from Slowpoke"
 	cont "Well."
 	done
 

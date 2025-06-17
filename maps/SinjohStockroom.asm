@@ -19,13 +19,12 @@ SinjohStockroom_MapScriptHeader:
 
 
 	def_object_events
-	object_event 5,  4, SPRITE_FIREBREATHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, SinjohLeftoversScript, -1
-	pokemon_event  6, 4, SNORLAX, -1, -1, PAL_NPC_RED, SnorlaxText, -1
+	object_event 5,  4, SPRITE_FIREBREATHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, SinjohLeftoversScript, EVENT_BEAT_KANNA
+	pokemon_event  6, 4, SNORLAX, -1, -1, PAL_NPC_RED, SnorlaxText, EVENT_BEAT_KANNA
 	; need to update 
 	object_event  9,  0, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, pokemart, MARTTYPE_STANDARD, MART_SINJOH_CROSSROADS, EVENT_BEAT_KANNA
 
-
-	object_event 2, 3, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, SinjohStockroomNPC1Text, -1
+	object_event 2, 3, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, SinjohStockroomNPC1Text, EVENT_BEAT_KANNA
 	object_event 5, 2, SPRITE_SAGE, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, SinjohStockroomNPC2Text, EVENT_BEAT_KANNA
 
 SinjohStockroomNPC1Text:
