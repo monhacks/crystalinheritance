@@ -7,7 +7,7 @@ DebugRoom_MapScriptHeader:
 
 	def_warp_events
 	warp_event  9, 0, AZALEA_TOWN, 5
-	warp_event  1, 8, EMPERORS_GARDEN, 3
+	warp_event  1, 8, RUINS_OF_ALPH_KABUTO_CHAMBER, 1
 
 
 	def_coord_events
@@ -18,7 +18,7 @@ DebugRoom_MapScriptHeader:
 	bg_event  1,  2, BGEVENT_READ, DebugCPU ; check the items are all there 
 	bg_event  5,  2, BGEVENT_READ, DebugCPU2
 	bg_event  2,  7, BGEVENT_READ, DebugRoomTileGame
-	bg_event  0,  2, BGEVENT_UP, DebugInteraction
+;	bg_event  0,  2, BGEVENT_UP, DebugInteraction
 
 	def_object_events
 	object_event  4,  3, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE,  OBJECTTYPE_SCRIPT, 0, dwgDebugScript, -1
@@ -31,9 +31,8 @@ DebugRoom_MapScriptHeader:
 	object_const_def
 	const DEBUG_DWG
 
-
-DebugInteraction: ; split this into a few series of menus, first "max", "phys", "spec"
-	end
+;DebugInteraction: 
+;	end
 
 DebugCPU:
 	trainerpic BOBESH
@@ -260,18 +259,19 @@ Breeder1SayNoText:
 
 dwgDebugScript:
 	faceplayer
-	opentext
-	writetext DWGIntroText
-	waitbutton
-	writetext DWGQuestionText
-	yesorno
-	iffalse_jumpopenedtext DWGRefusedText
-	writetext DWGSeenText
-	waitbutton
-	closetext
+;	opentext
+;	writetext DWGIntroText
+;	waitbutton
+;	writetext DWGQuestionText
+;	yesorno
+;	iffalse_jumpopenedtext DWGRefusedText
+;	writetext DWGSeenText
+;	waitbutton
+;	closetext
 	winlosstext DWGWinText, DWGLossText
 	setlasttalked DEBUG_DWG
-	loadtrainer ENGINEER, DWG
+;	loadtrainer ENGINEER, DWG
+	loadtrainer BOBESH, 2
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	reloadmap

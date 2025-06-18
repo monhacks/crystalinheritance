@@ -21,52 +21,40 @@ GoldenrodDeptStore2F_MapScriptHeader:
 	object_event  2,  6, SPRITE_GENTLEMAN, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodDeptStore2FGentlemanText, -1
 
 GoldenrodDeptStore2FClerk2Script:
-	checkevent EVENT_GOT_EEVEE
-	iftrue .eevee
+;	checkevent EVENT_GOT_EEVEE
+;	iftrue .eevee
 	pokemart MARTTYPE_STANDARD, MART_GOLDENROD_2F_2
 
-.eevee
-	pokemart MARTTYPE_STANDARD, MART_GOLDENROD_2F_2_EEVEE
+;.eevee
+;	pokemart MARTTYPE_STANDARD, MART_GOLDENROD_2F_2_EEVEE
 
 GoldenrodDeptStore2FYoungsterText:
-	text "#gear can store"
-	line "up to thirty" ; CONTACT_LIST_SIZE
-	cont "phone numbers."
-
-	para "But getting too"
-	line "many phone calls"
-	cont "can be annoying."
+	text "I tossed out my"
+	line "#gear phone."
+	
+	para "Too many calls!"
 	done
 
 GoldenrodDeptStore2FGentlemanText:
-	text "Let's see. I'm"
-	line "going to take a"
-	cont "two day trip to"
-	cont "the park, so I"
-	cont "need potions,"
-	para "antidotes,"
-	line "balls, a radio,"
-	cont "a sleeping bag,"
-	para "a toaster oven,"
-	line "a generator, a"
-	cont "folding table…"
+	text "I've got a two-day"
+	line "trip to the park."
+	
+	para "So I need potions"
+	line "and antidotes and"
+	para "a sleeping bag,"
+	line "a toaster oven,"
+	para "a generator, a"
+	line "folding table…"
 	done
 
 GoldenrodDeptStore2FCooltrainerFText:
-	text "If you don't"
-	line "have enough, you"
-	cont "can just get it"
-	cont "on credit."
-	para "Just keep track"
-	line "of your bike"
-	cont "purchase, your"
-	cont "potions, your"
-	cont "#balls,"
-	para "your haircut,"
-	line "and anything"
-	cont "else, so your"
-	cont "credit score"
-	cont "stays good."
+	text "When I'm older I'm"
+	line "going to get a"
+	cont "credit card."
+	
+	para "As long as I don't"
+	line "lose any battles"
+	cont "I'll be OK."
 	done
 
 GoldenrodDeptStore2FDirectoryText:

@@ -27,10 +27,6 @@ GoldenrodFlowerShop_MapScriptHeader:
 FlowerShopNPC1Script:
 	jumptextfaceplayer NPC1GiveBerryText
 	end
-	
-.GotBerry
-	jumptextfaceplayer NPC1AfterText
-	end
 
 FlowerShopNPC2Script:
 	jumptextfaceplayer FlowerShopNPC2Text
@@ -50,19 +46,11 @@ FlowerShopLogBook:
 	jumptext FlowerShopLogBookText
 
 NPC1GiveBerryText:
-	text "Sniff, sniff."
-	line "You smell like"
-	cont "a forest!"
+	text "(sniff, sniff)"
+	para "You smell like"
+	line "a forest!"
 	done
 
-NPC1AfterText:
-	text "Buy Silph's"
-	line "berries!"
-	
-	para "Freshest and"
-	line "best in all of"
-	cont "Johto!"
-	done
 
 NPC1NoRoomText:
 	text "Oh, your Bag is"
@@ -77,23 +65,19 @@ FlowerShopNPC2Text:
 	cont "drought."
 	para "We grow every-"
 	line "thing in Silph"
-	cont "hydro basins"
-	cont "here."
+	cont "hydro basins."
+	para "Isn't it great?"
 	done
 
 FlowerShopGloriaText:
-	text "Gloria: Berry"
-	line "demand has gone"
-	cont "through the roof"
-	cont "lately!"
+	text "Berry demand is"
+	line "through the roof!"
 	para "I've had to cut"
 	line "back on growing"
-	cont "flowers to keep"
-	cont "up."
+	cont "flowers."
 	para "It's good for"
 	line "business, but I"
-	cont "miss my beautiful"
-	cont "blooms…"
+	cont "miss my blooms."
 	done
 
 FlowerShopSeedsSignText:

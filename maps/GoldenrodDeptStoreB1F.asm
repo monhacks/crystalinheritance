@@ -24,35 +24,29 @@ GoldenrodDeptStoreB1F_MapScriptHeader:
 GoldenrodDeptStoreB1FBlackBelt1Text:
 	text "When my dad"
 	line "worked this job,"
-	cont "he was so strong"
-	para "but his back is"
-	line "wore out. Thank"
-	cont "goodness for"
-	cont "technology."
-	para "Now, I can keep"
-	line "at it until I'm"
-	cont "ready to retire."
+	para "he was so strong"
+	line "but his back is"
+	para "wore out. With"
+	line "Silph's medtech,"
+	para "I can keep at it"
+	line "until I retire."
 	done
 
 GoldenrodDeptStoreB1FBlackBelt2Text:
 	text "Want to know a"
 	line "secret? There's"
-	cont "a path from the"
-	cont "underground to"
-	cont "underneath the"
-	cont "radio tower."
-	para "But it was"
-	line "blocked off and"
-	cont "kept a secret."
+	para "a path from the"
+	line "underground to"
+	para "underneath the"
+	line "radio tower."
 	done
 
 GoldenrodDeptStoreB1FBlackBelt3Text:
 	text "I have to rent"
 	line "this #mon"
 	cont "from Silph."
-	para "Some days, I"
-	line "don't get out"
-	cont "ahead."
+	para "I get out ahead,"
+	line "most days."
 	done
 
 GoldenrodDeptStoreB1FMachokeText:

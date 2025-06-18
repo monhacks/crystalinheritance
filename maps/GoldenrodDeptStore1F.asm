@@ -32,25 +32,23 @@ GoldenrodDeptStore1FPokefanFText:
 	done
 
 GoldenrodDeptStore1FBugCatcherText:
-	text "My dad says that"
-	line "I should try to"
-	cont "fix this."
-	para "But there's a"
-	line "cheaper one"
-	cont "here."
+	text "There's a great"
+	line "selection of"
+	cont "#balls here!"
 	done
 
 GoldenrodDeptStore1FGentlemanText:
-	text "Want to know a"
-	line "secret? Some of"
-	cont "the drinks"
-	cont "restore more HP"
-	cont "than potions,"
-	para "if you do the"
-	line "math. Sounds"
-	cont "like some clever"
-	cont "marketing by"
-	cont "the potions."
+	text "Here's a secret:"
+	para "Some drinks give"
+	line "more HP than"
+	para "potions, on a"
+	line "dollar basis."
+	
+	para "Clever marketing"
+	line "by Silph to get"
+	para "people to prefer"
+	line "their meds!"
+	
 	done
 	
 GoldenrodDeptStore1FDirectoryText:
@@ -154,9 +152,8 @@ RadioTower1FRadioCardWomanOfferQuizText:
 RadioTower1FRadioCardWomanQuestion1Text: ;  
 	text "Question 1:"
 
-	para "Water techniques"
-	line "are neutral on"
-	cont "magneton?"
+	para "Water is neutral"
+	line "to Magneton?"
 	done
 
 RadioTower1FRadioCardWomanQuestion2Text:;
@@ -185,7 +182,7 @@ RadioTower1FRadioCardWomanQuestion4Text:
 	line "Question 4:"
 
 	para "In Kanto ca. 1999"
-	line "the Ultra Ball is"
+	line "an Ultra Ball was"
 	para "always better"
 	line "than Great Ball?"
 	done
@@ -195,8 +192,8 @@ RadioTower1FRadioCardWomanQuestion5Text:
 	line "Here's the final"
 	cont "question:"
 
-	para "The necklace of a"
-	line "Bayleef: bitter?"
+	para "Is Bayleef's neck-"
+	line "lace bitter?"
 	done
 
 RadioTower1FRadioCardWomanYouWinText:
@@ -204,7 +201,10 @@ RadioTower1FRadioCardWomanYouWinText:
 	line "Congratulations!"
 
 	para "Here's your prize,"
-	line "a Radio Card!"
+	line "a Radio Card,"
+	para "and a special"
+	line "promotion item"
+	cont "for Porygon!"
 	done
 
 RadioTower1FPokegearIsARadioText:

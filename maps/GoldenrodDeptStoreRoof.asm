@@ -18,6 +18,7 @@ GoldenrodDeptStoreRoof_MapScriptHeader:
 
 	def_object_events
 	object_event  2,  1, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GoldenrodDeptStoreRoofScientistScript, -1
+	pokemon_event  1, 1, WEEZING, -1, -1, PAL_NPC_BLUE, WeezingText, -1
 	object_event 10,  3, SPRITE_POKEFAN_F, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodDeptStoreRoofPokefanFText, -1
 	object_event 12,  4, SPRITE_POKEMANIAC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GoldenrodDeptStoreRoofSuperNerdScript, EVENT_GOLDENROD_SALE_ON
 	object_event  3,  4, SPRITE_SCHOOLGIRL, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodDeptStoreRoofTwinText, EVENT_GOLDENROD_SALE_ON
@@ -48,6 +49,10 @@ GoldenrodDeptStoreRoofCheckSaleChangeClerk:
 	setevent EVENT_GOLDENROD_SALE_ON
 	endcallback
 
+WeezingText:
+	text "(Puff!) (Puff!)"
+	done
+
 GoldenrodDeptStoreRoofScientistScript:
     checkevent EVENT_GOT_AIR_BALLOON_FROM_ROUTE_31_LEADER
 	iftrue_jumptextfaceplayer .ScientistAfterText
@@ -63,8 +68,6 @@ GoldenrodDeptStoreRoofScientistScript:
     text "Principles of"
     line "buoyancy apply"
     cont "to #mon too!"
-    para "Isn't science"
-    line "wonderful?"
     done
 
 .BagFull
@@ -74,10 +77,10 @@ GoldenrodDeptStoreRoofScientistScript:
 .ScientistObservationText:
     text "Ah, fascinating!"
 	
-    para "See the zeppelin?"
+    para "See my Weezing?"
     line "It rises until"
-    cont "the buoyant"
-    cont "force is zero."
+    para "the buoyant"
+    line "force is zero."
     
 	para "Here, take this"
     line "Air Balloon. It"
@@ -88,8 +91,6 @@ GoldenrodDeptStoreRoofScientistScript:
     text "Principles of"
     line "buoyancy apply"
     cont "to #mon too!"
-    para "Isn't science"
-    line "wonderful?"
     done
 
 ScientistBagFullText:

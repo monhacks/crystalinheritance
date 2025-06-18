@@ -12,6 +12,10 @@ Many of these changes were made to Polished Crystal 3.0.0.
 * Learnsets have been updated close to Gen VI, with missing moves replaced by similar, egg, TM, or event-exclusive moves. See data/pokemon/evos_attacks or data/pokemon/base_stats/<name> for level-up and TMHM learnsets.
 * HM moves do not require move deleter to overwrite.
 
+## Graphics Mechanics
+
+* Pokemon with the highest possible DVs for each hidden power type will take on a unique sprite palette. There are six NPCs who can change the DVs of the first Pokemon in your party: The Celebi Puzzle Word Room (unlocked when you solve the puzzle); National Park; Violet City; Whirl Islands; Tin Tower; and Lake of Rage. 
+
 ## Battle Mechanics
 
 * The Fairy type, with the Pink Bow as its type-enhancing item.
@@ -62,6 +66,8 @@ Many of these changes were made to Polished Crystal 3.0.0.
 * Surf at Bicycle/Running Shoes speed.
 * Maximum $9,999,999 money and 50,000 coins.
 * Maximum 30 items and 16 Balls in your bag pocket.
+
+
 
 
 ## Nuzlocke Mode

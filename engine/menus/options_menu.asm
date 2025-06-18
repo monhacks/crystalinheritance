@@ -83,7 +83,7 @@ StringOptions1:
 	db "        <LNBRK>"
 	db "Done@"
 
-StringOptions2:
+StringOptions2: ; todo remove typeface option 
 	db "Clock Format<LNBRK>"
 	db "        :<LNBRK>"
 	db "#dex Units<LNBRK>"

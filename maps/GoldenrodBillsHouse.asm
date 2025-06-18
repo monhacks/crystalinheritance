@@ -81,8 +81,8 @@ BillsSisterText:
 BillsGrandpaText:
 	text "Hey kid, want"
 	line "to know how I"
-	cont "always win at"
-	cont "the slots?"
+	para "always win at"
+	line "the slots?"
 	
 	para "Practice!"
 	done

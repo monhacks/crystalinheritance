@@ -2,7 +2,7 @@ GoldenrodDeptStore5F_MapScriptHeader:
 	def_scene_scripts
 
 	def_callbacks
-	callback MAPCALLBACK_OBJECTS, GoldenrodDeptStore5FCheckIfSunday
+;	callback MAPCALLBACK_OBJECTS, GoldenrodDeptStore5FCheckIfSunday
 
 	def_warp_events
 	warp_event 12,  0, GOLDENROD_DEPT_STORE_4F, 1
@@ -25,15 +25,15 @@ GoldenrodDeptStore5F_MapScriptHeader:
 	object_const_def
 	const GOLDENRODDEPTSTORE5F_RECEPTIONIST
 
-GoldenrodDeptStore5FCheckIfSunday:
-	readvar VAR_WEEKDAY
-	ifequal SUNDAY, .yes
-	disappear GOLDENRODDEPTSTORE5F_RECEPTIONIST
-	endcallback
+;GoldenrodDeptStore5FCheckIfSunday:
+;	readvar VAR_WEEKDAY
+;	ifequal SUNDAY, .yes
+;	disappear GOLDENRODDEPTSTORE5F_RECEPTIONIST
+;	endcallback
 
-.yes
-	appear GOLDENRODDEPTSTORE5F_RECEPTIONIST
-	endcallback
+;.yes
+;	appear GOLDENRODDEPTSTORE5F_RECEPTIONIST
+;	endcallback
 
 GoldenrodDeptStore5FReceptionistScript:
 	faceplayer
@@ -123,12 +123,8 @@ MysteryGiftGirl_NoRoomText:
 	done
 
 GoldenrodDeptStore5FLassText:
-	text "On Sundays, a lady"
-	line "comes to check out"
-	cont "#mon."
-
-	para "She even gives"
-	line "away TMs!"
+	text "That lady gave me"
+	line "a TM!"
 	done
 
 GoldenrodDeptStore5FPokefanMText:
