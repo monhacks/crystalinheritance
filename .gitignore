@@ -26,4 +26,5 @@ bank_ends.txt
 
 # local tools
 rgbds/
+rgbds
 deploy.sh
